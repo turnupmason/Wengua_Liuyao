@@ -266,7 +266,8 @@ function timingCandidates(yong, facts, chart, scale) {
     const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === yong.element);
     add('R-YINGQI-04', '衰绝遇生遇旺', [...branchesOfElement(gen), ...branchesOfElement(yong.element)], `衰者待生旺：逢${gen}或${yong.element}之月日`);
   }
-  if (facts.change && facts.change.advance) add('R-YINGQI-10', `化${facts.change.advance}`, [b, facts.change.to.branch], `进退神：逢${b}或${facts.change.to.branch}`);
+  if (facts.change && facts.change.advance === '进神') add('R-YINGQI-10', '化进神', [b, COMBINE.get(b)], `化进神逢值逢合：逢${b}或${COMBINE.get(b)}（原文例：申动酉，应申或巳）`);
+  if (facts.change && facts.change.advance === '退神') add('R-YINGQI-10', '化退神', [facts.change.to.branch, CLASH.get(facts.change.to.branch)], `化退神忌值忌冲：逢${facts.change.to.branch}或${CLASH.get(facts.change.to.branch)}（原文例：酉化申，应申或寅）`);
   // 受克待克神受制：回头克之变爻、或动来克之动爻，逢冲之日月（月将章「待至冲去伤爻之日」，应期总注「须待克神受克」）
   const attackers = [];
   if (facts.change && facts.change.huitou === '回头克') attackers.push({ who: `变爻${facts.change.to.branch}`, branch: facts.change.to.branch });

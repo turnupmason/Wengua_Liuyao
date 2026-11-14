@@ -1,5 +1,5 @@
 {
-  "register_version": "0.4.0",
+  "register_version": "0.5.0",
   "rule_profile": "zengshan-main",
   "policy": "原文须逐字见于 sources/classics 所注卷章（去除标点空白后比对）。review_status 只有专业审核者可以改为 approved；脚本核对通过只说明原文出处属实，不说明断法已经审核。",
   "rules": [
@@ -517,11 +517,13 @@
       "source_book": "增删卜易",
       "source_chapter": "八宫图第三",
       "original_text": [
-        "占功名者若得官鬼持世即许成名，子孙持世且待时。"
+        "占功名者若得官鬼持世即许成名，子孙持世且待时。",
+        "倘若官鬼爻与妻财爻或值旬空月破或被卦中子孙发动以伤官，兄弟发动以伤财，虽遇官鬼持世、妻财持世有何益也。",
+        "务必细读此书卷后何谓空而不空，破而不破"
       ],
       "modern_explanation": "官鬼持世是求名有望的标志；子孙持世则此番难成，须待时机。",
       "applicable_conditions": "求名求职",
-      "exceptions": "同章又说官鬼值空破、或子孙发动伤官时，持世也无益",
+      "exceptions": "官鬼持世而值旬空月破、或子孙发动伤官，持世亦无益；但同段又说须细看「何谓空而不空，破而不破」（D-017）",
       "adoption": "adopted",
       "engine_refs": [
         "src/evidence.js"
@@ -589,6 +591,44 @@
       ],
       "review_status": "pending-professional-review",
       "version": "0.2.0"
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YONG-GUAN-06",
+      "topic": "求名·官化进神",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+      "original_text": [
+        "世爻发动﹐官化进神﹐望荣除而在即"
+      ],
+      "modern_explanation": "世爻发动、官星化进神，升迁在即。",
+      "applicable_conditions": "求名求职",
+      "exceptions": "进神休囚化休囚者待时（D-019）",
+      "engine_refs": [],
+      "dispute_ids": [
+        "D-019"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YONG-GUAN-07",
+      "topic": "求名·官空世空",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+      "original_text": [
+        "世空世破官破官空﹐俱不得。"
+      ],
+      "modern_explanation": "世爻或官星空、破，所求不得。",
+      "applicable_conditions": "求名求职",
+      "exceptions": "有气之空与到底之空的区分见旬空章与 D-017",
+      "engine_refs": [],
+      "dispute_ids": [
+        "D-017"
+      ]
     },
     {
       "rule_id": "R-YONG-ZI-01",
@@ -668,6 +708,25 @@
       ],
       "review_status": "pending-professional-review",
       "version": "0.1.0"
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-SHIHUAN-01",
+      "topic": "仕宦·官爻隐伏",
+      "source_book": "黄金策",
+      "source_chapter": "18、仕宦",
+      "original_text": [
+        "父母空亡，休望差除宣敕；官爻隐伏，莫思爵位升迁。"
+      ],
+      "modern_explanation": "在任者问升迁，官爻隐伏为不利。",
+      "applicable_conditions": "仕宦（在任求升迁）；求职是否适用见 D-018",
+      "exceptions": "与黄金策·求名「伏藏有用，终辞白屋之人」相对",
+      "engine_refs": [],
+      "dispute_ids": [
+        "D-018"
+      ]
     },
     {
       "rule_id": "R-YONG-YE-01",
@@ -1174,6 +1233,22 @@
       ]
     },
     {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-RIZHEN-06",
+      "topic": "临日化回头克之例",
+      "source_book": "增删卜易",
+      "source_chapter": "日辰章第十七",
+      "original_text": [
+        "世爻午火临日辰，本主旺相，不宜申金月建生亥水回头克世，卒于亥月。"
+      ],
+      "modern_explanation": "申月戊午日遁之姤：世爻午火临日而化亥水回头克，书断凶，应于亥月。与临日而动化相克寡不敌众同理。",
+      "applicable_conditions": "临日之爻动化回头克",
+      "exceptions": "原例为占病",
+      "engine_refs": []
+    },
+    {
       "rule_id": "R-ANDONG-01",
       "topic": "暗动",
       "source_book": "增删卜易",
@@ -1285,6 +1360,25 @@
       "version": "0.1.0"
     },
     {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-JINTUI-02",
+      "topic": "进神四种",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·进神退神章第二十九",
+      "original_text": [
+        "夫进神之有四﹕动旺相而化旺﹐乘势而进﹐一也﹔动休囚而化休囚﹐待时而进﹐二也"
+      ],
+      "modern_explanation": "化进神有快慢：旺相化旺乘势而进；休囚化休囚须待时而进。",
+      "applicable_conditions": "动爻化进神",
+      "exceptions": "与升选候补章「官化进神，望荣除而在即」之取舍见 D-019",
+      "engine_refs": [],
+      "dispute_ids": [
+        "D-019"
+      ]
+    },
+    {
       "rule_id": "R-KONG-01",
       "topic": "旬空",
       "source_book": "增删卜易",
@@ -1317,7 +1411,7 @@
       ],
       "modern_explanation": "旺相、发动、得日辰动爻生扶、动而化空、伏而旺相者，出旬即可用；月破又空则为空。",
       "applicable_conditions": "旬空之爻",
-      "exceptions": "月将章补充：在旬内者毕竟为空（R-KONG-03）",
+      "exceptions": "月将章补充：在旬内者毕竟为空（R-KONG-03）；原文「月破为空」之后尚有「有卦不动为空」一句，文义不明，未取（AI-2 核查）",
       "adoption": "adopted",
       "engine_refs": [
         "src/analysis.js"
@@ -1490,11 +1584,12 @@
       "source_chapter": "六合章第十九",
       "original_text": [
         "子与丑合、寅与亥合、卯与戌合、辰与酉合、巳与申合，午与未合。",
-        "爻之合者，静而逢合，谓之合起。动而逢合，合谓之合绊。"
+        "爻之合者，静而逢合，谓之合起。动而逢合，合谓之合绊。",
+        "凡得诸合，诸占皆以为吉，占名成，占利利就"
       ],
       "modern_explanation": "静爻逢合为合起，动爻逢合为合绊。",
       "applicable_conditions": "地支相合",
-      "exceptions": "不能见合即断事成：同章称「然必用神有气相宜，用若失陷无益」",
+      "exceptions": "不能见合即断事成：同章称「然必用神有气相宜，用若失陷无益」；同章并言「然必用神有气相宜，用若失陷无益」",
       "adoption": "adopted",
       "engine_refs": [
         "src/constants.js",
@@ -1651,34 +1746,223 @@
       "version": "0.1.0"
     },
     {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
       "rule_id": "R-YINGQI-01",
       "topic": "应期",
       "source_book": "增删卜易",
       "source_chapter": "各门类应期总注章第又二十六",
       "original_text": [
-        "静而逢值逢冲",
-        "动而逢合逢值",
-        "太旺者逢墓逢冲",
-        "衰绝者，遇生遇旺",
-        "入三墓俱喜冲开",
-        "遇六合亦宜相击",
-        "月破喜填",
-        "旬空最爱填冲",
-        "大象吉而受克，须待克神受克",
-        "化进神、逢值逢合",
-        "远事定之以年月，近事应之于日时。",
-        "大象凶而受克，须防克者逢生",
-        "问有应于变爻动爻"
+        "静而逢值逢冲"
       ],
-      "modern_explanation": "应期须看用神状态：静待值冲、动待合值、太旺待墓冲、衰绝待生旺、入墓待冲开、逢合待冲、破待填合、空待填冲、受克待克神受制。近事以日计，远事以年月计。程序分条编号 R-YINGQI-01 至 10 对应以上各句。 另：大象凶而受克者，防克神逢生之日（与第 9 条合为 R-YINGQI-09）；吉凶亦有应于变爻者（R-YINGQI-11）。",
-      "applicable_conditions": "用神（或主事爻）",
-      "exceptions": "不能统一定为「下一个某支日」，每条须对应具体事件",
-      "adoption": "adopted",
+      "modern_explanation": "用神安静：逢本支（值）或冲支之日月",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ],
+      ]
+    },
+    {
+      "adoption": "adopted",
       "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-02",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "动而逢合逢值"
+      ],
+      "modern_explanation": "用神（或主事之爻）发动：逢本支或合支之日月",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-03",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "太旺者逢墓逢冲"
+      ],
+      "modern_explanation": "太旺：逢墓或冲",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-04",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "衰绝者，遇生遇旺"
+      ],
+      "modern_explanation": "衰绝：逢生我、同我之月日",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-05",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "入三墓俱喜冲开"
+      ],
+      "modern_explanation": "入墓：冲墓之日",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-06",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "遇六合亦宜相击"
+      ],
+      "modern_explanation": "逢合：冲本支或冲合神",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-07",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "月破喜填"
+      ],
+      "modern_explanation": "月破：填实或逢合",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-08",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "旬空最爱填冲"
+      ],
+      "modern_explanation": "旬空：出空填实或冲空",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-09",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "大象吉而受克，须待克神受克",
+        "大象凶而受克，须防克者逢生"
+      ],
+      "modern_explanation": "受克：大象吉待克神受制；大象凶防克者逢生",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-10",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "化进神、逢值逢合",
+        "如申动酉，乃为进神，为福为祸，有应申月日者，有应巳月日者",
+        "如酉化申，乃为退神，为凶为吉，有应申月日者，有应寅日月者"
+      ],
+      "modern_explanation": "化进神：逢本支（值）或合支；原文例「如申动酉…有应申月日者，有应巳月日者」。化退神：忌值忌冲，例「如酉化申…有应申月日者，有应寅日月者」，即变支或冲变支",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-11",
+      "topic": "应期",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "问有应于变爻动爻"
+      ],
+      "modern_explanation": "吉凶有应于变爻者：变爻之支",
+      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.5.0",
+      "rule_id": "R-YINGQI-12",
+      "topic": "应期尺度",
+      "source_book": "增删卜易",
+      "source_chapter": "各门类应期总注章第又二十六",
+      "original_text": [
+        "远事定之以年月，近事应之于日时。"
+      ],
+      "modern_explanation": "近事以日计，远事以年月计",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "engine_refs": [
+        "src/evidence.js"
+      ]
     }
   ],
   "disputes": [
@@ -1953,6 +2237,58 @@
       "ruled_by": "用户",
       "ruled_at": "2026-11-13",
       "ruling_document": "六爻断案规则争议最终裁定 V1.0"
+    },
+    {
+      "dispute_id": "D-017",
+      "topic": "求名专章「官空」与旬空章「有气之空出旬可用」",
+      "positions": [
+        {
+          "source": "增删卜易·升选候补章、升迁何方章、八宫图第三",
+          "view": "官位空破勿恩升迁；世空世破官破官空俱不得；官鬼持世而值旬空月破有何益也"
+        },
+        {
+          "source": "增删卜易·旬空章、月将章、八宫图第三",
+          "view": "旺不为空，在旬内者毕竟为空，出空之日则不空；须细看何谓空而不空"
+        }
+      ],
+      "adopted": "待用户裁定；IP-0005 暂 REVIEW_REQUIRED",
+      "status": "open"
+    },
+    {
+      "dispute_id": "D-018",
+      "topic": "谋职专章「财与官星不可有一而不旺」与官星伏而有用",
+      "positions": [
+        {
+          "source": "增删卜易·署印谋差章",
+          "view": "财与官星不可有一而不旺；世陷财空不如守己；官空世破且让他人"
+        },
+        {
+          "source": "黄金策·求名",
+          "view": "伏藏有用，终辞白屋之人"
+        },
+        {
+          "source": "黄金策·仕宦",
+          "view": "官爻隐伏，莫思爵位升迁（在任升迁）"
+        }
+      ],
+      "adopted": "待用户裁定；IP-0004 暂 REVIEW_REQUIRED",
+      "status": "open"
+    },
+    {
+      "dispute_id": "D-019",
+      "topic": "官化进神：待时而进还是在即",
+      "positions": [
+        {
+          "source": "增删卜易·进神退神章",
+          "view": "动休囚而化休囚，待时而进"
+        },
+        {
+          "source": "增删卜易·升选候补章",
+          "view": "世爻发动，官化进神，望荣除而在即"
+        }
+      ],
+      "adopted": "待用户裁定；IP-0003 暂 REVIEW_REQUIRED",
+      "status": "open"
     }
   ],
   "rulings": [
