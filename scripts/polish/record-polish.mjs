@@ -12,13 +12,16 @@ if (!id || !snapPath || !['A', 'B', 'C'].includes(grade) || !oldHash) {
   console.error('用法：record-polish.mjs <script_id> <快照> <A|B|C> <原哈希> [备注]');
   process.exit(2);
 }
-const cur = JSON.parse(readFileSync(`authoring/interview-pass/${id}.json`, 'utf8'));
+const srcPath = /^IPC-/.test(id) ? `authoring/classes/interview-pass/${id}.json` : `authoring/interview-pass/${id}.json`;
+const cur = JSON.parse(readFileSync(srcPath, 'utf8'));
 const old = JSON.parse(readFileSync(snapPath, 'utf8'));
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
 // 锁定字段（docs/17 第二节）
 const LOCKED = {
   chart_input: (x) => x.chart_input,
+  class_key: (x) => x.class_key,
+  sample_charts: (x) => x.sample_charts,
   question_id: (x) => x.question_id,
   scenario_tags: (x) => x.scenario_tags,
   judgment: (x) => x.judgment,

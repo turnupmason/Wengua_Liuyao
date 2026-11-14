@@ -21,8 +21,8 @@ function chartOf(values, month, day) {
 
 test('构建：发布包只收 AI_APPROVED 或 HUMAN_APPROVED 且 production_allowed 的稿件，技术检查无错', () => {
   const report = JSON.parse(readFileSync(new URL('reports/build-report.json', root), 'utf8'));
-  assert.equal(report.scripts, 6);
-  assert.equal(report.technical_passed, 6);
+  assert.ok(report.scripts >= 6);
+  assert.equal(report.technical_passed, report.scripts);
   assert.deepEqual(report.errors, []);
   assert.equal(release.readings.length, report.approved_for_release);
   for (const r of release.readings) {
@@ -137,4 +137,23 @@ test('应期换算与历史记录：按起卦日换算具体日期；记录保�
   assert.equal(rec.reading.scriptId, 'IP-0001');
   assert.equal(rec.reading.text.title, ip1.reading.title);
   assert.deepEqual(rec.keyFacts.voidBranches, ['午', '未']);
+});
+
+test('等价类稿：同类之盘按类别键取得同一正文，应期地支逐盘求出；逐盘稿优先', () => {
+  const ci = JSON.parse(readFileSync(new URL('authoring/classes/interview-pass/IPC-0001.json', root), 'utf8'));
+  const entry = { key: `${Q}|${ci.equivalence_version}|${ci.class_key}`, script_id: ci.script_id, question_id: Q, content_hash: 'x', match: 'class',
+    equivalence_version: ci.equivalence_version, class_key: ci.class_key, rule_version: 'test',
+    approval: { approval_status: 'AI_APPROVED', production_allowed: true }, reading: ci.reading };
+  const repo = createReadingRepository({ releasePackage: { ...release, readings: [...release.readings, entry] } });
+  const seen = new Set();
+  for (const s of ci.sample_charts) {
+    const chart = chartOf(s.line_values, s.month_branch, s.day_ganzhi);
+    const got = repo.lookup({ questionId: Q, chart });
+    assert.equal(got.status, 'approved');
+    assert.equal(got.match, 'class');
+    assert.equal(got.scriptId, 'IPC-0001');
+    assert.ok(got.timing[0].target_branches.length >= 1);
+    seen.add(got.timing[0].target_branches.join(''));
+  }
+  assert.ok(seen.size > 1, '不同样本盘的应期地支应各自求出');
 });

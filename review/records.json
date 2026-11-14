@@ -2054,6 +2054,121 @@
       },
       "findings": [],
       "report": "reports/review-round11/final-qa-single-claude.json"
+    },
+    {
+      "record_id": "RV-0062",
+      "script_id": "IPC-0001",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-14",
+      "polish_grade": "A",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [],
+      "changes": [],
+      "original_snapshot": "authoring/classes/interview-pass/IPC-0001.json",
+      "original_content_hash": "8841429f67a5e39bd5e22b111b2ae32ac22e07253ee4248755a6e7859f6b15bb",
+      "content_hash": "8841429f67a5e39bd5e22b111b2ae32ac22e07253ee4248755a6e7859f6b15bb",
+      "note": "新稿，写作时已按 V5.0 自查",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-14",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-0063",
+      "script_id": "IPC-0001",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8841429f67a5e39bd5e22b111b2ae32ac22e07253ee4248755a6e7859f6b15bb",
+      "findings": [],
+      "notes": "七条引文由构建 C12 逐字核对（均在所注卷章）；适用性：R-YONG-GUAN-02 官鬼持世合本类；R-YUANJI-04「忌神虽动，不能克用神者有七」所列含静临空破、休囚不动等，本类忌神无力合其义；R-YUANJI-02 原神虽现而不能生；R-YUANJI-05 用神有气之前提本类满足；R-WANG-02 广义之旺对应类内月令旺或日月生扶两种来源；R-YINGQI-01 静而逢值逢冲。无断章取义。",
+      "report": "reports/review-class-batch1/IPC-0001.json"
+    },
+    {
+      "record_id": "RV-0064",
+      "script_id": "IPC-0001",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8841429f67a5e39bd5e22b111b2ae32ac22e07253ee4248755a6e7859f6b15bb",
+      "findings": [],
+      "notes": "依 12 个分散样本盘（6 个月建、7 个日辰、5 种卦）逐盘复算：用神官鬼皆一现持世、安静、EFFECTIVE，无空破真墓，不受动爻冲克；原神皆上卦而 INEFFECTIVE（含发动而无力者）；忌神皆上卦而 INEFFECTIVE。逐盘结论皆为倾向通过，应期 R-YINGQI-01 逐盘可求（本支、冲支）。类内变化：官星之气来源（旺 5、休囚而得日生扶 7）、应爻与世爻关系（克世 6、生世 5、世克之 1）、偶有他爻发动（4/12）——均不改变结论，正文未断言。有一盘官星入动墓而旺相不作真墓，正文未写「无墓」，不矛盾。",
+      "report": "reports/review-class-batch1/IPC-0001.json"
+    },
+    {
+      "record_id": "RV-0065",
+      "script_id": "IPC-0001",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8841429f67a5e39bd5e22b111b2ae32ac22e07253ee4248755a6e7859f6b15bb",
+      "findings": [],
+      "notes": "反方一：原神无力、官星安静，应判待时偏慢——原神只关推力，用神有气持世即许成名，正文已写「推力不足」「不会当下揭晓」，结论用「倾向」而非必成，分寸得当。反方二：类内有应爻为子孙而克世者，似属不利——应位子孙即忌神，已判无力，伤不到官；应爻只作参看（R-SHIYING-03）。反方三：官星休囚而仅得日生者，可否作有气——依 R-WANG-02 广义之旺，三层判定为有效。均不足以改判。",
+      "report": "reports/review-class-batch1/IPC-0001.json"
+    },
+    {
+      "record_id": "RV-0066",
+      "script_id": "IPC-0001",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8841429f67a5e39bd5e22b111b2ae32ac22e07253ee4248755a6e7859f6b15bb",
+      "findings": [],
+      "notes": "17 条逐条核对通过：构建技术检查无错；所用规则均已核验；正文不写类内逐盘不同之事实；简断、详断、总断同为倾向通过；排版 C26 通过；无套话、无现实断言。",
+      "report": "reports/review-class-batch1/IPC-0001.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
     }
   ]
 }

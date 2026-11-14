@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.11.1';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.0';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -40,6 +40,9 @@ function effectTier(arr, flows, hiddenRole) {
 
 function worldState(world) {
   const parts = [];
+  // 世爻动化（乡试章「世化退神，若非临场之阻，必无勇往之心」；化回头克、化绝、化墓同为化凶）
+  const ch = world.change;
+  if (ch) parts.push(ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝' || ch.lifeStage === '墓' ? '世化凶' : ch.huitou === '回头生' || ch.advance === '进神' ? '世化吉' : '世动');
   if (world.void) parts.push(world.void.zengshan === '冲空则实' ? '' : '世空');
   if (world.monthBreak) parts.push('世破');
   if (world.damage.some((d) => d.includes('动来克') || d === '日克' || d === '月克')) parts.push('世受克');
@@ -82,11 +85,13 @@ export function interviewPassClass(evidence) {
   const sp = evidence.special;
   const factors = {
     yong,
+    // 用神持世时世爻的旺衰动化已在用神状态与动化中，不另计
     world: yong.world === '持世' ? '持世' : worldState(evidence.world),
     jiHoldsWorld: sp.jiHoldsWorld,
     yuan,
     ji,
-    hexagram: sp.sixClash ? '六冲' : sp.sixCombine ? '六合' : '',
+    // 卦级：六冲六合、冲合之变（六合章「六合卦变六冲…始吉终凶」）、反吟伏吟（反伏章「占名者久困官途」，R-FANFU-01）
+    hexagram: [sp.sixClash ? '六冲' : sp.sixCombine ? '六合' : '', sp.transform && /变[冲合]/.test(sp.transform) ? sp.transform : '', sp.fanyin ? '反吟' : '', sp.fuyin ? '伏吟' : ''].filter(Boolean).join(''),
     // 三合局（D-020）：局之六亲与吉凶口径、成局状态、世与局之关系；应期地支逐盘求出，不进指纹
     harmonies: (evidence.harmonies || []).map((h) => `${h.relative}局${{ formed: '成', deferred: '待', virtual: '虚' }[h.status]}${{ favorable: '吉', 'leaning-favorable': '偏吉', adverse: '凶', neutral: '不碍', mixed: '吉而克世', reference: '参看', unspecified: '未定' }[h.effect]}${{ 世在局: '世在', 局生世: '生世', 局克世: '克世' }[h.world] || ''}`).sort(),
   };

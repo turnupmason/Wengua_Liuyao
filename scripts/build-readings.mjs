@@ -11,6 +11,8 @@ import {
 import { digestOf } from '../src/hash.js';
 import { dayOffset } from '../src/flows.js';
 import { factsDigest, RELEASE_SCHEMA } from '../src/readings.js';
+import { EQUIVALENCE_VERSION } from '../src/equivalence.js';
+import { loadClassDrafts, checkClassDraft } from './lib/class-drafts.mjs';
 
 const CONTENT_VERSION = 'liuyao-readings-0.1.0';
 const register = JSON.parse(readFileSync(join(ROOT, 'rules/register.json'), 'utf8'));
@@ -70,10 +72,10 @@ function check(src, chart, evidence) {
   const warnings = [];
   const r = src.reading;
   const j = src.judgment;
-  const cal = chart.calendar;
-  // C03 用神
-  const sel = evidence.yongshen.selection;
-  if (j.yongshen_position != null) {
+  const cal = chart ? chart.calendar : null;
+  // C03 用神（类别稿由 C30 样本归类保证）
+  const sel = evidence ? evidence.yongshen.selection : null;
+  if (!chart) { /* 类别稿 */ } else if (j.yongshen_position != null) {
     if (sel.selectedPosition !== j.yongshen_position) errors.push(`C03 作者用神为第${j.yongshen_position}爻，引擎取用为 ${sel.selectedPosition ?? sel.status}`);
   } else if (j.hidden_yongshen) {
     const h = evidence.yongshen.missing?.hidden;
@@ -93,16 +95,16 @@ function check(src, chart, evidence) {
   if (/[子丑寅卯辰巳午未申酉戌亥]日|\d/.test(r.brief)) errors.push('C07 简断不得写日期或数字时点');
   // C08 不写公历日期
   for (const [k, v] of Object.entries(texts)) if (/\d+\s*[年月日]|\d{4}-\d{2}/.test(v)) errors.push(`C08 ${k} 出现公历日期`);
-  // C09 正文中的「某日」只能是起卦日
-  for (const [k, v] of Object.entries(userTexts(r))) {
+  // C09 正文中的「某日」只能是起卦日（类别稿另由 C31 禁写一切具体地支）
+  if (chart) for (const [k, v] of Object.entries(userTexts(r))) {
     for (const m of String(v).matchAll(/([甲乙丙丁戊己庚辛壬癸]?)([子丑寅卯辰巳午未申酉戌亥])日/g)) {
       if (m[2] !== cal.dayBranch || (m[1] && m[1] !== cal.dayStem)) errors.push(`C09 ${k} 提到「${m[0]}」，不是起卦日；应期须写在应期栏`);
     }
   }
-  // C10 应期
-  const cands = [...evidence.timingCandidates, ...evidence.adverseTimingCandidates];
+  // C10 应期（类别稿另由 C32 逐样本核对）
+  const cands = evidence ? [...evidence.timingCandidates, ...evidence.adverseTimingCandidates] : [];
   const entryBranches = new Set();
-  for (const e of r.timing?.entries || []) {
+  if (chart) for (const e of r.timing?.entries || []) {
     const ok = cands.some((c) => c.timing_rule_id === e.timing_rule_id && c.target_branches.includes(e.target_branch));
     if (!ok) errors.push(`C10 应期 ${e.timing_rule_id}→${e.target_branch} 不在本盘按规则推出的候选内`);
     const unit = e.time_scale === 'month' ? '月' : '日';
@@ -110,7 +112,7 @@ function check(src, chart, evidence) {
     for (const f of ['timing_rule_id', 'target_event', 'target_symbol', 'condition', 'target_branch', 'time_scale', 'calculation_basis', 'source_reference']) if (!e[f]) errors.push(`C10 应期条目缺 ${f}`);
     entryBranches.add(e.target_branch);
   }
-  for (const m of String(r.timing?.text || '').matchAll(/([子丑寅卯辰巳午未申酉戌亥])日/g)) {
+  if (chart) for (const m of String(r.timing?.text || '').matchAll(/([子丑寅卯辰巳午未申酉戌亥])日/g)) {
     if (!entryBranches.has(m[1]) && m[1] !== cal.dayBranch) errors.push(`C10 应期说明提到「${m[0]}」却无对应条目`);
   }
   // C11 结论一致
@@ -139,18 +141,19 @@ function check(src, chart, evidence) {
     }
   }
   for (const id of j.rule_ids || []) if (!ruleIds.has(id) && !/^R-YINGQI-\d+$/.test(id)) errors.push(`C15 判断引用未登记规则 ${id}`);
-  // C13 动爻全覆盖
+  // C13 动爻全覆盖（逐盘稿）
   const body = `${r.opening}${r.process}${r.ending}`;
-  for (const l of chart.lines.filter((x) => x.moving)) if (!body.includes(`${l.branch}${l.element}`)) errors.push(`C13 动爻${l.label}${l.branch}${l.element}未在详断中讲到`);
+  if (chart) for (const l of chart.lines.filter((x) => x.moving)) if (!body.includes(`${l.branch}${l.element}`)) errors.push(`C13 动爻${l.label}${l.branch}${l.element}未在详断中讲到`);
   // C17 判别流程逐项确认
   const acks = new Map((j.flow_acknowledgements || []).map((a) => [a.flow_id, a]));
+  const userBody = Object.values(userTexts(r)).join('');
+  if (chart) {
   for (const f of evidence.flows) {
     const a = acks.get(f.id);
     if (!a) errors.push(`C17 判别流程 ${f.id} 未在 judgment.flow_acknowledgements 中确认`);
     else if (a.accepted === false && !String(a.note || '').trim()) errors.push(`C17 不采用 ${f.id} 须写明理由`);
   }
   for (const id of acks.keys()) if (!evidence.flows.some((f) => f.id === id)) errors.push(`C17 确认了不存在的流程 ${id}`);
-  const userBody = Object.values(userTexts(r)).join('');
   for (const f of evidence.flows.filter((x) => x.flow === 'hidden' && ['yong', 'yuan'].includes(x.role))) {
     if (!userBody.includes('伏')) errors.push(`C17 ${f.id}（${f.role === 'yong' ? '用神' : '原神'}伏藏）正文未讲到伏神`);
     if (f.emergence !== 'unlikely') for (const w of HIDDEN_DENIAL) if (userBody.includes(w)) errors.push(`C17 ${f.id} 判为「${f.emergence}」，正文却写「${w}」`);
@@ -163,6 +166,7 @@ function check(src, chart, evidence) {
       for (const w of XUN_ABSOLUTE) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C18 本旬内有冲空之日，正文却写「${w}」`);
     }
   }
+  }
   // C19 结构标题与正文分开
   for (const [k, v] of Object.entries({ ...userTexts(r), timing: r.timing?.text || '' })) if (LABEL_PREFIX.test(String(v).trim())) errors.push(`C19 ${k} 正文以结构标题开头`);
   // C20 回答范围；C21 对方态度不写成事实
@@ -170,7 +174,7 @@ function check(src, chart, evidence) {
   for (const w of ABSOLUTE) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C21 把对方或竞争情况写成定论：「${w}」`);
   // C22 主要依据须有实际作用（D-016、D-013 裁定）：主要不利依据的忌神须有力且能作用；主要有利依据须当前有效或有明确待时条件；并见待核之伏神不得作为翻吉依据
   if (!Array.isArray(j.decisive) || !j.decisive.length) errors.push('C22 judgment.decisive 未列出主要依据爻');
-  for (const dcs of j.decisive || []) {
+  if (chart) for (const dcs of j.decisive || []) {
     if (dcs.hidden) {
       const f = evidence.flows.find((x) => x.flow === 'hidden' && x.position === dcs.position);
       if (!f) { errors.push(`C22 第${dcs.position}爻无伏神`); continue; }
@@ -289,6 +293,57 @@ for (const { file, src } of loadAuthoring()) {
   for (const e of errors) allErrors.push(`${src.script_id}: ${e}`);
 }
 
+// 等价类断语稿
+for (const { file, src } of loadClassDrafts(ROOT)) {
+  const q = getQuestionRule(src.question_id);
+  const { errors, warnings } = check(src, null, null);
+  const cls = checkClassDraft(src, userTexts);
+  errors.push(...cls.errors);
+  const key = `${src.question_id}|${src.equivalence_version}|${src.class_key}`;
+  if (keys.has(key)) allErrors.push(`${src.script_id}: C02 与 ${keys.get(key)} 类别键重复`);
+  keys.set(key, src.script_id);
+  const entry = {
+    script_id: src.script_id,
+    source_file: file,
+    match: 'class',
+    question_id: src.question_id,
+    question_type: q.question_type,
+    domain_id: q.domain_id,
+    question_text: q.question_text,
+    key,
+    equivalence_version: src.equivalence_version,
+    class_key: src.class_key,
+    sample_charts: src.sample_charts,
+    rule_profile_id: RULE_PROFILE.id,
+    rule_version: `${RULE_PROFILE.version}|${q.rule_version}|${EVIDENCE_VERSION}|${CHART_SCHEMA_VERSION}|${EQUIVALENCE_VERSION}`,
+    source_version: register.register_version,
+    scenario_tags: src.scenario_tags,
+    verdict: src.judgment.verdict,
+    verdict_label: src.judgment.verdict_label,
+    judgment: src.judgment,
+    reading: {
+      title: src.reading.title, brief: src.reading.brief, opening: src.reading.opening, process: src.reading.process, ending: src.reading.ending,
+      timing: src.reading.timing, conclusion: src.reading.conclusion, classical_sources: src.reading.classical_sources, calculation_explanation: src.reading.calculation_explanation,
+    },
+    calculation_facts: { primary: `等价类（样本 ${cls.samples.length} 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）`, changed: null, month: '各盘不同', day: '各盘不同', void: '各盘不同',
+      lines: cls.samples[0] ? [`样本之一：${cls.samples[0].chart.primary.name}${cls.samples[0].chart.changed ? `之${cls.samples[0].chart.changed.name}` : ''}，${cls.samples[0].chart.calendar.monthBranch}月${cls.samples[0].chart.calendar.dayGanzhi}日`, ...[...cls.samples[0].chart.lines].reverse().map((l) => `${l.label} ${l.spirit} ${l.relative}${l.stem}${l.branch}${l.element}${l.moving ? (l.yinYang === '阳' ? '○' : '×') : ''}${l.isWorld ? '世' : l.isResponse ? '应' : ''}${l.changed ? ` → ${l.changed.relative}${l.changed.stem}${l.changed.branch}${l.changed.element}` : ''}${l.hidden ? `（伏${l.hidden.relative}${l.hidden.branch}${l.hidden.element}）` : ''}`)] : [] },
+    authoring: src.authoring,
+    checks: { errors, warnings },
+  };
+  entry.content_hash = digestOf({ key, question_id: entry.question_id, reading: entry.reading, rule_version: entry.rule_version, rule_profile: entry.rule_profile_id, samples: entry.sample_charts });
+  const usedRules = [...new Set([...(src.judgment.rule_ids || []), ...(src.reading.classical_sources || []).map((c) => c.rule_id), ...((src.reading.timing?.entries) || []).map((e) => e.timing_rule_id)])].filter((x) => /^R-/.test(x));
+  for (const { evidence } of cls.samples) for (const h of evidence.harmonies) for (const id of h.rule_ids) if (!usedRules.includes(id)) usedRules.push(id);
+  const openDisputes = new Set(register.disputes.filter((x) => x.status === 'open').map((x) => x.dispute_id));
+  const ruleById = new Map(register.rules.map((x) => [x.rule_id, x]));
+  entry.rules_used = usedRules.map((id) => ({ id, status: ruleById.get(id)?.review_status ?? 'missing', open_disputes: (ruleById.get(id)?.dispute_ids || []).filter((x) => openDisputes.has(x)) }));
+  entry.rules_unapproved = entry.rules_used.filter((x) => !['ai-verified', 'user-approved'].includes(x.status) || x.open_disputes.length).map((x) => `${x.id}(${x.status}${x.open_disputes.length ? `；未裁定 ${x.open_disputes.join('、')}` : ''})`);
+  entry.statuses = { authoring_status: src.authoring.status, technical_review_status: errors.length ? 'failed' : 'passed', ...statusesFor(reviewRecords, src.script_id, entry.content_hash) };
+  if (entry.statuses.approval_status !== 'REVIEW_REQUIRED' && entry.rules_unapproved.length) { entry.statuses.approval_status = 'REVIEW_REQUIRED'; entry.statuses.production_allowed = false; entry.statuses.blocked_by_rules = entry.rules_unapproved; }
+  if (entry.statuses.approval_status !== 'REVIEW_REQUIRED' && errors.length) { entry.statuses.approval_status = 'REVIEW_REQUIRED'; entry.statuses.production_allowed = false; entry.statuses.blocked_by_checks = true; }
+  built.push({ entry, chart: null, analysis: null, evidence: null });
+  for (const e of errors) allErrors.push(`${src.script_id}: ${e}`);
+}
+
 // C14 跨篇重复句
 const seen = new Map();
 for (const { entry } of built) {
@@ -327,8 +382,9 @@ const release = {
   content_version: CONTENT_VERSION,
   rule_profile: RULE_PROFILE.id,
   readings: approved.map(({ entry }) => ({
-    key: entry.key, script_id: entry.script_id, question_id: entry.question_id, facts_digest: entry.facts_digest, content_hash: entry.content_hash,
-    rule_version: entry.rule_version, approval: { approval_status: entry.statuses.approval_status, production_allowed: true, reviewer: entry.statuses.reviewer, reviewed_at: entry.statuses.reviewed_at },
+    key: entry.key, script_id: entry.script_id, question_id: entry.question_id, content_hash: entry.content_hash,
+    ...(entry.match === 'class' ? { match: 'class', equivalence_version: entry.equivalence_version, class_key: entry.class_key } : { facts_digest: entry.facts_digest }),
+    rule_version: entry.rule_version, approval: { approval_status: entry.statuses.approval_status, production_allowed: true, reviewer: entry.statuses.reviewer, reviewed_at: entry.statuses.reviewed_at, approval_basis: entry.statuses.approval_basis },
     reading: { ...entry.reading },
   })),
 };
@@ -338,7 +394,7 @@ writeFileSync(join(ROOT, 'data/release/liuyao-release.json'), `${JSON.stringify(
 writeFileSync(join(ROOT, 'dist/liuyao-drafts.json'), `${JSON.stringify({ content_version: CONTENT_VERSION, not_for_release: true, readings: built.map((b) => b.entry) }, null, 2)}\n`);
 
 // SQL
-const sqlRows = built.map(({ entry, chart, analysis, evidence }) => {
+const sqlRows = built.filter((b) => b.chart).map(({ entry, chart, analysis, evidence }) => {
   const y = evidence.yongshen;
   const row = {
     script_id: entry.script_id, question_id: entry.question_id, question_type: entry.question_type, domain_id: entry.domain_id, question_text: entry.question_text,
@@ -363,20 +419,34 @@ const sqlRows = built.map(({ entry, chart, analysis, evidence }) => {
   return `INSERT INTO liuyao_readings (${SQL_COLUMNS.join(', ')}) VALUES (${SQL_COLUMNS.map((c) => sqlValue(row[c])).join(', ')});`;
 });
 const ddl = `-- 自动生成：node scripts/build-readings.mjs\nCREATE TABLE IF NOT EXISTS liuyao_readings (\n${SQL_COLUMNS.map((c) => `  ${c} TEXT`).join(',\n')},\n  PRIMARY KEY (script_id)\n);\nCREATE UNIQUE INDEX IF NOT EXISTS idx_liuyao_readings_key ON liuyao_readings (reading_key);\n`;
-writeFileSync(join(ROOT, 'dist/liuyao-readings.sql'), `${ddl}\n${sqlRows.join('\n')}\n`);
+const CLASS_COLS = ['script_id', 'question_id', 'equivalence_version', 'class_key', 'sample_charts', 'title', 'brief_text', 'opening_text', 'process_text', 'ending_text', 'timing_text', 'timing_entries', 'conclusion_text', 'classical_sources', 'calculation_explanation', 'approval_status', 'production_allowed', 'content_hash', 'rule_version', 'reviewer', 'reviewed_at'];
+const classRows = built.filter((b) => !b.chart).map(({ entry: e }) => {
+  const row = { script_id: e.script_id, question_id: e.question_id, equivalence_version: e.equivalence_version, class_key: e.class_key, sample_charts: e.sample_charts, title: e.reading.title, brief_text: e.reading.brief,
+    opening_text: e.reading.opening, process_text: e.reading.process, ending_text: e.reading.ending, timing_text: e.reading.timing.text, timing_entries: e.reading.timing.entries, conclusion_text: e.reading.conclusion,
+    classical_sources: e.reading.classical_sources, calculation_explanation: e.reading.calculation_explanation, approval_status: e.statuses.approval_status, production_allowed: e.statuses.production_allowed ? 'true' : 'false',
+    content_hash: e.content_hash, rule_version: e.rule_version, reviewer: e.statuses.reviewer, reviewed_at: e.statuses.reviewed_at };
+  return `INSERT INTO liuyao_class_readings (${CLASS_COLS.join(', ')}) VALUES (${CLASS_COLS.map((c) => sqlValue(row[c])).join(', ')});`;
+});
+const classDdl = `CREATE TABLE IF NOT EXISTS liuyao_class_readings (\n${CLASS_COLS.map((c) => `  ${c} TEXT`).join(',\n')},\n  PRIMARY KEY (script_id)\n);\nCREATE UNIQUE INDEX IF NOT EXISTS idx_liuyao_class_key ON liuyao_class_readings (question_id, equivalence_version, class_key);\n`;
+writeFileSync(join(ROOT, 'dist/liuyao-readings.sql'), `${ddl}\n${sqlRows.join('\n')}\n\n${classDdl}\n${classRows.join('\n')}\n`);
 
 // 文档：11 已写断语全文、12 审核记录
 const md = [];
 md.push('# 11 已完成的断语（作者源稿构建结果）\n');
 md.push(`> 自动生成，请勿手改（\`npm run build\`）。内容版本 ${CONTENT_VERSION}；规则版本 ${RULE_PROFILE.id} ${RULE_PROFILE.version}。`);
-md.push('> **状态说明**：以下全部为 AI 起草稿，作者已全文自查，技术核验见各篇状态；**均未经专业审核，均未批准发布**，用户端查询一律返回「本卦断语尚在整理」。\n');
+md.push('> **状态说明**：以下全部为 AI 起草稿（Claude），审核与批准状态见各篇「状态」行；AI_APPROVED 为 AI 审核结果，不是真人专家认证。IP- 为逐盘稿；IPC- 为等价类稿，正文对类内各盘共用，具体卦盘由程序逐盘列出。\n');
 for (const { entry } of built) {
   const r = entry.reading;
   const f = entry.calculation_facts;
   md.push(`## ${entry.script_id}　${r.title}\n`);
   md.push(`- 问事：${entry.question_text}（\`${entry.question_id}\`）`);
-  md.push(`- 卦盘：${f.primary}${f.changed ? ` 之 ${f.changed}` : '（六爻安静）'}；月建 ${f.month}，日辰 ${f.day}，旬空 ${f.void}`);
-  md.push(`- 匹配键：\`${entry.key}\`；内容哈希 \`${entry.content_hash.slice(0, 16)}…\``);
+  if (entry.match === 'class') {
+    md.push(`- 卦盘：${f.primary}`);
+    md.push(`- 匹配键：等价类 \`${entry.class_key}\`（${entry.equivalence_version}）；内容哈希 \`${entry.content_hash.slice(0, 16)}…\``);
+  } else {
+    md.push(`- 卦盘：${f.primary}${f.changed ? ` 之 ${f.changed}` : '（六爻安静）'}；月建 ${f.month}，日辰 ${f.day}，旬空 ${f.void}`);
+    md.push(`- 匹配键：\`${entry.key}\`；内容哈希 \`${entry.content_hash.slice(0, 16)}…\``);
+  }
   md.push(`- 结论类别：${entry.verdict_label}；情境：${entry.scenario_tags.join('、')}`);
   md.push(`- 状态：作者稿 ${entry.statuses.authoring_status}｜作者全文自查 ${entry.statuses.author_full_text_review_status}｜技术核验 ${entry.statuses.technical_review_status}｜AI 审核（古籍 ${entry.statuses.ai_review.source_check}、独立 ${entry.statuses.ai_review.independent}、反向 ${entry.statuses.ai_review.adversarial}、精修 ${entry.statuses.ai_review.editor}、终审 ${entry.statuses.ai_review.final_qa}）｜人工审核 ${entry.statuses.interpretation_review_status}｜发布 ${entry.statuses.approval_status}｜production_allowed ${entry.statuses.production_allowed}\n`);
   md.push('```');
@@ -387,7 +457,7 @@ for (const { entry } of built) {
   md.push(`**详断·过程**\n\n${r.process.replace(/\n/g, '\n\n')}\n`);
   md.push(`**详断·结局**\n\n${r.ending.replace(/\n/g, '\n\n')}\n`);
   md.push(`**应期**　${r.timing.text}\n`);
-  for (const e of r.timing.entries) md.push(`- ${e.target_branch}${e.time_scale === 'month' ? '月' : '日'}｜${e.target_event}｜${e.target_symbol}｜${e.condition}｜${e.timing_rule_id}｜${e.source_reference}`);
+  for (const e of r.timing.entries) md.push(`- ${e.target_branch ? `${e.target_branch}${e.time_scale === 'month' ? '月' : '日'}` : `逐盘求出（${e.pool === 'adverse' ? '防范' : '有利'}）`}｜${e.target_event}｜${e.target_symbol}｜${e.condition}｜${e.timing_rule_id}｜${e.source_reference}`);
   md.push(`\n**总断**　${r.conclusion}\n`);
   md.push('**古籍依据**\n');
   for (const c of r.classical_sources) md.push(`- 《${c.source_book}·${c.source_chapter}》「${c.quote}」——${c.applies_because}（${c.rule_id}）`);
@@ -397,7 +467,7 @@ for (const { entry } of built) {
 const mdText = `${md.join('\n')}\n`;
 // C26 正式排版结构快照：编号标题、问事、卦盘与月建日辰旬空、匹配键、状态、六爻排盘、简断、开局、过程、结局、应期、总断、古籍依据、计算说明
 const ORDER = ['## ', '- 问事：', '- 卦盘：', '- 匹配键：', '- 状态：', '```', '**简断**', '**详断·开局**', '**详断·过程**', '**详断·结局**', '**应期**', '**总断**', '**古籍依据**', '**计算说明**'];
-for (const block of mdText.split(/\n(?=## IP-)/).filter((b) => b.startsWith('## IP-'))) {
+for (const block of mdText.split(/\n(?=## IPC?-)/).filter((b) => /^## IPC?-/.test(b))) {
   let pos = -1;
   for (const mark of ORDER) { const at = block.indexOf(mark, pos + 1); if (at < 0) { allErrors.push(`C26 排版结构缺少：${block.slice(3, 10)} ${mark}`); break; } pos = at; }
   if (/总断\*\*\s*总断[：:]/.test(block)) allErrors.push(`C26 ${block.slice(3, 10)} 出现「总断 总断」`);

@@ -51,7 +51,7 @@ export function chartFactSheet(questionId, chart, evidence = buildEvidence(quest
 /** 类别稿的应期条目按规则在本盘求出目标地支（同类各盘地支不同） */
 export function resolveClassTiming(entries, evidence, chart) {
   return (entries || []).map((e) => {
-    const pool = e.target === 'adverse' ? evidence.adverseTimingCandidates : evidence.timingCandidates;
+    const pool = (e.pool || e.target) === 'adverse' ? evidence.adverseTimingCandidates : evidence.timingCandidates;
     const branches = [...new Set(pool.filter((c) => c.timing_rule_id === e.timing_rule_id).flatMap((c) => c.target_branches))];
     return { ...e, target_branches: branches, offsets: branches.map((b) => ({ branch: b, ...dayOffset(chart, b) })) };
   });
