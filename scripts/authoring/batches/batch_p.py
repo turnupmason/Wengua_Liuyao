@@ -216,7 +216,7 @@ specs.append(dict(rank=192, id='IPC-0192', verdict='wait-then-likely', label='�
   timing_text='官星旬空，依「旬空最爱填冲」：官星出空填实之日，或日辰冲起官星之日，最容易落定；具体日子随排盘列出，冲空之日可能就在本旬之内。',
   timing=[('R-YINGQI-08', 'favorable', '官星出空或冲空，结果落定', '持世之官鬼（旬空）', '旬空：填实或冲空', '官星本支值日（出空填实）、冲官星之日（冲空）')],
   conclusion='眼下悬而未决，出空后有望通过。持世的官星有气而暂空，克官的子孙出不来。耐心等出空冲空之时。',
-  sources=[('R-KONG-03', '有气之空，旬内毕竟为空', 0), ('R-YONG-GUAN-07', '官空之说，依 D-017 指无气之空', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-YINGQI-08', '旬空最爱填冲', 0)],
+  sources=[('R-KONG-03', '有气之空，旬内毕竟为空', 0), ('R-KONG-02', '旬空章分辨：旺不为空，有日建动爻生扶者不为空', 0), ('R-YONG-GUAN-07', '官空之说，依 D-017 指无气之空', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-YINGQI-08', '旬空最爱填冲', 0)],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-02', 'R-FUSHEN-01', 'R-FUSHEN-02', 'R-LIANGXIAN-03'],
   calc='用神两现同支持世而旬空（DEFERRED）。依 D-017 作有气之空。',
   adv='同 IPC-0179。'))
