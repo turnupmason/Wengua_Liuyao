@@ -31,7 +31,10 @@ export function checkClassDraft(src, userTexts) {
   if (src.equivalence_version !== EQUIVALENCE_VERSION) errors.push(`C30 等价条件版本 ${src.equivalence_version} 与当前 ${EQUIVALENCE_VERSION} 不符，须按新指纹重核`);
   if (!src.class_key) errors.push('C30 缺 class_key');
   const inputs = src.sample_charts || [];
-  if (inputs.length < 8) errors.push(`C30 样本盘 ${inputs.length} 个，至少 8 个`);
+  // 全类不足 8 盘者（class_charts 由画像写入），须逐盘全核：样本即全类
+  const need = src.class_charts && src.class_charts < 8 ? src.class_charts : 8;
+  if (inputs.length < need) errors.push(`C30 样本盘 ${inputs.length} 个，至少 ${need} 个${need < 8 ? '（全类盘数）' : ''}`);
+  if (new Set(inputs.map((ci) => `${ci.line_values.join('')}${ci.month_branch}${ci.day_ganzhi}`)).size !== inputs.length) errors.push('C30 样本盘有重复');
   for (const ci of inputs) {
     const chart = buildChart({ lineValues: ci.line_values, calendar: { monthBranch: ci.month_branch, dayGanzhi: ci.day_ganzhi } });
     const evidence = buildEvidence(src.question_id, chart);

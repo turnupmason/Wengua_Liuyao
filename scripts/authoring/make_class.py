@@ -90,7 +90,7 @@ def make(spec):
             + spec.get('calc', ''))
     doc = {
         'script_id': spec['id'], 'question_id': 'career.interview.interview-pass', 'match': 'class', 'equivalence_version': V,
-        'class_key': p['key'], 'class_rank': p['rank'], 'class_share_of_casts': round(p['share'], 6), 'sample_charts': p['samples'],
+        'class_key': p['key'], 'class_rank': p['rank'], 'class_share_of_casts': round(p['share'], 6), **({'class_charts': p['charts']} if p['charts'] < 8 else {}), 'sample_charts': p['samples'],
         'scenario_tags': spec['tags'],
         'judgment': {'verdict': spec['verdict'], 'verdict_label': spec['label'], 'deciding_evidence': spec['deciding'], 'supporting': spec.get('supporting', []),
                      'adverse': spec.get('adverse', []), 'conflicts_resolved': spec.get('conflicts', []), 'rule_ids': rule_ids,

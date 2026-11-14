@@ -108,8 +108,8 @@ if (isMainThread) {
       for (const [sk, v] of Object.entries(p.f)) { a.stats[sk] = a.stats[sk] || {}; a.stats[sk][v] = (a.stats[sk][v] || 0) + 1; }
       for (const r of p.fav) a.fav[r] = (a.fav[r] || 0) + 1;
       for (const r of p.adv) a.adv[r] = (a.adv[r] || 0) + 1;
-      if (a.samples.length < 6) a.samples.push({ h: rnd(), hex: h.name, ci: { line_values: lv, month_branch: m, day_ganzhi: g.stem + g.branch } });
-      else if (rnd() < 0.02) a.samples[Math.floor(rnd() * 6)] = { h: rnd(), hex: h.name, ci: { line_values: lv, month_branch: m, day_ganzhi: g.stem + g.branch } };
+      if (a.samples.length < 12) a.samples.push({ h: rnd(), hex: h.name, ci: { line_values: lv, month_branch: m, day_ganzhi: g.stem + g.branch } });
+      else if (rnd() < 0.02) a.samples[Math.floor(rnd() * 12)] = { h: rnd(), hex: h.name, ci: { line_values: lv, month_branch: m, day_ganzhi: g.stem + g.branch } };
     }
   }
   parentPort.postMessage([...acc.entries()]);
