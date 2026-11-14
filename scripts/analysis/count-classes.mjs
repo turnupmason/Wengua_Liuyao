@@ -2,7 +2,7 @@
 // 用法：node scripts/analysis/count-classes.mjs [workers] [limitDays]
 import { Worker, isMainThread, parentPort, workerData } from 'node:worker_threads';
 import { cpus } from 'node:os';
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { buildChart, buildEvidence, interviewFingerprint } from './fingerprint.mjs';
 import { interviewPassClass, EQUIVALENCE_VERSION } from '../../src/equivalence.js';
 import { allHexagrams, BRANCHES, ganzhiFromIndex } from '../../src/index.js';
@@ -46,7 +46,11 @@ if (isMainThread) {
         writable.classes_needed_for_share_of_all_casts = wmarks;
         const blockers = Object.fromEntries(all.filter(([k]) => k.startsWith('X|')).map(([k, v]) => [k.slice(2), +(v[1] / tot).toFixed(4)]));
         { // 写稿顺序表：按掷钱概率排序的前 2000 个类别与累计覆盖
-          const rows = all.filter(([k]) => k.startsWith('C|')).sort((x, y) => y[1][1] - x[1][1]).slice(0, 2000);
+          // 概率相同的类按上一版写稿顺序的名次、再按类键排序，保证已写各类的名次稳定（多线程合并次序不定）
+          const ORDER = new URL('../../reports/interview-pass-class-order.json', import.meta.url);
+          const prev = existsSync(ORDER) ? new Map(JSON.parse(readFileSync(ORDER, 'utf8')).classes.map((c) => [c.key, c.rank])) : new Map();
+          const pr = (k) => prev.get(k.slice(4)) ?? Infinity;
+          const rows = all.filter(([k]) => k.startsWith('C|')).sort((x, y) => y[1][1] - x[1][1] || pr(x[0]) - pr(y[0]) || (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0)).slice(0, 2000);
           let cum = 0;
           const list = rows.map(([k, [c, p]], i) => { cum += p / tot; return { rank: i + 1, key: k.slice(4), charts: c, share: p / tot, cumulative: cum }; });
           writeFileSync(new URL('../../reports/interview-pass-class-order.json', import.meta.url), `${JSON.stringify({ equivalence_version: EQUIVALENCE_VERSION, classes: list }, null, 1)}

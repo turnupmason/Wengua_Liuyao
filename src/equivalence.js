@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.1';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.2';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -43,7 +43,8 @@ function worldState(world) {
   // 世爻动化（乡试章「世化退神，若非临场之阻，必无勇往之心」；化回头克、化绝、化墓同为化凶）
   const ch = world.change;
   if (ch) parts.push(ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝' || ch.lifeStage === '墓' ? '世化凶' : ch.huitou === '回头生' || ch.advance === '进神' ? '世化吉' : '世动');
-  if (world.void) parts.push(world.void.zengshan === '冲空则实' ? '' : '世空');
+  // 世空分有气、无气（docs/18：类推 D-017，有气之空作待时，无气之空从「世空…俱不得」）
+  if (world.void) parts.push(world.void.zengshan === '冲空则实' ? '' : world.state.state === 'INEFFECTIVE' ? '世空无气' : '世空有气');
   if (world.monthBreak) parts.push('世破');
   if (world.damage.some((d) => d.includes('动来克') || d === '日克' || d === '月克')) parts.push('世受克');
   return parts.filter(Boolean).join('') || '世安';

@@ -31953,6 +31953,3681 @@
         "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
         "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
       }
+    },
+    {
+      "record_id": "RV-1215",
+      "script_id": "IPC-0001",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8553802a3f7be108c2e8ca35657a501f469d810b1db778f6f8c152da5fef6c1e",
+      "original_content_hash": "0b15355d655544a2ed1cbf0ae5ee51fc3f042cc8e0c92649dd9a4dee06da7173",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）",
+        "class_share_of_casts（0.00138 → 0.00136）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1216",
+      "script_id": "IPC-0002",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e2b2581cb5c4e960543dd482a9acaa9731f2f1cf968b13ac21e2d7363b923b25",
+      "original_content_hash": "46332218f30cd2734ee24f05bb9e5d0ea48635b0d11b527672e9d1d05e04cbee",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1217",
+      "script_id": "IPC-0003",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c323cef103cc6d6d368b3625741ef80fef7475a8a7252696edf7ca7b879aad4a",
+      "original_content_hash": "f09f422bb0028a3ca97f4f1560261a02eeddec03dd7f00e821720fdadbb2c5e3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）",
+        "class_share_of_casts（0.00127 → 0.001114）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1218",
+      "script_id": "IPC-0004",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e277b098b9e31a642eee5a80b5356dc5197e5e5bf7baf40e59318b16b975a340",
+      "original_content_hash": "567c185d6161ccd95de05600705797652ed6eb9d75a57178cf2d0a7fd64a3106",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）",
+        "class_share_of_casts（0.00126 → 0.001262）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1219",
+      "script_id": "IPC-0005",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e8169c5ef1ffff2ede31f222f041d7214c7044af69c8ad735880379d493bfc42",
+      "original_content_hash": "fcbaeaf1e756e3c3c1ccb9feeef26a2d15a35c23f291a5755c2e0db8f5065ccd",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1220",
+      "script_id": "IPC-0006",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "9fe9ec64eace1d982c61c7feb43bbe54725191d4d795add42d32de7b8babdf3c",
+      "original_content_hash": "19e93a0e4bff64bd41d6e2bf916b501f1e4301549917d568cfc5815b38151ceb",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1221",
+      "script_id": "IPC-0007",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "910b204f4d49d381d632c8d525632db9526f3ec916dff0e3bc1c2ef541fd9b97",
+      "original_content_hash": "449111010f68cb35cb1da94cf2daebaf818c95bda2229e90d86219a88e2591b9",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1222",
+      "script_id": "IPC-0008",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "bcb2d6349307be8439e65742903dbeb53c7c046c2ed152950a696b4ae929f26a",
+      "original_content_hash": "be7e6969d483af16ea1d1499fe7f5b955453c5fdecace3c5dcde461dc65bb001",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1223",
+      "script_id": "IPC-0009",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5960743e404123ee101ab08be9d046abd898bf6c96a50dbb11de8b4c01207005",
+      "original_content_hash": "39ff5b609d8de92ac45243d65f0e3d6e10e6beac4dc9938a74dd4396023c9767",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1224",
+      "script_id": "IPC-0010",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "885b08530eacd5fa51c7a9dd59a651e0d43f1e9e44d7136e788594e066ee12e4",
+      "original_content_hash": "c749c866e171c561f9949ee2b2a0dbfcd89632c4696f1616c55f69947fa0ad61",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1225",
+      "script_id": "IPC-0011",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "817090aa512a0c4bba2f8e092a161e00db977dcf6c863d1c0f95215a62fb2c6a",
+      "original_content_hash": "9e4b3c706d4e35f3cf6945f4951af4daaa3ff40c7ca5a5d3e537cdd5ca1be97f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1226",
+      "script_id": "IPC-0012",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3ff9ac7f7d79a894f211e05e17623e81b65f586f959878569aafa97a286286ec",
+      "original_content_hash": "d7032e7cd542cfadfe266988c2fcb883ddbc4013936e6bba279d2117446a4bcf",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1227",
+      "script_id": "IPC-0013",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7960147bf1f5e53d3e271f9043d1990ba6d4c2180f550bb416d8e048518134df",
+      "original_content_hash": "c09620079db1afdaed2c54743ee54561be407bcbffb52f843ee88c6fc5f51ea4",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1228",
+      "script_id": "IPC-0014",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "09b721e897096bb70d1cb17ba15923713fd735d2c62588f639aacb09068a7d54",
+      "original_content_hash": "c238138e60793f1931c15722ac3907e4d4558365ee3b48ad804376255325f858",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1229",
+      "script_id": "IPC-0015",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8404ab7bb9927079571bd7cfdfa174a24bfbcef08773b3ff7dbff1d696bec03f",
+      "original_content_hash": "7024db6f0aa026e758c8eb57a7c8b70c2c7d07d3105a7606351ca74a45266f57",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1230",
+      "script_id": "IPC-0016",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d4ddad2ea7fa8b93d5808f27ab87b72f2c7098989a8f6edf1d4b54b6648fd997",
+      "original_content_hash": "de3f18a58e96b7f88c0387b77c80141b48a9595f1e8e511065851d634b227599",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1231",
+      "script_id": "IPC-0017",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c5e36296f4f9567815118b0927bf4037096a54d5569b2ea1012f3184e52642c9",
+      "original_content_hash": "8d593f3f15181c76c545224004e7e6d57f9efc0601b7428b6c63efe83ddc7a06",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1232",
+      "script_id": "IPC-0018",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "804a1d36d85f3be9dcd23d9bdfbc41e96a9876fe7e5564763fd30d85cb5cb7d2",
+      "original_content_hash": "29c25788cb2b61be8263231ea3b208658feb92ba542bac10ad98a2eafa98eac3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1233",
+      "script_id": "IPC-0019",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3ff698c315794b115a5122a7f82633f68c08c243c896d61a412b6e3ce79b7314",
+      "original_content_hash": "67453af2fa9fb6d6538dda02fe67932b71b80cba7673f6cd8aa625dadbaa33e5",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1234",
+      "script_id": "IPC-0020",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "bffc5bf9ea8b08f2e9fd9ce4854a35818a99010638e5b37cb6ff24ae390cdb9b",
+      "original_content_hash": "fea92f64d5174acc4df67bbabf73dcbef08d6cdd4836b0d6be0448ef562d3257",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1235",
+      "script_id": "IPC-0021",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1e862db2799b72b10df6753e3db6091f3f84816ad479a6b118173b9a8c97be6d",
+      "original_content_hash": "1244d1b94736abe82425731af2b69d94170f356adfbe5e08c832757accdf9cc8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1236",
+      "script_id": "IPC-0022",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "01d28acbfbc8b73ca998e3341b94ac44d6825c2b9fc7455c8cb3318661cca96f",
+      "original_content_hash": "ff1b6d19d145f9720e32a61eb471f2d358b8dc67f76fa746500e9eaba631fb3a",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1237",
+      "script_id": "IPC-0023",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d054ae0837cd34b1498662fd466726417240b6044a2610748505d8e1817bd4c5",
+      "original_content_hash": "4ad8ae09e64b822f104c64d4911c767ef91c8cceeed6156db3128b5964cba6e3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1238",
+      "script_id": "IPC-0024",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e92cd00783f76d1b978c2e3009e97993a1c1fd2dfbaea30cd82643334360042a",
+      "original_content_hash": "8c1411b4cfdcaf452ef1e1ea76a2e27d573ffe477877068abac7481927ae9f2f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1239",
+      "script_id": "IPC-0025",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1940898b4aac3a893f1510dbdaac4415fc69af639daa0b72748aab97bc0a861f",
+      "original_content_hash": "ee22f9f21021199ca54397f21db8d848287d4975f1be5e23cc5048005af03a01",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1240",
+      "script_id": "IPC-0026",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "681549f3a421b1f80c954a4935f717ef0854746df48ba23ac661dd3ec77fc7d6",
+      "original_content_hash": "c066942693a4404100a287e27a624b1cac94d261cc86f084c0a18830ca4962df",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1241",
+      "script_id": "IPC-0027",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "063921dc46479bd1d37422a1ec3602d6ee080ce5ad57b1fa69c53324460127ae",
+      "original_content_hash": "453f9a678c6687edc5293f67e0205d015df13f0e63b7a06a12d10d0f5e1e3a13",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1242",
+      "script_id": "IPC-0028",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d417b0e5483f962719fe6cbb1883c3af151266d1eecc0ed17508865572acfd36",
+      "original_content_hash": "ca729597de2ab884246aaf2b396975949cab6694d17b15c0634e433019a261f6",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1243",
+      "script_id": "IPC-0029",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4977ddd5488b1042151f711d245566cc12367461749a3afe5a8d16debef1924b",
+      "original_content_hash": "6e03cc5cdd4a6f4945d74db5ae10a4072e490c9eddf998afbe2240dedc674e19",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1244",
+      "script_id": "IPC-0030",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5e9b7e772009db566b1b476bed7b51df53d4d8c26a72463a9b628ea690f8d21a",
+      "original_content_hash": "f322a3dd00eca5c6c424430f882ff2d68ea39930b6d558952114c7da36709c63",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1245",
+      "script_id": "IPC-0031",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c7ea2227e904722c6b2d435e81c6b5f61c4b4cdab5b58164fd721911b1a2e9c2",
+      "original_content_hash": "4d5f1881396038e090a1a0c6e3180854bdcfba4edc132b91df3d196cda63fa62",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1246",
+      "script_id": "IPC-0032",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "ec120945d4a9a3b6455a0e1aed62acafaacf511f215e2fa5d7145279b122ec9c",
+      "original_content_hash": "f483c8365190592bf6f9db082e139fca4de29c31c93eed4c58f9c8b7c526d4d6",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1247",
+      "script_id": "IPC-0033",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "a8265750f2bc17d63cf13fd1478ff27dbbab553b0c454dd0f9805b2a1b6e4874",
+      "original_content_hash": "3595099084b22295fa0c4ac71e7922640514618fe9087b222e6fd8588b721e9c",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1248",
+      "script_id": "IPC-0034",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5eb9948d0c7c879d531b0c683eaba95d74106f1f92a989c0f31195500105cb2f",
+      "original_content_hash": "edbc0f0ab0ae4ecc98e5319033467a91ba998e34759d7639513425905b5ae3b3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1249",
+      "script_id": "IPC-0035",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d853b113503a08dc1168ff378bcf72de13f750095e8e001ba3759705755a4ae1",
+      "original_content_hash": "a62e3eccb4424acd184b5f47d891c8c374c26efa5519d513ae5e204ba3c9c59d",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1250",
+      "script_id": "IPC-0036",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "efb82b987933ef949a0df1ad30e1647c7f3dc4562d46ebedf5a330aacdae6b2e",
+      "original_content_hash": "430091a4553b3d7cdb0f30046873b0da20877a35a5d04dec9568f44f46c9a428",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1251",
+      "script_id": "IPC-0037",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "aa0ce52c7fa3754188b9209990dcc07484b12ae12146eafe160dfa06f2e7ae5a",
+      "original_content_hash": "d97336752a5448306ff83700ee08dc7f7e533e788590916c8dcfdff4264a49dd",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1252",
+      "script_id": "IPC-0038",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "97082f62311d82e4b50b27583627a0e019fa4827ca2a109e5b7dd8b950b8ae4e",
+      "original_content_hash": "59229d830aec706cb711e17645bb14e9ae58c6cd2439c556f38ef7a10872fae8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1253",
+      "script_id": "IPC-0039",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "6311479e7b77ece84e7b59862c86df7be674774e505be25c88559c1983348c2c",
+      "original_content_hash": "04a1aecfd82c57fe218a40864ec750bf6be54aec6c496e114e964742552b13ac",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1254",
+      "script_id": "IPC-0040",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "921fdb0aaf416982656d1d1744c2e0f844290b0c357ae73a2e29002b4ec375a8",
+      "original_content_hash": "5221de36540bb8af06242e309421da40531fc08c3764cd00643b58e9a9f205e7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1255",
+      "script_id": "IPC-0041",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "9d1f72d9e59891685f0d82216d9ae01f99bfcab7a0b3ab821c83f5f2374d5c24",
+      "original_content_hash": "a0ec45389bc0f0c6e1af7837318e981b7e44e5fdc0a1d1285c44d0dd2e3297e8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1256",
+      "script_id": "IPC-0042",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "735fc449687425f4c2c5e2bd5c047b6d50622252edb6916953edeb477256b08d",
+      "original_content_hash": "3d3286b322622b8a723c4c3370a9a11402eadeb8fbd8cfc0604898e8789dc190",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1257",
+      "script_id": "IPC-0043",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3df5663cad79d6248fb64e634d50ca54f6df8770d00c933b50d6370d213b9de6",
+      "original_content_hash": "c35a78cab77fd6a7a76e6de6c96221909d973e1e22c61bcaf07013e063a5f7aa",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1258",
+      "script_id": "IPC-0044",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "34b07cbb313dc230dec33bdd7c5dc3c86be2379ae2dfe439fe921ba0cba62b83",
+      "original_content_hash": "edb2b7ed5f4b7910fdda61ebb8cc9bf8eb86d33467b0b3e77dd6aa8ac5412843",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1259",
+      "script_id": "IPC-0045",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "797e363de9f909f5a2119aed80056337a33963d59f916aacc2986d446a86ae86",
+      "original_content_hash": "179769df1938450281710fabc77980acfd3dcc02438beb71b8a925271557a5fb",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1260",
+      "script_id": "IPC-0046",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b0a4e2bff51c6ba82f3f82776261b01c7fcc9266f8516eaee9442d64fdac8668",
+      "original_content_hash": "a0ea566e1a0a741a1a38e521cc3aaa67fe601522b77e908a73d012eb7b8f7c87",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1261",
+      "script_id": "IPC-0047",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "2d958c47fa58c76bd34936efcaa8e2a044af59577a8eff25003b0bb1ec3cae47",
+      "original_content_hash": "257df77a198abd5cc7ff028daa2de344228d4601eb50fc3ee64a6388b4e50e6e",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1262",
+      "script_id": "IPC-0048",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "2d5253062fc56ee5f7b516b9b654ab416359dff08b75d3c639252fb23976e5b4",
+      "original_content_hash": "dcfa46c6984bc0a7b74779edc146e6e9dbf810945d783d1a445a74e1259ee7b9",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1263",
+      "script_id": "IPC-0049",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "628b17b606215c5398ae6c366426e3324c04d3b828e97affa74c322eab2ec114",
+      "original_content_hash": "988d80c52e558bca93f4ef8150f65bac5079cb74912a67afd6095c0c83036046",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1264",
+      "script_id": "IPC-0050",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "cbf375952ce7f1fd157efd25c633b38aebeb2f76cef808db8674d5917cc44c11",
+      "original_content_hash": "a8163e3f736594f28a7fc59c5b91c7ba27e1e27d0440928b2c72bb272ca0cd24",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1265",
+      "script_id": "IPC-0051",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "688d15e5748bb884d3417ecc7acebf19f6730de083084c370df48ac43854e235",
+      "original_content_hash": "e198c1f2e9bc167f13be18031c9c3cabe733ca28904ca883fe8b6dd91437db72",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1266",
+      "script_id": "IPC-0052",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "a150cedf88f70cc1dfea287e256a646739fc507e0b16f86f6b0160b855c16885",
+      "original_content_hash": "bdb87149b343d2f8b9a8eeb8bba3992374aed7310014cfe01eb9728c12f51659",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1267",
+      "script_id": "IPC-0053",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b2679afafb6e35986a08d090e947ed12ab37df995b1905291fac4157471cf296",
+      "original_content_hash": "177ae52b5b064d4747b309845ad6813a33e78de1c31c08f9d84f83f6d24e0fc4",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1268",
+      "script_id": "IPC-0054",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "47d56e7fb6b61c2036264823f5ce682d9e3605c88938b40bb44134ee38bb3be8",
+      "original_content_hash": "01959abb4794ead17ba0f8f52a292cf3f5c158b0549bc5d4d83bb974d0ceb125",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1269",
+      "script_id": "IPC-0055",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f438c76b00e539cb2d078b7236880e589cf7ea9cbd216d9a815c0d2efdfcac10",
+      "original_content_hash": "625ba101f2e0897215bf047b9e556919f0d69df33a4433c73f2af0836ad3d05a",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1270",
+      "script_id": "IPC-0056",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e93e510c7407ad766686ca0e1ece41d11ca77818cc9fc57e44a84605302ec6c0",
+      "original_content_hash": "34d2163ae7cd3d815b83b1c80994a696dbaf3c642a8ef2100837e723f44238cc",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1271",
+      "script_id": "IPC-0057",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c11be0a199c825be4beb03cf7022a57d150a9185467ddd89f8331d64f0da8b04",
+      "original_content_hash": "fa3841c21f35c9e8803c2fd1209bc1e72955850ab1e965dfc3dd0a60fa3f0b00",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1272",
+      "script_id": "IPC-0058",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "906d0a28c6c15361adff1cf6c3465eaeecbdc550abcec4aeaa50e124b9c8739b",
+      "original_content_hash": "533b8636df94729e86ee5e378ca1ebe20f7632d79965b7eb2dccdcc57c64e834",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1273",
+      "script_id": "IPC-0059",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c0b332f9662a5c355b055e94d738890836634f0abcbdb3363e8821abe1ea1409",
+      "original_content_hash": "bb65db2459aef90d9c78fb8963034f5414338f56018c573e8a9966d9f13644a8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1274",
+      "script_id": "IPC-0060",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1004a3f1e75645082680eeecf00ac443af26f657d1f5d5b30bfed3c77e6f02d8",
+      "original_content_hash": "b3b2d0b8d08ce80a3324b675629a96dde77195fd51febe7534bc92def3cb16c9",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1275",
+      "script_id": "IPC-0061",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "9450c8d9a2995f1843a5a12cee9079f483ef6cd1b8dadf276222a9617e494c3a",
+      "original_content_hash": "e2a477514f4e1509df111425a42fa74c479b54d530ba82da5815457aaebe70c6",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1276",
+      "script_id": "IPC-0062",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d844434e417b328dfeedb398e0bd333340e231e27eac8bedf0d2236fee52b325",
+      "original_content_hash": "533eee4ba86baf4509cd748bae7ec3893c3399e00c1a8b2410ff719def8cb356",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1277",
+      "script_id": "IPC-0063",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "ae5d3b4cfe72a690be237754e6c7b9ef915025f6cfee8e66c5b350ccd5fe9fa4",
+      "original_content_hash": "000b5eb3f64d58febb7bd8970034651101b89e13a32ef3b4b3dbbfbb78052adc",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1278",
+      "script_id": "IPC-0064",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "cc4f328a606deb605dd1f0821642134923ff6b82425cc060ccae6347d660165e",
+      "original_content_hash": "7ba91f1cc07e767c859940957cf0f50d8bc211eb7c7779437fc66a77d1afdb5b",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1279",
+      "script_id": "IPC-0065",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "626133bcec1bb3e8d86519e3e42e5801751d6d6bb565ded59e573057d63adf2e",
+      "original_content_hash": "9deb0278630e280357f1a53b01dccd4f32059e2dfbb5a0093ca1823d98a4c9b1",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1280",
+      "script_id": "IPC-0066",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "cd5d4b3ab3c811823af4953320595bc30ac648bbee02db9b526615fa96c2d566",
+      "original_content_hash": "7988257ae60204a6cb34e1d4bdefef4afa1d1a005ce9d8f6fdf111889aea68f5",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1281",
+      "script_id": "IPC-0067",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "003c8f9869206351cac5348ef6e9a27974050070301ccd29eef00c5d48cfc3c2",
+      "original_content_hash": "564be1ba11fd4a1ffe8124c2989f3f2e467e4d47a12ff638250bc125e9bec476",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1282",
+      "script_id": "IPC-0068",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "643ec59a82b62efe1badcf73eb348f74b98cf09edc2732e83480734735b923a5",
+      "original_content_hash": "e1fbddb39a7e54db2bcc8e4318e16e909c938bebeef734bd62bd4c7aa02fd1fc",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1283",
+      "script_id": "IPC-0069",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8bd975f6066e50e99ab4ac97ba7b75599b2d3f2f585bd0d11defdc82aa2b25e8",
+      "original_content_hash": "7f3e8baf98f196d197f56a3e69b831efb667ed9f06faeac5d8de945b04326823",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1284",
+      "script_id": "IPC-0070",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3af9f813bcb01941cef77dfdb1f42746929da0821cf5ee4d1786d36ef3a28aa5",
+      "original_content_hash": "f11e0cd0aeb6ed7f484a3b487a6709e15452af990b5a39b35d3e4947a68f8e5d",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1285",
+      "script_id": "IPC-0071",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "65aa4277d2e981f755e4877a4123aa0a98bd10fe64f8abf39d4294dcf0407461",
+      "original_content_hash": "fa32c066e71b6913304e4ca8ed706c2c4dc16296c2e5b07bb44288a194fa1372",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1286",
+      "script_id": "IPC-0072",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "62f3038884ac39d61218414b395929fd9094fd75d0c58105ba1bb2e5e8fcd8b4",
+      "original_content_hash": "21f855dc90bb134b2c236eb8a5c8ee3bd61cb252c08d17b7ae8c4c46ce7517f3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1287",
+      "script_id": "IPC-0073",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "9c562d844e23792a174d0836a18e78eeb4ba4c2266209124b04d98af65b23997",
+      "original_content_hash": "0ae38fecde2061b50ae377e4a343b79527593b9f55aab3553981cf0f4c1f1fef",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1288",
+      "script_id": "IPC-0074",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "a12badc5d79bbd5d0c3e7ad0ba1077e977ec110dc858a881fd2d426d69bf8e45",
+      "original_content_hash": "73f0073a58379614b85ee82e2410084bac004469fbef526ed07c190b68024c58",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1289",
+      "script_id": "IPC-0075",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "80e51233c9743c259b2fc0845b7d819ff51ebd68ac5fd11b7dbd947ae81097b9",
+      "original_content_hash": "02fa008a2ed495aeb7240afa51fa2202282739f5a70fba4037c152f9c5b3541b",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1290",
+      "script_id": "IPC-0076",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b2503cc7efec394e328203222490f3a1a4a41ea65c4c672b462231e155a7394c",
+      "original_content_hash": "14d7a0c964e715b8502bf123c10294118b1df3b88150bb31a6125a6f3619d560",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1291",
+      "script_id": "IPC-0077",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7ee0c9bd748185abfa0d3b4f11470f0880b182b04250018d7a4eaf41ac503bcc",
+      "original_content_hash": "9c29f948542d93f853af8a7c9bd60da111f68f6ce492ae915ee308928122bf97",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1292",
+      "script_id": "IPC-0078",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5ff542586c7d09ff8725a030d4b6343f5b0399d921a3ebdc6983e7bea7065ba0",
+      "original_content_hash": "81d907861fe61c3bf7e61c8d943cf6ad22788ad2f29e9c935047253fe44fc1ce",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1293",
+      "script_id": "IPC-0079",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1f903714885b9e80a1a55b403b8f5a6feefcf18066b670837cd91c7e462b745c",
+      "original_content_hash": "d2fb166c788b2fe42a69552b84a634a94ebec6ce99e658cd2075a1e9f2c69a8d",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1294",
+      "script_id": "IPC-0080",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "474a5bc51fcad6f1a49e916a1ff476cbaeee4ce886701e6ad33e65f903b18e35",
+      "original_content_hash": "5e7474843bb8e78dff79290f3c731dd1b2d6fd5307e6dd4944502f8aef862f1e",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1295",
+      "script_id": "IPC-0081",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e2ca0a862309fd6f3ec6b5a15104b9b818aba19741dba7035d3a8e1dd4ddc87d",
+      "original_content_hash": "6ba48f67e839cf657ec3b4ad0173b6649de919b3760e34b7b6c6a5e3efc54bc4",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1296",
+      "script_id": "IPC-0082",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "50b4726218637ce80acc42cb77b45686b8548c87ed33aa64650935d14e201915",
+      "original_content_hash": "8752149d505de66831ef2626ff6a5d71169a2469be038899fb54b2afbef42d5f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1297",
+      "script_id": "IPC-0083",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "eb4d87c3804a34b01b238a33cbef4a0e0552b5b9d3d7c826140a9db539e9dce3",
+      "original_content_hash": "43a9ddc93e8162ad7a698537530cc7b74981df3f2987c552852c9a9cfd3c80bc",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1298",
+      "script_id": "IPC-0084",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "0ae343f53a5ea12cb9f53c34b75e7cf60a019cd6b4c01097600cfa7cdc3709c2",
+      "original_content_hash": "5c0ef5381bf9b763afa29dc0dc47b307a31a5ff85c2e4e0ad072e4bc1dac1971",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1299",
+      "script_id": "IPC-0085",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "aa811d16ea0cc0692576c9ad8874461ad7dacfd3f4006db40eb3d7b32bd74d40",
+      "original_content_hash": "961e5e98db273b966b8fb754c57a3b98935c9f71a14f80f34695fe777a31636e",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1300",
+      "script_id": "IPC-0086",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b86f3cd811bc644f681bd45743a13d76249a083d64e47b98c0609570d90ac1ed",
+      "original_content_hash": "fd6c6339fe307c27b464cb81d52f0af84b9a9d0f08e2f7c9eb03da94170b558a",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1301",
+      "script_id": "IPC-0087",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "25441edf3d7d041504c62e25d7b341df65d7ffc461a83b8d723ffa86f3e6c1d7",
+      "original_content_hash": "c89151f1e3de56a34c3f04c3d291686a48fce86ac97b560c8ce97e8129707036",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1302",
+      "script_id": "IPC-0088",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b6194a4b0ca49cfda698ff9afe6dd5f9880aeedd86e67353ec0d0f3d04b37491",
+      "original_content_hash": "a944b7e3ffbfa31545896ff84d28351e857cf3aa1f0ba0241fd044a4c7ba30ce",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1303",
+      "script_id": "IPC-0089",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "868d1dfd8ba61a3f9646128abff5f51b83f6709173e8692c0ecd9f323f1d11af",
+      "original_content_hash": "34a15a1ff97e0bcaddf8e99de48c21017917819a11a96e656521cf049da24504",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1304",
+      "script_id": "IPC-0090",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "ef179d2d231ec34d8fe5cf905d28397e771bd264307c756c1dce7233db31dda1",
+      "original_content_hash": "86adc56b9439de9d454091bf5f733d0e2a0b50d82dc86624872054b75c4b45b0",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1305",
+      "script_id": "IPC-0091",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "2d548a3ecbc6dcb1872b3930e33c58f7dbb663ff112d5b66a9d4087d963dea5d",
+      "original_content_hash": "82a6a9f3881aa97ac1ba26d7c036a4ab5a1392b1a8a66b8138852a90bdd0d261",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1306",
+      "script_id": "IPC-0092",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7dbe4b77efbd07883967778ebf2fa564b93f76d5e9a37c67ca8af9101b82e518",
+      "original_content_hash": "8242c1f5410c2a4409d5904d1e14b7fed6d1ca198e9e9ebb3ffca4c611f6b089",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1307",
+      "script_id": "IPC-0093",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "89c8c844e2681ba15622506736cb1a5ec9eb3316fe19931f41dd3d26896f28ab",
+      "original_content_hash": "353574a0a8d54574b6894f707c8cda6919b0843571835ff8c7989266e3744985",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1308",
+      "script_id": "IPC-0094",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7bdf104b5863176c6e81570b8737953e55a9dd353ae2488a1283c52c6afaea1f",
+      "original_content_hash": "ca2b4c7222401851c5eb51c7bb7f141a7dd62daec9b853a7a80e1ff0c9457724",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1309",
+      "script_id": "IPC-0095",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7f04931d5ffdbece89933c3c2b1b97413ff149192d74520c0a089623f2bb3afd",
+      "original_content_hash": "2fa28303dab88caa381c89885cfc0e37bbd9c1c13a599d2836feb5dc3175c6a7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1310",
+      "script_id": "IPC-0096",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e84b52e091277f00b8a3f3d27c32d6943711aad5fbdf61b5a2d03272e5c634ac",
+      "original_content_hash": "f5acce5d19c9dce90791aa0f4c8f652d6e36ed4f1c34159e901a8bdd4aac2ac8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1311",
+      "script_id": "IPC-0097",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4de46b1b231c4a74bc7a10d189b6beee1a4b7f21ffb078d39d6b0884fc9f1f2d",
+      "original_content_hash": "a33c613eeb1af65761345480b9416eea98ba26cdac1f5f05a3ff4e8dde982afb",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1312",
+      "script_id": "IPC-0098",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "a04f17745c3d176bbb6b039aa9bcce7df5d718fbc71725fa54f072988fe4853f",
+      "original_content_hash": "67457a0d46049e69ce38f85ac675b37bfd5daeb074272237325e1e1452613f99",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1313",
+      "script_id": "IPC-0099",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "57d02c7137b5fe24bd47730ce86729648c826b5372073d0429d123077ec2be26",
+      "original_content_hash": "c0e320cccf78b27baf0dc0cc80e5125b44d4c9d93b9c5f8857adf35337c773b9",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1314",
+      "script_id": "IPC-0100",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e25c8abe8bb973950886adf26bd1dd2e5eb6846777101d97da9e91b85449a92d",
+      "original_content_hash": "ad15d0fe975d36c5b151e70b40c57b67f898b0ef78cd46592e7f63a1411bef08",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1315",
+      "script_id": "IPC-0101",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b37c781549d80985587d3731b64004d24a89d6448c8fabb2540c477739758fac",
+      "original_content_hash": "989b6a090f84b21081df4555ece4a31b82d0e69f099a26e99f9b8a8d84d1d18c",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1316",
+      "script_id": "IPC-0102",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1887cc57cc66b42a2ffbf19d428a8fad68a5317bfa7ae480ee569872de244877",
+      "original_content_hash": "eb8bc920655beeb4638339f616a4711e36de6373bf96cc80e056ca728f6b5394",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1317",
+      "script_id": "IPC-0103",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1d623efc67becb437b7f3dd6251c37696d5dc0f6f8ef4a46e4bdf3b9b52b66b6",
+      "original_content_hash": "30b4861e51fbaa3216e736a3f8dec301266c7b1f53e09b235c7ca1ab495fbdd7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1318",
+      "script_id": "IPC-0104",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f532c4205bf442700d5813740c730ef5f49d9b79ac7e558c14de4c7d2f080459",
+      "original_content_hash": "ad9204a4c245f22af612212b4382ba8ef2922be79180a5d74f39b8d9d7f2d1ff",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1319",
+      "script_id": "IPC-0105",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f84043c9b2b9ddafc0b379a9bf960ba28a3e8d7face77eb67b4293e69ef9c3eb",
+      "original_content_hash": "1c79c6de32929b91825e5fa067a40040f83e34dd4286850565a0847954a05f54",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1320",
+      "script_id": "IPC-0106",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "15505f9c2962d17b16a86718d6e2c64681db861913ef1c7f9d3cab60d0727caa",
+      "original_content_hash": "fb5f0ad5a8898b2bc6c04d66d45b6fb1ba1b5cd4042167d0ab5595727a04c1f0",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1321",
+      "script_id": "IPC-0107",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "10ca5cd581b827658c72fbfb006279c0eafd3ea83c77016e9688c3455b9c0012",
+      "original_content_hash": "484143c21d9b5098852e8994067f349c1ce7e8c06cff52d849534ac3d735db81",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1322",
+      "script_id": "IPC-0108",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "614d1ff12ffa32563afe8578e0484799711c9414b8a8f468486f6f28cc012f9d",
+      "original_content_hash": "7d7c270a6a93c5f1c4e2be42518c70925652f990e72fa1df4943bc2c376bd01f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1323",
+      "script_id": "IPC-0109",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5e0cebd3737efff6d4ec5847e90da6eed6b12a68f49005c7bb6fdc2f8e4761ab",
+      "original_content_hash": "d7e79c681a28b789374e60be96a4584e97ad028b1c2488b495ddf3856a2effe8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1324",
+      "script_id": "IPC-0110",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "95fdbde24d3821130ebccda8e038024b777c40032df315738de22ff9d0a68a43",
+      "original_content_hash": "450ab944410c294dce883cfb06576056114cf5b9159519d5c046c291789a4e9b",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1325",
+      "script_id": "IPC-0111",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "0e8d2f326a18947df9f37193d7d25f7b1461c4b507fe76b9342b23ab26422edf",
+      "original_content_hash": "aafb8d30dbe57760f47e7f1df790d47046f4e1591b0125ee163087a97f1000af",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1326",
+      "script_id": "IPC-0112",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1cd878810f5092fe6a8010fbdadd4d0cc67acacde41d7395ed11b660b51cd237",
+      "original_content_hash": "4039d9fdb7c11933f47525cd9d6e0cba3830a43b23610a74ad43302640f1e7fe",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1327",
+      "script_id": "IPC-0113",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e40251096ff08809578d9e55117da3c646fcab35e2b4884b9a16d52232793bfc",
+      "original_content_hash": "67f24c3cac7f62157a63d424e5d45201fb22a77698a91be68611ceb84907d434",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1328",
+      "script_id": "IPC-0114",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c05e52289d51925587ee7885daff5bd7368080be4fb064c2b247869f66643174",
+      "original_content_hash": "7078006d822361deec8755dc6c8cffc38ef3cfa76b7598770343dd05dcda751a",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1329",
+      "script_id": "IPC-0115",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "50fc11938bbbbb5c3077c3794d98762ddc67dc32acbe1e08f7e1c6a03f458b45",
+      "original_content_hash": "ceed0b69899be36085711d03f08b17c9a73b1cf583666402b92fe506cca50c88",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1330",
+      "script_id": "IPC-0116",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "bcad9a78cc69c0f164c47322d84a0cb05de5937c4c063492140005e2fa1dfa75",
+      "original_content_hash": "8c4c27a3fb0d8858838f77f3a258798a074f0a81dabf0afde123fe5e318068e2",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1331",
+      "script_id": "IPC-0117",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e7a1c28b9e56fc927f2e82c02775f0414599b7a9bb380719ec22868532746889",
+      "original_content_hash": "28aab4846a6acdc9a6f1f5b2e16d1892ddc88c9e0baac52b98a3584993300aff",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1332",
+      "script_id": "IPC-0118",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "9ee83d0c7a27dc5de80902a8cbb7d8493e30a66db67fdea23a298b9dd4509533",
+      "original_content_hash": "62956dba96e53857979df0cf67148ec6d9083c046c79676b58c002ecfb93900d",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1333",
+      "script_id": "IPC-0119",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b3af826b7565c3e2e09a4c65d4c1027f9ec696a732f88ef3d98da7259f39596c",
+      "original_content_hash": "62a104c91dddbe5106865082562844908a5466f866ecb06e160d313f2f015a65",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1334",
+      "script_id": "IPC-0120",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "ee584cd8625d1300c209f81b7682c97f9814dcf85dad71b26ffd1046fadf8c36",
+      "original_content_hash": "d62fdfaeada4fb5123fc22f4b49a42bd76e0ffdaaf4306b57dda385a0dddb3a5",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1335",
+      "script_id": "IPC-0121",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "205bfbe22899b19728eab773c23d316cc0bb597402c40071d763ce7dff6d0c0c",
+      "original_content_hash": "66b204a4ca9887199d3a412b45d235f4954627908c68acb74f268224fa492c19",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1336",
+      "script_id": "IPC-0122",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "0b1372eb4d52df5893d4b0d5e1e1a6273f27e341ed0de2b528485ab528243ec9",
+      "original_content_hash": "930e45a5800b48d2e9dcc4f119be09ed84dba5419d3e45ebb878593b803683be",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1337",
+      "script_id": "IPC-0123",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "cc5655230b2726abb744b04c4662c32340aa026be607566727e8b392200adcae",
+      "original_content_hash": "89ee8a0a8657f718fb2e9cc1bb779124e876258cfcb28e352337b74ee24f8eea",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1338",
+      "script_id": "IPC-0124",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7f9bf6e83920528ecb71d18ba1d067f9b25f0d36900ec5a35792f616dead9a09",
+      "original_content_hash": "adb0d5838b6bb684e9a7d12dcb57615cb2583e1a13257ca2b05f622c36b30e98",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1339",
+      "script_id": "IPC-0125",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "80cb0d17b9dca93d1713a14f9ebece3fa40c3a5cf03deecf98688e8079abbfa4",
+      "original_content_hash": "d5fa2c82b559b9d356baca28f6e11855ea53431578684bc061a926718c872ad6",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1340",
+      "script_id": "IPC-0126",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c6c7a524042034524e4147abbf93030decc2d59251a76aca53c34f3113a1263f",
+      "original_content_hash": "7845ecb031e794a3a28855baf0e5601d1222e7d2cc02cc40a95213ecf89de648",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1341",
+      "script_id": "IPC-0127",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e6bd0e2e89e907a56267791ff4353bb5ba78457c040ec3dca2d0a2f3335e888b",
+      "original_content_hash": "0f11f53475da2c5a3e8c24dfb02cb40a5422f472fa56f460c23fe8406796cf72",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1342",
+      "script_id": "IPC-0128",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c6fb24c3f38fcb5d302c866d1d5e2ac09f18c668a76efece3b7f5986d2e72259",
+      "original_content_hash": "cf8db7196cccc86f945868d5186887fac49610d2551055ee3bd1ea380be409fb",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1343",
+      "script_id": "IPC-0129",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f9a138552f06d5ea0319ca4439867fcd339a924d38ade8e6b837307607f6ab0c",
+      "original_content_hash": "c6bd8949441e784c78709aea36cdf0f3b5637b6dbe8409a5f12464cb49b8d1d2",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1344",
+      "script_id": "IPC-0130",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "43600dd4dac8eda48beb5866c382c3ae4211c4feb94fd0c466a873b056494d83",
+      "original_content_hash": "e94827196fdd748840a022aa02158c4804691ba01500f88f79103f8498d1ef60",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1345",
+      "script_id": "IPC-0131",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3d6a75ce4e3a84fc54cd22b5e9bfa1bf81c7c8c9d3a8f156d33095621604c26f",
+      "original_content_hash": "801324b59b36eb5ab7391d6107e370d0cb0e5510d0492d1c973a1522aef96455",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1346",
+      "script_id": "IPC-0132",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1b83da8ff492d3ae7bf5f31b70348b7d43380782e680e4568df624727dd623a6",
+      "original_content_hash": "7118fc746ea090fa67b00a0d013184b8321f359ca7db38d174a1557aa6e7ad55",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1347",
+      "script_id": "IPC-0133",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "c0fce0334e65755a20e87e0de0418c8ab9cc5b5eade6274cc2118d69d01d7873",
+      "original_content_hash": "d709f678ddf95028f4ad12c5dfb3046efb8b8f28fe084e72a45c1de292b40fd8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1348",
+      "script_id": "IPC-0134",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "109bad42b2288c5bd6023e95a30a31e041f7ccdbeb419e28ec6be8dc3cab0f0f",
+      "original_content_hash": "5401ec317e33e4808904c1e1ea4d2d125614fc86c2fcb66a79ebf22b1e78e770",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1349",
+      "script_id": "IPC-0135",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "118cee323f4632a96bc61403bc2ee40184e856fb286baadde66f1bb4cad653f1",
+      "original_content_hash": "3ab70c0ed7fe3d9740d886724c7009f75e3acd14bdb56e23dd38ba280593cdc9",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1350",
+      "script_id": "IPC-0136",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "70444c44c471f88c61a991df8e064c2fb0c09219f3560ae1f4b14d2f007f21b8",
+      "original_content_hash": "fa5f911b9ef21f44befe034f6f2e0ef5e0220b4391c2a8acf39bdfa673d3e2ea",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1351",
+      "script_id": "IPC-0137",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4d7a2433f76c751860ae087377db009fc5025aa4d972714016290400275ba670",
+      "original_content_hash": "e37b5787ffc7c1fe9c4eac1db5a0f8b9961937ad529db241ebbd9bb1418149ac",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1352",
+      "script_id": "IPC-0138",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5ee65e8e4ff6e890e7d0c1f65385507b04ae7898061f73405ff9074c08938b06",
+      "original_content_hash": "08ba6a63e35e681b6dcc46d6780f6ecafaf783f1e45fead8460c48becfa3839f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1353",
+      "script_id": "IPC-0139",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5c24eca80f53d563a10d171596d7614cdc985e66d5c6de3472f1a6a93b67ad81",
+      "original_content_hash": "d5ba4e503ab905c40e01b5e5ccbe784a5b1c36c4f56a9cdcbc92bc7b52696790",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1354",
+      "script_id": "IPC-0140",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4e7ced059c53f24e32fdd02620b50b134398a815cbb02b32e486ea5ecf2f51db",
+      "original_content_hash": "53823d9f388b86312687acde1b1e6f9f4c42c3b2c46e62f0f7357828c0c8c20f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1355",
+      "script_id": "IPC-0141",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7a931fb93abc8f764ed041332d3154d976cffb98d011b76caba86db5625777d2",
+      "original_content_hash": "076a0ebfea7404a18a3ad71574186b14a932f18576fe9f9b97a7ecc68d0e3373",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1356",
+      "script_id": "IPC-0142",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7f3920f8df615b37deaf4a33617adbe5af75e201b4cba708b1d936e2670f7c44",
+      "original_content_hash": "ef9ae49af1bea94f5f84dc089d48a61073cb39b21a10f7965e1169f724a25fcb",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1357",
+      "script_id": "IPC-0143",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d680dbd60a693f439dbfc7e39a8144d57d4c4d197b95a3e7468334016fa33774",
+      "original_content_hash": "f92c444ae3dabc3b37db449d91327bae14bf3caf298fc153d5319ff9d4115fce",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1358",
+      "script_id": "IPC-0144",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "888b71e58f14eba12cc1a6f7e693bad25700402e08f208221cc6ade6f68d79f4",
+      "original_content_hash": "8f5315cedecc649148e4863027d5a994b966558647263ec19414138219e11fd8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1359",
+      "script_id": "IPC-0145",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4d662cc2dd760aff4144390074a50624c670a7803779f690201bab418542fd73",
+      "original_content_hash": "183ad69e8a94cff76e926d376906ca232e7f4701fc5ce9e6758e50bad4bf906c",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1360",
+      "script_id": "IPC-0146",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "33624c7a7723e3cb3d96b8b7a1bd4ce21fb73638ea2e391a441a58a921cd8ce9",
+      "original_content_hash": "b81b1b34dc19b2baf34c55792a01430e13172e7d9e1b303776aeb9be0e344e94",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1361",
+      "script_id": "IPC-0147",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f45775f8758ea6ff44d4d3afa9010144aa134f1531966653a5506f21a3b6f66a",
+      "original_content_hash": "ab0d7916b7a61287ede5b8576054915af7495ed11f512c8098c8c55dc3601210",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1362",
+      "script_id": "IPC-0148",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "9fd6bd7e0d04d75dd2af6b2d7f9bcd2dcd06acf33947b229d1c7e19a5cb509b9",
+      "original_content_hash": "dc542819e52c6ffdc716fb10fdfb2913979faf3f3d75a4a3ef8056a81ba52842",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1363",
+      "script_id": "IPC-0149",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "07b3e2aacac4e8f7c9e231b5b85af3913f1064e54df5aee2f7ace7514579ad33",
+      "original_content_hash": "9bcebfd9c5487d8dd5b2459cb13f3e766aeb95eeff6348d9460aea897cb312d7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1364",
+      "script_id": "IPC-0150",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "811da7fc615f763963233ed6996043a839ff03ec86f845954f63449d225d59cb",
+      "original_content_hash": "27d6a5e4193f8261c331c416bd0fef87403f457e551c1c132548b893cd6c4ed3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1365",
+      "script_id": "IPC-0151",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "11f4163c8134d1ab2c1daa4bdc60257d0e0c54f90d602675de9d22e69f8e2125",
+      "original_content_hash": "71cb469807ec08d1c909c3c778ff9397e76861ec54d8d1a41c9113c18b671cd8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1366",
+      "script_id": "IPC-0152",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "234eb2d0a0a33c883492118b5dca922efaa7512debc86c1a039df0cc2ec4a0be",
+      "original_content_hash": "cf78420c29fb139b2597d699d374e6a148e93f3a632b5ed25bcd52801ff038f6",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1367",
+      "script_id": "IPC-0153",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8ec44f2e287db44621616c0943f43c257cef927f7ec9faa957ea8062d46b3a7f",
+      "original_content_hash": "4d6c1179d74803d06a9c314183b65e20086f434bdfcef35896deabca1244ef2e",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1368",
+      "script_id": "IPC-0154",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "40b7f42df99471fe64130a06830f71008d2c3eee1c736ef1bf096708d47c8d92",
+      "original_content_hash": "3c8134d57b2f8872279efb18b99733058e8e000a8c9943b03511638d44340773",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1369",
+      "script_id": "IPC-0155",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8f096e129e1770befe074467b690f82f887f6874dea896324a5fd4a7fc24cdf6",
+      "original_content_hash": "115e0adb9b18b3541e541facf21776fbbc76920055f3147b6f537a8c1394e5ce",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1370",
+      "script_id": "IPC-0156",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "cb22bea9004add2bd32cc48510a084d091e73820fee0c2c6f1f5b1cff4ddcc88",
+      "original_content_hash": "cbd42f7fcc230201317078108f62cffaecd0387e178280010d4d26eecf5c0ac7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1371",
+      "script_id": "IPC-0157",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3ad64c0899b862b0174482b4aeec2ee6592d36203af403ff4b0837bbe7a408ea",
+      "original_content_hash": "5ec22f22d630402566b4f366dd58459482ea0d988ff2a96373d0850766491860",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1372",
+      "script_id": "IPC-0158",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "215a61e2bde7c350649af898c7e3c5ded287f818e105505c1fbc8bd6831ec159",
+      "original_content_hash": "17c8d0f4e3b3a5b3f3827d546f51084241977e0d25f020475cd109b3663add3a",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1373",
+      "script_id": "IPC-0159",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4a59e607490b82c2af05aadb71954ceca909bf1a0023aa3b17f8593827d26423",
+      "original_content_hash": "0243b9edf9a2d5e3c67ea684c31a24681c0eeb7ae2c08e4446787eb560302829",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1374",
+      "script_id": "IPC-0160",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "61addef22545f56cb51b17491e760b5b71c41fcba2f7f074c534470ccdd05f95",
+      "original_content_hash": "39f68fbb9bd858e36ee7976df578567c96778945d60c1909e1dca3609f3ab365",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1375",
+      "script_id": "IPC-0161",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "2998754528a2cc924167c9e699e9eda251906a10c0de828625b01db8ba355d0a",
+      "original_content_hash": "686f62bb78355a8520c8ccbbdd4d5c9f42e5a1e731ea41710287399c6bc9944f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1376",
+      "script_id": "IPC-0162",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "96515b312247ddf1a33d52b3887e819665ebdac388d7c8c0adc573ce4ac36a69",
+      "original_content_hash": "135352b5fabd4aba07f06d32d9e18f794d8c479c302acd3993ef7b0ffb67f2d0",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1377",
+      "script_id": "IPC-0163",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4ece056669ddf41589cbee3554112ef8514afe59db68b1b164f1b1cc19171997",
+      "original_content_hash": "1eaaa7438ebacc9fd0723f462ff5cae62fbd8b4dc4303606b085d3e13b82d237",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1378",
+      "script_id": "IPC-0164",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "161e50cedbc5aab9443a79a305887e8e5151d1bb0602341c534da9e96178deca",
+      "original_content_hash": "481081e0c383552fbfa26fce31bfbfd6ea9040c61a0666f0299ff391203e91b7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1379",
+      "script_id": "IPC-0165",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "638e24f9b1ab3c0dc5e86cf6fe91105d8f02e2011ba73d9c1c6a861bed01d163",
+      "original_content_hash": "67097b78d2ef70e214483a81877e8e9b918b3a2112d709fde0f75442ac3425b0",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1380",
+      "script_id": "IPC-0166",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "981a0eb05b233c06b7c57c392a66660d5cc98db50128d0a37a0e6a61bdae99d6",
+      "original_content_hash": "7c4ee91568f0ab149efb54f49a8087c75dae543cb271f88b2f05e7a16653fd2f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1381",
+      "script_id": "IPC-0167",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "7eb108d064e1584e798e9cb0d925019ee4ad1f1def6bf0e6080d183027cef0b7",
+      "original_content_hash": "53d5a1f6b2b52bce135d94e7e500687c7c275f5de9fd3a87f59d51dbc8ac97e7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1382",
+      "script_id": "IPC-0168",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "2c0367289869efa65e51347e83500259ff376d1f3b165e3fb7e52e2cf2a1b110",
+      "original_content_hash": "cb4a24b2c862deb359bc882e457d19c00fe7819accadb040b3ff2574a23bd0b3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1383",
+      "script_id": "IPC-0169",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f015d203d42c53c4c8d087b484c81623256e8105cae3c86b21ae9fc2f0345791",
+      "original_content_hash": "7b2d35c0985e026c2834a1639dbe461439dfc3932cd3b0f2a08866bbcd9171de",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1384",
+      "script_id": "IPC-0170",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f830595a04581b22cd15c412a907b2c3ee2ffe2ac41014b448e9d151435b7d83",
+      "original_content_hash": "a369de032954bc37ea82f751edb34ca16d0db215db0b4ea71698b6271c2dbe19",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1385",
+      "script_id": "IPC-0171",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "37d08700c6cbacd3970ac2a2fb23d8772a516a90a6b8bd67b296a86d0e8d44d3",
+      "original_content_hash": "dd26577849064ee748dc9c438328abe61bb9d6ee11b5869c6eab6926419ffdae",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1386",
+      "script_id": "IPC-0172",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "259316e9e7f119b950858b92d35346d88c6103ab9ef617308c84fa1cc2a35dd9",
+      "original_content_hash": "495b4c31054dc804ed6416e0c25f318f6f913d48bc7a3c94e76fb4f32938094c",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1387",
+      "script_id": "IPC-0173",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "794c595ac63f1367e7567fbfadddec87855856cb762dc1e05ca1502f328aee07",
+      "original_content_hash": "688700b12a893a30e7043130235d8f3546b457d398837e73f4362a4f2a4c2590",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1388",
+      "script_id": "IPC-0174",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "b9251c05e737020d88703bccc4a51e116672d332740a3750837261514f6a74d1",
+      "original_content_hash": "a9bf599022672ab4efb81cffdc238d16b02a29df5861f2c163e1cf0d591e6db4",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1389",
+      "script_id": "IPC-0175",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "edaa2495464240fe4e274cd0a5d976edfc8ff433f8efafc6097123ab86ae033d",
+      "original_content_hash": "33c8d926bc627074714be75377340ba1ad9b90ed87dbc4398187a362ee90f0b8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1390",
+      "script_id": "IPC-0176",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "65f9a9d1d089cc967b7e378cfbcf812a43ebcda03905f477224c6d9ac253ce9c",
+      "original_content_hash": "358e0cbc7675ff5ab0ea125885cb14a39be06c3bc1b3dfa9675f163dec34eb63",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1391",
+      "script_id": "IPC-0177",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "52d079fb7ac30e40bb2a8bccf267b579e9bf46ce271cd9693ac7ce3103e8601c",
+      "original_content_hash": "56b8d27db81709722aef499d66ebbda3c33bc1dd05f3fb6bfdc8ec576464c776",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1392",
+      "script_id": "IPC-0178",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "10c52d7484f7d12b1daf115c319fffec262a20d1cf7d998b55c7d2f146e434fb",
+      "original_content_hash": "497aa0103eb374df53a9c47811382664a562e57f18b89885295d6ea367fc0f00",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1393",
+      "script_id": "IPC-0179",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "98c969dc59e89fbf8d904d259cc81df1446eea37207e1df572ee2e3bb5e73650",
+      "original_content_hash": "4e3b3c7d17cbef121142380af011c24d8bb30814563d0616eb5033ead26f90f3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1394",
+      "script_id": "IPC-0180",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "45ce27ed60bb03666268dc66a024a7feada0003150ca4ea1687b9885ce571968",
+      "original_content_hash": "c59613c865e3695c33fc696b905fd641355d0245a4fb124e578a80853578b147",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1395",
+      "script_id": "IPC-0181",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "725c98d224d6932f3e315988eef200efed754c43abbe66521ae3e726ee92b2d2",
+      "original_content_hash": "506de534dc0cb12083ac4480aa0622d40c4835b63dc078770c429ea3084a2068",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1396",
+      "script_id": "IPC-0182",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "1f7042a47f0491b3ce34ab733150c3d9a5249153af7262b8b86d3d350797c8ab",
+      "original_content_hash": "4d014bc30fe32eaf614a5009c474ffc523c417aa28474446c8f37b8fbf68cc8d",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1397",
+      "script_id": "IPC-0183",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4792e005d63b015bf04a40beb6bbf63df5e237a0a6b35e56536c6cc16ea44914",
+      "original_content_hash": "525b639ef52e54471b22be58c4b04f4e30ec5fb827a1e6a7b38effe8504027e7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1398",
+      "script_id": "IPC-0184",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "49a57ea7f1869da82fdbf318ba270bb4bc17855bd3985feecfeb79a3ce765326",
+      "original_content_hash": "1214c4f1b52bf2bc2c81079b76e65f3879c99d9e2da863ff6aab48da554d25c3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1399",
+      "script_id": "IPC-0185",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "ee5a4343d8032245e89934970cc532933e61cb1efe6df118539edf662f951871",
+      "original_content_hash": "12c09e19b28cf93d943300c4c912df6e65ce42cc8346979a256ac763de137a96",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1400",
+      "script_id": "IPC-0186",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d742b19c1446f4cf8d26a92b70c2d1e549023b0c8b3e9a43175de713b847507a",
+      "original_content_hash": "9f9db2508bb08df07c6d635fcae87311dcafe5e54668cd801877600357791020",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1401",
+      "script_id": "IPC-0187",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "d1ad8052357aae67acb67fec94c89526f11053e5cbbae66a4b3ed4f8db0a0d72",
+      "original_content_hash": "b950d23fb403f38f6f8cd4fd2ae280a697a8a7b17b2c19896e96eb893df66ed1",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1402",
+      "script_id": "IPC-0188",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "fa9f61a4cb1dfe6813c3d9298c49a59f1bc6ec9bb913aed595443050c6d68e5d",
+      "original_content_hash": "ae1e1c898471a3c630f06f8e5786669f038a32ef39903391c66efb287e939747",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1403",
+      "script_id": "IPC-0189",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5a55073de76455a1c94e77ede95ae8334307458d914417cc86f53e8e78d2bdf1",
+      "original_content_hash": "bc9e9d6b6a5d50f2a57df2ba6793d51287cb49ca37666cfc547abca23a6b80c8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1404",
+      "script_id": "IPC-0190",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "61ba0892cc9398c70cfb7c184a4196f72ad8a914210fe9527990421df265fff2",
+      "original_content_hash": "ffe025e873c337d0eb65a54f0e859640b0ed691d9a03b417735417b06c557bba",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1405",
+      "script_id": "IPC-0191",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "fd8106277076544260f5bdfd420833c516aa2089f23287b86b1c918fb59223a4",
+      "original_content_hash": "75b5560c2a651a0cf02b034eb81ed9c8147dc5d527822ccb0642aac529a63d3b",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1406",
+      "script_id": "IPC-0192",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "0a8d39653c57f67ec0f2441628ee6fa1e4745398a7339fe514eb418cf1e26674",
+      "original_content_hash": "a8c14197c290edf538a358d64c6c8eb2c63fddee9fdf18c592a20a6cb61fc9e3",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1407",
+      "script_id": "IPC-0193",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "8b37a5f89e99779d3a41d1a17920e5ab85cbf891effcc1350bbaf9d0bfbe26f6",
+      "original_content_hash": "3e95c9a5fa630b042167f74470fe608d2f5d811b39ac15b7b69d9e8bc479b5ba",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1408",
+      "script_id": "IPC-0194",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "4cbaac32946cf618b64a1a71f8085cb19599322be667896219c404dd877afe56",
+      "original_content_hash": "1a161e47ee34d08b96d91ed93f80e065f76adf2e9bc894186152897cace4f02b",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1409",
+      "script_id": "IPC-0195",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "89abf9ba7aab90853e7b1fb3467c886259f2242121461ae5d53bbe6e288340ac",
+      "original_content_hash": "3134763293d6f7667071cd17a9f06e3b96e8173a153568e838954e496671673e",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1410",
+      "script_id": "IPC-0196",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3d8598d0410fef060d1210ccdd36e0f51b2710c931493f6bb3111ee73f93bbae",
+      "original_content_hash": "f94b8e7e77669249818528b544891d1ccc31f2c948dce3aba2d86561cf7e09a9",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1411",
+      "script_id": "IPC-0197",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "62c70979966de88bf36cc2ed894721dbd6dffe3c7388827ccfa11555a94f8c28",
+      "original_content_hash": "04a039db4d2cfcb42b0daec2cb4a626b399b2745b293a95664b12b4c840d9cab",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1412",
+      "script_id": "IPC-0198",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e30f017ea29c6cfd0596e95a4be9cc5bef95fe06ec4eb9894a28ecfc87ff3894",
+      "original_content_hash": "1e1ebb6668b1838f50f9f88a015928405026d908d9c0d346cdd678569c95cc0f",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1413",
+      "script_id": "IPC-0199",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "3c8d340addb7ad45210dd48fb38a0030e5d04b9fb91910b160733c2e93a91137",
+      "original_content_hash": "2239cf83ee2869de0361752f7df4015ed216b494a64ef056023a1a293831ce0d",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1414",
+      "script_id": "IPC-0200",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "ae288190f91683bb8a9606cb12c17c892fef2b6b7b42f0c57929747fdc86e1d5",
+      "original_content_hash": "7cc751bc01fd2d03ff703931e267169115a4e2bdc78beae55713844ec6ad34e8",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1415",
+      "script_id": "IPC-0201",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "5a253ed741c56c9a7168086265379a2f21eab7393e55a1bc631bf4654a800cd0",
+      "original_content_hash": "44cf3bb4ed0198b16a3c81ddc4910d597b1cd08dbe061d014f1887e1b709cd2e",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1416",
+      "script_id": "IPC-0202",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "fa114b7f2522d95bd43823cc82db6ba5be615630d912b8768f4e47f56c3f39c6",
+      "original_content_hash": "348cb90ae01635c43a530a10262f8ad9844c411cab551cc01c5c86d399a856d7",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1417",
+      "script_id": "IPC-0203",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "e52662d7327e0b05a87199af66082d59a31fd3e2a7298b0f14b7c49aad74e394",
+      "original_content_hash": "a998cab17379fc8735f78c4860912f3af2b77e7d60a492081cd796fc4069d847",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
+    },
+    {
+      "record_id": "RV-1418",
+      "script_id": "IPC-0204",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "71d52ee0d5f90497e616936db535040c4e1f56db5b4e19df29db92aacd835c6e",
+      "original_content_hash": "da70f2e6bd6115427eb44dbb2e357554cba2abd91b79e42389a2d466ccff1208",
+      "from_version": "interview-pass-eq-0.12.1",
+      "to_version": "interview-pass-eq-0.12.2",
+      "changed_fields": [
+        "equivalence_version",
+        "reading.calculation_explanation（版本字符串）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。世空按世爻有气无气分类（docs/18）"
     }
   ]
 }

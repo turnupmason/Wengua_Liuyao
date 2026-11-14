@@ -35,3 +35,17 @@ test('问事分类：六大领域、31 个细分入口；面试一问属事业�
   for (const d of DOMAINS) assert.equal(d.entries.length, d.suggested_count);
   assert.deepEqual(entryOfQuestion('career.interview.interview-pass'), { domain_id: 'career', domain_label: '事业工作', entry_id: 'career.job-offer', entry_label: '求职录用' });
 });
+
+const rekey = (extra) => ({ record_id: 'RV-0007', script_id: 'X', stage: 'metadata-rekey', status: 'PASS', reviewer: 'Claude', content_hash: 'h2', original_content_hash: 'h0', from_version: 'eq-a', to_version: 'eq-b', reviewed_at: '2026-11-14', ...extra });
+
+test('等价条件版本迁移（仅元数据）：新哈希承接旧哈希批准，并注明迁移', () => {
+  const s = statusesFor([...base, rekey()], 'X', 'h2');
+  assert.equal(s.approval_status, 'AI_APPROVED');
+  assert.match(s.approval_basis, /等价条件版本迁移（eq-a → eq-b，仅元数据）/);
+});
+
+test('版本迁移记录未通过或旧哈希未批准：不承接', () => {
+  assert.equal(statusesFor([...base, rekey({ status: 'FAIL' })], 'X', 'h2').approval_status, 'REVIEW_REQUIRED');
+  const recs = base.filter((r) => r.stage !== 'ai-final-qa');
+  assert.equal(statusesFor([...recs, rekey()], 'X', 'h2').approval_status, 'REVIEW_REQUIRED');
+});

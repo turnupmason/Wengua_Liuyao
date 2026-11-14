@@ -23,6 +23,8 @@ function profileOf(chart, e) {
     用神空破: y ? [y.void && y.void.zengshan !== '冲空则实' ? '旬空' : '', y.monthBreak ? '月破' : ''].filter(Boolean).join('') || '不空不破' : '-',
     用神动化: y?.change ? [y.change.huitou, y.change.advance, y.change.lifeStage].filter(Boolean).join('') || '动平' : '-',
     世爻六亲: e.world.relative,
+    世爻空破: [e.world.void ? `旬空（${e.world.void.zengshan || '空'}）` : '', e.world.monthBreak ? '月破' : ''].filter(Boolean).join('') || '不空不破',
+    世爻状态: `${e.world.state.state}/${e.world.seasonal}`,
     世爻动化: e.world.change ? [e.world.change.huitou, e.world.change.advance, e.world.change.lifeStage].filter(Boolean).join('') || '动平' : '静',
     应爻对世: e.response.relationToWorld || '无',
     应爻六亲: e.response.relative,

@@ -54,6 +54,15 @@ export function statusesFor(records, scriptId, hash, depth = 0) {
       const prev = statusesFor(records, scriptId, pol.original_content_hash, depth + 1);
       if (prev.approval_status !== 'REVIEW_REQUIRED') carried = { from_hash: pol.original_content_hash, from_status: prev.approval_status, record: pol };
     }
+    // 等价条件版本迁移（只改版本元数据，程序对照 git 核实）：新哈希承接旧哈希的批准
+    if (!carried) {
+      const rk = cur.filter((r) => r.stage === 'metadata-rekey' && r.status === 'PASS' && r.original_content_hash && r.original_content_hash !== hash)
+        .sort((a, b) => String(b.record_id).localeCompare(String(a.record_id)))[0];
+      if (rk) {
+        const prev = statusesFor(records, scriptId, rk.original_content_hash, depth + 1);
+        if (prev.approval_status !== 'REVIEW_REQUIRED') carried = { from_hash: rk.original_content_hash, from_status: prev.approval_status, record: rk, rekey: true };
+      }
+    }
   }
   const approval_status = humanOk ? 'HUMAN_APPROVED' : aiOk ? 'AI_APPROVED' : carried ? carried.from_status : 'REVIEW_REQUIRED';
   return {
@@ -69,7 +78,7 @@ export function statusesFor(records, scriptId, hash, depth = 0) {
     },
     approval_status,
     production_allowed: approval_status !== 'REVIEW_REQUIRED',
-    approval_basis: humanOk ? '人工审核' : aiOk ? (ai.finalQa.isolated === false ? '单 Claude 审核（本哈希终审，非独立）' : 'AI 多角色审核（本哈希终审，独立代理）') : carried ? `单 Claude 润色复核，承接润色前 ${carried.from_hash.slice(0, 12)} 之 ${carried.from_status}（${carried.record.record_id}）` : null,
+    approval_basis: humanOk ? '人工审核' : aiOk ? (ai.finalQa.isolated === false ? '单 Claude 审核（本哈希终审，非独立）' : 'AI 多角色审核（本哈希终审，独立代理）') : carried ? (carried.rekey ? `等价条件版本迁移（${carried.record.from_version} → ${carried.record.to_version}，仅元数据），承接 ${carried.from_hash.slice(0, 12)} 之 ${carried.from_status}（${carried.record.record_id}）` : `单 Claude 润色复核，承接润色前 ${carried.from_hash.slice(0, 12)} 之 ${carried.from_status}（${carried.record.record_id}）`) : null,
     reviewer: humanOk ? appr.reviewer : aiOk ? ai.finalQa.reviewer : carried ? carried.record.reviewer : self ? self.reviewer : null,
     reviewed_at: humanOk ? appr.reviewed_at : aiOk ? ai.finalQa.reviewed_at : carried ? carried.record.reviewed_at : self ? self.reviewed_at : null,
     stale_records: all.length - cur.length,
