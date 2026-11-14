@@ -1,0 +1,16 @@
+{
+  "collation_version": "0.1.0",
+  "note": "text_as_found 须逐字见于 sources/classics；reading_adopted 为本项目采用读法，依据为他书或本书内部一致性。",
+  "items": [
+    { "id": "C-001", "book": "增删卜易", "chapter": "世应章第六", "text_as_found": "天地观“世”在四", "reading_adopted": "风地观世在四", "basis": "卜筮正宗·六十四卦名乾宫四世为风地观；增删卜易本章前后均为乾宫卦序", "engine_effect": "无（程序按算法归宫）" },
+    { "id": "C-002", "book": "增删卜易", "chapter": "浑天甲子章第四", "text_as_found": "辰在内：辰土午火申金。辰在外：戌土子水寅木。", "reading_adopted": "艮在内：辰土午火申金。艮在外：戌土子水寅木。", "basis": "卜筮正宗·纳甲装卦歌「艮土丙辰外丙戌」", "engine_effect": "无" },
+    { "id": "C-003", "book": "增删卜易", "chapter": "四时旺相章第又十五", "text_as_found": "正二月木为旺、火为相，其馀金火土作休囚。", "reading_adopted": "正二月木为旺、火为相，其馀金水土作休囚。", "basis": "同句已称火为相，后文「其馀」不应再含火；其馀各月句式均为旺、相之外俱作休囚", "engine_effect": "程序按「旺、相之外皆休囚」计算" },
+    { "id": "C-004", "book": "卜筮正宗", "chapter": "十四、六十四卦名", "text_as_found": "离为火，火山旅，火风鼎，水火未济", "reading_adopted": "火水未济", "basis": "离宫三世为离上坎下；知命书院卜筮正宗全书本作「火水未济」", "engine_effect": "无" },
+    { "id": "C-005", "book": "黄金策", "chapter": "1、总断千金赋", "text_as_found": "用世弱,待生旺月日以成事。", "reading_adopted": "非原文，删除", "basis": "该十二行用半角逗号、等号与白话「的」字，句式与千金赋骈文不合，系后人插入的应期摘要", "engine_effect": "不作出处" },
+    { "id": "C-006", "book": "卜筮正宗", "chapter": "十二、八宫所属", "text_as_found": "干属金，坎属水，艮属土，震属木，巽属木，坤属土，兑属金。", "reading_adopted": "补「离属火」", "basis": "八宫缺离；卜筮正宗·六十四卦名「离宫八卦皆属火」", "engine_effect": "无" },
+    { "id": "C-007", "book": "增删卜易", "chapter": "增删卜易卷之二·进神退神章第二十九", "text_as_found": "亥化子﹐寅化卯﹐巳化午﹐申化酉﹐丑化辰﹐辰化未﹐未化戌。", "reading_adopted": "补「戌化丑」为进神、「丑化戌」为退神", "basis": "卜筮正宗·变出进退神论八对；四库土支顺序丑辰未戌循环", "engine_effect": "进退神按八对计算" },
+    { "id": "C-008", "book": "增删卜易", "chapter": "生旺墓绝章第又二十六", "text_as_found": "土水长生在申，旺在子，墓在辰，绝在巳。", "reading_adopted": "其前应有「火长生在寅，旺在午，墓在戌，绝在亥」", "basis": "本章只列金、木、土水三行，缺火；卜筮正宗·四生逐位论补足", "engine_effect": "火取卜筮正宗" },
+    { "id": "C-009", "book": "增删卜易", "chapter": "三刑章第二十一", "text_as_found": "寅刑巳、巳刑申、子刑卯、卯刑午、丑戌相刑、未辰相刑。", "reading_adopted": "存疑；取卜筮正宗「子刑卯，卯刑子，丑戌相刑未并臻」", "basis": "通行三刑无卯午、辰未之刑；疑录入讹误，待以善本核对", "engine_effect": "三刑只作参考事实" },
+    { "id": "C-010", "book": "增删卜易", "chapter": "元神忌神衰旺章第十", "text_as_found": "忌神动化回头生扶退神者二也。", "reading_adopted": "存疑；暂按「化回头生、化进神」", "basis": "与原神有力第二条「元神动化回头生及化进神」对举", "engine_effect": "见 D-011" }
+  ]
+}

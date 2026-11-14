@@ -1,0 +1,26 @@
+{
+  "name": "wengua-liuyao",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "问卦主应用的六爻纳甲模块：起卦、装卦、日月旺衰、用神证据与人工预写断语查询（纯 ESM，运行时无 Node 专属依赖）",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "import:classics": "node scripts/import-classics.mjs",
+    "build:jie": "node scripts/build-jie-table.mjs",
+    "build:fixtures": "node scripts/extract-classical-charts.mjs",
+    "verify:rules": "node scripts/verify-rules.mjs",
+    "build:readings": "node scripts/build-readings.mjs",
+    "build": "node scripts/verify-rules.mjs && node scripts/build-readings.mjs",
+    "report:cases": "node scripts/report-classical-cases.mjs"
+  },
+  "devDependencies": {
+    "lunar-javascript": "1.7.7"
+  }
+}
