@@ -20,7 +20,9 @@ def reg():
 def prof(rank):
     global _prof
     if _prof is None:
-        _prof = {p['rank']: p for p in json.load(open(f'{ROOT}/reports/class-profiles-1-500.json', encoding='utf-8'))}
+        import sys as _s; _s.path.insert(0, f'{ROOT}/scripts/analysis')
+        from profiles import load_profiles
+        _prof = load_profiles()
     return _prof[rank]
 
 

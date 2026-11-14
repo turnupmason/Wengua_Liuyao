@@ -1,10 +1,10 @@
 // 作者工具：按画像样本盘预查 C33 须在正文交代之事——用神旬空（含冲空则实）、用神或原神伏藏。
 // 用法：node scripts/analysis/sample-flags.mjs 起 止
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { buildChart, buildEvidence } from '../../src/index.js';
 
 const [a, b] = process.argv.slice(2).map(Number);
-const P = JSON.parse(readFileSync(new URL('../../reports/class-profiles-1-500.json', import.meta.url), 'utf8'));
+const P = readdirSync(new URL('../../reports/', import.meta.url)).filter((f) => /^class-profiles-\d+-\d+\.json$/.test(f)).flatMap((f) => JSON.parse(readFileSync(new URL(`../../reports/${f}`, import.meta.url), 'utf8')));
 for (const p of P.filter((x) => x.rank >= a && x.rank <= b)) {
   let vacant = 0; let hidden = 0;
   for (const ci of p.samples) {

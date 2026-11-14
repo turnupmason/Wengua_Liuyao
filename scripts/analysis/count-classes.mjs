@@ -50,7 +50,7 @@ if (isMainThread) {
           const ORDER = new URL('../../reports/interview-pass-class-order.json', import.meta.url);
           const prev = existsSync(ORDER) ? new Map(JSON.parse(readFileSync(ORDER, 'utf8')).classes.map((c) => [c.key, c.rank])) : new Map();
           const pr = (k) => prev.get(k.slice(4)) ?? Infinity;
-          const rows = all.filter(([k]) => k.startsWith('C|')).sort((x, y) => y[1][1] - x[1][1] || pr(x[0]) - pr(y[0]) || (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0)).slice(0, 2000);
+          const rows = all.filter(([k]) => k.startsWith('C|')).sort((x, y) => y[1][1] - x[1][1] || pr(x[0]) - pr(y[0]) || (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0)).slice(0, 10000);
           let cum = 0;
           const list = rows.map(([k, [c, p]], i) => { cum += p / tot; return { rank: i + 1, key: k.slice(4), charts: c, share: p / tot, cumulative: cum }; });
           writeFileSync(new URL('../../reports/interview-pass-class-order.json', import.meta.url), `${JSON.stringify({ equivalence_version: EQUIVALENCE_VERSION, classes: list }, null, 1)}
