@@ -28139,7 +28139,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏平;忌静不作用`（interview-pass-eq-0.12.3）；内容哈希 `6344a0f663e9e111…`
 - 结论类别：倾向通过；情境：官星得财令相生、原神伏而不显、忌神静
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 FAIL）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽火革，午月丁亥日
