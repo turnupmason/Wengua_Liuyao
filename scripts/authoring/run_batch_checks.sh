@@ -5,3 +5,4 @@ node scripts/build-readings.mjs 2>&1 | grep -v 提示 | grep -v "^  C" | tail -1
 python scripts/analysis/audit-chapter-quotes.py
 python scripts/analysis/audit-chapter-attrib.py
 python scripts/analysis/audit-quote-verbatim.py
+python scripts/analysis/audit-reader-text.py
