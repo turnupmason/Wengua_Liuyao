@@ -1,0 +1,45 @@
+{
+  "script_id": "IP-0006",
+  "question_id": "career.interview.interview-pass",
+  "chart_input": { "line_values": [8, 6, 7, 7, 7, 7], "month_branch": "亥", "day_ganzhi": "甲午" },
+  "scenario_tags": ["独发", "官鬼持世发动", "化回头克", "化绝", "官鬼两现"],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "难以通过",
+    "yongshen_position": 2,
+    "deciding_evidence": [
+      "官鬼两现，取发动之二爻午火（世）为用神（R-LIANGXIAN-01）",
+      "午火动化子孙亥水，亥为当令月建，回头克官，又火绝于亥（R-HUA-01、R-HUA-02）"
+    ],
+    "supporting": ["午火临日、帝旺于午，眼前气势足"],
+    "adverse": ["午火受亥月克", "原神妻财不上卦，伏于世爻午火之下，飞神自身化绝，伏神无从引出", "应爻兄弟申金受日克，对方一侧无扭转之力"],
+    "conflicts_resolved": ["临日帝旺（目前之吉）与化回头克、化绝（后来之凶）并见：动为始、变为终，以变爻定结局；增删卜易卦变章亦以化克为凶（R-HUA-01）", "四爻官鬼午火安静，不取为用神"],
+    "rule_ids": ["R-LIANGXIAN-01", "R-HUA-01", "R-HUA-02", "R-YONG-ZI-01", "R-YINGQI-01"]
+  },
+  "reading": {
+    "title": "开头气势不差，后劲被截断：这一轮难以通过",
+    "brief": "这一卦开头不差：官星落在你自己的位置上，又临当天日辰，眼前气势旺。但官星一动就化出克制它的子孙，而那一爻正当令，回头相克又落入绝地，这是先有希望、后被否定之象。这一轮通过的可能偏低。",
+    "opening": "本卦天山遁，二爻世爻官鬼午火发动，变出天风姤。卦中官鬼有两爻，取发动的这一爻为主。\n官星就在你自己的世爻上，而起卦这天是甲午日，午火临日，又处在帝旺之地，单看当天，气势是足的。从卦象看，面试当场的表现或氛围并不差。只是季节不站在它这一边：亥月水旺，水克火，官星在月令上受克，根基并不牢。",
+    "process": "真正决定结局的是这一动。午火官星发动，化出来的是亥水子孙。子孙是克官之神，亥水又恰好是当令的月建，旺到了极点，它从变爻回过头来克午火，这叫回头克；同时火绝于亥，官星化入了绝地。《黄金策》说「戒回头之克我」，《增删卜易》也把化回头克、化绝都列为「化凶」。\n也就是说，这个官星不是被外来的力量打倒的，而是自己一动就走向了反面：开始有动静、有希望，后续却转向不利。卦中另一爻官鬼午火在四爻，安静不动，同样受月建所克，替代不了世爻上的这一变。\n能救的力量也找不到：生官的妻财在本卦没有出现，只伏在世爻午火之下，而世爻自身正在化绝，伏在下面的财引不出来。应爻兄弟申金受日辰所克，对方一侧没有能扭转局面的力量。",
+    "ending": "官星临日，是眼前之吉；化出当令的子孙回头相克、又化入绝地，是后来之凶。前者只管当下，后者决定结局，所以这一轮难以通过。若对方后面还有环节，转折多半出在后面。",
+    "timing": {
+      "text": "本卦的结局应在回头克官的亥水上。按「问有应于变爻动爻」推算，不利的消息多在亥日（克官之子孙值日）前后落定；又依「大象凶而受克，须防克者逢生」，申日、酉日金生水，也是需要留意的时点。",
+      "entries": [
+        { "timing_rule_id": "R-YINGQI-11", "target_event": "不利结果落定", "target_symbol": "二爻官鬼午火化子孙亥水（回头克）", "condition": "吉凶应于变爻：变爻逢值", "target_branch": "亥", "time_scale": "day", "calculation_basis": "回头克之变爻值日", "source_reference": "增删卜易·各门类应期总注章「问有应于变爻动爻」" },
+        { "timing_rule_id": "R-YINGQI-09", "target_event": "不利因素加重", "target_symbol": "变爻子孙亥水", "condition": "大象凶而受克：克者逢生", "target_branch": "申", "time_scale": "day", "calculation_basis": "金生水之日", "source_reference": "增删卜易·各门类应期总注章「大象凶而受克，须防克者逢生」" },
+        { "timing_rule_id": "R-YINGQI-09", "target_event": "不利因素加重", "target_symbol": "变爻子孙亥水", "condition": "大象凶而受克：克者逢生", "target_branch": "酉", "time_scale": "day", "calculation_basis": "金生水之日", "source_reference": "增删卜易·各门类应期总注章「大象凶而受克，须防克者逢生」" }
+      ]
+    },
+    "conclusion": "总断：这一轮难以通过。最关键的依据是持世的官星发动，化出当令的子孙回头相克，又化入绝地；临日的好势头只在眼前，撑不到结果。建议不把这次当作唯一的选择，及早准备其他机会；若仍有后续环节，尽力而为即可。",
+    "classical_sources": [
+      { "rule_id": "R-LIANGXIAN-01", "source_book": "增删卜易", "source_chapter": "增删卜易卷之二·两现章第三十二", "quote": "舍其静爻﹐而用动爻", "applies_because": "官鬼午火两现，取发动的二爻" },
+      { "rule_id": "R-HUA-02", "source_book": "黄金策", "source_chapter": "1、总断千金赋", "quote": "戒回头之克我，勿反德以扶人。", "applies_because": "午火化亥水回头克" },
+      { "rule_id": "R-HUA-01", "source_book": "增删卜易", "source_chapter": "各门类题头总注章第又二十六", "quote": "用神化凶：凡用神元神动化回头克、化绝、化墓、化空、化鬼、化退神皆为化凶。", "applies_because": "官星化回头克、化绝" },
+      { "rule_id": "R-YONG-ZI-01", "source_book": "增删卜易", "source_chapter": "用神章第八", "quote": "独占功名者忌之", "applies_because": "化出之爻为子孙" },
+      { "rule_id": "R-YINGQI-01", "source_book": "增删卜易", "source_chapter": "各门类应期总注章第又二十六", "quote": "大象凶而受克，须防克者逢生", "applies_because": "以克神亥水逢生推不利因素" },
+      { "rule_id": "R-YINGQI-01", "source_book": "增删卜易", "source_chapter": "各门类应期总注章第又二十六", "quote": "问有应于变爻动爻", "applies_because": "结局应于回头克之变爻" }
+    ],
+    "calculation_explanation": "官鬼午火两现：二爻（世，发动）与四爻（安静）；依两现章古法舍静用动，取二爻为用神。午火临甲午日，火帝旺于午；亥月克之（休囚）。二爻午火化子孙亥水：亥临月建，水克火为回头克，火绝于亥为化绝。原神妻财不上卦，伏神寅木在二爻午火之下（乾为天二爻），飞神即用神本爻，化绝。忌神子孙不上卦，唯由变爻化出。应爻兄弟申金（五爻）受午日克。父母辰土（初爻）甲午旬空辰巳，得日生；上爻戌土得日生。非六冲六合，无反吟伏吟。"
+  },
+  "authoring": { "author": "Claude（AI 起草）", "status": "draft-complete", "written_at": "2026-11-13", "revision": 1, "revision_note": "初稿" }
+}

@@ -2,32 +2,10 @@
 // 比对口径：去除标点与空白后，原文须为所注卷章文字的连续子串。
 import { readFileSync, readdirSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { ROOT, normalize, chapterText } from './lib/sources.mjs';
 
-const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/(\w:)/, '$1');
 const register = JSON.parse(readFileSync(join(ROOT, 'rules/register.json'), 'utf8'));
 const collation = JSON.parse(readFileSync(join(ROOT, 'rules/collation.json'), 'utf8'));
-
-const PUNCT = /[\s，。、；：？！“”‘’「」『』（）《》〈〉【】﹐﹑﹔﹕﹖·…—\-'",.;:?!()[\]<>＝=]/gu;
-export const normalize = (s) => s.replace(PUNCT, '');
-
-const books = new Map();
-function chapterText(book, chapter) {
-  if (!books.has(book)) books.set(book, readFileSync(join(ROOT, 'sources/classics', `${book}.md`), 'utf8'));
-  const text = books.get(book);
-  const [heading, anchor] = chapter.split('·');
-  const lines = text.split(/\r?\n/);
-  const start = lines.findIndex((l) => l === `## ${heading}`);
-  if (start < 0) return null;
-  let end = lines.findIndex((l, i) => i > start && l.startsWith('## '));
-  if (end < 0) end = lines.length;
-  let section = lines.slice(start + 1, end);
-  if (anchor) {
-    const a = section.findIndex((l) => l.trim() === anchor || l.trim().startsWith(anchor));
-    if (a < 0) return null;
-    section = section.slice(a);
-  }
-  return section.join('\n');
-}
 
 const failures = [];
 const results = [];

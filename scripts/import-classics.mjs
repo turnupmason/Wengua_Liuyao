@@ -34,7 +34,7 @@ const BOOKS = [
   { book: '卜筮全书', author: '姚际隆删补', era: '明', raw: 'yanyilundao/卜筮全书.json', role: 'collation', caveats: ['虎易点校本，现代评注已剔除；只用于互校掷钱歌诀。'] },
 ];
 
-const manifest = { generated: new Date().toISOString().slice(0, 10), importedFrom: 'D:/Wengua_LLM/sources/clean（只含原文的清洗本）', books: [] };
+const manifest = { generated: new Date().toLocaleDateString('sv-SE'), importedFrom: 'D:/Wengua_LLM/sources/clean（只含原文的清洗本）', books: [] };
 for (const b of BOOKS) {
   // 统一为 LF，保证仓库内文件与清单哈希一致（.gitattributes eol=lf）
   const text = Buffer.from(readFileSync(join(LLM, 'sources/clean', `${b.book}.md`), 'utf8').replace(/\r\n/g, '\n'), 'utf8');

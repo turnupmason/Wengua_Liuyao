@@ -217,6 +217,41 @@ function timingCandidates(yong, facts, chart, scale) {
   return out;
 }
 
+const SCALE_NEAR = '近事以日计（各门类应期总注：近事应之于日时）';
+
+/** 用神伏藏时的应期候选：伏神逢值、冲开飞神、伏神出空（R-YINGQI-01、R-FUSHEN-05、R-YINGQI-08） */
+function hiddenTiming(missing) {
+  if (!missing || !missing.hidden) return [];
+  const h = missing.hidden;
+  const hb = h.hiddenBranch;
+  const { flyBranch } = h;
+  const out = [
+    { timing_rule_id: 'R-YINGQI-01', target_symbol: `伏神${h.hiddenSymbol}`, target_branches: [hb], time_scale: SCALE_NEAR, calculation_basis: `伏神逢值：逢${hb}` },
+    { timing_rule_id: 'R-FUSHEN-05', target_symbol: `飞神${h.flyLine}`, target_branches: [CLASH.get(flyBranch)], time_scale: SCALE_NEAR, calculation_basis: `飞不推开亦枉然：逢${CLASH.get(flyBranch)}冲开飞神${flyBranch}` },
+  ];
+  if (h.calendar.void) out.push({ timing_rule_id: 'R-YINGQI-08', target_symbol: `伏神${h.hiddenSymbol}`, target_branches: [hb, CLASH.get(hb)], time_scale: SCALE_NEAR, calculation_basis: `伏神旬空，待出空填冲：逢${hb}或${CLASH.get(hb)}` });
+  return out;
+}
+
+/** 忌神发动时，不利之事落实的参考（应期总注「动而逢合逢值」「大象凶而受克，须防克者逢生」） */
+function adverseTiming(chart, roles) {
+  const out = [];
+  for (const l of chart.lines.filter((x) => x.moving && x.relative === roles.ji)) {
+    const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === l.element);
+    out.push({ timing_rule_id: 'R-YINGQI-02', target_symbol: `${l.label}${l.relative}${l.branch}`, target_branches: [l.branch, COMBINE.get(l.branch)], time_scale: SCALE_NEAR, calculation_basis: `忌神发动，逢值逢合：逢${l.branch}或${COMBINE.get(l.branch)}` });
+    out.push({ timing_rule_id: 'R-YINGQI-09', target_symbol: `${l.label}${l.relative}${l.branch}`, target_branches: branchesOfElement(gen), time_scale: SCALE_NEAR, calculation_basis: `大象凶而受克，须防克者逢生：逢${gen}` });
+  }
+  // 用神发动化回头克：克神为变爻，吉凶有应于变爻者（R-YINGQI-11），亦防克神逢生（R-YINGQI-09）
+  for (const l of chart.lines.filter((x) => x.moving && x.relative === roles.yong)) {
+    const c = l.changed;
+    if (elementRelation(c.element, l.element) !== 'controls') continue;
+    const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === c.element);
+    out.push({ timing_rule_id: 'R-YINGQI-11', target_symbol: `${l.label}${l.relative}${l.branch}化${c.relative}${c.branch}`, target_branches: [c.branch], time_scale: SCALE_NEAR, calculation_basis: `回头克之变爻逢值：逢${c.branch}` });
+    out.push({ timing_rule_id: 'R-YINGQI-09', target_symbol: `变爻${c.relative}${c.branch}`, target_branches: branchesOfElement(gen), time_scale: SCALE_NEAR, calculation_basis: `大象凶而受克，须防克者逢生：逢${gen}` });
+  }
+  return out;
+}
+
 /**
  * 构建某一问事的证据。
  * @returns 供作者与审核使用的结构化证据；不含吉凶结论
@@ -243,6 +278,8 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
         position: hiddenLine.position,
         flyLine: `${hiddenLine.label}${hiddenLine.relative}${hiddenLine.branch}`,
         hiddenSymbol: `${rel}${hiddenLine.hidden.branch}${hiddenLine.hidden.element}`,
+        hiddenBranch: hiddenLine.hidden.branch,
+        flyBranch: hiddenLine.branch,
         flyRelation: lf(hiddenLine).hidden.flyRelation,
         usable: lf(hiddenLine).hidden.usable,
         unusable: lf(hiddenLine).hidden.unusable,
@@ -314,6 +351,7 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     chou: roleLines(roles.chou, 'chou').map(({ effectiveness: _e, ...rest }) => rest),
     auxiliaryFumu: q.auxiliary_yongshen.some((a) => a.relative === '父母') ? chart.lines.filter((l) => l.relative === '父母').map((l) => describeLine(l, lf(l), chart)) : [],
     special,
-    timingCandidates: yong ? timingCandidates(yong, lf(yong), chart, '近事以日计（各门类应期总注：近事应之于日时）') : [],
+    timingCandidates: yong ? timingCandidates(yong, lf(yong), chart, SCALE_NEAR) : hiddenTiming(missing),
+    adverseTimingCandidates: adverseTiming(chart, { ...roles, yong: rel }),
   };
 }
