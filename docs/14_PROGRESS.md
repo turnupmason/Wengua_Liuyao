@@ -115,3 +115,15 @@
   - 指纹升级：`scripts/authoring/migrate_eq_version.py` 迁移元数据，`scripts/review/record-rekey.mjs` 承接批准。
 - 下一步候选：继续写第 501 类以后；或把 IPC-0001 至 0004 等早期稿按后来的口径（读者视角、临应口径）通读一遍。
 
+## 九、名次 501–1001 完成（2026-11-14）
+
+- 名次 1–1001 全部写完（1010 篇 AI_APPROVED，单 Claude），覆盖起卦概率 18.765%（eq-0.12.5）。结论与修正详见 `reports/quality-report-classes-501-1001.md`。
+- 稿号与名次：eq-0.12.4 起稿号按写稿先后连续编号，名次以 `class_rank` 为准；名次 797–990 稿号 = 名次 + 4，跳过已写名次 991 后，名次 992 起稿号 = 名次 + 3（再遇已写名次 1561、1605、1713/1714 等时依次减一，写前用 `inspect_batch.sh` 看「[已写]」标记）。
+- 每批固定流程：
+  1. `sh scripts/authoring/inspect_batch.sh 起 止`：画像、须讲空伏、旬空种类、类键与已写标记；
+  2. `python scripts/analysis/find-analogs.py 片段…` 查已写同类结论，保持一致；
+  3. 写 `scripts/authoring/batches/batch_XX.py`，运行生成；
+  4. `sh scripts/authoring/run_batch_checks.sh`：构建与三项引文检查，按提示改 C14 重复句等；
+  5. `sh scripts/authoring/finish_batch.sh 首稿号 末稿号 "说明"`：终审、构建、测试、本地提交。
+- 写到约第 3400 类前，先重跑名次 3501–10000 的画像（`node scripts/analysis/class-profiles.mjs <a> <b> 30`）。
+
