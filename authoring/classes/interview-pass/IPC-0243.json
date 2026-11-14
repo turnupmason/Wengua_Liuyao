@@ -1,0 +1,253 @@
+{
+  "script_id": "IPC-0243",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.3",
+  "class_key": "用明现[EFFECTIVE]化凶;世世受克;原伏难出;忌静不作用",
+  "class_rank": 243,
+  "class_share_of_casts": 0.000217,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "己酉"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丙戌"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        6,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "甲戌"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "癸丑"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        6,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "庚戌"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙亥"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "己亥"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        7,
+        6,
+        7,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "壬子"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼发动化回头克",
+    "官星当令",
+    "原神伏而难出"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼发动而化回头克（或兼化绝）（R-HUA-01、R-HUA-02）"
+    ],
+    "supporting": [
+      "官星多当令；忌神子孙安静不作用"
+    ],
+    "adverse": [
+      "原神妻财伏而难出"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0189：动为始、变为终，当下旺相不敌回头克"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-HUA-01",
+      "R-HUA-02",
+      "R-SHIYING-03",
+      "R-YINGQI-11",
+      "R-YONG-GUAN-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：官星正旺，一动却化出回头克",
+    "brief": "这一卦偏难通过。官星一般正当令，开局有力，克官的子孙也安静不动；可官星一动，变出来的爻回头克它，有时还兼化绝，古书说戒回头之克我。生官的财又藏在卦下出不来，没人替它挡这一下。",
+    "opening": "官鬼是用神，起卦月份一般是官星当令，也有父母当令而得扶的，以你这一卦的排盘为准；它发动了。克官的子孙安静不旺。",
+    "process": "变化出在官星自己身上：动而化回头克，有时兼化绝。题头总注章论用神化凶，回头克、化绝都在其列。旺相之官本是好起点，可变爻回头相克，归宿受伤。\n生官的财不上卦，伏而难出；你的世爻是兄弟，也受了克。",
+    "ending": "旺官动而化回头克，前旺后伤，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "本卦结局落在回头克官的变爻上。按「问有应于变爻动爻」，变爻值日前后，较可能收到不如意的消息；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-11",
+          "pool": "adverse",
+          "target_event": "不利结果落定",
+          "target_symbol": "回头克官之变爻",
+          "condition": "应于变爻",
+          "time_scale": "day",
+          "calculation_basis": "变爻本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「问有应于变爻动爻」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。官星虽旺，一动便化回头克。期望放低。",
+    "classical_sources": [
+      {
+        "rule_id": "R-HUA-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "用神化凶：凡用神元神动化回头克、化绝、化墓、化空、化鬼、化退神皆为化凶。",
+        "applies_because": "用神化凶"
+      },
+      {
+        "rule_id": "R-HUA-02",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "戒回头之克我，勿反德以扶人。",
+        "applies_because": "戒回头之克"
+      },
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+        "applies_because": "妻财伏而难出"
+      },
+      {
+        "rule_id": "R-YINGQI-11",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "问有应于变爻动爻",
+        "applies_because": "应于变爻"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.3，写稿顺序第 243 类，占起卦概率 0.022%，全类 256 盘）：用神「明现[EFFECTIVE]化凶」；世爻「世受克」；原神妻财不上卦，伏而终不得出；忌神子孙安静而月令不旺，不主动作用。类内各盘不同之处：月建六亲：官鬼(80%)、父母(20%)；用神月令：旺(80%)、休囚(20%)；用神生扶：月扶(21%)、临月建(16%)、日扶、月扶(14%)、日帝旺、月扶(13%)；应爻对世：与世比和(58%)、生世(25%)、世生之(17%)；发动六亲：官鬼(49%)、兄弟官鬼(30%)、官鬼父母(21%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：官鬼之五行 80%、父母之五行 20%；用神动化：回头克 75%、回头克兼绝 25%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}

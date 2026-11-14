@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 246,
-  "technical_passed": 246,
+  "scripts": 258,
+  "technical_passed": 258,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 246,
+  "ai_approved": 258,
   "review_required": 0,
-  "approved_for_release": 246,
+  "approved_for_release": 258,
   "errors": [],
   "warnings": [],
   "similarity": [
@@ -17,13 +17,28 @@
       "jaccard6": 0.27
     },
     {
+      "a": "IPC-0197",
+      "b": "IPC-0250",
+      "jaccard6": 0.268
+    },
+    {
       "a": "IPC-0060",
       "b": "IPC-0062",
       "jaccard6": 0.26
     },
     {
+      "a": "IPC-0225",
+      "b": "IPC-0250",
+      "jaccard6": 0.259
+    },
+    {
       "a": "IPC-0088",
       "b": "IPC-0134",
+      "jaccard6": 0.253
+    },
+    {
+      "a": "IPC-0238",
+      "b": "IPC-0242",
       "jaccard6": 0.253
     },
     {
@@ -45,21 +60,6 @@
       "a": "IPC-0197",
       "b": "IPC-0223",
       "jaccard6": 0.241
-    },
-    {
-      "a": "IPC-0084",
-      "b": "IPC-0088",
-      "jaccard6": 0.229
-    },
-    {
-      "a": "IPC-0084",
-      "b": "IPC-0134",
-      "jaccard6": 0.229
-    },
-    {
-      "a": "IPC-0116",
-      "b": "IPC-0169",
-      "jaccard6": 0.224
     }
   ]
 }
