@@ -93,11 +93,25 @@
 ## 七、按类写稿进度（续写时先看这里）
 
 - 用户 2026-11-14：「你就是专家认证。我批准了。」写到 500 个等价类再汇报，中途不问；保持标准，不偷懒。
-- 写稿顺序：`reports/interview-pass-class-order.json`（eq-0.12.1，按掷钱概率排序）；类别画像 `reports/class-profiles-1-500.json`（`node scripts/analysis/show-profile.mjs 25-36` 查看）。
-- 编号：名次 1、2、4、5 为 IPC-0001、0002、0004、0003；名次 3 为 IPC-0005；名次 6 起编号即名次（IPC-0006 … IPC-0500）。
+- 写稿顺序：`reports/interview-pass-class-order.json`（eq-0.12.3，按掷钱概率排序；概率相同者按上一版名次稳定排序）；类别画像 `reports/class-profiles-1-500.json`（`node scripts/analysis/show-profile.mjs 25-36` 查看）。
+- 编号：稿号是固定标识，名次以各稿 `class_rank` 为准。名次 1、2、4、5 为 IPC-0001、0002、0004、0003；名次 3 为 IPC-0005；eq-0.12.3 起 IPC-0131 名次为 156，IPC-0132…0156 各前移一位；其余稿号即名次。
 - 流程：在 `scripts/authoring/batches/batch_X.py` 写 spec（判断框架见 docs/18）→ 运行生成作者源与审核文件 → 未核验规则先用 `scripts/authoring/verify_rule.py` 核验 → `python scripts/authoring/finalize_batch.py <IDs>`（构建、润色记录、单 Claude 审核记录、再构建）→ 提交。
 - 已完成名次见 `authoring/classes/interview-pass/` 下的文件。
 - 写稿规矩补充（2026-11-14）：
   - 正文面向「看到自己这一卦」的读者，不写类内统计，例如「多数盘」「七成盘」「全类」，也不写内部术语「三层判定」。类内有差异时，用「或……或……」「一般」「若……」表述，或写「看你这一卦的排盘」。make_class 生成时会自动套用 `scripts/authoring/reader_voice.py`。
   - 写稿前先看画像中的「用神空破」：凡有旬空、月破的类别，正文须讲到。
   - 已写完的批次文件不要重跑，重跑会覆盖之后的润色。
+
+## 八、名次 1–500 完成（2026-11-14）
+
+- 500 篇类别稿全部写完、润色、单 Claude 复核，AI_APPROVED；连同 6 篇逐盘稿共 506 篇进入发布包。覆盖起卦概率 13.947%（eq-0.12.3，541,812 类）。
+- 结论：倾向通过 188、有望而待时 95、悬而未决 27、偏难 189、成败未定 1。详见 `reports/quality-report-classes-1-500.md`。
+- 写稿中补指纹两次（eq-0.12.2 世空分有气无气；eq-0.12.3 旺相化退神单列，新规则 R-JINTUI-03），新增规则 R-SHIHUA-01；判断口径增补见 docs/18。
+- 写稿工具（续写时用）：
+  - `python scripts/analysis/brief-profiles.py 起 止`：紧凑画像，附已写近似类及其结论。
+  - `node scripts/analysis/sample-flags.mjs 起 止`：样本盘中须讲旬空、伏神者。
+  - `python scripts/analysis/find-analogs.py 片段…`：按类键片段查已写结论。
+  - `python scripts/analysis/audit-chapter-quotes.py`：正文章名与引文出处是否一致（每批构建后跑）。
+  - 指纹升级：`scripts/authoring/migrate_eq_version.py` 迁移元数据，`scripts/review/record-rekey.mjs` 承接批准。
+- 下一步候选：继续写第 501 类以后；或把 IPC-0001 至 0004 等早期稿按后来的口径（读者视角、临应口径）通读一遍。
+
