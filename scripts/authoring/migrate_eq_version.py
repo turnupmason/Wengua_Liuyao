@@ -8,10 +8,16 @@ order = json.load(open(f'{ROOT}/reports/interview-pass-class-order.json', encodi
 assert order['equivalence_version'] == new, order['equivalence_version']
 by_rank = {c['rank']: c for c in order['classes']}
 by_key = {c['key']: c for c in order['classes']}
+# 类内盘数以上一版写稿顺序表（git HEAD）对照：概率差小于 1e-6 的拆分（如只少两盘）也要查出
+import subprocess
+_prev = subprocess.run(['git', 'show', 'HEAD:reports/interview-pass-class-order.json'], cwd=ROOT, capture_output=True, text=True, encoding='utf-8').stdout
+prev_charts = {c['key']: c['charts'] for c in json.loads(_prev)['classes']} if _prev else {}
 n = 0
 for f in sorted(glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json')):
     d = json.load(open(f, encoding='utf-8'))
     c = by_key[d['class_key']]
+    if d['equivalence_version'] == old and 'class_rank' in d and d['class_key'] in prev_charts and prev_charts[d['class_key']] != c['charts']:
+        print('NEEDS REVISION（类内盘数有变）', d['script_id'], prev_charts[d['class_key']], '->', c['charts']); continue
     if 'class_share_of_casts' in d and abs(c['share'] - d['class_share_of_casts']) >= 1e-6 and d['equivalence_version'] == old and 'class_rank' in d:
         print('NEEDS REVISION（类内盘数/概率有变）', d['script_id'], d['class_share_of_casts'], '->', round(c['share'], 6)); continue
     if 'class_rank' in d and c['rank'] != d['class_rank'] and d['equivalence_version'] == old:

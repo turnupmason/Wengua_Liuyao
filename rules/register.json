@@ -518,7 +518,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.2.0",
       "rule_id": "R-FUSHEN-08",
       "topic": "有用之伏神如现",
@@ -533,7 +533,13 @@
       "exceptions": "伏神静而未出，不能当作动爻",
       "engine_refs": [
         "src/flows.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "增删卜易卷之二·飞伏神章第二十八（章题 L792）逐字核对：「此六皆有用之伏神也﹐虽曰不现亦如现矣」（L817，总结伏神有用六条）、「凡用神旺相而遇旬空﹐出空之日则出矣。」（L820，野鹤驳黄金策「伏居空地」）。解释与原文一致；「出伏时点取伏神逢值、冲开飞神」另据 R-YINGQI-01、R-FUSHEN-05。"
+      }
     },
     {
       "rule_id": "R-YONG-GUAN-01",

@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.3';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.4';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -87,6 +87,11 @@ export function interviewPassClass(evidence) {
   const ji = effectTier(evidence.ji, evidence.flows, 'ji');
   if (yuan === '待核' || yuan === '伏并见') blockers.push(yuan === '待核' ? '原神作用状态待核（REVIEW_REQUIRED）' : '原神伏神有用与无用并见，须权衡规则');
   if (ji === '待核' || ji === '伏并见') blockers.push(ji === '待核' ? '忌神作用状态待核（REVIEW_REQUIRED）' : '忌神伏神有用与无用并见，须权衡规则');
+  // 忌神与元神同动（元神忌神衰旺章：忌神不能克用神者「忌神与元神同动七也」，R-YUANJI-04）。原神只取最强一爻时，
+  // 若最强者是静爻、另有一爻原神发动，同动之事实会被掩去；忌神发动有力时单列，并记发动之原神自身的作用状态
+  const movingYuan = evidence.yuan.filter((x) => x.actsOnYong === '发动');
+  const tongdong = ji === '动有力' && yuan !== '动有力' && movingYuan.length ? `忌元同动(原${effectTier(movingYuan, evidence.flows, 'yuan')})` : '';
+  if (tongdong.includes('待核')) blockers.push('同动之原神作用状态待核（REVIEW_REQUIRED）');
   const sp = evidence.special;
   const factors = {
     yong,
@@ -95,6 +100,7 @@ export function interviewPassClass(evidence) {
     jiHoldsWorld: sp.jiHoldsWorld,
     yuan,
     ji,
+    tongdong,
     // 卦级：六冲六合、冲合之变（六合章「六合卦变六冲…始吉终凶」）、反吟伏吟（反伏章「占名者久困官途」，R-FANFU-01）
     hexagram: [sp.sixClash ? '六冲' : sp.sixCombine ? '六合' : '', sp.transform && /变[冲合]/.test(sp.transform) ? sp.transform : '', sp.fanyin ? '反吟' : '', sp.fuyin ? '伏吟' : ''].filter(Boolean).join(''),
     // 三合局（D-020）：局之六亲与吉凶口径、成局状态、世与局之关系；应期地支逐盘求出，不进指纹
@@ -103,7 +109,7 @@ export function interviewPassClass(evidence) {
   const key = [
     `用${yong.source}${yong.world || ''}${yong.state ? `[${yong.state}${yong.limits || ''}]` : ''}${yong.motion || ''}${yong.hurt || ''}`,
     `世${factors.world}${factors.jiHoldsWorld ? '子孙' : ''}`,
-    `原${yuan}`, `忌${ji}`, factors.hexagram, factors.harmonies.length ? `局${factors.harmonies.join('+')}` : '',
+    `原${yuan}`, `忌${ji}`, tongdong, factors.hexagram, factors.harmonies.length ? `局${factors.harmonies.join('+')}` : '',
   ].filter(Boolean).join(';');
   return { version: EQUIVALENCE_VERSION, key, factors, writable: blockers.length === 0, blockers };
 }

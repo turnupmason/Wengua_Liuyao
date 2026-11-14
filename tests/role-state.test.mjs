@@ -76,3 +76,11 @@ test('进神退神章（R-JINTUI-03）：用神当令得相而化退神，占近
   assert.match(k, /化退旺/);
   assert.doesNotMatch(k, /化凶/);
 });
+
+test('元神忌神衰旺章（R-YUANJI-04）：忌神发动有力而另一爻原神同动，最强原神为静爻时，指纹单列「忌元同动」', () => {
+  const td = interviewPassClass(ev([8, 7, 6, 9, 8, 6], '辰', '戊戌')).key; // 子孙与妻财同动，另有妻财静而旺相
+  assert.match(td, /原静旺有力;忌动有力;忌元同动\(原无力\)/);
+  const solo = interviewPassClass(ev([8, 7, 6, 7, 8, 8], '巳', '庚午')).key; // 只有子孙发动
+  assert.match(solo, /忌动有力/);
+  assert.doesNotMatch(solo, /同动/);
+});
