@@ -70,8 +70,9 @@ export function checkClassDraft(src, userTexts) {
       // 日月为用（R-FUSHEN-01）：用神即月建或日辰，作有利依据成立
       if (d.role === 'yong' && !lines.length && (evidence.yongshen.missing?.monthIsYong || evidence.yongshen.missing?.dayIsYong)) { if (d.effect === 'adverse') errors.push(`C33 样本 ${tag} 日月为用，不得作主要不利依据`); continue; }
       if (!lines.length) { errors.push(`C33 样本 ${tag} 无 ${d.role} 爻`); continue; }
+      // 用神当前无力本身即为主要不利依据（R-YUANJI-05「用神无根」）
       const ok = d.effect === 'adverse'
-        ? lines.some((l) => l.state.state === 'EFFECTIVE' && l.state.acts !== '静（不主动作用）')
+        ? (d.role === 'yong' ? lines.every((l) => l.state.state === 'INEFFECTIVE') : lines.some((l) => l.state.state === 'EFFECTIVE' && l.state.acts !== '静（不主动作用）'))
         : lines.some((l) => ['EFFECTIVE', 'DEFERRED'].includes(l.state.state));
       if (!ok) errors.push(`C33 样本 ${tag} 的 ${d.role} 不满足主要${d.effect === 'adverse' ? '不利' : '有利'}依据`);
     }

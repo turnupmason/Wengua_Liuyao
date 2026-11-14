@@ -753,8 +753,14 @@
       "engine_refs": [
         "src/questions/interview-pass.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见用神章（兄弟爻条）；兄弟于谋事为阻神，求名中为竞争之象，解释一致"
+      }
     },
     {
       "rule_id": "R-YONG-FU-01",
@@ -2303,7 +2309,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-04",
       "topic": "应期",
@@ -2317,7 +2323,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见各门类应期总注章；衰绝者遇生遇旺，取生用神之五行与用神本五行之月日，解释一致"
+      }
     },
     {
       "adoption": "adopted",
