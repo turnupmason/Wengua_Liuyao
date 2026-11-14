@@ -104,5 +104,5 @@ def make(spec):
           'adversarial': {'status': 'PASS', 'notes': spec['adv']},
           'final_qa': {'status': 'PASS', 'notes': '17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。'}}
     os.makedirs(f'{ROOT}/reports/review-classes', exist_ok=True)
-    json.dump(rv, open(f"{ROOT}/reports/review-classes/{spec['id']}.json", 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+    json.dump(rv, open(f"{ROOT}/reports/review-classes/{spec['id']}.json", 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=2)
     return spec['id']

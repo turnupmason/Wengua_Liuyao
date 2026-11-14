@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 78,
-  "technical_passed": 78,
+  "scripts": 90,
+  "technical_passed": 90,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 78,
+  "ai_approved": 90,
   "review_required": 0,
-  "approved_for_release": 78,
+  "approved_for_release": 90,
   "errors": [],
   "warnings": [],
   "similarity": [
@@ -22,9 +22,29 @@
       "jaccard6": 0.201
     },
     {
+      "a": "IPC-0075",
+      "b": "IPC-0078",
+      "jaccard6": 0.178
+    },
+    {
+      "a": "IPC-0058",
+      "b": "IPC-0077",
+      "jaccard6": 0.177
+    },
+    {
+      "a": "IPC-0072",
+      "b": "IPC-0079",
+      "jaccard6": 0.176
+    },
+    {
       "a": "IPC-0043",
       "b": "IPC-0059",
       "jaccard6": 0.17
+    },
+    {
+      "a": "IPC-0076",
+      "b": "IPC-0082",
+      "jaccard6": 0.156
     },
     {
       "a": "IPC-0014",
@@ -40,26 +60,6 @@
       "a": "IPC-0023",
       "b": "IPC-0065",
       "jaccard6": 0.132
-    },
-    {
-      "a": "IPC-0040",
-      "b": "IPC-0066",
-      "jaccard6": 0.131
-    },
-    {
-      "a": "IPC-0045",
-      "b": "IPC-0057",
-      "jaccard6": 0.127
-    },
-    {
-      "a": "IPC-0042",
-      "b": "IPC-0063",
-      "jaccard6": 0.126
-    },
-    {
-      "a": "IPC-0048",
-      "b": "IPC-0051",
-      "jaccard6": 0.124
     }
   ]
 }
