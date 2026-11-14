@@ -307,7 +307,9 @@ function adverseTiming(chart, roles, analysis) {
   for (const l of chart.lines.filter((x) => x.moving && x.relative === roles.ji)) {
     const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === l.element);
     out.push({ timing_rule_id: 'R-YINGQI-02', target_symbol: `${l.label}${l.relative}${l.branch}`, target_branches: [l.branch, COMBINE.get(l.branch)], time_scale: SCALE_NEAR, calculation_basis: `忌神发动，逢值逢合：逢${l.branch}或${COMBINE.get(l.branch)}` });
-    out.push({ timing_rule_id: 'R-YINGQI-09', target_symbol: `${l.label}${l.relative}${l.branch}`, target_branches: branchesOfElement(gen), time_scale: SCALE_NEAR, calculation_basis: `大象凶而受克，须防克者逢生：逢${gen}` });
+    const yl = chart.lines.find((x) => x.relative === roles.yong);
+    const ySupported = yl && describeLine(yl, analysis.lines[yl.position - 1], chart).support.some((x) => /临日|临月|日生|月生|日扶|月扶|动来生|动来扶/.test(x));
+    if (!ySupported) out.push({ timing_rule_id: 'R-YINGQI-09', target_symbol: `${l.label}${l.relative}${l.branch}`, target_branches: branchesOfElement(gen), time_scale: SCALE_NEAR, calculation_basis: `大象凶而受克，须防克者逢生：逢${gen}` });
   }
   // 用神发动化回头克：克神为变爻，吉凶有应于变爻者（R-YINGQI-11），亦防克神逢生（R-YINGQI-09）
   for (const l of chart.lines.filter((x) => x.moving && x.relative === roles.yong)) {

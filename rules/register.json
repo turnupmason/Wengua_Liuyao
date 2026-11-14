@@ -1058,12 +1058,18 @@
       "engine_refs": [
         "src/evidence.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 复验（独立代理）",
+        "round": "review-round7",
+        "date": "2026-11-13",
+        "note": "（IP-0002 rules_unapproved）原文「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜」逐字见于元神忌神衰旺章第十（L218 句末，承「以上论元神、忌神之有力、无力者」），并有同章例卦（L221）为证。解释「原忌之论以用神有气为前提；用神无根，原神有力也生不起」准确；applicable_conditions「全部问事」合原文统论语气。IP-0002 用神卯木月生日合、有气，前提成立；但稿件只把它列入 rule_ids，judgment 文中无对应表述（列 minor）。可在 exceptions 补「用神有气与否依三层判定（D-015）」。"
+      }
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.2.0",
       "rule_id": "R-YUANJI-06",
       "topic": "接续相生",
@@ -1081,7 +1087,13 @@
       ],
       "dispute_ids": [
         "D-013"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 复验（独立代理）",
+        "round": "review-round7",
+        "date": "2026-11-13",
+        "note": "已修正：original_text 增录同例末句「此谓之用神无根，元神有力亦难生。」，两句均逐字见于增删卜易·元神忌神衰旺章第十（L221）。modern_explanation 写明原例结局为凶、用神亥水月破日克，「接续相生须两神俱动且用神有根」——「两神俱动」为本项目据例卦与 D-013 的读法，exceptions 已指向 D-013，可接受。本轮四篇均未再引用此条。"
+      }
     },
     {
       "rule_id": "R-SICHU-01",
@@ -1834,9 +1846,9 @@
         "爻之合者，静而逢合，谓之合起。动而逢合，合谓之合绊。",
         "凡得诸合，诸占皆以为吉，占名成，占利利就"
       ],
-      "modern_explanation": "静爻逢合为合起，动爻逢合为合绊。",
+      "modern_explanation": "静爻逢合为合起，动爻逢合为合绊；诸合于求名、求利、婚姻等为吉，但须用神有气。",
       "applicable_conditions": "地支相合",
-      "exceptions": "不能见合即断事成：同章称「然必用神有气相宜，用若失陷无益」",
+      "exceptions": "同章：「然必用神有气相宜，用若失陷无益」；不能见合即断事成",
       "adoption": "adopted",
       "engine_refs": [
         "src/constants.js",
@@ -2156,7 +2168,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-09",
       "topic": "应期",
@@ -2171,7 +2183,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 复验（独立代理）",
+        "round": "review-round7",
+        "date": "2026-11-13",
+        "note": "已修正：applicable_conditions 写明原文界定「大象吉：用神得日月动爻生扶而受克；大象凶：用神既无日月动爻生扶而受克（原文以辰土用神为例）」，两句逐字见于各门类应期总注章（L722–723）。可再补：原文凶例「后逢寅卯亥日」含克神本支（寅卯）与生克神之支（亥），modern_explanation「防克者逢生」宜注明含克神逢值。引擎遗留：src/evidence.js adverseTiming 对忌神发动仍无条件输出「大象凶」候选（L310，未查用神是否得日月生扶），与已登记界定不一致（IP-0002 facts 即出现此候选）；回头克分支（L318–321）已按界定过滤。本轮四篇正文均未使用 R-YINGQI-09，登记本身判 PASS，引擎须另修。"
+      }
     },
     {
       "adoption": "adopted",
@@ -2201,7 +2219,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-11",
       "topic": "应期",
@@ -2215,7 +2233,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 复验（独立代理）",
+        "round": "review-round7",
+        "date": "2026-11-13",
+        "note": "已修正：modern_explanation 改为「吉凶有应于动爻之支者，亦有应于变爻之支者（原例：爻临戌土变出酉金，有戌日应者，有酉日应者）」，与 L728 原文及例句一致。IP-0006 以回头克之变爻亥取亥日，适用成立。docs/09 规则表仍写「变爻之支」，文档宜同步。"
+      }
     },
     {
       "adoption": "adopted",

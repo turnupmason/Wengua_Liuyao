@@ -63,7 +63,7 @@
 - 卦盘：火泽睽（艮宫四世，土） 之 山泽损；月建 亥，日辰 丙戌，旬空 午未
 - 匹配键：`career.interview.interview-pass|778987|亥|丙戌`；内容哈希 `606a977d6f68cbd3…`
 - 结论类别：难以通过；情境：独发、子孙持世发动、忌神化回头生、原神伏藏
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 ISSUES、独立 ISSUES、反向 RETURN、精修 DONE、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 resolved、独立 resolved、反向 resolved、精修 DONE、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 上爻 青龙 父母己巳火
@@ -122,7 +122,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：雷地豫（震宫一世，木） 之 泽雷随；月建 亥，日辰 乙未，旬空 辰巳
-- 匹配键：`career.interview.interview-pass|688768|亥|乙未`；内容哈希 `e0ee27a3acff78d0…`
+- 匹配键：`career.interview.interview-pass|688768|亥|乙未`；内容哈希 `fdcc485f55ab9d66…`
 - 结论类别：有望通过，但要待时；情境：两爻发动、原神持世发动生官、官鬼化进神、六合卦变
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 ISSUES、独立 ISSUES、反向 RETURN、精修 DONE、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
@@ -149,7 +149,7 @@
 
 官星自己也在动：申金化出酉金，同属金而由申进到酉，是进神，酉又是金的帝旺之地。只是申、酉两金在冬月都不当令，《增删卜易》讲进神有四种，其中「动休囚而化休囚，待时而进」说的正是这种情形——这一步要等时候，不会立刻见效。
 
-再看阻力。克官的子孙有两爻：二爻巳火被月建亥水冲破，又落旬空，空、破俱全，起不了作用；四爻午火在应位，受月建所克，只因当天未日与它相合，有被提起之意，但它安静不动，不能主动伤官。应位留着这一点不利的成分，却不足以左右结果。兄弟卯木虽得月生，却入了未土之墓，又受申金动克，也没有发动来牵制。
+再看阻力。克官的子孙有两爻：二爻巳火被月建亥水冲破，又落旬空，空、破俱全，起不了作用；四爻午火在应位，受月建所克，只因当天未日与它相合，有被提起之意，但它安静不动，不能主动伤官。应位留着这一点不利的成分，却不足以左右结果。兄弟卯木得月令之生，旺相而安静，入墓也不作真墓，只是并未发动去分夺官星，竞争一方的牵制眼下不显。
 
 **详断·结局**
 
@@ -236,7 +236,7 @@
 - 卦盘：地泽临（坤宫二世，土）（六爻安静）；月建 亥，日辰 甲辰，旬空 寅卯
 - 匹配键：`career.interview.interview-pass|778888|亥|甲辰`；内容哈希 `fc9ad0fbf38ce27b…`
 - 结论类别：眼下悬而未决，冲空或出旬后有望；情境：六爻安静、官鬼持世旬空、原神入日墓、与 IP-0001 同卦异日
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 ISSUES、独立 ISSUES、反向 RETURN、精修 DONE、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 resolved、独立 resolved、反向 resolved、精修 DONE、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 上爻 玄武 子孙癸酉金
@@ -291,7 +291,7 @@
 - 卦盘：天山遁（乾宫二世，金） 之 天风姤；月建 亥，日辰 甲午，旬空 辰巳
 - 匹配键：`career.interview.interview-pass|867777|亥|甲午`；内容哈希 `abf5f59606de41ac…`
 - 结论类别：难以通过；情境：独发、官鬼持世发动、化回头克、化绝、官鬼两现
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 ISSUES、独立 ISSUES、反向 RETURN、精修 DONE、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 resolved、独立 resolved、反向 resolved、精修 DONE、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 上爻 玄武 父母壬戌土
