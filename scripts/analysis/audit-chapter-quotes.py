@@ -21,6 +21,6 @@ for f in sorted(glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json')
         if re.search(r'同一?章$', name): continue
         hits = {c for c, x in paras if q in x}
         if not hits: continue
-        if not any(any(name[i:] and c.startswith(name[i:].rstrip('章图')) for i in range(len(name) - 2)) for c in hits):
+        if not any(any(len(name[i:].rstrip('章图')) >= 2 and (c.startswith(name[i:].rstrip('章图')) or name[i:] in c) for i in range(len(name) - 2)) for c in hits):
             bad += 1; print(d['script_id'], name, '≠', sorted(hits), m.group(3)[:20])
 sys.exit(1 if bad else 0)

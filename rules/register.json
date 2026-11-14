@@ -1686,6 +1686,31 @@
       }
     },
     {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.5.0",
+      "rule_id": "R-SHIHUA-01",
+      "topic": "世化退神（功名）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "独不喜化退神﹐世化退神﹐若非临场之阻﹐必无勇往之心"
+      ],
+      "modern_explanation": "占功名，世爻动而化退神，主本人临场受阻或进取之心不足，为次要不利。",
+      "applicable_conditions": "世爻发动而化退神（面试一问作次要不利，docs/18 三）",
+      "exceptions": "原文只言化退神；世爻化回头克、化绝、化墓，程序口径类推同作「世化凶」（docs/18），正文须分别说明，不得径引本条为原文所言",
+      "engine_refs": [
+        "src/equivalence.js worldState 世化凶"
+      ],
+      "dispute_ids": [],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "增删卜易·乡试章第五十五（L2594）逐字核对；同句下文「父化退神学问日颓…官退化神，皓首无成，当于进退章中参考」。本条只取世化退神；化克、化绝、化墓之同列属程序类推，exceptions 已注明。"
+      }
+    },
+    {
       "rule_id": "R-KONG-01",
       "topic": "旬空",
       "source_book": "增删卜易",
@@ -2393,7 +2418,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-05",
       "topic": "应期",
@@ -2407,7 +2432,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "增删卜易·各门类应期总注章（L718）逐字核对：「入三墓俱喜冲开：如主事爻临午火，假使火墓于戌，后逢辰日则应之」；三墓之义见 R-SANMU-01。用于用神入墓之应期（冲墓之日）。"
+      }
     },
     {
       "adoption": "adopted",

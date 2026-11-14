@@ -2,7 +2,7 @@
 import json, sys
 a, b = int(sys.argv[1]), int(sys.argv[2])
 P = {p['rank']: p for p in json.load(open('D:/Wengua_Liuyao/reports/class-profiles-1-500.json', encoding='utf-8'))}
-KEYS = ['月建六亲', '用神月令', '用神生扶', '用神伤损', '用神空破', '用神动化', '世爻六亲', '世爻空破', '世爻状态', '应爻对世', '应爻六亲', '发动六亲', '原神', '忌神', '伏神', '三合']
+KEYS = ['月建六亲', '用神月令', '用神生扶', '用神伤损', '用神空破', '用神动化', '世爻六亲', '世爻动化', '世爻空破', '世爻状态', '应爻对世', '应爻六亲', '发动六亲', '原神', '忌神', '伏神', '三合']
 for r in range(a, b + 1):
     p = P[r]
     print(f"#{r} {p['charts']}盘 {p['key']}")
