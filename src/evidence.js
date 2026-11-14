@@ -267,6 +267,10 @@ function timingCandidates(yong, facts, chart, scale) {
     add('R-YINGQI-04', '衰绝遇生遇旺', [...branchesOfElement(gen), ...branchesOfElement(yong.element)], `衰者待生旺：逢${gen}或${yong.element}之月日`);
   }
   if (facts.change && facts.change.advance === '进神') add('R-YINGQI-10', '化进神', [b, COMBINE.get(b)], `化进神逢值逢合：逢${b}或${COMBINE.get(b)}（原文例：申动酉，应申或巳）`);
+  if (facts.change && facts.change.advance === '进神' && cal.month.seasonal === '休囚' && facts.change.changedCalendar.month.seasonal === '休囚') {
+    const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === yong.element);
+    out.push({ timing_rule_id: 'R-JINTUI-02', target_symbol: `${yong.label}${yong.relative}${yong.branch}化进神`, target_branches: [...branchesOfElement(yong.element), ...branchesOfElement(gen)], time_scale: 'month', calculation_basis: `动休囚而化休囚，待时而进：待${yong.element}旺、相之月（D-019）` });
+  }
   if (facts.change && facts.change.advance === '退神') add('R-YINGQI-10', '化退神', [facts.change.to.branch, CLASH.get(facts.change.to.branch)], `化退神忌值忌冲：逢${facts.change.to.branch}或${CLASH.get(facts.change.to.branch)}（原文例：酉化申，应申或寅）`);
   // 受克待克神受制：回头克之变爻、或动来克之动爻，逢冲之日月（月将章「待至冲去伤爻之日」，应期总注「须待克神受克」）
   const attackers = [];

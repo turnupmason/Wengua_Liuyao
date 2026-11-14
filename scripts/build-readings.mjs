@@ -100,7 +100,8 @@ function check(src, chart, evidence) {
   for (const e of r.timing?.entries || []) {
     const ok = cands.some((c) => c.timing_rule_id === e.timing_rule_id && c.target_branches.includes(e.target_branch));
     if (!ok) errors.push(`C10 应期 ${e.timing_rule_id}→${e.target_branch} 不在本盘按规则推出的候选内`);
-    if (!String(r.timing.text).includes(`${e.target_branch}日`)) errors.push(`C10 应期说明未写出「${e.target_branch}日」`);
+    const unit = e.time_scale === 'month' ? '月' : '日';
+    if (!String(r.timing.text).includes(`${e.target_branch}${unit}`)) errors.push(`C10 应期说明未写出「${e.target_branch}${unit}」`);
     for (const f of ['timing_rule_id', 'target_event', 'target_symbol', 'condition', 'target_branch', 'time_scale', 'calculation_basis', 'source_reference']) if (!e[f]) errors.push(`C10 应期条目缺 ${f}`);
     entryBranches.add(e.target_branch);
   }
