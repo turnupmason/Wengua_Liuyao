@@ -68,6 +68,10 @@ def variations(p):
 
 
 def make(spec):
+    # 读者视角：正文不写类内统计（多数盘、全类、三层判定等），见 reader_voice.py
+    from reader_voice import convert
+    for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion']:
+        spec[k] = convert(spec[k])
     p = prof(spec['rank'])
     sources = [src(*x) if isinstance(x, tuple) else x for x in spec['sources']]
     entries = []

@@ -357,9 +357,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `8e4f0e343d2bb735…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `0b15355d655544a2…`
 - 结论类别：倾向通过；情境：官鬼持世、用神安静有气、原神无力、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽地萃，巳月戊辰日
@@ -377,7 +377,7 @@
 
 问面试能不能过，看的是官鬼。这一卦里官鬼只出现一次，而且正坐在世爻上。世爻代表你自己，官星落在你这一边，《增删卜易》说「占功名者若得官鬼持世即许成名」，这是求职卦里最直接的好兆头。
 
-这颗官星眼下是有气的。它的气或是来自当令的月建，或是来自当天日辰的生扶，各盘不同，排盘里写得清楚；古书讲用神之旺，本来就不限于四时当令，得日月生扶也算。它不落空，不遇破，卦中也没有哪一爻发动来冲它、克它，根基稳。
+这颗官星眼下是有气的。它的气或是来自当令的月建，或是来自当天日辰的生扶，以你这一卦为准，排盘里写得清楚；古书讲用神之旺，本来就不限于四时当令，得日月生扶也算。它不落空，不遇破，卦中也没有哪一爻发动来冲它、克它，根基稳。
 
 **详断·过程**
 
@@ -411,9 +411,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `e984bf4cd0743915…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `46332218f30cd273…`
 - 结论类别：倾向通过；情境：官鬼同支两现、官鬼持世、原神伏而难出、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁之泽山咸，巳月戊辰日
@@ -431,7 +431,7 @@
 
 求职问事，用神是官鬼。这一卦官鬼出现了两次，而且是同一个地支，两爻的旺衰、空破都一样，取哪一爻结论不会变；按取用的惯例取坐在世爻上的那一爻，它就落在你自己这一边。
 
-这颗官星站得住：有的盘是当令，有的盘是得月建、日辰相合相生，排盘里各有交代。它不空不破，卦中也没有动爻冲它、克它。官鬼持世而有气，正是《增删卜易》八宫图所说「占功名者若得官鬼持世即许成名」的格局。
+这颗官星站得住：或当令，或得月建、日辰相合相生，你这一卦属哪种，排盘里有交代。它不空不破，卦中也没有动爻冲它、克它。官鬼持世而有气，正是《增删卜易》八宫图所说「占功名者若得官鬼持世即许成名」的格局。
 
 **详断·过程**
 
@@ -568,9 +568,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `a4316035153cc39f…`
+- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `fcbaeaf1e756e3c3…`
 - 结论类别：偏难通过；情境：官鬼持世而无力、子孙当令、原忌俱静而旺相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天火同人，辰月辛丑日
@@ -588,7 +588,7 @@
 
 面试问成败，看官鬼。这一卦官鬼只有一爻，坐在你的世爻上，位置是对的——《增删卜易》说「占功名者若得官鬼持世即许成名」。
 
-可同一部书在升选候补章里讲得更细：要「旺官持世」才吉。这一卦的官星不旺。起卦这个月，当令的偏偏是克官的子孙，官星在月令上受克，处在休囚的位置。有的盘当天日辰对它有些生扶，但月建与日辰一克一生、又没有动爻来助时，以月建为准，官星仍是无力的。
+可同一部书在升选候补章里讲得更细：要「旺官持世」才吉。这一卦的官星不旺。起卦这个月，当令的偏偏是克官的子孙，官星在月令上受克，处在休囚的位置。即便当天日辰对它有些生扶，但月建与日辰一克一生、又没有动爻来助时，以月建为准，官星仍是无力的。
 
 **详断·过程**
 
@@ -621,9 +621,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `3c1a8c9edb31d2cd…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `19e93a0e4bff64bd…`
 - 结论类别：倾向通过；情境：官星有气、世爻受克、原神伏而难出、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之天山遁，丑月己巳日
@@ -639,7 +639,7 @@
 
 **详断·开局**
 
-看面试，先看官鬼。这一卦的官鬼有气：有的盘它当令，有的盘它从日月得了生扶，排盘里各有标注。它安静不动，不空不破，也没有发动之爻来冲克它，作为用神，底子是站得住的。
+看面试，先看官鬼。这一卦的官鬼有气：或当令，或从日月得了生扶，你这一卦属哪种，排盘里有标注。它安静不动，不空不破，也没有发动之爻来冲克它，作为用神，底子是站得住的。
 
 克官的子孙虽然在卦上，却是无力的那种，伤不到官星。从这两点看，结果本身是偏向成的。
 
@@ -877,9 +877,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `e80c770e869cc1a0…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `9e4b3c706d4e35f3…`
 - 结论类别：倾向通过；情境：官星有气、六合卦、原神无力、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节，丑月乙丑日
@@ -891,7 +891,7 @@
 初爻 青龙 妻财丁巳火世
 ```
 
-**简断**　这一卦倾向通过。卦逢六合，世应相合；官星有气，不空不破，没有受冲克；克官的子孙无力。生官的财也无力，有的盘它虽在动，却动而无力。成事靠官星自己，节奏偏缓。
+**简断**　这一卦倾向通过。卦逢六合，世应相合；官星有气，不空不破，没有受冲克；克官的子孙无力。生官的财也无力，就算它在动，也是动而无力。成事靠官星自己，节奏偏缓。
 
 **详断·开局**
 
@@ -928,9 +928,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `22cf4daaa1337068…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `d7032e7cd542cfad…`
 - 结论类别：倾向通过；情境：官鬼持世、官星有气、原神安静、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火风鼎，寅月戊戌日
@@ -948,7 +948,7 @@
 
 官鬼持世，官星与你在同一爻上，求职卦里这是最直接的好位置，《增删卜易》说「占功名者若得官鬼持世即许成名」。
 
-这一卦持世的官星有根：有的盘它当令，有的盘它当天得日辰相生，各盘排盘上写得清楚。不空、不破、不受冲克，这三样都占着。
+这一卦持世的官星有根：或当令，或当天得日辰相生，你这一卦属哪种，排盘上写得清楚。不空、不破、不受冲克，这三样都占着。
 
 **详断·过程**
 
@@ -1077,9 +1077,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原无力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `b673713cea8ad1ab…`
+- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原无力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `7024db6f0aa026e7…`
 - 结论类别：偏难通过；情境：官鬼持世而无力、兄弟当令、子孙得相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷风恒之雷山小过，寅月丁卯日
@@ -1095,13 +1095,13 @@
 
 **详断·开局**
 
-官鬼持世，按理是求职的好位置。可升选候补章说得明白，吉的是「旺官持世」。这一卦的官星不旺：起卦月份是兄弟当令，官星失令，大多数盘里当天日辰也不生它，卦中没有动爻来扶，它就这么孤零零地坐在世爻上。
+官鬼持世，按理是求职的好位置。可升选候补章说得明白，吉的是「旺官持世」。这一卦的官星不旺：起卦月份是兄弟当令，官星失令，一般当天日辰也不生它，卦中没有动爻来扶，它就这么孤零零地坐在世爻上。
 
 **详断·过程**
 
 克官的子孙在兄弟当令的月份得了相气，安静而旺相之爻能克休囚之爻，这颗失令的官星正好在它的射程之内。
 
-生官的财在这一卦里也是无力的——有的盘它动了，动而无力，同样生不起官星。元神忌神衰旺章那句话放在这里很贴切：用神无根，元神有力尚且难生，何况元神无力。
+生官的财在这一卦里也是无力的——就算它动了，也是动而无力，同样生不起官星。元神忌神衰旺章那句话放在这里很贴切：用神无根，元神有力尚且难生，何况元神无力。
 
 **详断·结局**
 
@@ -1127,9 +1127,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `0c5c3a48923f1052…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `de3f18a58e96b7f8…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、原神伏而待时、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁，卯月丁巳日
@@ -1145,7 +1145,7 @@
 
 **详断·开局**
 
-官鬼在这一卦出现了两次，地支相同，取持世的那一爻，它和你在一处。多数盘这个月财或官当令，官星得月生或临月，少数盘靠日辰相扶，总之有气（排盘可查）。不空、不破、不受冲克，持世而站得稳。
+官鬼在这一卦出现了两次，地支相同，取持世的那一爻，它和你在一处。一般这个月财或官当令，官星得月生或临月，或靠日辰相扶，总之有气（以你这一卦的排盘为准）。不空、不破、不受冲克，持世而站得稳。
 
 **详断·过程**
 
@@ -1177,9 +1177,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用日月为用;世世安;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `7533417bc62f2d7e…`
+- 匹配键：等价类 `用日月为用;世世安;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `8d593f3f15181c76…`
 - 结论类别：倾向通过；情境：官鬼不上卦、日月为用、原忌俱静而不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜之水火既济，申月丁酉日
@@ -1195,7 +1195,7 @@
 
 **详断·开局**
 
-面试的用神是官鬼，这一卦六爻之中却没有官鬼。按《增删卜易·飞伏神章》，用神不现，先看日月：若月建或日辰就是用神，便以日月为用神。这一卦正是如此——多数盘是月建为官，少数盘是日辰为官，排盘里写得清楚。
+面试的用神是官鬼，这一卦六爻之中却没有官鬼。按《增删卜易·飞伏神章》，用神不现，先看日月：若月建或日辰就是用神，便以日月为用神。这一卦正是如此——一般是月建为官，或是日辰为官，排盘里写得清楚。
 
 日月不同于卦中之爻。月建司一月之令，日辰主一日之权，卦中爻动摇不了它们，用这样的官星作用神，底气是十足的。
 
@@ -1278,9 +1278,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `0656ee4fe038bbb9…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `67453af2fa9fb6d6…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而无力、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地山谦之地火明夷，辰月癸未日
@@ -1296,7 +1296,7 @@
 
 **详断·开局**
 
-这一卦的官星不在你的世爻上，而在应位——应爻代表对面那一方，官星落在那里，从卦象看，机会握在对方一侧。官星本身有气，或当令、或得日月扶持（排盘可查），不空、不破、不受冲克。
+这一卦的官星不在你的世爻上，而在应位——应爻代表对面那一方，官星落在那里，从卦象看，机会握在对方一侧。官星本身有气，或当令、或得日月扶持（以你这一卦的排盘为准），不空、不破、不受冲克。
 
 你的世爻上坐的是子孙。子孙是克官之神，《增删卜易》八宫图说「子孙持世且待时」，求名遇此，多半不能一蹴而就。
 
@@ -1330,9 +1330,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `e33eba2ea0b3f730…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `fea92f64d5174acc…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、原神伏而难出、忌神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁之泽山咸，午月壬申日
@@ -1348,7 +1348,7 @@
 
 **详断·开局**
 
-官鬼两现，地支一样，取持世那一爻。它有气：有的盘临月、有的盘临日，有的得月日相合（排盘可查）。不空不破，无动爻冲克，持世而稳。
+官鬼两现，地支一样，取持世那一爻。它有气：或临月、或临日，或得月日相合（以你这一卦的排盘为准）。不空不破，无动爻冲克，持世而稳。
 
 **详断·过程**
 
@@ -1380,9 +1380,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `636992ceb7556954…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `1244d1b94736abe8…`
 - 结论类别：倾向通过；情境：官鬼持世、忌神安静失令、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水地比之风地观，卯月壬戌日
@@ -1394,17 +1394,17 @@
 初爻 玄武 兄弟乙未土
 ```
 
-**简断**　这一卦倾向通过。官星坐在你的世爻上，多数盘它当令或临月，有气、不空不破、无冲克；克官的子孙安静而失令，伸不出手。生官的财无力，所以结果来得不快，等官星逢值逢冲时落定。
+**简断**　这一卦倾向通过。官星坐在你的世爻上，一般它当令或临月，有气、不空不破、无冲克；克官的子孙安静而失令，伸不出手。生官的财无力，所以结果来得不快，等官星逢值逢冲时落定。
 
 **详断·开局**
 
-官鬼持世，官星与你同在一爻。这一卦多数盘里官星当令或得月建扶持，少数盘靠日辰、月合撑着（排盘可查），总之有气。它不空、不破，没有动爻来冲克，持世而稳。
+官鬼持世，官星与你同在一爻。这一卦一般官星当令或得月建扶持，或靠日辰、月合撑着（以你这一卦的排盘为准），总之有气。它不空、不破，没有动爻来冲克，持世而稳。
 
 **详断·过程**
 
 克官的子孙虽然状态尚可，却安静又失令，按动静生克章，安静之爻要旺相才能去克别的爻，它不旺，也就只是待着，构不成威胁。
 
-生官的财则无力，有的盘它发动了，可动而无力，照样生不起官星。官星没得到推力，好在它本身不缺气。
+生官的财则无力，即便它发动了，也是动而无力，照样生不起官星。官星没得到推力，好在它本身不缺气。
 
 **详断·结局**
 
@@ -1429,9 +1429,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `2f9a3d21bc4c668c…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `ff1b6d19d145f972…`
 - 结论类别：偏难通过；情境：子孙持世、忌神得相有力、官鬼临应、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天泽履之泽天夬，未月乙丑日
@@ -1447,7 +1447,7 @@
 
 **详断·开局**
 
-官星在应位，从卦象看，机会在对方一侧。起卦这个月兄弟当令，官星失令，好在当天日辰或月日相合给了它一些扶持，还算可用（各盘不同，排盘可查）。
+官星在应位，从卦象看，机会在对方一侧。起卦这个月兄弟当令，官星失令，好在当天日辰或月日相合给了它一些扶持，还算可用（以你这一卦为准，排盘可查）。
 
 要紧的是你自己的世爻：坐在上面的是子孙。子孙是克官之神，求职卦最忌它持世。《增删卜易》升选候补章说「子孙持世，休望荣荫」。
 
@@ -1481,9 +1481,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `a799e80c749236b1…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `4ad8ae09e64b822f…`
 - 结论类别：倾向通过；情境：官鬼同支两现、财当令生官、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之水风井，辰月甲申日
@@ -1499,7 +1499,7 @@
 
 **详断·开局**
 
-官鬼两现，地支相同，旺衰一致。这一卦起卦月份当令的是财，财生官，两爻官星都从月令得了相气，底气扎实。日辰对它们是生是扶，各盘不同，排盘里列着。
+官鬼两现，地支相同，旺衰一致。这一卦起卦月份当令的是财，财生官，两爻官星都从月令得了相气，底气扎实。日辰对它们是生是扶，以你这一卦为准，排盘里列着。
 
 **详断·过程**
 
@@ -1530,9 +1530,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌伏难出;六合`（interview-pass-eq-0.12.1）；内容哈希 `564d8201773d5add…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌伏难出;六合`（interview-pass-eq-0.12.1）；内容哈希 `8c1411b4cfdcaf45…`
 - 结论类别：倾向通过；情境：六合卦、官星有气、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山火贲之风火家人，寅月壬午日
@@ -1548,7 +1548,7 @@
 
 **详断·开局**
 
-六合卦，内外相合，世应也合。古书论合，求名得之多主能成，但有个前提：用神要有气。这一卦的官鬼满足——多数盘当令或临月建，少数盘得日辰扶持（排盘可查），不空不破，没有动爻冲克。
+六合卦，内外相合，世应也合。古书论合，求名得之多主能成，但有个前提：用神要有气。这一卦的官鬼满足——一般当令或临月建，或得日辰扶持（以你这一卦的排盘为准），不空不破，没有动爻冲克。
 
 **详断·过程**
 
@@ -1579,9 +1579,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用日月为用;世世受克;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `cb290b33e37784dd…`
+- 匹配键：等价类 `用日月为用;世世受克;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `ee22f9f21021199c…`
 - 结论类别：倾向通过；情境：日月为用、世爻受克、原忌俱静而不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜，申月己丑日
@@ -1597,7 +1597,7 @@
 
 **详断·开局**
 
-六爻之中找不到官鬼。照《增删卜易·飞伏神章》，这时先看月建、日辰：这一卦几乎都是月建就是官星的五行（少数盘是日辰），于是以日月为用神。月建掌一月之令，这样的官星比卦中任何一爻都稳，卦里的动静伤不到它。
+六爻之中找不到官鬼。照《增删卜易·飞伏神章》，这时先看月建、日辰：这一卦一般是月建就是官星的五行（或是日辰），于是以日月为用神。月建掌一月之令，这样的官星比卦中任何一爻都稳，卦里的动静伤不到它。
 
 **详断·过程**
 
@@ -1626,9 +1626,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏难出;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `912acd3f02ec5873…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏难出;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `c066942693a44041…`
 - 结论类别：倾向通过；情境：官星当令、世爻受克、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水火既济之风火家人，丑月丙戌日
@@ -1644,7 +1644,7 @@
 
 **详断·开局**
 
-官鬼是用神。这一卦的官星九成以上当令或临月建，少数得日辰扶持（排盘可查），有气，不空不破，也没有动爻冲克它。
+官鬼是用神。这一卦的官星一般当令或临月建，或得日辰扶持（以你这一卦的排盘为准），有气，不空不破，也没有动爻冲克它。
 
 你的世爻在这一卦里是兄弟，而且受克——多半正是当令的官气在克它。世爻受制，自己这一侧会觉得被压着。
 
@@ -1777,9 +1777,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静不作用;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `a0851ceb558253e4…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静不作用;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `6e03cc5cdd4a6f49…`
 - 结论类别：倾向通过；情境：官鬼同支两现、世爻受克、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过之泽山咸，子月丙戌日
@@ -1795,7 +1795,7 @@
 
 **详断·开局**
 
-官鬼在这一卦出现两次，地支相同，力量一样。它们或当令，或得日辰相生（排盘可查），不空不破，没有动爻冲克。
+官鬼在这一卦出现两次，地支相同，力量一样。它们或当令，或得日辰相生（以你这一卦的排盘为准），不空不破，没有动爻冲克。
 
 你的世爻多是父母，受克，自身处境紧一些。
 
@@ -1828,9 +1828,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用日月为用;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `f18450bb4c3b5bbf…`
+- 匹配键：等价类 `用日月为用;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `f322a3dd00eca5c6…`
 - 结论类别：倾向通过；情境：日月为用、世爻安稳、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风雷益之山雷颐，酉月甲申日
@@ -1846,11 +1846,11 @@
 
 **详断·开局**
 
-六爻里没有官鬼，按飞伏神章先看日月：这一卦多数是月建为官，少数是日辰为官，便以日月为用神。日月之官不在卦爻之中，卦里的动静奈何不了它。
+六爻里没有官鬼，按飞伏神章先看日月：这一卦一般是月建为官，或是日辰为官，便以日月为用神。日月之官不在卦爻之中，卦里的动静奈何不了它。
 
 **详断·过程**
 
-克官的子孙在卦里，近半数盘还在发动，看起来像在出手。可元神忌神衰旺章列了忌神「虽动，不能克用神」的几种情形，这一卦的子孙正是动而无力的一类，何况它要克的是日月之官。
+克官的子孙在卦里，即便在发动，看起来像在出手。可元神忌神衰旺章列了忌神「虽动，不能克用神」的几种情形，这一卦的子孙正是动而无力的一类，何况它要克的是日月之官。
 
 生官的财安静，不添助力；你的世爻安稳，自身没有受伤。
 
@@ -1875,9 +1875,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `0fa8c3aae0c41665…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `4d5f1881396038e0…`
 - 结论类别：倾向通过；情境：官鬼同支两现、财当令生官、世爻受克、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过之泽山咸，戌月壬辰日
@@ -1893,7 +1893,7 @@
 
 **详断·开局**
 
-官鬼两现，地支相同。起卦这个月当令的是财，两爻官星都从月令得了相气，有根而稳。日辰对它们是生是扶各盘不同，排盘可查。
+官鬼两现，地支相同。起卦这个月当令的是财，两爻官星都从月令得了相气，有根而稳。日辰对它们是生是扶以你这一卦为准，排盘可查。
 
 **详断·过程**
 
@@ -1925,9 +1925,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `334a4ec4155f0ef3…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `f483c8365190592b…`
 - 结论类别：倾向通过；情境：官星有气、原神伏而有用、世爻受克、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽火革，辰月甲午日
@@ -1943,7 +1943,7 @@
 
 **详断·开局**
 
-官鬼是用神。这一卦的官星多数当令或临月，有的得日辰扶持（排盘可查），有气而不空不破，没有动爻冲克它。
+官鬼是用神。这一卦的官星一般当令或临月，或得日辰扶持（以你这一卦的排盘为准），有气而不空不破，没有动爻冲克它。
 
 **详断·过程**
 
@@ -1975,9 +1975,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `82f218f3f960e489…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `3595099084b22295…`
 - 结论类别：倾向通过；情境：官鬼临应、官星有气、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火天大有，巳月辛巳日
@@ -1993,7 +1993,7 @@
 
 **详断·开局**
 
-这一卦的官鬼在应位。应爻代表对面一方，从卦象看，机会摆在对方那一侧。官星本身有气：或当令，或临日，或得月扶（排盘可查），不空不破，没有动爻冲克。
+这一卦的官鬼在应位。应爻代表对面一方，从卦象看，机会摆在对方那一侧。官星本身有气：或当令，或临日，或得月扶（以你这一卦的排盘为准），不空不破，没有动爻冲克。
 
 **详断·过程**
 
@@ -2025,9 +2025,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `149ca6d805249420…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `edbc0f0ab0ae4ecc…`
 - 结论类别：倾向通过；情境：财当令生官、官星有气、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地水师之山水蒙，午月辛丑日
@@ -2043,7 +2043,7 @@
 
 **详断·开局**
 
-官鬼是用神。这一卦起卦的月份当令的是财，财生官，官星从月令得了相气；不少盘当天日辰也生它或扶它（排盘可查）。它不空、不破，没有动爻冲克。
+官鬼是用神。这一卦起卦的月份当令的是财，财生官，官星从月令得了相气；当天日辰也可能生它或扶它（以你这一卦的排盘为准）。它不空、不破，没有动爻冲克。
 
 **详断·过程**
 
@@ -2074,9 +2074,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `24121002cdcea465…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `a62e3eccb4424acd…`
 - 结论类别：倾向通过；情境：六合卦、财当令生官、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷地豫，辰月己丑日
@@ -2096,7 +2096,7 @@
 
 **详断·过程**
 
-财当令，多数安静地生着官星；即便有财在动，也是待时或无力的，不另添变化。克官的子孙无力，伤不到官星。
+财当令，一般安静地生着官星；即便有财在动，也是待时或无力的，不另添变化。克官的子孙无力，伤不到官星。
 
 六合主和顺、主能谈拢，配上一颗有根无伤的官星，局面是好的。
 
@@ -2123,9 +2123,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `1bfeaee9a134449b…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `430091a4553b3d7c…`
 - 结论类别：倾向通过；情境：官鬼临应生世、官星有气、原神伏而难出、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天风姤，戌月乙巳日
@@ -2143,7 +2143,7 @@
 
 官鬼在应位，应代表对面一方。这一卦有个好处：应位的官星生着你的世爻，《黄金策》说「世为己，应为人，大宜契合」，官在应而来生世，从卦象看，机会是朝着你这边来的。
 
-官星本身有气，或当令、或临日、或得月日扶持（排盘可查），不空不破，没有动爻冲克。
+官星本身有气，或当令、或临日、或得月日扶持（以你这一卦的排盘为准），不空不破，没有动爻冲克。
 
 **详断·过程**
 
@@ -2174,9 +2174,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原动有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `6ada744e2efd734a…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原动有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `d97336752a544830…`
 - 结论类别：倾向通过；情境：官鬼同支两现、原神发动有力、忌神伏而难出、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过之泽天夬，丑月甲申日
@@ -2192,7 +2192,7 @@
 
 **详断·开局**
 
-官鬼两现同支，力量一致，有的盘得月生、有的盘临月或得日扶（排盘可查），不空不破，没有动爻冲克。
+官鬼两现同支，力量一致，或得月生、或临月或得日扶（以你这一卦的排盘为准），不空不破，没有动爻冲克。
 
 这一卦最有利的是财。求职卦里财是生官的原神，这一卦的财发动了，而且有力，《增删卜易》升选候补章说「财动生官得美缺」，正是这种局面。
 
@@ -2226,9 +2226,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `d3edd8425fb4d8bc…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `59229d830aec706c…`
 - 结论类别：有望通过，但要待时；情境：官鬼同支两现持世、忌神伏而有用、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山天大畜，未月乙卯日
@@ -2244,13 +2244,13 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。这一卦官星多半失令（不少盘是兄弟当令），但得月日相合或日辰相生（排盘可查），三层判定仍有效。应爻生着你的世爻，从卦象看，对面一侧是来相就的。
+官鬼两现、同支，取持世一爻。这一卦官星多半失令（常是兄弟当令），但得月日相合或日辰相生（以你这一卦的排盘为准），官星仍用得上。应爻生着你的世爻，从卦象看，对面一侧是来相就的。
 
 **详断·过程**
 
 问题藏在下面。克官的子孙不在六爻之中，伏在某一爻下面，可它属于有用的伏神——飞神压不住它，或日月动爻在提携它，古书说这样的伏神「虽曰不现亦如现」。
 
-生官的财无力，有的盘还动了，动而无力，推不动官星。于是官星靠自身那点扶持，与一个随时可能露头的子孙相持着。
+生官的财无力，就算动了，也是动而无力，推不动官星。于是官星靠自身那点扶持，与一个随时可能露头的子孙相持着。
 
 **详断·结局**
 
@@ -2276,9 +2276,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `76a7ff046e51955f…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `04a1aecfd82c57fe…`
 - 结论类别：倾向通过；情境：官鬼持世、官星当令、原忌俱静而不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天火同人之天山遁，亥月丁酉日
@@ -2290,11 +2290,11 @@
 初爻 朱雀 父母己卯木○ → 子孙丙辰土
 ```
 
-**简断**　这一卦倾向通过。官星持世，多数盘当令或临月，气足、安静、无伤；生官的财和克官的子孙都在卦上，却都安静失令，谁也不出手。结果由持世的官星主导，要等它逢值逢冲时落定。
+**简断**　这一卦倾向通过。官星持世，一般当令或临月，气足、安静、无伤；生官的财和克官的子孙都在卦上，却都安静失令，谁也不出手。结果由持世的官星主导，要等它逢值逢冲时落定。
 
 **详断·开局**
 
-官鬼持世，又大多当令，《增删卜易》升选候补章「旺官持世」说的就是这样的官星。少数盘它失令，靠日辰扶持（排盘可查）。不空不破，没有动爻冲克。
+官鬼持世，又大多当令，《增删卜易》升选候补章「旺官持世」说的就是这样的官星。若它失令，靠日辰扶持（以你这一卦的排盘为准）。不空不破，没有动爻冲克。
 
 **详断·过程**
 
@@ -2324,9 +2324,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原无力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `d23e49261eebc6a6…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原无力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `5221de36540bb8af…`
 - 结论类别：倾向通过；情境：六合卦、官星有气、世爻受克、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地天泰之水风井，卯月戊戌日
@@ -2338,15 +2338,15 @@
 初爻 勾陈 妻财甲子水○ → 兄弟辛丑土
 ```
 
-**简断**　这一卦倾向通过。卦逢六合，世应相合；官星有气、安静、无伤；克官的子孙无力。你的世爻受克，自身吃力；生官的财也无力，有的盘动而无用。成事靠官星本身。
+**简断**　这一卦倾向通过。卦逢六合，世应相合；官星有气、安静、无伤；克官的子孙无力。你的世爻受克，自身吃力；生官的财也无力，即便动了也无用。成事靠官星本身。
 
 **详断·开局**
 
-六合卦，世应相合，古书以合为成。前提是用神有气：这一卦的官鬼或当令或得日月扶持（排盘可查），不空不破，没有冲克，前提满足。
+六合卦，世应相合，古书以合为成。前提是用神有气：这一卦的官鬼或当令或得日月扶持（以你这一卦的排盘为准），不空不破，没有冲克，前提满足。
 
 **详断·过程**
 
-克官的子孙无力，生官的财也无力——有的盘财还在动，却动而无力，推不动官星。你的世爻受克，多是兄弟发动或月日在克，自己这一侧不轻松。
+克官的子孙无力，生官的财也无力——就算财在动，也是动而无力，推不动官星。你的世爻受克，多是兄弟发动或月日在克，自己这一侧不轻松。
 
 生克两边都弱，官星自身站得住，六合又给了和顺的底色。
 
@@ -2373,9 +2373,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `fae7aeee628f65bb…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `a0ec45389bc0f0c6…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、官星得月生、原忌俱伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷山小过之泽山咸，寅月己巳日
@@ -2387,11 +2387,11 @@
 初爻 螣蛇 父母丙辰土应
 ```
 
-**简断**　这一卦倾向通过。两爻同支的官星一爻持世，多数盘得月令之生，有根、安静、无伤。生官的财和克官的子孙都不在卦面，都伏而待时——眼前谁也够不着官星。结果宜早落定。
+**简断**　这一卦倾向通过。两爻同支的官星一爻持世，一般得月令之生，有根、安静、无伤。生官的财和克官的子孙都不在卦面，都伏而待时——眼前谁也够不着官星。结果宜早落定。
 
 **详断·开局**
 
-官鬼两现同支，取持世一爻。这一卦多数盘起卦月份是财当令，官星得了相气；少数盘官星临月或得日扶（排盘可查）。持世而有根，不空不破，无冲克。
+官鬼两现同支，取持世一爻。这一卦一般起卦月份是财当令，官星得了相气；或官星临月或得日扶（以你这一卦的排盘为准）。持世而有根，不空不破，无冲克。
 
 **详断·过程**
 
@@ -2471,9 +2471,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `54eee83f27db47d2…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `c35a78cab77fd6a7…`
 - 结论类别：倾向通过；情境：官鬼同支两现、官星多当令、忌神伏而难出、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之水风井，酉月癸酉日
@@ -2485,11 +2485,11 @@
 初爻 玄武 妻财辛丑土应
 ```
 
-**简断**　这一卦倾向通过。官星两现同支，七成以上的盘当令，有气、安静、无伤；克官的子孙不在卦面，伏着出不来。生官的财无力，推不动，所以结果按官星自身的节奏来。
+**简断**　这一卦倾向通过。两爻官星同出一支，大多当令而气足，安静无伤；克官的子孙不在卦面，伏着出不来。生官的财无力，推不动，所以结果按官星自身的节奏来。
 
 **详断·开局**
 
-官鬼两现、地支相同。这一卦多数盘官星当令或临月，少数盘失令而得日辰扶持（排盘可查）。两爻都不空不破，没有动爻冲克。
+官鬼两现、地支相同。这一卦一般官星当令或临月，或失令而得日辰扶持（以你这一卦的排盘为准）。两爻都不空不破，没有动爻冲克。
 
 **详断·过程**
 
@@ -2521,9 +2521,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静旺有力;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `ea0fa60f313bca5b…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静旺有力;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `edb2b7ed5f4b7910…`
 - 结论类别：倾向通过；情境：六合卦、财当令生官、世爻受克、忌神失令
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地雷复之雷火丰，亥月壬辰日
@@ -2543,7 +2543,7 @@
 
 **详断·过程**
 
-你的世爻在这一卦里是财，受了克——多数盘是兄弟发动在克它。兄弟在求职卦里是竞争者、是分夺之神，从卦象看，过程中会感到有人在争、在抢。
+你的世爻在这一卦里是财，受了克——一般是兄弟发动在克它。兄弟在求职卦里是竞争者、是分夺之神，从卦象看，过程中会感到有人在争、在抢。
 
 克官的子孙失令安静，伤不到官星；当令的财把气送给了官星。官星这边是稳的。
 
@@ -2571,9 +2571,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `2bb547e459d6098c…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `179769df19384502…`
 - 结论类别：倾向通过；情境：官星有气、世爻安稳、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷风恒之雷山小过，申月辛酉日
@@ -2589,7 +2589,7 @@
 
 **详断·开局**
 
-官鬼是用神。这一卦的官星六成盘当令，其余得日辰扶持（排盘可查），有气。不空、不破、不受冲克，用神本身是稳的。
+官鬼是用神。这一卦的官星一般当令，或得日辰扶持（以你这一卦的排盘为准），有气。不空、不破、不受冲克，用神本身是稳的。
 
 **详断·过程**
 
@@ -2621,9 +2621,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌伏有效;六合`（interview-pass-eq-0.12.1）；内容哈希 `d1a8538155566133…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌伏有效;六合`（interview-pass-eq-0.12.1）；内容哈希 `a0ea566e1a0a741a…`
 - 结论类别：有望通过，但要待时；情境：官鬼持世、六合卦、忌神伏而有用、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山火贲之山雷颐，巳月戊辰日
@@ -2639,7 +2639,7 @@
 
 **详断·开局**
 
-六合卦，世应相合，官鬼又持世，两样都是能成之象。不过这一卦的官星多半失令（不少盘是兄弟当令），靠月日相合或日辰扶持撑着（排盘可查），有效而不旺。
+六合卦，世应相合，官鬼又持世，两样都是能成之象。不过这一卦的官星多半失令（常是兄弟当令），靠月日相合或日辰扶持撑着（以你这一卦的排盘为准），有效而不旺。
 
 **详断·过程**
 
@@ -2671,9 +2671,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `24c2de738b6128dd…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `257df77a198abd5c…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、原神伏而有用、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁之天火同人，寅月壬戌日
@@ -2685,11 +2685,11 @@
 初爻 玄武 父母丙辰土× → 妻财己卯木（伏子孙子水）
 ```
 
-**简断**　这一卦倾向通过。两爻同支的官星一爻持世，多数盘失令，但得扶持而可用；生官的财虽不在卦面，却是伏而有用的；克官的子孙伏着出不来。有利的一边占优，节奏不算快。
+**简断**　这一卦倾向通过。两爻同支的官星一爻持世，一般失令，但得扶持而可用；生官的财虽不在卦面，却是伏而有用的；克官的子孙伏着出不来。有利的一边占优，节奏不算快。
 
 **详断·开局**
 
-官鬼两现同支，取持世一爻。这一卦多数盘父母当令，官星泄气失令，靠月日相合、日辰扶持撑着（排盘可查），三层判定仍有效。不空不破，无冲克。
+官鬼两现同支，取持世一爻。这一卦一般父母当令，官星泄气失令，靠月日相合、日辰扶持撑着（以你这一卦的排盘为准），官星仍用得上。不空不破，无冲克。
 
 **详断·过程**
 
@@ -2817,9 +2817,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;局妻财局待偏吉生世`（interview-pass-eq-0.12.1）；内容哈希 `c2324a4b5b0f7cf9…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;局妻财局待偏吉生世`（interview-pass-eq-0.12.1）；内容哈希 `a8163e3f736594f2…`
 - 结论类别：倾向通过；情境：官鬼持世、财局待时成局而生世、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽地萃之雷火丰，丑月庚辰日
@@ -2835,7 +2835,7 @@
 
 **详断·开局**
 
-官鬼持世，官星有气——多数盘父母当令时它得日辰扶持，其余盘当令或临月（排盘可查），不空不破，无冲克。
+官鬼持世，官星有气——或父母当令时它得日辰扶持，或当令或临月（以你这一卦的排盘为准），不空不破，无冲克。
 
 **详断·过程**
 
@@ -2867,9 +2867,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `9577bed8e2eda2bd…`
+- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `e198c1f2e9bc167f…`
 - 结论类别：偏难通过；情境：官鬼同支两现而无力、原神伏而难出、忌神伏而待时、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风泽中孚，未月丁丑日
@@ -2885,7 +2885,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。起卦月份多是兄弟当令，其余是父母当令，官星都处在休囚的位置，当天日辰与卦中动爻也没有扶它，有的盘官星还正落旬空，更显虚弱。用神本身是弱的。
+官鬼两现、同支。起卦月份多是兄弟当令，或是父母当令，官星都处在休囚的位置，当天日辰与卦中动爻也没有扶它，若官星再落旬空，更显虚弱。用神本身是弱的。
 
 **详断·过程**
 
@@ -2916,9 +2916,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `62fc2f2428c169a6…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `bdb87149b343d2f8…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、应爻生世、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山天大畜之山泽损，寅月戊寅日
@@ -2930,11 +2930,11 @@
 初爻 勾陈 妻财甲子水
 ```
 
-**简断**　这一卦倾向通过。官星两现同支，一爻坐你的世爻，多数盘当令，有气、安静、无伤；应爻生着你的世爻；克官的子孙伏着出不来。生官的财无力，节奏不快，方向是对的。
+**简断**　这一卦倾向通过。官星两现同支，一爻坐你的世爻，一般当令，有气、安静、无伤；应爻生着你的世爻；克官的子孙伏着出不来。生官的财无力，节奏不快，方向是对的。
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。六成盘官星当令，其余得日月扶持（排盘可查），不空不破，无冲克。应爻生着世爻——世为己，应为人，相生为契合之象。
+官鬼两现、同支，取持世一爻。一般官星当令，或得日月扶持（以你这一卦的排盘为准），不空不破，无冲克。应爻生着世爻——世为己，应为人，相生为契合之象。
 
 **详断·过程**
 
@@ -2965,9 +2965,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `1cd0958998074cf4…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `177ae52b5b064d47…`
 - 结论类别：有望通过，但要待时；情境：官星有气、原神静而旺相、忌神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽雷随之泽地萃，丑月辛未日
@@ -2979,11 +2979,11 @@
 初爻 白虎 父母庚子水○ → 妻财乙未土
 ```
 
-**简断**　这一卦有望通过，但要等。官星有气、安静、无伤，生官的财旺而在位；可克官的子孙虽不在卦面，却是伏而有用的，近半数盘它还正当令。一边扶、一边压，结果能成，只是不会太顺太快。
+**简断**　这一卦有望通过，但要等。官星有气、安静、无伤，生官的财旺而在位；可克官的子孙虽不在卦面，却是伏而有用的，一般它还正当令。一边扶、一边压，结果能成，只是不会太顺太快。
 
 **详断·开局**
 
-官鬼是用神，这一卦它有效可用：约半数盘财当令，官星得月生；另半数盘子孙当令，官星受月克而休囚，靠日辰扶持撑着（排盘可查）。不空不破，无冲克。
+官鬼是用神，这一卦它有效可用：一般财当令，官星得月生；或子孙当令，官星受月克而休囚，靠日辰扶持撑着（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -3111,9 +3111,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌无力;六冲`（interview-pass-eq-0.12.1）；内容哈希 `ce4322ad6e8b76f1…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌无力;六冲`（interview-pass-eq-0.12.1）；内容哈希 `34d2163ae7cd3d81…`
 - 结论类别：倾向通过；情境：六冲卦、官星有气、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷天大壮，寅月辛丑日
@@ -3131,7 +3131,7 @@
 
 六冲卦，内外两两相冲，世应也冲。六冲章「冲者散也，凡占凶事宜于冲散、占吉事而不宜」，面试求成，见冲先要留个心眼。
 
-但同章又说「必兼用神而言，用神旺虽冲不破」。这一卦官星有气——或当令，或得日辰扶持（排盘可查）——不空不破，无动爻冲克。
+但同章又说「必兼用神而言，用神旺虽冲不破」。这一卦官星有气——或当令，或得日辰扶持（以你这一卦的排盘为准）——不空不破，无动爻冲克。
 
 **详断·过程**
 
@@ -3162,9 +3162,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `b31469114baf25ef…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `fa3841c21f35c9e8…`
 - 结论类别：倾向通过；情境：官星当令、原忌俱静而不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地水师，未月戊寅日
@@ -3176,11 +3176,11 @@
 初爻 勾陈 子孙戊寅木
 ```
 
-**简断**　这一卦倾向通过。官星多数盘当令，气足、安静、无伤；生官的财和克官的子孙都在卦上，却都安静失令，谁也不出手。你的世爻安稳。结果由当令的官星主导。
+**简断**　这一卦倾向通过。官星一般当令，气足、安静、无伤；生官的财和克官的子孙都在卦上，却都安静失令，谁也不出手。你的世爻安稳。结果由当令的官星主导。
 
 **详断·开局**
 
-官鬼是用神。这一卦八成以上的盘官星当令，其余得日辰扶持（排盘可查），不空、不破、不受冲克。
+官鬼是用神。这一卦一般官星当令，或得日辰扶持（以你这一卦的排盘为准），不空、不破、不受冲克。
 
 **详断·过程**
 
@@ -3211,9 +3211,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原无力;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `d0768dd7de5e1462…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原无力;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `533b8636df94729e…`
 - 结论类别：倾向通过；情境：六合卦、官星当令、世爻受克、兄弟多发动
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节之风泽中孚，辰月庚辰日
@@ -3229,11 +3229,11 @@
 
 **详断·开局**
 
-六合卦，世应相合。官鬼多数盘当令，少数得日辰扶持（排盘可查），有气，不空不破，无冲克，六合之吉的前提满足。
+六合卦，世应相合。官鬼一般当令，或得日辰扶持（以你这一卦的排盘为准），有气，不空不破，无冲克，六合之吉的前提满足。
 
 **详断·过程**
 
-你的世爻是财，受了克，大多数盘是兄弟发动在克它。兄弟是阻神，在求职里多指竞争、分夺，《增删卜易》用神章说「占谋事以此为阻神」。这股压力落在你身上，却没有落到官星身上。
+你的世爻是财，受了克，常是兄弟发动在克它。兄弟是阻神，在求职里多指竞争、分夺，《增删卜易》用神章说「占谋事以此为阻神」。这股压力落在你身上，却没有落到官星身上。
 
 克官的子孙失令安静；生官的财无力。官星靠自身旺气站着。
 
@@ -3261,9 +3261,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `d760f5c9b476a1ad…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `bb65db2459aef90d…`
 - 结论类别：倾向通过；情境：官星有气、忌神伏而难出、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水风井，申月己酉日
@@ -3279,7 +3279,7 @@
 
 **详断·开局**
 
-官鬼是用神。七成盘官星当令，其余得日辰扶持（排盘可查），不空不破，无冲克。你的世爻安稳无伤。
+官鬼是用神。一般官星当令，或得日辰扶持（以你这一卦的排盘为准），不空不破，无冲克。你的世爻安稳无伤。
 
 **详断·过程**
 
@@ -3311,9 +3311,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `3b2fdf0d578001bd…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `b3b2d0b8d08ce80a…`
 - 结论类别：有望通过，但要待时；情境：官鬼同支两现、官星失令而有扶、忌神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火地晋，申月丁未日
@@ -3325,11 +3325,11 @@
 初爻 朱雀 父母乙未土应（伏子孙子水）
 ```
 
-**简断**　这一卦有望通过，但要等。两爻同支的官星多数盘失令，靠扶持可用；克官的子孙不在卦面，却伏而有用，兄弟当令的盘里它还得了相气；生官的财无力。能成，但慢且有变数。
+**简断**　这一卦有望通过，但要等。两爻同支的官星一般失令，靠扶持可用；克官的子孙不在卦面，却伏而有用，兄弟当令时它还得了相气；生官的财无力。能成，但慢且有变数。
 
 **详断·开局**
 
-官鬼两现、同支。多数盘兄弟当令，官星失令，靠月日相合、日辰扶持撑着（排盘可查），三层判定有效。不空不破，无冲克。
+官鬼两现、同支。一般兄弟当令，官星失令，靠月日相合、日辰扶持撑着（以你这一卦的排盘为准），官星还用得上。不空不破，无冲克。
 
 **详断·过程**
 
@@ -3360,9 +3360,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `9e0fc55d90a209b6…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `e2a477514f4e1509…`
 - 结论类别：倾向通过；情境：官鬼持世、原神发动有力、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山风蛊之山天大畜，未月乙丑日
@@ -3378,7 +3378,7 @@
 
 **详断·开局**
 
-官鬼持世，官星与你同在一爻。这一卦官星有气：过半盘财当令、官星得月生，其余或临月、或得日扶（排盘可查）。不空不破，无冲克。
+官鬼持世，官星与你同在一爻。这一卦官星有气：一般财当令、官星得月生，或临月、或得日扶（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -3409,9 +3409,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `87c94d059d0a5b7a…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `533eee4ba86baf45…`
 - 结论类别：有望通过，但要待时；情境：官鬼同支两现、世爻受克、忌神伏而有用、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火地晋，丑月丙午日
@@ -3427,7 +3427,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。七成以上的盘兄弟当令，官星失令，靠月日相合或日辰相生撑着（排盘可查），三层判定有效。不空不破，无冲克。
+官鬼两现、同支。一般兄弟当令，官星失令，靠月日相合或日辰相生撑着（以你这一卦的排盘为准），官星还用得上。不空不破，无冲克。
 
 **详断·过程**
 
@@ -3459,9 +3459,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏难出;世世安;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `9ed8f49413432843…`
+- 匹配键：等价类 `用伏难出;世世安;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `000b5eb3f64d58fe…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、子孙当令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风水涣之水风井，辰月庚午日
@@ -3477,7 +3477,7 @@
 
 **详断·开局**
 
-六爻没有官鬼，本宫首卦里的官星伏在本卦某一爻之下。起卦月份多是子孙当令（其余兄弟当令），伏着的官星受克失令，按飞伏神章属「终不得出」。
+六爻没有官鬼，本宫首卦里的官星伏在本卦某一爻之下。起卦月份多是子孙当令（或兄弟当令），伏着的官星受克失令，按飞伏神章属「终不得出」。
 
 **详断·过程**
 
@@ -3555,9 +3555,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `1ac9831acbaaf1f9…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `9deb0278630e2803…`
 - 结论类别：倾向通过；情境：官鬼持世、财当令生官、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山风蛊，丑月己未日
@@ -3577,7 +3577,7 @@
 
 **详断·过程**
 
-财当令，多半安静地待在卦里，它的力气已经化在月令对官星的生里；有的盘财还动了，不过是待时或无力的动，不另添变化。
+财当令，多半安静地待在卦里，它的力气已经化在月令对官星的生里；就算财动了，也只是待时或无力的动，不另添变化。
 
 克官的子孙不在六爻之中，伏而难出。官星有根，阻力藏着，局面干净。
 
@@ -3604,9 +3604,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `a546569c533dfc83…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `7988257ae60204a6…`
 - 结论类别：倾向通过；情境：六合卦、官星有气、世爻受克、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地天泰，卯月乙亥日
@@ -3622,11 +3622,11 @@
 
 **详断·开局**
 
-六合卦，世应相合，以用神有气为前提。官鬼过半当令，其余得日辰扶持（排盘可查），不空不破，无冲克，前提满足。
+六合卦，世应相合，以用神有气为前提。官鬼一般当令，或得日辰扶持（以你这一卦的排盘为准），不空不破，无冲克，前提满足。
 
 **详断·过程**
 
-你的世爻受克，近半数盘是兄弟发动所致。兄弟在求职里是分夺之神，落到事上，多是有人同场竞争、要比一比高下。
+你的世爻受克，常是兄弟发动所致。兄弟在求职里是分夺之神，落到事上，多是有人同场竞争、要比一比高下。
 
 克官的子孙无力，伤不到官星；生官的财或安静失令，或动而无力。官星靠自身站稳。
 
@@ -3753,9 +3753,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `71f181f2ab153d55…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `7f3e8baf98f196d1…`
 - 结论类别：倾向通过；情境：官鬼同支两现、应爻生世、原神伏而难出、忌神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风泽中孚，戌月己巳日
@@ -3771,7 +3771,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。起卦月份多是兄弟当令，官星失令，却得月日相合或日辰相生（排盘可查），三层判定有效。不空不破，无冲克。应爻生着你的世爻，世应相生。
+官鬼两现、同支。起卦月份多是兄弟当令，官星失令，却得月日相合或日辰相生（以你这一卦的排盘为准），官星还用得上。不空不破，无冲克。应爻生着你的世爻，世应相生。
 
 **详断·过程**
 
@@ -3803,9 +3803,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `984692917367e355…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `f11e0cd0aeb6ed7f…`
 - 结论类别：倾向通过；情境：官星有气、原神伏而有用、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水山蹇，辰月乙卯日
@@ -3817,11 +3817,11 @@
 初爻 青龙 父母丙辰土应
 ```
 
-**简断**　这一卦倾向通过。官星有效、安静、无伤——有的盘得财令相生，有的盘失令而得日辰扶持；克官的子孙无力；生官的财不在卦面，却是伏而有用的后援。你的世爻安稳。结果偏向成，节奏不急。
+**简断**　这一卦倾向通过。官星有效、安静、无伤——或得财令相生，或失令而得日辰扶持；克官的子孙无力；生官的财不在卦面，却是伏而有用的后援。你的世爻安稳。结果偏向成，节奏不急。
 
 **详断·开局**
 
-官鬼是用神。三分之一的盘财当令、官星得月生，其余多是父母当令、官星失令而得日辰扶持（排盘可查）。三层判定都为有效，不空不破，无冲克。
+官鬼是用神。一般财当令、官星得月生，或父母当令、官星失令而得日辰扶持（以你这一卦的排盘为准）。三层判定都为有效，不空不破，无冲克。
 
 **详断·过程**
 
@@ -3853,9 +3853,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原动有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `7f911417ab85dd48…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原动有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `fa32c066e71b6913…`
 - 结论类别：倾向通过；情境：官鬼同支两现、原神发动有力、忌神伏而有用、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过之泽天夬，寅月壬子日
@@ -3871,7 +3871,7 @@
 
 **详断·开局**
 
-官鬼两现同支，有效：过半盘财当令、官星得月生，其余或临月、或失令而得扶（排盘可查）。不空不破，无冲克。
+官鬼两现同支，有效：一般财当令、官星得月生，或临月、或失令而得扶（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -3903,9 +3903,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `7c400931633b0880…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `21f855dc90bb134b…`
 - 结论类别：倾向通过；情境：官鬼同支两现、财当令生官、忌神伏而有用而失令、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过之泽山咸，辰月己未日
@@ -3921,7 +3921,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。九成以上的盘财当令，官星得了相气，有根，不空不破，无冲克。
+官鬼两现、同支。一般财当令，官星得了相气，有根，不空不破，无冲克。
 
 **详断·过程**
 
@@ -3953,9 +3953,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏待时;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `d35a9f27e9ea70f4…`
+- 匹配键：等价类 `用伏待时;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `0ae38fecde2061b5…`
 - 结论类别：眼下悬而未决，出伏后有望；情境：官鬼伏而待时、财当令、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风雷益，丑月壬子日
@@ -3971,7 +3971,7 @@
 
 **详断·开局**
 
-官鬼没有出现在六爻之中，循本宫首卦去找，它伏在本卦一爻之下。起卦月份是财当令，财生官，伏官得了相气，并不弱；但它眼下被一层阻碍卡着——或自身落空，或飞神压着，或入了墓（各盘不同，排盘可查）——所以判为「待时」的伏神。
+官鬼没有出现在六爻之中，循本宫首卦去找，它伏在本卦一爻之下。起卦月份是财当令，财生官，伏官得了相气，并不弱；但它眼下被一层阻碍卡着——或自身落空，或飞神压着，或入了墓（以你这一卦为准，排盘可查）——所以判为「待时」的伏神。
 
 **详断·过程**
 
@@ -4002,9 +4002,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `ab39f3053036fcf4…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `73f0073a58379614…`
 - 结论类别：有望通过，但要待时；情境：官星失令而有扶、子孙得相、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水火既济之泽火革，子月甲申日
@@ -4020,7 +4020,7 @@
 
 **详断·开局**
 
-官鬼是用神。起卦月份兄弟当令，官星失令，好在当天日辰或月日相合给了它扶持（排盘可查），三层判定仍有效，不空不破，无冲克。
+官鬼是用神。起卦月份兄弟当令，官星失令，好在当天日辰或月日相合给了它扶持（以你这一卦的排盘为准），官星仍用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -4051,9 +4051,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原无力;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `0fbe1b74e943f306…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原无力;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `02fa008a2ed495ae…`
 - 结论类别：有望通过，但要待时；情境：六合卦、官星失令而有扶、子孙得相、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节之风泽中孚，子月乙亥日
@@ -4069,7 +4069,7 @@
 
 **详断·开局**
 
-六合卦，世应相合。官鬼在兄弟当令的月份失令，靠日辰或相合扶持（排盘可查），三层判定有效，不空不破，无冲克。
+六合卦，世应相合。官鬼在兄弟当令的月份失令，靠日辰或相合扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -4101,9 +4101,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `bb51194cd739684b…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `14d7a0c964e715b8…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而失令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水雷屯，午月癸卯日
@@ -4119,7 +4119,7 @@
 
 **详断·开局**
 
-官鬼在应位，从卦象看机会在对方一侧。起卦月份多是财当令，官星得月生，少数盘官星当令（排盘可查），有根，不空不破，无冲克。
+官鬼在应位，从卦象看机会在对方一侧。起卦月份多是财当令，官星得月生，或官星当令（以你这一卦的排盘为准），有根，不空不破，无冲克。
 
 你的世爻是子孙，求职最忌子孙持世，八宫图说「子孙持世且待时」。
 
@@ -4152,9 +4152,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `abbba0a49743f485…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `9c29f948542d93f8…`
 - 结论类别：倾向通过；情境：六合卦、官星当令、世爻受克、兄弟多发动
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地雷复之地火明夷，寅月丁亥日
@@ -4166,15 +4166,15 @@
 初爻 朱雀 妻财庚子水世
 ```
 
-**简断**　这一卦倾向通过。卦逢六合，官星多数盘当令，有气、安静、无伤；克官的子孙失令安静。你的世爻受克，大多是兄弟发动所致，竞争的压力集中在你这边。官星不受影响，结果偏向成。
+**简断**　这一卦倾向通过。卦逢六合，官星一般当令，有气、安静、无伤；克官的子孙失令安静。你的世爻受克，大多是兄弟发动所致，竞争的压力集中在你这边。官星不受影响，结果偏向成。
 
 **详断·开局**
 
-六合卦，世应相合。官鬼八成以上当令，其余失令而得日辰扶持（排盘可查），不空不破，无冲克。
+六合卦，世应相合。官鬼一般当令，或失令而得日辰扶持（以你这一卦的排盘为准），不空不破，无冲克。
 
 **详断·过程**
 
-你的世爻多是财，受克，九成盘都有兄弟发动。兄弟为阻神，在求职里是同场竞争的人，压力实实在在，却落在你身上，没有落到官星身上。
+你的世爻多是财，受克，多伴有兄弟发动。兄弟为阻神，在求职里是同场竞争的人，压力实实在在，却落在你身上，没有落到官星身上。
 
 克官的子孙失令，安静无为；生官的财有的安静、有的动而无力，都没出大力。官星凭自身旺气站着。
 
@@ -4202,9 +4202,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `a2fdb3218459dd29…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `81d907861fe61c3b…`
 - 结论类别：有望通过，但要待时；情境：六合卦、官星失令而有扶、子孙得相、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节之风泽中孚，子月庚寅日
@@ -4220,7 +4220,7 @@
 
 **详断·开局**
 
-六合卦，世应相合。起卦月份兄弟当令，官星失令，好在得日辰或月日相合扶持（排盘可查），三层判定有效，不空不破，无冲克。
+六合卦，世应相合。起卦月份兄弟当令，官星失令，好在得日辰或月日相合扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -4252,9 +4252,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `12e9bc78eaa99e87…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `d2fb166c788b2fe4…`
 - 结论类别：倾向通过；情境：官鬼持世、财当令生官、忌神伏而有用而多失令
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山风蛊，午月癸酉日
@@ -4270,7 +4270,7 @@
 
 **详断·开局**
 
-官鬼持世。八成以上的盘财当令，官星得月生而有根；少数盘子孙当令，官星休囚而得日辰扶持（排盘可查）。不空不破，无冲克。
+官鬼持世。一般财当令，官星得月生而有根；或子孙当令，官星休囚而得日辰扶持（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -4301,9 +4301,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]化吉;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `09760f8da2f451d2…`
+- 匹配键：等价类 `用明现[EFFECTIVE]化吉;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `5e7474843bb8e78d…`
 - 结论类别：倾向通过；情境：官鬼发动化吉、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地水师之雷水解，酉月辛巳日
@@ -4319,7 +4319,7 @@
 
 **详断·开局**
 
-官鬼是用神，这一卦它发动了。它本身有效：有的盘当令，有的盘失令而得扶（排盘可查）。更要紧的是它化出的东西：约一半的盘化回头生，另一半化进神、化帝旺，《增删卜易》把这些都列为「化吉」。
+官鬼是用神，这一卦它发动了。它本身有效：或当令，或失令而得扶（以你这一卦的排盘为准）。更要紧的是它化出的东西：或化回头生，或化进神、化帝旺，《增删卜易》把这些都列为「化吉」。
 
 **详断·过程**
 
@@ -4350,9 +4350,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原静旺有力;忌静旺有力;六冲`（interview-pass-eq-0.12.1）；内容哈希 `f3036fa58e23bd83…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原静旺有力;忌静旺有力;六冲`（interview-pass-eq-0.12.1）；内容哈希 `6ba48f67e839cf65…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、子孙当令、六冲卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：巽为风，午月丙辰日
@@ -4368,7 +4368,7 @@
 
 **详断·开局**
 
-六冲卦，内外相冲，应爻冲着你的世爻。官鬼在应位，起卦月份是子孙当令，官星受月克，又无扶持，有的盘还正落旬空，处在失陷的位置。
+六冲卦，内外相冲，应爻冲着你的世爻。官鬼在应位，起卦月份是子孙当令，官星受月克，又无扶持，若再落旬空，处在失陷的位置。
 
 **详断·过程**
 
@@ -4400,9 +4400,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安子孙;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `addd8c1b3cdbe54b…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安子孙;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `8752149d505de668…`
 - 结论类别：有望通过，但要待时；情境：子孙持世而失令、官星得月生或当令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火泽睽，亥月乙未日
@@ -4418,7 +4418,7 @@
 
 **详断·开局**
 
-官鬼有根：七成盘财当令、官星得月生，其余官星当令（排盘可查）。不空不破，无冲克。
+官鬼有根：或财当令、官星得月生，或官星当令（以你这一卦的排盘为准）。不空不破，无冲克。
 
 你的世爻是子孙，八宫图说「子孙持世且待时」，求名遇此多不能一步到位。
 
@@ -4451,9 +4451,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `a3fc71df426b389e…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `43a9ddc93e8162ad…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、原神伏而难出、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地火明夷之山雷颐，辰月丙申日
@@ -4469,7 +4469,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。约四成盘官星当令，其余失令而得日辰扶持（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼两现、同支，取持世一爻。一般官星当令，或失令而得日辰扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -4501,9 +4501,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `75248cddf598f3dc…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `5c0ef5381bf9b763…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而受克无力、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地山谦之雷山小过，寅月乙亥日
@@ -4519,7 +4519,7 @@
 
 **详断·开局**
 
-这一卦官星落在应爻，应代表对面。它或得财令相生，或失令而得扶（排盘可查），三层判定有效，不空不破，无冲克。
+这一卦官星落在应爻，应代表对面。它或得财令相生，或失令而得扶（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 你的世爻是子孙，世应之间正是子孙克官的格局。
 
@@ -4552,9 +4552,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `faacd9efdd704ef4…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `961e5e98db273b96…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、官星多当令、原神伏而难出、应爻克世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地火明夷，丑月乙亥日
@@ -4566,11 +4566,11 @@
 初爻 青龙 子孙己卯木应
 ```
 
-**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，八成以上的盘当令，气足、安静、无伤；克官的子孙失令不动。应爻克着你的世爻，兄弟又多在发动，过程里对方强势、竞争也多，但官星稳。
+**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，一般当令，气足、安静、无伤；克官的子孙失令不动。应爻克着你的世爻，兄弟又多在发动，过程里对方强势、竞争也多，但官星稳。
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。八成多的盘官星当令，旺官持世；其余盘失令而得日辰扶持（排盘可查）。不空不破，无冲克。
+官鬼两现、同支，取持世一爻。一般官星当令，旺官持世；或失令而得日辰扶持（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -4650,9 +4650,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原静旺有力;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `addc1277d0555f72…`
+- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原静旺有力;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `c89151f1e3de56a3…`
 - 结论类别：偏难通过；情境：官鬼同支两现而无力、子孙当令、原神得相而静
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之地山谦，巳月甲申日
@@ -4668,7 +4668,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。起卦月份当令的是子孙——克官之神当令，月建对官星就是一道克，官星处在受克失令的位置，三层判定为无力。
+官鬼两现、同支。起卦月份当令的是子孙——克官之神当令，月建对官星就是一道克，官星处在受克失令的位置，官星自身无力。
 
 **详断·过程**
 
@@ -4699,9 +4699,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `cea9ad06f94e5228…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `a944b7e3ffbfa315…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而受克无力、原神安静
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山地剥之火地晋，巳月丁卯日
@@ -4713,11 +4713,11 @@
 初爻 朱雀 父母乙未土
 ```
 
-**简断**　这一卦有望通过，但要等。官星在应位，多数盘失令而得扶，有效、安静、无伤；坐在你世爻上的是子孙，世克应正是子孙克官的样子，好在它自身受克，力气使不出来。子孙持世且待时，结果慢些。
+**简断**　这一卦有望通过，但要等。官星在应位，一般失令而得扶，有效、安静、无伤；坐在你世爻上的是子孙，世克应正是子孙克官的样子，好在它自身受克，力气使不出来。子孙持世且待时，结果慢些。
 
 **详断·开局**
 
-官鬼在应爻，应代表对方。多数盘父母当令，官星失令，靠日辰或相合撑着（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼在应爻，应代表对方。一般父母当令，官星失令，靠日辰或相合撑着（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 你的世爻是子孙，八宫图「子孙持世且待时」。
 
@@ -4750,9 +4750,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏难出;世世安;原伏待时;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `a621b1126422d6c2…`
+- 匹配键：等价类 `用伏难出;世世安;原伏待时;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `34a15a1ff97e0bca…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、子孙当令、原神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风水涣之风泽中孚，丑月癸丑日
@@ -4768,7 +4768,7 @@
 
 **详断·开局**
 
-六爻里官鬼、妻财都不见，一伏官、一伏财。起卦月份多是子孙当令（其余兄弟当令），伏着的官星受克失令，属「终不得出」。
+六爻里官鬼、妻财都不见，一伏官、一伏财。起卦月份多是子孙当令（或兄弟当令），伏着的官星受克失令，属「终不得出」。
 
 **详断·过程**
 
@@ -4798,9 +4798,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `00b6e39fad173a3c…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `86adc56b9439de9d…`
 - 结论类别：倾向通过；情境：官鬼临应生世、官星多得月生、原神伏而有用、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天风姤，寅月丁丑日
@@ -4812,11 +4812,11 @@
 初爻 朱雀 父母辛丑土世
 ```
 
-**简断**　这一卦倾向通过。官星在应位，七成盘得财令相生，有根、安静、无伤，而且正生着你的世爻；克官的子孙失令不动；生官的财伏而有用。你的世爻受了些克，过程累一点，方向是对的。
+**简断**　这一卦倾向通过。官星在应位，一般得财令相生，有根、安静、无伤，而且正生着你的世爻；克官的子孙失令不动；生官的财伏而有用。你的世爻受了些克，过程累一点，方向是对的。
 
 **详断·开局**
 
-官鬼在应爻，应代表对方。七成盘财当令、官星得月生，其余或当令、或失令而得扶（排盘可查），不空不破，无冲克。官星生着你的世爻，世应相生，《黄金策》谓之「大宜契合」。
+官鬼在应爻，应代表对方。一般财当令、官星得月生，或当令、或失令而得扶（以你这一卦的排盘为准），不空不破，无冲克。官星生着你的世爻，世应相生，《黄金策》谓之「大宜契合」。
 
 **详断·过程**
 
@@ -4848,9 +4848,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;变合`（interview-pass-eq-0.12.1）；内容哈希 `6f416539bbe280e2…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;变合`（interview-pass-eq-0.12.1）；内容哈希 `82a6a9f3881aa97a…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、原忌俱伏而难出、卦变六合、兄弟发动
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁之火山旅，午月壬申日
@@ -4866,11 +4866,11 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。约半数盘官星当令，其余失令而得日辰扶持（排盘可查），不空不破，无冲克。
+官鬼两现、同支，取持世一爻。一般官星当令，或失令而得日辰扶持（以你这一卦的排盘为准），不空不破，无冲克。
 
 **详断·过程**
 
-这一卦几乎都是兄弟在动。兄弟为阻神，求职里多是竞争者；它动而克财、生子孙，可财与子孙都伏在下面出不来，所以这一动更多是过程上的竞争气氛，碰不到官星。
+这一卦一般是兄弟在动。兄弟为阻神，求职里多是竞争者；它动而克财、生子孙，可财与子孙都伏在下面出不来，所以这一动更多是过程上的竞争气氛，碰不到官星。
 
 动后变出的是六合卦，六合主合、主成，放在后段，像是事情最后能合拢。
 
@@ -4898,9 +4898,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `225dbee1c69a78ed…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `8242c1f5410c2a44…`
 - 结论类别：倾向通过；情境：官星当令、世爻受克、原神伏而有用、忌神失令
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水火既济，未月甲寅日
@@ -4916,7 +4916,7 @@
 
 **详断·开局**
 
-官鬼是用神，九成以上的盘它当令，旺而有力，不空不破，无冲克。
+官鬼是用神，一般它当令，旺而有力，不空不破，无冲克。
 
 你的世爻是兄弟，官克兄弟，当令的官气正克着你这一爻，从卦象看，你这一侧压力不小。
 
@@ -4950,9 +4950,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;原无力;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `40d5b72f79ffae56…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;原无力;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `353574a0a8d54574…`
 - 结论类别：偏难通过；情境：官星无力、子孙得相、六合卦、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地雷复，戌月乙丑日
@@ -4968,7 +4968,7 @@
 
 **详断·开局**
 
-六合卦，世应相合。可起卦月份是兄弟当令，官星失令，日月动爻都不扶它，三层判定为无力。
+六合卦，世应相合。可起卦月份是兄弟当令，官星失令，日月动爻都不扶它，官星自身无力。
 
 **详断·过程**
 
@@ -5000,9 +5000,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `c3b203e550282a15…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静不作用;忌静不作用;六合`（interview-pass-eq-0.12.1）；内容哈希 `ca2b4c7222401851…`
 - 结论类别：倾向通过；情境：六合卦、官星多当令、原忌俱静而不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地雷复，卯月癸酉日
@@ -5014,11 +5014,11 @@
 初爻 玄武 妻财庚子水世
 ```
 
-**简断**　这一卦倾向通过。卦逢六合，世应相合；官星七成盘当令，有气、安静、无伤；生官的财和克官的子孙都安静失令，谁也不出手。你的世爻安稳。和顺的局面，等官星逢值逢冲时落定。
+**简断**　这一卦倾向通过。卦逢六合，世应相合；官星一般当令，有气、安静、无伤；生官的财和克官的子孙都安静失令，谁也不出手。你的世爻安稳。和顺的局面，等官星逢值逢冲时落定。
 
 **详断·开局**
 
-六合卦，世应相合。官鬼七成盘当令，其余失令而得日辰扶持（排盘可查），有气，不空不破，无冲克，六合的前提满足。
+六合卦，世应相合。官鬼一般当令，或失令而得日辰扶持（以你这一卦的排盘为准），有气，不空不破，无冲克，六合的前提满足。
 
 **详断·过程**
 
@@ -5049,9 +5049,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `41519258a2a08b03…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原伏难出;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `2fa28303dab88caa…`
 - 结论类别：倾向通过；情境：官鬼同支两现、应爻生世、世爻受克、忌神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风泽中孚之风水涣，寅月丁巳日
@@ -5067,7 +5067,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。约四成盘官星当令，其余失令而得日辰或相合扶持（排盘可查），三层判定有效，不空不破，无冲克。应爻生着你的世爻。
+官鬼两现、同支。一般官星当令，或失令而得日辰或相合扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。应爻生着你的世爻。
 
 **详断·过程**
 
@@ -5099,9 +5099,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `f0378f82914fedf7…`
+- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `f5acce5d19c9dce9…`
 - 结论类别：偏难通过；情境：官鬼同支两现而无力、父母当令泄官、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风地观，辰月癸丑日
@@ -5117,7 +5117,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。起卦月份当令的是父母，官生父母，官星的气被泄出去，处在休囚之位，日月动爻也不扶它，三层判定无力。
+官鬼两现、同支。起卦月份当令的是父母，官生父母，官星的气被泄出去，处在休囚之位，日月动爻也不扶它，官星自身无力。
 
 **详断·过程**
 
@@ -5148,9 +5148,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌无力;六冲`（interview-pass-eq-0.12.1）；内容哈希 `2e40177974d4e9ff…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静不作用;忌无力;六冲`（interview-pass-eq-0.12.1）；内容哈希 `a33c613eeb1af657…`
 - 结论类别：倾向通过；情境：六冲卦、官星多当令、世爻受克、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：兑为泽，戌月丙寅日
@@ -5162,11 +5162,11 @@
 初爻 朱雀 官鬼丁巳火
 ```
 
-**简断**　这一卦倾向通过，但过程不平。卦逢六冲，事有散意；所幸官星七成盘当令，有气、安静、无伤，用神旺而冲不破。克官的子孙无力。你的世爻受克，中途变动、反复都要有心理准备。
+**简断**　这一卦倾向通过，但过程不平。卦逢六冲，事有散意；所幸官星一般当令，有气、安静、无伤，用神旺而冲不破。克官的子孙无力。你的世爻受克，中途变动、反复都要有心理准备。
 
 **详断·开局**
 
-六冲卦，内外相冲，应爻冲着世爻。六冲章说吉事见冲不相宜，但要「兼用神而言」。这一卦的官鬼七成盘当令，其余失令而得日辰扶持（排盘可查），不空不破，无冲克，属冲而不破的一类。
+六冲卦，内外相冲，应爻冲着世爻。六冲章说吉事见冲不相宜，但要「兼用神而言」。这一卦的官鬼一般当令，或失令而得日辰扶持（以你这一卦的排盘为准），不空不破，无冲克，属冲而不破的一类。
 
 **详断·过程**
 
@@ -5198,9 +5198,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原静旺有力;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `fc6b66b5c429ddb2…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原静旺有力;忌静旺有力;六合`（interview-pass-eq-0.12.1）；内容哈希 `67457a0d46049e69…`
 - 结论类别：偏难通过；情境：六合卦、官星无力、子孙当令、原神得相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地天泰，酉月甲子日
@@ -5216,7 +5216,7 @@
 
 **详断·开局**
 
-六合卦，世应相合，表面和顺。可起卦月份是子孙当令，官星受月克，又无扶持，三层判定为无力。
+六合卦，世应相合，表面和顺。可起卦月份是子孙当令，官星受月克，又无扶持，官星自身无力。
 
 **详断·过程**
 
@@ -5248,9 +5248,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `68743a5bb3c6febf…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `c0e320cccf78b27b…`
 - 结论类别：倾向通过；情境：官星失令而有扶、忌神无力、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之天山遁，未月乙未日
@@ -5266,7 +5266,7 @@
 
 **详断·开局**
 
-官鬼是用神。起卦月份父母当令，官生父母，官星泄气而失令；但当天日辰或月日相合给了它扶持（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼是用神。起卦月份父母当令，官生父母，官星泄气而失令；但当天日辰或月日相合给了它扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -5297,9 +5297,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `7a6aa6c6ad841c20…`
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `ad15d0fe975d36c5…`
 - 结论类别：偏难通过；情境：官鬼同支两现持世而无力、忌神伏而有用、原神无力、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山天大畜，戌月庚午日
@@ -5315,7 +5315,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。起卦月份多是兄弟当令，官星失令，日月动爻都不扶它，三层判定为无力。持世而无力，不是「旺官持世」。
+官鬼两现、同支，取持世一爻。起卦月份多是兄弟当令，官星失令，日月动爻都不扶它，官星自身无力。持世而无力，不是「旺官持世」。
 
 **详断·过程**
 
@@ -5347,9 +5347,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;变合`（interview-pass-eq-0.12.1）；内容哈希 `0698822683649770…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;变合`（interview-pass-eq-0.12.1）；内容哈希 `989b6a090f84b210…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、官星得月生、原忌俱伏而待时、卦变六合
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷山小过之雷地豫，寅月乙丑日
@@ -5361,11 +5361,11 @@
 初爻 青龙 父母丙辰土应
 ```
 
-**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，多数盘得财令相生，有根、安静、无伤；生克两方都伏着等时机。卦中兄弟发动，变出六合，过程有竞争，后段却有合拢之意。宜早落定。
+**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，一般得财令相生，有根、安静、无伤；生克两方都伏着等时机。卦中兄弟发动，变出六合，过程有竞争，后段却有合拢之意。宜早落定。
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。近八成盘财当令，官星得相气；其余或当令、或得扶（排盘可查）。不空不破，无冲克。
+官鬼两现、同支，取持世一爻。一般财当令，官星得相气；其余或当令、或得扶（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -5397,9 +5397,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安子孙;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `e046b8a8375f568f…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安子孙;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `eb8bc920655beeb4…`
 - 结论类别：偏难通过；情境：子孙持世得相、官鬼临应而无力、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水雷屯，子月丁亥日
@@ -5415,7 +5415,7 @@
 
 **详断·开局**
 
-官鬼在应爻。起卦月份兄弟当令，官星失令，日月动爻都不扶它，有的盘还正落旬空，三层判定为无力。
+官鬼在应爻。起卦月份兄弟当令，官星失令，日月动爻都不扶它，若再落旬空，官星自身无力。
 
 你的世爻是子孙，而且这个月得相气，升选候补章说「子孙持世，休望荣荫」。
 
@@ -5449,9 +5449,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `caff7077ec78314d…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `30b4861e51fbaa32…`
 - 结论类别：倾向通过；情境：官鬼持世、官星失令而有扶、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山风蛊之火风鼎，酉月丁酉日
@@ -5463,11 +5463,11 @@
 初爻 朱雀 妻财辛丑土
 ```
 
-**简断**　这一卦倾向通过。官星坐你的世爻，多数盘父母当令、官星失令，好在得扶持而可用，安静无伤；克官的子孙不在卦面，伏着出不来。生官的财没出力，结果靠官星自身，不会太快。
+**简断**　这一卦倾向通过。官星坐你的世爻，一般父母当令、官星失令，好在得扶持而可用，安静无伤；克官的子孙不在卦面，伏着出不来。生官的财没出力，结果靠官星自身，不会太快。
 
 **详断·开局**
 
-官鬼持世。近八成盘父母当令，官星泄气失令，靠日辰或相合扶持（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼持世。一般父母当令，官星泄气失令，靠日辰或相合扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -5498,9 +5498,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `03b27a203ae8dea1…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `ad9204a4c245f22a…`
 - 结论类别：倾向通过；情境：官鬼临应、世爻为财而生官、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷水解，亥月戊戌日
@@ -5512,13 +5512,13 @@
 初爻 勾陈 兄弟戊寅木（伏父母子水）
 ```
 
-**简断**　这一卦倾向通过。官星在应位，有效、安静、无伤；你的世爻几乎都是财，正生着应位的官星，从卦象看是你主动、用心在争取；克官的子孙无力。结果偏向成，节奏不急。
+**简断**　这一卦倾向通过。官星在应位，有效、安静、无伤；你的世爻一般是财，正生着应位的官星，从卦象看是你主动、用心在争取；克官的子孙无力。结果偏向成，节奏不急。
 
 **详断·开局**
 
-官鬼在应爻，应代表对方。约半数盘官星当令，其余失令而得扶（排盘可查），不空不破，无冲克。
+官鬼在应爻，应代表对方。一般官星当令，或失令而得扶（以你这一卦的排盘为准），不空不破，无冲克。
 
-这一卦你的世爻几乎都是财，财生官，世生应，从卦象看，是你这一侧在用心经营。
+这一卦你的世爻一般是财，财生官，世生应，从卦象看，是你这一侧在用心经营。
 
 **详断·过程**
 
@@ -5550,9 +5550,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `c2ee472ab0edd7c7…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `1c79c6de32929b91…`
 - 结论类别：偏难通过；情境：官星无力、子孙当令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之雷山小过，申月戊子日
@@ -5564,11 +5564,11 @@
 初爻 勾陈 父母丙辰土
 ```
 
-**简断**　这一卦偏难通过。起卦这个月几乎都是子孙当令，官星受月克而无力；克官的子孙旺而在位；生官的财伏而有用，却生不起无根的官星。你的世爻安稳，可官星这头撑不住。
+**简断**　这一卦偏难通过。起卦这个月一般是子孙当令，官星受月克而无力；克官的子孙旺而在位；生官的财伏而有用，却生不起无根的官星。你的世爻安稳，可官星这头撑不住。
 
 **详断·开局**
 
-官鬼是用神。起卦月份当令的多是子孙，官星受月克，又无扶持，有的盘还逢旬空，三层判定为无力。
+官鬼是用神。起卦月份当令的多是子孙，官星受月克，又无扶持，若再逢旬空，官星自身无力。
 
 **详断·过程**
 
@@ -5600,9 +5600,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `1ddc175d2883c08d…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `fb5f0ad5a8898b2b…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而失令、原神伏而有用、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天泽履，子月己亥日
@@ -5614,11 +5614,11 @@
 初爻 螣蛇 父母丁巳火
 ```
 
-**简断**　这一卦有望通过，但要等。官星在应位，多数盘得财令相生，有根、安静、无伤；坐你世爻的是子孙，求职之忌，好在这个月它失令无力；生官的财伏而有用。子孙持世，事情慢一些。
+**简断**　这一卦有望通过，但要等。官星在应位，一般得财令相生，有根、安静、无伤；坐你世爻的是子孙，求职之忌，好在这个月它失令无力；生官的财伏而有用。子孙持世，事情慢一些。
 
 **详断·开局**
 
-官鬼在应爻。七成多的盘财当令，官星得月生；其余官星当令（排盘可查）。不空不破，无冲克。
+官鬼在应爻。一般财当令，官星得月生；或官星当令（以你这一卦的排盘为准）。不空不破，无冲克。
 
 坐在你世爻上的偏是子孙，正应了八宫图那句「子孙持世且待时」。
 
@@ -5652,9 +5652,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `e46ec1a56b4a5b14…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `484143c21d9b5098…`
 - 结论类别：倾向通过；情境：官鬼临应生世、财当令生官、忌神无力、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火天大有，卯月己巳日
@@ -5670,7 +5670,7 @@
 
 **详断·开局**
 
-官鬼在应爻。全类都是财当令，官星得月生而有根，不空不破，无冲克。应位的官星生着你的世爻——世应相生，契合之象。
+官鬼在应爻。财当令，官星得月生而有根，不空不破，无冲克。应位的官星生着你的世爻——世应相生，契合之象。
 
 **详断·过程**
 
@@ -5702,9 +5702,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏有效;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `8185c5879d0eae0e…`
+- 匹配键：等价类 `用伏有效;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `7d7c270a6a93c5f1…`
 - 结论类别：有望通过，但要待时；情境：官鬼伏而有用、财当令、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风雷益之风地观，辰月丙辰日
@@ -5716,15 +5716,15 @@
 初爻 朱雀 父母庚子水○ → 妻财乙未土
 ```
 
-**简断**　这一卦有望通过，但要等。官星不在卦面，伏在下面，多数盘财当令生它，属于有用的伏神；克官的子孙有时在动，却动而无力。官星先得出伏，结果才明朗，所以快不了。
+**简断**　这一卦有望通过，但要等。官星不在卦面，伏在下面，一般财当令生它，属于有用的伏神；克官的子孙有时在动，却动而无力。官星先得出伏，结果才明朗，所以快不了。
 
 **详断·开局**
 
-官鬼不在六爻之中，循本宫首卦而寻，伏于本卦一爻之下。近九成盘财当令，伏官得月生；判别为有用之伏神，「虽曰不现亦如现」。
+官鬼不在六爻之中，循本宫首卦而寻，伏于本卦一爻之下。一般财当令，伏官得月生；判别为有用之伏神，「虽曰不现亦如现」。
 
 **详断·过程**
 
-克官的子孙在卦上，有近半数盘在发动，可都动而无力，伤不到伏官。生官的财当令，托着官星。你的世爻多是财，安稳。
+克官的子孙在卦上，有时也在发动，可都动而无力，伤不到伏官。生官的财当令，托着官星。你的世爻多是财，安稳。
 
 万事俱备，只差官星从伏处出来。
 
@@ -5751,9 +5751,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `46b912c2d09ee9c5…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `d7e79c681a28b789…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、官星有根、原神伏而有用、应爻克世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地火明夷之水雷屯，辰月壬寅日
@@ -5769,7 +5769,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。六成盘财当令、官得月生，近四成官星当令（排盘可查）。不空不破，无冲克，旺官持世。
+官鬼两现、同支，取持世一爻。一般财当令、官得月生，或官星当令（以你这一卦的排盘为准）。不空不破，无冲克，旺官持世。
 
 **详断·过程**
 
@@ -5801,9 +5801,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `a346324972037657…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `450ab944410c294d…`
 - 结论类别：有望通过，但要待时；情境：官星失令而有扶、子孙得相、世爻受克、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽火革，子月丁丑日
@@ -5819,7 +5819,7 @@
 
 **详断·开局**
 
-官鬼是用神。全类都是兄弟当令，官星失令，好在日辰或月日相合给了它扶持（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼是用神。兄弟当令，官星失令，好在日辰或月日相合给了它扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -5851,9 +5851,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏待时;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `53665ea6bd9e62ec…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原伏待时;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `aafb8d30dbe57760…`
 - 结论类别：倾向通过；情境：官星有效、原神伏而待时、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水山蹇之地山谦，卯月己未日
@@ -5865,11 +5865,11 @@
 初爻 螣蛇 父母丙辰土应
 ```
 
-**简断**　这一卦倾向通过。官星有效、安静、无伤——半数盘得财令相生，半数盘失令而得扶；克官的子孙无力。生官的财不在卦面，伏而待时，眼下帮不上，日后或可添力。结果偏向成。
+**简断**　这一卦倾向通过。官星有效、安静、无伤——一般得财令相生，或失令而得扶；克官的子孙无力。生官的财不在卦面，伏而待时，眼下帮不上，日后或可添力。结果偏向成。
 
 **详断·开局**
 
-官鬼是用神。约一半的盘财当令、官星得月生；另一半父母当令、官星失令而得日辰扶持（排盘可查）。三层判定都有效，不空不破，无冲克。
+官鬼是用神。一般财当令、官星得月生；或父母当令、官星失令而得日辰扶持（以你这一卦的排盘为准）。官星都还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -5901,9 +5901,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `c11760ae65805ff9…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `4039d9fdb7c11933…`
 - 结论类别：倾向通过；情境：财当令生官、官星有根、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽雷随之泽地萃，丑月壬子日
@@ -5919,7 +5919,7 @@
 
 **详断·开局**
 
-官鬼是用神。全类都是财当令，官星得了相气，不空不破，无冲克。
+官鬼是用神。财当令，官星得了相气，不空不破，无冲克。
 
 你的世爻也是财——财是生官的原神，从卦象看，你自己就站在推动结果的那一侧。
 
@@ -5952,9 +5952,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏难出;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `b5c3c7d241b94a7a…`
+- 匹配键：等价类 `用伏难出;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `67f24c3cac7f6215…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、父母当令、原忌俱弱
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜之风火家人，子月丙子日
@@ -5970,7 +5970,7 @@
 
 **详断·开局**
 
-官鬼不在六爻之中，到本宫首卦去找，伏于本卦一爻之下。起卦月份几乎都是父母当令，官生父母，伏官泄气，按飞伏神章属「终不得出」。
+官鬼不在六爻之中，到本宫首卦去找，伏于本卦一爻之下。起卦月份一般是父母当令，官生父母，伏官泄气，按飞伏神章属「终不得出」。
 
 **详断·过程**
 
@@ -6000,9 +6000,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏待时;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `3165f37ff1cb0205…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原伏待时;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `7078006d822361de…`
 - 结论类别：倾向通过；情境：官星当令、世爻受克、原神伏而待时、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水火既济之泽火革，辰月辛卯日
@@ -6018,7 +6018,7 @@
 
 **详断·开局**
 
-官鬼是用神。三分之二的盘官星当令，其余多得月生（排盘可查），不空不破，无冲克。
+官鬼是用神。一般官星当令，或得月生（以你这一卦的排盘为准），不空不破，无冲克。
 
 你的世爻是兄弟，官克兄弟，旺官之下，你这一爻受了克。
 
@@ -6052,9 +6052,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `e772a2e628459cde…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `ceed0b69899be360…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、原神伏而有用、忌神无力、应爻克世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地火明夷，巳月壬午日
@@ -6066,11 +6066,11 @@
 初爻 玄武 子孙己卯木应
 ```
 
-**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，多数盘得财令相生或当令，有根、安静、无伤；克官的子孙无力；生官的财伏而有用。应爻克着你，过程里对方偏强势。
+**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，一般得财令相生或当令，有根、安静、无伤；克官的子孙无力；生官的财伏而有用。应爻克着你，过程里对方偏强势。
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。六成盘财当令、官得月生，两成官星当令，其余失令而得扶（排盘可查）。不空不破，无冲克。
+官鬼两现、同支，取持世一爻。一般财当令、官得月生，或官星当令，或失令而得扶（以你这一卦的排盘为准）。不空不破，无冲克。
 
 **详断·过程**
 
@@ -6102,9 +6102,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安子孙;原伏待时;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `eb3362768a27abf2…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安子孙;原伏待时;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `8c4c27a3fb0d8858…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、子孙持世有力、原神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水雷屯，寅月庚寅日
@@ -6120,7 +6120,7 @@
 
 **详断·开局**
 
-官鬼在应爻。起卦月份是兄弟或子孙当令，官星失令，日月动爻不扶，三层判定为无力。
+官鬼在应爻。起卦月份是兄弟或子孙当令，官星失令，日月动爻不扶，官星自身无力。
 
 你的世爻是子孙，而且旺相。
 
@@ -6154,9 +6154,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安子孙;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `363c7dbe88679cfb…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安子孙;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `28aab4846a6acdc9…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、子孙持世有力、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水雷屯，寅月癸卯日
@@ -6172,7 +6172,7 @@
 
 **详断·开局**
 
-官鬼在应爻。起卦月份七成是子孙当令，三成是兄弟当令，官星都失令无扶，三层判定为无力。坐在你世爻上的是子孙，旺相有力。
+官鬼在应爻。起卦月份一般是子孙当令，或是兄弟当令，官星都失令无扶，官星自身无力。坐在你世爻上的是子孙，旺相有力。
 
 **详断·过程**
 
@@ -6204,9 +6204,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `1672cd89ac0cd24b…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `62956dba96e53857…`
 - 结论类别：偏难通过；情境：官星无力、子孙得相、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之天山遁，申月庚子日
@@ -6222,7 +6222,7 @@
 
 **详断·开局**
 
-官鬼是用神。全类兄弟当令，官星失令，日月动爻都不扶它，三层判定无力。
+官鬼是用神。兄弟当令，官星失令，日月动爻都不扶它，官星自身无力。
 
 **详断·过程**
 
@@ -6251,9 +6251,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌伏难出;六合`（interview-pass-eq-0.12.1）；内容哈希 `ce8f3d6e66151511…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原静旺有力;忌伏难出;六合`（interview-pass-eq-0.12.1）；内容哈希 `62a104c91dddbe51…`
 - 结论类别：倾向通过；情境：六合卦、财当令生官、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天地否之泽地萃，寅月癸巳日
@@ -6269,7 +6269,7 @@
 
 **详断·开局**
 
-六合卦，世应相合。全类都是财当令，官星得相气，有根，不空不破，无冲克——六合以用神有气为前提，这一卦满足。
+六合卦，世应相合。财当令，官星得相气，有根，不空不破，无冲克——六合以用神有气为前提，这一卦满足。
 
 **详断·过程**
 
@@ -6350,9 +6350,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]化吉;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `bd80cdfb146cdd55…`
+- 匹配键：等价类 `用明现[EFFECTIVE]化吉;世世安;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `66b204a4ca988719…`
 - 结论类别：倾向通过；情境：官鬼发动化吉、财当令生官、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷风恒之泽山咸，丑月丁酉日
@@ -6368,7 +6368,7 @@
 
 **详断·开局**
 
-官鬼是用神。几乎全类都是财当令，官星得了相气。这一卦官星还发动了：约一半的盘化回头生，另一半化进神、化帝旺，《增删卜易》都列为「化吉」。
+官鬼是用神。起卦的月份一般是财当令，官星得了相气。这一卦官星还发动了：或化回头生，或化进神、化帝旺，《增删卜易》都列为「化吉」。
 
 **详断·过程**
 
@@ -6399,9 +6399,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏待时;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `d61ae03a40234506…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;原伏待时;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `930e45a5800b48d2…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而失令、原神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天泽履，亥月戊辰日
@@ -6413,11 +6413,11 @@
 初爻 勾陈 父母丁巳火
 ```
 
-**简断**　这一卦有望通过，但要等。应位的官星多数盘得财令相生，有根、安静、无伤；坐在你世爻上的是子孙，求职的忌讳，好在这个月它失令不动。生官的财伏而待时。子孙持世，节奏慢一些。
+**简断**　这一卦有望通过，但要等。应位的官星一般得财令相生，有根、安静、无伤；坐在你世爻上的是子孙，求职的忌讳，好在这个月它失令不动。生官的财伏而待时。子孙持世，节奏慢一些。
 
 **详断·开局**
 
-官鬼落在应爻。八成多的盘财当令、官星得月生，其余官星当令（排盘可查），不空不破，无冲克。你的世爻却是子孙，八宫图说「子孙持世且待时」。
+官鬼落在应爻。一般财当令、官星得月生，或官星当令（以你这一卦的排盘为准），不空不破，无冲克。你的世爻却是子孙，八宫图说「子孙持世且待时」。
 
 **详断·过程**
 
@@ -6499,9 +6499,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世化吉;原动有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `de91010192d19074…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世化吉;原动有力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `adb0d5838b6bb684…`
 - 结论类别：倾向通过；情境：官鬼同支两现、世爻财动化回头生、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之雷风恒，酉月戊申日
@@ -6517,7 +6517,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，有效：四成盘财当令、官得月生，其余或当令、或失令而得扶（排盘可查），不空不破，无冲克。
+官鬼两现、同支，有效：一般财当令、官得月生，或当令、或失令而得扶（以你这一卦的排盘为准），不空不破，无冲克。
 
 你的世爻是财，发动了，而且化出回头生，越动越有力。
 
@@ -6551,9 +6551,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏有效;世世受克;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `12e11a0225b009bd…`
+- 匹配键：等价类 `用伏有效;世世受克;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `d5fa2c82b559b9d3…`
 - 结论类别：有望通过，但要待时；情境：官鬼伏而有用、财当令、世爻受克、应爻克世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风雷益之风泽中孚，辰月癸亥日
@@ -6569,7 +6569,7 @@
 
 **详断·开局**
 
-官鬼不上卦，伏于本卦一爻之下。几乎全类都是财当令，伏官得月生，判为有用之伏神。
+官鬼不上卦，伏于本卦一爻之下。起卦的月份一般是财当令，伏官得月生，判为有用之伏神。
 
 **详断·过程**
 
@@ -6600,9 +6600,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世受克子孙;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `4c6443edde379357…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世受克子孙;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `7845ecb031e794a3…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、子孙持世、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地山谦，丑月己酉日
@@ -6618,7 +6618,7 @@
 
 **详断·开局**
 
-官鬼在应爻。八成多的盘父母当令，官生父母而泄气，其余兄弟当令，官星都失令无扶，有的盘还逢旬空，三层判定为无力。
+官鬼在应爻。一般父母当令，官生父母而泄气，或兄弟当令，官星都失令无扶，若再逢旬空，官星自身无力。
 
 你的世爻是子孙，世克应。
 
@@ -6651,9 +6651,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏有效;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `73c47307c23143d2…`
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏有效;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `0f11f53475da2c5a…`
 - 结论类别：偏难通过；情境：官鬼同支两现持世而无力、子孙当令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁之天火同人，丑月戊子日
@@ -6669,7 +6669,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。七成多的盘子孙当令，月建克官；其余父母当令，官星泄气；有的盘官星还落在旬空。三层判定都为无力，不是「旺官持世」。
+官鬼两现、同支，取持世一爻。一般子孙当令，月建克官；或父母当令，官星泄气；若官星再落旬空，更显虚弱。官星都没有力，不是「旺官持世」。
 
 **详断·过程**
 
@@ -6701,9 +6701,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原无力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `09f8ffa48fdacecb…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;原无力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `cf8db7196cccc86f…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应生世、官星失令而有扶、子孙得相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火天大有之山天大畜，酉月癸巳日
@@ -6719,7 +6719,7 @@
 
 **详断·开局**
 
-官鬼在应爻，兄弟当令的月份它失了令，靠日辰或相合扶持（排盘可查），三层判定有效。它生着你的世爻——世应相生，从卦象看，对面是愿意靠近的。
+官鬼在应爻，兄弟当令的月份它失了令，靠日辰或相合扶持（以你这一卦的排盘为准），官星还用得上。它生着你的世爻——世应相生，从卦象看，对面是愿意靠近的。
 
 **详断·过程**
 
@@ -6750,9 +6750,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `b8dec68e02dc21fd…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原无力;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `c6bd8949441e784c…`
 - 结论类别：倾向通过；情境：官星失令而有扶、忌神伏而待时、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山泽损之风泽中孚，午月丙戌日
@@ -6764,11 +6764,11 @@
 初爻 朱雀 父母丁巳火
 ```
 
-**简断**　这一卦倾向通过。官星多数盘失令，却得扶持而可用，安静无伤；克官的子孙不在卦面，伏而待时，眼下出不来。生官的财无力，应爻又多克着你。眼前是个窗口，事情宜早落定。
+**简断**　这一卦倾向通过。官星一般失令，却得扶持而可用，安静无伤；克官的子孙不在卦面，伏而待时，眼下出不来。生官的财无力，应爻又多克着你。眼前是个窗口，事情宜早落定。
 
 **详断·开局**
 
-官鬼是用神。七成盘兄弟当令，官星失令，靠日辰或相合扶持（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼是用神。一般兄弟当令，官星失令，靠日辰或相合扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -6799,9 +6799,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安子孙;原伏待时;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `d2ea2a0513020de7…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安子孙;原伏待时;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `e94827196fdd7488…`
 - 结论类别：偏难通过；情境：官星无力、子孙持世当令、原神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火泽睽，丑月戊辰日
@@ -6817,7 +6817,7 @@
 
 **详断·开局**
 
-官鬼是用神。七成多的盘子孙当令，其余兄弟当令，官星都失令无扶，有的盘还正逢旬空，三层判定为无力。
+官鬼是用神。一般子孙当令，或兄弟当令，官星都失令无扶，若再逢旬空，官星自身无力。
 
 你的世爻是子孙，旺相有力。
 
@@ -6848,9 +6848,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]化凶;世世安;原静不作用;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `6b45aba75d6b3181…`
+- 匹配键：等价类 `用明现[EFFECTIVE]化凶;世世安;原静不作用;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `801324b59b36eb5a…`
 - 结论类别：偏难通过；情境：官鬼发动化凶、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之地水师，申月甲辰日
@@ -6866,11 +6866,11 @@
 
 **详断·开局**
 
-官鬼是用神，这一卦它发动了。它当下有效：约一半盘当令，一半失令而得扶（排盘可查）。克官的子孙不在卦面，伏而难出，看上去阻力不大。
+官鬼是用神，这一卦它发动了。它当下有效：一般当令，或失令而得扶（以你这一卦的排盘为准）。克官的子孙不在卦面，伏而难出，看上去阻力不大。
 
 **详断·过程**
 
-问题出在官星自己的变化上：约一半的盘化回头克，四分之一化退神，四分之一化绝。《增删卜易》说「用神化凶：凡用神元神动化回头克、化绝……化退神皆为化凶」，《黄金策》也说「戒回头之克我」。
+问题出在官星自己的变化上：或化回头克，或化退神，或化绝。《增删卜易》说「用神化凶：凡用神元神动化回头克、化绝……化退神皆为化凶」，《黄金策》也说「戒回头之克我」。
 
 动为始、变为终，开头的有气挡不住结尾的转弱。
 
@@ -6897,9 +6897,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `260c43aaf7662e3e…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原无力;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `7118fc746ea090fa…`
 - 结论类别：倾向通过；情境：官鬼同支两现、官星多当令、世爻受克、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火地晋之火雷噬嗑，巳月辛未日
@@ -6911,11 +6911,11 @@
 初爻 白虎 父母乙未土×应 → 子孙庚子水（伏子孙子水）
 ```
 
-**简断**　这一卦倾向通过。官星两现同支，六成盘当令，有气、安静、无伤；克官的子孙不在卦面，伏着出不来。你的世爻受克，生官的财无力，过程累些、推力少些，但应爻多在生你，结果偏向成。
+**简断**　这一卦倾向通过。官星两现同支，多半当令，有气而不受冲克；克官的子孙不在卦面，伏着出不来。你的世爻受克，生官的财无力，过程累些、推力少些，但应爻多在生你，结果偏向成。
 
 **详断·开局**
 
-官鬼两现、同支。约六成盘官星当令，其余失令而得日辰扶持（排盘可查），不空不破，无冲克。
+官鬼两现、同支。官星多半当令；若是失令，也有日辰扶着，你这一卦属哪种，排盘里看得到。两爻都不空不破，没有冲克。
 
 **详断·过程**
 
@@ -6998,9 +6998,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克子孙;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `dd0ae4c325a9a01f…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克子孙;原伏难出;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `5401ec317e33e480…`
 - 结论类别：有望通过，但要待时；情境：子孙持世而受克无力、官星有效、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水雷屯，酉月己丑日
@@ -7016,7 +7016,7 @@
 
 **详断·开局**
 
-官鬼是用神。四分之三的盘父母当令，官星泄气失令，靠日辰扶持撑着；其余官星当令（排盘可查）。三层判定有效，不空不破，无冲克。
+官鬼是用神。一般父母当令，官星泄气失令，靠日辰扶持撑着；或官星当令（以你这一卦的排盘为准）。官星还用得上，不空不破，无冲克。
 
 你的世爻是子孙。
 
@@ -7049,9 +7049,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `c75b851d4bcf50bb…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `3ab70c0ed7fe3d97…`
 - 结论类别：倾向通过；情境：官鬼持世、原神发动有力、忌神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山风蛊之山天大畜，辰月庚寅日
@@ -7067,7 +7067,7 @@
 
 **详断·开局**
 
-官鬼持世。各月不一：有的盘财当令、官得月生，有的盘官星当令，也有子孙当令时官星失令而得扶（排盘可查），三层判定都有效，不空不破，无冲克。
+官鬼持世。各月不一：或财当令、官得月生，或官星当令，也有子孙当令时官星失令而得扶（以你这一卦的排盘为准），官星都还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -7098,9 +7098,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `03369d33d4368443…`
+- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `fa5f911b9ef21f44…`
 - 结论类别：偏难通过；情境：官鬼持世而无力、子孙当令、忌神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山风蛊之地风升，巳月甲申日
@@ -7116,7 +7116,7 @@
 
 **详断·开局**
 
-官鬼持世。全类都是子孙当令，官星受月克失令，三层判定为无力——不是升选候补章说的「旺官持世」。
+官鬼持世。子孙当令，官星受月克失令，官星自身无力——不是升选候补章说的「旺官持世」。
 
 **详断·过程**
 
@@ -7146,9 +7146,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原伏难出;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `a334baf21b7f3881…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原伏难出;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `e37b5787ffc7c1fe…`
 - 结论类别：倾向通过；情境：官鬼同支两现、官星多当令、原忌俱伏而难出、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风泽中孚之山泽损，寅月己卯日
@@ -7160,11 +7160,11 @@
 初爻 螣蛇 父母丁巳火应
 ```
 
-**简断**　这一卦倾向通过。两爻同支的官星多数盘当令，有气、安静、无伤；生克两方都伏着出不来；应爻生着你的世爻。你的世爻是兄弟，受着官气之克，压力不小，结果却向着成。
+**简断**　这一卦倾向通过。两爻同支的官星一般当令，有气、安静、无伤；生克两方都伏着出不来；应爻生着你的世爻。你的世爻是兄弟，受着官气之克，压力不小，结果却向着成。
 
 **详断·开局**
 
-官鬼两现、同支。四分之三的盘官星当令，其余失令而得日辰扶持（排盘可查），不空不破，无冲克。应爻生着你的世爻。
+官鬼两现、同支。官星大多当令，个别时候失令却有日辰相扶，以排盘所列为准；不空不破，无冲克。应爻生着你的世爻。
 
 **详断·过程**
 
@@ -7196,9 +7196,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏待时;世世受克;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `34ebb0503f0058e8…`
+- 匹配键：等价类 `用伏待时;世世受克;原静旺有力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `08ba6a63e35e681b…`
 - 结论类别：眼下悬而未决，出伏后有望；情境：官鬼伏而待时、财当令、应爻克世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜，辰月癸未日
@@ -7214,7 +7214,7 @@
 
 **详断·开局**
 
-官鬼没有上卦，伏在本卦一爻之下。几乎全类都是财当令，伏官得月生；但它眼下受阻——或落空，或飞神未被推开，或入了墓（各盘不同，排盘可查）——判为待时之伏神。
+官鬼没有上卦，伏在本卦一爻之下。起卦的月份一般是财当令，伏官得月生；但它眼下受阻——或落空，或飞神未被推开，或入了墓（以你这一卦为准，排盘可查）——判为待时之伏神。
 
 **详断·过程**
 
@@ -7245,9 +7245,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `fc8fa8b431c157d3…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;原无力;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `d5ba4e503ab905c4…`
 - 结论类别：有望通过，但要待时；情境：官鬼临应、子孙持世而受克无力、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山地剥之地山谦，未月己酉日
@@ -7259,11 +7259,11 @@
 初爻 螣蛇 父母乙未土
 ```
 
-**简断**　这一卦有望通过，但要等。官星在应位，多数盘失令，靠扶持可用，安静无伤；坐在你世爻上的是子孙，世克应，可它自身受克无力。生官的财多在动，却动而无力。子孙持世且待时。
+**简断**　这一卦有望通过，但要等。官星在应位，一般失令，靠扶持可用，安静无伤；坐在你世爻上的是子孙，世克应，可它自身受克无力。生官的财多在动，却动而无力。子孙持世且待时。
 
 **详断·开局**
 
-官鬼落在应爻。八成多的盘父母当令，官星泄气失令，靠日辰或相合撑着（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼落在应爻。一般父母当令，官星泄气失令，靠日辰或相合撑着（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 你的世爻是子孙，与应位官星之间是子孙克官的格局。
 
@@ -7296,9 +7296,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `9ce70d786e748b1d…`
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `53823d9f388b8631…`
 - 结论类别：有望通过，但要待时；情境：官鬼同支两现持世、官星失令而有扶、子孙得相、应爻克世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地火明夷，子月癸巳日
@@ -7314,7 +7314,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。全类兄弟当令，官星失令，得日辰或月日相合扶持（排盘可查），三层判定有效，不空不破，无冲克。
+官鬼两现、同支，取持世一爻。兄弟当令，官星失令，得日辰或月日相合扶持（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
 
 **详断·过程**
 
@@ -7346,9 +7346,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `5a5072b94b921419…`
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏有效;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `076a0ebfea7404a1…`
 - 结论类别：偏难通过；情境：官鬼同支两现持世而无力、子孙当令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地火明夷之水雷屯，寅月丙寅日
@@ -7360,11 +7360,11 @@
 初爻 朱雀 子孙己卯木应
 ```
 
-**简断**　这一卦偏难通过。两爻同支的官星一爻坐你的世爻，可这个月几乎都是子孙当令，官星受月克而无力；克官的子孙旺而在卦上；生官的财伏而有用，却扶不起无根之官。应爻还克着你。
+**简断**　这一卦偏难通过。两爻同支的官星一爻坐你的世爻，可这个月一般是子孙当令，官星受月克而无力；克官的子孙旺而在卦上；生官的财伏而有用，却扶不起无根之官。应爻还克着你。
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。九成五的盘子孙当令，官星受月克失令，三层判定无力。
+官鬼两现、同支，取持世一爻。一般子孙当令，官星受月克失令，官星自身无力。
 
 **详断·过程**
 
@@ -7394,9 +7394,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `8051193a11a151fb…`
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏难出`（interview-pass-eq-0.12.1）；内容哈希 `ef9ae49af1bea94f…`
 - 结论类别：偏难通过；情境：官鬼同支两现持世而无力、父母当令、原忌俱伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷山小过之雷火丰，辰月庚辰日
@@ -7412,7 +7412,7 @@
 
 **详断·开局**
 
-官鬼两现、同支，取持世一爻。全类父母当令，官星泄气休囚，日月动爻也不扶它，三层判定为无力。
+官鬼两现、同支，取持世一爻。父母当令，官星泄气休囚，日月动爻也不扶它，官星自身无力。
 
 **详断·过程**
 
@@ -7441,9 +7441,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `bda9054a5a8d9ec0…`
+- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;原无力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `f92c444ae3dabc3b…`
 - 结论类别：偏难通过；情境：官鬼同支两现而无力、兄弟当令、忌神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火地晋之火雷噬嗑，酉月癸丑日
@@ -7459,7 +7459,7 @@
 
 **详断·开局**
 
-官鬼两现、同支。八成多的盘兄弟当令，其余父母当令，官星都失令，日月动爻不扶，有的盘还落旬空，三层判定为无力。
+官鬼两现、同支。一般兄弟当令，或父母当令，官星都失令，日月动爻不扶，若再落旬空，官星自身无力。
 
 **详断·过程**
 
@@ -7490,9 +7490,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原待时(旬空);忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `220d9e2168e07a4c…`
+- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原待时(旬空);忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `8f5315cedecc6491…`
 - 结论类别：偏难通过；情境：官鬼持世而无力、子孙当令、原神旬空待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水地比之风地观，丑月庚申日
@@ -7508,7 +7508,7 @@
 
 **详断·开局**
 
-官鬼持世，但全类几乎都是子孙当令，官星受月克，三层判定为无力，不是「旺官持世」。
+官鬼持世，但一般是子孙当令，官星受月克，官星自身无力，不是「旺官持世」。
 
 **详断·过程**
 
@@ -7533,4 +7533,587 @@
 - 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
 
 **计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 144 类，占起卦概率 0.029%，全类 96 盘）：用神「明现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财待时(旬空)；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：用神月令：休囚(100%)。类内各盘不同之处：月建六亲：子孙(98%)、兄弟(2%)；用神生扶：无(71%)、日帝旺、日扶(14%)、妻财动来生(6%)、日合(5%)；应爻对世：克世(72%)、生世(21%)、世克之(7%)；发动六亲：无(67%)、父母(25%)、妻财(6%)、兄弟(2%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：月建为子孙之五行 98%；原神妻财旬空（DEFERRED）。
+
+## IPC-0145　眼下悬而未决：伏着的官星有些底气，只是还被卡着
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用伏待时;世世安;原静不作用;忌无力`（interview-pass-eq-0.12.1）；内容哈希 `183ad69e8a94cff7…`
+- 结论类别：眼下悬而未决，出伏后有望；情境：官鬼伏而待时、父母当令、忌神无力
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：风火家人，子月甲戌日
+上爻 玄武 兄弟辛卯木
+五爻 白虎 子孙辛巳火应
+四爻 螣蛇 妻财辛未土
+三爻 勾陈 父母己亥水（伏官鬼酉金）
+二爻 朱雀 妻财己丑土世
+初爻 青龙 兄弟己卯木
+```
+
+**简断**　这一问眼下悬而未决，官星一出伏便有指望。它不在卦面，伏在下面；这个月父母当令，它季节上不旺，却另有扶持，算是有力，只是被空、破或墓之类卡着出不来。克官的子孙虽多在动，却动而无力。
+
+**详断·开局**
+
+官鬼没有上卦，伏于本卦一爻之下。起卦的月份一般是父母当令，伏官季节上泄气；不过它另得日辰、飞神或动爻的扶持，判为有力，只是眼下受阻（或空、或破、或入墓，以你这一卦为准），属「待时」的伏神。
+
+**详断·过程**
+
+克官的子孙一般在发动，可都动而无力，伤不到伏官。生官的财安静失令，没有出力。
+
+结果卡在官星「出不出得来」这一步：阻碍一解，官星有力、无人伤它，事情便有望。
+
+**详断·结局**
+
+官星伏而有力、受阻未出，这一轮眼下悬而未决，等它出伏，有望通过。
+
+**应期**　官星伏藏，按「静而逢值」：伏着的官星逢其本支值日之时，最容易出伏而见结果；具体日子见排盘。若受阻于旬空，出空之后也是落定之时。
+
+- 逐盘求出（有利）｜官星出伏、结果渐明｜伏藏之官鬼｜伏神逢值｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　眼下悬而未决，出伏后有望通过。官星伏而有力，克官的子孙无力；只差出伏这一步。别急着下结论。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。」——伏官有可出之条件（R-FUSHEN-02）
+- 《增删卜易·元神忌神衰旺章第十》「忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。」——子孙虽动而无力（R-YUANJI-04）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳」——官鬼不上卦，寻伏神（R-FUSHEN-01）
+- 《黄金策·17、求名》「出现无情，难遂青云之志；伏藏有用，终辞白屋之人。」——官星伏藏而有用（R-QIUMING-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 145 类，占起卦概率 0.029%，全类 160 盘）：用神「伏待时」；世爻「世安」；原神妻财安静而月令不旺，不主动作用；忌神子孙当前无力（INEFFECTIVE）。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：父母(98%)、兄弟(3%)；世爻六亲：妻财(48%)、兄弟(48%)、父母(4%)；应爻对世：与世比和(48%)、克世(43%)、生世(10%)；发动六亲：子孙父母(34%)、无(31%)、子孙(25%)、父母(10%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建为父母之五行 98%；伏神判别全类为待时（B-009）。应期取伏神逢值。
+
+## IPC-0146　倾向通过：两爻官星可用，克官的子孙眼下伏着
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原无力;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `b81b1b34dc19b2ba…`
+- 结论类别：倾向通过；情境：官鬼同支两现、官星有效、忌神伏而待时、原神无力
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：泽风大过，申月甲寅日
+上爻 玄武 妻财丁未土
+五爻 白虎 官鬼丁酉金
+四爻 螣蛇 父母丁亥水世（伏子孙午火）
+三爻 勾陈 官鬼辛酉金
+二爻 朱雀 父母辛亥水（伏兄弟寅木）
+初爻 青龙 妻财辛丑土应
+```
+
+**简断**　这一卦倾向通过。官星两现同支，一般失令却得扶持，可用、安静、无伤；克官的子孙不在卦面，伏而待时，眼下出不来。生官的财无力。眼前的局面对你有利，宜趁早落定。
+
+**详断·开局**
+
+官鬼两现、同支。一般失令（多是兄弟或父母当令），靠日辰或相合扶持，或当令（以你这一卦的排盘为准），官星还用得上，不空不破，无冲克。
+
+**详断·过程**
+
+子孙伏在下面，是待时的伏神，现在出不来，伤不到官星。财在卦上却无力。你的世爻安稳。
+
+眼下官星可用、无人伤它，是好时机；子孙终有出伏之时，拖久了难免多事。
+
+**详断·结局**
+
+官星可用、阻力暂伏，这一轮倾向通过，宜早不宜迟。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果较容易出来；具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或通知到来｜官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　倾向通过。两爻官星可用，克官的子孙暂时伏着。需要确认的事早做。
+
+**古籍依据**
+
+- 《增删卜易·八宫图第三》「若两爻俱动或都不发动，择其旺者为用神。如一爻动者择其动者为用神。」——两官同支（R-LIANGXIAN-03）
+- 《增删卜易·各门类题头总注章第又二十六》「用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。」——官星失令而得扶（R-WANG-02）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。」——子孙有出伏条件而受限待时（B-009）（R-FUSHEN-02）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 146 类，占起卦概率 0.029%，全类 112 盘）：用神「同支两现[EFFECTIVE]静」；世爻「世安」；原神妻财当前无力（INEFFECTIVE）；忌神子孙不上卦，伏而待时。类内各盘不同之处：月建六亲：兄弟(46%)、官鬼(30%)、父母(23%)；用神月令：休囚(70%)、旺(30%)；用神生扶：月合(27%)、日合(27%)、月扶(11%)、临月建(11%)；世爻六亲：父母(68%)、兄弟(32%)；应爻对世：与世比和(50%)、生世(32%)、克世(18%)；发动六亲：无(50%)、父母(50%)；均不改变本类结论，正文不写，由排盘逐盘列出。
+
+## IPC-0147　偏难通过：应位的官星无力，卦中子孙得相
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世受克子孙;原伏难出;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `ab0d7916b7a61287…`
+- 结论类别：偏难通过；情境：官鬼临应而无力、子孙持世、子孙得相有力
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：地山谦之地火明夷，酉月丙辰日
+上爻 青龙 兄弟癸酉金
+五爻 玄武 子孙癸亥水世
+四爻 白虎 父母癸丑土
+三爻 螣蛇 兄弟丙申金
+二爻 勾陈 官鬼丙午火应（伏妻财卯木）
+初爻 朱雀 父母丙辰土× → 妻财己卯木
+```
+
+**简断**　这一卦偏难通过。官星在应位，这个月兄弟当令，官星失令又无扶，自身无力；你的世爻是子孙，虽然自己受了克，卦中别的子孙却得了相气，正压着官星。生官的财伏着出不来。
+
+**详断·开局**
+
+官鬼在应爻。起卦这个月兄弟当令，官星失了令，月建、日辰、动爻没有一处来扶，自身无力。
+
+你的世爻是子孙，世克应。
+
+**详断·过程**
+
+世上的这个子孙受了克，自身弱；可卦里另有子孙得相而静，能克休囚之爻，官星仍在它的克制下。生官的财伏而难出。
+
+用神无根，阻力有力，又有子孙坐世，结果很难。
+
+**详断·结局**
+
+应位之官无力、子孙得相，这一轮通过的可能偏低。等节令转为生官，才谈得上松动。
+
+**应期**　官星衰而安静，按「衰绝者遇生遇旺」，若有转机，多在官星得生、得旺的月日；具体对应的地支随排盘列出。
+
+- 逐盘求出（有利）｜若有转机，在此时｜应位之官鬼（休囚）｜衰者遇生遇旺｜R-YINGQI-04｜增删卜易·各门类应期总注章第又二十六「衰绝者，遇生遇旺」
+
+**总断**　这一轮偏难通过。官星无力，卦中子孙得相压着，财也出不来。期望放低，多准备几条路。
+
+**古籍依据**
+
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根（R-YUANJI-05）
+- 《增删卜易·动静生克章第十四》「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——子孙静而得相，克休囚之官（R-DONGJING-01）
+- 《增删卜易·八宫图第三》「占功名者若得官鬼持世即许成名，子孙持世且待时。」——子孙持世（R-YONG-GUAN-02）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。」——妻财伏而难出（R-FUSHEN-03）
+- 《增删卜易·各门类应期总注章第又二十六》「衰绝者，遇生遇旺」——官星衰而待生旺（R-YINGQI-04）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 147 类，占起卦概率 0.029%，全类 186 盘）：用神「明现临应[INEFFECTIVE]静」；世爻「世受克子孙」；原神妻财不上卦，伏而终不得出；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：发动六亲：父母(42%)、无(20%)、父母父母(17%)、兄弟父母(8%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；世爻皆子孙而受克。
+
+## IPC-0148　倾向通过：财动生官，动后变出六合
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;原动有力;忌伏难出;变合`（interview-pass-eq-0.12.1）；内容哈希 `dc542819e52c6ffd…`
+- 结论类别：倾向通过；情境：官鬼同支两现、原神发动有力、卦变六合、忌神伏而难出
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：地风升之地天泰，辰月戊戌日
+上爻 朱雀 官鬼癸酉金
+五爻 青龙 父母癸亥水
+四爻 玄武 妻财癸丑土世（伏子孙午火）
+三爻 白虎 官鬼辛酉金
+二爻 螣蛇 父母辛亥水（伏兄弟寅木）
+初爻 勾陈 妻财辛丑土×应 → 父母甲子水
+```
+
+**简断**　这一卦倾向通过。生官的财在卦中发动而有力，正推着两爻同支的官星；官星有效、无伤；克官的子孙伏着出不来。动后变出六合卦，事情有往一处合拢之意。
+
+**详断·开局**
+
+官鬼两现、同支，有效：一般父母当令而得扶，或财当令得月生，或当令（以你这一卦的排盘为准），不空不破，无冲克。
+
+这一卦的财全部发动，而且有力。
+
+**详断·过程**
+
+财动生官，升选候补章「财动生官得美缺」。你的世爻多是财，从卦象看，推动结果的力量就在你这一侧。
+
+克官的子孙伏而难出。财一动，卦变为六合，六合主合、主成，后段有合拢之象。财动亦克父母，材料上细致些。
+
+**详断·结局**
+
+财动生官、卦变六合、子孙不出，这一轮倾向通过。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果最容易到来；具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或通知到来｜官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　倾向通过。财动有力生官，卦变六合，克官的子孙出不来。保持主动，材料细致。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之三·升选候补章又第五十五》「官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。」——财动生官（R-YONG-GUAN-03）
+- 《增删卜易·元神忌神衰旺章第十》「元神能生用神者有五：元神旺相或临日月或日月动爻生扶者一也。元神动化回头生及化进神者二也。元神长生帝旺于日辰三也。元神与忌神同动四也。元神旺动临空化空五也。」——原神发动有力（R-YUANJI-01）
+- 《增删卜易·六合章第十九》「凡得诸合，诸占皆以为吉，占名成，占利利就」——卦变六合（R-HE-01）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。」——子孙伏而难出（R-FUSHEN-03）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 148 类，占起卦概率 0.029%，全类 223 盘）：用神「同支两现[EFFECTIVE]静」；世爻「世安」；原神妻财发动而有力；忌神子孙不上卦，伏而终不得出；卦级「变合」。类内各盘不同之处：月建六亲：父母(39%)、妻财(38%)、官鬼(22%)；用神月令：休囚(39%)、相(38%)、旺(22%)；用神生扶：妻财动来生(12%)、妻财动来生、日生(10%)、妻财动来生、月生(9%)、妻财动来生、日生、月生(6%)；世爻六亲：妻财(85%)、兄弟(15%)；应爻对世：与世比和(85%)、生世(15%)；均不改变本类结论，正文不写，由排盘逐盘列出。卦级：变合；财发动 100%。
+
+## IPC-0149　偏难通过：官星伏而难出，子孙伏而有用
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用伏难出;世世受克;原静不作用;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `9bcebfd9c5487d8d…`
+- 结论类别：偏难通过；情境：官鬼伏而难出、兄弟当令、忌神伏而有用、世爻受克
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：山雷颐之风地观，卯月乙亥日
+上爻 玄武 兄弟丙寅木
+五爻 白虎 父母丙子水× → 子孙辛巳火（伏子孙巳火）
+四爻 螣蛇 妻财丙戌土世
+三爻 勾陈 妻财庚辰土（伏官鬼酉金）
+二爻 朱雀 兄弟庚寅木
+初爻 青龙 父母庚子水○应 → 妻财乙未土
+```
+
+**简断**　这一卦偏难通过。官星和子孙都不在卦面：官星伏着出不来，子孙却是伏而有用的一方，兄弟当令时还得了相气。你的世爻是财，受了克；卦中的财安静不旺，提不起伏官。
+
+**详断·开局**
+
+六爻里官鬼、子孙都不见，各伏在一爻之下。一般兄弟当令，伏官失令，判为「终不得出」；伏着的子孙却有出伏的条件。
+
+**详断·过程**
+
+能帮官星的出不来，能伤官星的反而有用——局面是倒过来的。你的世爻是财，受克，兄弟当令、兄弟发动都在克它；卦中的财安静不旺，提不动伏官。
+
+**详断·结局**
+
+官星伏而难出、子孙伏而有用，这一轮通过的可能偏低。
+
+**应期**　本卦不列应期。官星伏而难出，推不出可靠的出伏时点；更值得做的是同步推进其他机会。
+
+
+**总断**　这一轮偏难通过。官星出不来，子孙伏而有用。期望放低，其他机会照常推进。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。」——伏官终不得出（R-FUSHEN-03）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。」——子孙伏而有用（R-FUSHEN-02）
+- 《黄金策·1、总断千金赋》「伏无提拔终徒尔，飞不推开亦枉然。」——伏无提拔（R-FUSHEN-05）
+- 《黄金策·1、总断千金赋》「应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。」——世爻受克（R-SHIYING-03）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 149 类，占起卦概率 0.029%，全类 249 盘）：用神「伏难出」；世爻「世受克」；原神妻财安静而月令不旺，不主动作用；忌神子孙不上卦，伏而有用。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：兄弟(93%)、父母(7%)；发动六亲：父母(23%)、兄弟(16%)、兄弟父母(16%)、兄弟兄弟(16%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：兄弟之五行 93%、父母之五行 7%。不列应期。
+
+## IPC-0150　偏难通过：持世之官没有气，应来生你也补不上
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原无力;忌伏待时`（interview-pass-eq-0.12.1）；内容哈希 `27d6a5e4193f8261…`
+- 结论类别：偏难通过；情境：官鬼同支两现持世而无力、应爻生世、忌神伏而待时
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：山天大畜之山泽损，未月壬午日
+上爻 白虎 官鬼丙寅木
+五爻 螣蛇 妻财丙子水应
+四爻 勾陈 兄弟丙戌土
+三爻 朱雀 兄弟甲辰土○ → 兄弟丁丑土（伏子孙申金）
+二爻 青龙 官鬼甲寅木世（伏父母午火）
+初爻 玄武 妻财甲子水
+```
+
+**简断**　这一卦偏难通过。两爻同支的官星一爻坐你的世爻，可这个月失令又无扶，自身无力；生官的财无力；克官的子孙伏而待时。应爻生着你的世爻，这份好意落不到结果上。
+
+**详断·开局**
+
+官鬼两现、同支，取持世一爻。一般兄弟当令、或父母当令，官星都失令，日月动爻不扶，官星自身无力。持世却不旺。
+
+**详断·过程**
+
+生官的财无力，补不上官星的空缺；子孙伏而待时，眼下不出手，可也用不着它出手。
+
+应爻生世，从卦象看对面是相就的，可成败系于官星，而官星无根。
+
+**详断·结局**
+
+持世之官无力，财也无力，这一轮通过的可能偏低。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或消息落定｜持世之官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　这一轮偏难通过。持世的官星无力，财也帮不上。应爻虽相就，期望仍宜放低。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之三·升选候补章又第五十五》「官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。」——升选章要「旺官持世」（R-YONG-GUAN-03）
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根（R-YUANJI-05）
+- 《增删卜易·元神忌神衰旺章第十》「元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。」——妻财无力（R-YUANJI-02）
+- 《黄金策·1、总断千金赋》「世为己，应为人，大宜契合。」——应生世只作参看（R-SHIYING-03）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 150 类，占起卦概率 0.029%，全类 107 盘）：用神「同支两现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财当前无力（INEFFECTIVE）；忌神子孙不上卦，伏而待时。全类一致：用神月令：休囚(100%)。类内各盘不同之处：月建六亲：兄弟(65%)、父母(33%)、子孙(2%)；用神生扶：无(94%)、妻财动来生(4%)、日生(2%)；发动六亲：无(54%)、兄弟(42%)、妻财(4%)；均不改变本类结论，正文不写，由排盘逐盘列出。全类应爻生世 100%。
+
+## IPC-0151　偏难通过：持世之官被父母泄了气，生克两方都不动
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静不作用;忌静不作用`（interview-pass-eq-0.12.1）；内容哈希 `71cb469807ec08d1…`
+- 结论类别：偏难通过；情境：官鬼持世而无力、父母当令、原忌俱静
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：泽地萃，辰月癸亥日
+上爻 白虎 父母丁未土
+五爻 螣蛇 兄弟丁酉金应
+四爻 勾陈 子孙丁亥水
+三爻 朱雀 妻财乙卯木
+二爻 青龙 官鬼乙巳火世
+初爻 玄武 父母乙未土
+```
+
+**简断**　这一卦偏难通过。官星坐你的世爻，可这个月父母当令，官生父母，气被泄去，官星无力；生官的财和克官的子孙都安静失令，谁也不出手。没有阻力，官星自己却撑不起结果。
+
+**详断·开局**
+
+官鬼持世。父母当令，官星泄气休囚，日月动爻不扶，官星自身无力，不是「旺官持世」。
+
+**详断·过程**
+
+财和子孙都在卦上，都安静不旺，不生也不克。表面上风平浪静，可元神忌神衰旺章说用神无根，「忌神无力何足喜」。持世之官没有分量，事情就落不了地。
+
+**详断·结局**
+
+持世之官被泄空，生克两方都不动，这一轮通过的可能偏低。要等节令转为生官、旺官之时。
+
+**应期**　官星衰而安静，按「衰绝者遇生遇旺」，若有转机，多在官星得生、得旺的月日；具体对应的地支随排盘列出。
+
+- 逐盘求出（有利）｜若有转机，在此时｜持世之官鬼（休囚）｜衰者遇生遇旺｜R-YINGQI-04｜增删卜易·各门类应期总注章第又二十六「衰绝者，遇生遇旺」
+
+**总断**　这一轮偏难通过。持世的官星被泄了气，生克两方都不动。期望放低，其他机会照常推进。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之三·升选候补章又第五十五》「官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。」——升选章要「旺官持世」（R-YONG-GUAN-03）
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根，忌神无力何足喜（R-YUANJI-05）
+- 《增删卜易·动静生克章第十四》「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——财、子孙静而失令（R-DONGJING-01）
+- 《增删卜易·各门类应期总注章第又二十六》「衰绝者，遇生遇旺」——官星衰而待生旺（R-YINGQI-04）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 151 类，占起卦概率 0.029%，全类 94 盘）：用神「明现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财安静而月令不旺，不主动作用；忌神子孙安静而月令不旺，不主动作用。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：应爻对世：生世(40%)、克世(38%)、世克之(21%)；发动六亲：无(68%)、父母(32%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行。
+
+## IPC-0152　偏难通过：子孙当令，官星受克，财托不起
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原静旺有力;忌伏有效`（interview-pass-eq-0.12.1）；内容哈希 `cf78420c29fb139b…`
+- 结论类别：偏难通过；情境：官星无力、子孙当令、忌神伏而有用、原神得相
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：泽雷随之泽地萃，巳月戊辰日
+上爻 朱雀 妻财丁未土应
+五爻 青龙 官鬼丁酉金
+四爻 玄武 父母丁亥水（伏子孙午火）
+三爻 白虎 妻财庚辰土世
+二爻 螣蛇 兄弟庚寅木
+初爻 勾陈 父母庚子水○ → 妻财乙未土
+```
+
+**简断**　这一卦偏难通过。起卦这个月子孙当令，官星受月克而无力；克官的子孙虽伏在下面，却是有用的伏神，五行又正当令；生官的财得了相气，却托不起无根的官星。
+
+**详断·开局**
+
+官鬼是用神。子孙当令，官星受月克失令，官星自身无力。
+
+**详断·过程**
+
+子孙不在卦面，伏而有用，它的五行就是当令之气，克官之势很足。生官的财得相，静而能生休囚之爻，可克者旺、生者相，用神又无根，财的这份力气不够。
+
+**详断·结局**
+
+月令站在子孙一边，官星失了根，财又托不起，这一轮通过的可能偏低。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或消息落定｜官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　这一轮偏难通过。子孙当令，官星受克无力，财托不起。期望放低，同时准备其他机会。
+
+**古籍依据**
+
+- 《增删卜易·八宫图第三》「以上四处若得全来生合用神者，诸占全吉。倘有三处相生一处相克，也以吉断。若有两处克两处生者，须看旺衰。生用神之神旺相者则以吉断，克用神之神旺相者可以凶推。」——克者当令为旺（R-SICHU-01）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。」——子孙伏而有用（R-FUSHEN-02）
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根，元神难生（R-YUANJI-05）
+- 《增删卜易·动静生克章第十四》「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——财静而得相（R-DONGJING-01）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 152 类，占起卦概率 0.028%，全类 107 盘）：用神「明现[INEFFECTIVE]静」；世爻「世安」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙不上卦，伏而有用。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：无(41%)、日扶(13%)、日合、日生(13%)、日生(11%)；世爻六亲：妻财(76%)、父母(24%)；应爻对世：与世比和(94%)、世克之(6%)；发动六亲：无(53%)、父母(47%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行。
+
+## IPC-0153　偏难通过：官星伏而难出，卦又变冲
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用伏难出;世世安;原伏有效;忌静旺有力;变冲`（interview-pass-eq-0.12.1）；内容哈希 `4d6c1179d74803d0…`
+- 结论类别：偏难通过；情境：官鬼伏而难出、子孙当令、卦变六冲
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：风水涣之坎为水，丑月辛酉日
+上爻 螣蛇 父母辛卯木○ → 官鬼戊子水
+五爻 勾陈 兄弟辛巳火世
+四爻 朱雀 子孙辛未土（伏妻财酉金）
+三爻 青龙 兄弟戊午火（伏官鬼亥水）
+二爻 玄武 子孙戊辰土应
+初爻 白虎 父母戊寅木
+```
+
+**简断**　这一卦偏难通过。官星不在卦面，伏着出不来；这个月多是子孙当令，旺而在卦上；生官的财伏而有用，却救不了伏而无根的官星。卦一动又变成六冲，事情更难聚拢。
+
+**详断·开局**
+
+卦面上看不到官鬼，它藏在本卦某一爻的下面。起卦月份一般是子孙当令，或是兄弟当令，伏官受克失令，属「终不得出」。
+
+**详断·过程**
+
+子孙旺而在卦上，静而能克休囚之爻，伏官被它压着。生官的财也伏着，是有用的伏神，可两个伏神之间，财要生官，先得官有根。
+
+动爻一动，卦变六冲，冲主散，吉事见冲不宜。
+
+**详断·结局**
+
+官星伏而难出、子孙旺、卦变冲，这一轮通过的可能偏低。
+
+**应期**　本卦不列应期。官星伏而难出，推不出可靠的出伏时点；把精力放在别的机会上更实际。
+
+
+**总断**　这一轮偏难通过。官星出不来，子孙旺，卦又变冲。期望放低，另做准备。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。」——伏官终不得出（R-FUSHEN-03）
+- 《增删卜易·动静生克章第十四》「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——子孙静而旺相，克休囚之官（R-DONGJING-01）
+- 《增删卜易·六冲章第二十》「冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶」——冲者散也，吉事不宜（R-CHONG-01）
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根（R-YUANJI-05）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 153 类，占起卦概率 0.028%，全类 221 盘）：用神「伏难出」；世爻「世安」；原神妻财不上卦，伏而有用；忌神子孙静而旺相，有力（只作用于休囚之爻）；卦级「变冲」。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：子孙(79%)、兄弟(21%)；发动六亲：父母(58%)、兄弟(42%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：子孙之五行 79%、兄弟之五行 21%；卦级：变冲。不列应期。
+
+## IPC-0154　倾向通过：持世之官有根，卦变六合，子孙出不来
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;变合`（interview-pass-eq-0.12.1）；内容哈希 `3c8134d57b2f8872…`
+- 结论类别：倾向通过；情境：官鬼同支两现持世、卦变六合、原神伏而待时、忌神伏而难出
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：天山遁之天地否，寅月丙辰日
+上爻 青龙 父母壬戌土
+五爻 玄武 兄弟壬申金应
+四爻 白虎 官鬼壬午火
+三爻 螣蛇 兄弟丙申金○ → 妻财乙卯木
+二爻 勾陈 官鬼丙午火世（伏妻财寅木）
+初爻 朱雀 父母丙辰土（伏子孙子水）
+```
+
+**简断**　这一卦倾向通过。两爻同支的官星一爻坐你的世爻，一般得月生或当令，有根、安静、无伤；克官的子孙伏着出不来；生官的财伏而待时。动后变出六合，后段有合拢之意。
+
+**详断·开局**
+
+官鬼两现、同支，取持世一爻。这颗官星有根：财当令时得月生，或自身当令，或虽失令而有日辰扶持，看你这一卦的排盘便知。不空不破，无冲克。
+
+**详断·过程**
+
+克官的子孙伏而难出，伤不到官星；生官的财伏而待时，日后或可出力。卦中父母、兄弟在动，动后变为六合卦，六合主合主成，像是事情最后能谈拢。
+
+**详断·结局**
+
+持世之官有根、子孙不出、卦变六合，这一轮倾向通过。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果最容易到来；具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或通知到来｜持世之官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　倾向通过。持世的官星有根，克官的子孙出不来，卦变六合。按流程推进即可。
+
+**古籍依据**
+
+- 《增删卜易·八宫图第三》「占功名者若得官鬼持世即许成名，子孙持世且待时。」——官鬼持世（R-YONG-GUAN-02）
+- 《增删卜易·六合章第十九》「凡得诸合，诸占皆以为吉，占名成，占利利就」——卦变六合（R-HE-01）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。」——子孙伏而难出（R-FUSHEN-03）
+- 《增删卜易·增删卜易卷之二·飞伏神章第二十八》「伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。」——妻财伏而待时（B-009）（R-FUSHEN-02）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 154 类，占起卦概率 0.028%，全类 220 盘）：用神「同支两现持世[EFFECTIVE]静」；世爻「持世」；原神妻财不上卦，伏而待时；忌神子孙不上卦，伏而终不得出；卦级「变合」。类内各盘不同之处：月建六亲：妻财(48%)、官鬼(34%)、父母(18%)；用神月令：相(48%)、旺(34%)、休囚(18%)；用神生扶：月生(17%)、日合、月生(14%)、临日、日帝旺、月生(11%)、日合(9%)；应爻对世：世生之(65%)、世克之(35%)；发动六亲：父母(51%)、兄弟(49%)；均不改变本类结论，正文不写，由排盘逐盘列出。卦级：变合。
+
+## IPC-0155　偏难通过：子孙当令克官，生官的财只得相气
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原静旺有力;忌静旺有力`（interview-pass-eq-0.12.1）；内容哈希 `115e0adb9b18b354…`
+- 结论类别：偏难通过；情境：官星无力、子孙当令、原忌俱静而旺相
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：火雷噬嗑之火地晋，午月己未日
+上爻 勾陈 子孙己巳火
+五爻 朱雀 妻财己未土世
+四爻 青龙 官鬼己酉金
+三爻 玄武 妻财庚辰土
+二爻 白虎 兄弟庚寅木应
+初爻 螣蛇 父母庚子水○ → 妻财乙未土
+```
+
+**简断**　这一卦偏难通过。起卦这个月子孙当令，官星受月克而无力；生官的财得相、克官的子孙当旺，两边都安静，却都够得着这颗失令的官星，克的一方更强。你的世爻是财，安稳却帮不上大忙。
+
+**详断·开局**
+
+官鬼是用神。起卦这个月当令的就是子孙，月建一克，官星失了令，又找不到扶持，没有力气。
+
+**详断·过程**
+
+财得相、子孙当令，都是静而旺相，都能作用于休囚的官星：一个生、一个克。子孙旺、财只相，八宫图说「克用神之神旺相者可以凶推」。更根本的是官星无根，元神有力亦难生。
+
+**详断·结局**
+
+生的一方只得相气，克的一方当旺，官星又没有根，这一轮通过的可能偏低。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或消息落定｜官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　这一轮偏难通过。子孙当令克着无力的官星，财只得相，托不起来。期望放低。
+
+**古籍依据**
+
+- 《增删卜易·八宫图第三》「以上四处若得全来生合用神者，诸占全吉。倘有三处相生一处相克，也以吉断。若有两处克两处生者，须看旺衰。生用神之神旺相者则以吉断，克用神之神旺相者可以凶推。」——子孙旺、财只相，克者旺（R-SICHU-01）
+- 《增删卜易·动静生克章第十四》「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——财、子孙静而旺相（R-DONGJING-01）
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根，元神难生（R-YUANJI-05）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 155 类，占起卦概率 0.028%，全类 104 盘）：用神「明现[INEFFECTIVE]静」；世爻「世安」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：无(41%)、日生(23%)、日扶(16%)、日合、日生(12%)；应爻对世：克世(64%)、世克之(36%)；发动六亲：无(56%)、父母(44%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行。
+
+## IPC-0156　偏难通过：卦合而官空乏，泄了气的官星撑不起
+
+- 问事：这次面试能通过吗？（`career.interview.interview-pass`）
+- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原无力;忌无力;六合`（interview-pass-eq-0.12.1）；内容哈希 `cbd42f7fcc230201…`
+- 结论类别：偏难通过；情境：官星无力、父母当令、六合卦、原忌俱无力
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+
+```
+样本之一：地天泰，午月壬辰日
+上爻 白虎 子孙癸酉金应
+五爻 螣蛇 妻财癸亥水
+四爻 勾陈 兄弟癸丑土
+三爻 朱雀 兄弟甲辰土世
+二爻 青龙 官鬼甲寅木（伏父母巳火）
+初爻 玄武 妻财甲子水
+```
+
+**简断**　这一卦偏难通过。卦逢六合，世应相合，看着和顺；可这个月父母当令，官星泄气失令，又无扶持，自身无力；生官的财、克官的子孙也都无力。六合也要官星得地，失陷则合而无用。
+
+**详断·开局**
+
+六合卦，世应相合。父母当令，官生父母，官星泄气休囚，日月动爻不扶，官星自身无力。
+
+**详断·过程**
+
+财无力，子孙也无力，局面看似平静。可乡试章讲六合「亦要官父世爻得地，有一失陷不遇生扶者，虽六合亦无益」，元神忌神章又说用神无根「忌神无力何足喜」。官星本身撑不起来，合也合不成事。
+
+**详断·结局**
+
+官星泄气无力，六合救不了，这一轮通过的可能偏低。
+
+**应期**　官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。
+
+- 逐盘求出（有利）｜结果或消息落定｜官鬼（安静）｜用神安静：逢值逢冲｜R-YINGQI-01｜增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」
+
+**总断**　这一轮偏难通过。卦虽六合，官星泄了气，撑不起结果。期望放低，其他机会照常推进。
+
+**古籍依据**
+
+- 《增删卜易·增删卜易卷之三·乡试章第五十五》「凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐虽六合亦无益矣。」——六合须官星得地（R-HE-02）
+- 《增删卜易·元神忌神衰旺章第十》「亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。」——用神无根，忌神无力何足喜（R-YUANJI-05）
+- 《增删卜易·元神忌神衰旺章第十》「元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。」——妻财无力（R-YUANJI-02）
+- 《增删卜易·各门类应期总注章第又二十六》「静而逢值逢冲」——用神安静，取值日、冲日（R-YINGQI-01）
+
+**计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 156 类，占起卦概率 0.028%，全类 85 盘）：用神「明现[INEFFECTIVE]静」；世爻「世安」；原神妻财当前无力（INEFFECTIVE）；忌神子孙当前无力（INEFFECTIVE）；卦级「六合」。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：世爻六亲：妻财(61%)、兄弟(39%)；应爻对世：生世、合世(49%)、世生之、合世(39%)、克世、合世(8%)、世克之、合世(4%)；发动六亲：无(79%)、父母(21%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行。
 
