@@ -66,3 +66,13 @@ test('月破而动：动则能伤，当前有效；月破而静，待填实或�
   assert.ok(wei.state.limitations.some((l) => l.kind === '月破'));
   if (wei.state.capability === 'strong') assert.equal(wei.state.state, 'EFFECTIVE');
 });
+
+test('进神退神章（R-JINTUI-03）：用神当令得相而化退神，占近事不作退——指纹记「化退旺」，不并入化凶', () => {
+  const e = ev([8, 9, 7, 7, 9, 8], '丑', '甲申');
+  const y = e.yongshen.line;
+  assert.equal(y.change.advance, '退神');
+  assert.ok(['旺', '相'].includes(y.seasonal));
+  const k = interviewPassClass(e).key;
+  assert.match(k, /化退旺/);
+  assert.doesNotMatch(k, /化凶/);
+});

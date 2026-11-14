@@ -12,8 +12,8 @@ const recs = JSON.parse(readFileSync('review/records.json', 'utf8'));
 const drafts = JSON.parse(readFileSync('dist/liuyao-drafts.json', 'utf8')).readings;
 const strip = (d) => {
   const x = structuredClone(d);
-  x.equivalence_version = 'X'; delete x.class_share_of_casts;
-  x.reading.calculation_explanation = x.reading.calculation_explanation.replace(/interview-pass-eq-[\d.]+/g, 'X');
+  x.equivalence_version = 'X'; delete x.class_share_of_casts; delete x.class_rank;
+  x.reading.calculation_explanation = x.reading.calculation_explanation.replace(/interview-pass-eq-[\d.]+/g, 'X').replace(/写稿顺序第 \d+ 类/g, '写稿顺序第 N 类');
   return JSON.stringify(x);
 };
 const today = new Date().toISOString().slice(0, 10);
@@ -32,12 +32,13 @@ for (const e of drafts) {
   const prev = hashes.find((h) => statusesFor(recs.records, e.script_id, h).approval_status !== 'REVIEW_REQUIRED');
   if (!prev) { skipped.push(`${e.script_id}（无已批准旧哈希）`); continue; }
   const changed = ['equivalence_version', 'reading.calculation_explanation（版本字符串）'];
+  if (old.class_rank !== cur.class_rank) changed.push(`class_rank 与计算说明名次（${old.class_rank} → ${cur.class_rank}）`);
   if (old.class_share_of_casts !== cur.class_share_of_casts) changed.push(`class_share_of_casts（${old.class_share_of_casts} → ${cur.class_share_of_casts}）`);
   recs.records.push({
     record_id: `RV-${String(recs.records.length + 1).padStart(4, '0')}`, script_id: e.script_id, stage: 'metadata-rekey', status: 'PASS',
     reviewer: REVIEWER, isolated: false, reviewed_at: today, content_hash: e.content_hash, original_content_hash: prev,
     from_version: oldV, to_version: newV, changed_fields: changed,
-    notes: `程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变，新写稿顺序中名次不变。${noteParts.join(' ')}`,
+    notes: `程序对照 git HEAD 核实：除版本元数据外一字未改；类键不变。${noteParts.join(' ')}`,
   });
   n += 1;
 }

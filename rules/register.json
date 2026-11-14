@@ -1660,6 +1660,32 @@
       }
     },
     {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.5.0",
+      "rule_id": "R-JINTUI-03",
+      "topic": "旺相化退神，近事不作退",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·进神退神章第二十九",
+      "original_text": [
+        "予曰﹕动变皆属秋金﹐当相得令﹐占近事岂可曰退﹖若占久远之事﹐待休囚之时而退者得也"
+      ],
+      "modern_explanation": "动爻化退神而本身当令或得相者，占近事不作退论；占久远之事，待其休囚之时方退。",
+      "applicable_conditions": "用神（或元神、忌神）动化退神，且动爻当令或得相；所占为近事（面试结果属近事）",
+      "exceptions": "乡试章「世化退神…必无勇往之心」专论世爻之志，不在此条",
+      "engine_refs": [
+        "src/equivalence.js 用神动化：旺相化退记「化退旺」，不并入化凶",
+        "src/evidence.js 原忌「休囚动化退神」只取休囚者"
+      ],
+      "dispute_ids": [],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "增删卜易·进神退神章第二十九（L943，野鹤曰，申月辛卯日占病夬之大壮例）逐字核对；同章另一例「戌土子孙虽动幸化退神，不克官也」亦以化退论力。面试一问属近事，旺相化退不作化凶。引擎原、忌两神已按「休囚动化退神」取弱，指纹用神一项同此。"
+      }
+    },
+    {
       "rule_id": "R-KONG-01",
       "topic": "旬空",
       "source_book": "增删卜易",

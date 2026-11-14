@@ -12,3 +12,13 @@ for r in range(a, b + 1):
         print(f"  {k}: {' '.join(x[:60] for x in v[:4])}")
     t = p['timing_rules_all_charts']
     print(f"  应期全类 吉{t['favorable']} 防{t['adverse']}")
+    # 已写之近似类（用神段、世爻段、忌神段相同者优先）
+    import glob
+    if not globals().get('_W'):
+        globals()['_W'] = [(json.load(open(f, encoding='utf-8'))) for f in sorted(glob.glob('D:/Wengua_Liuyao/authoring/classes/interview-pass/IPC-*.json'))]
+    parts = p['key'].split(';')
+    def score(k):
+        q = k.split(';')
+        return sum(1 for i in range(min(len(q), len(parts), 4)) if q[i] == parts[i]) + (1 if q[0].split('[')[-1] == parts[0].split('[')[-1] else 0)
+    best = sorted(_W, key=lambda d: -score(d['class_key']))[:3]
+    print('  近似：' + '；'.join(f"{d['script_id']} {d['judgment']['verdict']} {d['class_key'][:46]}" for d in best if d['class_key'] != p['key']))
