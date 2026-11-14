@@ -1,0 +1,254 @@
+{
+  "script_id": "IPC-1889",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用明现[INEFFECTIVE入墓]静;世世受克;原无力;忌静旺有力;六合",
+  "class_rank": 1889,
+  "class_share_of_casts": 5.5e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "壬戌"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        6,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        6,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        6,
+        6,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        6,
+        6,
+        8,
+        8
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        6,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "戊戌"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "甲戌"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        6,
+        6,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙未"
+    }
+  ],
+  "scenario_tags": [
+    "官星失令入日墓",
+    "子孙静而旺相",
+    "六合卦"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼兄弟当令而休囚，入日墓（偶兼日破），三层判定为无力"
+    ],
+    "supporting": [
+      "卦逢六合，世应相合"
+    ],
+    "adverse": [
+      "忌神子孙静而旺相；原神妻财无力；世爻（财）休囚无力"
+    ],
+    "conflicts_resolved": [
+      "用神失令入墓，忌神旺静"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-HE-01",
+      "R-SANMU-01",
+      "R-SHIYING-03",
+      "R-YINGQI-05",
+      "R-YONG-GUAN-01",
+      "R-YUANJI-02",
+      "R-YUANJI-05"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：失令的官星被日辰收进墓里",
+    "brief": "这一卦偏难通过。起卦这个月兄弟当令，官星失令，当天日辰又正是它的墓，把它收了进去，困住了。克官的子孙旺相，静着；生官的财无力。卦逢六合，你与应位相合，合不出官星的力气。",
+    "opening": "六合卦。用神官鬼安静；起卦之月兄弟当令，官星休囚，入日墓，偶兼日破。官星自身无力。\n你的世爻是财，失令无力；应位多是兄弟，克你、合你。卦中或兄弟发动，或无动爻。财无力；子孙静而旺相。",
+    "process": "题头总注章列三墓，入日墓居其一；失令之官入墓，是困而难出。\n子孙旺静，财又无力，墓开之前难有转机。",
+    "ending": "失令之官入日墓，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "官星入墓，按「入三墓俱喜冲开」：冲开墓库之日前后，若有转机多在此时；从卦象看，这一轮偏难。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-05",
+          "pool": "favorable",
+          "target_event": "若有转机，在此时",
+          "target_symbol": "入墓之官鬼",
+          "condition": "入墓：喜冲开",
+          "time_scale": "day",
+          "calculation_basis": "冲墓库之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「入三墓俱喜冲开」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。失令的官星被日辰收进墓里。期望放低，另做打算。",
+    "classical_sources": [
+      {
+        "rule_id": "R-SANMU-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+        "applies_because": "入日墓"
+      },
+      {
+        "rule_id": "R-YINGQI-05",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "入三墓俱喜冲开",
+        "applies_because": "入三墓俱喜冲开"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而旺相"
+      },
+      {
+        "rule_id": "R-HE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+        "applies_because": "凡得诸合，诸占皆以为吉"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1889 类，占起卦概率 0.006%，全类 27 盘）：用神「明现[INEFFECTIVE入墓]静」；世爻「世受克」；原神妻财当前无力（INEFFECTIVE）；忌神子孙静而旺相，有力（只作用于休囚之爻）；卦级「六合」。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：应爻对世：克世、合世(67%)、生世、合世(26%)、世克之、合世(7%)；发动六亲：无(37%)、兄弟(30%)、兄弟兄弟(22%)、父母(11%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神休囚，入日墓 93%、兼日破 7%，三层判定无力 100%；原神无力；忌神静而旺相；世爻皆财（休囚无力）；卦逢六合；应爻：兄弟 67%、子孙 26%、父母 7%；发动：无 37%、兄弟 30%、兄弟兄弟 22% 等。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
