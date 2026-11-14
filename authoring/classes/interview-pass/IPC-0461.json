@@ -1,0 +1,254 @@
+{
+  "script_id": "IPC-0461",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.3",
+  "class_key": "用明现持世[INEFFECTIVE]动平;世持世;原静旺有力;忌静旺有力;变合",
+  "class_rank": 461,
+  "class_share_of_casts": 0.000144,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丙戌"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "丙戌"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "壬戌"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "丁酉"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丁丑"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "甲寅"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "壬寅"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "壬子"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼持世受月克而无力",
+    "官星发动",
+    "卦变六合"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼持世，子孙当令、月克，扶之不起，当前无力；发动而所化平和，不足以自救"
+    ],
+    "supporting": [
+      "原神妻财得相；动后变出六合卦"
+    ],
+    "adverse": [
+      "忌神子孙当令，静而旺相；应爻多克世"
+    ],
+    "conflicts_resolved": [
+      "变合须官星有气，「虽六合亦无益」；用神无根，元神有力亦难生"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-HE-01",
+      "R-HE-02",
+      "R-SICHU-01",
+      "R-YINGQI-02",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-02",
+      "R-YUANJI-05"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：坐世之官被月令克倒，动而无助",
+    "brief": "这一卦偏难通过。官星坐在你的世爻上，可起卦这个月子孙当令，月建正克官星，日辰也常克它，官星无力；它虽发动，所化平平，帮不了自己。生官的财得相，克官的子孙当令；动后卦虽变六合，合不起无根之官。",
+    "opening": "官鬼持世，起卦月份子孙当令，月建克官；它发动了，所化之爻不生不克，三层判定仍为无力。动后卦变六合。",
+    "process": "世爻就是官星，它在动，像你自己在努力；可月令克它，日辰也常克它，动而无根，使不上劲。\n生官的财得相，按理能生休囚之官，可「用神无根谓之元神有力亦难生」；克官的子孙当令，应位又多克你。六合要官星得地才算数。",
+    "ending": "持世之官被月令克倒，动而无助，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "官星发动，按「动而逢值逢合」：官星值日或与之相合之日前后，结果多半会落定；从卦象看，偏于不如意。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-02",
+          "pool": "favorable",
+          "target_event": "结果落定（多半不如意）",
+          "target_symbol": "持世之官鬼（发动）",
+          "condition": "用神发动：逢值逢合",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、与官星相合之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「动而逢合逢值」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。坐世的官星被月令克倒，动也无助。期望放低。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YUANJI-05",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。",
+        "applies_because": "用神无根，元神有力亦难生"
+      },
+      {
+        "rule_id": "R-SICHU-01",
+        "source_book": "增删卜易",
+        "source_chapter": "八宫图第三",
+        "quote": "以上四处若得全来生合用神者，诸占全吉。倘有三处相生一处相克，也以吉断。若有两处克两处生者，须看旺衰。生用神之神旺相者则以吉断，克用神之神旺相者可以凶推。",
+        "applies_because": "月克用神"
+      },
+      {
+        "rule_id": "R-HE-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐虽六合亦无益矣。",
+        "applies_because": "六合须官父世得地"
+      },
+      {
+        "rule_id": "R-YINGQI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "动而逢合逢值",
+        "applies_because": "用神发动，取值日、合日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.3，写稿顺序第 461 类，占起卦概率 0.014%，全类 112 盘）：用神「明现持世[INEFFECTIVE]动平」；世爻「持世」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙静而旺相，有力（只作用于休囚之爻）；卦级「变合」。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：无(58%)、日生、日长生(15%)、日生(15%)、日帝旺、日扶(12%)；应爻对世：克世(82%)、世克之(18%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行；用神（即世爻）动化：动平 100%，三层判定无力。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
