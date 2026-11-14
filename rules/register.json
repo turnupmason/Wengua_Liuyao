@@ -1,5 +1,5 @@
 {
-  "register_version": "0.1.0",
+  "register_version": "0.2.0",
   "rule_profile": "zengshan-main",
   "policy": "原文须逐字见于 sources/classics 所注卷章（去除标点空白后比对）。review_status 只有专业审核者可以改为 approved；脚本核对通过只说明原文出处属实，不说明断法已经审核。",
   "rules": [
@@ -438,6 +438,62 @@
       "version": "0.1.0"
     },
     {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.2.0",
+      "rule_id": "R-FUSHEN-06",
+      "topic": "飞神空破则伏神易出",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+      "original_text": [
+        "空下伏神﹐易于引拨﹐此论近理﹐但有不独飞神空亡而伏神得出﹐但得飞神临破休囚入墓而伏神皆易出也",
+        "飞神逢破墓衰空﹐虽有若无﹐所以伏神易于出现。"
+      ],
+      "modern_explanation": "飞神旬空、月破、休囚、入墓，压不住伏神，伏神容易出现；飞神虽克伏，自身空破则克力不实。",
+      "applicable_conditions": "用神、原神、忌神为伏神时",
+      "exceptions": "伏神自身休囚无气者仍难出",
+      "engine_refs": [
+        "src/flows.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.2.0",
+      "rule_id": "R-FUSHEN-07",
+      "topic": "飞伏生克",
+      "source_book": "卜筮正宗",
+      "source_chapter": "三十六、飞伏生克吉凶歌",
+      "original_text": [
+        "伏克飞神为出暴，飞来克伏反伤身，伏去生飞名泄气，飞来生伏得长生。"
+      ],
+      "modern_explanation": "伏神克飞神者易出；飞神克伏神者伏神受伤；伏神生飞神为泄气；飞神生伏神为得长生。",
+      "applicable_conditions": "飞伏关系",
+      "exceptions": "",
+      "engine_refs": [
+        "src/flows.js"
+      ]
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.2.0",
+      "rule_id": "R-FUSHEN-08",
+      "topic": "有用之伏神如现",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+      "original_text": [
+        "此六皆有用之伏神也﹐虽曰不现亦如现矣",
+        "凡用神旺相而遇旬空﹐出空之日则出矣。"
+      ],
+      "modern_explanation": "有用之伏神可当作现于卦中看待；伏神旺相而空，出空之日出现。出伏时点取伏神逢值、或冲开飞神之日。",
+      "applicable_conditions": "伏神有用时",
+      "exceptions": "伏神静而未出，不能当作动爻",
+      "engine_refs": [
+        "src/flows.js"
+      ]
+    },
+    {
       "rule_id": "R-YONG-GUAN-01",
       "topic": "用神·官鬼",
       "source_book": "增删卜易",
@@ -649,6 +705,27 @@
       "version": "0.1.0"
     },
     {
+      "rule_id": "R-LIANGXIAN-03",
+      "topic": "两现择其旺者",
+      "source_book": "增删卜易",
+      "source_chapter": "八宫图第三",
+      "original_text": [
+        "若两爻俱动或都不发动，择其旺者为用神。如一爻动者择其动者为用神。"
+      ],
+      "modern_explanation": "用神两现而古法五项比不出主次时，择其旺者：本项目依用神元神章例（三重父母取临月建之辰土）细比为临月建、临日、得日生扶或长生帝旺、静而得合。",
+      "applicable_conditions": "用神两现、古法五项相同",
+      "exceptions": "两爻地支相同、事实全同者古籍无明文，见 D-014",
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/evidence.js"
+      ],
+      "dispute_ids": [
+        "D-014"
+      ],
+      "review_status": "pending-professional-review",
+      "version": "0.2.0"
+    },
+    {
       "rule_id": "R-YUANJICHOU-01",
       "topic": "原神忌神仇神",
       "source_book": "增删卜易",
@@ -759,6 +836,27 @@
       ],
       "review_status": "pending-professional-review",
       "version": "0.1.0"
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.2.0",
+      "rule_id": "R-YUANJI-06",
+      "topic": "接续相生",
+      "source_book": "增删卜易",
+      "source_chapter": "元神忌神衰旺章第十",
+      "original_text": [
+        "忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉。"
+      ],
+      "modern_explanation": "忌神与原神同动时，忌神转生原神、原神再生用神，化凶为吉；书中此例两神俱动。",
+      "applicable_conditions": "忌神与原神同动",
+      "exceptions": "原神伏藏而受忌神动生时能否接续相生，书中未见明例（D-013）",
+      "engine_refs": [
+        "src/evidence.js"
+      ],
+      "dispute_ids": [
+        "D-013"
+      ]
     },
     {
       "rule_id": "R-SICHU-01",
@@ -890,6 +988,24 @@
       "version": "0.1.0"
     },
     {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.2.0",
+      "rule_id": "R-YUEJIAN-04",
+      "topic": "月日相敌",
+      "source_book": "增删卜易",
+      "source_chapter": "月将章第十六",
+      "original_text": [
+        "爻值月建，墓于日或日建冲克者可以敌之，无吉无凶之象，倘得他爻又动相扶者为吉兆。恐他爻又来克制用神，虽临月建，亦难敌也。"
+      ],
+      "modern_explanation": "临月建之爻而墓于日辰、或受日辰冲克，两相抵敌，无吉无凶：力量未失，也发挥不出；再看他爻动扶或动克定之。",
+      "applicable_conditions": "临月建而受日墓、日克、日冲",
+      "exceptions": "",
+      "engine_refs": [
+        "src/flows.js"
+      ]
+    },
+    {
       "rule_id": "R-YUEPO-01",
       "topic": "月破",
       "source_book": "增删卜易",
@@ -1015,6 +1131,26 @@
       ],
       "review_status": "pending-professional-review",
       "version": "0.1.0"
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.2.0",
+      "rule_id": "R-RIZHEN-05",
+      "topic": "临日辰与寡不敌众",
+      "source_book": "增删卜易",
+      "source_chapter": "日辰章第十七",
+      "original_text": [
+        "逢月破而不破，遇冲克而无伤，似与月建同权",
+        "生多克少锦上添花，生少克多，寡不敌众。",
+        "假使爻中有动出申酉之金或卯爻动化申酉，此谓之寡不敌众，破亦为破，伤亦为伤。"
+      ],
+      "modern_explanation": "爻临日辰，逢月破不破、遇冲克无伤；但卦中再有动爻来克、或本爻动化相克之爻，则寡不敌众，破仍为破、伤仍为伤。",
+      "applicable_conditions": "临日辰之爻",
+      "exceptions": "",
+      "engine_refs": [
+        "src/flows.js"
+      ]
     },
     {
       "rule_id": "R-ANDONG-01",
@@ -1689,6 +1825,34 @@
         }
       ],
       "adopted": "暂按四时旺相或月合判定；事实层同时列出动爻生扶，作者遇此须说明",
+      "status": "open"
+    },
+    {
+      "dispute_id": "D-013",
+      "topic": "伏藏原神受忌神动生能否接续相生",
+      "positions": [
+        {
+          "source": "增删卜易·元神忌神衰旺章",
+          "view": "忌神与元神同动，接续相生，化凶为吉（例中两神俱动）"
+        },
+        {
+          "source": "增删卜易·飞伏神章",
+          "view": "伏神得动爻生为有用，有用之伏神虽不现亦如现"
+        }
+      ],
+      "adopted": "伏藏原神未出之前不作接续相生论，只记为转机条件；断语须说明",
+      "status": "open"
+    },
+    {
+      "dispute_id": "D-014",
+      "topic": "同支两现、事实全同时取哪一爻",
+      "positions": [
+        {
+          "source": "项目补充（古籍未见明文）",
+          "view": "两爻事实等价，取舍不改变旺衰空破；暂取持世者，其次临应者，再次下位"
+        }
+      ],
+      "adopted": "暂按项目补充，待用户确认",
       "status": "open"
     }
   ]

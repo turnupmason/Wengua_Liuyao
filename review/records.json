@@ -1,54 +1,403 @@
 {
   "policy": "只追加不改写。stage 取 author-full-text-review / professional-review / release-approval。content_hash 必须与构建结果一致才生效；审核者名中含 Claude/AI 的记录不能构成专业审核或发布批准。",
-  "checklist_items": ["排盘事实", "世应六亲", "用神选择", "日月旺衰", "原忌仇神", "动爻变爻", "飞伏", "旬空", "月破", "综合判断", "应期", "古籍依据", "文字自然", "简详结论一致", "无虚构情节", "无机械重复", "版本与适用条件"],
+  "checklist_items": [
+    "排盘事实",
+    "世应六亲",
+    "用神选择",
+    "日月旺衰",
+    "原忌仇神",
+    "动爻变爻",
+    "飞伏",
+    "旬空",
+    "月破",
+    "综合判断",
+    "应期",
+    "古籍依据",
+    "文字自然",
+    "简详结论一致",
+    "无虚构情节",
+    "无机械重复",
+    "版本与适用条件"
+  ],
   "records": [
     {
-      "record_id": "RV-0001", "script_id": "IP-0001", "stage": "author-full-text-review", "status": "completed",
+      "record_id": "RV-0001",
+      "script_id": "IP-0001",
+      "stage": "author-full-text-review",
+      "status": "completed",
       "content_hash": "91a9372f130d6fb70a1e8398ca3eeaa34495796ecb4e07c5ce0f5ae441d47395",
-      "reviewer": "Claude（AI 作者自查，非独立审核）", "reviewed_at": "2026-11-13",
-      "checklist": { "排盘事实": "pass", "世应六亲": "pass", "用神选择": "pass", "日月旺衰": "pass", "原忌仇神": "pass", "动爻变爻": "n/a（静卦）", "飞伏": "n/a", "旬空": "pass（午未，卦中无）", "月破": "pass（父母巳火）", "综合判断": "pass", "应期": "pass", "古籍依据": "pass", "文字自然": "pass", "简详结论一致": "pass", "无虚构情节": "pass", "无机械重复": "pass", "版本与适用条件": "pass" },
-      "findings": ["逐句对照引擎事实，未发现事实错误"],
-      "open_questions_for_professional_review": ["面试按谋职看父母为辅（D-010）：父母月破日破只作提醒，是否妥当", "以应爻妻财生世解作「对方一侧给的是助力」是否过度"]
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "排盘事实": "pass",
+        "世应六亲": "pass",
+        "用神选择": "pass",
+        "日月旺衰": "pass",
+        "原忌仇神": "pass",
+        "动爻变爻": "n/a（静卦）",
+        "飞伏": "n/a",
+        "旬空": "pass（午未，卦中无）",
+        "月破": "pass（父母巳火）",
+        "综合判断": "pass",
+        "应期": "pass",
+        "古籍依据": "pass",
+        "文字自然": "pass",
+        "简详结论一致": "pass",
+        "无虚构情节": "pass",
+        "无机械重复": "pass",
+        "版本与适用条件": "pass"
+      },
+      "findings": [
+        "逐句对照引擎事实，未发现事实错误"
+      ],
+      "open_questions_for_professional_review": [
+        "面试按谋职看父母为辅（D-010）：父母月破日破只作提醒，是否妥当",
+        "以应爻妻财生世解作「对方一侧给的是助力」是否过度"
+      ]
     },
     {
-      "record_id": "RV-0002", "script_id": "IP-0002", "stage": "author-full-text-review", "status": "completed",
+      "record_id": "RV-0002",
+      "script_id": "IP-0002",
+      "stage": "author-full-text-review",
+      "status": "completed",
       "content_hash": "4a62aa7480bdbc83f52ae4587a6c51db0f72420b224e9e116dd2c1dbe4bacfe3",
-      "reviewer": "Claude（AI 作者自查，非独立审核）", "reviewed_at": "2026-11-13",
-      "checklist": { "排盘事实": "pass", "世应六亲": "pass", "用神选择": "pass", "日月旺衰": "pass", "原忌仇神": "pass", "动爻变爻": "pass", "飞伏": "pass（原神伏于空爻之下）", "旬空": "pass", "月破": "pass", "综合判断": "pass", "应期": "pass（取忌神逢值逢合推不利结果）", "古籍依据": "pass", "文字自然": "pass", "简详结论一致": "pass", "无虚构情节": "pass", "无机械重复": "pass", "版本与适用条件": "pass" },
-      "findings": ["修订 2：原稿称官星得日合为「被留住」，按增删卜易六合章静爻逢合为「合起」，已改为「被扶起之意」", "曾考虑艮为山之剥为本情境样本，因子孙化官、世逢月合，合于黄金策「福德变官身位合，亦忝科名」之例外而弃用"],
-      "open_questions_for_professional_review": ["千金赋「合遭破以无功」用于静官得日合而被动爻冲开，是否贴切", "以忌神逢值逢合推「不利结果落定」时点是否合传统用法"]
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "排盘事实": "pass",
+        "世应六亲": "pass",
+        "用神选择": "pass",
+        "日月旺衰": "pass",
+        "原忌仇神": "pass",
+        "动爻变爻": "pass",
+        "飞伏": "pass（原神伏于空爻之下）",
+        "旬空": "pass",
+        "月破": "pass",
+        "综合判断": "pass",
+        "应期": "pass（取忌神逢值逢合推不利结果）",
+        "古籍依据": "pass",
+        "文字自然": "pass",
+        "简详结论一致": "pass",
+        "无虚构情节": "pass",
+        "无机械重复": "pass",
+        "版本与适用条件": "pass"
+      },
+      "findings": [
+        "修订 2：原稿称官星得日合为「被留住」，按增删卜易六合章静爻逢合为「合起」，已改为「被扶起之意」",
+        "曾考虑艮为山之剥为本情境样本，因子孙化官、世逢月合，合于黄金策「福德变官身位合，亦忝科名」之例外而弃用"
+      ],
+      "open_questions_for_professional_review": [
+        "千金赋「合遭破以无功」用于静官得日合而被动爻冲开，是否贴切",
+        "以忌神逢值逢合推「不利结果落定」时点是否合传统用法"
+      ]
     },
     {
-      "record_id": "RV-0003", "script_id": "IP-0003", "stage": "author-full-text-review", "status": "completed",
+      "record_id": "RV-0003",
+      "script_id": "IP-0003",
+      "stage": "author-full-text-review",
+      "status": "completed",
       "content_hash": "dc41bbb1a0c519e7d3ca08598f2d5203b8f1c18e2edf41276029b5f2578a6f30",
-      "reviewer": "Claude（AI 作者自查，非独立审核）", "reviewed_at": "2026-11-13",
-      "checklist": { "排盘事实": "pass", "世应六亲": "pass", "用神选择": "pass", "日月旺衰": "pass", "原忌仇神": "pass", "动爻变爻": "pass（两动爻均已讲到）", "飞伏": "n/a", "旬空": "pass（巳火空破）", "月破": "pass", "综合判断": "pass", "应期": "pass", "古籍依据": "pass", "文字自然": "pass", "简详结论一致": "pass", "无虚构情节": "pass", "无机械重复": "pass", "版本与适用条件": "pass" },
-      "findings": ["逐句对照引擎事实，未发现事实错误"],
-      "open_questions_for_professional_review": ["官星亥月休囚，全凭日生、动生与化进而断有望，力度是否足够", "应爻子孙午火得日合起而安静，定为保留因素、不作否决，是否妥当", "世爻未土化父母子水（土帝旺于子，依增删卜易）作「文书随之而来」解是否可取"]
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "排盘事实": "pass",
+        "世应六亲": "pass",
+        "用神选择": "pass",
+        "日月旺衰": "pass",
+        "原忌仇神": "pass",
+        "动爻变爻": "pass（两动爻均已讲到）",
+        "飞伏": "n/a",
+        "旬空": "pass（巳火空破）",
+        "月破": "pass",
+        "综合判断": "pass",
+        "应期": "pass",
+        "古籍依据": "pass",
+        "文字自然": "pass",
+        "简详结论一致": "pass",
+        "无虚构情节": "pass",
+        "无机械重复": "pass",
+        "版本与适用条件": "pass"
+      },
+      "findings": [
+        "逐句对照引擎事实，未发现事实错误"
+      ],
+      "open_questions_for_professional_review": [
+        "官星亥月休囚，全凭日生、动生与化进而断有望，力度是否足够",
+        "应爻子孙午火得日合起而安静，定为保留因素、不作否决，是否妥当",
+        "世爻未土化父母子水（土帝旺于子，依增删卜易）作「文书随之而来」解是否可取"
+      ]
     },
     {
-      "record_id": "RV-0004", "script_id": "IP-0004", "stage": "author-full-text-review", "status": "completed",
+      "record_id": "RV-0004",
+      "script_id": "IP-0004",
+      "stage": "author-full-text-review",
+      "status": "completed",
       "content_hash": "534daa21feadc87b4c0bf8b589029f46d636b6832e9477a25392da769eab9bf3",
-      "reviewer": "Claude（AI 作者自查，非独立审核）", "reviewed_at": "2026-11-13",
-      "checklist": { "排盘事实": "pass", "世应六亲": "pass", "用神选择": "pass（用神不上卦，取伏神）", "日月旺衰": "pass", "原忌仇神": "pass", "动爻变爻": "n/a（静卦）", "飞伏": "pass（有用六条合四，无用五条皆不合）", "旬空": "pass（应爻未土）", "月破": "pass（子孙巳火）", "综合判断": "pass", "应期": "pass", "古籍依据": "pass", "文字自然": "pass", "简详结论一致": "pass", "无虚构情节": "pass", "无机械重复": "pass", "版本与适用条件": "pass" },
-      "findings": ["逐句对照引擎事实，未发现事实错误"],
-      "open_questions_for_professional_review": ["用神不现时一问一卦、取伏神而不再占（D-005），本应用是否接受", "伏神酉金本身亥月休囚而判有用，是否妥当"]
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "排盘事实": "pass",
+        "世应六亲": "pass",
+        "用神选择": "pass（用神不上卦，取伏神）",
+        "日月旺衰": "pass",
+        "原忌仇神": "pass",
+        "动爻变爻": "n/a（静卦）",
+        "飞伏": "pass（有用六条合四，无用五条皆不合）",
+        "旬空": "pass（应爻未土）",
+        "月破": "pass（子孙巳火）",
+        "综合判断": "pass",
+        "应期": "pass",
+        "古籍依据": "pass",
+        "文字自然": "pass",
+        "简详结论一致": "pass",
+        "无虚构情节": "pass",
+        "无机械重复": "pass",
+        "版本与适用条件": "pass"
+      },
+      "findings": [
+        "逐句对照引擎事实，未发现事实错误"
+      ],
+      "open_questions_for_professional_review": [
+        "用神不现时一问一卦、取伏神而不再占（D-005），本应用是否接受",
+        "伏神酉金本身亥月休囚而判有用，是否妥当"
+      ]
     },
     {
-      "record_id": "RV-0005", "script_id": "IP-0005", "stage": "author-full-text-review", "status": "completed",
+      "record_id": "RV-0005",
+      "script_id": "IP-0005",
+      "stage": "author-full-text-review",
+      "status": "completed",
       "content_hash": "cbc43f13e3bfd72289b5986614377cb6efd324c021b862355c3450d6cc4e693e",
-      "reviewer": "Claude（AI 作者自查，非独立审核）", "reviewed_at": "2026-11-13",
-      "checklist": { "排盘事实": "pass", "世应六亲": "pass", "用神选择": "pass", "日月旺衰": "pass", "原忌仇神": "pass", "动爻变爻": "n/a（静卦）", "飞伏": "n/a", "旬空": "pass（用神旬空，旬内暂空出旬可用）", "月破": "pass（父母巳火，正文未展开）", "综合判断": "pass", "应期": "pass", "古籍依据": "pass", "文字自然": "pass", "简详结论一致": "pass（修订：简断补明「悬而未决」）", "无虚构情节": "pass", "无机械重复": "pass", "版本与适用条件": "pass" },
-      "findings": ["构建核验指出简断未明示结论，已补「悬而未决」", "与 IP-0001 同卦同动静而日辰不同，用神空否、原神墓否、忌神生合与否三项不同，正文独立撰写"],
-      "open_questions_for_professional_review": ["旬空取增删卜易「出空可用」而不取黄金策「无故自空」（D-002），是否接受", "原神入日墓只作「助力暂被收住」，是否需要另出应期"]
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "排盘事实": "pass",
+        "世应六亲": "pass",
+        "用神选择": "pass",
+        "日月旺衰": "pass",
+        "原忌仇神": "pass",
+        "动爻变爻": "n/a（静卦）",
+        "飞伏": "n/a",
+        "旬空": "pass（用神旬空，旬内暂空出旬可用）",
+        "月破": "pass（父母巳火，正文未展开）",
+        "综合判断": "pass",
+        "应期": "pass",
+        "古籍依据": "pass",
+        "文字自然": "pass",
+        "简详结论一致": "pass（修订：简断补明「悬而未决」）",
+        "无虚构情节": "pass",
+        "无机械重复": "pass",
+        "版本与适用条件": "pass"
+      },
+      "findings": [
+        "构建核验指出简断未明示结论，已补「悬而未决」",
+        "与 IP-0001 同卦同动静而日辰不同，用神空否、原神墓否、忌神生合与否三项不同，正文独立撰写"
+      ],
+      "open_questions_for_professional_review": [
+        "旬空取增删卜易「出空可用」而不取黄金策「无故自空」（D-002），是否接受",
+        "原神入日墓只作「助力暂被收住」，是否需要另出应期"
+      ]
     },
     {
-      "record_id": "RV-0006", "script_id": "IP-0006", "stage": "author-full-text-review", "status": "completed",
+      "record_id": "RV-0006",
+      "script_id": "IP-0006",
+      "stage": "author-full-text-review",
+      "status": "completed",
       "content_hash": "2b4f6c468224d634da9a6d956e7e5f7a15a89405df5a4254f63a1a59ece717ab",
-      "reviewer": "Claude（AI 作者自查，非独立审核）", "reviewed_at": "2026-11-13",
-      "checklist": { "排盘事实": "pass", "世应六亲": "pass", "用神选择": "pass（两现取动）", "日月旺衰": "pass", "原忌仇神": "pass（忌神由变爻化出）", "动爻变爻": "pass", "飞伏": "pass（原神伏于用神之下）", "旬空": "pass（父母辰土，正文未展开）", "月破": "n/a", "综合判断": "pass", "应期": "pass", "古籍依据": "pass", "文字自然": "pass", "简详结论一致": "pass", "无虚构情节": "注意：「面试当场的表现或氛围并不差」系由官星临日推出的象意，已加「从卦象看」", "无机械重复": "pass", "版本与适用条件": "pass" },
-      "findings": ["逐句对照引擎事实，未发现事实错误"],
-      "open_questions_for_professional_review": ["临日帝旺与月建化出回头克并见，取「动为始、变为终」以变爻定结局，是否妥当", "以变爻逢值、克神逢生推不利结果时点，是否合传统用法"]
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "排盘事实": "pass",
+        "世应六亲": "pass",
+        "用神选择": "pass（两现取动）",
+        "日月旺衰": "pass",
+        "原忌仇神": "pass（忌神由变爻化出）",
+        "动爻变爻": "pass",
+        "飞伏": "pass（原神伏于用神之下）",
+        "旬空": "pass（父母辰土，正文未展开）",
+        "月破": "n/a",
+        "综合判断": "pass",
+        "应期": "pass",
+        "古籍依据": "pass",
+        "文字自然": "pass",
+        "简详结论一致": "pass",
+        "无虚构情节": "注意：「面试当场的表现或氛围并不差」系由官星临日推出的象意，已加「从卦象看」",
+        "无机械重复": "pass",
+        "版本与适用条件": "pass"
+      },
+      "findings": [
+        "逐句对照引擎事实，未发现事实错误"
+      ],
+      "open_questions_for_professional_review": [
+        "临日帝旺与月建化出回头克并见，取「动为始、变为终」以变爻定结局，是否妥当",
+        "以变爻逢值、克神逢生推不利结果时点，是否合传统用法"
+      ]
+    },
+    {
+      "record_id": "RV-0007",
+      "script_id": "*",
+      "stage": "external-feedback",
+      "status": "received",
+      "content_hash": null,
+      "reviewer": "用户",
+      "reviewed_at": "2026-11-13",
+      "findings": [
+        "IP-0002 伏神判断有误：飞神旬空是伏神易出的条件，不能断原神完全无力（P0）",
+        "IP-0005 正文「等这一旬过去」与旬内酉日冲空的应期冲突；临月建之原神入日墓需说明（P0）",
+        "IP-0006 未分析伏财寅木；「忌神子孙不上卦，唯由变爻化出」漏了伏神子水（P1）",
+        "IP-0004 复核日冲飞神的效力",
+        "文案：不写「官星代表录用」；对方态度与竞争情况不写成定论；总断正文去掉重复的结构标题",
+        "IP-0003 为文风基准候选，仍需校验引文与应期"
+      ],
+      "note": "这是用户的专业意见记录，不是批准；据此修订规则与六篇。"
+    },
+    {
+      "record_id": "RV-0008",
+      "script_id": "IP-0001",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "8aef5a001d4a5fb96760c92d9bb53c4a48ac71481a0943f39a37fc065531ccb4",
+      "checklist": {
+        "判别流程确认": "pass",
+        "排盘事实": "pass",
+        "古籍依据": "pass",
+        "简详结论一致": "pass",
+        "回答范围": "pass",
+        "措辞边界": "pass"
+      },
+      "findings": [
+        "按用户意见改：官鬼为本次求职考核的主要用神，不写录用；应爻生世改为传统配合之象；兄弟爻改为未见发动牵制；总断去结构标题",
+        "无判别流程项"
+      ],
+      "open_questions_for_professional_review": [
+        "面试按谋职看父母为辅（D-010）是否妥当"
+      ]
+    },
+    {
+      "record_id": "RV-0009",
+      "script_id": "IP-0002",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "d8d446157864485ca623236a62d26db729fa076cf020f3750ad92d14178a96d6",
+      "checklist": {
+        "判别流程确认": "pass",
+        "排盘事实": "pass",
+        "古籍依据": "pass",
+        "简详结论一致": "pass",
+        "回答范围": "pass",
+        "措辞边界": "pass"
+      },
+      "findings": [
+        "按判别流程重算伏神子水：伏神旺相、得酉金动生、飞神未土旬空为有用，受戌日克为无用，有用与无用并见，改为转机条件",
+        "主判仍为偏难：伏神静而未出不计入四处生克，子孙持世发动为求名明文之忌；新增分歧 D-013（伏藏原神受忌神动生能否接续相生）",
+        "核对：引文「伏神得动爻生者四」「飞神逢破墓衰空」均在飞伏神章"
+      ],
+      "open_questions_for_professional_review": [
+        "原神伏而有出伏之机时，是否仍维持偏难",
+        "D-013 的取法"
+      ]
+    },
+    {
+      "record_id": "RV-0010",
+      "script_id": "IP-0003",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "45ad731dcde57a9079460e184da998d1321609b7e9c2be51d7a7f7eff4821aae",
+      "checklist": {
+        "判别流程确认": "pass",
+        "排盘事实": "pass",
+        "古籍依据": "pass",
+        "简详结论一致": "pass",
+        "回答范围": "pass",
+        "措辞边界": "pass"
+      },
+      "findings": [
+        "古籍引文删去不适用的「官临日月必超迁」",
+        "应期复核：申日为起卦后第一天、酉日第二天，均在本旬；与「动而逢合逢值」「化进神、逢值逢合」相符",
+        "应位、兄弟爻措辞去绝对化"
+      ],
+      "open_questions_for_professional_review": [
+        "作为文风基准稿前，请复核引文与应期"
+      ]
+    },
+    {
+      "record_id": "RV-0011",
+      "script_id": "IP-0004",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "621b20a2714f37b42de9137915ce1d4613c5b8cf13c6887a3ea9c3b1e6c95aa3",
+      "checklist": {
+        "判别流程确认": "pass",
+        "排盘事实": "pass",
+        "古籍依据": "pass",
+        "简详结论一致": "pass",
+        "回答范围": "pass",
+        "措辞边界": "pass"
+      },
+      "findings": [
+        "补日冲飞神两家口径：增删卜易日破、卜筮正宗暗动，对出伏皆有利；简断「冲破」改「冲动」",
+        "应爻旬空只言暂无动静，不写对方动作"
+      ],
+      "open_questions_for_professional_review": [
+        "日冲休囚飞神取日破还是暗动（D-001）"
+      ]
+    },
+    {
+      "record_id": "RV-0012",
+      "script_id": "IP-0005",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "fc16f4dcc510d2096274ac0178735554dc890032e90839ffadfb0dab88fc2ec1",
+      "checklist": {
+        "判别流程确认": "pass",
+        "排盘事实": "pass",
+        "古籍依据": "pass",
+        "简详结论一致": "pass",
+        "回答范围": "pass",
+        "措辞边界": "pass"
+      },
+      "findings": [
+        "旬空与应期统一：本旬第五天酉日冲空可起，第十一天卯日出旬填实；删去「等这一旬过去才会见分晓」「本旬之内难有定论」",
+        "原神亥水临月建而墓于辰日、受日克，依月将章作月日相敌、无吉无凶，不判失效"
+      ],
+      "open_questions_for_professional_review": [
+        "冲空之日在旬内时，旬内冲起与出旬填实谁为主"
+      ]
+    },
+    {
+      "record_id": "RV-0013",
+      "script_id": "IP-0006",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "29643ca303b33124c2ed0d36c5e71c3d630d23994c355075d31cbd9ac82bd4ef",
+      "checklist": {
+        "判别流程确认": "pass",
+        "排盘事实": "pass",
+        "古籍依据": "pass",
+        "简详结论一致": "pass",
+        "回答范围": "pass",
+        "措辞边界": "pass"
+      },
+      "findings": [
+        "补析世下伏财寅木：得月建生合，伏而有用，伏去生飞，作缓冲；变爻之克只及本位动爻，伏财无从化解，不改主判",
+        "改正：本卦子孙不明现，另有伏神子水（受午日冲、墓于飞爻，难出）；二爻动化子孙亥水",
+        "补日辰章「寡不敌众，伤亦为伤」依据"
+      ],
+      "open_questions_for_professional_review": [
+        "伏财有用而生官，是否足以把「难以通过」改为「偏难」"
+      ]
     }
   ]
 }

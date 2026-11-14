@@ -6,6 +6,9 @@ import {
 } from './constants.js';
 import { analyzeChart } from './analysis.js';
 import { getQuestionRule } from './questions/index.js';
+import {
+  FLOWS_VERSION, assessHidden, assessVoid, assessMonthDay, assessChange,
+} from './flows.js';
 
 export const EVIDENCE_VERSION = 'evidence-0.1.0';
 
@@ -112,21 +115,43 @@ function candidateKey(line, facts, chart) {
   ];
 }
 
+/** 「择其旺者」细比（R-LIANGXIAN-03）：临月建 > 临日 > 得日生扶或长生帝旺于日 > 静而得合 */
+function finerStrength(line, facts) {
+  const c = facts.calendar;
+  return [
+    c.month.same ? 1 : 0,
+    c.day.same ? 1 : 0,
+    c.day.supports || c.day.lifeStage === '长生' || c.day.lifeStage === '帝旺' ? 1 : 0,
+    !line.moving && (c.month.combine || c.day.combine) ? 1 : 0,
+  ];
+}
+
+/**
+ * 多用神取法（判别流程）：
+ * ① 古法五项（R-LIANGXIAN-01）→ ② 择其旺者细比（R-LIANGXIAN-03）→
+ * ③ 地支相同、事实等价：持世者先、临应者次（项目补充，D-014）→ ④ 仍并列则标 ambiguous，由作者取舍。
+ */
 function selectYongshen(rel, chart, analysis) {
   const cands = chart.lines.filter((l) => l.relative === rel);
   if (cands.length === 0) return { status: 'absent', candidates: [] };
-  const keyed = cands.map((l) => ({ line: l, key: candidateKey(l, analysis.lines[l.position - 1], chart) }));
-  keyed.sort((a, b) => {
-    for (let i = 0; i < a.key.length; i += 1) if (a.key[i] !== b.key[i]) return b.key[i] - a.key[i];
-    return 0;
+  const cmp = (a, b) => { for (let i = 0; i < a.length; i += 1) if (a[i] !== b[i]) return b[i] - a[i]; return 0; };
+  const keyed = cands.map((l) => {
+    const f = analysis.lines[l.position - 1];
+    return { line: l, key: candidateKey(l, f, chart), finer: finerStrength(l, f) };
   });
-  const tie = keyed.length > 1 && keyed[0].key.join() === keyed[1].key.join();
-  return {
-    status: cands.length === 1 ? 'single' : tie ? 'ambiguous' : 'selected-by-rule',
-    selectedPosition: tie ? null : keyed[0].line.position,
-    candidates: keyed.map((k) => ({ position: k.line.position, criteria: { moving: k.key[0], strong: k.key[1], notBroken: k.key[2], notVoid: k.key[3], notHurt: k.key[4] } })),
-    ruleIds: cands.length > 1 ? ['R-LIANGXIAN-01'] : ['R-YONG-GUAN-01'],
-  };
+  keyed.sort((a, b) => cmp(a.key, b.key) || cmp(a.finer, b.finer));
+  const describe = (k) => ({ position: k.line.position, criteria: { moving: k.key[0], strong: k.key[1], notBroken: k.key[2], notVoid: k.key[3], notHurt: k.key[4] }, finer: { monthSame: k.finer[0], daySame: k.finer[1], daySupport: k.finer[2], combined: k.finer[3] } });
+  const base = { candidates: keyed.map(describe) };
+  if (cands.length === 1) return { ...base, status: 'single', selectedPosition: keyed[0].line.position, decidedBy: null, ruleIds: ['R-YONG-GUAN-01'] };
+  const [a, b] = keyed;
+  if (cmp(a.key, b.key) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '古法五项', ruleIds: ['R-LIANGXIAN-01'] };
+  if (cmp(a.finer, b.finer) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '择其旺者', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
+  const tied = keyed.filter((k) => cmp(k.key, a.key) === 0 && cmp(k.finer, a.finer) === 0);
+  if (tied.every((k) => k.line.branch === a.line.branch)) {
+    const pick = tied.find((k) => k.line.isWorld) || tied.find((k) => k.line.isResponse) || tied[0];
+    return { ...base, status: 'equivalent-pair', selectedPosition: pick.line.position, decidedBy: pick.line.isWorld ? '同支等价·取持世' : pick.line.isResponse ? '同支等价·取临应' : '同支等价·取下位', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
+  }
+  return { ...base, status: 'ambiguous', selectedPosition: null, decidedBy: null, ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
 }
 
 /** 元神忌神衰旺章：原神有力五条、无力六条；忌神有力五条、无力七条（R-YUANJI-01..04） */
@@ -333,6 +358,23 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     threeHarmonies: analysis.threeHarmonies.filter((h) => h.candidate).map((h) => `${h.branches.join('')}${h.element}局`),
   };
 
+  // 判别流程（src/flows.js）：飞伏、旬空、月日相敌、动化
+  const roleOf = (relative) => (relative === rel ? 'yong' : relative === roles.yuan ? 'yuan' : relative === roles.ji ? 'ji' : relative === roles.chou ? 'chou' : 'other');
+  const flows = [];
+  for (const l of chart.lines) {
+    if (l.hidden && ['yong', 'yuan', 'ji'].includes(roleOf(l.hidden.relative))) flows.push(assessHidden(l, lf(l), roleOf(l.hidden.relative)));
+  }
+  const keyLines = chart.lines.filter((l) => ['yong', 'yuan'].includes(roleOf(l.relative)) || l.isWorld);
+  for (const l of keyLines) {
+    const f = lf(l);
+    const role = l.isWorld && !['yong', 'yuan'].includes(roleOf(l.relative)) ? 'world' : roleOf(l.relative);
+    if (f.calendar.void) flows.push(assessVoid(l, f.calendar, chart, role));
+  }
+  for (const l of chart.lines.filter((x) => ['yong', 'yuan', 'ji'].includes(roleOf(x.relative)) || x.isWorld)) {
+    flows.push(...assessMonthDay(l, lf(l).calendar, chart, lf(l).change, l.isWorld && roleOf(l.relative) === 'other' ? 'world' : roleOf(l.relative)));
+  }
+  for (const l of chart.lines.filter((x) => x.moving)) flows.push(assessChange(l, lf(l), roleOf(l.relative)));
+
   return {
     version: EVIDENCE_VERSION,
     questionId,
@@ -351,6 +393,8 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     chou: roleLines(roles.chou, 'chou').map(({ effectiveness: _e, ...rest }) => rest),
     auxiliaryFumu: q.auxiliary_yongshen.some((a) => a.relative === '父母') ? chart.lines.filter((l) => l.relative === '父母').map((l) => describeLine(l, lf(l), chart)) : [],
     special,
+    flowsVersion: FLOWS_VERSION,
+    flows,
     timingCandidates: yong ? timingCandidates(yong, lf(yong), chart, SCALE_NEAR) : hiddenTiming(missing),
     adverseTimingCandidates: adverseTiming(chart, { ...roles, yong: rel }),
   };

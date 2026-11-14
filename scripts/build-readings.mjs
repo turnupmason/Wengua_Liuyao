@@ -9,6 +9,7 @@ import {
   xunVoid,
 } from '../src/index.js';
 import { digestOf } from '../src/hash.js';
+import { dayOffset } from '../src/flows.js';
 import { factsDigest, RELEASE_SCHEMA } from '../src/readings.js';
 
 const CONTENT_VERSION = 'liuyao-readings-0.1.0';
@@ -19,6 +20,11 @@ const reviewRecords = existsSync(join(ROOT, 'review/records.json')) ? JSON.parse
 
 const BANNED = ['用神旺，所以吉', '忌神克，所以凶', '存在一定帮助，但仍有阻碍', '综合各项因素', '情况比较复杂', '按规则加权', '加权计算', '这里不能重复叠加',
   '模型认为', '源力待核', '取最高评分', '评分', '还要综合考虑', '需要其他人进一步判断', '程序', '算法', '引擎', '概率', '保证', '必定通过', '百分之', 'R-', 'rule'];
+// 不得把对方态度、竞争情况写成既定事实
+const ABSOLUTE = ['对方也在', '对方对你', '对方认可', '对方满意', '对方犹豫', '招聘方', '面试官', '托举', '没有构成竞争压力', '竞争方面没有', '压不过来', '没有真正的阻碍'];
+const LABEL_PREFIX = /^(总断|简断|应期|开局|过程|结局|详断)[：:]/;
+const HIDDEN_DENIAL = ['找不到着力处', '引不出来', '引不出', '能救的力量也找不到', '完全无力', '帮不上忙'];
+const XUN_ABSOLUTE = ['等这一旬过去才', '本旬之内难有定论', '本旬之内不会', '旬内不会有', '本旬内无'];
 const TERMS = ['旬空', '月破', '日破', '回头克', '回头生', '进神', '退神', '伏神', '飞神', '原神', '忌神', '仇神', '暗动', '帝旺', '长生', '入墓', '化绝'];
 const VERDICTS = {
   'likely-pass': { need: ['倾向通过', '有望通过'], forbid: ['难以通过', '偏难', '可能偏低'] },
@@ -120,6 +126,31 @@ function check(src, chart, evidence) {
   // C13 动爻全覆盖
   const body = `${r.opening}${r.process}${r.ending}`;
   for (const l of chart.lines.filter((x) => x.moving)) if (!body.includes(`${l.branch}${l.element}`)) errors.push(`C13 动爻${l.label}${l.branch}${l.element}未在详断中讲到`);
+  // C17 判别流程逐项确认
+  const acks = new Map((j.flow_acknowledgements || []).map((a) => [a.flow_id, a]));
+  for (const f of evidence.flows) {
+    const a = acks.get(f.id);
+    if (!a) errors.push(`C17 判别流程 ${f.id} 未在 judgment.flow_acknowledgements 中确认`);
+    else if (a.accepted === false && !String(a.note || '').trim()) errors.push(`C17 不采用 ${f.id} 须写明理由`);
+  }
+  for (const id of acks.keys()) if (!evidence.flows.some((f) => f.id === id)) errors.push(`C17 确认了不存在的流程 ${id}`);
+  const userBody = Object.values(userTexts(r)).join('');
+  for (const f of evidence.flows.filter((x) => x.flow === 'hidden' && ['yong', 'yuan'].includes(x.role))) {
+    if (!userBody.includes('伏')) errors.push(`C17 ${f.id}（${f.role === 'yong' ? '用神' : '原神'}伏藏）正文未讲到伏神`);
+    if (f.emergence !== 'unlikely') for (const w of HIDDEN_DENIAL) if (userBody.includes(w)) errors.push(`C17 ${f.id} 判为「${f.emergence}」，正文却写「${w}」`);
+  }
+  for (const f of evidence.flows.filter((x) => x.flow === 'void' && x.role === 'yong')) {
+    const inXun = f.releases.find((rel) => rel.kind === '冲空' && rel.withinCurrentXun);
+    if (inXun) {
+      if (!(r.timing?.entries || []).some((e) => e.target_branch === inXun.branch)) errors.push(`C18 用神旬空而本旬内有${inXun.branch}日冲空，应期未列出`);
+      for (const w of XUN_ABSOLUTE) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C18 本旬内有冲空之日，正文却写「${w}」`);
+    }
+  }
+  // C19 结构标题与正文分开
+  for (const [k, v] of Object.entries({ ...userTexts(r), timing: r.timing?.text || '' })) if (LABEL_PREFIX.test(String(v).trim())) errors.push(`C19 ${k} 正文以结构标题开头`);
+  // C20 回答范围；C21 对方态度不写成事实
+  for (const w of getQuestionRule(src.question_id).forbidden_terms || []) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C20 超出回答范围的词「${w}」`);
+  for (const w of ABSOLUTE) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C21 把对方或竞争情况写成定论：「${w}」`);
   // C16 简断术语密度
   const termCount = TERMS.filter((t) => r.brief.includes(t)).length;
   if (termCount >= 3) warnings.push(`C16 简断术语偏多（${termCount} 个）`);
@@ -196,6 +227,8 @@ for (const { file, src } of loadAuthoring()) {
       calculation_explanation: src.reading.calculation_explanation,
     },
     calculation_facts: calculationFacts(chart, analysis, evidence),
+    flows: evidence.flows,
+    timing_resolution: (src.reading.timing?.entries || []).map((e) => ({ target_branch: e.target_branch, ...dayOffset(chart, e.target_branch) })),
     authoring: src.authoring,
     checks: { errors, warnings },
   };
