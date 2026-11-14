@@ -70,6 +70,8 @@ export function checkClassDraft(src, userTexts) {
       // 日月为用（R-FUSHEN-01）：用神即月建或日辰，作有利依据成立
       if (d.role === 'yong' && !lines.length && (evidence.yongshen.missing?.monthIsYong || evidence.yongshen.missing?.dayIsYong)) { if (d.effect === 'adverse') errors.push(`C33 样本 ${tag} 日月为用，不得作主要不利依据`); continue; }
       if (!lines.length) { errors.push(`C33 样本 ${tag} 无 ${d.role} 爻`); continue; }
+      // 世空世破（R-YONG-GUAN-07「世空世破官破官空，俱不得」、R-YONG-GUAN-04「官空世破，且让他人」）：须显式标 basis '空破'
+      if (d.role === 'world' && d.effect === 'adverse' && d.basis === '空破') { if (!(evidence.world.monthBreak || evidence.world.void)) errors.push(`C33 样本 ${tag} 世爻不空不破，不得以世空世破为主要不利依据`); continue; }
       // 用神当前无力本身即为主要不利依据（R-YUANJI-05「用神无根」）
       const ok = d.effect === 'adverse'
         ? (d.role === 'yong' ? lines.every((l) => l.state.state === 'INEFFECTIVE' || (l.change && (l.change.huitou === '回头克' || l.change.advance === '退神' || ['绝', '墓'].includes(l.change.lifeStage)))) : lines.some((l) => l.state.state === 'EFFECTIVE' && l.state.acts !== '静（不主动作用）'))

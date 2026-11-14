@@ -1291,8 +1291,14 @@
       "dispute_ids": [
         "D-006"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "增删卜易·月破章第二十七逐字核对：首句定义月建所冲为月破；第二句系「诸书」之说，野鹤随后修正，故引用时须标明为诸书之说，不单独作定论。"
+      }
     },
     {
       "rule_id": "R-YUEPO-02",
@@ -1314,8 +1320,14 @@
       "dispute_ids": [
         "D-006"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "增删卜易·月破章第二十七野鹤曰段逐字核对：动则能伤、出月不破、实破之日与合之日不破；惟静而不动又无日辰动爻生助者到底而破（原文「惟而不动」脱「静」字，照录）。本项目采用此说（D-006）。"
+      }
     },
     {
       "rule_id": "R-RIZHEN-01",
@@ -2391,7 +2403,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-07",
       "topic": "应期",
@@ -2405,7 +2417,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文「月破喜填」逐字见各门类应期总注章；月破之爻待填实（本支值日）或逢合之日，解释一致"
+      }
     },
     {
       "adoption": "adopted",
