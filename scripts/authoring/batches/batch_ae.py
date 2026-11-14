@@ -172,7 +172,7 @@ specs.append(dict(rank=369, id='IPC-0369', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。你坐的财在动，正生着官星；暗处有子孙，留心即可。主动推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-02', '子孙伏而有用', 0), ('R-WANG-02', '官星得扶', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-02', '子孙伏而有用', 0), ('R-WANG-02', '官星得扶', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-FUSHEN-01', 'R-SICHU-01'],
   calc='月建：子孙之五行 47%、财之五行 35%、官鬼之五行 18%；世爻皆妻财而发动（动平）。',
   adv='同 IPC-0341。'))

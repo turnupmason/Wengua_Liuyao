@@ -120,7 +120,7 @@ specs.append(dict(rank=542, id='IPC-0542', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知较容易到来；具体日子见排盘。',
   timing=[Y01()],
   conclusion='倾向通过。官星旺相，财在动、在生它，卦又逢六合。竞争在所难免，照常推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-HE-01', '卦逢六合', 2), ('R-YONG-XIONG-01', '兄弟为阻神', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-HE-01', '卦逢六合', 2), ('R-YONG-XIONG-01', '兄弟为阻神', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-GUA-CHONGHE-01', 'R-SHIYING-03', 'R-WANG-02'],
   calc='月建：官鬼之五行 52%、财之五行 48%；原神发动有力 100%；卦逢六合，应爻皆合世。',
   adv='同 IPC-0044。'))
@@ -192,7 +192,7 @@ specs.append(dict(rank=546, id='IPC-0546', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01('结果或通知到来', '持世之官鬼（安静）')],
   conclusion='倾向通过。财在动、在生你世上的官星，卦又变合。照常推进，竞争面前稳住即可。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-HE-01', '卦变六合', 2), ('R-SHIYING-03', '世爻受克', 1), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-HE-01', '卦变六合', 2), ('R-SHIYING-03', '世爻受克', 1), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-02', 'R-YONG-XIONG-01', 'R-WANG-02'],
   calc='月建：财之五行 58%、官鬼之五行 32%、父母之五行 11%；原神发动有力 100%；应爻：子孙克世 65%、妻财生世 35%。',
   adv='同 IPC-0165。'))

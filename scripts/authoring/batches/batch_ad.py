@@ -174,7 +174,7 @@ specs.append(dict(rank=357, id='IPC-0357', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01('结果或通知到来', '持世之官鬼（安静）')],
   conclusion='倾向通过。财局已成而生官，官星坐世，克官的子孙无力。照常推进即可。',
-  sources=[('R-SANHE-05', '合成财局财旺生官；局生世为吉', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-YONG-GUAN-02', '官鬼持世即许成名', 0), ('R-KONG-06', '冲空则实', 0), YQ],
+  sources=[('R-SANHE-05', '合成财局财旺生官；局生世为吉', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-YONG-GUAN-02', '官鬼持世即许成名', 0), ('R-KONG-06', '冲空则实', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-SANHE-01', 'R-YUANJI-04', 'R-YONG-XIONG-01'],
   calc='三合：妻财局已成局、局生世 100%；原神发动有力。',
   adv='同 IPC-0253。'))

@@ -193,7 +193,7 @@ specs.append(dict(rank=534, id='IPC-0534', verdict='pass-but-slow', label='有�
   timing_text='官星伏藏，按「伏神逢值」：伏官本支值日之日前后，官星出伏，结果渐明；具体日子见排盘。',
   timing=[YFU],
   conclusion='有望通过，但要待时。官星伏着，你坐的财在动、在生它。主动推进，等官星出伏。',
-  sources=[('R-FUSHEN-02', '伏而有用', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-YONG-GUAN-03', '财动生官', 0)],
+  sources=[('R-FUSHEN-02', '伏而有用', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-YONG-GUAN-03', '财动生官', 0)],
   extra_rules=['R-YONG-GUAN-01', 'R-FUSHEN-01', 'R-SHIYING-03'],
   calc='月建：财之五行 58%、父母之五行 42%；世爻皆妻财而发动（动平）；伏神：用神有用、忌神难出 100%。',
   adv='反方：原神持世动而有力，可判倾向——用神不上卦，须待出伏；同 IPC-0405 判有望而待时。'))

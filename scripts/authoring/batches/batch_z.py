@@ -23,7 +23,7 @@ specs.append(dict(rank=301, id='IPC-0301', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01()],
   conclusion='倾向通过。财动来生，官星有根；卦变六冲，过程会有反复，保持耐心。',
-  sources=[('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), ('R-YUANJI-04', '子孙无力', 0), ('R-WANG-02', '官星有气', 0), YQ],
+  sources=[('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), ('R-YUANJI-04', '子孙无力', 0), ('R-WANG-02', '官星有气', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-03', 'R-GUA-CHONGHE-01', 'R-SANMU-01'],
   calc='发动六亲：妻财 100%（原神发动有力）；卦变六冲。',
   adv='反方：变冲主散，应判待时——用神有气、原神动生，「用神旺虽冲不破」；判倾向，写明波折。'))

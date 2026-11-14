@@ -98,7 +98,7 @@ specs.append(dict(rank=341, id='IPC-0341', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。你坐的财在动，正生着官星；暗处的子孙和卦变六冲让过程多些反复。主动推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-02', '子孙伏而有用', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-02', '子孙伏而有用', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-FUSHEN-01', 'R-GUA-CHONGHE-01'],
   calc='世爻皆妻财而发动；发动六亲：妻财 100%；卦变六冲。',
   adv='反方：忌神伏而有用、卦变六冲，可判待时——原神持世动而有力，生官之力实在；判倾向，正文写明防暗伏与反复。'))

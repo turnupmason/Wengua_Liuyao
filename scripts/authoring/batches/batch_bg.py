@@ -101,7 +101,7 @@ specs.append(dict(rank=692, id='IPC-0697', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。你坐的财在动、在生官，父母局又已合成。主动推进即可。',
-  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-SANHE-06', '官父世爻合成父局官局，不遇日月冲破者，定许连登', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-SANHE-06', '官父世爻合成父局官局，不遇日月冲破者，定许连登', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-SANHE-01', 'R-SANHE-05', 'R-SANMU-01'],
   calc='月建：父母之五行 37%、官鬼之五行 35%、财之五行 28%；世爻皆妻财而发动（化长生 75%）；三合：父母局已成局、世在局 100%。',
   adv='同 IPC-0160；父局已成，加强有利。'))
@@ -173,7 +173,7 @@ specs.append(dict(rank=696, id='IPC-0701', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。财在动、在生官，克官的子孙出不来，卦又逢六合。照常推进即可。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-HE-01', '卦逢六合', 2), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-HE-01', '卦逢六合', 2), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-FUSHEN-01', 'R-GUA-CHONGHE-01', 'R-YONG-XIONG-01'],
   calc='月建：官鬼之五行 55%、财之五行 42%、父母之五行 3%；原神发动有力 100%；世爻皆官鬼（另一爻）；卦逢六合，应爻皆兄弟而合世。',
   adv='同 IPC-0488。'))

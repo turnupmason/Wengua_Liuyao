@@ -48,7 +48,7 @@ specs.append(dict(rank=374, id='IPC-0374', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果较容易出来；官星入墓，按「入三墓俱喜冲开」，冲开墓库之日也是落定之时。具体日子见排盘。',
   timing=[Y01(), ('R-YINGQI-05', 'favorable', '墓开而事成', '入墓之官鬼', '入墓：喜冲开', '冲墓库之日')],
   conclusion='倾向通过。财动生官，克官的子孙出不来；官星暂在墓中，冲开即见分晓。',
-  sources=[('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-SANMU-01', '入动墓', 0), ('R-YINGQI-05', '入三墓俱喜冲开', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), YQ],
+  sources=[('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-SANMU-01', '入动墓', 0), ('R-YINGQI-05', '入三墓俱喜冲开', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-03', 'R-FUSHEN-01', 'R-LIANGXIAN-03'],
   calc='发动六亲：妻财父母 81%、妻财 19%；用神入动墓 100%（兼入日墓 19%，皆非真墓）。',
   adv='同 IPC-0324。'))

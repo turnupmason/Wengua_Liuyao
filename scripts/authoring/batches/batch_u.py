@@ -97,7 +97,7 @@ specs.append(dict(rank=245, id='IPC-0245', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01()],
   conclusion='倾向通过。财动来生，官星有气，卦又六合。照常推进即可。',
-  sources=[('R-HE-01', '凡得诸合，诸占皆以为吉', 2), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-KONG-06', '冲空则实', 0), YQ],
+  sources=[('R-HE-01', '凡得诸合，诸占皆以为吉', 2), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-KONG-06', '冲空则实', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-WANG-02', 'R-HE-02'],
   calc='原神发动有力 100%；忌神无力 100%。',
   adv='同 IPC-0010。'))

@@ -28,7 +28,7 @@ specs.append(dict(rank=640, id='IPC-0645', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。财在动、在生两爻官星，克官的子孙还伏着。抓紧推进，早些落定。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-02', '子孙伏而待时（B-009）', 0), ('R-LIANGXIAN-03', '两官同支', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-02', '子孙伏而待时（B-009）', 0), ('R-LIANGXIAN-03', '两官同支', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-FUSHEN-01', 'R-SANMU-01', 'R-SHIYING-03'],
   calc='月建：财之五行 41%、兄弟之五行 24%、子孙之五行 19% 等；原神发动有力 100%；伏神：忌神待时 100%。',
   adv='同 IPC-0071。'))
@@ -155,7 +155,7 @@ specs.append(dict(rank=647, id='IPC-0652', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01('结果或通知到来', '持世之官鬼（安静）')],
   conclusion='倾向通过。财在动、在生你世上的官星，克官的子孙还伏着。抓紧推进，早些落定。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-02', '子孙伏而待时（B-009）', 0), ('R-LIANGXIAN-03', '两官同支', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-02', '子孙伏而待时（B-009）', 0), ('R-LIANGXIAN-03', '两官同支', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-02', 'R-FUSHEN-01', 'R-SHIYING-03', 'R-SANMU-01'],
   calc='月建：兄弟之五行 51%、财之五行 36%、父母之五行 8% 等；原神发动有力 100%；伏神：忌神待时 100%；应爻皆妻财而生世。',
   adv='同 IPC-0549。'))

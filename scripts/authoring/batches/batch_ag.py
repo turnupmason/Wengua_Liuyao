@@ -155,7 +155,7 @@ specs.append(dict(rank=392, id='IPC-0392', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01('结果或通知到来', '持世之官鬼（安静）')],
   conclusion='倾向通过。应位的财动来生你持世的官星；暗处有子孙，留心即可。主动推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-SHIYING-03', '世应相生', 0), ('R-FUSHEN-02', '子孙伏而有用', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-SHIYING-03', '世应相生', 0), ('R-FUSHEN-02', '子孙伏而有用', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-02', 'R-FUSHEN-01', 'R-LIANGXIAN-03'],
   calc='发动六亲：妻财 100%；应爻生世 100%。',
   adv='同 IPC-0341。'))

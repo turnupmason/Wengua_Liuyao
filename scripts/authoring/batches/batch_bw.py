@@ -70,7 +70,7 @@ specs.append(dict(rank=883, id='IPC-0887', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01('结果或通知到来', '持世之官鬼（安静）')],
   conclusion='倾向通过。官星坐世，官局已成，生官的财在动。放手推进。',
-  sources=[('R-SANHE-05', '如占功名合成官局谓之官旺', 0), ('R-SANHE-05', '必要世爻在局为美', 2), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-YUANJI-04', '子孙无力', 0), YQ],
+  sources=[('R-SANHE-05', '如占功名合成官局谓之官旺', 0), ('R-SANHE-05', '必要世爻在局为美', 2), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-YUANJI-04', '子孙无力', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-02', 'R-SANHE-01', 'R-SANMU-01', 'R-SHIYING-03'],
   calc='月建：财之五行 56%、官鬼之五行 24%、父母之五行 20%；用神三层判定有效 100%（入动墓 48%、兼入日墓 12%）；原神发动有力；三合：官鬼局已成、世在局 100%。',
   adv='反方：官星入动墓，可判待时——动墓即生官之财，官局已成，三层判定有效；判倾向。'))
@@ -88,7 +88,7 @@ specs.append(dict(rank=884, id='IPC-0888', verdict='wait-then-likely', label='�
   timing_text='官星伏藏，按伏神逢值之法：伏官本支值日之日前后，官星较易出伏、事情见分晓；具体日子见排盘。',
   timing=[YFU],
   conclusion='眼下悬而未决，官星一出伏便有望。它伏而有气，财又在动。耐心等时机，过程中多盯一盯。',
-  sources=[('R-FUSHEN-02', '伏神待时（B-009）', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-CHONG-01', '卦变六冲', 0), YQ],
+  sources=[('R-FUSHEN-02', '伏神待时（B-009）', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-CHONG-01', '卦变六冲', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-FUSHEN-01', 'R-FUSHEN-05', 'R-GUA-CHONGHE-01', 'R-SHIYING-03'],
   calc='月建：财之五行 72%、父母之五行 28%；伏神：用神待时 100%；原神发动有力；忌神无力 100%；动后变六冲。',
   adv='同 IPC-0561。'))

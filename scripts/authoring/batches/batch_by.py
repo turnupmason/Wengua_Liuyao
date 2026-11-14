@@ -161,7 +161,7 @@ specs.append(dict(rank=912, id='IPC-0916', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。坐世之财动而化长生，官星得它相生又有气。竞争和起伏都有，照常推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-SHIYING-03', 'R-WANG-02', 'R-GUA-CHONGHE-01', 'R-SANHE-01', 'R-SANMU-01'],
   calc='月建：父母之五行 45%、财之五行 37%、官鬼之五行 18%；用神三层判定有效 100%（入日墓 21%）；世爻皆妻财，发动化长生 100%；动后变六冲；三合：父母局已成（世克局）。',
   adv='同 IPC-0843。'))

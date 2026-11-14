@@ -30,7 +30,7 @@ specs.append(dict(rank=549, id='IPC-0549', verdict='likely-pass', label='倾向�
   timing_text='官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果或通知最容易到来；具体日子见排盘。',
   timing=[Y01('结果或通知到来', '持世之官鬼（安静）')],
   conclusion='倾向通过。财在动、在生你世上的官星，克官的子孙出不来。照常推进即可。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-LIANGXIAN-03', '两官同支', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-FUSHEN-03', '子孙伏而难出', 0), ('R-LIANGXIAN-03', '两官同支', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-YONG-GUAN-02', 'R-FUSHEN-01', 'R-SHIYING-03', 'R-WANG-02'],
   calc='月建：财之五行 62%、官鬼之五行 28%、父母之五行 10%；原神发动有力 100%；应爻皆妻财而生世。',
   adv='同 IPC-0047。'))
@@ -66,7 +66,7 @@ specs.append(dict(rank=551, id='IPC-0551', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。你坐的财在动、在生官，克官的子孙无力。主动推进即可。',
-  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-SANMU-01', '入日墓', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-YUANJI-04', '子孙无力', 0), ('R-SANMU-01', '入日墓', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-SHIYING-03', 'R-WANG-02'],
   calc='月建：官鬼之五行 48%、财之五行 37%、父母之五行 15%；世爻皆妻财而发动（动平）；用神日绝 22%、入日墓 12%（三层判定皆有效）。',
   adv='同 IPC-0160。'))
@@ -193,7 +193,7 @@ specs.append(dict(rank=558, id='IPC-0558', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01()],
   conclusion='倾向通过。财在动、在生官，卦虽逢冲，官星不散。过程有波折，照常推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), ('R-YUANJI-04', '子孙无力', 0), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-CHONG-01', '用神旺虽冲不破', 1), ('R-YUANJI-04', '子孙无力', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-GUA-CHONGHE-01', 'R-SANHE-01', 'R-SHIYING-03'],
   calc='月建：官鬼之五行 41%、父母之五行 38%、财之五行 20%；原神发动有力 100%；卦逢六冲，应爻皆冲世；三合：父母局已成局（参看）100%。',
   adv='同 IPC-0301；六冲而用神有气，结论不变。'))

@@ -85,7 +85,7 @@ specs.append(dict(rank=932, id='IPC-0936', verdict='unlikely', label='偏难通�
   timing_text=BAD,
   timing=[Y01('结果或消息落定')],
   conclusion='这一轮偏难通过。你世上的财一动，卦由合变冲，有始无终。别把希望全押在这一处。',
-  sources=[('R-CHONG-01', '六合卦变六冲卦者，始吉终凶', 1), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-HE-01', '卦逢六合', 2), ('R-DONGJING-01', '子孙静而当令', 0), YQ],
+  sources=[('R-CHONG-01', '六合卦变六冲卦者，始吉终凶', 1), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-HE-01', '卦逢六合', 2), ('R-DONGJING-01', '子孙静而当令', 0), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-GUA-CHONGHE-01', 'R-YONG-GUAN-03', 'R-WANG-02', 'R-SHIYING-03'],
   calc='结构：全类月建为子孙之五行；用神月克 100%（三层判定有效）；世爻皆妻财，发动化帝旺 81%、化平 19%；卦由六合变六冲 100%。',
   adv='同 IPC-0808。'))
@@ -139,7 +139,7 @@ specs.append(dict(rank=935, id='IPC-0939', verdict='likely-pass', label='倾向�
   timing_text=FAST,
   timing=[Y01('结果或通知到来', '应位之官鬼（安静）')],
   conclusion='倾向通过。你世上的财在动，正生着对面的官星。过程有起伏，照常推进。',
-  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-YUANJI-01', '元神发动有力能生用神', 0), ('R-HUA-01', '化回头生为吉、化绝为凶', 1), ('R-HE-01', '卦变六合', 2), YQ],
+  sources=[('R-YONG-GUAN-03', '财动生官得美缺', 0), ('R-YUANJI-01', '元神能生用神者有五（财动有力）', 0), ('R-HUA-01', '化回头生为吉、化绝为凶', 1), ('R-HE-01', '卦变六合', 2), YQ],
   extra_rules=['R-YONG-GUAN-01', 'R-SHIHUA-01', 'R-SHIYING-03', 'R-RIZHEN-02'],
   calc='月建：财之五行 71%、官鬼之五行 29%；用神三层判定有效 100%（日克 50%）；世爻皆妻财，动化回头生兼绝 100%；动后变出六合。',
   adv='同 IPC-0286。'))
