@@ -257,11 +257,18 @@ for (const { file, src } of loadAuthoring()) {
     checks: { errors, warnings },
   };
   entry.content_hash = contentHash(entry);
+  // 发布条件「所用规则已经批准」：所用规则须 ai-verified 或用户裁定，且不涉未裁定之分歧
+  const usedRules = [...new Set([...(src.judgment.rule_ids || []), ...(src.reading.classical_sources || []).map((c) => c.rule_id), ...((src.reading.timing?.entries) || []).map((e) => e.timing_rule_id)])].filter((x) => /^R-/.test(x));
+  const openDisputes = new Set(register.disputes.filter((x) => x.status === 'open').map((x) => x.dispute_id));
+  const ruleById = new Map(register.rules.map((x) => [x.rule_id, x]));
+  entry.rules_used = usedRules.map((id) => ({ id, status: ruleById.get(id)?.review_status ?? 'missing', open_disputes: (ruleById.get(id)?.dispute_ids || []).filter((x) => openDisputes.has(x)) }));
+  entry.rules_unapproved = entry.rules_used.filter((x) => !['ai-verified', 'user-approved'].includes(x.status) || x.open_disputes.length).map((x) => `${x.id}(${x.status}${x.open_disputes.length ? `；未裁定 ${x.open_disputes.join('、')}` : ''})`);
   entry.statuses = {
     authoring_status: src.authoring.status,
     technical_review_status: errors.length ? 'failed' : 'passed',
     ...statusesFor(reviewRecords, src.script_id, entry.content_hash),
   };
+  if (entry.statuses.approval_status === 'AI_APPROVED' && entry.rules_unapproved.length) { entry.statuses.approval_status = 'REVIEW_REQUIRED'; entry.statuses.production_allowed = false; entry.statuses.blocked_by_rules = entry.rules_unapproved; }
   if (entry.statuses.approval_status !== 'REVIEW_REQUIRED' && errors.length) { entry.statuses.approval_status = 'REVIEW_REQUIRED'; entry.statuses.production_allowed = false; entry.statuses.blocked_by_checks = true; }
   built.push({ entry, chart, analysis, evidence });
   for (const e of errors) allErrors.push(`${src.script_id}: ${e}`);
