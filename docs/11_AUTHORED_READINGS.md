@@ -55381,7 +55381,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用伏难出;世世安;原静不作用;忌动有力;变合`（interview-pass-eq-0.12.5）；内容哈希 `6557a5476f65d051…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、子孙发动、动后变出六合
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天水讼之天地否，巳月癸丑日
@@ -55433,7 +55433,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]化凶;世世受克;原伏待时;忌静不作用`（interview-pass-eq-0.12.5）；内容哈希 `8b8c40e88204db4c…`
 - 结论类别：偏难通过；情境：官星得生而动化回头克、原神伏而待时、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之雷风恒，卯月丁酉日
@@ -55483,9 +55483,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;原无力;忌静不作用;六合`（interview-pass-eq-0.12.5）；内容哈希 `8e1751ad7430d18c…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;原无力;忌静不作用;六合`（interview-pass-eq-0.12.5）；内容哈希 `8a64d3cfff2696b4…`
 - 结论类别：偏难通过；情境：官星泄气无扶、父母当令、六合卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 failed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽水困之雷水解，辰月辛酉日
@@ -55497,7 +55497,7 @@
 初爻 白虎 妻财戊寅木世
 ```
 
-**简断**　这一卦偏难通过。起卦这个月父母当令，官生父母，气被泄去，又无扶持，官星无力。卦逢六合，应位合着你，看着和顺；可乡试章说六合要官父世爻得地，官星失陷，合也无益。你世上的财失令，兄弟又常在动，生官之源也弱。
+**简断**　这一卦偏难通过。这个月父母当令，官星把气都生给了父母，自己又没人扶，撑不起来。卦逢六合，应位合着你，看着和顺；可乡试章说六合要官父世爻得地，官星失陷，合也无益。你世上的财失令，兄弟又常在动，生官之源也弱。
 
 **详断·开局**
 
@@ -55531,15 +55531,13 @@
 
 **计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1076 类，占起卦概率 0.008%，全类 69 盘）：用神「明现[INEFFECTIVE]静」；世爻「世受克」；原神妻财当前无力（INEFFECTIVE）；忌神子孙安静而月令不旺，不主动作用；卦级「六合」。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：应爻对世：生世、合世(72%)、克世、合世(26%)、世克之、合世(1%)；发动六亲：兄弟(57%)、父母(30%)、兄弟兄弟(13%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行；用神三层判定无力 100%（日破日绝 9%、日绝旬空 3%）；世爻皆妻财（无力）；卦逢六合。
 
-**核验提示**　C14 与 IPC-1012 重复句：起卦这个月父母当令，官生父母，气被泄去，又无扶持，官星无力
-
 ## IPC-1080　倾向通过：坐世的官星得财动之生，墓中有养
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静不作用;变冲`（interview-pass-eq-0.12.5）；内容哈希 `c4076e9ccf29335c…`
 - 结论类别：倾向通过；情境：官鬼持世入财之动墓而得生、财动生官、动后变六冲
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷风恒之雷天大壮，未月甲午日
@@ -55592,7 +55590,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;原静旺有力;忌伏有效;六合`（interview-pass-eq-0.12.5）；内容哈希 `cbf16c86f3a59cfb…`
 - 结论类别：有望通过，但要待时；情境：官星有效、财持世而旺、忌神伏而有用、六合卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天地否之泽地萃，寅月丙申日
@@ -55642,9 +55640,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;原静旺有力;忌静旺有力;六冲`（interview-pass-eq-0.12.5）；内容哈希 `f0eac20bcfa013f3…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;原静旺有力;忌静旺有力;六冲`（interview-pass-eq-0.12.5）；内容哈希 `3cfc5d5ad93ae3bb…`
 - 结论类别：偏难通过；情境：官星受月克而无力、子孙当令、六冲卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 failed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷天大壮，酉月庚子日
@@ -55656,7 +55654,7 @@
 初爻 白虎 妻财甲子水应
 ```
 
-**简断**　这一卦偏难通过。起卦这个月子孙当令，月建克官，日辰有时也来破、绝，官星无力；克官的子孙当令。生官的财得相，静着，生不起无根之官。卦逢六冲，应位冲着你，卦中无一爻动。
+**简断**　这一卦偏难通过。起卦这个月子孙当令，月建克官，日辰有时也来破、绝，官星无力；克官的子孙当令。生官的财得相，静着，生不起无根之官。六冲之卦，世应相冲，卦里又一爻不动，没有转圜的力量。
 
 **详断·开局**
 
@@ -55690,15 +55688,13 @@
 
 **计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1079 类，占起卦概率 0.008%，全类 21 盘）：用神「明现[INEFFECTIVE]静」；世爻「世受克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙静而旺相，有力（只作用于休囚之爻）；卦级「六冲」。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：日生(33%)、无(24%)、日生、日长生(19%)、日扶(19%)；世爻六亲：父母(57%)、妻财(24%)、兄弟(19%)；应爻对世：与世比和、冲世(62%)、克世、冲世(19%)、世克之、冲世(19%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行；用神月克 100%（兼日破日绝 10%、日绝旬空 5%），三层判定无力 100%；卦逢六冲；无动爻 100%。
 
-**核验提示**　C14 与 IPC-1018 重复句：卦逢六冲，应位冲着你，卦中无一爻动
-
 ## IPC-1083　偏难通过：两官受月克，财生不起
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世受克;原静旺有力;忌伏待时`（interview-pass-eq-0.12.5）；内容哈希 `f53bc9f23a53a75b…`
+- 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世受克;原静旺有力;忌伏待时`（interview-pass-eq-0.12.5）；内容哈希 `543bed6f47011567…`
 - 结论类别：偏难通过；情境：官鬼同支两现受月克、子孙当令、财旺而静
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 failed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过之泽山咸，午月庚戌日
@@ -55726,7 +55722,7 @@
 
 **详断·结局**
 
-两官受月克而无根，这一轮通过的可能偏低。
+两爻官星都被当令的子孙压着，财再旺也生不起来，这一轮通过的可能偏低。
 
 **应期**　官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。
 
@@ -55744,15 +55740,13 @@
 
 **计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1080 类，占起卦概率 0.008%，全类 35 盘）：用神「同支两现[INEFFECTIVE]静」；世爻「世受克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙不上卦，伏而待时。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：无(46%)、日生(34%)、妻财动来生(9%)、日生、日长生(6%)；世爻六亲：父母(54%)、妻财(46%)；应爻对世：与世比和(46%)、克世(43%)、世克之(11%)；发动六亲：父母(51%)、无(40%)、妻财(9%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行；用神月克 100%（兼日绝 26%、日破 26%），三层判定无力 100%；原神静而得相；伏神：忌神待时 100%。
 
-**核验提示**　C14 与 IPC-0958 重复句：两官受月克而无根，这一轮通过的可能偏低
-
 ## IPC-1084　偏难通过：官星受月克，当令的子孙坐在你世上
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安子孙;原静旺有力;忌静旺有力`（interview-pass-eq-0.12.5）；内容哈希 `373cef65b0a4dd30…`
 - 结论类别：偏难通过；情境：官星受月克、子孙持世当令、卦无动爻
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水天需，酉月丁酉日
@@ -55804,7 +55798,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用日月为用;世世安;原无力;忌静不作用`（interview-pass-eq-0.12.5）；内容哈希 `f2a6f2200b158922…`
 - 结论类别：倾向通过；情境：月建为官、日月为用、原忌皆不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风火家人，申月癸酉日
@@ -55852,9 +55846,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE旬空]静;世世安;原无力;忌无力;六合`（interview-pass-eq-0.12.5）；内容哈希 `ad4a23a805331919…`
+- 匹配键：等价类 `用明现[INEFFECTIVE旬空]静;世世安;原无力;忌无力;六合`（interview-pass-eq-0.12.5）；内容哈希 `f9587224aa7b7221…`
 - 结论类别：偏难通过；情境：官星泄气而旬空、父母当令、六合卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 failed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽水困，丑月壬辰日
@@ -55876,7 +55870,7 @@
 
 **详断·过程**
 
-升迁何方章「世空世破官破官空，俱不得」；有气之空可待，无助之空出旬也难起。
+官星失令又空，空得没有底气，升迁何方章把这种官空列在「俱不得」里。
 
 乡试章讲六合要官父世爻得地，这一卦官星失陷，合也无益；财无力，也没有生官之源。
 
@@ -55900,15 +55894,13 @@
 
 **计算说明**　本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1083 类，占起卦概率 0.008%，全类 25 盘）：用神「明现[INEFFECTIVE旬空]静」；世爻「世安」；原神妻财当前无力（INEFFECTIVE）；忌神子孙当前无力（INEFFECTIVE）；卦级「六合」。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：世爻六亲：妻财(64%)、兄弟(36%)；应爻对世：生世、合世(56%)、世生之、合世(36%)、克世、合世(8%)；发动六亲：无(76%)、父母(24%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行；用神旬空 100%（静空无助 84%、真空 16%），三层判定无力 100%；卦逢六合。
 
-**核验提示**　C14 与 IPC-1033 重复句：升迁何方章「世空世破官破官空，俱不得」；有气之空可待，无助之空出旬也难起
-
 ## IPC-1087　倾向通过：两官当令，卦虽六冲也冲不散
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原静不作用;忌无力;六冲`（interview-pass-eq-0.12.5）；内容哈希 `83952d2a8f227750…`
 - 结论类别：倾向通过；情境：官鬼同支两现而当令、六冲卦、卦无动爻
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：坎为水，申月癸未日
@@ -55960,7 +55952,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世空无气世受克;原无力;忌静旺有力;六合`（interview-pass-eq-0.12.5）；内容哈希 `8181db23428bc559…`
 - 结论类别：偏难通过；情境：世爻旬空而无气、官星失令而得扶、六合卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地雷复之雷火丰，未月癸亥日
