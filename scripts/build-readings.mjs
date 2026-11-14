@@ -125,6 +125,13 @@ function check(src, chart, evidence) {
     if (!ruleIds.has(c.rule_id)) errors.push(`C12 古籍依据引用未登记规则 ${c.rule_id}`);
     if (!quoteFound(c.source_book, c.source_chapter, c.quote)) errors.push(`C12 引文未在 ${c.source_book}·${c.source_chapter} 找到：${c.quote}`);
     if (!c.applies_because) errors.push(`C12 ${c.rule_id} 缺本次适用理由`);
+    const reg = register.rules.find((x) => x.rule_id === c.rule_id);
+    if (reg) {
+      const nq = c.quote.replace(/[\s，。、；：？！“”‘’「」﹐﹑﹔﹕﹖·…—]/g, '');
+      const pool = reg.original_text.map((t) => t.replace(/[\s，。、；：？！“”‘’「」﹐﹑﹔﹕﹖·…—]/g, '')).join('|');
+      let overlap = false; for (let i = 0; i + 6 <= nq.length; i += 1) if (pool.includes(nq.slice(i, i + 6))) { overlap = true; break; }
+      if (reg.source_book !== c.source_book || !overlap) errors.push(`C12 引文与规则编号不对应：${c.rule_id}「${c.quote}」`);
+    }
   }
   for (const id of j.rule_ids || []) if (!ruleIds.has(id) && !/^R-YINGQI-\d+$/.test(id)) errors.push(`C15 判断引用未登记规则 ${id}`);
   // C13 动爻全覆盖
@@ -253,7 +260,7 @@ for (const { file, src } of loadAuthoring()) {
     },
     calculation_facts: calculationFacts(chart, analysis, evidence),
     flows: evidence.flows,
-    timing_resolution: (src.reading.timing?.entries || []).map((e) => ({ target_branch: e.target_branch, ...dayOffset(chart, e.target_branch) })),
+    timing_resolution: (src.reading.timing?.entries || []).map((e) => (e.time_scale === 'month' ? { target_branch: e.target_branch, time_scale: 'month' } : { target_branch: e.target_branch, ...dayOffset(chart, e.target_branch) })),
     authoring: src.authoring,
     checks: { errors, warnings },
   };

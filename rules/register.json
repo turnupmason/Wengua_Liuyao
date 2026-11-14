@@ -494,7 +494,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.2.0",
       "rule_id": "R-FUSHEN-07",
       "topic": "飞伏生克",
@@ -508,7 +508,13 @@
       "exceptions": "",
       "engine_refs": [
         "src/flows.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于卜筮正宗·三十六、飞伏生克吉凶歌（L152），AI-2 已与卜筮正宗全书、卜筮全书、古今图书集成本互校。解释四句准确（伏去生飞为伏神泄气）。"
+      }
     },
     {
       "adoption": "adopted",
@@ -622,8 +628,14 @@
       "dispute_ids": [
         "D-010"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于卷三署印谋差章第六十一（L2695）。解释准确；同章后句「衰世随鬼入墓，世动化克化鬼，子孙兄弟持世，谋署谋差，自投罗网」可补入相关条文。D-018 指定为面试主章。"
+      }
     },
     {
       "rule_id": "R-YONG-GUAN-05",
@@ -654,7 +666,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YONG-GUAN-06",
       "topic": "求名·官化进神",
@@ -669,11 +681,17 @@
       "engine_refs": [],
       "dispute_ids": [
         "D-019"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "「世爻发动﹐官化进神﹐望荣除而在即」逐字见于卷三升选候补章又第五十五（L2612），后接「世爻发动，或动而化吉……皆可束装以待」。解释准确；例外引 D-019（休囚化休囚待时）合理。"
+      }
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YONG-GUAN-07",
       "topic": "求名·官空世空",
@@ -688,7 +706,13 @@
       "engine_refs": [],
       "dispute_ids": [
         "D-017"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于卷三升迁何方章第五十六（L2652），为野鹤就「此缺我得否」所言，用于求职可类推。解释准确；例外指向 D-017（已裁定：有气之空不作此条之官空）合理。"
+      }
     },
     {
       "rule_id": "R-YONG-ZI-01",
@@ -778,12 +802,18 @@
       "engine_refs": [
         "src/evidence.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "三联逐字见于黄金策·17、求名（L495–502）。解释（出现无情指官不生合世、伏藏有用终成名、福德变官身位合、六冲六合须兼用神）合通行注解与增删乡试章野鹤释义。建议 exceptions 补异文：「爻逢六合，这回必占荐头」卜筮正宗作「爻达六合，这回必占鳌头」（AI-2 已校出）；并注本章原为科举语境，面试依 D-010、D-018 只作辅证，「终辞白屋」之「终」不等于本轮。"
+      }
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-SHIHUAN-01",
       "topic": "仕宦·官爻隐伏",
@@ -798,7 +828,13 @@
       "engine_refs": [],
       "dispute_ids": [
         "D-018"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于黄金策·18、仕宦（L515）。解释「在任者问升迁」合仕宦章开篇语境；D-018 已裁定不适用于求职，作排除记录合理。"
+      }
     },
     {
       "rule_id": "R-YONG-YE-01",
@@ -880,8 +916,14 @@
       "dispute_ids": [
         "D-014"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.2.0"
+      "review_status": "ai-verified",
+      "version": "0.2.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于增删卜易·八宫图第三（L93），原文就父母两现而言，推及用神两现合理。解释中「临月建、临日……细比」为本项目补充，已注明依用神元神章例；例外指向 D-014（已裁定）。"
+      }
     },
     {
       "rule_id": "R-YUANJICHOU-01",
@@ -1028,9 +1070,10 @@
       "source_book": "增删卜易",
       "source_chapter": "元神忌神衰旺章第十",
       "original_text": [
-        "忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉。"
+        "忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉。",
+        "此谓之用神无根，元神有力亦难生。"
       ],
-      "modern_explanation": "忌神与原神同动时，忌神转生原神、原神再生用神，化凶为吉；书中此例两神俱动。",
+      "modern_explanation": "书中此例忌神未土与元神酉金同动，接续相生；但用神亥水月破日克，「用神无根，元神有力亦难生」，结局为凶。接续相生须两神俱动且用神有根。",
       "applicable_conditions": "忌神与原神同动",
       "exceptions": "原神伏藏而受忌神动生时能否接续相生，书中未见明例（D-013）",
       "engine_refs": [
@@ -1287,8 +1330,14 @@
       "dispute_ids": [
         "D-001"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "原文「冲旺相之静爻，既为暗动，冲衰弱之静爻为日破」逐字见于增删卜易·日辰章第十七（L380），下句「爻之旺而静者冲之则为暗动，愈得其力……愈加无用」与解释一致。以四时旺相或月合为旺相合 D-012 裁定；例外列卜筮正宗暗动说（D-001）合理。"
+      }
     },
     {
       "rule_id": "R-RIZHEN-03",
@@ -1360,7 +1409,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-RIZHEN-06",
       "topic": "临日化回头克之例",
@@ -1372,7 +1421,13 @@
       "modern_explanation": "申月戊午日遁之姤：世爻午火临日而化亥水回头克，书断凶，应于亥月。与临日而动化相克寡不敌众同理。",
       "applicable_conditions": "临日之爻动化回头克",
       "exceptions": "原例为占病",
-      "engine_refs": []
+      "engine_refs": [],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于日辰章第十七（L388），例为「申月戊午日占病得天山遁变天风姤」，与 IP-0006 同卦同爻同化。解释准确；例外「原例为占病」合理，可再注「原例申月生亥，本项目引用时亥即月建，属近似同构」。"
+      }
     },
     {
       "rule_id": "R-ANDONG-01",
@@ -1432,8 +1487,14 @@
       "engine_refs": [
         "src/analysis.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于动静生克章第十四（L272），后接「盖旺相者有力之人也」及两例（静旺卯木生巳克丑未；酉金休囚发动亦能克旺相之卯），解释「动爻则可作用于他爻」与第二例相合。注意：IP-0002 以此推「官星非休囚则静伏财谈不上主动生它」是反面推论，原文未明言，属本项目推理，适用时宜如实标明；applicable_conditions「综合判断」过泛，可写「静爻作用于他爻时」。"
+      }
     },
     {
       "rule_id": "R-HUA-01",
@@ -1511,7 +1572,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-JINTUI-02",
       "topic": "进神四种",
@@ -1526,7 +1587,13 @@
       "engine_refs": [],
       "dispute_ids": [
         "D-019"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "「夫进神之有四﹕动旺相而化旺﹐乘势而进﹐一也﹔动休囚而化休囚﹐待时而进﹐二也」逐字见于卷二进神退神章第二十九（L1048，野鹤曰）。解释准确；与升选候补章「在即」之取舍已由 D-019 裁定。可补后两种（值衰待旺日、空破待填实），供今后取期。"
+      }
     },
     {
       "rule_id": "R-KONG-01",
@@ -1569,8 +1636,14 @@
       "dispute_ids": [
         "D-002"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于旬空章第二十六（L645，野鹤曰），截至「月破为空」；exceptions 已记「有卦不动为空」未取。建议补记同句其后的「爻反伏而被克为空，真空为空（春土、夏金、秋木、三冬逢火）」，并注明本条「不为空」须与月将章「在旬内者毕竟为空」（R-KONG-03）合用，单用会与所采口径相抵。解释「出旬即可用」是两条合读后的结论，可接受。"
+      }
     },
     {
       "rule_id": "R-KONG-03",
@@ -1634,8 +1707,14 @@
       "dispute_ids": [
         "D-002"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "两句逐字见于黄金策·1、总断千金赋（L24–25），AI-2 已与易隐、卜筮正宗全书、卜筮全书互校相同。adoption=alternative 与 D-002 一致，解释准确。提示：作正面依据时宜改用增删卜易日辰章同义句（R-KONG-06），避免取异说之半句。"
+      }
     },
     {
       "rule_id": "R-KONG-06",
@@ -1718,8 +1797,14 @@
       "engine_refs": [
         "src/evidence.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "逐字见于各门类题头总注章（L708）。解释准确；例外「入墓不等于现实中的死亡或失去机会」合理。建议补交叉引用：元神章「元神入三墓……虽有如无」与随鬼入墓章「旺而有扶亦有求解」（R-SUIMU-01）真假墓之分。"
+      }
     },
     {
       "rule_id": "R-SUIMU-01",
@@ -1751,7 +1836,7 @@
       ],
       "modern_explanation": "静爻逢合为合起，动爻逢合为合绊。",
       "applicable_conditions": "地支相合",
-      "exceptions": "不能见合即断事成：同章称「然必用神有气相宜，用若失陷无益」；同章并言「然必用神有气相宜，用若失陷无益」",
+      "exceptions": "不能见合即断事成：同章称「然必用神有气相宜，用若失陷无益」",
       "adoption": "adopted",
       "engine_refs": [
         "src/constants.js",
@@ -1933,7 +2018,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-02",
       "topic": "应期",
@@ -1947,7 +2032,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "「动而逢合逢值」逐字见于各门类应期总注章（L715），例「如主事爻临子水发动，后遇丑日子日而应之」，解释「逢本支或合支」准确。适用条件「用神或主事之爻」：题头总注「主象……古法以卦中世爻为主象，又名主事爻」，故 IP-0002 以持世忌神推期尚有依据，建议在适用条件中写明「含古法以世爻为主事爻」。"
+      }
     },
     {
       "adoption": "adopted",
@@ -2041,7 +2132,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-08",
       "topic": "应期",
@@ -2055,7 +2146,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "「旬空最爱填冲」逐字见于各门类应期总注章（L721，下注「详空亡论章」）。解释「出空填实或冲空」准确，与月将章、日辰章「冲空则实」互证。"
+      }
     },
     {
       "adoption": "adopted",
@@ -2070,7 +2167,7 @@
         "大象凶而受克，须防克者逢生"
       ],
       "modern_explanation": "受克：大象吉待克神受制；大象凶防克者逢生",
-      "applicable_conditions": "用神或主事之爻；近事以日计",
+      "applicable_conditions": "大象吉：用神得日月动爻生扶而受克，待克神受制；大象凶：用神既无日月动爻生扶而受克，防克神逢生（原文以辰土用神为例）",
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
@@ -2078,7 +2175,7 @@
     },
     {
       "adoption": "adopted",
-      "review_status": "pending-professional-review",
+      "review_status": "ai-verified",
       "version": "0.5.0",
       "rule_id": "R-YINGQI-10",
       "topic": "应期",
@@ -2094,7 +2191,13 @@
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [
         "src/evidence.js"
-      ]
+      ],
+      "ai_verification": {
+        "by": "AI-6 最终验收（独立代理）",
+        "round": "review-round6",
+        "date": "2026-11-13",
+        "note": "三句均逐字见于各门类应期总注章（L725–726）。解释「化进神：本支或合支；化退神：变支或冲变支」与原文例（申动酉应申、巳；酉化申应申、寅）一致；同书进神章解之困例亦应巳月，可互证。"
+      }
     },
     {
       "adoption": "adopted",
@@ -2107,7 +2210,7 @@
       "original_text": [
         "问有应于变爻动爻"
       ],
-      "modern_explanation": "吉凶有应于变爻者：变爻之支",
+      "modern_explanation": "吉凶有应于动爻之支者，亦有应于变爻之支者（原例：爻临戌土变出酉金，有戌日应者，有酉日应者）",
       "applicable_conditions": "用神或主事之爻；近事以日计",
       "exceptions": "每条须对应具体事件，不得统一为下一个某支日",
       "engine_refs": [

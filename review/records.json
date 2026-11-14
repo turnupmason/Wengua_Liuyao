@@ -446,7 +446,9 @@
         "（轻微）父母巳火逢亥日冲：只用增删卜易「日破」口径，未按 D-001 说明卜筮正宗「静而不空逢冲皆暗动」之说。",
         "（备注，非错误）R-YONG-GUAN-02 出自八宫图「全不知五行者」的简易法，同章明言稍知五行者不可以此为法；本盘条件满足，作辅证可以。"
       ],
-      "report": "reports\\review-round4\\ai2-source-check.json"
+      "report": "reports\\review-round4\\ai2-source-check.json",
+      "resolution": "resolved",
+      "resolved_by": "AI-6 终审确认（reports/review-round6/ai6-final-qa.json prior_findings）"
     },
     {
       "record_id": "RV-0017",
@@ -501,7 +503,9 @@
         "（轻微）飞神辰与伏神酉为六合，facts 与正文未记；R-FUSHEN-06 已作出处而未列入 judgment.rule_ids。",
         "R-QIUMING-01「出现无情，难遂青云之志；伏藏有用，终辞白屋之人。」：引文属实、适用；漏述同书仕宦章的相反条文。（中等）"
       ],
-      "report": "reports\\review-round4\\ai2-source-check.json"
+      "report": "reports\\review-round4\\ai2-source-check.json",
+      "resolution": "resolved",
+      "resolved_by": "AI-6 终审确认（reports/review-round6/ai6-final-qa.json prior_findings）"
     },
     {
       "record_id": "RV-0020",
@@ -556,7 +560,9 @@
       "findings": [
         "程序事实质疑：（遗漏，不是错误）事实表和角色列表都没有给出辅助用神父母巳火的状态。巳火被亥月冲为月破，又被丁亥日冲：静而休囚，按 R-RIZHEN-02 为日破；无日辰动爻生助，按 R-YUEPO-02 是本月到底之破。docs/05 把父母列为辅看，事实表应当列出这一项"
       ],
-      "report": "reports\\review-round4\\ai3-independent.json"
+      "report": "reports\\review-round4\\ai3-independent.json",
+      "resolution": "resolved",
+      "resolved_by": "AI-6 终审确认（reports/review-round6/ai6-final-qa.json prior_findings）"
     },
     {
       "record_id": "RV-0023",
@@ -609,7 +615,9 @@
         "程序事实质疑：飞伏关系只记了「飞来生伏」，没有记辰酉六合（飞伏相合），属于事实遗漏",
         "程序事实质疑：timing 中 R-FUSHEN-05「逢戌冲开飞神辰」：起卦日本身就是戌日，飞神当日已被冲开（日破），条件已经成立；再把下一个戌日（第 12 日）列为出伏应期意义不大，应以伏神逢值酉日为主"
       ],
-      "report": "reports\\review-round4\\ai3-independent.json"
+      "report": "reports\\review-round4\\ai3-independent.json",
+      "resolution": "resolved",
+      "resolved_by": "AI-6 终审确认（reports/review-round6/ai6-final-qa.json prior_findings）"
     },
     {
       "record_id": "RV-0026",
@@ -664,7 +672,9 @@
         "[minor] 象意写成现实：把「父母受伤」的象意直接写成「容易有疏漏」，没有「从卦象看」之类的限定。问的是已经进行的面试，「事先核对」在时序上也不合。",
         "[minor] 文字：「当令月令」语义重复。「卦象只说明应位给出的是生扶而不是克制，并不代表已经知道对方的真实态度」是自我声明式的套话，口气生硬。总断「这一轮倾向通过。最关键的依据是官星持世、得月……」与 IP-0005 总断有 15 个汉字连续相同（「通过。最关键的依据是官星持世、得月」），可能触发 C14；六篇总断都用「最关键的依据是」这一个句式，模板痕迹明显。"
       ],
-      "report": "reports\\review-round4\\ai4-adversarial.json"
+      "report": "reports\\review-round4\\ai4-adversarial.json",
+      "resolution": "resolved",
+      "resolved_by": "AI-6 终审确认（reports/review-round6/ai6-final-qa.json prior_findings）"
     },
     {
       "record_id": "RV-0029",
@@ -725,7 +735,9 @@
         "[minor] 应期逻辑：起卦日本身就是丙戌日，飞神今天已经被冲，稿件也把这一点当作有利条件；下一个戌日是第 12 天，为什么还要再逢戌才「冲开」，正文没有解释。酉日是第 11 天，两个时点都在旬外，与「偏慢」相合，正文可以写明。",
         "[minor] 文字：接近禁用套话「建议耐心等待，保持沟通」。「总体倾向通过」接近「整体来看」。标题「伏得有力」不准：伏神月令为休，事实层的结论是「有用」，不是「有力」。rule_ids 漏了 R-FUSHEN-06、R-FUSHEN-04。"
       ],
-      "report": "reports\\review-round4\\ai4-adversarial.json"
+      "report": "reports\\review-round4\\ai4-adversarial.json",
+      "resolution": "resolved",
+      "resolved_by": "AI-6 终审确认（reports/review-round6/ai6-final-qa.json prior_findings）"
     },
     {
       "record_id": "RV-0032",
@@ -913,6 +925,345 @@
         "事实表显示应爻申金除受日克外，还受二爻午火动克；原正文只写日克，精修未补。"
       ],
       "report": "reports/review-round5/ai5-editor.json"
+    },
+    {
+      "record_id": "RV-0040",
+      "script_id": "IP-0001",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "AI-6 最终验收（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "f7f46a75a3d0fd637e9b75d07e961c12a6bef93624d2db77383e5418f52b64bf",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "AI-6 只读运行 node --test tests/：59/59 通过；rules/verification.json（2026-11-14T03:30Z，register 0.5.0）103/103 条原文核对通过；构建 C03–C26 无错误无警告。docs/13 仍写 58/58（第二轮），报告过期但不影响结果。",
+        "原有正式排版完整保留": "docs/11 本篇 14 个栏目（编号标题、问事、卦盘、月建日辰旬空、匹配键与审核状态、六爻排盘、简断、详断三段、应期、总断、古籍依据、计算说明）齐全且次序正确；正文与 drafts 逐段一致；哈希前缀与构建一致。",
+        "内容哈希、规则版本及审核记录一致": "drafts = authoring 源稿 = drafts-built-at-review 构建结果（judgment、reading 逐字一致）；content_hash 已绑定；rule_version 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 0.5.0 与 register 一致。AI-2/3/4 记录绑定 round4 旧哈希，按 review-status.mjs 口径属「任一修订版本、问题须已解决」，是否已解决见 prior_findings。",
+        "全部相关回归测试通过": "59/59 通过（含六篇回归测试）。",
+        "没有冒充真人专家认证或现实预测保证": "正文未自称专家认证；应期均带「参考」「不作定论」类限定；本记录为 AI 审核，不是人工认证。",
+        "所用规则已经批准": "所用规则 R-YONG-GUAN-01/02/03、R-YUANJI-04、R-YINGQI-01 为 ai-verified；R-RIZHEN-02 本轮核验 PASS；均无未裁定分歧（D-001 已裁定）。judgment 文中提及的 R-WANG-02、R-SICHU-01 亦为 ai-verified。",
+        "用神选择有明确依据": "官鬼唯一一爻、持世（R-YONG-GUAN-01；D-010 面试按谋职以官鬼为主用）。",
+        "正反证据均得到处理": "吉证：官持世、月生日生长生；凶证：父母月破日破绝（辅看，D-010）；忌神酉金休囚静、仇神丑土休囚静，均与 facts 一致。酉日兼为子孙值日未注明，列 minor。",
+        "没有未解决的重大专业冲突": "AI-3 独立复算同判 likely-pass；无分歧。",
+        "关键古籍引用已经核查": "5 条引文逐字见于所注卷章；R-YINGQI-01 引文含例句，原文连续存在。R-YONG-GUAN-03 适用理由宜改为「旺官持世」（minor）。",
+        "传统应期具有适用依据或明确记录不适合取期": "用神安静不空不破，R-YINGQI-01「静而逢值逢冲」取卯（第 4 天）、酉（第 10 天），合原文。",
+        "独立专业审核完成": "AI-3（round4）完成且结论、用神、应期与终稿一致。",
+        "反向质疑审核完成": "AI-4 两条 major 已解决，剩余 minor 不影响判断。",
+        "最终语言编辑完成": "AI-5 round5 精修已完成，内容哈希即精修后版本。",
+        "没有明显机械重复、套话或病句": "未见禁用套话与病句；简断「结果不会马上揭晓」略绝对（minor）。",
+        "简断、详断和总断结论一致": "标题、简断、结局、总断均为「倾向通过」。",
+        "无未经证实的现实事实断言": "「对方心里究竟怎么想，并不能由此断定」已避免对方态度定论；文书疏漏以「提示」限定。"
+      },
+      "findings": [
+        "[minor] reading.timing.text：酉日只写「冲动官星」，未说明酉日也是忌神子孙酉金值日冲官（IP-0005 同类情形已注明，跨篇口径不一）；事件写「结果或通知」与父母受伤并提不协调。",
+        "[minor] reading.classical_sources[R-YONG-GUAN-03].applies_because：「官星持世而得月日相生」容易读成「日月作官星生合世爻」。",
+        "[minor] judgment.rule_ids：deciding_evidence 引 R-WANG-02、conflicts_resolved 引 R-SICHU-01，rule_ids 未列，规则追溯不全。",
+        "[minor] reading.calculation_explanation：计算说明含「（AI-4 复核）」，属审核过程信息，docs/16 第七节要求用户正文不含审核过程。",
+        "[minor] reading.brief：「卦中没有动爻，结果不会马上揭晓」为对未来的绝对表述，且卯日仅第 4 天。"
+      ],
+      "report": "reports/review-round6/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0041",
+      "script_id": "IP-0002",
+      "stage": "ai-final-qa",
+      "status": "FAIL",
+      "reviewer": "AI-6 最终验收（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "5f4f68dd8be41f03ab5da5cd3eb72223f1997beea6f4ecead9ba7b811fec2ea7",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": false,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": false,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "AI-6 只读运行 node --test tests/：59/59 通过；rules/verification.json（2026-11-14T03:30Z，register 0.5.0）103/103 条原文核对通过；构建 C03–C26 无错误无警告。docs/13 仍写 58/58（第二轮），报告过期但不影响结果。",
+        "原有正式排版完整保留": "docs/11 本篇 14 个栏目（编号标题、问事、卦盘、月建日辰旬空、匹配键与审核状态、六爻排盘、简断、详断三段、应期、总断、古籍依据、计算说明）齐全且次序正确；正文与 drafts 逐段一致；哈希前缀与构建一致。",
+        "内容哈希、规则版本及审核记录一致": "drafts = authoring 源稿 = drafts-built-at-review 构建结果（judgment、reading 逐字一致）；content_hash 已绑定；rule_version 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 0.5.0 与 register 一致。AI-2/3/4 记录绑定 round4 旧哈希，按 review-status.mjs 口径属「任一修订版本、问题须已解决」，是否已解决见 prior_findings。",
+        "全部相关回归测试通过": "59/59 通过（含六篇回归测试）。",
+        "没有冒充真人专家认证或现实预测保证": "正文未自称专家认证；应期均带「参考」「不作定论」类限定；本记录为 AI 审核，不是人工认证。",
+        "所用规则已经批准": "R-YUANJI-06 本轮核验为 ISSUE（解释与例外漏载原例「用神无根，元神有力亦难生」之凶局），故不满足；R-YINGQI-02、R-DONGJING-01 核验 PASS；其余 ai-verified。",
+        "用神选择有明确依据": "官鬼唯一一爻（二爻卯木）。",
+        "正反证据均得到处理": "有力动忌（日生、化回头生、独发冲克）为主；官星生多克少、伏财有用而静已逐条分析；与 facts 一致。卯日（大象吉分支）未讨论列 minor。",
+        "没有未解决的重大专业冲突": "D-016、D-013、B-009 均已裁定且稿件按裁定处理；AI-3 独立同判 unlikely。",
+        "关键古籍引用已经核查": "不满足：R-YUANJI-06 引文断章（原例结局为凶），round4 已指出未改，作为古籍依据会给读者相反印象。其余 10 条逐字核对无误。",
+        "传统应期具有适用依据或明确记录不适合取期": "酉金为世爻即古法主事爻，R-YINGQI-02「动而逢合逢值」取酉、辰有据；已加参考限定。",
+        "独立专业审核完成": "AI-3 完成，结论一致。",
+        "反向质疑审核完成": "AI-4 blocker 已解决；余下事项终审判为 minor 或归入古籍条件处理（理由见 prior_findings）。",
+        "最终语言编辑完成": "AI-5 round5 完成。",
+        "没有明显机械重复、套话或病句": "未见套话病句。",
+        "简断、详断和总断结论一致": "标题、简断、结局、总断均为「偏难通过」；verdict_label「难以通过」属元数据，宜统一（minor）。",
+        "无未经证实的现实事实断言": "「从卦象看，这一轮的机会本身是有分量的」已限定；应爻配合等未写成对方态度。"
+      },
+      "findings": [
+        "[major] reading.classical_sources[R-YUANJI-06]：引文「忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉」断章：同例紧接「其如亥水月冲日克……果卒于癸卯日……此谓之用神无根，元神有力亦难生」，结局为凶；本篇又声明此条不适用。作为古籍依据会误导，且 register 本条解释未载此限制（rule_verifications ISSUE）。",
+        "[minor] reading.timing.text：「带来的多半是不利的消息」只取忌神口径；酉、辰兼为官星逢冲、日合冲开之日（facts R-YINGQI-01/06）；以忌神推期的依据（世爻为古法主事爻）未点明。",
+        "[minor] judgment.conflicts_resolved：facts 有利候选 R-YINGQI-09 卯日（用神有气、冲去克神）未讨论取舍。",
+        "[minor] reading.classical_sources[R-YONG-FU-01]：黄金策·求名「福如发动，难期金榜之题名」为科举语；同联上句「财若交重」在 IP-0003 依 D-010 排除，取舍口径不一。",
+        "[minor] reading.calculation_explanation：「无力条一项不合」含糊（忌神无力七条均不合）；「（AI-3 复核补列）」为审核过程信息。",
+        "[minor] judgment.verdict_label / judgment.rule_ids：verdict_label「难以通过」与全部正文「偏难通过」程度不一；R-DONGJING-01 已作古籍依据但未列入 judgment.rule_ids。"
+      ],
+      "report": "reports/review-round6/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0042",
+      "script_id": "IP-0003",
+      "stage": "ai-final-qa",
+      "status": "FAIL",
+      "reviewer": "AI-6 最终验收（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "dacf2f0c607b60e0c46dd291caa302a96a6e3d765255adfe61fa070273a22f9d",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": false,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": false,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": false,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": false,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "AI-6 只读运行 node --test tests/：59/59 通过；rules/verification.json（2026-11-14T03:30Z，register 0.5.0）103/103 条原文核对通过；构建 C03–C26 无错误无警告。docs/13 仍写 58/58（第二轮），报告过期但不影响结果。",
+        "原有正式排版完整保留": "docs/11 本篇 14 个栏目（编号标题、问事、卦盘、月建日辰旬空、匹配键与审核状态、六爻排盘、简断、详断三段、应期、总断、古籍依据、计算说明）齐全且次序正确；正文与 drafts 逐段一致；哈希前缀与构建一致。",
+        "内容哈希、规则版本及审核记录一致": "drafts = authoring 源稿 = drafts-built-at-review 构建结果（judgment、reading 逐字一致）；content_hash 已绑定；rule_version 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 0.5.0 与 register 一致。AI-2/3/4 记录绑定 round4 旧哈希，按 review-status.mjs 口径属「任一修订版本、问题须已解决」，是否已解决见 prior_findings。",
+        "全部相关回归测试通过": "59/59 通过（含六篇回归测试）。",
+        "没有冒充真人专家认证或现实预测保证": "正文未自称专家认证；应期均带「参考」「不作定论」类限定；本记录为 AI 审核，不是人工认证。",
+        "所用规则已经批准": "R-HE-01 本轮核验为 ISSUE（例外栏同一句重复录入、未载「诸合皆以用神旺者为吉」等限制），故不满足；R-JINTUI-02、R-YINGQI-02、R-YINGQI-10、R-YONG-GUAN-06 核验 PASS。",
+        "用神选择有明确依据": "官鬼唯一一爻（五爻申金，发动）。",
+        "正反证据均得到处理": "不满足：judgment「仇神受制」与 facts（卯木相、EFFECTIVE、入墓不作真墓）矛盾；午火、巳火被动爻合起未交代；六合卦变非六合被写成「始终保持能合拢」。",
+        "没有未解决的重大专业冲突": "D-019、D-010、D-004 均已裁定并遵循；AI-3 与终稿的类别差异由 D-019 消解。",
+        "关键古籍引用已经核查": "8 条引文逐字核对无误，编号与原文对应（R-YINGQI-10 引文为登记两句的连写）。",
+        "传统应期具有适用依据或明确记录不适合取期": "申日（动而逢值）、巳日（化进神逢合，原文例正为申动酉应巳）、申酉月（待时而进，D-019）均有据。巳日在本旬空亡之外、兼子孙值日未注明（minor）。",
+        "独立专业审核完成": "AI-3 完成；唯一分歧经 D-019 裁定解决。",
+        "反向质疑审核完成": "不满足：AI-4 两条 major（象意写成现实、仇神与 facts 不一致）未解决。",
+        "最终语言编辑完成": "AI-5 round5b 完成。",
+        "没有明显机械重复、套话或病句": "未见套话病句。",
+        "简断、详断和总断结论一致": "标题、简断、结局、总断均为「有望通过，但要待时／结果偏慢」。",
+        "无未经证实的现实事实断言": "不满足：「父母主文书、材料与通知，随你的推动一并出现」是无限定的现实预言；标题「你在推」与「意思是这件事要靠你这一方主动去推」亦缺象意限定。"
+      },
+      "findings": [
+        "[major] judgment.supporting / reading.process：「兄弟卯木入未日墓、又受申金动克，仇神受制」与 facts 不符：卯木亥月为相，capability strong、state EFFECTIVE，入墓注「旺相或有扶，不作真墓」。正文同样以入墓作受制理由。",
+        "[major] reading.title / reading.process：象意写成现实：「父母主文书、材料与通知，随你的推动一并出现」预言文书通知出现；标题「你在推」、正文「意思是这件事要靠你这一方主动去推」无限定。",
+        "[minor] reading.ending：「豫是六合卦，变出的随卦也不逢冲，事情在推进中始终保持着能合拢的格局」：随非六合，六合章「始终而作合」专指六合变六合；乡试章「凡得六合卦，亦要官父世爻得地」未处理。",
+        "[minor] reading.process：午火（应爻）又得世爻未土动合、巳火被申金动合，facts 均列，正文未交代；应生世合世亦未提。",
+        "[minor] reading.timing.text：巳日在本旬旬空（甲午旬空辰巳），出旬第十天乙巳，且为二爻子孙巳火值日，未注明；IP-0005 对同类「兼为子孙值日」已注明。",
+        "[minor] reading.calculation_explanation：三合不成局理由不准（月建可参与三合）。",
+        "[minor] 技术元数据 timing_resolution：R-JINTUI-02 两条 month 级应期（申月、酉月）在构建 timing_resolution 中被按日计算为 offsetDays 1、2（scripts/build-readings.mjs 第 256 行忽略 time_scale）。不进用户端发布包，但审阅包数据错误。"
+      ],
+      "report": "reports/review-round6/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0043",
+      "script_id": "IP-0004",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "AI-6 最终验收（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "98f66975ee29eebf63e2b4cd8130c604834e4c4e93797d91bb6ce59d7921e022",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "AI-6 只读运行 node --test tests/：59/59 通过；rules/verification.json（2026-11-14T03:30Z，register 0.5.0）103/103 条原文核对通过；构建 C03–C26 无错误无警告。docs/13 仍写 58/58（第二轮），报告过期但不影响结果。",
+        "原有正式排版完整保留": "docs/11 本篇 14 个栏目（编号标题、问事、卦盘、月建日辰旬空、匹配键与审核状态、六爻排盘、简断、详断三段、应期、总断、古籍依据、计算说明）齐全且次序正确；正文与 drafts 逐段一致；哈希前缀与构建一致。",
+        "内容哈希、规则版本及审核记录一致": "drafts = authoring 源稿 = drafts-built-at-review 构建结果（judgment、reading 逐字一致）；content_hash 已绑定；rule_version 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 0.5.0 与 register 一致。AI-2/3/4 记录绑定 round4 旧哈希，按 review-status.mjs 口径属「任一修订版本、问题须已解决」，是否已解决见 prior_findings。",
+        "全部相关回归测试通过": "59/59 通过（含六篇回归测试）。",
+        "没有冒充真人专家认证或现实预测保证": "正文未自称专家认证；应期均带「参考」「不作定论」类限定；本记录为 AI 审核，不是人工认证。",
+        "所用规则已经批准": "R-QIUMING-01、R-SHIHUAN-01、R-YONG-GUAN-04 本轮核验 PASS；R-FUSHEN-01/02/03/05/06、R-YINGQI-01、R-YUANJI-04 为 ai-verified；D-001、D-005、D-018 均已裁定。",
+        "用神选择有明确依据": "官鬼不上卦，月日非金，依飞伏神章取本宫首卦巽为风三爻酉金伏于辰土下（R-FUSHEN-01，D-005）；伏神有用四条合、无用五条皆不合，B-009 判 EFFECTIVE。",
+        "正反证据均得到处理": "吉证：伏神得日生、飞神日破推开、子孙月破入墓；凶证：伏神月令休、财一破一空、兄弟旺相、应克世、世受日克，均已写入且与 facts 一致。",
+        "没有未解决的重大专业冲突": "D-018 已裁定并遵循；AI-3 独立同判 pass-but-slow。两财一无力一待时的取法为对裁定的合理类推，建议注明。",
+        "关键古籍引用已经核查": "7 条引文逐字核对无误；正文所引署印谋差章「财与官星不可有一而不旺」经 AI-6 核于卷三署印谋差章第六十一，逐字存在，但未列入古籍依据（minor）。",
+        "传统应期具有适用依据或明确记录不适合取期": "伏神逢值酉日（第 11 天），飞伏神章与 R-YINGQI-01 静而逢值；飞神当日已被冲开，取逢值为合。",
+        "独立专业审核完成": "AI-3 完成，结论一致。",
+        "反向质疑审核完成": "AI-4 blocker 由 D-018 解决；余项已大体改正，残留为 minor。",
+        "最终语言编辑完成": "AI-5 round5b 完成。",
+        "没有明显机械重复、套话或病句": "简断「它伏藏之处得日辰相生」有歧义（得日生的是伏神，不是伏藏之处的飞神辰土），列 minor；无套话。",
+        "简断、详断和总断结论一致": "均为「倾向通过，结果偏慢」。",
+        "无未经证实的现实事实断言": "未写对方态度或决定；「被动等待的位置」宜加限定（minor）。"
+      },
+      "findings": [
+        "[minor] reading.classical_sources：正文引署印谋差章「财与官星不可有一而不旺」（D-018 指定的主章），古籍依据栏未列。",
+        "[minor] reading.brief：「它伏藏之处得日辰相生」歧义：伏藏之处为飞神辰土，恰被日辰冲破。",
+        "[minor] judgment.deciding_evidence / judgment.rule_ids：deciding_evidence「得飞神生」与正文「这份生合就不再另算」口径不一；rule_ids 缺 R-FUSHEN-06、R-FUSHEN-04。",
+        "[minor] reading.process：「眼下处在被动等待的位置」为象意，无限定；兄弟旺相静而可克休囚之财未交代。"
+      ],
+      "report": "reports/review-round6/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0044",
+      "script_id": "IP-0005",
+      "stage": "ai-final-qa",
+      "status": "FAIL",
+      "reviewer": "AI-6 最终验收（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "ad1ca08e9aadd25039b4a8b0557168d86507dbf89ccd759fa7445e47c0b63fff",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": false,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "AI-6 只读运行 node --test tests/：59/59 通过；rules/verification.json（2026-11-14T03:30Z，register 0.5.0）103/103 条原文核对通过；构建 C03–C26 无错误无警告。docs/13 仍写 58/58（第二轮），报告过期但不影响结果。",
+        "原有正式排版完整保留": "docs/11 本篇 14 个栏目（编号标题、问事、卦盘、月建日辰旬空、匹配键与审核状态、六爻排盘、简断、详断三段、应期、总断、古籍依据、计算说明）齐全且次序正确；正文与 drafts 逐段一致；哈希前缀与构建一致。",
+        "内容哈希、规则版本及审核记录一致": "drafts = authoring 源稿 = drafts-built-at-review 构建结果（judgment、reading 逐字一致）；content_hash 已绑定；rule_version 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 0.5.0 与 register 一致。AI-2/3/4 记录绑定 round4 旧哈希，按 review-status.mjs 口径属「任一修订版本、问题须已解决」，是否已解决见 prior_findings。",
+        "全部相关回归测试通过": "59/59 通过（含六篇回归测试）。",
+        "没有冒充真人专家认证或现实预测保证": "正文未自称专家认证；应期均带「参考」「不作定论」类限定；本记录为 AI 审核，不是人工认证。",
+        "所用规则已经批准": "R-KONG-02、R-KONG-05、R-SANMU-01、R-YONG-GUAN-07、R-YINGQI-08 本轮核验 PASS；R-YONG-GUAN-02、R-KONG-03、R-KONG-06、R-YUEJIAN-04、R-YINGQI-01 为 ai-verified；D-002、D-017、B-007 均已裁定。",
+        "用神选择有明确依据": "官鬼唯一一爻（二爻卯木持世）。",
+        "正反证据均得到处理": "官有气而旬空（D-017 待时）、原神月日相敌（R-YUEJIAN-04、B-007）、忌神得日生合而静、冲空日兼忌神值日，均已写入并与 facts 一致；元神章「元神入三墓虽有如无」未正面回应（minor）。",
+        "没有未解决的重大专业冲突": "D-017、D-002 已裁定并遵循；AI-3 独立同判 wait-then-likely。",
+        "关键古籍引用已经核查": "不满足：古籍依据第 8 条以 R-YINGQI-01 标注「旬空最爱填冲」，该句属 R-YINGQI-08（R-YINGQI-01 原文仅「静而逢值逢冲」），规则编号与原文不对应，judgment.rule_ids 亦未列 R-YINGQI-08，round4 已指出未改。另 R-YONG-GUAN-02 适用理由未注同章旬空限制、R-KONG-02 适用理由自相抵触、R-KONG-05 取 alternative 之书的半句而同句「无故勿空」方向相反（宜改用 R-KONG-06 日辰章「冲空则实」）、正文「官位空破，勿恩升迁」之「恩」疑为维基文库录入讹字（联网未能取得他本核对）。",
+        "传统应期具有适用依据或明确记录不适合取期": "R-YINGQI-08「旬空最爱填冲」取旬内酉日冲空（第 5 天）、出旬卯日填实（第 11 天），日数核算无误，并注明酉日兼子孙值日。",
+        "独立专业审核完成": "AI-3 完成，结论一致。",
+        "反向质疑审核完成": "AI-4 blocker、major 已解决；余 minor。",
+        "最终语言编辑完成": "AI-5 round5b 完成。",
+        "没有明显机械重复、套话或病句": "简断「生官的应爻财爻本旺」略拗口（可作「应位上生官的财爻」），不构成病句。",
+        "简断、详断和总断结论一致": "均为「眼下悬而未决，冲空或出旬后有望」。",
+        "无未经证实的现实事实断言": "未写对方流程或决定。"
+      },
+      "findings": [
+        "[major] reading.classical_sources[第8条] / judgment.rule_ids：「旬空最爱填冲」标为 R-YINGQI-01，实属 R-YINGQI-08；judgment.rule_ids 列 R-YINGQI-01 而无 R-YINGQI-08，规则追溯与应期条目编号不一致（AI-2 round4 跨篇问题，其余三篇已改，本篇未改；构建 C12 只查引文存在、未查编号对应，故未拦下）。",
+        "[minor] reading.classical_sources[R-YONG-GUAN-02].applies_because：只取「即许成名」半句，未注同章「值旬空月破……持世有何益也」。",
+        "[minor] reading.classical_sources[R-KONG-02] / [R-KONG-05]：R-KONG-02 以「不为空」证「出旬可用」，与所采 R-KONG-03「旬内毕竟为空」相抵；R-KONG-05 为 alternative，取「空逢冲而有用」而同句「无故勿空」方向相反。",
+        "[minor] reading.opening：引「官位空破，勿恩升迁」：「恩」疑为「思」之讹（维基文库录入本，录入者自述错谬较多），直接呈现给用户语义不通。",
+        "[minor] judgment.adverse：「卯木受辰日泄（我克日）」术语错误。",
+        "[minor] reading.opening / judgment.conflicts_resolved：D-018 指定的谋职主章署印谋差章「官空世破，且让他人」未一并回应。"
+      ],
+      "report": "reports/review-round6/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0045",
+      "script_id": "IP-0006",
+      "stage": "ai-final-qa",
+      "status": "FAIL",
+      "reviewer": "AI-6 最终验收（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "4dc7c59d8d3b8044dd12e74358e7e4a5581dcafe7f5f8452bd62a9d58cb8e9fb",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": false,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": false,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "AI-6 只读运行 node --test tests/：59/59 通过；rules/verification.json（2026-11-14T03:30Z，register 0.5.0）103/103 条原文核对通过；构建 C03–C26 无错误无警告。docs/13 仍写 58/58（第二轮），报告过期但不影响结果。",
+        "原有正式排版完整保留": "docs/11 本篇 14 个栏目（编号标题、问事、卦盘、月建日辰旬空、匹配键与审核状态、六爻排盘、简断、详断三段、应期、总断、古籍依据、计算说明）齐全且次序正确；正文与 drafts 逐段一致；哈希前缀与构建一致。",
+        "内容哈希、规则版本及审核记录一致": "drafts = authoring 源稿 = drafts-built-at-review 构建结果（judgment、reading 逐字一致）；content_hash 已绑定；rule_version 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 0.5.0 与 register 一致。AI-2/3/4 记录绑定 round4 旧哈希，按 review-status.mjs 口径属「任一修订版本、问题须已解决」，是否已解决见 prior_findings。",
+        "全部相关回归测试通过": "59/59 通过（含六篇回归测试）。",
+        "没有冒充真人专家认证或现实预测保证": "正文未自称专家认证；应期均带「参考」「不作定论」类限定；本记录为 AI 审核，不是人工认证。",
+        "所用规则已经批准": "R-YINGQI-09（适用条件未载原文「大象吉凶」之界定）、R-YINGQI-11（解释漏「动爻之支」）本轮核验为 ISSUE，故不满足；R-FUSHEN-07、R-LIANGXIAN-03、R-RIZHEN-06 核验 PASS；其余 ai-verified。",
+        "用神选择有明确依据": "官鬼两现同支，依八宫图第三「一爻动者择其动者」（R-LIANGXIAN-03）及两现章「舍其静爻，而用动爻」取二爻；D-014、B-003 已裁定，四爻保留在证据中。",
+        "正反证据均得到处理": "临日帝旺、有效伏财（吉）与月克、化回头克、化绝（凶）均已取舍，依据日辰章寡不敌众原文例与 R-DONGBIAN-01；与 facts 一致。巳日候选未讨论，归入应期条件。",
+        "没有未解决的重大专业冲突": "D-013、D-014、B-009、B-010 已裁定并遵循；AI-3 独立同判 unlikely。",
+        "关键古籍引用已经核查": "10 条引文逐字核对无误，编号与原文对应；R-RIZHEN-06 原例为占病，适用理由宜注明（minor）。",
+        "传统应期具有适用依据或明确记录不适合取期": "不满足：申日、酉日两条依 R-YINGQI-09「大象凶而受克，须防克者逢生」，而原文以「用神……既无日月动爻生扶，乃为大象凶也」界定，本盘用神临日帝旺，按字面属「得日月动爻生扶」之大象吉一支，稿件未说明为何仍作大象凶，亦未讨论 facts 所列巳日；事件「不利因素加重」不可观察。亥日一条（问有应于变爻动爻）有据。",
+        "独立专业审核完成": "AI-3 完成，结论一致。",
+        "反向质疑审核完成": "AI-4 blocker 与两条 major 主体已解决；巳日讨论与申酉日事件仍待补，归入应期条件处理。",
+        "最终语言编辑完成": "AI-5 round5 完成。",
+        "没有明显机械重复、套话或病句": "无套话病句。",
+        "简断、详断和总断结论一致": "均为「难以通过」，先扬后抑。",
+        "无未经证实的现实事实断言": "「面试当场的表现或氛围」有「从卦象看」限定，「由顺转逆的关口多半在后段」为条件句并有限定，尚不构成现实事实断言；但两句均宜修改（minor）。"
+      },
+      "findings": [
+        "[major] reading.timing（R-YINGQI-09 申日、酉日两条）：以「大象凶而受克，须防克者逢生」推申、酉，与原文对「大象凶」的界定（用神无日月动爻生扶）不合，本盘用神临日；事件「不利因素加重」不可观察；facts 所列大象吉分支巳日未讨论。round4 AI-2、AI-4 均已指出。",
+        "[minor] reading.ending：「若后面还有环节，从卦象看，由顺转逆的关口多半在后段」超出「只回答这一轮」的问事范围，属对后续环节的推测。",
+        "[minor] reading.opening：「从卦象看，面试当场的表现或氛围并不差」预设并描述已发生的现场。",
+        "[minor] reading.calculation_explanation：伏财有用条件列「飞神休囚墓绝」，而飞神午火临日帝旺；飞神被推开的实因是动化回头克、寡不敌众，未说明。",
+        "[minor] reading.classical_sources[R-RIZHEN-06].applies_because：原例为占病、申月（亥得月生），本盘亥即月建，属近似同构；register 例外已注「原例为占病」，稿件未注。"
+      ],
+      "report": "reports/review-round6/ai6-final-qa.json"
     }
   ]
 }

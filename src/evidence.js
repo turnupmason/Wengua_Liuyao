@@ -300,7 +300,9 @@ function hiddenTiming(missing) {
 }
 
 /** 忌神发动时，不利之事落实的参考（应期总注「动而逢合逢值」「大象凶而受克，须防克者逢生」） */
-function adverseTiming(chart, roles) {
+let analysisRef = null;
+function adverseTiming(chart, roles, analysis) {
+  analysisRef = analysis;
   const out = [];
   for (const l of chart.lines.filter((x) => x.moving && x.relative === roles.ji)) {
     const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === l.element);
@@ -313,7 +315,10 @@ function adverseTiming(chart, roles) {
     if (elementRelation(c.element, l.element) !== 'controls') continue;
     const gen = Object.keys(GENERATES).find((e) => GENERATES[e] === c.element);
     out.push({ timing_rule_id: 'R-YINGQI-11', target_symbol: `${l.label}${l.relative}${l.branch}化${c.relative}${c.branch}`, target_branches: [c.branch], time_scale: SCALE_NEAR, calculation_basis: `回头克之变爻逢值：逢${c.branch}` });
-    out.push({ timing_rule_id: 'R-YINGQI-09', target_symbol: `变爻${c.relative}${c.branch}`, target_branches: branchesOfElement(gen), time_scale: SCALE_NEAR, calculation_basis: `大象凶而受克，须防克者逢生：逢${gen}` });
+    // 「大象凶」须用神无日月动爻生扶（R-YINGQI-09 原文界定）；用神临日或得日月生扶者不取
+    const yc = chart.lines[l.position - 1];
+    const supported = describeLine(yc, analysisRef.lines[l.position - 1], chart).support.some((x) => /临日|临月|日生|月生|日扶|月扶|动来生|动来扶/.test(x));
+    if (!supported) out.push({ timing_rule_id: 'R-YINGQI-09', target_symbol: `变爻${c.relative}${c.branch}`, target_branches: branchesOfElement(gen), time_scale: SCALE_NEAR, calculation_basis: `大象凶而受克，须防克者逢生：逢${gen}` });
   }
   return out;
 }
@@ -438,6 +443,6 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     flowsVersion: FLOWS_VERSION,
     flows,
     timingCandidates: yong ? timingCandidates(yong, lf(yong), chart, SCALE_NEAR) : hiddenTiming(missing),
-    adverseTimingCandidates: adverseTiming(chart, { ...roles, yong: rel }),
+    adverseTimingCandidates: adverseTiming(chart, { ...roles, yong: rel }, analysis),
   };
 }

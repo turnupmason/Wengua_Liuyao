@@ -19,21 +19,32 @@ function chartOf(values, month, day) {
   return buildChart({ lineValues: values, calendar: { monthBranch: month, dayGanzhi: day } });
 }
 
-test('构建：六篇样稿技术核验全部通过，但无一获批，发布包为空', () => {
+test('构建：发布包只收 AI_APPROVED 或 HUMAN_APPROVED 且 production_allowed 的稿件，技术检查无错', () => {
   const report = JSON.parse(readFileSync(new URL('reports/build-report.json', root), 'utf8'));
   assert.equal(report.scripts, 6);
   assert.equal(report.technical_passed, 6);
-  assert.equal(report.approved_for_release, 0);
   assert.deepEqual(report.errors, []);
-  assert.equal(release.readings.length, 0);
+  assert.equal(release.readings.length, report.approved_for_release);
+  for (const r of release.readings) {
+    assert.ok(['AI_APPROVED', 'HUMAN_APPROVED'].includes(r.approval.approval_status));
+    assert.equal(r.approval.production_allowed, true);
+  }
 });
 
-test('正式发布包为空时，任何卦盘都返回「本卦断语尚在整理」', () => {
+test('正式发布包：已批准的盘返回正文；未批准的盘返回「本卦断语尚在整理」', () => {
   const repo = createReadingRepository({ releasePackage: release });
-  const r = repo.lookup({ questionId: Q, chart: chartOf([7, 7, 8, 8, 8, 8], '亥', '丁亥') });
-  assert.equal(r.status, 'pending');
-  assert.equal(r.message, PENDING_MESSAGE);
-  assert.equal(r.message, '本卦断语尚在整理');
+  const approvedKeys = new Set(release.readings.map((r) => r.key));
+  const r = repo.lookup({ questionId: Q, chart: chartOf([8, 6, 7, 7, 7, 7], '亥', '甲午') });
+  if (!approvedKeys.has(r.key)) {
+    assert.equal(r.status, 'pending');
+    assert.equal(r.message, '本卦断语尚在整理');
+  }
+  for (const e of release.readings) {
+    const [, lv, m, d] = e.key.split('|');
+    const hit = repo.lookup({ questionId: Q, chart: chartOf(lv.split('').map(Number), m, d) });
+    assert.equal(hit.status, 'approved');
+    assert.equal(hit.scriptId, e.script_id);
+  }
 });
 
 // 测试用：在内存中构造一份「假定已批准」的发布包，验证匹配逻辑（不写入仓库）
