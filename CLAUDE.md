@@ -2,6 +2,7 @@
 
 本仓库只做**六爻纳甲**。用户已明确不做大六壬，不要生成任何六壬内容。用户懂六爻，中文沟通。
 
+- 问事分类以用户 2026-11-14 选定为准：六大领域、31 个细分入口（`src/questions/taxonomy.js`），旧的 82 问分类作废；当前在做「事业工作·求职录用」（面试一问）。
 - 先读 `docs/14_PROGRESS.md`（完成度与下一步）、`docs/10_WRITING_STANDARD.md`（断语标准）。
 - 运行时 `src/` 必须纯 ESM，不得引入 `node:*` 或其他 Node 专属依赖；数据由调用方注入。
 - 规则改动：先改 `rules/register.json`（原文须逐字见于 `sources/classics/`），`npm run verify:rules` 通过后再改代码，跑 `npm test` 与 `npm run build`。改动会改变事实指纹，旧稿自动失配。

@@ -27,3 +27,11 @@ test('原哈希未批准：润色不能带来批准', () => {
   const recs = base.filter((r) => r.stage !== 'ai-final-qa');
   assert.equal(statusesFor([...recs, polish({ final_check: { status: 'PASS' } })], 'X', 'h1').approval_status, 'REVIEW_REQUIRED');
 });
+
+test('问事分类：六大领域、31 个细分入口；面试一问属事业工作·求职录用', async () => {
+  const { DOMAINS, entryOfQuestion } = await import('../src/index.js');
+  assert.equal(DOMAINS.length, 6);
+  assert.equal(DOMAINS.reduce((s, d) => s + d.entries.length, 0), 31);
+  for (const d of DOMAINS) assert.equal(d.entries.length, d.suggested_count);
+  assert.deepEqual(entryOfQuestion('career.interview.interview-pass'), { domain_id: 'career', domain_label: '事业工作', entry_id: 'career.job-offer', entry_label: '求职录用' });
+});

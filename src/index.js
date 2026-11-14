@@ -19,3 +19,4 @@ export {
 export { EQUIVALENCE_VERSION, interviewPassClass, classKeyFor } from './equivalence.js';
 export { FLOWS_VERSION, dayOffset } from './flows.js';
 export { sha256Hex, canonicalJson, digestOf } from './hash.js';
+export { DOMAINS, TAXONOMY_VERSION, entryOfQuestion } from './questions/taxonomy.js';

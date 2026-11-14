@@ -4,7 +4,8 @@
 export const INTERVIEW_PASS = Object.freeze({
   question_id: 'career.interview.interview-pass',
   question_type: 'interview_pass',
-  domain_id: 'career',
+  domain_id: 'career', // 事业工作（分类 domains-2026-11-14）
+  entry_id: 'career.job-offer', // 细分入口：求职录用；本问只答这一轮面试是否通过
   question_text: '这次面试能通过吗？',
   answer_scope: '只回答这一轮面试是否通过；不把通过面试等同于拿到最终录用，也不回答薪资、入职后发展。',
   rule_version: 'interview-pass-rules-0.2.0',

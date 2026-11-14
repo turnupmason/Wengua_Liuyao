@@ -67,6 +67,8 @@ export function checkClassDraft(src, userTexts) {
         else if (d.effect === 'support' && f.emergence !== 'likely') errors.push(`C33 样本 ${tag} 伏神「${f.emergence}」，不得作主要有利依据`);
         continue;
       }
+      // 日月为用（R-FUSHEN-01）：用神即月建或日辰，作有利依据成立
+      if (d.role === 'yong' && !lines.length && (evidence.yongshen.missing?.monthIsYong || evidence.yongshen.missing?.dayIsYong)) { if (d.effect === 'adverse') errors.push(`C33 样本 ${tag} 日月为用，不得作主要不利依据`); continue; }
       if (!lines.length) { errors.push(`C33 样本 ${tag} 无 ${d.role} 爻`); continue; }
       const ok = d.effect === 'adverse'
         ? lines.some((l) => l.state.state === 'EFFECTIVE' && l.state.acts !== '静（不主动作用）')
