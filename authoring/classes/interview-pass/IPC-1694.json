@@ -1,0 +1,242 @@
+{
+  "script_id": "IPC-1694",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用日月为用;世世化凶世受克;原伏有效;忌静不作用",
+  "class_rank": 1693,
+  "class_share_of_casts": 6e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "庚戌"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "乙酉"
+    }
+  ],
+  "scenario_tags": [
+    "月建或日辰为用",
+    "世爻化回头克",
+    "原神伏而有用"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官鬼不上卦可取，月建（或日辰）即官之五行，以之为用神（R-FUSHEN-01）"
+    ],
+    "supporting": [
+      "原神妻财伏而有用；忌神子孙静而不作用"
+    ],
+    "adverse": [
+      "世爻（兄弟）多休囚，发动而化回头克，你这一侧受挫"
+    ],
+    "conflicts_resolved": [
+      "用神在日月，世化凶为次要（同 IPC-1613 之理）；世所化之爻虽属官之五行，变爻只作用于世爻，不作用神；卦下伏官依例不取"
+    ],
+    "rule_ids": [
+      "R-DONGBIAN-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-SHIHUA-01",
+      "R-SHIYING-03",
+      "R-YONG-GUAN-01",
+      "R-YUANJI-04"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：官星在月令上，你世上一动却被回头克",
+    "brief": "这一卦倾向通过。官星不在卦爻上可取，起卦的月份多半就是官，余下取当天日辰，卦中动静伤它不到。生官的财伏而有用，克官的子孙安静。只是你世上的兄弟一动，变出来的爻回头克它，你这一侧会觉得受压、吃力。",
+    "opening": "卦爻上不取官，以月令之官为用，月令非官者取日辰；卦下伏官不取。\n世爻是兄弟，多失令，发动而化回头克；应位是子孙，由你所生。卦中兄弟发动，常兼父母。子孙安静；财伏于卦下而有用。",
+    "process": "用神在月令或日辰，卦中之爻伤它不到；伏财有用，出伏添力。\n你世上一动便遭回头之克，乡试章说世化退神「必无勇往之心」，这里是化克，类推为你这一侧受挫；变出的那一爻只管克你，不作取用。",
+    "ending": "月令或日辰为官、伏财有用，这一轮倾向通过；你这一侧要稳住心力。",
+    "timing": {
+      "text": "用神为月建或日辰，不在卦爻之中，本卦不按卦爻另列日子；从卦象看，事情可成，只是你这一侧要先调整好。",
+      "entries": []
+    },
+    "conclusion": "倾向通过。官星在月令上，你世上一动却被回头克。主动推进，自身状态也要顾及。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官鬼不上卦，以月建、日辰为用"
+      },
+      {
+        "rule_id": "R-SHIHUA-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "独不喜化退神﹐世化退神﹐若非临场之阻﹐必无勇往之心",
+        "applies_because": "世化退神为忌（本类化回头克，类推）"
+      },
+      {
+        "rule_id": "R-DONGBIAN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动变生克冲合章第十五",
+        "quote": "夫变出之爻能生克冲合本位之动爻，不能生克他爻，而他爻与本位之动爻，亦不能生克变爻。",
+        "applies_because": "变出之爻不能生克他爻"
+      },
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "妻财伏而有用"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1693 类，占起卦概率 0.006%，全类 68 盘）：用神「日月为用」；世爻「世化凶世受克」；原神妻财不上卦，伏而有用；忌神子孙安静而月令不旺，不主动作用。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：官鬼(65%)、妻财(35%)；发动六亲：兄弟(53%)、兄弟父母(47%)；均不改变本类结论，正文不写，由排盘逐盘列出。用神为月建（官鬼之五行 65%）或日辰（月建为财 35%）；世爻皆兄弟（休囚 100%），动化回头克 100%；忌神静而不作用；伏神：原神有用 100%，卦下伏官依例不取；应爻世生之 100%；发动：兄弟 53%、兄弟父母 47%。不列应期条目。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
