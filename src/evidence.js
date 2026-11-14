@@ -5,6 +5,7 @@ import {
   CLASH, COMBINE, BRANCH_ELEMENT, LIFE_STAGES, elementRelation, supportRolesFor, GENERATES, relativeOf,
 } from './constants.js';
 import { analyzeChart } from './analysis.js';
+import { assessRoleState } from './role-state.js';
 import { getQuestionRule } from './questions/index.js';
 import {
   FLOWS_VERSION, assessHidden, assessVoid, assessMonthDay, assessChange,
@@ -89,6 +90,8 @@ function describeLine(line, facts, chart) {
     seasonal: facts.calendar.month.seasonal,
     residualQi: facts.calendar.month.residualQi,
     strongBroad: strongBroad(facts),
+    calendar: facts.calendar,
+    state: assessRoleState(line, facts, chart),
     monthBreak: facts.calendar.monthBreak,
     void: facts.calendar.void,
     dayClash: facts.calendar.dayClash,
@@ -158,6 +161,7 @@ function selectYongshen(rel, chart, analysis) {
 function effectiveness(role, line, facts, chart, roles) {
   const cal = facts.calendar;
   const ch = facts.change;
+  // 元神忌神衰旺章条文原样核对：「休囚」取月令事实（D-015）。条文之间的冲突不在此处改写，交由 role-state 三层判定
   const weak = cal.month.seasonal === '休囚';
   const hurt = cal.month.controls || cal.day.controls || chart.lines.some((o) => o.moving && o.position !== line.position && elementRelation(o.element, line.element) === 'controls');
   const movingTomb = chart.lines.some((o) => o.moving && o.position !== line.position && LIFE_STAGES[line.element].墓 === o.branch);

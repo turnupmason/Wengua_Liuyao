@@ -14,5 +14,8 @@ export { RULE_PROFILE, seasonalState, calendarFacts, changeFacts, analyzeChart }
 export { EVIDENCE_VERSION, buildEvidence } from './evidence.js';
 export { QUESTION_RULES, getQuestionRule, supportedQuestionIds } from './questions/index.js';
 export {
-  PENDING_MESSAGE, readingKey, createReadingRepository, resolveTimingDates, createConsultationRecord,
+  PENDING_MESSAGE, readingKey, createReadingRepository, resolveTimingDates, createConsultationRecord, chartFactSheet, resolveClassTiming,
 } from './readings.js';
+export { EQUIVALENCE_VERSION, interviewPassClass, classKeyFor } from './equivalence.js';
+export { FLOWS_VERSION, dayOffset } from './flows.js';
+export { sha256Hex, canonicalJson, digestOf } from './hash.js';

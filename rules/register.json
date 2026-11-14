@@ -570,6 +570,27 @@
       "version": "0.1.0"
     },
     {
+      "rule_id": "R-YONG-GUAN-05",
+      "topic": "求名·子孙持世发动",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易序",
+      "original_text": [
+        "倘遇子孙持世，或子孙动于卦中，不拘占入场占升迁悉如水中捞月。"
+      ],
+      "modern_explanation": "求功名、升迁，遇子孙持世或子孙发动，所求难成。",
+      "applicable_conditions": "求名求职",
+      "exceptions": "与四处生克的一般判断冲突时见 D-016",
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/questions/interview-pass.js"
+      ],
+      "dispute_ids": [
+        "D-016"
+      ],
+      "review_status": "pending-professional-review",
+      "version": "0.2.0"
+    },
+    {
       "rule_id": "R-YONG-ZI-01",
       "topic": "子孙为求名忌神",
       "source_book": "增删卜易",
@@ -1445,6 +1466,24 @@
       "version": "0.1.0"
     },
     {
+      "rule_id": "R-SUIMU-01",
+      "topic": "真墓与假墓",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·随鬼入墓章第三十",
+      "original_text": [
+        "便是世爻用爻随鬼入日墓入动墓或动而化墓﹐亦是休囚无气始见危﹐若旺而有扶亦有求解。"
+      ],
+      "modern_explanation": "入墓须看旺衰：月令旺相、有扶者不作真墓；休囚无气、又受克而入墓，才是真正受困。",
+      "applicable_conditions": "用神、原神、忌神、世爻入日墓、动墓、化墓",
+      "exceptions": "",
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/role-state.js"
+      ],
+      "review_status": "pending-professional-review",
+      "version": "0.2.0"
+    },
+    {
       "rule_id": "R-HE-01",
       "topic": "六合",
       "source_book": "增删卜易",
@@ -1853,6 +1892,42 @@
         }
       ],
       "adopted": "暂按项目补充，待用户确认",
+      "status": "open"
+    },
+    {
+      "dispute_id": "D-015",
+      "topic": "月令旺衰与综合作用能力分离",
+      "positions": [
+        {
+          "source": "增删卜易·元神忌神衰旺章",
+          "view": "有力条「旺相或临日月或日月动爻生扶」与无力条「休囚不动」并列，字面上可同时成立"
+        },
+        {
+          "source": "增删卜易·各门类题头总注章",
+          "view": "但得临日月、或遇日月动爻变爻生扶，皆谓之旺"
+        },
+        {
+          "source": "用户专业复核（2026-11-13）",
+          "view": "月令旺衰独立记录、不因日辰生扶修改；综合日辰、动爻、动化、长生帝旺及实际克制判定作用能力；再独立检查旬空、月破、入墓、动静与解除条件；最后定当前作用状态 EFFECTIVE / DEFERRED / INEFFECTIVE / REVIEW_REQUIRED。空、破、墓分别判断，入墓分真假"
+        }
+      ],
+      "adopted": "采用用户三层判定（src/role-state.js）：月令三档与五级标签只作事实；作用能力依八宫图第三四处生克原文判（不设数值权重），日辰章临日、月将章月日相敌另立；空破墓分别判断，入墓依随鬼入墓章分真假；静爻有力不等于主动作用。元神忌神衰旺章条文原样核对，冲突由三层判定裁决",
+      "status": "adopted-pending-regression-review"
+    },
+    {
+      "dispute_id": "D-016",
+      "topic": "用神本身生多克少，而遇子孙持世发动",
+      "positions": [
+        {
+          "source": "增删卜易·八宫图第三（四处生克）",
+          "view": "三处相生一处相克，也以吉断"
+        },
+        {
+          "source": "增删卜易序、升选候补章",
+          "view": "子孙持世，休望荣荫；子孙动于卦中，不拘占入场占升迁悉如水中捞月"
+        }
+      ],
+      "adopted": "求名一类以专章明文为主（IP-0002 判偏难），待用户裁决",
       "status": "open"
     }
   ]

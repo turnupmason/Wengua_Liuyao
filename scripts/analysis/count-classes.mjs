@@ -3,7 +3,8 @@
 import { Worker, isMainThread, parentPort, workerData } from 'node:worker_threads';
 import { cpus } from 'node:os';
 import { writeFileSync } from 'node:fs';
-import { buildChart, buildEvidence, interviewFingerprint, interviewCoarseFingerprint } from './fingerprint.mjs';
+import { buildChart, buildEvidence, interviewFingerprint } from './fingerprint.mjs';
+import { interviewPassClass, EQUIVALENCE_VERSION } from '../../src/equivalence.js';
 import { allHexagrams, BRANCHES, ganzhiFromIndex } from '../../src/index.js';
 
 const Q = 'career.interview.interview-pass';
@@ -34,11 +35,19 @@ if (isMainThread) {
           let acc = 0;
           const marks = {};
           rows.forEach((r, i) => { acc += r[1][1] / totalP; for (const q of [0.5, 0.8, 0.9, 0.95, 0.99]) if (!marks[q] && acc >= q) marks[q] = i + 1; });
-          return { classes: rows.length, coverage_by_cast_probability: marks, top: rows.slice(0, 40).map(([k, [c, p]]) => ({ fingerprint: k.slice(2), charts: c, share: +(p / totalP).toFixed(5) })) };
+          return { classes: rows.length, coverage_by_cast_probability: marks, top: rows.slice(0, 60).map(([k, [c, p]]) => ({ fingerprint: k.slice(2), charts: c, share: +(p / totalP).toFixed(5) })) };
         };
-        const report = { question: Q, charts, seconds: (Date.now() - t0) / 1000, fine: summarize('F|'), coarse: summarize('C|') };
+        const all = [...merged.entries()];
+        const tot = all.filter(([k]) => k.startsWith('C|')).reduce((s, [, v]) => s + v[1], 0);
+        const wr = all.filter(([k]) => k.startsWith('C|W|'));
+        const writable = { classes: wr.length, share: +(wr.reduce((s, [, v]) => s + v[1], 0) / tot).toFixed(4) };
+        let acc = 0; const wmarks = {};
+        wr.sort((a, b) => b[1][1] - a[1][1]).forEach(([, v], i) => { acc += v[1] / tot; for (const q of [0.1, 0.2, 0.3, 0.4]) if (!wmarks[q] && acc >= q) wmarks[q] = i + 1; });
+        writable.classes_needed_for_share_of_all_casts = wmarks;
+        const blockers = Object.fromEntries(all.filter(([k]) => k.startsWith('X|')).map(([k, v]) => [k.slice(2), +(v[1] / tot).toFixed(4)]));
+        const report = { question: Q, equivalence_version: EQUIVALENCE_VERSION, charts, seconds: (Date.now() - t0) / 1000, fine: summarize('F|'), classes: summarize('C|'), writable, blockers };
         writeFileSync(new URL('../../reports/interview-pass-classes.json', import.meta.url), `${JSON.stringify(report, null, 2)}\n`);
-        console.log(JSON.stringify({ charts, seconds: report.seconds, fine: { classes: report.fine.classes, coverage: report.fine.coverage_by_cast_probability }, coarse: { classes: report.coarse.classes, coverage: report.coarse.coverage_by_cast_probability } }));
+        console.log(JSON.stringify({ charts, seconds: report.seconds, fine: report.fine.classes, classes: report.classes.classes, coverage: report.classes.coverage_by_cast_probability, writable, blockers }));
       }
     });
   }
@@ -54,7 +63,8 @@ if (isMainThread) {
       const chart = buildChart({ lineValues: lv, calendar: { monthBranch: m, dayGanzhi: g.stem + g.branch } });
       const ev = buildEvidence(Q, chart);
       const p = lv.reduce((s, v) => s * PROB[v], 1);
-      for (const fp of [`F|${interviewFingerprint(chart, ev)}`, `C|${interviewCoarseFingerprint(chart, ev)}`]) {
+      const cls = interviewPassClass(ev);
+      for (const fp of [`F|${interviewFingerprint(chart, ev)}`, `C|${cls.writable ? 'W' : 'B'}|${cls.key}`, ...cls.blockers.map((b) => `X|${b}`)]) {
         const cur = counts.get(fp) || [0, 0]; cur[0] += 1; cur[1] += p; counts.set(fp, cur);
       }
       charts += 1;

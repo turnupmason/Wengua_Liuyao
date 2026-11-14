@@ -398,6 +398,40 @@
       "open_questions_for_professional_review": [
         "伏财有用而生官，是否足以把「难以通过」改为「偏难」"
       ]
+    },
+    {
+      "record_id": "RV-0014",
+      "script_id": "*",
+      "stage": "external-feedback",
+      "status": "received",
+      "content_hash": null,
+      "reviewer": "用户",
+      "reviewed_at": "2026-11-13",
+      "findings": [
+        "D-015 改为三层判定：月令旺衰为事实，不因日辰生扶改写；综合作用能力另判；当前作用状态分 EFFECTIVE / DEFERRED / INEFFECTIVE / REVIEW_REQUIRED；空、破、墓分别判断，入墓分真假；静爻有力不等于主动作用；P0，以六篇回归"
+      ],
+      "note": "专业意见记录，不是批准"
+    },
+    {
+      "record_id": "RV-0015",
+      "script_id": "IP-0002",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "content_hash": "552eba2d0c2ec7222de9bd1bee0bd4aa3dd9ac082a044f6a4bd9fdc4422b42e3",
+      "reviewer": "Claude（AI 作者自查，非独立审核）",
+      "reviewed_at": "2026-11-13",
+      "checklist": {
+        "判别流程确认": "pass",
+        "三层判定回归": "用神 EFFECTIVE（生多克少）；忌神酉 EFFECTIVE 发动",
+        "古籍依据": "pass（补增删卜易序）",
+        "简详结论一致": "pass"
+      },
+      "findings": [
+        "三层判定回归发现原稿「四处之中忌神动克为主」与四处生克计算不符（官星月生、日合、一处动克，生多克少）；偏难依据改为求名专章明文，并列 D-016"
+      ],
+      "open_questions_for_professional_review": [
+        "D-016：用神本身生多克少而遇子孙持世发动，以何为主"
+      ]
     }
   ]
 }
