@@ -1583,6 +1583,148 @@
         "[minor] rules/register.json R-HE-02.source_chapter：登记为「增删卜易卷之三·乡试」，底本章名为「乡试章第五十五」（维基文库目录作「鄕試會試章第五十五」），与其他条目的写法不一致。"
       ],
       "report": "reports/review-round9/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0052",
+      "script_id": "IP-0001",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-14",
+      "polish_grade": "A",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [],
+      "changes": [],
+      "original_snapshot": "authoring/interview-pass/IP-0001.json",
+      "original_content_hash": "f7f46a75a3d0fd637e9b75d07e961c12a6bef93624d2db77383e5418f52b64bf",
+      "content_hash": "f7f46a75a3d0fd637e9b75d07e961c12a6bef93624d2db77383e5418f52b64bf",
+      "note": "原稿自然准确，保留",
+      "professional_issues": []
+    },
+    {
+      "record_id": "RV-0053",
+      "script_id": "IP-0004",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-14",
+      "polish_grade": "A",
+      "original_verdict": "倾向通过，结果偏慢",
+      "locked_fields_verified": [
+        "chart_input",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [],
+      "changes": [],
+      "original_snapshot": "authoring/interview-pass/IP-0004.json",
+      "original_content_hash": "98f66975ee29eebf63e2b4cd8130c604834e4c4e93797d91bb6ce59d7921e022",
+      "content_hash": "98f66975ee29eebf63e2b4cd8130c604834e4c4e93797d91bb6ce59d7921e022",
+      "note": "原稿自然准确，保留",
+      "professional_issues": []
+    },
+    {
+      "record_id": "RV-0054",
+      "script_id": "IP-0005",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-14",
+      "polish_grade": "B",
+      "original_verdict": "眼下悬而未决，冲空或出旬后有望",
+      "locked_fields_verified": [
+        "chart_input",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "brief",
+        "process",
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "brief",
+          "before": "官星落在你自己的世爻上，又得月令相生，底子不差；但它正逢旬空，此刻不在位，结果眼下悬而未决。生官的应爻财爻本旺，当天却被日墓收住，一时使不上力。本旬内有一次冲起的机会，否则就等出旬；冲起或出旬之后有望通过，眼下宜静候。",
+          "after": "官星落在你自己的世爻上，又得月令相生，底子不差；但它正逢旬空，此刻不在位，结果眼下悬而未决。生官的财爻坐在应位，本来旺盛，当天却被日墓收住，一时使不上力。本旬内有一次冲起的机会，否则就等出旬；冲起或出旬之后有望通过，眼下宜静候。"
+        },
+        {
+          "field": "process",
+          "before": "再看各方的力量。生官的妻财亥水坐在应位，当令的月建正是亥水，本来旺盛；可当天是辰日，辰为水的墓库，又以土克水。临月建而墓于日，是月建与日辰相敌，《增删卜易·月将章》称之为「无吉无凶之象」：这股助力没有失去，只是此刻发挥不出来。卦中六爻安静，没有别的爻动来扶它或克它，它就停在这个搁置的位置上。\n克官的子孙酉金在上爻，冬令本是休囚，但辰日生它，又与它相合，有被提起的意思；好在它安静不动，没有去冲克官星。两爻兄弟丑土同样入了辰墓，也都没有动静。",
+          "after": "再看各方的力量。生官的妻财亥水坐在应位，当令的月建正是亥水，本来旺盛；可当天是辰日，辰为水的墓库，又以土克水。临月建而墓于日，是月建与日辰相敌，《增删卜易·月将章》称之为「无吉无凶之象」：这股助力没有失去，只是此刻发挥不出来。卦中没有别的爻动来扶它或克它，这份力量便一直搁在那里。\n克官的子孙酉金在上爻，冬令本是休囚，但辰日生它，又与它相合，有被提起的意思；好在它安静不动，没有去冲克官星。两爻兄弟丑土同样入了辰墓，也都没有动静。"
+        },
+        {
+          "field": "ending",
+          "before": "官星有根而暂空，原神旺而被日墓收住，克官之神被提起却安静无为，各方都停在「暂停」的位置上。空爻逢冲可起，出旬可实：本旬之内若有冲动官星之时，结果可能先见分晓；那时若仍无动静，就等出旬、官星填实。这一轮并非无望，只是要等，等到官星出空，有望通过，不宜指望马上就有结果。",
+          "after": "官星有根而暂空，原神旺而被日墓收住，克官之神被提起却安静无为——三方都还没有真正出手。空爻逢冲可起，出旬可实：本旬之内若有冲动官星之时，结果可能先见分晓；那时仍无动静，就等出旬后官星填实。所以这一轮并非无望，有望通过，只是急不得。"
+        }
+      ],
+      "original_snapshot": "authoring/history/interview-pass/IP-0005.r6.json",
+      "original_content_hash": "fc9ad0fbf38ce27b9f739ca311c340ac02850e09041781eb1a22f74cea8e1599",
+      "content_hash": "e029d7bc0dc7b16e61e14e4c824ec5422c632a31082b500a9418a1c7642c27e4",
+      "note": "",
+      "professional_issues": []
+    },
+    {
+      "record_id": "RV-0055",
+      "script_id": "IP-0006",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-14",
+      "polish_grade": "B",
+      "original_verdict": "难以通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "opening",
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "opening",
+          "before": "本卦天山遁，二爻世爻上的官鬼午火发动，变成天风姤。卦中官鬼出现了两次，古法舍静用动，以发动的这一爻为用神。\n官星坐的正是你自己的位置。起卦这天是甲午日，午火临日，火到午又是帝旺之地，单论当天，气势正足；从卦象看，面试当场的表现或氛围并不差。只是节令不帮它：亥月水旺，水克火，官星在月令上受克，根基并不牢。",
+          "after": "本卦天山遁，二爻世爻上的官鬼午火发动，变成天风姤。卦中官鬼出现了两次，古法舍静用动，以发动的这一爻为用神。\n官星坐的正是你自己的位置。起卦这天是甲午日，午火临日，火到午又是帝旺之地，单论当天，气势正足。只是节令不帮它：亥月水旺，水克火，官星在月令上受克，根基并不牢。"
+        },
+        {
+          "field": "ending",
+          "before": "临日之旺是眼前之吉，世下伏财的木生火只是一分泄出来的扶持；化出当令的子孙回头相克、又化入绝地，则是后来之凶。动为始、变为终，前两样挡不住变爻这一克，结局便落在后者，所以这一轮难以通过。若后面还有环节，从卦象看，由顺转逆的关口多半在后段。",
+          "after": "临日之旺是眼前之吉，世下伏财的木生火只是一分泄出来的扶持；化出当令的子孙回头相克、又化入绝地，则是后来之凶。动为始、变为终，前两样挡不住变爻这一克，结局便落在后者，所以这一轮难以通过。从卦象看，由顺转逆的关口多半在后段。"
+        }
+      ],
+      "original_snapshot": "authoring/history/interview-pass/IP-0006.r6.json",
+      "original_content_hash": "abf5f59606de41aca0cf37ee7205e80df36c3914eaeefacc9c69787bf3702bee",
+      "content_hash": "22ac0c5d21455f62fe2477c64010bd483264504f0cb182330c7f22d3fe060d70",
+      "note": "",
+      "professional_issues": []
     }
   ]
 }

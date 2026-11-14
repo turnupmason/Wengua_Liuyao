@@ -36,7 +36,7 @@ export function statusesFor(records, scriptId, hash) {
   const passOrResolved = (r) => Boolean(r && (r.status === 'PASS' || r.resolution === 'resolved'));
   const ai = {
     source: stage('ai-source-check'), independent: stage('ai-independent'), adversarial: stage('ai-adversarial'),
-    editor: stage('ai-editor'), finalQa: stage('ai-final-qa', true),
+    editor: stage('ai-editor') || stage('polish'), finalQa: stage('ai-final-qa', true),
   };
   const finalChecklist = ai.finalQa?.conditions || {};
   const missingConditions = ai.finalQa ? RELEASE_CONDITIONS.filter((c) => finalChecklist[c] !== true) : [...RELEASE_CONDITIONS];
