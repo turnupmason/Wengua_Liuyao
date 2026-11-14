@@ -20,6 +20,7 @@ function profileOf(chart, e) {
     用神月令: y ? y.seasonal : '不现',
     用神生扶: y ? y.support.map(norm).sort().join('、') || '无' : '-',
     用神伤损: y ? y.damage.map(norm).sort().join('、') || '无' : '-',
+    用神空破: y ? [y.void && y.void.zengshan !== '冲空则实' ? '旬空' : '', y.monthBreak ? '月破' : ''].filter(Boolean).join('') || '不空不破' : '-',
     用神动化: y?.change ? [y.change.huitou, y.change.advance, y.change.lifeStage].filter(Boolean).join('') || '动平' : '-',
     世爻六亲: e.world.relative,
     世爻动化: e.world.change ? [e.world.change.huitou, e.world.change.advance, e.world.change.lifeStage].filter(Boolean).join('') || '动平' : '静',
