@@ -5,7 +5,7 @@
 import json, os
 
 ROOT = 'D:/Wengua_Liuyao'
-V = 'interview-pass-eq-0.12.4'
+V = 'interview-pass-eq-0.12.5'
 _reg = None
 _prof = None
 

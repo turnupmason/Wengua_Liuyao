@@ -405,6 +405,7 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     missing = {
       monthIsYong: relOfBranch(monthBranch) === rel,
       dayIsYong: relOfBranch(dayBranch) === rel,
+      monthRelative: relOfBranch(monthBranch),
       hidden: hiddenLine ? {
         position: hiddenLine.position,
         flyLine: `${hiddenLine.label}${hiddenLine.relative}${hiddenLine.branch}`,

@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.4';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.5';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -77,7 +77,9 @@ export function interviewPassClass(evidence) {
     yong = { source: '两现并列' };
     blockers.push('用神两现并列，须作者取舍');
   } else if (y.missing.monthIsYong || y.missing.dayIsYong) {
-    yong = { source: '日月为用' };
+    // 日辰为官而月建为子孙：月令克日辰之官，不助反克（IPC-0177 判有望而待时），与月建为官、或月令生扶日辰者分开
+    const monthClashesDay = !y.missing.monthIsYong && y.missing.dayIsYong && y.missing.monthRelative === '子孙';
+    yong = { source: monthClashesDay ? '日月为用(月克日)' : '日月为用' };
   } else {
     const hf = evidence.flows.find((f) => f.flow === 'hidden' && f.role === 'yong');
     yong = { source: hf ? `伏${{ likely: '有效', deferred: '待时', contested: '并见', unlikely: '难出', neutral: '平' }[hf.emergence]}` : '无伏' };

@@ -68,6 +68,11 @@ if (isMainThread) {
           // 样本：按月建、日辰、卦分散，取 12 个
           const picked = []; const used = new Set();
           for (const s of m.samples.sort((x, y) => x.h - y.h)) { const tag = `${s.ci.month_branch}${s.ci.day_ganzhi}${s.hex}`; if (used.has(tag)) continue; used.add(tag); picked.push(s.ci); if (picked.length >= 12) break; }
+          // 小类（月建、日辰、卦组合不足 12 种）：再取动爻不同的盘补足，保证 C30 逐盘核对至少 8 盘
+          if (picked.length < 12) {
+            const seen = new Set(picked.map((c) => `${c.line_values.join('')}${c.month_branch}${c.day_ganzhi}`));
+            for (const s of m.samples) { const t = `${s.ci.line_values.join('')}${s.ci.month_branch}${s.ci.day_ganzhi}`; if (seen.has(t)) continue; seen.add(t); picked.push(s.ci); if (picked.length >= 12) break; }
+          }
           const top = (o) => Object.entries(o).sort((x, y) => y[1] - x[1]).map(([v, c]) => `${v}(${Math.round((100 * c) / m.charts)}%)`);
           return { rank: m.rank, key: m.key, share: m.share, cumulative: m.cumulative, charts: m.charts,
             stats: Object.fromEntries(Object.entries(m.stats).map(([k, v]) => [k, top(v).slice(0, 8)])),

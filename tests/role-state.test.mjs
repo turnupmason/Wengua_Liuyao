@@ -84,3 +84,10 @@ test('元神忌神衰旺章（R-YUANJI-04）：忌神发动有力而另一爻原
   assert.match(solo, /忌动有力/);
   assert.doesNotMatch(solo, /同动/);
 });
+
+test('日月为用：日辰为官而月建为子孙，月令克日辰之官（IPC-0177），指纹记「日月为用(月克日)」', () => {
+  const ke = interviewPassClass(ev([7, 8, 8, 8, 7, 9], '午', '戊申')).key; // IPC-0177 样本：午月火克申日金官
+  assert.match(ke, /^用日月为用\(月克日\);/);
+  const sheng = interviewPassClass(ev([7, 8, 8, 8, 8, 7], '丑', '甲申')).key; // 丑月土生申日金官
+  assert.match(sheng, /^用日月为用;/);
+});
