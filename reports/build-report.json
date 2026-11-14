@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 306,
-  "technical_passed": 306,
+  "scripts": 318,
+  "technical_passed": 318,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 306,
+  "ai_approved": 318,
   "review_required": 0,
-  "approved_for_release": 306,
+  "approved_for_release": 318,
   "errors": [],
   "warnings": [
     "IPC-0260: C25 与IPC-0300字符六元组相似度 0.31，须复核是否机械复用",
@@ -20,9 +20,19 @@
       "jaccard6": 0.307
     },
     {
+      "a": "IPC-0225",
+      "b": "IPC-0309",
+      "jaccard6": 0.291
+    },
+    {
       "a": "IPC-0264",
       "b": "IPC-0265",
       "jaccard6": 0.286
+    },
+    {
+      "a": "IPC-0256",
+      "b": "IPC-0312",
+      "jaccard6": 0.282
     },
     {
       "a": "IPC-0219",
@@ -53,16 +63,6 @@
       "a": "IPC-0060",
       "b": "IPC-0062",
       "jaccard6": 0.26
-    },
-    {
-      "a": "IPC-0225",
-      "b": "IPC-0250",
-      "jaccard6": 0.259
-    },
-    {
-      "a": "IPC-0238",
-      "b": "IPC-0254",
-      "jaccard6": 0.259
     }
   ]
 }

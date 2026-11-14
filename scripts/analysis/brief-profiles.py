@@ -9,7 +9,7 @@ for r in range(a, b + 1):
     for k in KEYS:
         v = p['stats'].get(k, [])
         if not v or v == ['-(100%)'] or v == ['无(100%)'] and k in ('伏神', '三合'): continue
-        print(f"  {k}: {' '.join(x[:60] for x in v[:4])}")
+        print(f"  {k}: {' '.join(x[:46] for x in v[:3])}")
     t = p['timing_rules_all_charts']
     print(f"  应期全类 吉{t['favorable']} 防{t['adverse']}")
     # 已写之近似类（用神段、世爻段、忌神段相同者优先）
