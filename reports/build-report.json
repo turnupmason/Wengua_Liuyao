@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 426,
-  "technical_passed": 426,
+  "scripts": 438,
+  "technical_passed": 438,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 426,
+  "ai_approved": 438,
   "review_required": 0,
-  "approved_for_release": 426,
+  "approved_for_release": 438,
   "errors": [],
   "warnings": [
     "IPC-0256: C25 与IPC-0330字符六元组相似度 0.33，须复核是否机械复用",
@@ -16,12 +16,21 @@
     "IPC-0300: C25 与IPC-0260字符六元组相似度 0.31，须复核是否机械复用",
     "IPC-0330: C25 与IPC-0256字符六元组相似度 0.33，须复核是否机械复用",
     "IPC-0334: C25 与IPC-0398字符六元组相似度 0.33，须复核是否机械复用",
+    "IPC-0344: C25 与IPC-0426字符六元组相似度 0.30，须复核是否机械复用",
+    "IPC-0357: C25 与IPC-0429字符六元组相似度 0.35，须复核是否机械复用",
     "IPC-0365: C25 与IPC-0275字符六元组相似度 0.30，须复核是否机械复用",
     "IPC-0380: C25 与IPC-0394字符六元组相似度 0.33，须复核是否机械复用",
     "IPC-0394: C25 与IPC-0380字符六元组相似度 0.33，须复核是否机械复用",
-    "IPC-0398: C25 与IPC-0334字符六元组相似度 0.33，须复核是否机械复用"
+    "IPC-0398: C25 与IPC-0334字符六元组相似度 0.33，须复核是否机械复用",
+    "IPC-0426: C25 与IPC-0344字符六元组相似度 0.30，须复核是否机械复用",
+    "IPC-0429: C25 与IPC-0357字符六元组相似度 0.35，须复核是否机械复用"
   ],
   "similarity": [
+    {
+      "a": "IPC-0357",
+      "b": "IPC-0429",
+      "jaccard6": 0.349
+    },
     {
       "a": "IPC-0334",
       "b": "IPC-0398",
@@ -43,9 +52,19 @@
       "jaccard6": 0.307
     },
     {
+      "a": "IPC-0344",
+      "b": "IPC-0426",
+      "jaccard6": 0.305
+    },
+    {
       "a": "IPC-0275",
       "b": "IPC-0365",
       "jaccard6": 0.3
+    },
+    {
+      "a": "IPC-0389",
+      "b": "IPC-0426",
+      "jaccard6": 0.296
     },
     {
       "a": "IPC-0312",
@@ -56,21 +75,6 @@
       "a": "IPC-0321",
       "b": "IPC-0326",
       "jaccard6": 0.293
-    },
-    {
-      "a": "IPC-0225",
-      "b": "IPC-0309",
-      "jaccard6": 0.291
-    },
-    {
-      "a": "IPC-0264",
-      "b": "IPC-0265",
-      "jaccard6": 0.286
-    },
-    {
-      "a": "IPC-0309",
-      "b": "IPC-0363",
-      "jaccard6": 0.283
     }
   ]
 }
