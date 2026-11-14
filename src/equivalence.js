@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.8.0';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.8.1';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -11,7 +11,7 @@ function qiPattern(l, cal) {
   const dayHit = d.controls || cal.dayTomb || (cal.dayClash && cal.dayClash.zengshan === '日破');
   const dayHelp = d.same || d.supports || d.lifeStage === '长生' || d.lifeStage === '帝旺' || (cal.dayClash && cal.dayClash.zengshan === '暗动');
   if (seasonal) return dayHit ? '月旺日制' : '月旺';
-  if (m.controls || m.clash) return dayHelp ? '月克日生' : l.strongBroad ? '月克得扶' : '无气';
+  if (m.controls || m.clash) return d.same ? '月克临日' : dayHelp ? '月克日助' : l.strongBroad ? '月克得扶' : '无气';
   if (dayHelp) return '日扶';
   return l.strongBroad ? '动扶' : '无气';
 }

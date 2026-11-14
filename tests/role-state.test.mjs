@@ -44,8 +44,9 @@ test('六篇回归：用神与原忌神的当前作用状态', () => {
   const s3 = ev([6, 8, 8, 7, 6, 8], '亥', '乙未');
   assert.equal(s3.yongshen.line.state.state, 'EFFECTIVE');
   const wu = s3.ji.find((x) => x.branch === '午');
-  assert.equal(wu.state.state, 'REVIEW_REQUIRED');
-  assert.equal(wu.state.acts, '静（不主动作用）');
+  assert.ok(wu.state.places.some((p) => p.place.startsWith('动爻初爻') && p.effect === '生'), '初爻未土动来合午，静爻得合为合起（AI-3 复核）');
+  assert.equal(wu.state.state, 'EFFECTIVE');
+  assert.equal(wu.state.acts, '静（不主动作用）', '静而休囚，不主动作用于用神');
   assert.ok(interviewPassClass(s3).writable, '静而休囚之待核忌神不能主动作用，不阻塞类别');
 });
 

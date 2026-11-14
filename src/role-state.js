@@ -4,7 +4,7 @@
 import { BRANCH_ELEMENT, GENERATES, CLASH, COMBINE, LIFE_STAGES, elementRelation } from './constants.js';
 import { dayOffset } from './flows.js';
 
-export const ROLE_STATE_VERSION = 'role-state-0.2.0';
+export const ROLE_STATE_VERSION = 'role-state-0.3.0';
 
 /** 通行五级称谓（当令旺、令生相、生令休、克令囚、令克死）。本项目古籍库未见定义原文，只作月令事实标签；判断用增删卜易三档 */
 export function seasonalFive(element, monthBranch) {
@@ -36,7 +36,7 @@ function fourPlaces(line, facts, chart) {
   for (const o of chart.lines) {
     if (!o.moving || o.position === line.position) continue;
     const er = elementRelation(o.element, line.element);
-    if (er === 'generates' || er === 'same') places.push({ place: `动爻${o.label}${o.branch}`, effect: '生', strong: false });
+    if (er === 'generates' || er === 'same' || (!line.moving && COMBINE.get(o.branch) === line.branch)) places.push({ place: `动爻${o.label}${o.branch}`, effect: '生', strong: false });
     else if (er === 'controls' || CLASH.get(o.branch) === line.branch) places.push({ place: `动爻${o.label}${o.branch}`, effect: '克', strong: false });
   }
   const ch = facts.change;
@@ -107,7 +107,7 @@ export function assessRoleState(line, facts, chart) {
   if (facts.change && facts.change.lifeStage === '墓') tombs.push('化墓');
   if (tombs.length) {
     // 随鬼入墓章：休囚无气始见危，旺而有扶亦有求解——月令旺相者不作真墓
-    const trueTomb = !c.seasonalStrong;
+    const trueTomb = !c.seasonalStrong && !places.some((p) => p.effect === '生');
     limitations.push({ kind: '入墓', detail: `${tombs.join('、')}${trueTomb ? '（月令休囚，须看是否受克而成真墓）' : '（月令旺相，不作真墓）'}`, trueTomb });
     if (trueTomb) release.push({ kind: '冲墓', branch: CLASH.get(tombBranch), rule: 'R-YINGQI-05' });
   }
@@ -117,7 +117,12 @@ export function assessRoleState(line, facts, chart) {
   if (capability === 'contested') { state = 'REVIEW_REQUIRED'; stateReason = basis; }
   else if (capability === 'weak') { state = 'INEFFECTIVE'; stateReason = effective.length ? `${basis}；又${effective.map((l) => l.kind).join('、')}` : basis; }
   else if (capability === 'balanced') {
-    if (c.dayTomb) { state = 'DEFERRED'; stateReason = `${basis}；墓于日，待冲墓之日`; }
+    if (c.dayTomb) {
+      state = 'DEFERRED';
+      stateReason = `${basis}；墓于日，待冲墓之日`;
+      const tb = CLASH.get(chart.calendar.dayBranch);
+      release.push({ kind: '冲墓', branch: tb, ...dayOffset(chart, tb), rule: 'R-YINGQI-05' });
+    }
     else { state = 'REVIEW_REQUIRED'; stateReason = `${basis}；无墓可冲，须看他爻动扶动克`; }
   } else if (!effective.length) { state = 'EFFECTIVE'; stateReason = basis + (limitations.length ? '；入墓而月令旺相，不作真墓' : ''); }
   else if (effective.length > 1) { state = 'REVIEW_REQUIRED'; stateReason = `${basis}；但同时${effective.map((l) => l.kind).join('、')}，须分别判断`; }

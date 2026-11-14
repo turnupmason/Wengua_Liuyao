@@ -29,7 +29,7 @@ function ledger(line, facts, chart) {
   if (m.clash) damage.push('月破');
   else if (m.element === 'controls') damage.push('月克');
   if (d.same) support.push('临日');
-  else if (d.element === 'same') support.push('日扶');
+  else if (d.element === 'same' && facts.calendar.dayClash?.zengshan !== '日破') support.push('日扶');
   else if (d.element === 'generates') support.push('日生');
   if (d.combine) (line.moving ? notes : support).push(line.moving ? '动而逢日合（合绊）' : '日合');
   if (d.lifeStage === '长生' || d.lifeStage === '帝旺') support.push(`日${d.lifeStage}`);
@@ -107,8 +107,10 @@ function describeLine(line, facts, chart) {
 
 /** 两现章古法排序键（R-LIANGXIAN-01） */
 function candidateKey(line, facts, chart) {
-  const hurt = facts.calendar.month.controls || facts.calendar.day.controls
-    || chart.lines.some((o) => o.moving && o.position !== line.position && elementRelation(o.element, line.element) === 'controls');
+  const movingHit = chart.lines.some((o) => o.moving && o.position !== line.position && elementRelation(o.element, line.element) === 'controls')
+    || Boolean(facts.change && facts.change.huitou === '回头克');
+  // 爻临日辰，遇冲克而无伤；再有动爻来克或动化相克则伤亦为伤（R-RIZHEN-05）
+  const hurt = facts.calendar.day.same ? movingHit : (facts.calendar.month.controls || facts.calendar.day.controls || movingHit);
   return [
     line.moving ? 1 : 0,
     facts.calendar.seasonalStrong ? 1 : 0,
@@ -147,6 +149,7 @@ function selectYongshen(rel, chart, analysis) {
   const base = { candidates: keyed.map(describe) };
   if (cands.length === 1) return { ...base, status: 'single', selectedPosition: keyed[0].line.position, decidedBy: null, ruleIds: ['R-YONG-GUAN-01'] };
   const [a, b] = keyed;
+  if (a.key[0] === 1 && keyed.filter((k) => k.key[0] === 1).length === 1) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '一爻动者择其动者', ruleIds: ['R-LIANGXIAN-03'] };
   if (cmp(a.key, b.key) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '古法五项', ruleIds: ['R-LIANGXIAN-01'] };
   if (cmp(a.finer, b.finer) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '择其旺者', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
   const tied = keyed.filter((k) => cmp(k.key, a.key) === 0 && cmp(k.finer, a.finer) === 0);
@@ -279,8 +282,9 @@ function hiddenTiming(missing) {
   const { flyBranch } = h;
   const out = [
     { timing_rule_id: 'R-YINGQI-01', target_symbol: `伏神${h.hiddenSymbol}`, target_branches: [hb], time_scale: SCALE_NEAR, calculation_basis: `伏神逢值：逢${hb}` },
-    { timing_rule_id: 'R-FUSHEN-05', target_symbol: `飞神${h.flyLine}`, target_branches: [CLASH.get(flyBranch)], time_scale: SCALE_NEAR, calculation_basis: `飞不推开亦枉然：逢${CLASH.get(flyBranch)}冲开飞神${flyBranch}` },
   ];
+  // 起卦当天日辰已冲开飞神，则推开之条件当下已成，不再以下一个冲飞之日为应期
+  if (h.dayBranch !== CLASH.get(flyBranch)) out.push({ timing_rule_id: 'R-FUSHEN-05', target_symbol: `飞神${h.flyLine}`, target_branches: [CLASH.get(flyBranch)], time_scale: SCALE_NEAR, calculation_basis: `飞不推开亦枉然：逢${CLASH.get(flyBranch)}冲开飞神${flyBranch}` });
   if (h.calendar.void) out.push({ timing_rule_id: 'R-YINGQI-08', target_symbol: `伏神${h.hiddenSymbol}`, target_branches: [hb, CLASH.get(hb)], time_scale: SCALE_NEAR, calculation_basis: `伏神旬空，待出空填冲：逢${hb}或${CLASH.get(hb)}` });
   return out;
 }
@@ -331,6 +335,7 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
         flyLine: `${hiddenLine.label}${hiddenLine.relative}${hiddenLine.branch}`,
         hiddenSymbol: `${rel}${hiddenLine.hidden.branch}${hiddenLine.hidden.element}`,
         hiddenBranch: hiddenLine.hidden.branch,
+        dayBranch: chart.calendar.dayBranch,
         flyBranch: hiddenLine.branch,
         flyRelation: lf(hiddenLine).hidden.flyRelation,
         usable: lf(hiddenLine).hidden.usable,

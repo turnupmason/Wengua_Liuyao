@@ -2,10 +2,10 @@
 // 每个流程只输出「按本规则版本应如何论」及其依据；作者须在断语 judgment.flow_acknowledgements 中逐项确认或说明不采用的理由。
 
 import {
-  BRANCHES, CLASH, LIFE_STAGES, elementRelation, ganzhiIndex,
+  BRANCHES, CLASH, COMBINE as COMBINE_MAP, LIFE_STAGES, elementRelation, ganzhiIndex,
 } from './constants.js';
 
-export const FLOWS_VERSION = 'flows-0.3.0';
+export const FLOWS_VERSION = 'flows-0.3.1';
 
 /** 某支之日距起卦日几天、是否仍在本旬之内（起卦日为第 0 天） */
 export function dayOffset(chart, branch) {
@@ -41,6 +41,8 @@ export function assessHidden(line, lineFacts, role) {
   else if (hasQi && openers.length) { emergence = 'contested'; reason = `伏神有气、飞神可推开，但有「${obstacles.join('、')}」之阻：有用与无用并见，须权衡`; }
   else { emergence = 'unlikely'; reason = `有「${obstacles.join('、')}」之阻，飞神又未被推开`; }
   if (h.flyRelation === 'controls' && u['飞神空破休囚墓绝']) reason += '；飞神虽克伏神，但自身空破休囚，飞神逢破墓衰空虽有若无，克力不实';
+  const flyCombine = COMBINE_MAP.get(line.branch) === h.branch;
+  if (flyCombine) reason += '；飞伏相合';
   return {
     flow: 'hidden',
     id: `HIDDEN@${line.position}:${h.relative}${h.branch}`,
@@ -49,6 +51,7 @@ export function assessHidden(line, lineFacts, role) {
     hidden: `${h.relative}${h.branch}${h.element}`,
     fly: `${line.label}${line.relative}${line.branch}${line.element}${line.moving ? '（发动）' : ''}`,
     flyRelation: flyRelationName(h.flyRelation),
+    flyCombine,
     hasQi,
     supports,
     openers,
@@ -161,7 +164,8 @@ export function assessChange(line, lineFacts, role) {
     else if (self.day.same && (self.month.controls || self.month.clash)) verdict = '回头克而本爻只临日辰、又受月克：寡不敌众，伤亦为伤';
     else verdict = '化回头克：化凶';
   } else if (c.huitou === '回头生') {
-    verdict = attackerWeak && !attackerStrong ? '化回头生而生神空破：生力打折' : '化回头生：化吉';
+    const hostile = role === 'ji' || role === 'chou';
+    verdict = attackerWeak && !attackerStrong ? '化回头生而生神空破：生力打折' : hostile ? '化回头生：忌神得助，于用神为凶' : '化回头生：化吉';
   }
   const tags = [c.advance && `化${c.advance}`, c.lifeStage && `化${c.lifeStage}`, c.changedVoid && '化空', c.changedMonthBreak && '化破', c.clash && '回头冲', c.combine && '化合'].filter(Boolean);
   return {
