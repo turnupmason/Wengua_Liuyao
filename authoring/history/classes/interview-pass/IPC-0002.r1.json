@@ -1,0 +1,269 @@
+{
+  "script_id": "IPC-0002",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.1",
+  "class_key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出",
+  "class_share_of_casts": 0.00134,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        7,
+        9
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        6,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        6,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        6,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "辛丑"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "辛丑"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        6,
+        8
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        7,
+        7,
+        9
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        9,
+        7,
+        6,
+        8
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "丙辰"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼同支两现",
+    "官鬼持世",
+    "原神伏而难出",
+    "忌神伏而难出"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官鬼同支两现，取持世之爻；有气、安静、不空不破、不受冲克（R-YONG-GUAN-02、R-LIANGXIAN-03）",
+      "忌神子孙不上卦，伏而终不得出，伤不到官星（R-FUSHEN-03、R-FUSHEN-05）"
+    ],
+    "supporting": [
+      "两爻官鬼同支，旺衰空破相同，取舍不影响结论（B-010）"
+    ],
+    "adverse": [
+      "原神妻财亦伏而难出，官星得不到推动（R-FUSHEN-03）"
+    ],
+    "conflicts_resolved": [
+      "原神伏而不出不翻判：用神自身有气持世，忌神亦伏而不出，成败落在用神本身",
+      "类内各盘官星之气或来自月令、或来自日月生合，正文不逐一写出，由排盘列出"
+    ],
+    "rule_ids": [
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-02",
+      "R-LIANGXIAN-03",
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-FUSHEN-05",
+      "R-YINGQI-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：两爻官星同出一支，一爻就坐在你的世上",
+    "brief": "这一卦倾向通过。官鬼在卦中出现两次，地支相同，其中一爻正坐在你的世爻上，有气、安静，也不受冲克。克官的子孙没有上卦，伏在下面出不来；生官的财爻同样伏而不出，少了推力，结果要等官星逢值或逢冲时落定。",
+    "opening": "求职问事，用神是官鬼。这一卦官鬼出现了两次，而且是同一个地支，两爻的旺衰、空破都一样，取哪一爻结论不会变；按惯例取坐在世爻上的那一爻，它就落在你自己这一边。\n这颗官星站得住：有的盘是当令，有的盘是得月建、日辰相合相生，排盘里各有交代。它不空不破，卦中也没有动爻冲它、克它。官鬼持世而有气，正是《增删卜易》八宫图所说「占功名者若得官鬼持世即许成名」的格局。",
+    "process": "这一卦的特别之处在于，生官的妻财和克官的子孙都没有出现在卦面上，只伏在别的爻下面。《增删卜易·飞伏神章》列了伏神「终不得出」的五种情形，休囚无气、被日月冲克、被旺相的飞神所克都在其中，这一卦的两个伏神都属此类，出不了头。\n克官的那一个出不来，对官星是好事，阻力被压在下面，碰不到它。生官的那一个也出不来，官星就少了一股外力。一减一减，成败最后落回官星自身——而它恰好有气、持世、不受伤。",
+    "ending": "官星自己站得稳，能伤它的出不来，所以这一轮倾向通过。美中不足是推它的财也出不来，事情缺少外力催动，要等官星本身逢值、逢冲之时，结果才会落地。",
+    "timing": {
+      "text": "官星安静不动。传统以「静而逢值逢冲」取期：等到官星本支值日，或有日辰来冲动它，消息才容易落地；具体日子随本卦排盘列出。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知落定",
+          "target_symbol": "持世之官鬼（同支两现，安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。持世的官星有气而不受伤，克官的子孙伏而不出，这是能成的根据；生官的财爻同样伏而不出，所以推力弱一些，节奏也慢一些。眼下把手头的准备做足，等通知就行，不必为一时没有消息着急。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "八宫图第三",
+        "quote": "占功名者若得官鬼持世即许成名，子孙持世且待时。",
+        "applies_because": "本类官鬼持世"
+      },
+      {
+        "rule_id": "R-LIANGXIAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "八宫图第三",
+        "quote": "若两爻俱动或都不发动，择其旺者为用神。如一爻动者择其动者为用神。",
+        "applies_because": "两爻官鬼同支俱静，旺衰相同，取持世者"
+      },
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "妻财、子孙不上卦，于本宫首卦寻其伏神"
+      },
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+        "applies_because": "本类财、子孙二伏神皆判终不得出"
+      },
+      {
+        "rule_id": "R-FUSHEN-05",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "伏无提拔终徒尔，飞不推开亦枉然。",
+        "applies_because": "二伏神无提拔，起不了作用"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.1）：用神官鬼在卦中两现而同支，取持世之爻（同支等价，取舍不影响结论，B-010、D-014）；安静（不发动，亦非暗动），三层判定为当前有效，无旬空、月破、真墓之限，不受动爻冲克；原神妻财、忌神子孙皆不上卦，伏神判别皆为终不得出（unlikely）；卦非六冲六合，无冲合之变，无反吟伏吟，无三合之局。类内各盘不同之处：官星之气来自月令还是日月生合，应爻与世爻的生克，其余爻是否发动；均不改变本类结论，由排盘逐盘列出。应期取用神静而逢值逢冲（R-YINGQI-01）。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依 12 个分散样本盘核对类内共同事实"
+  }
+}

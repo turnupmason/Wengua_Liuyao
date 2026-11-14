@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.0';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.1';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -60,7 +60,8 @@ export function interviewPassClass(evidence) {
   if (y.line) {
     const l = y.line;
     const ch = l.change;
-    const motion = !ch ? '静' : ch.huitou === '回头克' || ch.lifeStage === '绝' || ch.lifeStage === '墓' || ch.advance === '退神' ? '化凶'
+    // 静爻逢日冲而旺相为暗动（暗动章「静逢冲而暗兴」），与真静分开
+    const motion = !ch ? (l.state.acts === '暗动' ? '暗动' : '静') : ch.huitou === '回头克' || ch.lifeStage === '绝' || ch.lifeStage === '墓' || ch.advance === '退神' ? '化凶'
       : ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺' ? '化吉' : '动平';
     const vb = l.void ? (l.void.zengshan === '冲空则实' ? '冲起' : l.void.zengshan.startsWith('旬内') ? '空待' : '空凶') : l.monthBreak ? '破' : '';
     const hurt = l.damage.some((d) => d.includes('动来克') || d.includes('动来冲')) ? '受动克' : '';

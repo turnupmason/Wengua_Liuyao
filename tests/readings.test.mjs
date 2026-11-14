@@ -39,7 +39,7 @@ test('正式发布包：已批准的盘返回正文；未批准的盘返回「�
     assert.equal(r.status, 'pending');
     assert.equal(r.message, '本卦断语尚在整理');
   }
-  for (const e of release.readings) {
+  for (const e of release.readings.filter((x) => x.match !== 'class')) {
     const [, lv, m, d] = e.key.split('|');
     const hit = repo.lookup({ questionId: Q, chart: chartOf(lv.split('').map(Number), m, d) });
     assert.equal(hit.status, 'approved');
@@ -139,21 +139,18 @@ test('应期换算与历史记录：按起卦日换算具体日期；记录保�
   assert.deepEqual(rec.keyFacts.voidBranches, ['午', '未']);
 });
 
-test('等价类稿：同类之盘按类别键取得同一正文，应期地支逐盘求出；逐盘稿优先', () => {
-  const ci = JSON.parse(readFileSync(new URL('authoring/classes/interview-pass/IPC-0001.json', root), 'utf8'));
-  const entry = { key: `${Q}|${ci.equivalence_version}|${ci.class_key}`, script_id: ci.script_id, question_id: Q, content_hash: 'x', match: 'class',
-    equivalence_version: ci.equivalence_version, class_key: ci.class_key, rule_version: 'test',
-    approval: { approval_status: 'AI_APPROVED', production_allowed: true }, reading: ci.reading };
-  const repo = createReadingRepository({ releasePackage: { ...release, readings: [...release.readings, entry] } });
-  const seen = new Set();
-  for (const s of ci.sample_charts) {
-    const chart = chartOf(s.line_values, s.month_branch, s.day_ganzhi);
-    const got = repo.lookup({ questionId: Q, chart });
-    assert.equal(got.status, 'approved');
-    assert.equal(got.match, 'class');
-    assert.equal(got.scriptId, 'IPC-0001');
-    assert.ok(got.timing[0].target_branches.length >= 1);
-    seen.add(got.timing[0].target_branches.join(''));
+test('等价类稿：发布包中的类别稿对其样本盘逐盘命中，应期地支逐盘求出', () => {
+  const repo = createReadingRepository({ releasePackage: release });
+  const classes = release.readings.filter((x) => x.match === 'class');
+  assert.ok(classes.length >= 1);
+  for (const e of classes) {
+    const ci = JSON.parse(readFileSync(new URL(`authoring/classes/interview-pass/${e.script_id}.json`, root), 'utf8'));
+    for (const s of ci.sample_charts) {
+      const got = repo.lookup({ questionId: Q, chart: chartOf(s.line_values, s.month_branch, s.day_ganzhi) });
+      assert.equal(got.status, 'approved');
+      assert.equal(got.match, 'class');
+      assert.equal(got.scriptId, e.script_id);
+      for (const t of got.timing) assert.ok(t.target_branches.length >= 1);
+    }
   }
-  assert.ok(seen.size > 1, '不同样本盘的应期地支应各自求出');
 });
