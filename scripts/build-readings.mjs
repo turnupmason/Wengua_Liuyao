@@ -267,6 +267,8 @@ for (const { file, src } of loadAuthoring()) {
   entry.content_hash = contentHash(entry);
   // 发布条件「所用规则已经批准」：所用规则须 ai-verified 或用户裁定，且不涉未裁定之分歧
   const usedRules = [...new Set([...(src.judgment.rule_ids || []), ...(src.reading.classical_sources || []).map((c) => c.rule_id), ...((src.reading.timing?.entries) || []).map((e) => e.timing_rule_id)])].filter((x) => /^R-/.test(x));
+  // 盘中三合三支俱见（含日月）且有动爻参与者，须作成局判断，隐含使用 R-SANHE-01（不论稿件是否列出）
+  if (analysis.threeHarmonies.some((h) => h.parts.some((p) => p.some((x) => x.from === 'moving' || x.from === 'changed')))) usedRules.push('R-SANHE-01');
   const openDisputes = new Set(register.disputes.filter((x) => x.status === 'open').map((x) => x.dispute_id));
   const ruleById = new Map(register.rules.map((x) => [x.rule_id, x]));
   entry.rules_used = usedRules.map((id) => ({ id, status: ruleById.get(id)?.review_status ?? 'missing', open_disputes: (ruleById.get(id)?.dispute_ids || []).filter((x) => openDisputes.has(x)) }));

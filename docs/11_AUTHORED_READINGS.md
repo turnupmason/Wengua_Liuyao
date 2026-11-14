@@ -63,7 +63,7 @@
 - 卦盘：火泽睽（艮宫四世，土） 之 山泽损；月建 亥，日辰 丙戌，旬空 午未
 - 匹配键：`career.interview.interview-pass|778987|亥|丙戌`；内容哈希 `606a977d6f68cbd3…`
 - 结论类别：难以通过；情境：独发、子孙持世发动、忌神化回头生、原神伏藏
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 resolved、独立 resolved、反向 resolved、精修 DONE、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 resolved、独立 resolved、反向 resolved、精修 DONE、终审 PASS）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 青龙 父母己巳火
@@ -124,7 +124,7 @@
 - 卦盘：雷地豫（震宫一世，木） 之 泽雷随；月建 亥，日辰 乙未，旬空 辰巳
 - 匹配键：`career.interview.interview-pass|688768|亥|乙未`；内容哈希 `183277b44ee9f8f6…`
 - 结论类别：有望通过，但要待时；情境：两爻发动、原神持世发动生官、官鬼化进神、六合卦变
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 ISSUES、独立 ISSUES、反向 RETURN、精修 DONE、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 ISSUES、独立 ISSUES、反向 RETURN、精修 DONE、终审 FAIL）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 玄武 妻财庚戌土
