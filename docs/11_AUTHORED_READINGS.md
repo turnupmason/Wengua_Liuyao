@@ -5297,9 +5297,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.12.3）；内容哈希 `63ec8205ac964875…`
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.12.3）；内容哈希 `1491f881d17c1f7b…`
 - 结论类别：偏难通过；情境：官鬼同支两现持世而无力、忌神伏而有用、原神无力、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山天大畜，戌月庚午日
@@ -5321,7 +5321,7 @@
 
 克官的子孙伏在下面，是有用的伏神，兄弟当令时又得相，能压住失令的官星。生官的财在卦上，却无力。
 
-应爻生着世爻，从卦象看对面并不冷淡；可用神自己没有根，这层好意落不到结果上。
+应爻生着世爻，世应相生，是相合之象；可用神自己没有根，这层好意落不到结果上。
 
 **详断·结局**
 
@@ -9819,9 +9819,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世破;原伏待时;忌静不作用`（interview-pass-eq-0.12.3）；内容哈希 `78f9494b5301f46f…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世破;原伏待时;忌静不作用`（interview-pass-eq-0.12.3）；内容哈希 `7a1d72aec1e891b1…`
 - 结论类别：偏难通过；情境：世爻月破、财当令生官、原神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之天山遁，寅月辛未日
@@ -9843,7 +9843,7 @@
 
 **详断·过程**
 
-署印谋差章说「官空世破，且让他人」，升迁何方章说「世空世破官破官空，俱不得」。官星这边没问题，问题出在你自己：世爻失陷。应爻多在生你，从卦象看对面并不冷淡，只是你这一侧接不住。
+署印谋差章说「官空世破，且让他人」，升迁何方章说「世空世破官破官空，俱不得」。官星这边没问题，问题出在你自己：世爻失陷。应爻多在生世，世应相生，只是你这一侧接不住。
 
 生官的财伏而待时，克官的子孙失令。
 
@@ -10581,9 +10581,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `e8d3371b3c7624b0…`
+- 匹配键：等价类 `用明现[INEFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `524555aef79e58fa…`
 - 结论类别：偏难通过；情境：官星失令无扶、父母当令、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水山蹇，辰月乙丑日
@@ -10605,7 +10605,7 @@
 
 生官的财不上卦，伏而难出，补不上这一口气。克官的子孙无力，按理是好事；可元神忌神衰旺章说得明白，用神无根时「忌神无力何足喜」。
 
-你的世爻是兄弟，应爻一般在生你，对面不算冷淡，只是官星本身没有分量。
+你的世爻是兄弟，应爻一般在生世，世应相生，只是官星本身没有分量。
 
 **详断·结局**
 
@@ -10931,9 +10931,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[INEFFECTIVE月破]静;世持世;原静旺有力;忌静旺有力`（interview-pass-eq-0.12.3）；内容哈希 `4388e25484d072ad…`
+- 匹配键：等价类 `用明现持世[INEFFECTIVE月破]静;世持世;原静旺有力;忌静旺有力`（interview-pass-eq-0.12.3）；内容哈希 `dd0e615de33688a1…`
 - 结论类别：偏难通过；情境：官鬼持世而月破、子孙当令、原忌俱静而旺相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水地比，酉月庚子日
@@ -10955,7 +10955,7 @@
 
 升迁何方章说「世空世破官破官空，俱不得」，这一卦官破、世破落在同一爻上。野鹤论月破虽宽，说「目下虽破，出月则不破」，可当月之内，静而休囚的破爻确实无力。
 
-生官的财得相，按理能生；克官的子孙当令，力量更足。应爻一般在生你，对面不算冷淡，只是官星本身破着。
+生官的财得相，按理能生；克官的子孙当令，力量更足。应爻一般在生世，世应相生，只是官星本身破着。
 
 **详断·结局**
 
@@ -11182,7 +11182,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克;原静不作用;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `3056bc2ce2b78389…`
+- 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克;原静不作用;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `177f251a83f6ec23…`
 - 结论类别：倾向通过；情境：官鬼临应生世、官星得日生、忌神无力、世爻受克
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -11206,7 +11206,7 @@
 
 应位的官星生你的世爻，世应相生。克官的子孙无力，伤不到官星。生官的财在卦上，有根却安静，不主动来生。
 
-你的世爻是父母，受了克，或来自日辰，或来自发动之爻；自己这一侧辛苦些，对面的官星却是向着你的。
+你的世爻是父母，受了克，或来自日辰，或来自发动之爻；自己这一侧辛苦些，应位的官星却正生着世爻。
 
 **详断·结局**
 
@@ -11232,7 +11232,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原无力;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `763b76b679a7de07…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原无力;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `c80864283ee18c8c…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、父母当令、原忌俱无力
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -11256,7 +11256,7 @@
 
 **详断·过程**
 
-应位的官星生你的世爻，从卦象看对方并不排斥你；可生你的这颗官星自己没有分量，生得也就虚。
+应位的官星生你的世爻，世应相生，象是好的；可生你的这颗官星自己没有分量，生得也就虚。
 
 生官的财安静失令，补不上；克官的子孙也无力。忌神无力本是好事，可用神无根，这点好处也落不到实处。
 
@@ -13340,7 +13340,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原无力;忌伏待时`（interview-pass-eq-0.12.3）；内容哈希 `61605f9d68f26c5a…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原无力;忌伏待时`（interview-pass-eq-0.12.3）；内容哈希 `253a855940843c08…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、应爻克世、忌神伏而待时
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -13362,7 +13362,7 @@
 
 **详断·过程**
 
-应位的官星克你的世爻，从卦象看对面给的压力不小，却不是有力的机会。生官的财安静失令，补不上；克官的子孙伏着，用不着出手。
+应位的官星克你的世爻，世爻受制，而这颗官星本身无根，不是有力的机会。生官的财安静失令，补不上；克官的子孙伏着，用不着出手。
 
 元神忌神衰旺章那句话放在这里正合适：用神无根时，「忌神无力何足喜」。
 
@@ -13841,7 +13841,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `8a065332d247b6d5…`
+- 匹配键：等价类 `用明现临应[INEFFECTIVE]静;世世安;原伏难出;忌无力`（interview-pass-eq-0.12.3）；内容哈希 `4f2ffb4a15cc3fbc…`
 - 结论类别：偏难通过；情境：官鬼临应而无力、父母当令、原神伏而难出
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -13865,7 +13865,7 @@
 
 **详断·过程**
 
-应位的官星生你的世爻，从卦象看对方并不排斥你；只是生你的这颗官星自己没有分量。生官的财不上卦，伏而难出，补不上这一口气；卦中兄弟若动，又是阻神。
+应位的官星生你的世爻，世应相生，象是好的；只是生你的这颗官星自己没有分量。生官的财不上卦，伏而难出，补不上这一口气；卦中兄弟若动，又是阻神。
 
 克官的子孙无力，可用神无根，这一点好处落不到实处。
 

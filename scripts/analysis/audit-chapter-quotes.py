@@ -15,7 +15,7 @@ bad = 0
 for f in sorted(glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json')):
     d = json.load(open(f, encoding='utf-8')); r = d['reading']
     t = ''.join(str(r.get(k, '')) for k in ['brief', 'opening', 'process', 'ending', 'conclusion'])
-    for m in re.finditer(r'([\u4e00-\u9fff]{2,8}?)(章|图)(?:里|中|也|又)?[^「」。]{0,14}「([^」]+)」', t):
+    for m in re.finditer(r'([\u4e00-\u9fff]{2,8}?)(章|图)(?:里|中|也|又)?[^「」。；]{0,14}「([^」]+)」', t):
         name = m.group(1)[-6:] + m.group(2)
         q = norm(m.group(3))[:8]
         if re.search(r'同一?章$', name): continue
