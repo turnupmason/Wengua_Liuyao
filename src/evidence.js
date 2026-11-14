@@ -150,11 +150,34 @@ function selectYongshen(rel, chart, analysis) {
   if (cmp(a.key, b.key) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '古法五项', ruleIds: ['R-LIANGXIAN-01'] };
   if (cmp(a.finer, b.finer) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '择其旺者', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
   const tied = keyed.filter((k) => cmp(k.key, a.key) === 0 && cmp(k.finer, a.finer) === 0);
-  if (tied.every((k) => k.line.branch === a.line.branch)) {
-    const pick = tied.find((k) => k.line.isWorld) || tied.find((k) => k.line.isResponse) || tied[0];
-    return { ...base, status: 'equivalent-pair', selectedPosition: pick.line.position, decidedBy: pick.line.isWorld ? '同支等价·取持世' : pick.line.isResponse ? '同支等价·取临应' : '同支等价·取下位', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
+  // 实际作用状态（D-015 三层判定）也是「实际作用条件」，先比它
+  const stateRank = { EFFECTIVE: 3, DEFERRED: 2, REVIEW_REQUIRED: 1, INEFFECTIVE: 0 };
+  const stateOf = (k) => assessRoleState(k.line, analysis.lines[k.line.position - 1], chart).state;
+  const byState = [...tied].sort((x, y) => stateRank[stateOf(y)] - stateRank[stateOf(x)]);
+  if (stateRank[stateOf(byState[0])] !== stateRank[stateOf(byState[1])]) {
+    return { ...base, status: 'selected-by-rule', selectedPosition: byState[0].line.position, decidedBy: '实际作用状态', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
   }
-  return { ...base, status: 'ambiguous', selectedPosition: null, decidedBy: null, ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
+  // 次级依据（D-014、阻塞项三）：持世、临应、与世爻的生合关系；爻位上下不作依据
+  const world = chart.lines.find((l) => l.isWorld);
+  const worldTie = (l) => {
+    if (l.isWorld) return 4;
+    if (l.isResponse) return 3;
+    const er = elementRelation(l.element, world.element);
+    if (er === 'generates' || COMBINE.get(l.branch) === world.branch) return 2;
+    if (er === 'same') return 1;
+    return 0;
+  };
+  const bySecondary = [...tied].sort((x, y) => worldTie(y.line) - worldTie(x.line));
+  const sameBranch = tied.every((k) => k.line.branch === a.line.branch);
+  if (worldTie(bySecondary[0].line) !== worldTie(bySecondary[1].line)) {
+    const top = bySecondary[0].line;
+    return { ...base, status: sameBranch ? 'equivalent-pair' : 'selected-by-rule', selectedPosition: top.position, decidedBy: top.isWorld ? '次级依据·持世' : top.isResponse ? '次级依据·临应' : '次级依据·与世生合', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
+  }
+  if (sameBranch) {
+    // 同支且实际条件、世爻关系皆同：取哪一爻结论都相同，另一爻保留在证据中；所取之爻不以上下次序为吉凶依据
+    return { ...base, status: 'equivalent-pair', selectedPosition: tied[0].line.position, decidedBy: '同支等价·取舍不影响结论', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
+  }
+  return { ...base, status: 'ambiguous', selectedPosition: null, decidedBy: null, ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
 }
 
 /** 元神忌神衰旺章：原神有力五条、无力六条；忌神有力五条、无力七条（R-YUANJI-01..04） */

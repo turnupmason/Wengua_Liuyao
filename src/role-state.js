@@ -4,7 +4,7 @@
 import { BRANCH_ELEMENT, GENERATES, CLASH, COMBINE, LIFE_STAGES, elementRelation } from './constants.js';
 import { dayOffset } from './flows.js';
 
-export const ROLE_STATE_VERSION = 'role-state-0.1.0';
+export const ROLE_STATE_VERSION = 'role-state-0.2.0';
 
 /** 通行五级称谓（当令旺、令生相、生令休、克令囚、令克死）。本项目古籍库未见定义原文，只作月令事实标签；判断用增删卜易三档 */
 export function seasonalFive(element, monthBranch) {
@@ -74,7 +74,7 @@ function capabilityOf(line, facts, chart) {
     const gs = g.some((p) => p.strong);
     const ks = k.some((p) => p.strong);
     capability = gs && !ks ? 'strong' : ks && !gs ? 'weak' : 'contested';
-    basis = `生克相当，须看旺衰：${capability === 'strong' ? '生者为日月' : capability === 'weak' ? '克者为日月' : '双方力量相当，待人工裁决'}`;
+    basis = `生克相当，须看旺衰：${capability === 'strong' ? '生者为日月' : capability === 'weak' ? '克者为日月' : '日月或双方皆有力，现有证据不足以裁决，待核'}`;
   } else {
     capability = g.some((p) => p.strong) ? 'contested' : 'weak';
     basis = capability === 'weak' ? '克多生少，生者无力：有生之名无生之实' : '克多生少而相生者为日月：或可克处逢生，待人工裁决';
@@ -129,8 +129,13 @@ export function assessRoleState(line, facts, chart) {
   }
   // 能否主动作用于他爻：发动、暗动可；静爻须月令旺相，且只及于休囚之爻（R-DONGJING-01）
   const acts = line.moving ? '发动' : c.dayClash?.zengshan === '暗动' ? '暗动' : c.seasonalStrong ? '静而旺相（可生克休囚之爻）' : '静（不主动作用）';
+  // 阻塞项一裁定：月克日生、月生日克先记为「日月相反」，再结合有根、动变、其他生克与专用占法判断；无额外生克不自动作不定偏慢
+  const mp = places.find((p) => p.place === '月建');
+  const dp = places.find((p) => p.place === '日辰');
+  const pattern = mp && dp && mp.effect !== dp.effect ? `日月相反（月${mp.effect}日${dp.effect}）` : null;
   return {
     version: ROLE_STATE_VERSION,
+    pattern,
     seasonal: c.month.seasonal,
     seasonalFive: seasonalFive(line.element, chart.calendar.monthBranch),
     capability,

@@ -85,14 +85,13 @@ test('跨年与换日：同一瞬间在不同时区得到不同民用日与日�
   assert.equal(sh.month.branch, ny.month.branch, '月建以交节瞬间为界，与时区无关');
 });
 
-test('子时口径：23 时起卦按 0 时换日与按 23 时换日结果不同，并给出提示', () => {
-  const a = castingCalendar({ instant: '2026-11-13T23:30:00+08:00', dayBoundary: 'midnight' });
-  const b = castingCalendar({ instant: '2026-11-13T23:30:00+08:00', dayBoundary: 'zi-hour-23' });
+test('子时口径（D-009 裁定）：只以 0 时换日，23 时不提前换日并给提示；不接受其他口径', () => {
+  const a = castingCalendar({ instant: '2026-11-13T23:30:00+08:00' });
   assert.equal(a.day.ganzhi, '辛卯');
-  assert.equal(b.day.ganzhi, '壬辰');
+  assert.equal(a.dayBoundaryVersion, 'day-boundary-midnight-1.0');
   assert.ok(a.warnings.some((w) => w.code === 'zi-hour'));
-  const c = castingCalendar({ instant: '2026-11-14T00:10:00+08:00' });
-  assert.equal(c.day.ganzhi, '壬辰');
+  assert.throws(() => castingCalendar({ instant: '2026-11-13T23:30:00+08:00', dayBoundary: 'zi-hour-23' }));
+  assert.equal(castingCalendar({ instant: '2026-11-14T00:10:00+08:00' }).day.ganzhi, '壬辰');
 });
 
 test('旬空：六十甲子全部与「甲子旬中戌亥空」等六句一致', () => {

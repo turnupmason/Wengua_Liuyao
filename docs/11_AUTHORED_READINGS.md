@@ -9,7 +9,7 @@
 - 卦盘：地泽临（坤宫二世，土）（六爻安静）；月建 亥，日辰 丁亥，旬空 午未
 - 匹配键：`career.interview.interview-pass|778888|亥|丁亥`；内容哈希 `8aef5a001d4a5fb9…`
 - 结论类别：倾向通过；情境：六爻安静、官鬼持世、原神临应
-- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜专业审核 pending｜发布批准 not-approved
+- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 青龙 子孙癸酉金
@@ -63,7 +63,7 @@
 - 卦盘：火泽睽（艮宫四世，土） 之 山泽损；月建 亥，日辰 丙戌，旬空 午未
 - 匹配键：`career.interview.interview-pass|778987|亥|丙戌`；内容哈希 `552eba2d0c2ec722…`
 - 结论类别：难以通过；情境：独发、子孙持世发动、忌神化回头生、原神伏藏
-- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜专业审核 pending｜发布批准 not-approved
+- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 青龙 父母己巳火
@@ -124,7 +124,7 @@
 - 卦盘：雷地豫（震宫一世，木） 之 泽雷随；月建 亥，日辰 乙未，旬空 辰巳
 - 匹配键：`career.interview.interview-pass|688768|亥|乙未`；内容哈希 `45ad731dcde57a90…`
 - 结论类别：有望通过；情境：两爻发动、原神持世发动生官、官鬼化进神、六合卦变
-- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜专业审核 pending｜发布批准 not-approved
+- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 玄武 妻财庚戌土
@@ -179,7 +179,7 @@
 - 卦盘：风天小畜（巽宫一世，木）（六爻安静）；月建 亥，日辰 丙戌，旬空 午未
 - 匹配键：`career.interview.interview-pass|777877|亥|丙戌`；内容哈希 `621b20a2714f37b4…`
 - 结论类别：倾向通过，结果偏慢；情境：六爻安静、用神不上卦、伏神有用、忌神月破
-- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜专业审核 pending｜发布批准 not-approved
+- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 青龙 兄弟辛卯木
@@ -233,7 +233,7 @@
 - 卦盘：地泽临（坤宫二世，土）（六爻安静）；月建 亥，日辰 甲辰，旬空 寅卯
 - 匹配键：`career.interview.interview-pass|778888|亥|甲辰`；内容哈希 `fc16f4dcc510d209…`
 - 结论类别：眼下悬而未决，冲空或出旬后有望；情境：六爻安静、官鬼持世旬空、原神入日墓、与 IP-0001 同卦异日
-- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜专业审核 pending｜发布批准 not-approved
+- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 玄武 子孙癸酉金
@@ -287,7 +287,7 @@
 - 卦盘：天山遁（乾宫二世，金） 之 天风姤；月建 亥，日辰 甲午，旬空 辰巳
 - 匹配键：`career.interview.interview-pass|867777|亥|甲午`；内容哈希 `29643ca303b33124…`
 - 结论类别：难以通过；情境：独发、官鬼持世发动、化回头克、化绝、官鬼两现
-- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜专业审核 pending｜发布批准 not-approved
+- 状态：作者稿 draft-complete｜作者全文自查 completed｜技术核验 passed｜AI 审核（古籍 pending、独立 pending、反向 pending、精修 pending、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 上爻 玄武 父母壬戌土

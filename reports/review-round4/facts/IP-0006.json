@@ -1,0 +1,513 @@
+{
+ "case_id": "IP-0006",
+ "question": {
+  "id": "career.interview.interview-pass",
+  "text": "这次面试能通过吗？",
+  "scope": "只回答这一轮面试是否通过"
+ },
+ "chart": {
+  "primary": "天山遁",
+  "changed": "天风姤",
+  "palace": "乾宫二世",
+  "month": "亥",
+  "day": "甲午",
+  "lines_top_to_bottom": [
+   "上爻 玄武 父母壬戌土",
+   "五爻 白虎 兄弟壬申金应",
+   "四爻 螣蛇 官鬼壬午火",
+   "三爻 勾陈 兄弟丙申金",
+   "二爻 朱雀 官鬼丙午火×世 → 子孙亥水（伏妻财寅木）",
+   "初爻 青龙 父母丙辰土（伏子孙子水）"
+  ]
+ },
+ "fact_sheet": [
+  {
+   "label": "卦",
+   "value": "天山遁 之 天风姤"
+  },
+  {
+   "label": "月建 / 日辰 / 旬空",
+   "value": "亥月 / 甲午日 / 辰巳空"
+  },
+  {
+   "label": "用神",
+   "value": "二爻官鬼午火（持世）；休囚；生扶：临日、日帝旺；伤损：月克、化回头克、化绝；动化为子孙亥水"
+  },
+  {
+   "label": "世爻",
+   "value": "二爻官鬼午火；休囚"
+  },
+  {
+   "label": "应爻",
+   "value": "五爻兄弟申金；世克之"
+  },
+  {
+   "label": "用神六神（辅助）",
+   "value": "朱雀"
+  },
+  {
+   "label": "判别·飞伏",
+   "value": "子孙子水伏于初爻父母辰土之下：伏神有气、飞神可推开，但有「伏神被日月冲克、伏神墓绝于日月飞爻」之阻：有用与无用并见，须权衡；飞神虽克伏神，但自身空破休囚，飞神逢破墓衰空虽有若无，克力不实"
+  },
+  {
+   "label": "判别·飞伏",
+   "value": "妻财寅木伏于二爻官鬼午火（发动）之下：有用之条件当前已成立，无用之条件皆不合：伏而有用，虽不现亦如现，可参与当前判断"
+  },
+  {
+   "label": "判别·月日",
+   "value": "临日而又动化回头克：寡不敌众，伤亦为伤"
+  },
+  {
+   "label": "判别·月日",
+   "value": "临日辰：逢破不破、遇克无伤"
+  },
+  {
+   "label": "判别·动化",
+   "value": "回头克而本爻只临日辰、又受月克：寡不敌众，伤亦为伤"
+  }
+ ],
+ "yongshen_selection": {
+  "candidates": [
+   {
+    "position": 2,
+    "criteria": {
+     "moving": 1,
+     "strong": 0,
+     "notBroken": 1,
+     "notVoid": 1,
+     "notHurt": 0
+    },
+    "finer": {
+     "monthSame": 0,
+     "daySame": 1,
+     "daySupport": 1,
+     "combined": 0
+    }
+   },
+   {
+    "position": 4,
+    "criteria": {
+     "moving": 0,
+     "strong": 0,
+     "notBroken": 1,
+     "notVoid": 1,
+     "notHurt": 0
+    },
+    "finer": {
+     "monthSame": 0,
+     "daySame": 1,
+     "daySupport": 1,
+     "combined": 0
+    }
+   }
+  ],
+  "status": "selected-by-rule",
+  "selectedPosition": 2,
+  "decidedBy": "古法五项",
+  "ruleIds": [
+   "R-LIANGXIAN-01"
+  ]
+ },
+ "yongshen": {
+  "position": 2,
+  "relative": "官鬼",
+  "branch": "午",
+  "element": "火",
+  "moving": true,
+  "isWorld": true,
+  "isResponse": false,
+  "spirit": "朱雀",
+  "support": [
+   "临日",
+   "日帝旺"
+  ],
+  "damage": [
+   "月克",
+   "化回头克",
+   "化绝"
+  ],
+  "notes": [],
+  "change": {
+   "to": "子孙亥水",
+   "huitou": "回头克",
+   "advance": null,
+   "lifeStage": "绝",
+   "clash": false,
+   "combine": false,
+   "changedVoid": false,
+   "changedMonthBreak": false
+  },
+  "void": null,
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "死",
+   "capability": "weak",
+   "capabilityBasis": "临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）",
+   "pattern": "日月相反（月克日生）",
+   "limitations": [],
+   "state": "INEFFECTIVE",
+   "stateReason": "临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）",
+   "acts": "发动",
+   "release": []
+  }
+ },
+ "yongshen_missing": null,
+ "yuan": [],
+ "ji": [],
+ "chou": [
+  {
+   "position": 3,
+   "relative": "兄弟",
+   "branch": "申",
+   "element": "金",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "勾陈",
+   "support": [],
+   "damage": [
+    "日克",
+    "二爻官鬼午动来克"
+   ],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "休",
+    "capability": "weak",
+    "capabilityBasis": "四处有克无生（日辰、动爻二爻午）",
+    "pattern": null,
+    "limitations": [],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处有克无生（日辰、动爻二爻午）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  },
+  {
+   "position": 5,
+   "relative": "兄弟",
+   "branch": "申",
+   "element": "金",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": true,
+   "spirit": "白虎",
+   "support": [],
+   "damage": [
+    "日克",
+    "二爻官鬼午动来克"
+   ],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "休",
+    "capability": "weak",
+    "capabilityBasis": "四处有克无生（日辰、动爻二爻午）",
+    "pattern": null,
+    "limitations": [],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处有克无生（日辰、动爻二爻午）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  }
+ ],
+ "world": {
+  "position": 2,
+  "relative": "官鬼",
+  "branch": "午",
+  "element": "火",
+  "moving": true,
+  "isWorld": true,
+  "isResponse": false,
+  "spirit": "朱雀",
+  "support": [
+   "临日",
+   "日帝旺"
+  ],
+  "damage": [
+   "月克",
+   "化回头克",
+   "化绝"
+  ],
+  "notes": [],
+  "change": {
+   "to": "子孙亥水",
+   "huitou": "回头克",
+   "advance": null,
+   "lifeStage": "绝",
+   "clash": false,
+   "combine": false,
+   "changedVoid": false,
+   "changedMonthBreak": false
+  },
+  "void": null,
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "死",
+   "capability": "weak",
+   "capabilityBasis": "临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）",
+   "pattern": "日月相反（月克日生）",
+   "limitations": [],
+   "state": "INEFFECTIVE",
+   "stateReason": "临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）",
+   "acts": "发动",
+   "release": []
+  }
+ },
+ "response": {
+  "position": 5,
+  "relative": "兄弟",
+  "branch": "申",
+  "element": "金",
+  "moving": false,
+  "isWorld": false,
+  "isResponse": true,
+  "spirit": "白虎",
+  "support": [],
+  "damage": [
+   "日克",
+   "二爻官鬼午动来克"
+  ],
+  "notes": [],
+  "change": null,
+  "void": null,
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "休",
+   "capability": "weak",
+   "capabilityBasis": "四处有克无生（日辰、动爻二爻午）",
+   "pattern": null,
+   "limitations": [],
+   "state": "INEFFECTIVE",
+   "stateReason": "四处有克无生（日辰、动爻二爻午）",
+   "acts": "静（不主动作用）",
+   "release": []
+  }
+ },
+ "flows": [
+  {
+   "flow": "hidden",
+   "id": "HIDDEN@1:子孙子",
+   "role": "ji",
+   "position": 1,
+   "hidden": "子孙子水",
+   "fly": "初爻父母辰土",
+   "flyRelation": "飞来克伏（反伤身）",
+   "hasQi": true,
+   "supports": [
+    "伏神旺相"
+   ],
+   "openers": [
+    "飞神空破休囚墓绝"
+   ],
+   "obstacles": [
+    "伏神被日月冲克",
+    "伏神墓绝于日月飞爻"
+   ],
+   "emergence": "contested",
+   "state": "REVIEW_REQUIRED",
+   "reason": "伏神有气、飞神可推开，但有「伏神被日月冲克、伏神墓绝于日月飞爻」之阻：有用与无用并见，须权衡；飞神虽克伏神，但自身空破休囚，飞神逢破墓衰空虽有若无，克力不实",
+   "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+   "emergenceTiming": [
+    {
+     "rule": "R-FUSHEN-08",
+     "kind": "伏神逢值",
+     "branch": "子"
+    },
+    {
+     "rule": "R-FUSHEN-05",
+     "kind": "冲开飞神",
+     "branch": "戌"
+    }
+   ],
+   "ruleIds": [
+    "R-FUSHEN-02",
+    "R-FUSHEN-03",
+    "R-FUSHEN-06",
+    "R-FUSHEN-07",
+    "R-FUSHEN-08"
+   ]
+  },
+  {
+   "flow": "hidden",
+   "id": "HIDDEN@2:妻财寅",
+   "role": "yuan",
+   "position": 2,
+   "hidden": "妻财寅木",
+   "fly": "二爻官鬼午火（发动）",
+   "flyRelation": "伏去生飞（泄气）",
+   "hasQi": true,
+   "supports": [
+    "日月生伏",
+    "伏神旺相"
+   ],
+   "openers": [
+    "日月动爻冲克飞神",
+    "飞神空破休囚墓绝"
+   ],
+   "obstacles": [],
+   "emergence": "likely",
+   "state": "EFFECTIVE",
+   "reason": "有用之条件当前已成立，无用之条件皆不合：伏而有用，虽不现亦如现，可参与当前判断",
+   "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+   "emergenceTiming": [
+    {
+     "rule": "R-FUSHEN-08",
+     "kind": "伏神逢值",
+     "branch": "寅"
+    },
+    {
+     "rule": "R-FUSHEN-05",
+     "kind": "冲开飞神",
+     "branch": "子"
+    }
+   ],
+   "ruleIds": [
+    "R-FUSHEN-02",
+    "R-FUSHEN-03",
+    "R-FUSHEN-06",
+    "R-FUSHEN-07",
+    "R-FUSHEN-08"
+   ]
+  },
+  {
+   "flow": "monthDay",
+   "id": "MONTHDAY@2:午临日",
+   "role": "yong",
+   "position": 2,
+   "pattern": "临日而受月克",
+   "verdict": "临日而又动化回头克：寡不敌众，伤亦为伤",
+   "ruleIds": [
+    "R-RIZHEN-05"
+   ]
+  },
+  {
+   "flow": "monthDay",
+   "id": "MONTHDAY@4:午临日",
+   "role": "yong",
+   "position": 4,
+   "pattern": "临日而受月克",
+   "verdict": "临日辰：逢破不破、遇克无伤",
+   "ruleIds": [
+    "R-RIZHEN-05"
+   ]
+  },
+  {
+   "flow": "change",
+   "id": "CHANGE@2:午化亥",
+   "role": "yong",
+   "position": 2,
+   "from": "官鬼午火",
+   "to": "子孙亥水",
+   "huitou": "回头克",
+   "tags": [
+    "化绝"
+   ],
+   "changedStrength": "有气",
+   "verdict": "回头克而本爻只临日辰、又受月克：寡不敌众，伤亦为伤",
+   "ruleIds": [
+    "R-HUA-01",
+    "R-HUA-02",
+    "R-YUEJIAN-03",
+    "R-RIZHEN-05"
+   ]
+  }
+ ],
+ "special": {
+  "yongHoldsWorld": true,
+  "jiHoldsWorld": false,
+  "worldRelative": "官鬼",
+  "jiMoving": [],
+  "chouMoving": [],
+  "yuanMoving": [],
+  "yongMoving": [
+   2
+  ],
+  "changedIntoYong": [],
+  "changedIntoJi": [
+   2
+  ],
+  "sixClash": false,
+  "sixCombine": false,
+  "transform": null,
+  "fuyin": false,
+  "fanyin": false,
+  "wandering": false,
+  "returning": false,
+  "movingCount": 1,
+  "threeHarmonies": []
+ },
+ "timing_candidates": [
+  {
+   "timing_rule_id": "R-YINGQI-02",
+   "target_symbol": "二爻官鬼午",
+   "target_branches": [
+    "午",
+    "未"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "动爻待值待合：逢午或逢未"
+  },
+  {
+   "timing_rule_id": "R-YINGQI-09",
+   "target_symbol": "二爻官鬼午",
+   "target_branches": [
+    "巳"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "用神受变爻亥之克，待逢巳冲去克神（用神有气时适用）"
+  }
+ ],
+ "adverse_timing_candidates": [
+  {
+   "timing_rule_id": "R-YINGQI-11",
+   "target_symbol": "二爻官鬼午化子孙亥",
+   "target_branches": [
+    "亥"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "回头克之变爻逢值：逢亥"
+  },
+  {
+   "timing_rule_id": "R-YINGQI-09",
+   "target_symbol": "变爻子孙亥",
+   "target_branches": [
+    "申",
+    "酉"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "大象凶而受克，须防克者逢生：逢金"
+  }
+ ],
+ "equivalence_class": {
+  "version": "interview-pass-eq-0.8.0",
+  "key": "用明现持世[INEFFECTIVE]化凶;世持世;原伏有效;忌伏并见",
+  "factors": {
+   "yong": {
+    "source": "明现",
+    "world": "持世",
+    "qi": "月克日生",
+    "vb": "",
+    "motion": "化凶",
+    "hurt": "",
+    "tomb": "",
+    "state": "INEFFECTIVE",
+    "limits": ""
+   },
+   "world": "持世",
+   "jiHoldsWorld": false,
+   "yuan": "伏有效",
+   "ji": "伏并见",
+   "hexagram": ""
+  },
+  "writable": false,
+  "blockers": [
+   "忌神伏神有用与无用并见，须权衡规则"
+  ]
+ }
+}

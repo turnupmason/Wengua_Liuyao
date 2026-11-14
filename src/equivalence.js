@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.7.0';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.8.0';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -34,7 +34,7 @@ function effectTier(arr, flows, hiddenRole) {
   if (arr.length) return arr.map(rank).sort((a, b) => b[0] - a[0])[0][1];
   const hf = flows.find((f) => f.flow === 'hidden' && f.role === hiddenRole);
   if (!hf) return '无';
-  return hf.emergence === 'likely' ? '伏可出' : hf.emergence === 'contested' ? '伏并见' : '伏难出';
+  return { likely: '伏有效', deferred: '伏待时', contested: '伏并见', unlikely: '伏难出' }[hf.emergence];
 }
 
 function worldState(world) {
@@ -71,7 +71,7 @@ export function interviewPassClass(evidence) {
     yong = { source: '日月为用' };
   } else {
     const hf = evidence.flows.find((f) => f.flow === 'hidden' && f.role === 'yong');
-    yong = { source: hf ? `伏${{ likely: '可出', contested: '并见', unlikely: '难出' }[hf.emergence]}` : '无伏' };
+    yong = { source: hf ? `伏${{ likely: '有效', deferred: '待时', contested: '并见', unlikely: '难出' }[hf.emergence]}` : '无伏' };
     if (hf && hf.emergence === 'contested') blockers.push('用神伏神有用与无用并见，须权衡规则');
   }
   const yuan = effectTier(evidence.yuan, evidence.flows, 'yuan');

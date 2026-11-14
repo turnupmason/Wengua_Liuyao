@@ -7,7 +7,7 @@ import {
   buildChart, createReadingRepository, readingKey, PENDING_MESSAGE, castingCalendar, resolveTimingDates, createConsultationRecord,
 } from '../src/index.js';
 import { factsDigest } from '../src/readings.js';
-import { statusesFor } from '../scripts/lib/review-status.mjs';
+import { statusesFor, RELEASE_CONDITIONS } from '../scripts/lib/review-status.mjs';
 
 const Q = 'career.interview.interview-pass';
 const root = new URL('..', import.meta.url);
@@ -42,7 +42,7 @@ const ip1 = drafts.readings.find((r) => r.script_id === 'IP-0001');
 const fakeRelease = {
   schema: release.schema,
   content_version: 'test',
-  readings: [{ key: ip1.key, script_id: ip1.script_id, question_id: ip1.question_id, facts_digest: ip1.facts_digest, content_hash: ip1.content_hash, rule_version: ip1.rule_version, approval: { approval_status: 'approved', reviewer: '测试审核员' }, reading: ip1.reading }],
+  readings: [{ key: ip1.key, script_id: ip1.script_id, question_id: ip1.question_id, facts_digest: ip1.facts_digest, content_hash: ip1.content_hash, rule_version: ip1.rule_version, approval: { approval_status: 'HUMAN_APPROVED', production_allowed: true, reviewer: '测试审核员' }, reading: ip1.reading }],
 };
 
 test('已批准稿：只在问事、六爻值、月建、日辰完全一致时返回', () => {
@@ -72,7 +72,7 @@ test('事实指纹不符（规则改动后旧稿）时自动失配，返回尚�
 
 test('发布包混入未批准稿时拒绝加载', () => {
   const bad = structuredClone(fakeRelease);
-  bad.readings[0].approval.approval_status = 'not-approved';
+  bad.readings[0].approval.approval_status = 'REVIEW_REQUIRED';
   assert.throws(() => createReadingRepository({ releasePackage: bad }));
 });
 
@@ -83,14 +83,29 @@ test('审核状态：AI 审核者不能构成专业审核或批准；内容哈�
     { script_id: 'X', stage: 'release-approval', status: 'approved', reviewer: 'Claude', reviewed_at: '2026-11-13', content_hash: h },
   ];
   const s = statusesFor(recs, 'X', h);
-  assert.equal(s.approval_status, 'not-approved');
+  assert.equal(s.approval_status, 'REVIEW_REQUIRED');
   assert.equal(s.interpretation_review_status, 'invalid-ai-reviewer');
   const human = [
     { script_id: 'X', stage: 'professional-review', status: 'approved', reviewer: '张老师', reviewed_at: '2026-11-14', content_hash: h },
     { script_id: 'X', stage: 'release-approval', status: 'approved', reviewer: '张老师', reviewed_at: '2026-11-14', content_hash: h },
   ];
-  assert.equal(statusesFor(human, 'X', h).approval_status, 'approved');
-  assert.equal(statusesFor(human, 'X', 'b'.repeat(64)).approval_status, 'not-approved', '改稿后旧批准失效');
+  assert.equal(statusesFor(human, 'X', h).approval_status, 'HUMAN_APPROVED');
+  assert.equal(statusesFor(human, 'X', 'b'.repeat(64)).approval_status, 'REVIEW_REQUIRED', '改稿后旧批准失效');
+  // AI 路径：缺终审或终审条件不全都不得 AI_APPROVED；终审须绑定最终哈希
+  const aiRecs = [
+    { script_id: 'X', stage: 'ai-source-check', status: 'PASS', reviewer: 'AI-2', reviewed_at: '2026-11-13', content_hash: 'old' },
+    { script_id: 'X', stage: 'ai-independent', status: 'ISSUES', resolution: 'resolved', reviewer: 'AI-3', reviewed_at: '2026-11-13', content_hash: 'old' },
+    { script_id: 'X', stage: 'ai-adversarial', status: 'RETURN', resolution: 'resolved', reviewer: 'AI-4', reviewed_at: '2026-11-13', content_hash: 'old' },
+    { script_id: 'X', stage: 'ai-editor', status: 'DONE', reviewer: 'AI-5', reviewed_at: '2026-11-13', content_hash: h },
+  ];
+  assert.equal(statusesFor(aiRecs, 'X', h).approval_status, 'REVIEW_REQUIRED', '无终审');
+  const conds = Object.fromEntries(RELEASE_CONDITIONS.map((c) => [c, true]));
+  const withQa = [...aiRecs, { script_id: 'X', stage: 'ai-final-qa', status: 'PASS', reviewer: 'AI-6', reviewed_at: '2026-11-13', content_hash: h, conditions: conds }];
+  assert.equal(statusesFor(withQa, 'X', h).approval_status, 'AI_APPROVED');
+  assert.equal(statusesFor(withQa, 'X', h).production_allowed, true);
+  const partial = [...aiRecs, { script_id: 'X', stage: 'ai-final-qa', status: 'PASS', reviewer: 'AI-6', reviewed_at: '2026-11-13', content_hash: h, conditions: { ...conds, 所用规则已经批准: false } }];
+  assert.equal(statusesFor(partial, 'X', h).approval_status, 'REVIEW_REQUIRED', '17 项条件缺一不可');
+  assert.equal(statusesFor(withQa, 'X', 'c'.repeat(64)).approval_status, 'REVIEW_REQUIRED', '终审须绑定最终哈希');
 });
 
 test('匹配键与事实指纹稳定', () => {

@@ -25,6 +25,8 @@ const ABSOLUTE = ['对方也在', '对方对你', '对方认可', '对方满意'
 const LABEL_PREFIX = /^(总断|简断|应期|开局|过程|结局|详断)[：:]/;
 const HIDDEN_DENIAL = ['找不到着力处', '引不出来', '引不出', '能救的力量也找不到', '完全无力', '帮不上忙'];
 const XUN_ABSOLUTE = ['等这一旬过去才', '本旬之内难有定论', '本旬之内不会', '旬内不会有', '本旬内无'];
+// V3.0 第六节所列套话（不得用于正式断语）
+const BOILERPLATE = ['整体来看', '有一定的发展空间', '虽然存在阻碍，但仍有转机', '需要结合实际情况综合判断', '建议耐心等待，保持沟通', '存在一定的不确定性', '用神旺，说明有一定帮助', '忌神克用，说明存在阻力', '从卦象来看，事情有吉有凶', '综合上述因素', '此处按规则判为有力', '当前源力需要进一步核查'];
 const TERMS = ['旬空', '月破', '日破', '回头克', '回头生', '进神', '退神', '伏神', '飞神', '原神', '忌神', '仇神', '暗动', '帝旺', '长生', '入墓', '化绝'];
 const VERDICTS = {
   'likely-pass': { need: ['倾向通过', '有望通过'], forbid: ['难以通过', '偏难', '可能偏低'] },
@@ -151,6 +153,26 @@ function check(src, chart, evidence) {
   // C20 回答范围；C21 对方态度不写成事实
   for (const w of getQuestionRule(src.question_id).forbidden_terms || []) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C20 超出回答范围的词「${w}」`);
   for (const w of ABSOLUTE) if (`${userBody}${r.timing?.text || ''}`.includes(w)) errors.push(`C21 把对方或竞争情况写成定论：「${w}」`);
+  // C22 主要依据须有实际作用（D-016、D-013 裁定）：主要不利依据的忌神须有力且能作用；主要有利依据须当前有效或有明确待时条件；并见待核之伏神不得作为翻吉依据
+  if (!Array.isArray(j.decisive) || !j.decisive.length) errors.push('C22 judgment.decisive 未列出主要依据爻');
+  for (const dcs of j.decisive || []) {
+    if (dcs.hidden) {
+      const f = evidence.flows.find((x) => x.flow === 'hidden' && x.position === dcs.position);
+      if (!f) { errors.push(`C22 第${dcs.position}爻无伏神`); continue; }
+      if (dcs.effect === 'support' && f.emergence !== 'likely') errors.push(`C22 伏神${f.hidden}判为「${f.emergence}」，不得作为主要有利依据`);
+      continue;
+    }
+    const line = chart.lines[dcs.position - 1];
+    const roleLine = [evidence.yongshen.line, ...evidence.yuan, ...evidence.ji, evidence.world].find((x) => x && x.position === dcs.position);
+    if (!roleLine) { errors.push(`C22 第${dcs.position}爻不是用神、原神、忌神或世爻`); continue; }
+    const st = roleLine.state;
+    if (dcs.effect === 'adverse' && line.relative === evidence.roles.ji && !(st.state === 'EFFECTIVE' && st.acts !== '静（不主动作用）')) errors.push(`C22 忌神${line.label}${line.branch}当前「${st.state}/${st.acts}」，不得作为主要不利依据`);
+    if (dcs.effect === 'support' && !['EFFECTIVE', 'DEFERRED'].includes(st.state)) errors.push(`C22 第${dcs.position}爻当前「${st.state}」，不得作为主要有利依据`);
+  }
+  // C23 套话；C24 篇内重复句
+  for (const [k, v] of Object.entries({ ...userTexts(r), timing: r.timing?.text || '' })) for (const b of BOILERPLATE) if (String(v).includes(b)) errors.push(`C23 ${k} 含套话「${b}」`);
+  const inner = new Map();
+  for (const k of ['brief', 'opening', 'process', 'ending', 'conclusion']) for (const sen of sentences(r[k])) { if (inner.has(sen) && inner.get(sen) !== k) errors.push(`C24 篇内重复句（${inner.get(sen)} 与 ${k}）：${sen}`); inner.set(sen, k); }
   // C16 简断术语密度
   const termCount = TERMS.filter((t) => r.brief.includes(t)).length;
   if (termCount >= 3) warnings.push(`C16 简断术语偏多（${termCount} 个）`);
@@ -183,7 +205,7 @@ const SQL_COLUMNS = ['script_id', 'question_id', 'question_type', 'domain_id', '
   'void_branches', 'relevant_moving_lines', 'changed_line_relations', 'seasonal_strength', 'rule_profile_id', 'applicable_conditions', 'title', 'brief_text',
   'opening_text', 'process_text', 'ending_text', 'timing_text', 'timing_entries', 'conclusion_text', 'classical_sources', 'calculation_explanation',
   'calculation_facts', 'facts_digest', 'authoring_status', 'author_full_text_review_status', 'technical_review_status', 'interpretation_review_status',
-  'approval_status', 'content_hash', 'source_version', 'rule_version', 'reviewer', 'reviewed_at'];
+  'approval_status', 'production_allowed', 'content_hash', 'source_version', 'rule_version', 'reviewer', 'reviewed_at'];
 
 const built = [];
 const allErrors = [];
@@ -238,7 +260,7 @@ for (const { file, src } of loadAuthoring()) {
     technical_review_status: errors.length ? 'failed' : 'passed',
     ...statusesFor(reviewRecords, src.script_id, entry.content_hash),
   };
-  if (entry.statuses.approval_status === 'approved' && errors.length) entry.statuses.approval_status = 'blocked-by-check-failure';
+  if (entry.statuses.approval_status !== 'REVIEW_REQUIRED' && errors.length) { entry.statuses.approval_status = 'REVIEW_REQUIRED'; entry.statuses.production_allowed = false; entry.statuses.blocked_by_checks = true; }
   built.push({ entry, chart, analysis, evidence });
   for (const e of errors) allErrors.push(`${src.script_id}: ${e}`);
 }
@@ -258,19 +280,31 @@ for (const { entry } of built) {
   }
 }
 
+// C25 跨篇相似度（字符 6-gram Jaccard）：超过阈值须复核是否只换名词（真正等价的类别稿除外）
+const grams = (t) => { const s = String(t).replace(/\s/g, ''); const g = new Set(); for (let i = 0; i + 6 <= s.length; i += 1) g.add(s.slice(i, i + 6)); return g; };
+const bodyOf = (e) => ['title', 'brief', 'opening', 'process', 'ending', 'conclusion'].map((k) => e.reading[k]).join('');
+const G = built.map((b) => grams(bodyOf(b.entry)));
+const similarity = [];
+for (let i = 0; i < built.length; i += 1) for (let k = i + 1; k < built.length; k += 1) {
+  let inter = 0; for (const x of G[i]) if (G[k].has(x)) inter += 1;
+  const jac = inter / (G[i].size + G[k].size - inter);
+  similarity.push({ a: built[i].entry.script_id, b: built[k].entry.script_id, jaccard6: +jac.toFixed(3) });
+  if (jac > 0.3) for (const e of [built[i].entry, built[k].entry]) e.checks.warnings.push(`C25 与${e === built[i].entry ? built[k].entry.script_id : built[i].entry.script_id}字符六元组相似度 ${jac.toFixed(2)}，须复核是否机械复用`);
+}
+
 mkdirSync(join(ROOT, 'dist'), { recursive: true });
 mkdirSync(join(ROOT, 'data/release'), { recursive: true });
 mkdirSync(join(ROOT, 'reports'), { recursive: true });
 
 // 发布包：只含已批准、技术核验通过的稿件
-const approved = built.filter((b) => b.entry.statuses.approval_status === 'approved' && b.entry.statuses.technical_review_status === 'passed');
+const approved = built.filter((b) => b.entry.statuses.production_allowed && b.entry.statuses.technical_review_status === 'passed');
 const release = {
   schema: RELEASE_SCHEMA,
   content_version: CONTENT_VERSION,
   rule_profile: RULE_PROFILE.id,
   readings: approved.map(({ entry }) => ({
     key: entry.key, script_id: entry.script_id, question_id: entry.question_id, facts_digest: entry.facts_digest, content_hash: entry.content_hash,
-    rule_version: entry.rule_version, approval: { approval_status: 'approved', reviewer: entry.statuses.reviewer, reviewed_at: entry.statuses.reviewed_at },
+    rule_version: entry.rule_version, approval: { approval_status: entry.statuses.approval_status, production_allowed: true, reviewer: entry.statuses.reviewer, reviewed_at: entry.statuses.reviewed_at },
     reading: { ...entry.reading },
   })),
 };
@@ -298,7 +332,7 @@ const sqlRows = built.map(({ entry, chart, analysis, evidence }) => {
     calculation_explanation: entry.reading.calculation_explanation, calculation_facts: entry.calculation_facts, facts_digest: entry.facts_digest,
     authoring_status: entry.statuses.authoring_status, author_full_text_review_status: entry.statuses.author_full_text_review_status,
     technical_review_status: entry.statuses.technical_review_status, interpretation_review_status: entry.statuses.interpretation_review_status,
-    approval_status: entry.statuses.approval_status, content_hash: entry.content_hash, source_version: entry.source_version, rule_version: entry.rule_version,
+    approval_status: entry.statuses.approval_status, production_allowed: entry.statuses.production_allowed ? 'true' : 'false', content_hash: entry.content_hash, source_version: entry.source_version, rule_version: entry.rule_version,
     reviewer: entry.statuses.reviewer, reviewed_at: entry.statuses.reviewed_at,
   };
   if (y && !row.selected_yongshen) row.selected_yongshen = null;
@@ -320,7 +354,7 @@ for (const { entry } of built) {
   md.push(`- 卦盘：${f.primary}${f.changed ? ` 之 ${f.changed}` : '（六爻安静）'}；月建 ${f.month}，日辰 ${f.day}，旬空 ${f.void}`);
   md.push(`- 匹配键：\`${entry.key}\`；内容哈希 \`${entry.content_hash.slice(0, 16)}…\``);
   md.push(`- 结论类别：${entry.verdict_label}；情境：${entry.scenario_tags.join('、')}`);
-  md.push(`- 状态：作者稿 ${entry.statuses.authoring_status}｜作者全文自查 ${entry.statuses.author_full_text_review_status}｜技术核验 ${entry.statuses.technical_review_status}｜专业审核 ${entry.statuses.interpretation_review_status}｜发布批准 ${entry.statuses.approval_status}\n`);
+  md.push(`- 状态：作者稿 ${entry.statuses.authoring_status}｜作者全文自查 ${entry.statuses.author_full_text_review_status}｜技术核验 ${entry.statuses.technical_review_status}｜AI 审核（古籍 ${entry.statuses.ai_review.source_check}、独立 ${entry.statuses.ai_review.independent}、反向 ${entry.statuses.ai_review.adversarial}、精修 ${entry.statuses.ai_review.editor}、终审 ${entry.statuses.ai_review.final_qa}）｜人工审核 ${entry.statuses.interpretation_review_status}｜发布 ${entry.statuses.approval_status}｜production_allowed ${entry.statuses.production_allowed}\n`);
   md.push('```');
   md.push(...f.lines);
   md.push('```\n');
@@ -336,7 +370,15 @@ for (const { entry } of built) {
   md.push(`\n**计算说明**　${r.calculation_explanation}\n`);
   if (entry.checks.errors.length || entry.checks.warnings.length) md.push(`**核验提示**　${[...entry.checks.errors, ...entry.checks.warnings].join('；')}\n`);
 }
-writeFileSync(join(ROOT, 'docs/11_AUTHORED_READINGS.md'), `${md.join('\n')}\n`);
+const mdText = `${md.join('\n')}\n`;
+// C26 正式排版结构快照：编号标题、问事、卦盘与月建日辰旬空、匹配键、状态、六爻排盘、简断、开局、过程、结局、应期、总断、古籍依据、计算说明
+const ORDER = ['## ', '- 问事：', '- 卦盘：', '- 匹配键：', '- 状态：', '```', '**简断**', '**详断·开局**', '**详断·过程**', '**详断·结局**', '**应期**', '**总断**', '**古籍依据**', '**计算说明**'];
+for (const block of mdText.split(/\n(?=## IP-)/).filter((b) => b.startsWith('## IP-'))) {
+  let pos = -1;
+  for (const mark of ORDER) { const at = block.indexOf(mark, pos + 1); if (at < 0) { allErrors.push(`C26 排版结构缺少：${block.slice(3, 10)} ${mark}`); break; } pos = at; }
+  if (/总断\*\*\s*总断[：:]/.test(block)) allErrors.push(`C26 ${block.slice(3, 10)} 出现「总断 总断」`);
+}
+writeFileSync(join(ROOT, 'docs/11_AUTHORED_READINGS.md'), mdText);
 
 const csvHead = ['script_id', 'question_id', 'reading_key', 'verdict', 'content_hash', 'authoring_status', 'author_full_text_review', 'technical_review', 'technical_errors', 'technical_warnings', 'interpretation_review', 'approval', 'reviewer', 'reviewed_at', 'review_notes'];
 const csv = [csvHead.join(',')];
@@ -356,12 +398,15 @@ const report = {
   technical_passed: built.filter((b) => b.entry.statuses.technical_review_status === 'passed').length,
   author_reviewed: built.filter((b) => b.entry.statuses.author_full_text_review_status === 'completed').length,
   professionally_reviewed: built.filter((b) => b.entry.statuses.interpretation_review_status === 'approved').length,
+  ai_approved: built.filter((b) => b.entry.statuses.approval_status === 'AI_APPROVED').length,
+  review_required: built.filter((b) => b.entry.statuses.approval_status === 'REVIEW_REQUIRED').length,
   approved_for_release: approved.length,
   errors: allErrors,
   warnings: built.flatMap((b) => b.entry.checks.warnings.map((w) => `${b.entry.script_id}: ${w}`)),
+  similarity: similarity.sort((x, y) => y.jaccard6 - x.jaccard6).slice(0, 10),
 };
 writeFileSync(join(ROOT, 'reports/build-report.json'), `${JSON.stringify(report, null, 2)}\n`);
-console.log(`断语 ${report.scripts} 篇：技术核验通过 ${report.technical_passed}，作者全文自查 ${report.author_reviewed}，专业审核通过 ${report.professionally_reviewed}，批准发布 ${report.approved_for_release}`);
+console.log(`断语 ${report.scripts} 篇：技术核验通过 ${report.technical_passed}，作者全文自查 ${report.author_reviewed}，人工审核通过 ${report.professionally_reviewed}，AI_APPROVED ${report.ai_approved}，REVIEW_REQUIRED ${report.review_required}，进入发布包 ${report.approved_for_release}`);
 if (allErrors.length) {
   console.error(allErrors.join('\n'));
   process.exitCode = 1;

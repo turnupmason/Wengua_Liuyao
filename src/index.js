@@ -6,7 +6,7 @@ export {
 } from './hexagrams.js';
 export { COIN_CONVENTION, lineFromCoins, lineValueInfo, castWithCoins, castFromRecordedCoins } from './casting.js';
 export {
-  CALENDAR_RULES_VERSION, DEFAULT_TIME_ZONE, DAY_BOUNDARY_POLICIES, julianDayNumber, dayGanzhiOfCivilDate, civilParts,
+  CALENDAR_RULES_VERSION, DEFAULT_TIME_ZONE, DAY_BOUNDARY_POLICIES, DAY_BOUNDARY_VERSION, julianDayNumber, dayGanzhiOfCivilDate, civilParts,
   monthBranchAt, yearGanzhiAt, castingCalendar, upcomingDaysWithBranch,
 } from './calendar.js';
 export { CHART_SCHEMA_VERSION, buildChart, chartKey, normalizeCalendar } from './chart.js';

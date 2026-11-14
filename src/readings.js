@@ -67,7 +67,7 @@ export function createReadingRepository({ releasePackage }) {
   const byKey = new Map();
   const byClass = new Map();
   for (const entry of releasePackage.readings) {
-    if (entry.approval?.approval_status !== 'approved') throw new Error(`发布包混入未批准稿件: ${entry.script_id}`);
+    if (!['AI_APPROVED', 'HUMAN_APPROVED'].includes(entry.approval?.approval_status) || entry.approval?.production_allowed !== true) throw new Error(`发布包混入未批准稿件: ${entry.script_id}`);
     const map = entry.match === 'class' ? byClass : byKey;
     const k = entry.match === 'class' ? `${entry.question_id}|${entry.equivalence_version}|${entry.class_key}` : entry.key;
     if (map.has(k)) throw new Error(`发布包键重复: ${k}`);

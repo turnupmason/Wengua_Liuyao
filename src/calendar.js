@@ -6,10 +6,11 @@ import { JIE_TABLE } from './data/jie-table.js';
 
 export const CALENDAR_RULES_VERSION = 'calendar-1.0.0';
 export const DEFAULT_TIME_ZONE = 'Asia/Shanghai';
+// D-009 裁定（2026-11-13）：全系统一律以当地时间 0 时换日，23–24 时不提前换日；不得在不同模块混用口径
 export const DAY_BOUNDARY_POLICIES = Object.freeze({
-  midnight: '以当地民用日 0 时换日（本项目默认）',
-  'zi-hour-23': '以 23 时（子初）换日',
+  midnight: '以当地民用日 0 时换日（D-009 裁定，全系统唯一口径）',
 });
+export const DAY_BOUNDARY_VERSION = 'day-boundary-midnight-1.0';
 const NEAR_JIE_MINUTES = 30;
 
 /** 公历日期的儒略日数（正午为整数日界的 JDN） */
@@ -102,7 +103,7 @@ export function monthStemFor(yearStem, monthBranch) {
  * @param {object} p
  * @param {number|Date|string} p.instant 起卦瞬间
  * @param {string} [p.timeZone] IANA 时区，默认 Asia/Shanghai
- * @param {'midnight'|'zi-hour-23'} [p.dayBoundary]
+ * @param {'midnight'} [p.dayBoundary] 只接受 midnight（D-009）
  * @param {object} [p.jieTable] 可注入的节气表
  */
 export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoundary = 'midnight', jieTable = JIE_TABLE }) {
@@ -111,7 +112,6 @@ export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoun
   if (!DAY_BOUNDARY_POLICIES[dayBoundary]) throw new Error(`未知换日口径: ${dayBoundary}`);
   const civil = civilParts(ms, timeZone);
   let dayDate = { year: civil.year, month: civil.month, day: civil.day };
-  if (dayBoundary === 'zi-hour-23' && civil.hour === 23) dayDate = addCivilDays(dayDate, 1);
   const day = dayGanzhiOfCivilDate(dayDate.year, dayDate.month, dayDate.day);
   const month = monthBranchAt(ms, jieTable);
   const year = yearGanzhiAt(ms, jieTable);
@@ -121,7 +121,7 @@ export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoun
     warnings.push({ code: 'near-jie-boundary', message: `起卦时刻距交节不足 ${NEAR_JIE_MINUTES} 分钟，月建可能因历表精度而不同` });
   }
   if (civil.hour === 23) {
-    warnings.push({ code: 'zi-hour', message: '起卦在 23 时（子初），换日口径不同会得到不同日辰', dayBoundary });
+    warnings.push({ code: 'zi-hour', message: '起卦在 23 时（子初）：按 D-009 不提前换日，仍取当日日辰', dayBoundary });
   }
   return {
     rulesVersion: CALENDAR_RULES_VERSION,
@@ -129,6 +129,7 @@ export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoun
     instantUtc: new Date(ms).toISOString(),
     timeZone,
     dayBoundary,
+    dayBoundaryVersion: DAY_BOUNDARY_VERSION,
     civil,
     dayDate,
     year,

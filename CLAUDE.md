@@ -6,6 +6,7 @@
 - 运行时 `src/` 必须纯 ESM，不得引入 `node:*` 或其他 Node 专属依赖；数据由调用方注入。
 - 规则改动：先改 `rules/register.json`（原文须逐字见于 `sources/classics/`），`npm run verify:rules` 通过后再改代码，跑 `npm test` 与 `npm run build`。改动会改变事实指纹，旧稿自动失配。
 - 断语只改 `authoring/` 作者源，不手改 `data/release/`、`dist/`、`docs/11`、`docs/12`（构建生成）。
-- 不得自动设 approved：`review/records.json` 中 AI 审核者的记录不构成专业审核或批准。改稿须追加新的自查记录（内容哈希会变）。
+- 审核与发布按 `docs/16_REVIEW_AND_RELEASE_STANDARD.md`（用户指令 V3.0）：AI-1 起草 → AI-2 古籍核查 → AI-3 独立复算 → AI-4 反向质疑 → 修订 → AI-5 精修 → AI-6 终审；17 项条件全部满足才 AI_APPROVED / production_allowed，否则 REVIEW_REQUIRED。不得为增加发布数量降低标准，不得以降低待核数量为目标强判吉凶。改稿后旧审核记录随内容哈希失效。
+- 规则争议以用户裁定为准（`rules/register.json` disputes 中 status=ruled 与 rulings）；D-009 全系统只用 0 时换日。
 - 测试通过不等于专业批准；如实报告完成度。
 - git 身份只在本仓库本地设置（turnupmason + noreply）。本地提交即可，**推送前必须先问用户**。

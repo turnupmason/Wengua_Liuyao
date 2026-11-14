@@ -1,5 +1,5 @@
 {
-  "register_version": "0.2.0",
+  "register_version": "0.3.0",
   "rule_profile": "zengshan-main",
   "policy": "原文须逐字见于 sources/classics 所注卷章（去除标点空白后比对）。review_status 只有专业审核者可以改为 approved；脚本核对通过只说明原文出处属实，不说明断法已经审核。",
   "rules": [
@@ -1820,7 +1820,11 @@
         }
       ],
       "adopted": "0 时换日，待用户确认",
-      "status": "open"
+      "status": "ruled",
+      "ruling": "采用 A：默认当地时间 00:00 换日；完整保存起卦时间、时区、日界版本及日干支；23–24 时不提前换日；全系统不得混用两种口径。实现：DAY_BOUNDARY_VERSION = day-boundary-midnight-1.0，castingCalendar 只接受 midnight",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13",
+      "ruling_document": "六爻断案规则争议最终裁定 V1.0"
     },
     {
       "dispute_id": "D-010",
@@ -1836,7 +1840,11 @@
         }
       ],
       "adopted": "面试按谋职取官鬼为主用、财为原神；父母辅看；遇财动克父须在断语中说明",
-      "status": "open"
+      "status": "ruled",
+      "ruling": "采用 A：面试通过按谋职专用规则，官鬼为主要用神，父母为辅助判断；笔试、考试等另立问事和规则，不共用面试结论",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13",
+      "ruling_document": "六爻断案规则争议最终裁定 V1.0"
     },
     {
       "dispute_id": "D-011",
@@ -1880,7 +1888,11 @@
         }
       ],
       "adopted": "伏藏原神未出之前不作接续相生论，只记为转机条件；断语须说明",
-      "status": "open"
+      "status": "ruled",
+      "ruling": "采用有条件的 C：伏神有用条件当前已成立时可参与当前判断；受实际限制时分析解除条件和参考应期；有用与无用并见、或接续相生只有五行路径而缺少实际作用依据时保持待核，不能直接翻吉。实现：伏神分 likely（EFFECTIVE）/deferred（DEFERRED：伏神旬空待出空、飞神未推开待冲飞）/contested（REVIEW_REQUIRED）/unlikely（INEFFECTIVE）；C22 禁止以并见伏神作主要有利依据",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13",
+      "ruling_document": "六爻断案规则争议最终裁定 V1.0"
     },
     {
       "dispute_id": "D-014",
@@ -1892,7 +1904,11 @@
         }
       ],
       "adopted": "暂按项目补充，待用户确认",
-      "status": "open"
+      "status": "ruled",
+      "ruling": "采用有条件的 A：官鬼两现先比较实际作用条件（古法五项、择其旺者、三层作用状态）；仅在真实证据无法区分时，以持世、临应及与世爻生合关系作次级依据；另一官鬼保留在证据中；爻位上下次序不作吉凶依据（同支而诸条件皆同者取舍不影响结论）",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13",
+      "ruling_document": "六爻断案规则争议最终裁定 V1.0"
     },
     {
       "dispute_id": "D-015",
@@ -1912,7 +1928,11 @@
         }
       ],
       "adopted": "采用用户三层判定（src/role-state.js）：月令三档与五级标签只作事实；作用能力依八宫图第三四处生克原文判（不设数值权重），日辰章临日、月将章月日相敌另立；空破墓分别判断，入墓依随鬼入墓章分真假；静爻有力不等于主动作用。元神忌神衰旺章条文原样核对，冲突由三层判定裁决",
-      "status": "adopted-pending-regression-review"
+      "status": "ruled",
+      "ruling": "用户确认三层判定（见 R-SUIMU-01、src/role-state.js）",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13",
+      "ruling_document": "六爻断案规则争议最终裁定 V1.0"
     },
     {
       "dispute_id": "D-016",
@@ -1928,7 +1948,34 @@
         }
       ],
       "adopted": "求名一类以专章明文为主（IP-0002 判偏难），待用户裁决",
-      "status": "open"
+      "status": "ruled",
+      "ruling": "采用修正版 C：求名占中子孙持世或发动属重要不利条件，但须判断子孙是否具备实际克官能力；有力动忌可作主要不利依据；忌神无力时重新分析官鬼及其他条件；不得机械判败，也不得因忌神无力自动判成。实现：构建检查 C22（主要不利依据之忌神须 EFFECTIVE 且能作用）",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13",
+      "ruling_document": "六爻断案规则争议最终裁定 V1.0"
+    }
+  ],
+  "rulings": [
+    {
+      "id": "B-001",
+      "topic": "日月相反（阻塞项一）",
+      "ruling": "采用修正版 A：月克日生、月生日克先记为日月相反，结合用神有根、动变、其他生克和专用占法进一步判断；没有额外生克不自动等于不定、偏慢。实现：role-state 输出 pattern「日月相反」；生克相当而双方皆有日月之力者为 REVIEW_REQUIRED",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13"
+    },
+    {
+      "id": "B-002",
+      "topic": "伏神有用与无用并见（阻塞项二）",
+      "ruling": "不采用「月令旺相即必然出伏」的硬性规则；须综合伏神本身的生扶、日月冲克、飞神克制及空破；有用与无用冲突时保留冲突与证据，不以固定优先级强判吉凶。实现：contested 保持 REVIEW_REQUIRED",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13"
+    },
+    {
+      "id": "B-003",
+      "topic": "两官鬼无法区分（阻塞项三）",
+      "ruling": "采用有条件的 A：优先参考实际所问、持世临应和相关世爻关系；若选择不同主用神会产生相反结论且现有证据不能裁决，保留待核，不可强制通过。实现：两现取法第三步次级依据；地支不同仍并列者 ambiguous",
+      "ruled_by": "用户",
+      "ruled_at": "2026-11-13"
     }
   ]
 }

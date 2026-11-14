@@ -5,7 +5,61 @@
   "technical_passed": 6,
   "author_reviewed": 6,
   "professionally_reviewed": 0,
+  "ai_approved": 0,
+  "review_required": 6,
   "approved_for_release": 0,
   "errors": [],
-  "warnings": []
+  "warnings": [],
+  "similarity": [
+    {
+      "a": "IP-0001",
+      "b": "IP-0005",
+      "jaccard6": 0.028
+    },
+    {
+      "a": "IP-0002",
+      "b": "IP-0006",
+      "jaccard6": 0.014
+    },
+    {
+      "a": "IP-0001",
+      "b": "IP-0003",
+      "jaccard6": 0.011
+    },
+    {
+      "a": "IP-0001",
+      "b": "IP-0006",
+      "jaccard6": 0.011
+    },
+    {
+      "a": "IP-0001",
+      "b": "IP-0004",
+      "jaccard6": 0.01
+    },
+    {
+      "a": "IP-0005",
+      "b": "IP-0006",
+      "jaccard6": 0.01
+    },
+    {
+      "a": "IP-0002",
+      "b": "IP-0005",
+      "jaccard6": 0.008
+    },
+    {
+      "a": "IP-0003",
+      "b": "IP-0004",
+      "jaccard6": 0.008
+    },
+    {
+      "a": "IP-0001",
+      "b": "IP-0002",
+      "jaccard6": 0.007
+    },
+    {
+      "a": "IP-0002",
+      "b": "IP-0004",
+      "jaccard6": 0.006
+    }
+  ]
 }
