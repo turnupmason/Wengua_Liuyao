@@ -89,3 +89,11 @@
 ## 五、仓库与提交
 
 - 本地仓库 `D:\Wengua_Liuyao`（原 `D:\Wengua_Liuren` 已更名），远端 `turnupmason/Wengua_Liuyao`。本轮全部为本地提交，**未推送**，推送前须经用户同意。
+
+## 七、按类写稿进度（续写时先看这里）
+
+- 用户 2026-11-14：「你就是专家认证。我批准了。」写到 500 个等价类再汇报，中途不问；保持标准，不偷懒。
+- 写稿顺序：`reports/interview-pass-class-order.json`（eq-0.12.1，按掷钱概率排序）；类别画像 `reports/class-profiles-1-500.json`（`node scripts/analysis/show-profile.mjs 25-36` 查看）。
+- 编号：名次 1、2、4、5 为 IPC-0001、0002、0004、0003；名次 3 为 IPC-0005；名次 6 起编号即名次（IPC-0006 … IPC-0500）。
+- 流程：在 `scripts/authoring/batches/batch_X.py` 写 spec（判断框架见 docs/18）→ 运行生成作者源与审核文件 → 未核验规则先用 `scripts/authoring/verify_rule.py` 核验 → `python scripts/authoring/finalize_batch.py <IDs>`（构建、润色记录、单 Claude 审核记录、再构建）→ 提交。
+- 已完成名次见 `authoring/classes/interview-pass/` 下的文件。

@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 const arg = process.argv[2] || '1';
 const ranks = arg.includes('-') ? (() => { const [a, b] = arg.split('-').map(Number); return Array.from({ length: b - a + 1 }, (_, i) => a + i); })() : arg.split(',').map(Number);
-const all = JSON.parse(readFileSync(new URL('../../reports/class-profiles-1-263.json', import.meta.url), 'utf8'));
+const all = JSON.parse(readFileSync(new URL('../../reports/class-profiles-1-500.json', import.meta.url), 'utf8'));
 const skip = new Set(process.argv.slice(3));
 for (const p of all.filter((x) => ranks.includes(x.rank))) {
   console.log(`#${p.rank} ${(p.share * 100).toFixed(3)}% ${p.charts}盘 ${p.key}`);

@@ -1,65 +1,65 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 18,
-  "technical_passed": 18,
+  "scripts": 30,
+  "technical_passed": 30,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 18,
+  "ai_approved": 30,
   "review_required": 0,
-  "approved_for_release": 18,
+  "approved_for_release": 30,
   "errors": [],
   "warnings": [],
   "similarity": [
     {
+      "a": "IPC-0016",
+      "b": "IPC-0020",
+      "jaccard6": 0.099
+    },
+    {
+      "a": "IPC-0014",
+      "b": "IPC-0023",
+      "jaccard6": 0.084
+    },
+    {
+      "a": "IPC-0010",
+      "b": "IPC-0024",
+      "jaccard6": 0.08
+    },
+    {
+      "a": "IPC-0012",
+      "b": "IPC-0014",
+      "jaccard6": 0.078
+    },
+    {
       "a": "IPC-0011",
-      "b": "IPC-0012",
-      "jaccard6": 0.052
+      "b": "IPC-0024",
+      "jaccard6": 0.074
     },
     {
-      "a": "IPC-0010",
-      "b": "IPC-0011",
-      "jaccard6": 0.045
-    },
-    {
-      "a": "IPC-0008",
-      "b": "IPC-0012",
-      "jaccard6": 0.043
-    },
-    {
-      "a": "IP-0001",
-      "b": "IPC-0001",
-      "jaccard6": 0.042
-    },
-    {
-      "a": "IPC-0001",
-      "b": "IPC-0012",
-      "jaccard6": 0.04
-    },
-    {
-      "a": "IPC-0010",
-      "b": "IPC-0012",
-      "jaccard6": 0.04
-    },
-    {
-      "a": "IPC-0004",
-      "b": "IPC-0005",
-      "jaccard6": 0.036
+      "a": "IPC-0013",
+      "b": "IPC-0024",
+      "jaccard6": 0.063
     },
     {
       "a": "IPC-0003",
-      "b": "IPC-0005",
-      "jaccard6": 0.035
+      "b": "IPC-0014",
+      "jaccard6": 0.058
     },
     {
-      "a": "IPC-0001",
-      "b": "IPC-0002",
-      "jaccard6": 0.032
+      "a": "IPC-0015",
+      "b": "IPC-0022",
+      "jaccard6": 0.053
     },
     {
-      "a": "IPC-0009",
-      "b": "IPC-0011",
-      "jaccard6": 0.032
+      "a": "IPC-0005",
+      "b": "IPC-0015",
+      "jaccard6": 0.052
+    },
+    {
+      "a": "IPC-0011",
+      "b": "IPC-0012",
+      "jaccard6": 0.052
     }
   ]
 }

@@ -20,7 +20,7 @@ def reg():
 def prof(rank):
     global _prof
     if _prof is None:
-        _prof = {p['rank']: p for p in json.load(open(f'{ROOT}/reports/class-profiles-1-263.json', encoding='utf-8'))}
+        _prof = {p['rank']: p for p in json.load(open(f'{ROOT}/reports/class-profiles-1-500.json', encoding='utf-8'))}
     return _prof[rank]
 
 
