@@ -11,6 +11,8 @@ python scripts/analysis/audit-chapter-quotes.py || rc=1
 python scripts/analysis/audit-chapter-attrib.py || rc=1
 python scripts/analysis/audit-quote-verbatim.py || rc=1
 python scripts/analysis/audit-reader-text.py || rc=1
+pr=$(python scripts/analysis/audit-pending-rules.py) || rc=1
+echo "$pr" | tail -1
 lx=$(node scripts/analysis/audit-liangxian-branch.mjs) || rc=1
 echo "$lx" | tail -1
 exit $rc
