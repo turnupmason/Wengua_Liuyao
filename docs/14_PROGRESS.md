@@ -97,3 +97,7 @@
 - 编号：名次 1、2、4、5 为 IPC-0001、0002、0004、0003；名次 3 为 IPC-0005；名次 6 起编号即名次（IPC-0006 … IPC-0500）。
 - 流程：在 `scripts/authoring/batches/batch_X.py` 写 spec（判断框架见 docs/18）→ 运行生成作者源与审核文件 → 未核验规则先用 `scripts/authoring/verify_rule.py` 核验 → `python scripts/authoring/finalize_batch.py <IDs>`（构建、润色记录、单 Claude 审核记录、再构建）→ 提交。
 - 已完成名次见 `authoring/classes/interview-pass/` 下的文件。
+- 写稿规矩补充（2026-11-14）：
+  - 正文面向「看到自己这一卦」的读者，不写类内统计，例如「多数盘」「七成盘」「全类」，也不写内部术语「三层判定」。类内有差异时，用「或……或……」「一般」「若……」表述，或写「看你这一卦的排盘」。make_class 生成时会自动套用 `scripts/authoring/reader_voice.py`。
+  - 写稿前先看画像中的「用神空破」：凡有旬空、月破的类别，正文须讲到。
+  - 已写完的批次文件不要重跑，重跑会覆盖之后的润色。
