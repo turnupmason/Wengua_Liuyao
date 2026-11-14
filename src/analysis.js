@@ -174,21 +174,90 @@ function movingInteractions(chart) {
   return out;
 }
 
-/** 三合局候选：列出组成来源；本版只把「至少两支来自动爻或其变爻」记为成局候选（R-SANHE-01，待审） */
-function threeHarmonies(chart) {
-  const sources = [];
-  for (const l of chart.lines) {
-    sources.push({ branch: l.branch, from: l.moving ? 'moving' : 'static', position: l.position });
-    if (l.moving) sources.push({ branch: l.changed.branch, from: 'changed', position: l.position });
-  }
-  sources.push({ branch: chart.calendar.monthBranch, from: 'month' });
-  sources.push({ branch: chart.calendar.dayBranch, from: 'day' });
+/**
+ * 三合成局（D-020 裁定；R-SANHE-01..06）
+ * - 成局（formed）：三支俱在卦中（本卦爻或变出之爻），至少一支发动（明动、暗动、变出）——增删卜易「此三合者有四」；
+ *   或卦中两支俱动（不同爻位，明动、暗动或变出），第三支由月建或日辰补足——卜筮正宗「借寅月建」例。
+ * - 虚一待用（virtual）：卦中两支俱动（不同爻位）而缺一支，日月亦无，待缺支之日、月补足（野鹤「虚一待用」）。
+ * - 待时（deferred）：已合成局之条件，而某一支在卦中只有空、破、真墓之爻：空破待填实之日月，入墓待冲开之日（三合段）。
+ *   同一局之内的墓（如卯入未墓而未亦在木局）不作阻碍；旺相之爻不作真墓（R-SUIMU-01 口径）。
+ * 只输出事实，不判吉凶；对占问的影响见 evidence.js harmonyEffects。
+ */
+function threeHarmonies(chart, lineFacts) {
+  const { monthBranch, dayBranch } = chart.calendar;
+  const tombOf = (el) => ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'].find((b) => lifeStageOf(el, b) === '墓');
+  const sourcesOf = (b) => {
+    const out = [];
+    for (const l of chart.lines) {
+      const f = lineFacts[l.position - 1];
+      if (l.branch === b) {
+        const mode = l.moving ? '明动' : f.calendar.dayClash?.zengshan === '暗动' ? '暗动' : '静';
+        out.push({ branch: b, from: l.moving ? 'moving' : 'static', mode, position: l.position, element: l.element, cal: f.calendar, change: l.moving ? f.change : null });
+      }
+      if (l.moving && l.changed.branch === b) out.push({ branch: b, from: 'changed', mode: '变出', position: l.position, element: l.changed.element, cal: f.change.changedCalendar, change: null });
+    }
+    return out;
+  };
+  const impedimentOf = (src, h) => {
+    const imps = [];
+    const v = src.cal.void;
+    if (v && v.zengshan !== '冲空则实') imps.push({ kind: '旬空', release: { kind: '填实', branches: [src.branch] } });
+    if (src.cal.monthBreak) imps.push({ kind: '月破', release: { kind: '填实', branches: [src.branch] } });
+    if (!src.cal.seasonalStrong) {
+      const tb = tombOf(src.element);
+      const inSame = h.branches.includes(tb);
+      const tombs = [];
+      if (src.cal.dayTomb && !inSame) tombs.push('日墓');
+      if (src.change && src.change.lifeStage === '墓' && !inSame) tombs.push('化墓');
+      if (!inSame && chart.lines.some((m) => m.moving && m.position !== src.position && m.branch === tb)) tombs.push('动墓');
+      if (tombs.length) imps.push({ kind: '入墓', detail: tombs.join('、'), release: { kind: '冲墓', branches: [CLASH.get(tb)] } });
+    }
+    return imps;
+  };
+  const isDyn = (s) => s.mode !== '静';
   const out = [];
   for (const h of THREE_HARMONY) {
-    const parts = h.branches.map((b) => sources.filter((s) => s.branch === b));
-    if (parts.some((p) => p.length === 0)) continue;
-    const dynamicCount = parts.filter((p) => p.some((s) => s.from === 'moving' || s.from === 'changed')).length;
-    out.push({ element: h.element, branches: h.branches, parts, candidate: dynamicCount >= 2 });
+    const parts = h.branches.map((b) => ({ branch: b, sources: sourcesOf(b), month: b === monthBranch, day: b === dayBranch }));
+    const inHex = parts.filter((p) => p.sources.length);
+    if (inHex.length < 2) continue;
+    if (!inHex.some((p) => p.sources.some(isDyn))) continue;
+    // 两支俱动且不同爻位
+    const twoDynamic = (ps) => ps.length === 2 && ps[0].sources.filter(isDyn).some((a) => ps[1].sources.filter(isDyn).some((b) => a.position !== b.position));
+    let status = 'none';
+    let mode = null;
+    let missing = null;
+    if (inHex.length === 3) { status = 'formed'; mode = '卦中三支'; }
+    else {
+      const gap = parts.find((p) => !p.sources.length);
+      if (twoDynamic(inHex)) {
+        if (gap.month || gap.day) { status = 'formed'; mode = gap.month ? '月建补支' : '日辰补支'; }
+        else { status = 'virtual'; mode = '虚一待用'; missing = gap.branch; }
+      } else { mode = '两支一动，日月不补'; missing = gap.branch; }
+    }
+    // 空破墓：某支在卦中只有受阻之爻（日月补支不受阻）
+    const impediments = [];
+    if (status === 'formed' || status === 'virtual') {
+      for (const p of parts) {
+        if (!p.sources.length) continue;
+        const per = p.sources.map((s) => ({ s, imps: impedimentOf(s, h) }));
+        if (per.every((x) => x.imps.length)) impediments.push({ branch: p.branch, items: per.map((x) => ({ position: x.s.position, from: x.s.from, imps: x.imps })) });
+      }
+    }
+    if (status === 'formed' && impediments.length) status = 'deferred';
+    const completion = [];
+    if (missing && status === 'virtual') completion.push({ kind: '补支', branches: [missing], scale: '日或月', rule: 'R-SANHE-04' });
+    for (const imp of impediments) {
+      const rel = [...new Set(imp.items.flatMap((x) => x.imps.flatMap((y) => y.release.branches)))];
+      completion.push({ kind: [...new Set(imp.items.flatMap((x) => x.imps.map((y) => y.release.kind)))].join("/"), branch: imp.branch, branches: rel, scale: '日或月', rule: 'R-SANHE-03' });
+    }
+    const worldPart = parts.some((p) => p.sources.some((s) => chart.lines[s.position - 1].isWorld && s.from !== 'changed'));
+    out.push({
+      element: h.element, branches: h.branches, status, mode, missing,
+      parts: parts.map((p) => ({ branch: p.branch, month: p.month, day: p.day, sources: p.sources.map((s) => ({ from: s.from, mode: s.mode, position: s.position })) })),
+      impediments, completion, worldInHarmony: worldPart,
+      // 旧口径（R-SANHE-01 0.1.0 程序门槛），保留以便对照
+      candidate: status === 'formed' || status === 'deferred',
+    });
   }
   return out;
 }
@@ -273,6 +342,6 @@ export function analyzeChart(chart) {
       wandering: p.isWandering,
       returning: p.isReturning,
     },
-    threeHarmonies: threeHarmonies(chart),
+    threeHarmonies: threeHarmonies(chart, lineFacts),
   };
 }

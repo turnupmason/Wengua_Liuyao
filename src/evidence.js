@@ -329,6 +329,48 @@ function adverseTiming(chart, roles, analysis) {
  * 构建某一问事的证据。
  * @returns 供作者与审核使用的结构化证据；不含吉凶结论
  */
+const HARMONY_STATUS = { formed: '已成局', deferred: '待时成局', virtual: '虚一待用' };
+
+/** 三合局对本问的作用（D-020 裁定 4）：局之六亲、吉凶口径、世爻与局、兄局条件 */
+function harmonyEffects(chart, analysis, q, yongDesc) {
+  const table = q.harmony_effects || {};
+  const world = chart.lines.find((l) => l.isWorld);
+  const { monthBranch, dayBranch } = chart.calendar;
+  return analysis.threeHarmonies.filter((h) => h.status !== 'none').map((h) => {
+    const relative = relativeOf(chart.primary.palaceElement, h.element);
+    const t = table[relative] || { effect: 'unspecified', label: `${relative}局：本问未定口径`, rule_ids: [] };
+    let effect = t.effect;
+    let condition = null;
+    if (effect === 'conditional') {
+      const calHelps = [monthBranch, dayBranch].filter((b) => ['generates', 'same'].includes(elementRelation(BRANCH_ELEMENT[b], h.element)));
+      const yongStrong = Boolean(yongDesc && (yongDesc.seasonal === '旺' || yongDesc.seasonal === '相' || yongDesc.support.some((x) => /临日|临月|日生|月生|日扶|月扶/.test(x))));
+      condition = { calendarSupportsHarmony: calHelps.length > 0, yongStrong };
+      effect = calHelps.length && yongStrong ? 'neutral' : 'adverse';
+    }
+    const worldRel = h.worldInHarmony ? '世在局' : { generates: '局生世', controls: '局克世', generatedBy: '世生局', controlledBy: '世克局', same: '局与世比和' }[elementRelation(h.element, world.element)];
+    return {
+      branches: h.branches.join(''), element: h.element, relative, status: h.status, statusLabel: HARMONY_STATUS[h.status], mode: h.mode,
+      effect, label: t.label, condition, world: worldRel, completion: h.completion, impediments: h.impediments,
+      rule_ids: ['R-SANHE-01', ...(h.mode === '月建补支' || h.mode === '日辰补支' ? ['R-SANHE-02'] : []), ...(h.status === 'deferred' ? ['R-SANHE-03'] : []), ...(h.status === 'virtual' ? ['R-SANHE-04'] : []), ...t.rule_ids],
+    };
+  });
+}
+
+/** 待时、虚一之局：吉局入应期候选，凶局入防范候选（D-020 裁定 3） */
+function harmonyTiming(harmonies, adverse) {
+  const out = [];
+  for (const h of harmonies) {
+    if (h.status === 'formed') continue;
+    const isAdverse = h.effect === 'adverse';
+    if (isAdverse !== adverse || h.effect === 'neutral' || h.effect === 'unspecified') continue;
+    for (const c of h.completion) {
+      const basis = `${h.branches}${h.relative}局${h.statusLabel}：${c.kind === '补支' ? `缺${c.branches.join('')}，待其日月补足` : `${c.branch}${c.kind === '冲墓' ? '入墓，待冲开' : '空破，待填实'}（逢${c.branches.join('、')}）`}`;
+      for (const scale of [SCALE_NEAR, 'month']) out.push({ timing_rule_id: c.rule, target_symbol: `${h.branches}${h.relative}局`, target_branches: c.branches, time_scale: scale, calculation_basis: isAdverse ? `${basis}；凶局成时须防` : basis });
+    }
+  }
+  return out;
+}
+
 export function buildEvidence(questionId, chart, analysis = analyzeChart(chart)) {
   const q = getQuestionRule(questionId);
   const rel = q.primary_yongshen.relative;
@@ -386,6 +428,8 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     return parts.join('、');
   };
 
+  // 三合成局（D-020）：状态来自 analysis，吉凶口径来自问事配置
+  const harmonies = harmonyEffects(chart, analysis, q, yong ? describeLine(yong, lf(yong), chart) : null);
   const special = {
     yongHoldsWorld: Boolean(yong && yong.isWorld),
     jiHoldsWorld: world.relative === roles.ji,
@@ -404,7 +448,7 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     wandering: chart.primary.isWandering,
     returning: chart.primary.isReturning,
     movingCount: analysis.hexagram.movingCount,
-    threeHarmonies: analysis.threeHarmonies.filter((h) => h.candidate).map((h) => `${h.branches.join('')}${h.element}局`),
+    threeHarmonies: harmonies.map((h) => `${h.branches}${h.element}局（${h.relative}局，${h.statusLabel}）`),
   };
 
   // 判别流程（src/flows.js）：飞伏、旬空、月日相敌、动化
@@ -444,7 +488,8 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     special,
     flowsVersion: FLOWS_VERSION,
     flows,
-    timingCandidates: yong ? timingCandidates(yong, lf(yong), chart, SCALE_NEAR) : hiddenTiming(missing),
-    adverseTimingCandidates: adverseTiming(chart, { ...roles, yong: rel }, analysis),
+    harmonies,
+    timingCandidates: [...(yong ? timingCandidates(yong, lf(yong), chart, SCALE_NEAR) : hiddenTiming(missing)), ...harmonyTiming(harmonies, false)],
+    adverseTimingCandidates: [...adverseTiming(chart, { ...roles, yong: rel }, analysis), ...harmonyTiming(harmonies, true)],
   };
 }

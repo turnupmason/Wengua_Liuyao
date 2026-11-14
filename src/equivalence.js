@@ -1,7 +1,7 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.9.0';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.10.0';
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -87,11 +87,13 @@ export function interviewPassClass(evidence) {
     yuan,
     ji,
     hexagram: sp.sixClash ? '六冲' : sp.sixCombine ? '六合' : '',
+    // 三合局（D-020）：局之六亲与吉凶口径、成局状态、世与局之关系；应期地支逐盘求出，不进指纹
+    harmonies: (evidence.harmonies || []).map((h) => `${h.relative}局${{ formed: '成', deferred: '待', virtual: '虚' }[h.status]}${{ favorable: '吉', 'leaning-favorable': '偏吉', adverse: '凶', neutral: '不碍', unspecified: '未定' }[h.effect]}${{ 世在局: '世在', 局生世: '生世', 局克世: '克世' }[h.world] || ''}`).sort(),
   };
   const key = [
     `用${yong.source}${yong.world || ''}${yong.state ? `[${yong.state}${yong.limits || ''}]` : ''}${yong.motion || ''}${yong.hurt || ''}`,
     `世${factors.world}${factors.jiHoldsWorld ? '子孙' : ''}`,
-    `原${yuan}`, `忌${ji}`, factors.hexagram,
+    `原${yuan}`, `忌${ji}`, factors.hexagram, factors.harmonies.length ? `局${factors.harmonies.join('+')}` : '',
   ].filter(Boolean).join(';');
   return { version: EQUIVALENCE_VERSION, key, factors, writable: blockers.length === 0, blockers };
 }

@@ -25,7 +25,7 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json'))) {
     yongshen_selection: e.yongshen.selection,
     yongshen: pick(e.yongshen.line), yongshen_missing: e.yongshen.missing,
     yuan: e.yuan.map(pick), ji: e.ji.map(pick), chou: e.chou.map(pick), world: pick(e.world), response: pick(e.response),
-    flows: e.flows, special: e.special, timing_candidates: e.timingCandidates, adverse_timing_candidates: e.adverseTimingCandidates,
+    flows: e.flows, special: e.special, harmonies: e.harmonies, timing_candidates: e.timingCandidates, adverse_timing_candidates: e.adverseTimingCandidates,
     equivalence_class: interviewPassClass(e),
   };
   writeFileSync(join(out, 'facts', `${src.script_id}.json`), `${JSON.stringify(facts, null, 1)}\n`);

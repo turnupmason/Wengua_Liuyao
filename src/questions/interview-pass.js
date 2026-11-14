@@ -23,6 +23,14 @@ export const INTERVIEW_PASS = Object.freeze({
     { role: 'response', meaning: '对方（面试方），只作参考，不代替官鬼', rule_ids: ['R-SHIYING-01', 'R-YONG-YE-01'] },
   ],
   derived_roles: { yuan: '妻财', ji: '子孙', chou: '兄弟' },
+  // 三合成局之吉凶（D-020 裁定 4；增删卜易·六合章三合段「如占功名合成官局谓之官旺…」、乡试章第五十五「二合无冲」注）
+  harmony_effects: {
+    官鬼: { effect: 'favorable', label: '官局：官旺', rule_ids: ['R-SANHE-05', 'R-SANHE-06'] },
+    父母: { effect: 'favorable', label: '父局：吉', rule_ids: ['R-SANHE-06'] },
+    妻财: { effect: 'leaning-favorable', label: '财局：财旺生官，虽不为美亦得验于吉', rule_ids: ['R-SANHE-05', 'R-SANHE-06'] },
+    子孙: { effect: 'adverse', label: '子孙局：伤煞之神', rule_ids: ['R-SANHE-05', 'R-SANHE-06'] },
+    兄弟: { effect: 'conditional', label: '兄局：得日月生扶、官星亦旺者亦许得意，否则为阻隔', rule_ids: ['R-SANHE-06'] },
+  },
   role_meanings: {
     妻财: '原神：生官之神，代表能推动录用的条件与资源；但财动亦克父母文书，须看父母是否受伤',
     子孙: '忌神：克官之神，持世或发动最不利求名求职',

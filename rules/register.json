@@ -1966,21 +1966,136 @@
     },
     {
       "rule_id": "R-SANHE-01",
-      "topic": "三合局",
-      "source_book": "卜筮正宗",
-      "source_chapter": "二十、三合会局歌",
+      "topic": "三合成局：四类成局与明动暗动",
+      "source_book": "增删卜易",
+      "source_chapter": "六合章第十九",
       "original_text": [
-        "申子辰会成水局，巳酉丑会成金局，寅午戌会成火局，亥卯未会成木局。"
+        "申子辰合成水局、巳酉丑合成金局、寅午戌合成火局、亥卯未合成木局。",
+        "此三合者有四。一卦之内有一爻动而合局者一也。若两爻动一爻不动亦成合局者二也。有内卦初爻、三爻、动而变出爻成三合者三也。又有外四爻、六爻动、动而变出之爻成三合者四也。",
+        "一爻明动一爻暗动亦作两爻动。"
       ],
-      "modern_explanation": "三合局须实际成立：程序只把至少两支来自动爻或其变爻者列为候选，其馀只列事实，待审。",
-      "applicable_conditions": "动爻参与时",
-      "exceptions": "",
-      "adoption": "adopted",
+      "modern_explanation": "三支俱在卦中（本卦爻或动而变出之爻），其中至少一支发动（明动、暗动或变出），即作成局。",
+      "applicable_conditions": "三支俱见于本卦爻或变爻，至少一支发动",
+      "exceptions": "卜筮正宗·第四问三合成局两例（干之需「内少寅字发动，须待寅日」、干之小畜「独少寅动，借寅月建」）把卦中静而不动之支视为缺字，须日月补足；与本章「两爻动一爻不动亦成合局」不同，依 D-020 采增删卜易。暗动依增删卜易口径（旺相逢日冲为暗动，休囚为日破，D-001）。",
       "engine_refs": [
         "src/analysis.js"
       ],
+      "adoption": "adopted",
       "review_status": "pending-professional-review",
-      "version": "0.1.0",
+      "version": "0.7.0",
+      "dispute_ids": [
+        "D-020"
+      ]
+    },
+    {
+      "rule_id": "R-SANHE-02",
+      "topic": "三合成局：日月补支",
+      "source_book": "卜筮正宗",
+      "source_chapter": "第四问三合成局",
+      "original_text": [
+        "以午火明动、戌土暗动三合官局，独少寅动，借寅月建",
+        "此亦虚一补用也。"
+      ],
+      "modern_explanation": "卦中两支俱动（不同爻位），第三支卦中不见而恰为月建或日辰者，借日月补足成局。",
+      "applicable_conditions": "卦中两支俱动且出自不同爻位，第三支为月建或日辰",
+      "exceptions": "卦中只一支动、一支静者，日月不补（D-020 裁定 2）",
+      "engine_refs": [
+        "src/analysis.js"
+      ],
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.7.0",
+      "dispute_ids": [
+        "D-020"
+      ]
+    },
+    {
+      "rule_id": "R-SANHE-03",
+      "topic": "三合成局：空破待填、入墓待冲",
+      "source_book": "增删卜易",
+      "source_chapter": "六合章第十九",
+      "original_text": [
+        "三爻若有两爻动，不成局，须待后之补凑合成其局，谓之虚三待用。",
+        "三合局中若有一空破者，待填满之日月成之。有一爻入墓者待冲开之日成之。"
+      ],
+      "modern_explanation": "已具成局之条件，而某一支在卦中只有旬空、月破或入墓之爻：现时不成局，空破待该支填实之日月，入墓待冲开墓库之日，方成其局。",
+      "applicable_conditions": "合乎 R-SANHE-01/02 之成局条件，且某支之爻皆空、破或真墓",
+      "exceptions": "冲空则实者不作空；旺相之爻不作真墓（R-SUIMU-01 口径）；同一局内之墓（如卯入未墓而未亦在木局）不作阻碍——此二点为程序口径，原文未明言",
+      "engine_refs": [
+        "src/analysis.js",
+        "src/evidence.js"
+      ],
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.7.0",
+      "dispute_ids": [
+        "D-020"
+      ]
+    },
+    {
+      "rule_id": "R-SANHE-04",
+      "topic": "三合成局：虚一待用",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "殊不知虚一待用﹐待后时之月日可以填之。",
+        "巳日冲动亥月与发动之未爻﹐欲成三合﹐因少卯字﹐明年卯月必升﹐此乃虚一待用"
+      ],
+      "modern_explanation": "卦中两支俱动而缺一支、日月亦不见者，现时不成局，待缺支之日或月补足而成局。",
+      "applicable_conditions": "卦中两支俱动（不同爻位），第三支卦中、日月俱无",
+      "exceptions": "萃之否原例中卯木实在卦中而空破（酉月乙巳日），野鹤称「少卯字」；程序将此类归入 R-SANHE-03 空破待填，两条所得应期相同",
+      "engine_refs": [
+        "src/analysis.js",
+        "src/evidence.js"
+      ],
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.7.0",
+      "dispute_ids": [
+        "D-020"
+      ]
+    },
+    {
+      "rule_id": "R-SANHE-05",
+      "topic": "三合成局之吉凶（功名）与世爻",
+      "source_book": "增删卜易",
+      "source_chapter": "六合章第十九",
+      "original_text": [
+        "如占功名合成官局谓之官旺，合成财局财旺生官，倘若合成子孙局者乃伤煞之神也。",
+        "但三合其局者必要世爻在局者为美，若世爻不在于局内，须要局生世爻为吉，局克世爻为凶"
+      ],
+      "modern_explanation": "求名求职：官局官旺，财局生官，子孙局伤官为凶；局以世爻在内为美，不在则局生世吉、局克世凶。",
+      "applicable_conditions": "占功名、求职，盘中成局或待时成局",
+      "exceptions": "兄局、父局见 R-SANHE-06",
+      "engine_refs": [
+        "src/questions/interview-pass.js",
+        "src/evidence.js"
+      ],
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.7.0",
+      "dispute_ids": [
+        "D-020"
+      ]
+    },
+    {
+      "rule_id": "R-SANHE-06",
+      "topic": "三合成局之吉凶（乡试：父局、兄局、财局）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "官父世爻合成父局官局﹐不遇日月冲破者﹐定许连登﹐倘若合成兄局﹐得遇日月生扶﹐官星亦旺者﹐亦许得意。惟忌合成子孙局者﹐不为吉也。合成财局虽不为美。然亦得验于吉者。"
+      ],
+      "modern_explanation": "父局、官局为吉；兄局须局得日月生扶、官星亦旺方不碍；子孙局不吉；财局虽不为美亦得验于吉。",
+      "applicable_conditions": "求名求职（乡试章为科举口径，面试按 D-010 参看）",
+      "exceptions": "原在乡试章；面试按谋职参看（D-010、D-020 裁定 4）",
+      "engine_refs": [
+        "src/questions/interview-pass.js",
+        "src/evidence.js"
+      ],
+      "adoption": "adopted",
+      "review_status": "pending-professional-review",
+      "version": "0.7.0",
       "dispute_ids": [
         "D-020"
       ]
@@ -2687,8 +2802,11 @@
           "view": "至少两支来自动爻或变爻方列成局候选"
         }
       ],
-      "adopted": "待用户裁定；涉及三合之读本（IP-0002、IP-0003）暂 REVIEW_REQUIRED；等价类指纹尚未计入三合局",
-      "status": "open"
+      "adopted": "按裁定：R-SANHE-01..06",
+      "status": "ruled",
+      "ruled_by": "用户（「全部按推荐」）",
+      "ruled_at": "2026-11-13",
+      "ruling": "采用推荐：① 增删卜易四类成局，卦中三支至少一支发动即成，一明动一暗动亦作两爻动；② 日月可补一支，但卦中另两支须俱动；③ 缺一支（虚一待用）、或一支空破或入墓者现时不成局，缺支待其日月补足，空破待填实，入墓待冲开，局吉判待时、局凶列为防范之时；④ 功名：官局、父局吉，财局生官偏吉，子孙局伤官为凶，兄局须日月生扶且官星旺方不碍；世爻在局为美，局生世吉、局克世凶"
     }
   ],
   "rulings": [
