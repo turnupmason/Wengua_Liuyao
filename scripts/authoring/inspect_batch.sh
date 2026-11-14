@@ -3,6 +3,7 @@
 export PYTHONIOENCODING=utf-8
 node scripts/analysis/sample-flags.mjs "$1" "$2"
 python scripts/analysis/brief-profiles.py "$1" "$2" | grep -v "用神生扶\|世爻空破\|用神空破: 不空不破\|近似"
+node scripts/analysis/stored-samples.mjs "$1" "$2" 3 | cut -c1-330
 node scripts/analysis/void-kinds.mjs $(seq "$1" "$2") | sort | uniq -c
 python - "$1" "$2" <<'PY'
 import json, glob, sys
