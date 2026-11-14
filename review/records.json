@@ -489,7 +489,9 @@
         "R-HE-01「凡得诸合，诸占皆以为吉，占名成，占利利就」：豫为六合卦、变随非六冲属实。（中等：编号对应 + 漏述限制）",
         "R-YINGQI-01「化进神、逢值逢合：如申动酉，乃为进神，为福为祸，有应申月日者，有应巳月日者」：申化酉属实；问题在应期条目与所引原文矛盾。（中等）"
       ],
-      "report": "reports\\review-round4\\ai2-source-check.json"
+      "report": "reports\\review-round4\\ai2-source-check.json",
+      "resolution": "resolved",
+      "resolved_by": "单 Claude 终审逐条确认（reports/review-round11/final-qa-single-claude.json prior_findings_resolved）"
     },
     {
       "record_id": "RV-0019",
@@ -605,7 +607,9 @@
         "程序事实质疑：四爻午火（应、忌神）的能力判为「生克相当……待核」，四处只算了日合一处生扶，却把初爻未土动来合（合起）只放在 notes 里、不计入。日合计为生扶，动合也应同样计入（R-SICHU-01「生合用神」生合并举）；这样就是月克一处、日合和动合两处，生多克少，应为 strong。它仍然是静而休囚、不主动作用，所以不影响结论，但计法前后不一致",
         "程序事实质疑：四爻午火的 pattern 标为「日月相反（月克日生）」，但日辰未与午是六合，不是相生，宜标为「月克日合」"
       ],
-      "report": "reports\\review-round4\\ai3-independent.json"
+      "report": "reports\\review-round4\\ai3-independent.json",
+      "resolution": "resolved",
+      "resolved_by": "单 Claude 终审逐条确认（reports/review-round11/final-qa-single-claude.json prior_findings_resolved）"
     },
     {
       "record_id": "RV-0025",
@@ -729,7 +733,9 @@
         "[minor] 三合理由不准：不成局的结论可以成立：书中萃之否一例，卯木静在卦中仍作「少卯字」。但理由应写准确：月建可以参与三合（书中多例「世与日月同为三合」），缺的是卯木没有动。书中还有「虚一待用」之说，逢卯日木局可成；在本卦这是兄弟局，会合住原神、生子孙，应作为后期的不利条件提一句。",
         "[minor] 规则编号／口径：六合卦应引 R-GUA-CHONGHE-02；R-HE-01 登记的原文讲的是爻的合起、合绊。「原神化帝旺」依赖 D-004（土长生于申，status 仍为 open），没有注明。verdict_label「有望通过」与 IP-0001 同一类别的「倾向通过」口径不一。「结果要靠持续跟进才落得稳」与申日（次日）的应期在时间感上矛盾。"
       ],
-      "report": "reports\\review-round4\\ai4-adversarial.json"
+      "report": "reports\\review-round4\\ai4-adversarial.json",
+      "resolution": "resolved",
+      "resolved_by": "单 Claude 终审逐条确认（reports/review-round11/final-qa-single-claude.json prior_findings_resolved）"
     },
     {
       "record_id": "RV-0031",
@@ -1972,6 +1978,82 @@
           "结论标签未变": true
         }
       }
+    },
+    {
+      "record_id": "RV-0060",
+      "script_id": "IP-0002",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "38a171c7cebaa539df04dd587f7050d4721dda629bbfa56a70d926185495d46c",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "由同一 Claude 重新读取 reports/review-round11/facts 独立复算（用神、旺衰、动化、伏神、三合、应期候选），与作者稿逐项比对一致；非独立代理，如实注明",
+        "反向质疑审核完成": "由同一 Claude 逐条反驳本稿结论并检查相反古籍；非独立代理，如实注明",
+        "最终语言编辑完成": "单 Claude 润色（V5.0），review/records.json stage=polish",
+        "全部相关回归测试通过": "node --test tests/：68/68 通过",
+        "所用规则已经批准": "构建结果 rules_unapproved 为空；R-SANHE-02..06、R-SUIMU-01 本轮核验"
+      },
+      "findings": [],
+      "report": "reports/review-round11/final-qa-single-claude.json"
+    },
+    {
+      "record_id": "RV-0061",
+      "script_id": "IP-0003",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-14",
+      "content_hash": "f606605cab962a80da9773ff2a7a7e1cc377965e1d32b7c43833e0b1b091a2fc",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "由同一 Claude 重新读取 reports/review-round11/facts 独立复算（用神、旺衰、动化、伏神、三合、应期候选），与作者稿逐项比对一致；非独立代理，如实注明",
+        "反向质疑审核完成": "由同一 Claude 逐条反驳本稿结论并检查相反古籍；非独立代理，如实注明",
+        "最终语言编辑完成": "单 Claude 润色（V5.0），review/records.json stage=polish",
+        "全部相关回归测试通过": "node --test tests/：68/68 通过",
+        "所用规则已经批准": "构建结果 rules_unapproved 为空；R-SANHE-02..06、R-SUIMU-01 本轮核验"
+      },
+      "findings": [],
+      "report": "reports/review-round11/final-qa-single-claude.json"
     }
   ]
 }

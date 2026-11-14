@@ -69,7 +69,7 @@ export function statusesFor(records, scriptId, hash, depth = 0) {
     },
     approval_status,
     production_allowed: approval_status !== 'REVIEW_REQUIRED',
-    approval_basis: humanOk ? '人工审核' : aiOk ? 'AI 多角色审核（本哈希终审）' : carried ? `单 Claude 润色复核，承接润色前 ${carried.from_hash.slice(0, 12)} 之 ${carried.from_status}（${carried.record.record_id}）` : null,
+    approval_basis: humanOk ? '人工审核' : aiOk ? (ai.finalQa.isolated === false ? '单 Claude 审核（本哈希终审，非独立）' : 'AI 多角色审核（本哈希终审，独立代理）') : carried ? `单 Claude 润色复核，承接润色前 ${carried.from_hash.slice(0, 12)} 之 ${carried.from_status}（${carried.record.record_id}）` : null,
     reviewer: humanOk ? appr.reviewer : aiOk ? ai.finalQa.reviewer : carried ? carried.record.reviewer : self ? self.reviewer : null,
     reviewed_at: humanOk ? appr.reviewed_at : aiOk ? ai.finalQa.reviewed_at : carried ? carried.record.reviewed_at : self ? self.reviewed_at : null,
     stale_records: all.length - cur.length,

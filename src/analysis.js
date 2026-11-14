@@ -203,7 +203,10 @@ function threeHarmonies(chart, lineFacts) {
     const v = src.cal.void;
     if (v && v.zengshan !== '冲空则实') imps.push({ kind: '旬空', release: { kind: '填实', branches: [src.branch] } });
     if (src.cal.monthBreak) imps.push({ kind: '月破', release: { kind: '填实', branches: [src.branch] } });
-    if (!src.cal.seasonalStrong) {
+    // 真墓：休囚无气（月令休囚，又无月建、日辰、他爻发动生扶）始作阻碍（R-SUIMU-01「休囚无气始见危，若旺而有扶亦有求解」）
+    const helped = src.cal.month.supports || src.cal.day.supports
+      || chart.lines.some((m) => m.moving && m.position !== src.position && ['generates', 'same'].includes(elementRelation(m.element, src.element)));
+    if (!src.cal.seasonalStrong && !helped) {
       const tb = tombOf(src.element);
       const inSame = h.branches.includes(tb);
       const tombs = [];

@@ -1,0 +1,120 @@
+{
+  "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+  "reviewed_at": "2026-11-14",
+  "isolated": false,
+  "scope_note": "依用户 2026-11-14 指示，专业审核改由同一 Claude 完成（不再派独立代理）。本轮对 IP-0002、IP-0003 当前稿逐项复算、反驳并核对 17 条；规则 R-SANHE-02..06、R-SUIMU-01 逐字核对与解释核验。",
+  "cases": [
+    {
+      "script_id": "IP-0002",
+      "content_hash": "38a171c7cebaa539df04dd587f7050d4721dda629bbfa56a70d926185495d46c",
+      "status": "PASS",
+      "recompute": "用神二爻官鬼卯木：亥月相、戌日合，受四爻子孙酉金动克动冲，生多克少；世爻子孙酉金独发，日生、化戌回头生，为有力动忌；妻财子水伏五爻未土下，飞神旬空，伏而有用但静；应爻巳火月破入日墓。巳酉丑三支俱在、酉动，巳火月破又真墓（亥月休囚无扶），须两阻俱解，待时成局而无单日应期；子孙局于功名为凶。结论偏难通过与作者稿一致。",
+      "adversarial": "反方：官星有气、伏财有用，可否判待时有望？——子孙持世且独发、化回头生，专章「子孙持世，休望荣荫」「子孙动于卦中…悉如水中捞月」二条俱全；伏财静而不能主动生非休囚之官（R-DONGJING-01），接续相生缺发动之据（D-013）。反方不足以翻判。",
+      "prior_findings_resolved": [
+        "round10 major：破墓二选一之应期已删",
+        "round10/7 minor：卯日不取之理、酉辰两日官星逢冲、忌神无力各条皆不合、结论标签、rule_ids、黄金策适用理由均已改",
+        "round11 补 R-YINGQI-01 卯日不另列之理"
+      ],
+      "notes": {},
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "由同一 Claude 重新读取 reports/review-round11/facts 独立复算（用神、旺衰、动化、伏神、三合、应期候选），与作者稿逐项比对一致；非独立代理，如实注明",
+        "反向质疑审核完成": "由同一 Claude 逐条反驳本稿结论并检查相反古籍；非独立代理，如实注明",
+        "最终语言编辑完成": "单 Claude 润色（V5.0），review/records.json stage=polish",
+        "全部相关回归测试通过": "node --test tests/：68/68 通过",
+        "所用规则已经批准": "构建结果 rules_unapproved 为空；R-SANHE-02..06、R-SUIMU-01 本轮核验"
+      }
+    },
+    {
+      "script_id": "IP-0003",
+      "content_hash": "f606605cab962a80da9773ff2a7a7e1cc377965e1d32b7c43833e0b1b091a2fc",
+      "status": "PASS",
+      "recompute": "用神五爻官鬼申金：亥月休囚，未日生，初爻世爻妻财未土动来生，化酉为进神、帝旺；世爻临日化帝旺；子孙巳火空破、午火静而月克（日合、动合）；兄弟卯木静而旺相，可克休囚之土而原神临日无伤，可生午火而午火静休囚不能主动克官。申化酉皆休囚，待时而进（D-019）。三合：申子辰虚一待用而世克局，不作吉论；亥卯未只一支动，月建不补，不成局；巳酉丑只一支动，不成局。豫为六合卦，官父世无失陷无援。结论有望通过但要待时，与作者稿一致。",
+      "adversarial": "反方一：升选候补章「世爻发动，官化进神，望荣除而在即」可判很快通过——按 D-019 休囚之进神不作在即。反方二：卯木旺相为仇神，可克原神——原神临日遇克无伤。反方三：父局可加吉——世克局，按 R-SANHE-05 不作吉论，已降为参看。均不足以改判。",
+      "prior_findings_resolved": [
+        "round4 AI-2：酉日应期已删；财动克父已按 D-010 说明；R-HE-01 原文已登记、R-HE-02 官父世得地已述；待时而进已述；巳火动合已交代",
+        "round4 AI-3：午火动合已计入四处生克",
+        "round4 AI-4：待时而进、应期与引文、象意限定、仇神「受制」、应爻动合与生世合世、三合理由均已改；卯木静而旺相之作用 round11 补入计算说明",
+        "round9/10 全部意见已改"
+      ],
+      "notes": {},
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "由同一 Claude 重新读取 reports/review-round11/facts 独立复算（用神、旺衰、动化、伏神、三合、应期候选），与作者稿逐项比对一致；非独立代理，如实注明",
+        "反向质疑审核完成": "由同一 Claude 逐条反驳本稿结论并检查相反古籍；非独立代理，如实注明",
+        "最终语言编辑完成": "单 Claude 润色（V5.0），review/records.json stage=polish",
+        "全部相关回归测试通过": "node --test tests/：68/68 通过",
+        "所用规则已经批准": "构建结果 rules_unapproved 为空；R-SANHE-02..06、R-SUIMU-01 本轮核验"
+      }
+    }
+  ],
+  "rule_verifications": [
+    {
+      "rule_id": "R-SANHE-02",
+      "verdict": "PASS",
+      "notes": "见 rules/register.json ai_verification"
+    },
+    {
+      "rule_id": "R-SANHE-03",
+      "verdict": "PASS",
+      "notes": "见 rules/register.json ai_verification"
+    },
+    {
+      "rule_id": "R-SANHE-04",
+      "verdict": "PASS",
+      "notes": "见 rules/register.json ai_verification"
+    },
+    {
+      "rule_id": "R-SANHE-05",
+      "verdict": "PASS",
+      "notes": "见 rules/register.json ai_verification"
+    },
+    {
+      "rule_id": "R-SANHE-06",
+      "verdict": "PASS",
+      "notes": "见 rules/register.json ai_verification"
+    },
+    {
+      "rule_id": "R-SUIMU-01",
+      "verdict": "PASS",
+      "notes": "见 rules/register.json ai_verification"
+    }
+  ],
+  "engine_notes": "三合真墓改为休囚且无月日动爻生扶（与 R-SUIMU-01 一致）；IP-0002、IP-0003 结果不变。"
+}

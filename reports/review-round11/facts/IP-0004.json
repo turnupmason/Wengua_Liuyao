@@ -1,0 +1,557 @@
+{
+ "case_id": "IP-0004",
+ "question": {
+  "id": "career.interview.interview-pass",
+  "text": "这次面试能通过吗？",
+  "scope": "只回答这一轮面试是否通过"
+ },
+ "chart": {
+  "primary": "风天小畜",
+  "changed": null,
+  "palace": "巽宫一世",
+  "month": "亥",
+  "day": "丙戌",
+  "lines_top_to_bottom": [
+   "上爻 青龙 兄弟辛卯木",
+   "五爻 玄武 子孙辛巳火",
+   "四爻 白虎 妻财辛未土应",
+   "三爻 螣蛇 妻财甲辰土（伏官鬼酉金）",
+   "二爻 勾陈 兄弟甲寅木",
+   "初爻 朱雀 父母甲子水世"
+  ]
+ },
+ "fact_sheet": [
+  {
+   "label": "卦",
+   "value": "风天小畜（六爻安静）"
+  },
+  {
+   "label": "月建 / 日辰 / 旬空",
+   "value": "亥月 / 丙戌日 / 午未空"
+  },
+  {
+   "label": "用神",
+   "value": "不上卦，伏神官鬼酉金伏于三爻妻财辰之下"
+  },
+  {
+   "label": "世爻",
+   "value": "初爻父母子水；旺"
+  },
+  {
+   "label": "应爻",
+   "value": "四爻妻财未土；克世"
+  },
+  {
+   "label": "判别·飞伏",
+   "value": "官鬼酉金伏于三爻妻财辰土之下：伏神有力、飞神已被推开：伏而有用，虽不现亦如现，可参与当前判断（四处有生无克（日辰））；飞伏相合"
+  },
+  {
+   "label": "判别·旬空",
+   "value": "有气之空：旬内暂空；本旬之内逢丑日冲空可以冲起，否则待出旬逢未日填实"
+  }
+ ],
+ "yongshen_selection": {
+  "status": "absent",
+  "candidates": []
+ },
+ "yongshen": null,
+ "yongshen_missing": {
+  "monthIsYong": false,
+  "dayIsYong": false,
+  "hidden": {
+   "position": 3,
+   "flyLine": "三爻妻财辰",
+   "hiddenSymbol": "官鬼酉金",
+   "hiddenBranch": "酉",
+   "dayBranch": "戌",
+   "flyBranch": "辰",
+   "flyRelation": "generates",
+   "usable": {
+    "日月生伏": true,
+    "伏神旺相": false,
+    "飞来生伏": true,
+    "动爻生伏": false,
+    "日月动爻冲克飞神": true,
+    "飞神空破休囚墓绝": true
+   },
+   "unusable": {
+    "伏神休囚无气": false,
+    "伏神被日月冲克": false,
+    "伏神被旺相飞神克": false,
+    "伏神墓绝于日月飞爻": false,
+    "伏神休囚值空月破": false
+   },
+   "calendar": {
+    "branch": "酉",
+    "element": "金",
+    "month": {
+     "branch": "亥",
+     "same": false,
+     "clash": false,
+     "combine": false,
+     "punish": null,
+     "element": "generatedBy",
+     "supports": false,
+     "controls": false,
+     "seasonal": "休囚",
+     "residualQi": false
+    },
+    "day": {
+     "branch": "戌",
+     "same": false,
+     "clash": false,
+     "combine": false,
+     "punish": null,
+     "element": "generates",
+     "supports": true,
+     "controls": false,
+     "lifeStage": null
+    },
+    "seasonalStrong": false,
+    "monthBreak": false,
+    "dayTomb": false,
+    "dayExtinct": false,
+    "void": null,
+    "dayClash": null
+   }
+  },
+  "changedInto": [],
+  "ruleIds": [
+   "R-FUSHEN-01",
+   "R-FUSHEN-02",
+   "R-FUSHEN-03",
+   "R-FUSHEN-04"
+  ]
+ },
+ "yuan": [
+  {
+   "position": 3,
+   "relative": "妻财",
+   "branch": "辰",
+   "element": "土",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "螣蛇",
+   "support": [],
+   "damage": [
+    "日破"
+   ],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "囚",
+    "capability": "weak",
+    "capabilityBasis": "四处有克无生（日辰）",
+    "pattern": null,
+    "limitations": [],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处有克无生（日辰）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  },
+  {
+   "position": 4,
+   "relative": "妻财",
+   "branch": "未",
+   "element": "土",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": true,
+   "spirit": "白虎",
+   "support": [
+    "日扶"
+   ],
+   "damage": [
+    "旬空（静空，旬内暂空，出旬可用）"
+   ],
+   "notes": [],
+   "change": null,
+   "void": "旬内暂空，出旬可用",
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "囚",
+    "capability": "strong",
+    "capabilityBasis": "四处有生无克（日辰）",
+    "pattern": null,
+    "limitations": [
+     {
+      "kind": "旬空",
+      "detail": "旬内暂空，出旬可用"
+     }
+    ],
+    "state": "DEFERRED",
+    "stateReason": "四处有生无克（日辰）；但旬空，待冲空丑或出空填实未",
+    "acts": "静（不主动作用）",
+    "release": [
+     {
+      "kind": "冲空",
+      "branch": "丑",
+      "offsetDays": 3,
+      "withinCurrentXun": true,
+      "daysLeftInXun": 7,
+      "rule": "R-KONG-06"
+     },
+     {
+      "kind": "出空填实",
+      "branch": "未",
+      "offsetDays": 9,
+      "withinCurrentXun": false,
+      "daysLeftInXun": 7,
+      "rule": "R-YINGQI-08"
+     }
+    ]
+   }
+  }
+ ],
+ "ji": [
+  {
+   "position": 5,
+   "relative": "子孙",
+   "branch": "巳",
+   "element": "火",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "玄武",
+   "support": [],
+   "damage": [
+    "月破",
+    "入日墓"
+   ],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "死",
+    "capability": "weak",
+    "capabilityBasis": "四处有克无生（月建）",
+    "pattern": null,
+    "limitations": [
+     {
+      "kind": "月破",
+      "detail": "静而月破"
+     },
+     {
+      "kind": "入墓",
+      "detail": "日墓（月令休囚又无生扶）",
+      "trueTomb": true
+     }
+    ],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处有克无生（月建）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  }
+ ],
+ "chou": [
+  {
+   "position": 2,
+   "relative": "兄弟",
+   "branch": "寅",
+   "element": "木",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "勾陈",
+   "support": [
+    "月生",
+    "月合"
+   ],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "相",
+    "seasonalFive": "相",
+    "capability": "strong",
+    "capabilityBasis": "四处有生无克（月建）",
+    "pattern": null,
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "四处有生无克（月建）",
+    "acts": "静而旺相（可生克休囚之爻）",
+    "release": []
+   }
+  },
+  {
+   "position": 6,
+   "relative": "兄弟",
+   "branch": "卯",
+   "element": "木",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "青龙",
+   "support": [
+    "月生",
+    "日合"
+   ],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "相",
+    "seasonalFive": "相",
+    "capability": "strong",
+    "capabilityBasis": "四处有生无克（月建、日辰）",
+    "pattern": null,
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "四处有生无克（月建、日辰）",
+    "acts": "静而旺相（可生克休囚之爻）",
+    "release": []
+   }
+  }
+ ],
+ "world": {
+  "position": 1,
+  "relative": "父母",
+  "branch": "子",
+  "element": "水",
+  "moving": false,
+  "isWorld": true,
+  "isResponse": false,
+  "spirit": "朱雀",
+  "support": [
+   "月扶"
+  ],
+  "damage": [
+   "日克"
+  ],
+  "notes": [],
+  "change": null,
+  "void": null,
+  "state": {
+   "seasonal": "旺",
+   "seasonalFive": "旺",
+   "capability": "strong",
+   "capabilityBasis": "日月相反而无动爻动化，以月建为准（月将章「月克日生遇帮而愈旺，月生日克逢他削而亦衰」，B-004）",
+   "pattern": "日月相反（月生日克）",
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "日月相反而无动爻动化，以月建为准（月将章「月克日生遇帮而愈旺，月生日克逢他削而亦衰」，B-004）",
+   "acts": "静而旺相（可生克休囚之爻）",
+   "release": []
+  }
+ },
+ "response": {
+  "position": 4,
+  "relative": "妻财",
+  "branch": "未",
+  "element": "土",
+  "moving": false,
+  "isWorld": false,
+  "isResponse": true,
+  "spirit": "白虎",
+  "support": [
+   "日扶"
+  ],
+  "damage": [
+   "旬空（静空，旬内暂空，出旬可用）"
+  ],
+  "notes": [],
+  "change": null,
+  "void": "旬内暂空，出旬可用",
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "囚",
+   "capability": "strong",
+   "capabilityBasis": "四处有生无克（日辰）",
+   "pattern": null,
+   "limitations": [
+    {
+     "kind": "旬空",
+     "detail": "旬内暂空，出旬可用"
+    }
+   ],
+   "state": "DEFERRED",
+   "stateReason": "四处有生无克（日辰）；但旬空，待冲空丑或出空填实未",
+   "acts": "静（不主动作用）",
+   "release": [
+    {
+     "kind": "冲空",
+     "branch": "丑",
+     "offsetDays": 3,
+     "withinCurrentXun": true,
+     "daysLeftInXun": 7,
+     "rule": "R-KONG-06"
+    },
+    {
+     "kind": "出空填实",
+     "branch": "未",
+     "offsetDays": 9,
+     "withinCurrentXun": false,
+     "daysLeftInXun": 7,
+     "rule": "R-YINGQI-08"
+    }
+   ]
+  }
+ },
+ "flows": [
+  {
+   "flow": "hidden",
+   "id": "HIDDEN@3:官鬼酉",
+   "role": "yong",
+   "position": 3,
+   "hidden": "官鬼酉金",
+   "fly": "三爻妻财辰土",
+   "flyRelation": "飞来生伏（得长生）",
+   "flyCombine": true,
+   "hasQi": true,
+   "supports": [
+    "日月生伏",
+    "飞来生伏"
+   ],
+   "openers": [
+    "日月动爻冲克飞神",
+    "飞神空破休囚墓绝"
+   ],
+   "obstacles": [],
+   "emergence": "likely",
+   "state": "EFFECTIVE",
+   "hiddenState": {
+    "version": "role-state-0.4.0",
+    "pattern": null,
+    "seasonal": "休囚",
+    "seasonalFive": "休",
+    "capability": "strong",
+    "attacked": false,
+    "capabilityBasis": "四处有生无克（日辰）",
+    "places": [
+     {
+      "place": "日辰",
+      "effect": "生",
+      "strong": true
+     }
+    ],
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "四处有生无克（日辰）",
+    "release": [],
+    "flyPushed": true,
+    "acts": "伏（静）",
+    "ruleIds": [
+     "R-SICHU-01",
+     "R-FUSHEN-02",
+     "R-FUSHEN-03",
+     "R-FUSHEN-05",
+     "R-FUSHEN-06",
+     "R-FUSHEN-08",
+     "R-SUIMU-01"
+    ]
+   },
+   "reason": "伏神有力、飞神已被推开：伏而有用，虽不现亦如现，可参与当前判断（四处有生无克（日辰））；飞伏相合",
+   "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+   "emergenceTiming": [
+    {
+     "rule": "R-FUSHEN-08",
+     "kind": "伏神逢值",
+     "branch": "酉"
+    }
+   ],
+   "ruleIds": [
+    "R-FUSHEN-02",
+    "R-FUSHEN-03",
+    "R-FUSHEN-06",
+    "R-FUSHEN-07",
+    "R-FUSHEN-08"
+   ]
+  },
+  {
+   "flow": "void",
+   "id": "VOID@4:未",
+   "role": "yuan",
+   "position": 4,
+   "branch": "未",
+   "voidKind": "静空",
+   "notVoidReasons": [
+    "日辰生扶"
+   ],
+   "state": "有气之空：旬内暂空；本旬之内逢丑日冲空可以冲起，否则待出旬逢未日填实",
+   "releases": [
+    {
+     "kind": "冲空",
+     "branch": "丑",
+     "offsetDays": 3,
+     "withinCurrentXun": true,
+     "daysLeftInXun": 7,
+     "rule": "R-KONG-06"
+    },
+    {
+     "kind": "出空填实",
+     "branch": "未",
+     "offsetDays": 9,
+     "withinCurrentXun": false,
+     "daysLeftInXun": 7,
+     "rule": "R-YINGQI-08"
+    }
+   ],
+   "huangjince": "自空（黄金策：无故勿空）",
+   "ruleIds": [
+    "R-KONG-02",
+    "R-KONG-03",
+    "R-KONG-04",
+    "R-KONG-06",
+    "R-YINGQI-08"
+   ]
+  }
+ ],
+ "special": {
+  "yongHoldsWorld": false,
+  "jiHoldsWorld": false,
+  "worldRelative": "父母",
+  "jiMoving": [],
+  "chouMoving": [],
+  "yuanMoving": [],
+  "yongMoving": [],
+  "changedIntoYong": [],
+  "changedIntoJi": [],
+  "sixClash": false,
+  "sixCombine": false,
+  "transform": null,
+  "fuyin": false,
+  "fanyin": false,
+  "wandering": false,
+  "returning": false,
+  "movingCount": 0,
+  "threeHarmonies": []
+ },
+ "harmonies": [],
+ "timing_candidates": [
+  {
+   "timing_rule_id": "R-YINGQI-01",
+   "target_symbol": "伏神官鬼酉金",
+   "target_branches": [
+    "酉"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "伏神逢值：逢酉"
+  }
+ ],
+ "adverse_timing_candidates": [],
+ "equivalence_class": {
+  "version": "interview-pass-eq-0.11.0",
+  "key": "用伏有效;世世受克;原静不作用;忌无力",
+  "factors": {
+   "yong": {
+    "source": "伏有效"
+   },
+   "world": "世受克",
+   "jiHoldsWorld": false,
+   "yuan": "静不作用",
+   "ji": "无力",
+   "hexagram": "",
+   "harmonies": []
+  },
+  "writable": true,
+  "blockers": []
+ }
+}

@@ -1,0 +1,345 @@
+{
+ "case_id": "IP-0001",
+ "question": {
+  "id": "career.interview.interview-pass",
+  "text": "这次面试能通过吗？",
+  "scope": "只回答这一轮面试是否通过"
+ },
+ "chart": {
+  "primary": "地泽临",
+  "changed": null,
+  "palace": "坤宫二世",
+  "month": "亥",
+  "day": "丁亥",
+  "lines_top_to_bottom": [
+   "上爻 青龙 子孙癸酉金",
+   "五爻 玄武 妻财癸亥水应",
+   "四爻 白虎 兄弟癸丑土",
+   "三爻 螣蛇 兄弟丁丑土",
+   "二爻 勾陈 官鬼丁卯木世",
+   "初爻 朱雀 父母丁巳火"
+  ]
+ },
+ "fact_sheet": [
+  {
+   "label": "卦",
+   "value": "地泽临（六爻安静）"
+  },
+  {
+   "label": "月建 / 日辰 / 旬空",
+   "value": "亥月 / 丁亥日 / 午未空"
+  },
+  {
+   "label": "用神",
+   "value": "二爻官鬼卯木（持世）；相；生扶：月生、日生、日长生；伤损：无"
+  },
+  {
+   "label": "世爻",
+   "value": "二爻官鬼卯木；相"
+  },
+  {
+   "label": "应爻",
+   "value": "五爻妻财亥水；生世"
+  },
+  {
+   "label": "用神六神（辅助）",
+   "value": "勾陈"
+  }
+ ],
+ "yongshen_selection": {
+  "candidates": [
+   {
+    "position": 2,
+    "criteria": {
+     "moving": 0,
+     "strong": 1,
+     "notBroken": 1,
+     "notVoid": 1,
+     "notHurt": 1
+    },
+    "finer": {
+     "monthSame": 0,
+     "daySame": 0,
+     "daySupport": 1,
+     "combined": 0
+    }
+   }
+  ],
+  "status": "single",
+  "selectedPosition": 2,
+  "decidedBy": null,
+  "ruleIds": [
+   "R-YONG-GUAN-01"
+  ]
+ },
+ "yongshen": {
+  "position": 2,
+  "relative": "官鬼",
+  "branch": "卯",
+  "element": "木",
+  "moving": false,
+  "isWorld": true,
+  "isResponse": false,
+  "spirit": "勾陈",
+  "support": [
+   "月生",
+   "日生",
+   "日长生"
+  ],
+  "damage": [],
+  "notes": [],
+  "change": null,
+  "void": null,
+  "state": {
+   "seasonal": "相",
+   "seasonalFive": "相",
+   "capability": "strong",
+   "capabilityBasis": "四处有生无克（月建、日辰）",
+   "pattern": null,
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "四处有生无克（月建、日辰）",
+   "acts": "静而旺相（可生克休囚之爻）",
+   "release": []
+  }
+ },
+ "yongshen_missing": null,
+ "yuan": [
+  {
+   "position": 5,
+   "relative": "妻财",
+   "branch": "亥",
+   "element": "水",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": true,
+   "spirit": "玄武",
+   "support": [
+    "临月建",
+    "临日"
+   ],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "旺",
+    "seasonalFive": "旺",
+    "capability": "strong",
+    "capabilityBasis": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+    "pattern": null,
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+    "acts": "静而旺相（可生克休囚之爻）",
+    "release": []
+   }
+  }
+ ],
+ "ji": [
+  {
+   "position": 6,
+   "relative": "子孙",
+   "branch": "酉",
+   "element": "金",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "青龙",
+   "support": [],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "休",
+    "capability": "weak",
+    "capabilityBasis": "四处无生克，以月令旺衰为准",
+    "pattern": null,
+    "limitations": [],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处无生克，以月令旺衰为准",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  }
+ ],
+ "chou": [
+  {
+   "position": 3,
+   "relative": "兄弟",
+   "branch": "丑",
+   "element": "土",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "螣蛇",
+   "support": [],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "囚",
+    "capability": "weak",
+    "capabilityBasis": "四处无生克，以月令旺衰为准",
+    "pattern": null,
+    "limitations": [],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处无生克，以月令旺衰为准",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  },
+  {
+   "position": 4,
+   "relative": "兄弟",
+   "branch": "丑",
+   "element": "土",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "白虎",
+   "support": [],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "囚",
+    "capability": "weak",
+    "capabilityBasis": "四处无生克，以月令旺衰为准",
+    "pattern": null,
+    "limitations": [],
+    "state": "INEFFECTIVE",
+    "stateReason": "四处无生克，以月令旺衰为准",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  }
+ ],
+ "world": {
+  "position": 2,
+  "relative": "官鬼",
+  "branch": "卯",
+  "element": "木",
+  "moving": false,
+  "isWorld": true,
+  "isResponse": false,
+  "spirit": "勾陈",
+  "support": [
+   "月生",
+   "日生",
+   "日长生"
+  ],
+  "damage": [],
+  "notes": [],
+  "change": null,
+  "void": null,
+  "state": {
+   "seasonal": "相",
+   "seasonalFive": "相",
+   "capability": "strong",
+   "capabilityBasis": "四处有生无克（月建、日辰）",
+   "pattern": null,
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "四处有生无克（月建、日辰）",
+   "acts": "静而旺相（可生克休囚之爻）",
+   "release": []
+  }
+ },
+ "response": {
+  "position": 5,
+  "relative": "妻财",
+  "branch": "亥",
+  "element": "水",
+  "moving": false,
+  "isWorld": false,
+  "isResponse": true,
+  "spirit": "玄武",
+  "support": [
+   "临月建",
+   "临日"
+  ],
+  "damage": [],
+  "notes": [],
+  "change": null,
+  "void": null,
+  "state": {
+   "seasonal": "旺",
+   "seasonalFive": "旺",
+   "capability": "strong",
+   "capabilityBasis": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+   "pattern": null,
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+   "acts": "静而旺相（可生克休囚之爻）",
+   "release": []
+  }
+ },
+ "flows": [],
+ "special": {
+  "yongHoldsWorld": true,
+  "jiHoldsWorld": false,
+  "worldRelative": "官鬼",
+  "jiMoving": [],
+  "chouMoving": [],
+  "yuanMoving": [],
+  "yongMoving": [],
+  "changedIntoYong": [],
+  "changedIntoJi": [],
+  "sixClash": false,
+  "sixCombine": false,
+  "transform": null,
+  "fuyin": false,
+  "fanyin": false,
+  "wandering": false,
+  "returning": false,
+  "movingCount": 0,
+  "threeHarmonies": []
+ },
+ "harmonies": [],
+ "timing_candidates": [
+  {
+   "timing_rule_id": "R-YINGQI-01",
+   "target_symbol": "二爻官鬼卯",
+   "target_branches": [
+    "卯",
+    "酉"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "静爻待值待冲：逢卯或逢酉"
+  }
+ ],
+ "adverse_timing_candidates": [],
+ "equivalence_class": {
+  "version": "interview-pass-eq-0.11.0",
+  "key": "用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌无力",
+  "factors": {
+   "yong": {
+    "source": "明现",
+    "world": "持世",
+    "qi": "月旺",
+    "vb": "",
+    "motion": "静",
+    "hurt": "",
+    "tomb": "",
+    "state": "EFFECTIVE",
+    "limits": ""
+   },
+   "world": "持世",
+   "jiHoldsWorld": false,
+   "yuan": "静旺有力",
+   "ji": "无力",
+   "hexagram": "",
+   "harmonies": []
+  },
+  "writable": true,
+  "blockers": []
+ }
+}

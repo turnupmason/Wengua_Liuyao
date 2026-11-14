@@ -1,0 +1,555 @@
+{
+ "case_id": "IP-0003",
+ "question": {
+  "id": "career.interview.interview-pass",
+  "text": "这次面试能通过吗？",
+  "scope": "只回答这一轮面试是否通过"
+ },
+ "chart": {
+  "primary": "雷地豫",
+  "changed": "泽雷随",
+  "palace": "震宫一世",
+  "month": "亥",
+  "day": "乙未",
+  "lines_top_to_bottom": [
+   "上爻 玄武 妻财庚戌土",
+   "五爻 白虎 官鬼庚申金× → 官鬼酉金",
+   "四爻 螣蛇 子孙庚午火应",
+   "三爻 勾陈 兄弟乙卯木",
+   "二爻 朱雀 子孙乙巳火",
+   "初爻 青龙 妻财乙未土×世 → 父母子水（伏父母子水）"
+  ]
+ },
+ "fact_sheet": [
+  {
+   "label": "卦",
+   "value": "雷地豫 之 泽雷随"
+  },
+  {
+   "label": "月建 / 日辰 / 旬空",
+   "value": "亥月 / 乙未日 / 辰巳空"
+  },
+  {
+   "label": "用神",
+   "value": "五爻官鬼申金；休囚；生扶：日生、初爻妻财未动来生、化进神、化帝旺；伤损：无；动化为官鬼酉金"
+  },
+  {
+   "label": "世爻",
+   "value": "初爻妻财未土；休囚"
+  },
+  {
+   "label": "应爻",
+   "value": "四爻子孙午火；生世、合世"
+  },
+  {
+   "label": "用神六神（辅助）",
+   "value": "白虎"
+  },
+  {
+   "label": "判别·动化",
+   "value": "化帝旺"
+  },
+  {
+   "label": "判别·动化",
+   "value": "化进神、化帝旺"
+  }
+ ],
+ "yongshen_selection": {
+  "candidates": [
+   {
+    "position": 5,
+    "criteria": {
+     "moving": 1,
+     "strong": 0,
+     "notBroken": 1,
+     "notVoid": 1,
+     "notHurt": 1
+    },
+    "finer": {
+     "monthSame": 0,
+     "daySame": 0,
+     "daySupport": 1,
+     "combined": 0
+    }
+   }
+  ],
+  "status": "single",
+  "selectedPosition": 5,
+  "decidedBy": null,
+  "ruleIds": [
+   "R-YONG-GUAN-01"
+  ]
+ },
+ "yongshen": {
+  "position": 5,
+  "relative": "官鬼",
+  "branch": "申",
+  "element": "金",
+  "moving": true,
+  "isWorld": false,
+  "isResponse": false,
+  "spirit": "白虎",
+  "support": [
+   "日生",
+   "初爻妻财未动来生",
+   "化进神",
+   "化帝旺"
+  ],
+  "damage": [],
+  "notes": [],
+  "change": {
+   "to": "官鬼酉金",
+   "huitou": null,
+   "advance": "进神",
+   "lifeStage": "帝旺",
+   "clash": false,
+   "combine": false,
+   "changedVoid": false,
+   "changedMonthBreak": false
+  },
+  "void": null,
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "休",
+   "capability": "strong",
+   "capabilityBasis": "四处有生无克（日辰、动爻初爻未、自身动化）",
+   "pattern": null,
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "四处有生无克（日辰、动爻初爻未、自身动化）",
+   "acts": "发动",
+   "release": []
+  }
+ },
+ "yongshen_missing": null,
+ "yuan": [
+  {
+   "position": 1,
+   "relative": "妻财",
+   "branch": "未",
+   "element": "土",
+   "moving": true,
+   "isWorld": true,
+   "isResponse": false,
+   "spirit": "青龙",
+   "support": [
+    "临日",
+    "化帝旺"
+   ],
+   "damage": [],
+   "notes": [],
+   "change": {
+    "to": "父母子水",
+    "huitou": null,
+    "advance": null,
+    "lifeStage": "帝旺",
+    "clash": false,
+    "combine": false,
+    "changedVoid": false,
+    "changedMonthBreak": false
+   },
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "囚",
+    "capability": "strong",
+    "capabilityBasis": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+    "pattern": null,
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+    "acts": "发动",
+    "release": []
+   }
+  },
+  {
+   "position": 6,
+   "relative": "妻财",
+   "branch": "戌",
+   "element": "土",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "玄武",
+   "support": [
+    "日扶",
+    "初爻妻财未动来扶"
+   ],
+   "damage": [],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "囚",
+    "capability": "strong",
+    "capabilityBasis": "四处有生无克（日辰、动爻初爻未）",
+    "pattern": null,
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "四处有生无克（日辰、动爻初爻未）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  }
+ ],
+ "ji": [
+  {
+   "position": 2,
+   "relative": "子孙",
+   "branch": "巳",
+   "element": "火",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "朱雀",
+   "support": [],
+   "damage": [
+    "月破",
+    "旬空（静空，空而又破）"
+   ],
+   "notes": [
+    "五爻官鬼申动来合（合起）"
+   ],
+   "change": null,
+   "void": "空而又破",
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "死",
+    "capability": "weak",
+    "capabilityBasis": "生克相当，克者为日月（生：动爻五爻申；克：月建）",
+    "pattern": null,
+    "limitations": [
+     {
+      "kind": "旬空",
+      "detail": "空而又破"
+     },
+     {
+      "kind": "月破",
+      "detail": "静而月破"
+     }
+    ],
+    "state": "INEFFECTIVE",
+    "stateReason": "生克相当，克者为日月（生：动爻五爻申；克：月建）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  },
+  {
+   "position": 4,
+   "relative": "子孙",
+   "branch": "午",
+   "element": "火",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": true,
+   "spirit": "螣蛇",
+   "support": [
+    "日合"
+   ],
+   "damage": [
+    "月克"
+   ],
+   "notes": [
+    "初爻妻财未动来合（合起）"
+   ],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "休囚",
+    "seasonalFive": "死",
+    "capability": "strong",
+    "capabilityBasis": "生多克少（生：日辰、动爻初爻未；克：月建）",
+    "pattern": "日月相反（月克日生）",
+    "limitations": [],
+    "state": "EFFECTIVE",
+    "stateReason": "生多克少（生：日辰、动爻初爻未；克：月建）",
+    "acts": "静（不主动作用）",
+    "release": []
+   }
+  }
+ ],
+ "chou": [
+  {
+   "position": 3,
+   "relative": "兄弟",
+   "branch": "卯",
+   "element": "木",
+   "moving": false,
+   "isWorld": false,
+   "isResponse": false,
+   "spirit": "勾陈",
+   "support": [
+    "月生"
+   ],
+   "damage": [
+    "入日墓",
+    "入初爻未动墓",
+    "五爻官鬼申动来克"
+   ],
+   "notes": [],
+   "change": null,
+   "void": null,
+   "state": {
+    "seasonal": "相",
+    "seasonalFive": "相",
+    "capability": "strong",
+    "capabilityBasis": "生克相当，生者为日月（生：月建；克：动爻五爻申）",
+    "pattern": null,
+    "limitations": [
+     {
+      "kind": "入墓",
+      "detail": "日墓、动墓（旺相或有扶，不作真墓）",
+      "trueTomb": false
+     }
+    ],
+    "state": "EFFECTIVE",
+    "stateReason": "生克相当，生者为日月（生：月建；克：动爻五爻申）",
+    "acts": "静而旺相（可生克休囚之爻）",
+    "release": []
+   }
+  }
+ ],
+ "world": {
+  "position": 1,
+  "relative": "妻财",
+  "branch": "未",
+  "element": "土",
+  "moving": true,
+  "isWorld": true,
+  "isResponse": false,
+  "spirit": "青龙",
+  "support": [
+   "临日",
+   "化帝旺"
+  ],
+  "damage": [],
+  "notes": [],
+  "change": {
+   "to": "父母子水",
+   "huitou": null,
+   "advance": null,
+   "lifeStage": "帝旺",
+   "clash": false,
+   "combine": false,
+   "changedVoid": false,
+   "changedMonthBreak": false
+  },
+  "void": null,
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "囚",
+   "capability": "strong",
+   "capabilityBasis": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+   "pattern": null,
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）",
+   "acts": "发动",
+   "release": []
+  }
+ },
+ "response": {
+  "position": 4,
+  "relative": "子孙",
+  "branch": "午",
+  "element": "火",
+  "moving": false,
+  "isWorld": false,
+  "isResponse": true,
+  "spirit": "螣蛇",
+  "support": [
+   "日合"
+  ],
+  "damage": [
+   "月克"
+  ],
+  "notes": [
+   "初爻妻财未动来合（合起）"
+  ],
+  "change": null,
+  "void": null,
+  "state": {
+   "seasonal": "休囚",
+   "seasonalFive": "死",
+   "capability": "strong",
+   "capabilityBasis": "生多克少（生：日辰、动爻初爻未；克：月建）",
+   "pattern": "日月相反（月克日生）",
+   "limitations": [],
+   "state": "EFFECTIVE",
+   "stateReason": "生多克少（生：日辰、动爻初爻未；克：月建）",
+   "acts": "静（不主动作用）",
+   "release": []
+  }
+ },
+ "flows": [
+  {
+   "flow": "change",
+   "id": "CHANGE@1:未化子",
+   "role": "yuan",
+   "position": 1,
+   "from": "妻财未土",
+   "to": "父母子水",
+   "huitou": null,
+   "tags": [
+    "化帝旺"
+   ],
+   "changedStrength": "有气",
+   "verdict": "化帝旺",
+   "ruleIds": [
+    "R-HUA-01",
+    "R-HUA-02",
+    "R-YUEJIAN-03",
+    "R-RIZHEN-05"
+   ]
+  },
+  {
+   "flow": "change",
+   "id": "CHANGE@5:申化酉",
+   "role": "yong",
+   "position": 5,
+   "from": "官鬼申金",
+   "to": "官鬼酉金",
+   "huitou": null,
+   "tags": [
+    "化进神",
+    "化帝旺"
+   ],
+   "changedStrength": "有气",
+   "verdict": "化进神、化帝旺",
+   "ruleIds": [
+    "R-HUA-01",
+    "R-HUA-02",
+    "R-YUEJIAN-03",
+    "R-RIZHEN-05"
+   ]
+  }
+ ],
+ "special": {
+  "yongHoldsWorld": false,
+  "jiHoldsWorld": false,
+  "worldRelative": "妻财",
+  "jiMoving": [],
+  "chouMoving": [],
+  "yuanMoving": [
+   1
+  ],
+  "yongMoving": [
+   5
+  ],
+  "changedIntoYong": [
+   5
+  ],
+  "changedIntoJi": [],
+  "sixClash": false,
+  "sixCombine": true,
+  "transform": "合卦有变",
+  "fuyin": false,
+  "fanyin": false,
+  "wandering": false,
+  "returning": false,
+  "movingCount": 2,
+  "threeHarmonies": [
+   "申子辰水局（父母局，虚一待用）"
+  ]
+ },
+ "harmonies": [
+  {
+   "branches": "申子辰",
+   "element": "水",
+   "relative": "父母",
+   "status": "virtual",
+   "statusLabel": "虚一待用",
+   "mode": "虚一待用",
+   "effect": "reference",
+   "label": "父局：官父世爻合成、不遇日月冲破者为吉",
+   "condition": null,
+   "notes": [
+    "世克局：世不在局、局不生世，不作吉论（R-SANHE-05，程序口径）"
+   ],
+   "world": "世克局",
+   "completion": [
+    {
+     "kind": "补支",
+     "branches": [
+      "辰"
+     ],
+     "scale": "日或月",
+     "rule": "R-SANHE-04"
+    }
+   ],
+   "impediments": [],
+   "rule_ids": [
+    "R-SANHE-01",
+    "R-SANHE-03",
+    "R-SANHE-04",
+    "R-SANHE-05",
+    "R-SANHE-06"
+   ]
+  }
+ ],
+ "timing_candidates": [
+  {
+   "timing_rule_id": "R-YINGQI-02",
+   "target_symbol": "五爻官鬼申",
+   "target_branches": [
+    "申",
+    "巳"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "动爻待值待合：逢申或逢巳"
+  },
+  {
+   "timing_rule_id": "R-YINGQI-10",
+   "target_symbol": "五爻官鬼申",
+   "target_branches": [
+    "申",
+    "巳"
+   ],
+   "time_scale": "近事以日计（各门类应期总注：近事应之于日时）",
+   "calculation_basis": "化进神逢值逢合：逢申或巳（原文例：申动酉，应申或巳）"
+  },
+  {
+   "timing_rule_id": "R-JINTUI-02",
+   "target_symbol": "五爻官鬼申化进神",
+   "target_branches": [
+    "申",
+    "酉",
+    "丑",
+    "辰",
+    "未",
+    "戌"
+   ],
+   "time_scale": "month",
+   "calculation_basis": "动休囚而化休囚，待时而进：待金旺、相之月（D-019）"
+  }
+ ],
+ "adverse_timing_candidates": [],
+ "equivalence_class": {
+  "version": "interview-pass-eq-0.11.0",
+  "key": "用明现[EFFECTIVE]化吉;世世安;原动有力;忌静不作用;六合;局父母局虚参看",
+  "factors": {
+   "yong": {
+    "source": "明现",
+    "world": "",
+    "qi": "日扶",
+    "vb": "",
+    "motion": "化吉",
+    "hurt": "",
+    "tomb": "",
+    "state": "EFFECTIVE",
+    "limits": ""
+   },
+   "world": "世安",
+   "jiHoldsWorld": false,
+   "yuan": "动有力",
+   "ji": "静不作用",
+   "hexagram": "六合",
+   "harmonies": [
+    "父母局虚参看"
+   ]
+  },
+  "writable": true,
+  "blockers": []
+ }
+}
