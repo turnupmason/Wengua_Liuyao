@@ -1,0 +1,256 @@
+{
+  "script_id": "IPC-0879",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用伏有效;世世受克;原动有力;忌无力",
+  "class_rank": 875,
+  "class_share_of_casts": 9.4e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        6,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "戊戌"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏而有用",
+    "原神发动生官",
+    "世爻受克"
+  ],
+  "judgment": {
+    "verdict": "pass-but-slow",
+    "verdict_label": "有望通过，但要待时",
+    "deciding_evidence": [
+      "官鬼不上卦，伏而有用（R-FUSHEN-02），出伏可期",
+      "原神妻财发动而有力，生伏官"
+    ],
+    "supporting": [
+      "忌神子孙无力"
+    ],
+    "adverse": [
+      "应爻（妻财）克世；世爻多休囚"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0534"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-FUSHEN-05",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YUANJI-01",
+      "R-YUANJI-04"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "hidden": true,
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "有望通过，但要待时：官星伏而可出，财在动",
+    "brief": "这一卦有望通过，但要等。官星不在卦面，伏在下面，是有用的伏神，出得来；生官的财在卦中发动，有力，正生着它；克官的子孙无力。只是官星要先出伏，结果才明朗。应位的财克着你世上的父母，自己这一侧有些吃力。",
+    "opening": "卦面无官，伏而有用；起卦月份财当令一般，余为父母当令。\n卦中发动的是财，常两爻同动；你的世爻是父母，应位的财克它。",
+    "process": "伏而有用者，飞神推得开；财动有力生官，正是提拔伏神的力量。克官的子孙无力，没人拦。\n应位之财克世，你世上的父母多休囚，材料、手续上要多下功夫；官星出伏之前，结果悬着。",
+    "ending": "伏官有用、财动生官，这一轮有望通过，要等官星出伏。",
+    "timing": {
+      "text": "官星伏藏，按伏神逢值之法：伏官本支值日之日前后，官星较易出伏，事情容易有动静；若当时未定，还要再等。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "官星出伏、结果渐明",
+          "target_symbol": "伏藏之官鬼",
+          "condition": "伏神逢值",
+          "time_scale": "day",
+          "calculation_basis": "伏神本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "有望通过，但要待时。官星伏而可出，生官的财在动。耐心跟进，手续上多用心。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "伏而有用"
+      },
+      {
+        "rule_id": "R-YUANJI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神能生用神者有五：元神旺相或临日月或日月动爻生扶者一也。元神动化回头生及化进神者二也。元神长生帝旺于日辰三也。元神与忌神同动四也。元神旺动临空化空五也。",
+        "applies_because": "元神发动有力能生用神"
+      },
+      {
+        "rule_id": "R-YUANJI-04",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。",
+        "applies_because": "子孙无力"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。",
+        "applies_because": "世爻受克"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 875 类，占起卦概率 0.009%，全类 124 盘）：用神「伏有效」；世爻「世受克」；原神妻财发动而有力；忌神子孙当前无力（INEFFECTIVE）。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：妻财(60%)、父母(40%)；发动六亲：妻财妻财(62%)、妻财(38%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 60%、父母之五行 40%；伏神：用神有用 100%；原神发动 100%；忌神无力 100%；应爻皆妻财而克世。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
