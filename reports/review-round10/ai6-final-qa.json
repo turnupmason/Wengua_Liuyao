@@ -1,0 +1,274 @@
+{
+  "reviewer": "AI-6 最终验收复验（独立代理）",
+  "reviewed_at": "2026-11-13",
+  "scope_note": "只读复验 reports/review-round10 中 IP-0002（第 9 版）、IP-0003（第 9 版）两篇，以及 rules/register.json 中 R-SANHE-01..06 六条规则（D-020 裁定）。drafts 与 authoring/interview-pass 下两篇的 judgment、reading 逐字相同；与 authoring/history 下的 r8 存档逐字段比对，确认本轮只改了三合相关段落、应期条目、计算说明、rule_ids，以及 IP-0003 按 round9 意见改的几句。docs/11 两篇的哈希前缀与构建一致（8ac76cf7…、b2a58139…），排版各栏齐全。三合事实依据排盘手算，再与 facts.harmonies 和 src/analysis.js 中 threeHarmonies 的逻辑对照。古籍引文先去掉标点，再到 sources/classics 原文中逐条检索，同时核对每条引文是否在所标规则的 original_text 里。只读运行 node --test tests/，64/64 通过。未运行构建脚本，未运行 git，除本文件外没有写任何文件。本记录为 AI 审核，不是人工专家认证。",
+  "cases": [
+    {
+      "script_id": "IP-0002",
+      "content_hash": "8ac76cf7ba3a9f413fa35aae0f2fbb765a17c5f862556ed9f5139eac7d7a578a",
+      "revision_checked": 9,
+      "harmony_recompute": "排盘：火泽睽之山泽损，亥月丙戌日，甲申旬空午未。上爻父母巳火静，五爻兄弟未土静（旬空，伏妻财子水），四爻子孙酉金世发动化兄弟戌土，三爻兄弟丑土静，二爻官鬼卯木静，初爻父母巳火应静；无暗动（戌日冲辰，卦中无辰）。逐组看：（1）巳酉丑：酉为四爻明动（世），丑为三爻静爻，巳为初爻、上爻静爻，三支俱在卦中且一支发动，按 R-SANHE-01 已具成局之条件。巳火两爻都与亥月相冲，为月破；火墓于戌，亥月巳火休囚，入戌日之墓为真墓。卦中巳支只有这两爻，都是破而入墓，丑、酉两支无空破墓（丑不空，土墓在辰；酉金墓丑，日、变爻都不是丑）。按 R-SANHE-03，现时不成局，为待时成局。金为子孙，于功名为伤煞，是凶局，世在局中。（2）亥卯未：卯（二爻静）、未（五爻静，旬空）在卦，亥只见于月建，卦中无动支，不成局。（3）申子辰：子只伏于五爻下，不上卦也不变出；申、辰都不见，不成局。（4）寅午戌：只有变出之戌，另加日辰戌，午、寅都不在卦中，不成局。与 facts.harmonies 对照：只列巳酉丑一组，status=deferred、effect=adverse、world=世在局，与我手算一致。但有一点我与 facts 不同：facts.completion 把巳（填实）和辰（冲墓）合并成一组可二选一的补足支。巳支每一爻都同时有月破、日墓两种阻碍。辰日冲开戌墓，可巳火在亥月仍是月破，局还是不全；巳日巳火逢值，既填实月破，也临日出墓，才能两阻俱解。所以按 R-SANHE-03 的口径，辰日单独成不了局，主要的成局时点是巳日，月级则是巳月或出破之后。facts.adverse_timing_candidates 的计算依据写成「巳空破，待填实（逢巳、辰）」，巳只破不空，且把冲墓说成了填实，是 harmonyTiming 的标签错误。",
+      "prior_findings": [
+        {
+          "finding": "round6（major）：R-YUANJI-06 引文断章（原例用神无根终凶）",
+          "resolved": true,
+          "note": "现稿 classical_sources 已不含 R-YUANJI-06，round7 已确认。"
+        },
+        {
+          "finding": "round6/7（minor）：facts 有利候选 R-YINGQI-09 卯日（冲去克神）未交代不取的理由；应期「带来的多半是不利的消息」只看忌神一面，没有说明酉、辰两日同时是官星逢冲、日合被冲开之期，也没有点明以世爻（主事爻）推期的依据",
+          "resolved": false,
+          "note": "conflicts_resolved 仍未提卯日；timing.text 前半句与 r8 相同，没有改。"
+        },
+        {
+          "finding": "round6/7（minor）：计算说明「无力条一项不合」含糊；「（AI-3 复核补列）」是审核过程信息",
+          "resolved": false,
+          "note": "括注已删，这一部分已解决。「无力条一项不合」仍在，实际意思是忌神无力的各条都不符合。"
+        },
+        {
+          "finding": "round6/7（minor）：verdict_label「难以通过」与正文「偏难通过」程度不一；R-DONGJING-01 未列入 rule_ids；R-YUANJI-05 列在 rule_ids，judgment 中却没有对应的表述",
+          "resolved": false,
+          "note": "三项都没有改。另外 conflicts_resolved 引了 R-QIUMING-01，它也不在 rule_ids 中，构建出的 rules_used 没有收入这条（该规则为 ai-verified，不影响批准状态）。"
+        },
+        {
+          "finding": "round6/7（minor）：R-YONG-FU-01（黄金策·求名，科举语）没有说明为什么可用于面试",
+          "resolved": false,
+          "note": "applies_because 仍为「子孙（福德）发动克官」。"
+        },
+        {
+          "finding": "round7（minor）：R-YUANJI-05 为 pending-professional-review",
+          "resolved": true,
+          "note": "register 中现为 ai-verified。"
+        },
+        {
+          "finding": "r8 计算说明「巳酉丑三支俱在而只一支发动，不作成局」与 D-020 裁定 ① 相反",
+          "resolved": true,
+          "note": "已删去，改为按 R-SANHE-01、R-SANHE-03 写待时成局。"
+        }
+      ],
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": false,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": false,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "排盘经手算复核：卦名、宫五行、世应、纳甲、六亲、旬空午未、月破巳、伏神，都与 calculation_facts 一致。构建记录 checks.errors、checks.warnings 为空，technical_review_status 为 passed。",
+        "所用规则已经批准": "不满足。rules_used 中未批准的有 R-SANHE-01、03、05、06。本轮核验 01、03、05 为 PASS，R-SANHE-06 为 FAIL：它的 modern_explanation 把原文「官父世爻合成父局官局﹐不遇日月冲破者﹐定许连登」写成无条件的「父局、官局为吉」，丢掉了「不遇日月冲破」这一条件（原段标题即「二合无冲」）。本篇用这条规则只为说明子孙局不吉，结论不受影响，但规则本身不能算已批准。其余规则都是 ai-verified。另外，两篇都按「亥月巳火休囚为真墓」「旺相不作真墓」行文，这一口径来自 R-SUIMU-01，该条仍是 pending-professional-review，只是没有以编号列入（见 engine_notes）。",
+        "用神选择有明确依据": "本卦官鬼只有二爻卯木一爻（R-YONG-GUAN-01；selection=single）。",
+        "正反证据均得到处理": "主要证据都已处理，并与 facts 一致：子孙持世独发、得戌日生、化回头生；官星月生日合；伏财有用但静（D-013、R-DONGJING-01）；应爻巳火破墓；巳酉丑子孙局待时成局，不改结论，只增列防范之时。世在凶局中不作美论：增删卜易同段后文有「凡得三合名利……用神旺者无不为吉，必要世爻在局为美」，可作依据。遗留 round7 的 minor：卯日（R-YINGQI-09）不取的理由仍未写。",
+        "没有未解决的重大专业冲突": "D-016、D-013、D-020 都已裁定，本稿依裁定写；rules_used 中 open_disputes 全部为空。",
+        "关键古籍引用已经核查": "12 条 classical_sources 去标点后都能在所注书中找到（增删卜易 L60、L185、L2600、L16、L212、L816、L815、L715、L272、L499、L500；黄金策 L491），也都在所标规则的 original_text 中。正文中引号内的 13 处引文也都能在增删卜易或黄金策中找到。新增两条引文分别为 R-SANHE-05、R-SANHE-03 所收，引文与编号对应。",
+        "传统应期具有适用依据或明确记录不适合取期": "不满足。酉日、辰日（R-YINGQI-02，忌神动而逢值逢合）和巳日（R-SANHE-03，填实月破）都有依据。但第三条应期「辰日｜子孙局合成｜入墓者待冲开之日成局」不成立：巳支两爻同时有月破和日墓，辰日只能冲开戌墓，巳火在亥月仍是月破，按 R-SANHE-03 局还不全。timing.text「辰日又冲开戌墓……这两个时点也是巳酉丑子孙局可能合成之时」与计算说明「待巳填实或辰冲开墓库方成」的「或」字，都把两种阻碍当成了二选一。",
+        "独立专业审核完成": "AI-3 记录 RV-0023 resolution=resolved。本轮新增的三合事实已由我独立复算，见 harmony_recompute。",
+        "反向质疑审核完成": "AI-4 记录 RV-0029 resolution=resolved。",
+        "最终语言编辑完成": "AI-5 记录 RV-0038 为 DONE。本轮新增的三合段落没有再经精修，但我通读后未见语病。",
+        "没有明显机械重复、套话或病句": "新增段落表达清楚，没有同义重复。「无力条一项不合」语义含糊（round7 已提，minor），算不上病句。judgment.conflicts_resolved「巳火空破入墓」用词不准：巳只是月破，不空（minor）。",
+        "简断、详断和总断结论一致": "标题、简断、结局、总断都写「偏难通过」，结论方向一致。verdict_label「难以通过」程度稍重，round7 已提，仍未统一（minor）。",
+        "原有正式排版完整保留": "docs/11 本篇各栏齐全，次序正确；应期栏 4 条均以日为单位显示，与 entries 一致。",
+        "内容哈希、规则版本及审核记录一致": "content_hash 8ac76cf7… 与 docs/11 一致；rule_version、source_version、facts_digest 与构建一致；AI-2、3、4 记录均已 resolved（stale_records 9 为旧哈希记录）。小问题：R-QIUMING-01 在正文中被引用，不在 rule_ids 中；R-YUANJI-05 在 rule_ids 中，正文没有对应表述（minor）。",
+        "全部相关回归测试通过": "只读运行 node --test tests/：64/64 通过，含 tests/sanhe.test.mjs 5 例。",
+        "无未经证实的现实事实断言": "「带来的多半是不利的消息」「可能合成之时」「这只是按传统推出的参考时点，不作定论」都有限定。没有把通过面试等同于录用。",
+        "没有冒充真人专家认证或现实预测保证": "正文没有自称专家，也没有保证结果。"
+      },
+      "required_fixes": [
+        {
+          "severity": "major",
+          "field": "reading.timing.entries[2]（辰日 R-SANHE-03）/ reading.timing.text / reading.process 三合段末句 / reading.calculation_explanation",
+          "problem": "巳支两爻同时有月破和日墓两种阻碍，辰日只冲开戌墓，巳火在亥月仍是月破，按 R-SANHE-03 局不能成。稿件把「巳填实」和「辰冲开墓库」写成二选一（「待巳填实或辰冲开墓库方成」「等巳火填实或墓库被冲开」），并把辰日列为子孙局合成之日。",
+          "suggestion": "删去 entries[2]，或把它的 target_event 改为「戌墓冲开，但巳火月破仍在，局尚不全」，不再写局成。正文和计算说明改为「巳火既破且墓，须到巳日逢值（填实且出墓）或出破之后，局才合成」。timing.text 中辰日只保留「子孙逢合」一义。"
+        },
+        {
+          "severity": "minor",
+          "field": "judgment.conflicts_resolved[2]",
+          "problem": "「巳火空破入墓」：巳火只是月破，不空。",
+          "suggestion": "改为「巳火月破、入日墓」。"
+        },
+        {
+          "severity": "minor",
+          "field": "judgment.conflicts_resolved / reading.timing.text",
+          "problem": "round7 遗留：facts 中 R-YINGQI-09 卯日（冲去克神）候选不取的理由未写；酉、辰两日同时是官星逢冲、日合被冲开之期，正文只说「带来的多半是不利的消息」。",
+          "suggestion": "按 round7 建议，在 conflicts_resolved 补一句卯日不取的理由，并在应期中注明这两天吉凶以前文判断为准。"
+        },
+        {
+          "severity": "minor",
+          "field": "reading.calculation_explanation",
+          "problem": "round7 遗留：「无力条一项不合」含糊。",
+          "suggestion": "改为「忌神无力各条皆不合」。"
+        },
+        {
+          "severity": "minor",
+          "field": "judgment.verdict_label / judgment.rule_ids",
+          "problem": "round7 遗留：「难以通过」与正文「偏难通过」程度不一；R-QIUMING-01、R-DONGJING-01 未列入 rule_ids；R-YUANJI-05 列入 rule_ids，正文却没有对应表述。",
+          "suggestion": "统一措辞；rule_ids 补上 R-QIUMING-01、R-DONGJING-01；R-YUANJI-05 或删去，或补一句「用神有气（月生日合），原忌之论成立」。"
+        },
+        {
+          "severity": "minor",
+          "field": "reading.classical_sources[R-YONG-FU-01].applies_because",
+          "problem": "round7 遗留：黄金策·求名为科举语，未说明为什么适用于面试。",
+          "suggestion": "补「子孙克官对以官鬼为用之谋职同样成立（增删卜易序『不拘占入场占升迁』）」。"
+        },
+        {
+          "severity": "major",
+          "field": "rules/register.json R-SANHE-06（规则层，影响本篇的「所用规则已经批准」）",
+          "problem": "modern_explanation、applicable_conditions 丢掉了原文「不遇日月冲破者」这一条件，也没有写出「官父世爻合成」的前提。",
+          "suggestion": "见 rule_verifications 中 R-SANHE-06 的意见。改正并核验通过后重新构建，再提交终审。"
+        }
+      ],
+      "status": "FAIL"
+    },
+    {
+      "script_id": "IP-0003",
+      "content_hash": "b2a581394ab168e845ba39ca3599ee73df114684a39eb0d77f947cc090372764",
+      "revision_checked": 9,
+      "harmony_recompute": "排盘：雷地豫之泽雷随，亥月乙未日，甲午旬空辰巳。上爻妻财戌土静，五爻官鬼申金发动化官鬼酉金，四爻子孙午火应静，三爻兄弟卯木静，二爻子孙巳火静（旬空、月破），初爻妻财未土世发动化父母子水（伏父母子水）；未日冲丑，卦中无丑，所以无暗动。逐组看：（1）申子辰：申为五爻明动，子为初爻变出，两支俱动且不在同一爻位；辰不在卦中，月亥、日未也不是辰，按 R-SANHE-04 为虚一待用。申：亥月休囚，金墓丑，日、变爻、动爻都不是丑；不空，不破。子：亥月旺，不空，不破，水墓辰而辰不在。两支都没有阻碍，现时不成局，待辰日、辰月补足。水为父母，于功名为吉局。世爻未土本身不在局中，局的子水是世爻的变出；按 facts 与引擎口径（worldInHarmony 不计世爻的变出），世与局的关系是「世克局」（土克水），不是局生世，也不是局克世。（2）亥卯未：卯（三爻静）、未（初爻明动）在卦，亥只见于月建。卦中只一支动，按 R-SANHE-02（日月补支须另两支俱动），月建不能补；又不合 R-SANHE-04（须两支俱动），所以不成局，也不作虚一。round9 曾把本盘比作萃之否例，但两者并不同构：萃之否的亥在卦中暗动，三支都在卦中；本盘的亥只见于月建。按 D-020，稿件判为不成局是对的。（3）巳酉丑：巳（二爻静，空破），酉为五爻变出，丑不见，只一支动，不成局。（4）寅午戌：午（四爻静）、戌（上爻静）在卦，寅不见，卦中无动支，不成局。与 facts.harmonies 对照：只列申子辰一组，status=virtual、effect=favorable、world=世克局、completion 为辰（R-SANHE-04），与我手算一致；亥卯未在引擎中为 none（「两支一动，日月不补」），与 tests/sanhe.test.mjs 一致。",
+      "prior_findings": [
+        {
+          "finding": "round9 #1（major）：以 R-SANHE-01 旧程序门槛（须两支来自动爻）排除亥卯未；该条未批准，也不在 rule_ids 中",
+          "resolved": true,
+          "note": "已按 D-020 改写：亥卯未改依 R-SANHE-02（日月补支须另两支俱动）判不成局，申子辰依 R-SANHE-04 作虚一待用。R-SANHE-01、02、04、06 都已列入 rule_ids，rules_unapproved 如实反映了这几条。正文写明「按本应用采用的口径」。round9 建议的萃之否类比，经复算并不适用（见 harmony_recompute），不采用是对的。"
+        },
+        {
+          "finding": "round9 #2（minor）：卯木「四处生多克少」与 facts 不符",
+          "resolved": true,
+          "note": "现为「受五爻申金动克，生克相当」，与 facts 一致。"
+        },
+        {
+          "finding": "round9 #3（minor）：过程段末句同义重复，「只是」转折不当",
+          "resolved": true,
+          "note": "现为「兄弟卯木得月令之生，又受申金动克，生克相当；它安静不动，入墓也不作真墓，没有出来分夺官星。」已无重复。"
+        },
+        {
+          "finding": "round9 #4（minor）：R-HE-02 列入 rule_ids，正文却没交代官父世是否得地；R-SICHU-01 不在 rule_ids 中",
+          "resolved": true,
+          "note": "结局段、judgment.supporting、计算说明都已写出官、父、世三爻得地的理由；R-SICHU-01 已补入 rule_ids；全文引用的规则编号都在 rule_ids 中。"
+        },
+        {
+          "finding": "round9 #5（minor）：巳日条目 target_event 与「只作参考」不一致",
+          "resolved": true,
+          "note": "现为「或有消息（巳日出旬且为子孙值日，只作参考）」。"
+        },
+        {
+          "finding": "round9 #6（minor）：R-JINTUI-02 相月候选及不取理由未记",
+          "resolved": true,
+          "note": "计算说明已写「候选为金旺之申、酉月与土生金之丑、辰、未、戌月；正文取金旺之申、酉月，土月为相不另列」。"
+        },
+        {
+          "finding": "round9 #7（minor）：R-HE-02 source_chapter 写法",
+          "resolved": true,
+          "note": "register 中现为「增删卜易卷之三·乡试章第五十五」。"
+        }
+      ],
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": false,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": false,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": false,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "排盘数据和计算测试全部通过": "排盘经手算复核：雷地豫（震宫一世），世初应四，纳甲、六亲、变爻、旬空辰巳、巳火月破、伏父母子水，都与 calculation_facts 一致。checks 为空，technical_review_status 为 passed。",
+        "所用规则已经批准": "不满足。rules_unapproved 中有 R-SANHE-01、02、04、06。本轮核验 01、02、04 为 PASS，R-SANHE-06 为 FAIL（理由见 rule_verifications）。本篇正是借这条规则把申子辰定为「父局为吉」，影响比 IP-0002 更直接。",
+        "用神选择有明确依据": "官鬼只有五爻申金一爻，且发动（R-YONG-GUAN-01）。",
+        "正反证据均得到处理": "不满足。facts.harmonies 明列申子辰父局与世的关系为「世克局」，稿件对世与局的关系一字未提。D-020 裁定 ④ 与 R-SANHE-05 要求：世在局为美；世不在局时，局生世为吉，局克世为凶。稿件只引乡试章「官父世爻合成父局官局」，在 applies_because 里写「官星申金与世爻化出之父母子水欲合父局」，等于默认世爻的变出也算「世在局」。引擎的口径正相反（不计世爻变出，判世克局）。两种口径哪个成立，稿件没有说明取舍，就把父局列为吉的支持证据（judgment.supporting），又把辰日、辰月定为「父局补足成局，结果落定」。其余吉凶证据都已处理，并与 facts 一致：官星得日生、动生、化进；巳火空破；午火静而受月克，被日合、动合，应爻生世合世；卯木生克相当，安静；财动按 D-010；待时按 D-019；六合须官父世得地按 R-HE-02。",
+        "没有未解决的重大专业冲突": "D-010、D-019、D-020 都已裁定，rules_used 中 open_disputes 全部为空。「世爻的变出能否算世在局」这一口径，在 register 中没有登记分歧，稿件与引擎做法不一，这个问题已归入「正反证据」一条。",
+        "关键古籍引用已经核查": "11 条 classical_sources 去标点后都能在所注书中找到（增删卜易 L2599、L703、L213、L472、L725、L1048、L2612、L1269、L2548、L2578；卜筮正宗 L334），也都在所标规则的 original_text 中（R-YINGQI-10 一条跨两句，都在该规则内）。新增 R-SANHE-04 引文「殊不知虚一待用﹐待后时之月日可以填之。」与 R-SANHE-06 引文「官父世爻合成父局官局﹐不遇日月冲破者﹐定许连登」逐字无误，编号与引文对应。",
+        "传统应期具有适用依据或明确记录不适合取期": "申日（R-YINGQI-02）、巳日（R-YINGQI-10，已注明出旬、子孙值日、只作参考）、辰日和辰月（R-SANHE-04 虚一待用，缺支之日月补足，依据成立）、申月和酉月（R-JINTUI-02，D-019），月级条目渲染正确。小问题：申日条目 target_event 仍写「结果明朗、得到肯定答复」，而 timing.text 只说「消息多在申日前后」，正文又说「这一步要等时候，不会立刻见效」，两处说法强弱不一（minor）。辰日、辰月条目写「结果落定」，以父局为吉为前提，要待上一条问题解决后才成立。",
+        "独立专业审核完成": "从实质看，round9 已确认 AI-3 的结论分歧由 D-019 解决；本轮新增的三合事实已由我独立复算。但 review/records.json 中 RV-0024 仍是 ISSUES，没有 resolution，见「审核记录」一条。",
+        "反向质疑审核完成": "从实质看，round9 已确认 AI-4 的 4 条 major 都已解决；余下那条 minor（三合理由）本轮已按 D-020 改写。但 RV-0030 仍是 RETURN，没有 resolution，见「审核记录」一条。",
+        "最终语言编辑完成": "AI-5 记录 RV-0034 为 DONE。本轮新增的三合段、六合得地句没有再经精修，但我通读后未见语病。",
+        "没有明显机械重复、套话或病句": "round9 指出的同义重复已改正。新增段落没有重复，也没有套话。「按本应用采用的口径」措辞稍显生硬，但意思清楚，而且如实标明了这是程序口径。",
+        "简断、详断和总断结论一致": "标题、简断、结局、总断都写「有望通过，但要待时」或「结果偏慢」，与 verdict pass-but-slow 一致。",
+        "原有正式排版完整保留": "docs/11 本篇各栏齐全，次序正确；应期栏 6 条中，辰月、申月、酉月三条正确显示为月级。",
+        "内容哈希、规则版本及审核记录一致": "不满足。content_hash b2a58139… 与 docs/11 一致，rule_version、source_version、facts_digest 一致，全文引用的规则编号都在 rule_ids 中。但本篇 AI-2、AI-3、AI-4 的最新记录（RV-0018 ISSUES、RV-0024 ISSUES、RV-0030 RETURN）都没有 resolution=resolved，构建状态因此仍显示「古籍 ISSUES、独立 ISSUES、反向 RETURN」。按 review-status.mjs 的 passOrResolved，即使终审通过也无法发布。须由相应阶段补记 resolution（IP-0002 已这样处理）。",
+        "全部相关回归测试通过": "只读运行 node --test tests/：64/64 通过。",
+        "无未经证实的现实事实断言": "「从卦象看」「按象意」「卦象上是一层配合」都带限定。总断的建议是有条件的，也没有把通过面试等同于录用。申日「得到肯定答复」措辞偏重，已列为 minor。",
+        "没有冒充真人专家认证或现实预测保证": "正文没有自称专家，也没有保证结果。"
+      },
+      "required_fixes": [
+        {
+          "severity": "major",
+          "field": "judgment.supporting[3] / judgment.conflicts_resolved / reading.process 三合段 / reading.classical_sources[R-SANHE-06].applies_because / reading.calculation_explanation",
+          "problem": "按 D-020 裁定 ④ 和 R-SANHE-05，世与局的关系必须交代，稿件却没有处理。facts 判「世克局」（世爻未土不在局中，局不生世）；稿件默认世爻的变出算「官父世爻合成」，把父局直接定为吉，又据此写辰日、辰月「父局补足成局，结果落定」。两种口径不一致，取舍理由也没有写。",
+          "suggestion": "二选一并写明理由。（a）如果认为世爻动而化出的子水入局即为世在局（可援引三合段第三类「初爻、三爻动而变出爻成三合」，变出属于本爻），须注明这是解释口径，并同步改引擎的 worldInHarmony，或在 register 中登记。（b）如果依 facts 判世不在局、局不生世，就按 R-SANHE-05 不作吉论，父局只作「文书、通知一类随官而动」的参看，辰日、辰月的 target_event 降为「或有进展，参考」，supporting 中「父局为吉」相应改写，并把 R-SANHE-05 列入 rule_ids。两种做法都不影响 pass-but-slow 主判。"
+        },
+        {
+          "severity": "minor",
+          "field": "reading.timing.entries[0].target_event",
+          "problem": "申日（明天）写「结果明朗、得到肯定答复」，与 timing.text 的「消息多在申日前后」、正文的「不会立刻见效」强弱不一。",
+          "suggestion": "改为「或有消息、结果渐明」一类表述。"
+        },
+        {
+          "severity": "major",
+          "field": "rules/register.json R-SANHE-06（规则层，影响本篇的「所用规则已经批准」）",
+          "problem": "modern_explanation 把原文的条件句写成了无条件的「父局、官局为吉」。",
+          "suggestion": "见 rule_verifications 中 R-SANHE-06 的意见。"
+        },
+        {
+          "severity": "minor",
+          "field": "review/records.json（流程）",
+          "problem": "AI-2、3、4 的记录没有标 resolution，实际问题却已在后续各轮解决，导致状态显示 ISSUES/RETURN。",
+          "suggestion": "由对应阶段在新哈希下复核，或补记 resolution=resolved，并附 round9、round10 的处理依据。"
+        }
+      ],
+      "status": "FAIL"
+    }
+  ],
+  "rule_verifications": [
+    {
+      "rule_id": "R-SANHE-01",
+      "verdict": "PASS",
+      "notes": "原文三句都在增删卜易·六合章第十九三合段（L499、L500），逐字一致。modern_explanation「三支俱在卦中（本卦爻或动而变出之爻），其中至少一支发动（明动、暗动或变出），即作成局」，与「一爻动而合局者一也。若两爻动一爻不动亦成合局者二也」，以及第三、四类「动而变出爻成三合」相符，也与 D-020 裁定 ① 一致。exceptions 如实交代了卜筮正宗两例（干之需、干之小畜）把静支视为缺字、与本章不同，以及依 D-020 采用增删卜易；暗动按 D-001 口径。没有断章取义。建议：同段「三爻若有两爻动，不成局，须待后之补凑……谓之虚三待用」，字面上像与「两爻动一爻不动亦成合局」相矛盾，应在本条或 R-SANHE-04 中写明本程序的读法：此句指第三支不在卦中。"
+    },
+    {
+      "rule_id": "R-SANHE-02",
+      "verdict": "PASS",
+      "notes": "两句原文都在卜筮正宗·第四问三合成局（L1704）。第一句截到「借寅月建」为止，原文其后是「补戌三合，本月必选」，截断处没有改变原意。modern_explanation「卦中两支俱动（不同爻位），第三支……为月建或日辰者，借日月补足」，与 D-020 裁定 ② 一致；「不同爻位」是「两爻动」之「两爻」的合理读法，裁定的表述中也有。exceptions 写明一动一静者日月不补（D-020 ②）。需要补充说明的一点：原例干之小畜中，寅木实在二爻、只是静而不动，卜筮正宗把它当作缺字；本条把例子用于「第三支卦中不见」的情形，属于引申。这层背景只记在 R-SANHE-01 的 exceptions 里，建议本条也补一句「原例寅在卦中而静；依增删口径此例本已成局，本条只取其借日月补支之法」。增删卜易乡试章艮之益例「又得日辰会成财局」可作旁证。这些属于补充说明，不影响本条判 PASS。"
+    },
+    {
+      "rule_id": "R-SANHE-03",
+      "verdict": "PASS",
+      "notes": "原文两句都在六合章三合段（L500），逐字一致。modern_explanation 和 applicable_conditions 与「若有一空破者，待填满之日月成之；有一爻入墓者待冲开之日成之」以及 D-020 裁定 ③ 一致。程序口径已在 exceptions 中如实标明：冲空则实者不作空；旺相之爻不作真墓（R-SUIMU-01）；同局之墓不作阻碍，并注明「此二点为程序口径，原文未明言」。问题两点（不改判 PASS，但须修正）：（1）original_text 第一句「三爻若有两爻动，不成局，须待后之补凑合成其局，谓之虚三待用」讲的是缺支待补，与本条的主题（空破墓）不合，modern_explanation 也没有解释它。它是 R-SANHE-04「两支俱动」条件在增删卜易本章中的直接出处，应移到 R-SANHE-04。（2）本条没有规定同一支同时有空或破、又有墓时如何处理。按原文语义，须各阻俱解才成局。引擎和 IP-0002 却把填实和冲墓当成二选一，见 IP-0002 的 required_fixes 与 engine_notes。另：所依的 R-SUIMU-01 仍是 pending-professional-review。"
+    },
+    {
+      "rule_id": "R-SANHE-04",
+      "verdict": "PASS",
+      "notes": "两句原文都在增删卜易卷之二·增删《黄金策千金赋》第三十四之后的野鹤评语（L1269、L1285），逐字一致，卷章标注正确（L743 卷之二至 L1982 卷之三之间）。原文「巳日冲动亥月与发动之未爻」中的「亥月」，底本即如此，照录无误。modern_explanation「两支俱动而缺一支、日月亦不见者，现时不成局，待缺支之日或月补足」，与 D-020 裁定 ③ 一致。萃之否例中，亥为暗动、未为明动，正是两支俱动，可以支持这一条件。exceptions 如实说明了原例卯木实在卦中而空破、程序归入 R-SANHE-03、两者应期相同。这一点我已核对：酉月冲卯为破，乙巳在甲辰旬，寅卯空，所以卯既空又破；tests/sanhe.test.mjs 的萃之否例也得出待卯。建议把六合章「三爻若有两爻动……谓之虚三待用」一句移到本条，作为「两支俱动」在增删卜易本章中的出处。"
+    },
+    {
+      "rule_id": "R-SANHE-05",
+      "verdict": "PASS",
+      "notes": "两句原文都在六合章三合段（L499、L500），逐字一致。modern_explanation「官局官旺，财局生官，子孙局伤官为凶；局以世爻在内为美，不在则局生世吉、局克世凶」，忠于原文，也与 D-020 裁定 ④ 一致。建议（不改判）：（1）原文只说了世在局、局生世、局克世三种情形，没有说世克局、世生局、比和。引擎会输出这几种关系（IP-0003 即为「世克局」），exceptions 应写明这些情形如何处理，并注明是程序口径。（2）可补同段「凡得三合名利……用神旺者无不为吉，必要世爻在局为美」一句，它是「吉局方论世在局为美」的出处，IP-0002 的论证正好用得上。（3）引擎的 worldInHarmony 不把世爻的变出计为世在局，这是程序口径，应在本条 exceptions 中登记。"
+    },
+    {
+      "rule_id": "R-SANHE-06",
+      "verdict": "FAIL",
+      "notes": "原文在增删卜易卷之三·乡试章第五十五（L2548），逐字一致，卷章标注正确。但 modern_explanation「父局、官局为吉」丢掉了原文的两个限定：一是「官父世爻合成」，指由官、父、世这几爻组成局；二是「不遇日月冲破者」，即局不遇日月冲破，原段标题「二合无冲，定登甲第」正是以无冲为要件。applicable_conditions 只写「求名求职」，也没有收入这两个条件。结果是：凡父局、官局一律判吉，与原文不符。引擎的 harmony_effects 表（src/questions/interview-pass.js）也是无条件判 favorable，没有检查日月冲破。其中月破可由 R-SANHE-03 转为待时，日破和日月冲局则完全没有覆盖。兄局、子孙局、财局三句的解释（兄局须日月生扶、官星亦旺；子孙局不吉；财局虽不为美亦得验于吉）忠于原文。修正办法：modern_explanation 改为「官父世爻合成父局、官局，不遇日月冲破者为吉」；applicable_conditions 补上这两个条件，exceptions 写明「日破、日月冲局者不作吉论」，并说明面试按 D-010 参看；引擎相应补上冲破检查，或在 exceptions 中注明暂未实现、由作者逐篇核对。改正后可以再核。"
+    }
+  ],
+  "engine_notes": "对 src/analysis.js threeHarmonies 与 src/evidence.js harmonyEffects、harmonyTiming 的意见：（1）一支同时有多种阻碍时，被当成可以二选一。impedimentOf 对同一爻可以同时给出月破（填实）和入墓（冲墓），但 completion 把各阻碍的 release.branches 合成一个列表 [巳, 辰]，harmonyTiming 又把它当成「逢巳、辰」任一即成。正确的做法是：同一爻有多种阻碍时，须各阻俱解（逢值日往往兼解破墓），只有同一支有多爻、而各爻阻碍不同时，才是任一爻解阻即可。建议 completion 按爻分别输出「须全部满足」的条件集合，并补一条回归测试，以 IP-0002 为例：辰日不应判成局。（2）harmonyTiming 的标签有错。c.kind 合并后为「填实/冲墓」，不等于「冲墓」，所以计算依据一律写成「空破，待填实」。IP-0002 中巳只破不空，冲墓也被写成了填实。（3）worldInHarmony 不计世爻的变出（s.from !== 'changed'）。这是未登记的程序口径，与三合段第三、四类「动而变出爻成三合」（变出属于本爻）之间存在解释余地。应在 R-SANHE-05 中登记，并让作者稿与之一致（参见 IP-0003 的 major）。（4）harmonyEffects 只输出「世克局」「世生局」「比和」这类关系，没有对应的吉凶口径。R-SANHE-05 原文没有说到这几种情形，建议在 register 中写明，或在 facts 中标注「原文未言」。（5）harmony_effects 表中的父局、官局无条件判 favorable，没有检查 R-SANHE-06 原文的「不遇日月冲破」。（6）旬空：impedimentOf 只排除冲空则实，「旺相、发动、日生」这类旬内暂空的爻，也一律当作待填实的阻碍。按三合段「若有一空破者」的字面，这样做可以成立，但应在 R-SANHE-03 的 exceptions 中注明。（7）「旺相不作真墓」依据 R-SUIMU-01，该条仍为 pending-professional-review。两篇正文都用到了这个口径（IP-0002「亥月巳火休囚，为真墓」，IP-0003「旺相不作真墓」），rules_used 却没有收入这条，建议由引擎把它带进 facts 的 rule_ids，或由作者列入 rule_ids。（8）伏神不参与三合（sourcesOf 只取本卦爻和变出），这与 D-020「卦中三支（本卦爻或变出之爻）」一致。tests/sanhe.test.mjs 的 5 例都通过，萃之否古例的复现正确。"
+}

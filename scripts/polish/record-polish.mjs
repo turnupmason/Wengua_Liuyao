@@ -1,10 +1,13 @@
 // 文学润色记录（docs/17，用户指令 V5.0）：核对锁定字段未变，记录改动字段的前后文本与内容哈希，追加 POLISH_COMPLETED 记录。
 // 用法：先 `node scripts/build-readings.mjs` 重新构建，再
-//   node scripts/polish/record-polish.mjs <script_id> <润色前快照.json> <A|B|C> <润色前内容哈希> [备注]
+//   node scripts/polish/record-polish.mjs <script_id> <润色前快照.json> <A|B|C> <润色前内容哈希> [--checked] [备注]
+// --checked：润色者已完成第四至第六遍自查（逐句对照、通读、排版），记 final_check PASS；已批准稿据此承接批准（docs/17 第五节）。
 // A 类（原稿已好、不改）快照即当前作者源，哈希不变。
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const [id, snapPath, grade, oldHash, ...noteParts] = process.argv.slice(2);
+const [id, snapPath, grade, oldHash, ...rest] = process.argv.slice(2);
+const checked = rest.includes('--checked');
+const noteParts = rest.filter((x) => x !== '--checked');
 if (!id || !snapPath || !['A', 'B', 'C'].includes(grade) || !oldHash) {
   console.error('用法：record-polish.mjs <script_id> <快照> <A|B|C> <原哈希> [备注]');
   process.exit(2);
@@ -64,6 +67,7 @@ recs.records.push({
   content_hash: entry.content_hash,
   note: noteParts.join(' ') || '',
   professional_issues: [],
+  ...(checked ? { final_check: { status: 'PASS', by: 'Claude（同一润色者自查，非独立终审）', at: new Date().toISOString().slice(0, 10), passes: { '逐句对照：专业事实、判断条件、吉凶、应期、古籍未变': true, '普通读者通读：通顺、清楚、无重复': true, '排版：构建检查全部通过（含 C26 版式快照）': true, '结论标签未变': true } } } : {}),
 });
 writeFileSync('review/records.json', `${JSON.stringify(recs, null, 2)}\n`);
 console.log(`${id} POLISH_COMPLETED（${grade} 类，改动 ${changes.map((c) => c.field).join('、') || '无'}）${oldHash.slice(0, 12)} → ${entry.content_hash.slice(0, 12)}`);

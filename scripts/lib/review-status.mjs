@@ -22,7 +22,7 @@ export const RELEASE_CONDITIONS = Object.freeze([
 
 const latest = (recs, stage) => recs.filter((r) => r.stage === stage).sort((a, b) => String(b.reviewed_at).localeCompare(String(a.reviewed_at)) || String(b.record_id).localeCompare(String(a.record_id)))[0];
 
-export function statusesFor(records, scriptId, hash) {
+export function statusesFor(records, scriptId, hash, depth = 0) {
   const all = records.filter((r) => r.script_id === scriptId);
   const cur = all.filter((r) => r.content_hash === hash);
   const self = latest(cur, 'author-full-text-review');
@@ -43,7 +43,19 @@ export function statusesFor(records, scriptId, hash) {
   const aiOk = passOrResolved(ai.source) && passOrResolved(ai.independent) && passOrResolved(ai.adversarial)
     && Boolean(ai.editor) && Boolean(ai.finalQa && ai.finalQa.status === 'PASS') && missingConditions.length === 0;
 
-  const approval_status = humanOk ? 'HUMAN_APPROVED' : aiOk ? 'AI_APPROVED' : 'REVIEW_REQUIRED';
+  // 润色承接批准（docs/17，用户：「现在就用1个就够了」）：单 Claude 润色并自查 PASS、锁定字段经程序核对未变者，
+  // 新哈希承接润色前哈希的批准；润色前本身须已批准。
+  let carried = null;
+  if (!humanOk && !aiOk && depth < 20) {
+    const pol = cur.filter((r) => r.stage === 'polish' && r.status === 'POLISH_COMPLETED' && r.final_check?.status === 'PASS'
+      && Array.isArray(r.locked_fields_verified) && r.locked_fields_verified.length && r.original_content_hash && r.original_content_hash !== hash)
+      .sort((a, b) => String(b.record_id).localeCompare(String(a.record_id)))[0];
+    if (pol) {
+      const prev = statusesFor(records, scriptId, pol.original_content_hash, depth + 1);
+      if (prev.approval_status !== 'REVIEW_REQUIRED') carried = { from_hash: pol.original_content_hash, from_status: prev.approval_status, record: pol };
+    }
+  }
+  const approval_status = humanOk ? 'HUMAN_APPROVED' : aiOk ? 'AI_APPROVED' : carried ? carried.from_status : 'REVIEW_REQUIRED';
   return {
     author_full_text_review_status: self ? self.status : 'pending',
     interpretation_review_status: prof ? (isAI(prof.reviewer) ? 'invalid-ai-reviewer' : prof.status) : 'pending',
@@ -57,8 +69,9 @@ export function statusesFor(records, scriptId, hash) {
     },
     approval_status,
     production_allowed: approval_status !== 'REVIEW_REQUIRED',
-    reviewer: humanOk ? appr.reviewer : aiOk ? ai.finalQa.reviewer : self ? self.reviewer : null,
-    reviewed_at: humanOk ? appr.reviewed_at : aiOk ? ai.finalQa.reviewed_at : self ? self.reviewed_at : null,
+    approval_basis: humanOk ? '人工审核' : aiOk ? 'AI 多角色审核（本哈希终审）' : carried ? `单 Claude 润色复核，承接润色前 ${carried.from_hash.slice(0, 12)} 之 ${carried.from_status}（${carried.record.record_id}）` : null,
+    reviewer: humanOk ? appr.reviewer : aiOk ? ai.finalQa.reviewer : carried ? carried.record.reviewer : self ? self.reviewer : null,
+    reviewed_at: humanOk ? appr.reviewed_at : aiOk ? ai.finalQa.reviewed_at : carried ? carried.record.reviewed_at : self ? self.reviewed_at : null,
     stale_records: all.length - cur.length,
   };
 }

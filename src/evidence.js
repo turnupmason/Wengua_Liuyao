@@ -348,10 +348,22 @@ function harmonyEffects(chart, analysis, q, yongDesc) {
       effect = calHelps.length && yongStrong ? 'neutral' : 'adverse';
     }
     const worldRel = h.worldInHarmony ? '世在局' : { generates: '局生世', controls: '局克世', generatedBy: '世生局', controlledBy: '世克局', same: '局与世比和' }[elementRelation(h.element, world.element)];
+    const notes = [];
+    // R-SANHE-06：官父世爻合成父局官局、不遇日月冲破者为吉
+    if (t.requires_guan_fu_shi) {
+      const composed = h.parts.every((p) => !p.sources.length || p.sources.some((x) => x.relative === '官鬼' || x.relative === '父母' || x.isWorld));
+      if (!composed) { effect = 'reference'; notes.push('局非官父世爻合成（R-SANHE-06）'); }
+    }
+    if (t.requires_no_clash && h.parts.some((p) => p.clashedByMonth || p.clashedByDay)) { effect = 'reference'; notes.push('局中有支遇日月冲破（R-SANHE-06「不遇日月冲破者」）'); }
+    // R-SANHE-05：吉局须世在局，或世不在局而局生世；局克世为凶；世克局、世生局、比和原文未言，不作吉论（程序口径）
+    if (effect === 'favorable' || effect === 'leaning-favorable') {
+      if (worldRel === '局克世') { effect = 'mixed'; notes.push('局本吉而克世（R-SANHE-05「局克世爻为凶」）'); }
+      else if (worldRel !== '世在局' && worldRel !== '局生世') { effect = 'reference'; notes.push(`${worldRel}：世不在局、局不生世，不作吉论（R-SANHE-05，程序口径）`); }
+    }
     return {
       branches: h.branches.join(''), element: h.element, relative, status: h.status, statusLabel: HARMONY_STATUS[h.status], mode: h.mode,
-      effect, label: t.label, condition, world: worldRel, completion: h.completion, impediments: h.impediments,
-      rule_ids: ['R-SANHE-01', ...(h.mode === '月建补支' || h.mode === '日辰补支' ? ['R-SANHE-02'] : []), ...(h.status === 'deferred' ? ['R-SANHE-03'] : []), ...(h.status === 'virtual' ? ['R-SANHE-04'] : []), ...t.rule_ids],
+      effect, label: t.label, condition, notes, world: worldRel, completion: h.completion, impediments: h.impediments,
+      rule_ids: ['R-SANHE-01', ...(h.mode === '月建补支' || h.mode === '日辰补支' ? ['R-SANHE-02'] : []), ...(h.status === 'deferred' ? ['R-SANHE-03'] : []), ...(h.status === 'virtual' ? ['R-SANHE-03', 'R-SANHE-04'] : []), 'R-SANHE-05', ...t.rule_ids].filter((x, i, a) => a.indexOf(x) === i),
     };
   });
 }
@@ -362,9 +374,11 @@ function harmonyTiming(harmonies, adverse) {
   for (const h of harmonies) {
     if (h.status === 'formed') continue;
     const isAdverse = h.effect === 'adverse';
-    if (isAdverse !== adverse || h.effect === 'neutral' || h.effect === 'unspecified') continue;
+    if (isAdverse !== adverse || !['favorable', 'leaning-favorable', 'adverse'].includes(h.effect)) continue;
     for (const c of h.completion) {
-      const basis = `${h.branches}${h.relative}局${h.statusLabel}：${c.kind === '补支' ? `缺${c.branches.join('')}，待其日月补足` : `${c.branch}${c.kind === '冲墓' ? '入墓，待冲开' : '空破，待填实'}（逢${c.branches.join('、')}）`}`;
+      if (!c.branches.length) continue; // 多阻须俱解而无一时兼解之支：不出应期
+      const what = c.kind === '补支' ? `缺${c.branches.join('')}，待其日月补足` : `${c.branch}${[...new Set(c.requirements.map((r) => r.requires.map((q) => q.kind).join('又')))].join('；')}，待${c.kind}（逢${c.branches.join('、')}）`;
+      const basis = `${h.branches}${h.relative}局${h.statusLabel}：${what}`;
       for (const scale of [SCALE_NEAR, 'month']) out.push({ timing_rule_id: c.rule, target_symbol: `${h.branches}${h.relative}局`, target_branches: c.branches, time_scale: scale, calculation_basis: isAdverse ? `${basis}；凶局成时须防` : basis });
     }
   }

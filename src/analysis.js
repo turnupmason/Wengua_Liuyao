@@ -246,14 +246,23 @@ function threeHarmonies(chart, lineFacts) {
     if (status === 'formed' && impediments.length) status = 'deferred';
     const completion = [];
     if (missing && status === 'virtual') completion.push({ kind: '补支', branches: [missing], scale: '日或月', rule: 'R-SANHE-04' });
+    // 一爻兼有数种阻碍（如月破又入墓）须各阻俱解；同支有数爻者，任一爻解阻即可。
+    // 只取能一时兼解该爻全部阻碍的地支作应期候选；无此地支者不出应期（R-SANHE-03）。
     for (const imp of impediments) {
-      const rel = [...new Set(imp.items.flatMap((x) => x.imps.flatMap((y) => y.release.branches)))];
-      completion.push({ kind: [...new Set(imp.items.flatMap((x) => x.imps.map((y) => y.release.kind)))].join("/"), branch: imp.branch, branches: rel, scale: '日或月', rule: 'R-SANHE-03' });
+      const perSource = imp.items.map((x) => {
+        const sets = x.imps.map((y) => y.release.branches);
+        const both = sets.reduce((a, b) => a.filter((v) => b.includes(v)));
+        return { position: x.position, requires: x.imps.map((y) => ({ kind: y.kind, release: y.release.kind, branches: y.release.branches })), singleTime: both };
+      });
+      const rel = [...new Set(perSource.flatMap((x) => x.singleTime))];
+      const kinds = [...new Set(imp.items.flatMap((x) => x.imps.map((y) => y.release.kind)))];
+      completion.push({ kind: rel.length ? kinds.join('、') : '多阻须俱解', branch: imp.branch, branches: rel, requirements: perSource, scale: '日或月', rule: 'R-SANHE-03' });
     }
     const worldPart = parts.some((p) => p.sources.some((s) => chart.lines[s.position - 1].isWorld && s.from !== 'changed'));
     out.push({
       element: h.element, branches: h.branches, status, mode, missing,
-      parts: parts.map((p) => ({ branch: p.branch, month: p.month, day: p.day, sources: p.sources.map((s) => ({ from: s.from, mode: s.mode, position: s.position })) })),
+      parts: parts.map((p) => ({ branch: p.branch, month: p.month, day: p.day, clashedByMonth: CLASH.get(monthBranch) === p.branch, clashedByDay: CLASH.get(dayBranch) === p.branch,
+        sources: p.sources.map((s) => { const l = chart.lines[s.position - 1]; return { from: s.from, mode: s.mode, position: s.position, relative: s.from === 'changed' ? l.changed.relative : l.relative, isWorld: s.from !== 'changed' && l.isWorld }; }) })),
       impediments, completion, worldInHarmony: worldPart,
       // 旧口径（R-SANHE-01 0.1.0 程序门槛），保留以便对照
       candidate: status === 'formed' || status === 'deferred',

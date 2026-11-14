@@ -5,9 +5,9 @@
   "technical_passed": 6,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 2,
-  "review_required": 4,
-  "approved_for_release": 2,
+  "ai_approved": 4,
+  "review_required": 2,
+  "approved_for_release": 4,
   "errors": [],
   "warnings": [],
   "similarity": [
@@ -19,11 +19,6 @@
     {
       "a": "IP-0002",
       "b": "IP-0005",
-      "jaccard6": 0.007
-    },
-    {
-      "a": "IP-0003",
-      "b": "IP-0004",
       "jaccard6": 0.006
     },
     {
@@ -35,6 +30,11 @@
       "a": "IP-0004",
       "b": "IP-0006",
       "jaccard6": 0.006
+    },
+    {
+      "a": "IP-0003",
+      "b": "IP-0004",
+      "jaccard6": 0.005
     },
     {
       "a": "IP-0001",
