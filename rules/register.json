@@ -1460,6 +1460,28 @@
       }
     },
     {
+      "rule_id": "R-RIZHEN-07",
+      "topic": "日辰与爻：日能伤爻，爻不能真伤日",
+      "source_book": "黄金策",
+      "source_chapter": "1、总断千金赋",
+      "original_text": [
+        "日伤爻，真罹其祸；爻伤日，徒受其名。"
+      ],
+      "modern_explanation": "日辰克爻，爻真受其害；卦中之爻克日辰，只是名义上相克，伤不到日辰。用神为日辰（日月为用）时，卦中忌神之克不能真伤用神。",
+      "applicable_conditions": "日辰与卦爻之生克，含以日辰为用神者",
+      "exceptions": "月建克日辰不在此条，另看月将章",
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.8.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见黄金策·1、总断千金赋（L34）；日伤爻真罹其祸，爻伤日徒受其名，解释一致"
+      }
+    },
+    {
       "rule_id": "R-ANDONG-01",
       "topic": "暗动",
       "source_book": "增删卜易",

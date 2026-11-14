@@ -1,0 +1,242 @@
+{
+  "script_id": "IPC-0177",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.1",
+  "class_key": "用日月为用;世世受克;原静旺有力;忌静旺有力",
+  "class_rank": 177,
+  "class_share_of_casts": 0.000264,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "戊申"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "辛亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "辛亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "辛亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "癸亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "癸亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "乙酉"
+    }
+  ],
+  "scenario_tags": [
+    "日辰为官",
+    "子孙当令",
+    "世爻受克"
+  ],
+  "judgment": {
+    "verdict": "pass-but-slow",
+    "verdict_label": "有望通过，但要待时",
+    "deciding_evidence": [
+      "官鬼不上卦，日辰即官鬼之五行，以日辰为用神（R-FUSHEN-01）；卦中之爻伤不到日辰（R-RIZHEN-07「爻伤日，徒受其名」）"
+    ],
+    "supporting": [
+      "原神妻财得相"
+    ],
+    "adverse": [
+      "月建为子孙之五行，月令克日辰之官",
+      "世爻受克"
+    ],
+    "conflicts_resolved": [
+      "日辰为用有力，然月令不助反克，判有望而待时；本宫首卦之伏官依 D-005 不作用神"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-FUSHEN-01",
+      "R-RIZHEN-01",
+      "R-RIZHEN-07",
+      "R-SHIYING-03",
+      "R-YONG-GUAN-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "有望通过，但要待时：当天日辰就是官星，月令却不帮它",
+    "brief": "这一卦有望通过，但要等。卦里没有官鬼，当天的日辰正是官星，以日辰为用神；卦中的子孙再旺也伤不到日辰，古书说「爻伤日，徒受其名」。只是这个月子孙当令，月令不帮官星，结果来得慢。",
+    "opening": "六爻没有官鬼。按飞伏神章「用神不现，即以日月为用神」，这一卦的日辰正是官星，便以日辰为用。日辰主一日之权，《黄金策》说「日伤爻，真罹其祸；爻伤日，徒受其名」——卦中之爻伤不到它。",
+    "process": "不顺的是月令：起卦月份是子孙当令，子孙之气克官，月建对日辰之官并不友好。卦中子孙旺而在位，虽伤不到日辰，却说明阻力的气氛很浓；生官的财得相，算是一点支撑。\n你的世爻受克，过程中你这一侧会觉得吃力。",
+    "ending": "日辰为官，卦中无人能真伤它，可成；月令不帮，所以慢。这一轮有望通过，需要等。",
+    "timing": {
+      "text": "用神为日辰，不在卦爻之中，本卦不按卦爻另列日子；传统上可留意官星值日之时，并等节令转为生官之月。",
+      "entries": []
+    },
+    "conclusion": "有望通过，但要待时。日辰本身就是官星，卦中无人能伤；只是月令不助，结果偏慢。保持耐心与跟进。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官鬼不上卦，以日辰为用"
+      },
+      {
+        "rule_id": "R-RIZHEN-07",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "日伤爻，真罹其祸；爻伤日，徒受其名。",
+        "applies_because": "爻伤日，徒受其名"
+      },
+      {
+        "rule_id": "R-RIZHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "日辰章第十七",
+        "quote": "日辰为六爻之主宰，司四时之旺相。",
+        "applies_because": "日辰为六爻之主宰"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。",
+        "applies_because": "世爻受克"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.1，写稿顺序第 177 类，占起卦概率 0.026%，全类 113 盘）：用神「日月为用」；世爻「世受克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：子孙(100%)；用神月令：不现(100%)。类内各盘不同之处：世爻六亲：兄弟(72%)、妻财(28%)；应爻对世：与世比和(52%)、克世(28%)、生世(19%)；发动六亲：无(42%)、兄弟(28%)、父母(19%)、子孙(8%)；均不改变本类结论，正文不写，由排盘逐盘列出。用神来源为日辰（全类月建为子孙之五行）。不列应期条目。本宫首卦之官鬼伏神（难出 58%、有效 39%）依 D-005 不作用神。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}

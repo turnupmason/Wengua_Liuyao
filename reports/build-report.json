@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 174,
-  "technical_passed": 174,
+  "scripts": 186,
+  "technical_passed": 186,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 174,
+  "ai_approved": 186,
   "review_required": 0,
-  "approved_for_release": 174,
+  "approved_for_release": 186,
   "errors": [],
   "warnings": [],
   "similarity": [
@@ -47,6 +47,11 @@
       "jaccard6": 0.229
     },
     {
+      "a": "IPC-0116",
+      "b": "IPC-0169",
+      "jaccard6": 0.224
+    },
+    {
       "a": "IPC-0055",
       "b": "IPC-0096",
       "jaccard6": 0.222
@@ -54,11 +59,6 @@
     {
       "a": "IPC-0070",
       "b": "IPC-0111",
-      "jaccard6": 0.22
-    },
-    {
-      "a": "IPC-0115",
-      "b": "IPC-0154",
       "jaccard6": 0.22
     }
   ]
