@@ -26,6 +26,21 @@ def prof(rank):
     return _prof[rank]
 
 
+def exact_charts():
+    # 已有逐盘精确稿的盘：查询时精确稿优先，不能再充当类别稿的样本盘
+    import glob
+    out = set()
+    for f in glob.glob(f'{ROOT}/authoring/interview-pass/IP-*.json'):
+        c = json.load(open(f, encoding='utf-8'))['chart_input']
+        out.add((tuple(c['line_values']), c['month_branch'], c['day_ganzhi']))
+    return out
+
+
+def class_samples(p):
+    ex = exact_charts()
+    return [s for s in p['samples'] if (tuple(s['line_values']), s['month_branch'], s['day_ganzhi']) not in ex]
+
+
 def src(rule_id, why, idx=0, quote=None):
     r = reg()[rule_id]
     return {'rule_id': rule_id, 'source_book': r['source_book'], 'source_chapter': r['source_chapter'],
@@ -90,7 +105,7 @@ def make(spec):
             + spec.get('calc', ''))
     doc = {
         'script_id': spec['id'], 'question_id': 'career.interview.interview-pass', 'match': 'class', 'equivalence_version': V,
-        'class_key': p['key'], 'class_rank': p['rank'], 'class_share_of_casts': round(p['share'], 6), **({'class_charts': p['charts']} if p['charts'] < 8 else {}), 'sample_charts': p['samples'],
+        'class_key': p['key'], 'class_rank': p['rank'], 'class_share_of_casts': round(p['share'], 6), **({'class_charts': p['charts']} if p['charts'] < 8 else {}), 'sample_charts': class_samples(p),
         'scenario_tags': spec['tags'],
         'judgment': {'verdict': spec['verdict'], 'verdict_label': spec['label'], 'deciding_evidence': spec['deciding'], 'supporting': spec.get('supporting', []),
                      'adverse': spec.get('adverse', []), 'conflicts_resolved': spec.get('conflicts', []), 'rule_ids': rule_ids,
