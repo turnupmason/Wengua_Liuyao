@@ -1,0 +1,22 @@
+# 批次收尾：构建 → 检查各稿无技术错误 → 记录单 Claude 润色（A 类，写作时同步润色）与审核 → 再构建。
+# 用法：python scripts/authoring/finalize_batch.py IPC-0005 IPC-0006 ...
+import json, subprocess, sys
+ROOT = 'D:/Wengua_Liuyao'
+ids = sys.argv[1:]
+run = lambda *a: subprocess.run(a, cwd=ROOT, capture_output=True, text=True, encoding='utf-8')
+run('node', 'scripts/build-readings.mjs')
+drafts = {e['script_id']: e for e in json.load(open(f'{ROOT}/dist/liuyao-drafts.json', encoding='utf-8'))['readings']}
+bad = {i: drafts[i]['checks']['errors'] for i in ids if i not in drafts or drafts[i]['checks']['errors']}
+if bad:
+    for i, e in bad.items(): print(i, '\n  '.join(['错误：'] + (e if isinstance(e, list) else ['缺稿'])))
+    sys.exit(1)
+recs = json.load(open(f'{ROOT}/review/records.json', encoding='utf-8'))['records']
+for i in ids:
+    h = drafts[i]['content_hash']
+    if not any(r['script_id'] == i and r['stage'] == 'polish' for r in recs):
+        r = run('node', 'scripts/polish/record-polish.mjs', i, f'authoring/classes/interview-pass/{i}.json', 'A', h, '--checked', '新稿，写作时按 V5.0 同步润色并通读')
+        print(r.stdout.strip() or r.stderr.strip())
+    r = run('node', 'scripts/review/record-single-review.mjs', f'reports/review-classes/{i}.json')
+    print(r.stdout.strip() or r.stderr.strip())
+r = run('node', 'scripts/build-readings.mjs')
+print(r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr[-500:])

@@ -1908,17 +1908,24 @@
       "source_chapter": "六冲章第二十",
       "original_text": [
         "子午相冲、丑未相冲、寅申相冲、卯酉相冲、辰戌相冲、巳亥相冲。",
-        "冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶"
+        "冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶",
+        "六合卦变六冲卦者，用神旺者始吉终凶，图事难成，有始无终也"
       ],
-      "modern_explanation": "冲须结合用神旺衰：用神旺虽冲不破。",
+      "modern_explanation": "冲者散也：凶事宜冲，吉事不宜，须兼用神旺衰——用神旺虽冲不破，用神失陷凶而又凶；六合卦变六冲，用神旺者亦始吉终凶，有始无终。",
       "applicable_conditions": "地支相冲、六冲卦",
       "exceptions": "",
       "adoption": "adopted",
       "engine_refs": [
         "src/constants.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见六冲章第二十（L515）；补入同段「六合卦变六冲卦者…有始无终也」；解释与原文一致"
+      }
     },
     {
       "rule_id": "R-GUA-CHONGHE-01",
@@ -1935,8 +1942,14 @@
       "engine_refs": [
         "src/hexagrams.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见八宫图第三；引擎按内外卦对应爻相冲计算，测试核得正好十卦，与原文所列一致"
+      }
     },
     {
       "rule_id": "R-GUA-CHONGHE-02",
@@ -1953,8 +1966,14 @@
       "engine_refs": [
         "src/hexagrams.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见六合章第十九；引擎按内外卦对应爻两两相合计算，测试核得八卦"
+      }
     },
     {
       "rule_id": "R-XING-01",
@@ -2157,7 +2176,8 @@
       "source_chapter": "反伏章第二十五",
       "original_text": [
         "内卦反伏，内则不安。外卦反伏，外则不宁。",
-        "反伏卦用神旺相不变冲克者虽则反复，事之必成"
+        "反伏卦用神旺相不变冲克者虽则反复，事之必成",
+        "占功名者，用爻旺相，迁而又行往他处，去而仍复来。用神失陷有或降或升，或得或失矣。"
       ],
       "modern_explanation": "反吟、伏吟主反复，但用神旺相不变冲克者事仍可成，不能一律断凶。",
       "applicable_conditions": "内或外卦整体变出相冲（反吟）或同支（伏吟）",
@@ -2166,8 +2186,14 @@
       "engine_refs": [
         "src/analysis.js"
       ],
-      "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-14 授权为正式审核）",
+        "round": "class-writing",
+        "date": "2026-11-14",
+        "note": "原文逐字见反伏章第二十五（L609-610）；补入功名专句；解释：反伏主反复，用神旺相不变冲克者仍可成"
+      }
     },
     {
       "rule_id": "R-DUFA-01",

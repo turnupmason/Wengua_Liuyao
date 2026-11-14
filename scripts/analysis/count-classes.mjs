@@ -45,6 +45,13 @@ if (isMainThread) {
         wr.sort((a, b) => b[1][1] - a[1][1]).forEach(([, v], i) => { acc += v[1] / tot; for (const q of [0.1, 0.2, 0.3, 0.4]) if (!wmarks[q] && acc >= q) wmarks[q] = i + 1; });
         writable.classes_needed_for_share_of_all_casts = wmarks;
         const blockers = Object.fromEntries(all.filter(([k]) => k.startsWith('X|')).map(([k, v]) => [k.slice(2), +(v[1] / tot).toFixed(4)]));
+        { // 写稿顺序表：按掷钱概率排序的前 2000 个类别与累计覆盖
+          const rows = all.filter(([k]) => k.startsWith('C|')).sort((x, y) => y[1][1] - x[1][1]).slice(0, 2000);
+          let cum = 0;
+          const list = rows.map(([k, [c, p]], i) => { cum += p / tot; return { rank: i + 1, key: k.slice(4), charts: c, share: p / tot, cumulative: cum }; });
+          writeFileSync(new URL('../../reports/interview-pass-class-order.json', import.meta.url), `${JSON.stringify({ equivalence_version: EQUIVALENCE_VERSION, classes: list }, null, 1)}
+`);
+        }
         const report = { question: Q, equivalence_version: EQUIVALENCE_VERSION, charts, seconds: (Date.now() - t0) / 1000, fine: summarize('F|'), classes: summarize('C|'), writable, blockers };
         writeFileSync(new URL('../../reports/interview-pass-classes.json', import.meta.url), `${JSON.stringify(report, null, 2)}\n`);
         console.log(JSON.stringify({ charts, seconds: report.seconds, fine: report.fine.classes, classes: report.classes.classes, coverage: report.classes.coverage_by_cast_probability, writable, blockers }));

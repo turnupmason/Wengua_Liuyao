@@ -248,10 +248,12 @@ function timingCandidates(yong, facts, chart, scale) {
   const add = (rule, event, branches, basis) => out.push({ timing_rule_id: rule, target_symbol: `${yong.label}${yong.relative}${yong.branch}`, target_branches: [...new Set(branches)], time_scale: scale, calculation_basis: basis });
   const cal = facts.calendar;
   const b = yong.branch;
-  if (cal.void) add('R-YINGQI-08', '出空', [b, CLASH.get(b)], `旬空最爱填冲：逢${b}（出空填实）或逢${CLASH.get(b)}（冲空）`);
+  // 冲空则实（R-KONG-06）：日辰已冲起者不作空论，按不空取期
+  const isVoid = Boolean(cal.void) && cal.void.zengshan !== '冲空则实';
+  if (isVoid) add('R-YINGQI-08', '出空', [b, CLASH.get(b)], `旬空最爱填冲：逢${b}（出空填实）或逢${CLASH.get(b)}（冲空）`);
   if (cal.monthBreak) add('R-YINGQI-07', '填破', [b, COMBINE.get(b)], `月破喜填：逢${b}（填实）或逢${COMBINE.get(b)}（破而逢合）`);
-  if (!yong.moving && !cal.void && !cal.monthBreak) add('R-YINGQI-01', '静而逢值逢冲', [b, CLASH.get(b)], `静爻待值待冲：逢${b}或逢${CLASH.get(b)}`);
-  if (yong.moving && !cal.void) add('R-YINGQI-02', '动而逢合逢值', [b, COMBINE.get(b)], `动爻待值待合：逢${b}或逢${COMBINE.get(b)}`);
+  if (!yong.moving && !isVoid && !cal.monthBreak) add('R-YINGQI-01', '静而逢值逢冲', [b, CLASH.get(b)], `静爻待值待冲：逢${b}或逢${CLASH.get(b)}`);
+  if (yong.moving && !isVoid) add('R-YINGQI-02', '动而逢合逢值', [b, COMBINE.get(b)], `动爻待值待合：逢${b}或逢${COMBINE.get(b)}`);
   const tombBranch = LIFE_STAGES[yong.element].墓;
   const inTomb = cal.dayTomb || chart.lines.some((o) => o.moving && o.position !== yong.position && o.branch === tombBranch) || (facts.change && facts.change.lifeStage === '墓');
   if (inTomb) add('R-YINGQI-05', '冲墓', [CLASH.get(tombBranch)], `入墓待冲开：逢${CLASH.get(tombBranch)}冲${tombBranch}墓`);
