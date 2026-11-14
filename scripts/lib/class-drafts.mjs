@@ -60,6 +60,8 @@ export function checkClassDraft(src, userTexts) {
     if (evidence.flows.some((f) => f.flow === 'hidden' && ['yong', 'yuan'].includes(f.role)) && !body.includes('伏')) errors.push(`C33 样本 ${tag} 有用神或原神伏藏，正文未讲到伏神`);
     if (evidence.yongshen.line?.void && !body.includes('空')) errors.push(`C33 样本 ${tag} 用神旬空，正文未讲到`);
     for (const d of src.judgment.decisive || []) {
+      // 卦级依据（如六合变六冲「始吉终凶」，R-CHONG-01）：类键须含所述卦象（样本已由 C30 核为本类）
+      if (d.role === 'gua') { if (!d.basis || !String(src.class_key).includes(d.basis)) errors.push(`C33 卦级依据「${d.basis}」不在类键中`); continue; }
       const lines = d.role === 'yong' ? [evidence.yongshen.line].filter(Boolean) : d.role === 'world' ? [evidence.world] : d.role === 'yuan' ? evidence.yuan : d.role === 'ji' ? evidence.ji : [];
       if (d.hidden) {
         const f = evidence.flows.find((x) => x.flow === 'hidden' && x.role === d.role);

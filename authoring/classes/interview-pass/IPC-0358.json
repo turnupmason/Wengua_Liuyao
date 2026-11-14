@@ -1,0 +1,262 @@
+{
+  "script_id": "IPC-0358",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.3",
+  "class_key": "用明现[EFFECTIVE]静受动克;世世安;原静不作用;忌无力;六合合变冲",
+  "class_rank": 358,
+  "class_share_of_casts": 0.000171,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丁卯"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        9,
+        8,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "己未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "甲寅"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        7,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "癸未"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        9,
+        8,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        9,
+        8,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己酉"
+    }
+  ],
+  "scenario_tags": [
+    "六合卦变六冲",
+    "子孙发动而无力",
+    "官星受动克"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "卦由六合变六冲：「六合卦变六冲卦者，用神旺者始吉终凶，图事难成，有始无终也」（R-CHONG-01）"
+    ],
+    "supporting": [
+      "官鬼当前有效；忌神子孙动而无力；应爻生世合世"
+    ],
+    "adverse": [
+      "原神妻财安静不作用"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0123、IPC-0356；子孙动而无力，非主因"
+    ],
+    "rule_ids": [
+      "R-CHONG-01",
+      "R-DONGJING-01",
+      "R-GUA-CHONGHE-01",
+      "R-GUA-CHONGHE-02",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YUANJI-04"
+    ],
+    "decisive": [
+      {
+        "role": "gua",
+        "effect": "adverse",
+        "basis": "六合合变冲"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：卦由合变冲，起头好、结尾散",
+    "brief": "这一卦偏难通过，先顺后变。卦本是六合，应位生你、合你；官星当下有效，动来的子孙也无力。可子孙一动，卦就由六合变成六冲，古书说合变冲者始吉终凶、有始无终。事情开头能谈拢，后面容易散。",
+    "opening": "六合卦，世应相合，应位生世合世。官鬼是用神，起卦月份一般父母当令、官星泄气而另得扶持，也有官星当令的，以你这一卦的排盘为准；有效。\n卦中发动的是子孙，却无力。",
+    "process": "子孙动而无力，伤不到官星，这不是主因；主因在卦象本身：六合变六冲，六冲章说「用神旺者始吉终凶，图事难成，有始无终也」，同章又说诸占「先合后离」。\n生官的财安静而不当令，帮不上。",
+    "ending": "合变冲而有始无终，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，先顺后变，偏于不如意。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或消息落定",
+          "target_symbol": "官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。开头顺、结尾散。别因前段顺利而松懈，其他机会照常推进。",
+    "classical_sources": [
+      {
+        "rule_id": "R-CHONG-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六冲章第二十",
+        "quote": "六合卦变六冲卦者，用神旺者始吉终凶，图事难成，有始无终也",
+        "applies_because": "六合卦变六冲卦，始吉终凶"
+      },
+      {
+        "rule_id": "R-YUANJI-04",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。",
+        "applies_because": "子孙动而无力"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "世为己，应为人，大宜契合。",
+        "applies_because": "世应相生"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "财静而不旺"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.3，写稿顺序第 358 类，占起卦概率 0.017%，全类 133 盘）：用神「明现[EFFECTIVE]静受动克」；世爻「世安」；原神妻财安静而月令不旺，不主动作用；忌神子孙当前无力（INEFFECTIVE）；卦级「六合合变冲」。类内各盘不同之处：月建六亲：父母(75%)、官鬼(25%)；用神月令：休囚(75%)、旺(25%)；用神生扶：日生(30%)、日生、日长生(9%)、日合(9%)、月扶(8%)；均不改变本类结论，正文不写，由排盘逐盘列出。卦级：六合卦变六冲 100%；发动六亲：子孙 100%（三层判定无力）；应爻生世合世 100%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
