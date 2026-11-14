@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 1298,
-  "technical_passed": 1298,
+  "scripts": 1310,
+  "technical_passed": 1310,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 1298,
+  "ai_approved": 1310,
   "review_required": 0,
-  "approved_for_release": 1298,
+  "approved_for_release": 1310,
   "errors": [],
   "warnings": [
     "IPC-0220: C25 与IPC-0858字符六元组相似度 0.34，须复核是否机械复用",
@@ -127,14 +127,21 @@
     "IPC-1139: C25 与IPC-0919字符六元组相似度 0.38，须复核是否机械复用",
     "IPC-1140: C25 与IPC-1131字符六元组相似度 0.31，须复核是否机械复用",
     "IPC-1151: C25 与IPC-0893字符六元组相似度 0.30，须复核是否机械复用",
+    "IPC-1232: C25 与IPC-1300字符六元组相似度 0.46，须复核是否机械复用",
     "IPC-1250: C25 与IPC-1286字符六元组相似度 0.36，须复核是否机械复用",
-    "IPC-1286: C25 与IPC-1250字符六元组相似度 0.36，须复核是否机械复用"
+    "IPC-1286: C25 与IPC-1250字符六元组相似度 0.36，须复核是否机械复用",
+    "IPC-1300: C25 与IPC-1232字符六元组相似度 0.46，须复核是否机械复用"
   ],
   "similarity": [
     {
       "a": "IPC-0641",
       "b": "IPC-0659",
       "jaccard6": 0.531
+    },
+    {
+      "a": "IPC-1232",
+      "b": "IPC-1300",
+      "jaccard6": 0.455
     },
     {
       "a": "IPC-0888",
@@ -175,11 +182,6 @@
       "a": "IPC-0919",
       "b": "IPC-1139",
       "jaccard6": 0.383
-    },
-    {
-      "a": "IPC-0333",
-      "b": "IPC-0470",
-      "jaccard6": 0.381
     }
   ]
 }
