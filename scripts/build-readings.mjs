@@ -380,7 +380,7 @@ for (const { entry } of built) {
   md.push(`**详断·过程**\n\n${r.process.replace(/\n/g, '\n\n')}\n`);
   md.push(`**详断·结局**\n\n${r.ending.replace(/\n/g, '\n\n')}\n`);
   md.push(`**应期**　${r.timing.text}\n`);
-  for (const e of r.timing.entries) md.push(`- ${e.target_branch}日｜${e.target_event}｜${e.target_symbol}｜${e.condition}｜${e.timing_rule_id}｜${e.source_reference}`);
+  for (const e of r.timing.entries) md.push(`- ${e.target_branch}${e.time_scale === 'month' ? '月' : '日'}｜${e.target_event}｜${e.target_symbol}｜${e.condition}｜${e.timing_rule_id}｜${e.source_reference}`);
   md.push(`\n**总断**　${r.conclusion}\n`);
   md.push('**古籍依据**\n');
   for (const c of r.classical_sources) md.push(`- 《${c.source_book}·${c.source_chapter}》「${c.quote}」——${c.applies_because}（${c.rule_id}）`);

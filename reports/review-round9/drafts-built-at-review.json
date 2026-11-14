@@ -1,0 +1,2369 @@
+{
+  "content_version": "liuyao-readings-0.1.0",
+  "not_for_release": true,
+  "readings": [
+    {
+      "script_id": "IP-0001",
+      "source_file": "authoring/interview-pass/IP-0001.json",
+      "question_id": "career.interview.interview-pass",
+      "question_type": "interview_pass",
+      "domain_id": "career",
+      "question_text": "这次面试能通过吗？",
+      "key": "career.interview.interview-pass|778888|亥|丁亥",
+      "chart_input": {
+        "line_values": [
+          7,
+          7,
+          8,
+          8,
+          8,
+          8
+        ],
+        "month_branch": "亥",
+        "day_ganzhi": "丁亥"
+      },
+      "rule_profile_id": "zengshan-main",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0",
+      "source_version": "0.5.0",
+      "facts_digest": "0303b7f3b21cd9cb957e066ae079da98f92cbdd782cae48e67a98ef766909538",
+      "scenario_tags": [
+        "六爻安静",
+        "官鬼持世",
+        "原神临应"
+      ],
+      "verdict": "likely-pass",
+      "verdict_label": "倾向通过",
+      "judgment": {
+        "verdict": "likely-pass",
+        "verdict_label": "倾向通过",
+        "yongshen_position": 2,
+        "deciding_evidence": [
+          "官鬼卯木持世，得月建亥水生、日辰亥水生，且长生于亥日（R-YONG-GUAN-02、R-WANG-02）",
+          "原神妻财亥水即月建、日辰所在，静而旺；其生官之力已含在月生、日生之中，不另计（AI-4 复核）"
+        ],
+        "supporting": [
+          "忌神子孙酉金休囚安静，不能克官（R-YUANJI-04）",
+          "仇神兄弟丑土两爻休囚安静"
+        ],
+        "adverse": [
+          "父母巳火月破、日冲为日破、日克、绝于亥：文书一类偏弱（R-RIZHEN-02），面试按谋职看父母为辅，不改主判（D-010）"
+        ],
+        "conflicts_resolved": [
+          "父母受伤与官星旺相并见：用神为官鬼，父母只作辅看，主判以官星与原神为准（R-SICHU-01）"
+        ],
+        "rule_ids": [
+          "R-YONG-GUAN-01",
+          "R-YONG-GUAN-02",
+          "R-YONG-GUAN-03",
+          "R-YUANJI-04",
+          "R-RIZHEN-02",
+          "R-YINGQI-01"
+        ],
+        "flow_acknowledgements": [],
+        "decisive": [
+          {
+            "position": 2,
+            "role": "yong",
+            "effect": "support"
+          },
+          {
+            "position": 5,
+            "role": "yuan",
+            "effect": "support"
+          }
+        ]
+      },
+      "reading": {
+        "title": "倾向通过：官星就在你这一爻，月建日辰都来生它",
+        "brief": "这一卦倾向通过。代表考核的官星就在你自己的世爻上，当令的月建、当天的日辰都在生它，根基扎实；能克它的子孙休囚不动，构不成威胁。卦中没有动爻，结果不会马上揭晓。唯一偏弱的是文书一爻，材料细节上要多留神。",
+        "opening": "问面试过不过，要看官鬼：求职一类的占问以官鬼为用神，它的强弱动静，便是这一轮考核的走向。本卦地泽临，官鬼卯木正在二爻世位；世爻代表你自己，官星正落在你这一方。《增删卜易》说「占功名者若得官鬼持世即许成名」，在求职卦里，这是最直接的好兆头。\n卯木逢亥月，亥水当令，水能生木；起卦这天又是亥日，再生一层，而且木到亥地正是长生之位。月建、日辰两头都在扶它，这个官星不是虚浮的，底下有实在的根。",
+        "process": "推动官星的力量来自妻财。本卦妻财亥水居五爻应位，它与当令的月建、当天的日辰同是亥水——官星从月上、日上得到的生，就是这股水气，所以它不是月日之外另添的一份助力，而是同一股力量在卦中的落脚处。应爻财来生世，传统上看作配合之象；不过卦象能说明的，只是应位一侧给出的是生扶而不是克制，对方心里究竟怎么想，并不能由此断定。\n至于阻力，能克官的是上爻子孙酉金。时值冬令，金生水而自泄，本身休囚，又安静不动。《增删卜易》把忌神「休囚不动」列为克不了用神的情形之一，这一爻只是摆在那里。三、四两爻的兄弟丑土同样休囚安静，未见发动牵制。\n卦中唯一吃亏的是初爻父母巳火。父母在求职卦里管文书、材料与通知；巳火与月建亥水相冲，已成月破，当天亥日又来冲克，火到亥地还是绝处，几乎提不起来。这一爻不主这一轮的成败，只提示书面材料、证明文件、后续通知这类环节容易出疏漏。",
+        "ending": "六爻都不动，没有哪一爻出来改变局面，结论就看官星自身：坐在世爻，月日两头生扶，克它的子孙休囚无力。有利的一面明显压过不利的一面，这一轮倾向通过。文书上的弱处只关乎细节，动摇不了这个结论；官星安静，传统上要等它逢值、逢冲之时才应事，消息不会当下就到。",
+        "timing": {
+          "text": "官鬼卯木安静，不空不破。按「静而逢值逢冲」推算，结果或通知多在卯日（官星值日）或酉日（冲动官星）前后到来，可作为等候消息的参考。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "target_event": "面试结果或通知到来",
+              "target_symbol": "二爻官鬼卯木（持世）",
+              "condition": "用神安静、不空不破：静而逢值",
+              "target_branch": "卯",
+              "time_scale": "day",
+              "calculation_basis": "静爻逢值日",
+              "source_reference": "增删卜易·各门类应期总注章「静而逢值逢冲」"
+            },
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "target_event": "面试结果或通知到来",
+              "target_symbol": "二爻官鬼卯木（持世）",
+              "condition": "用神安静、不空不破：静而逢冲",
+              "target_branch": "酉",
+              "time_scale": "day",
+              "calculation_basis": "静爻逢冲日",
+              "source_reference": "增删卜易·各门类应期总注章「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "这一轮倾向通过。主要依据是官星持世，月建、日辰之水同来生它，生官的财爻正是这股水气；克官的子孙休囚安静，作不了梗。眼下可做的，是把要提交的材料、证明和联系方式再核对一遍，后续安排照常准备。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "用神章第八",
+            "quote": "占功名、官府、雷霆鬼神、妻占夫皆以官鬼爻为用神",
+            "applies_because": "面试求职属求名，取官鬼为用神"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "八宫图第三",
+            "quote": "占功名者若得官鬼持世即许成名，子孙持世且待时。",
+            "applies_because": "本卦官鬼卯木持世"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。",
+            "applies_because": "官星持世而得月日相生"
+          },
+          {
+            "rule_id": "R-YUANJI-04",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "忌神虽动，不能克用神者有七：忌神休囚不动",
+            "applies_because": "子孙酉金休囚安静"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲：如主事爻临子水不动，后逢子日午日而应之",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "用神取二爻官鬼卯木（本卦唯一官鬼，持世）。卯木于亥月为相（月生），亥日日生，木长生于亥。原神妻财亥水在五爻应位，临月建、临日，静而极旺，生世。忌神子孙酉金在上爻，亥月休囚、亥日泄气，安静，合「忌神休囚不动」之无力条。仇神兄弟丑土（三、四爻）休囚安静。父母巳火在初爻，月破，亥日冲之为日破（休囚静爻逢日冲），并日克、绝于亥。旬空午未，卦中无。非六冲六合卦，六爻安静。应期取用神静而逢值（卯）逢冲（酉）。 原神亥水即月建、日辰，其生官已含在月生、日生之中，不另计（AI-4 复核）。父母巳火逢亥日冲：增删卜易作日破，卜筮正宗作暗动（D-001），只涉辅看之父母，不影响主判。"
+      },
+      "calculation_facts": {
+        "primary": "地泽临（坤宫二世，土）",
+        "changed": null,
+        "month": "亥",
+        "day": "丁亥",
+        "void": "午未",
+        "lines": [
+          "上爻 青龙 子孙癸酉金",
+          "五爻 玄武 妻财癸亥水应",
+          "四爻 白虎 兄弟癸丑土",
+          "三爻 螣蛇 兄弟丁丑土",
+          "二爻 勾陈 官鬼丁卯木世",
+          "初爻 朱雀 父母丁巳火"
+        ],
+        "yongshen": "二爻官鬼卯木",
+        "roles": {
+          "yong": "官鬼",
+          "yuan": "妻财",
+          "ji": "子孙",
+          "chou": "兄弟"
+        }
+      },
+      "flows": [],
+      "timing_resolution": [
+        {
+          "target_branch": "卯",
+          "offsetDays": 4,
+          "withinCurrentXun": true,
+          "daysLeftInXun": 6
+        },
+        {
+          "target_branch": "酉",
+          "offsetDays": 10,
+          "withinCurrentXun": false,
+          "daysLeftInXun": 6
+        }
+      ],
+      "authoring": {
+        "author": "Claude（AI 起草）",
+        "status": "draft-complete",
+        "written_at": "2026-11-13",
+        "revision": 4,
+        "revision_note": "AI-5 中文精修（独立代理，round5）：只改表达；改动与理由见 reports/review-round5/ai5-editor.json；IP-0006 结局「由顺转逆」经作者确认合原意（先吉后凶）"
+      },
+      "checks": {
+        "errors": [],
+        "warnings": []
+      },
+      "content_hash": "f7f46a75a3d0fd637e9b75d07e961c12a6bef93624d2db77383e5418f52b64bf",
+      "rules_used": [
+        {
+          "id": "R-YONG-GUAN-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUANJI-04",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-RIZHEN-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        }
+      ],
+      "rules_unapproved": [],
+      "statuses": {
+        "authoring_status": "draft-complete",
+        "technical_review_status": "passed",
+        "author_full_text_review_status": "pending",
+        "interpretation_review_status": "pending",
+        "ai_review": {
+          "source_check": "resolved",
+          "independent": "resolved",
+          "adversarial": "resolved",
+          "editor": "DONE",
+          "final_qa": "PASS",
+          "missing_conditions": []
+        },
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "AI-6 最终验收（独立代理）",
+        "reviewed_at": "2026-11-13",
+        "stale_records": 6
+      }
+    },
+    {
+      "script_id": "IP-0002",
+      "source_file": "authoring/interview-pass/IP-0002.json",
+      "question_id": "career.interview.interview-pass",
+      "question_type": "interview_pass",
+      "domain_id": "career",
+      "question_text": "这次面试能通过吗？",
+      "key": "career.interview.interview-pass|778987|亥|丙戌",
+      "chart_input": {
+        "line_values": [
+          7,
+          7,
+          8,
+          9,
+          8,
+          7
+        ],
+        "month_branch": "亥",
+        "day_ganzhi": "丙戌"
+      },
+      "rule_profile_id": "zengshan-main",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0",
+      "source_version": "0.5.0",
+      "facts_digest": "56f8939a8e00856ecdbdba09f215a69f9b5f407a50271509d2fc0a6cdcbce11e",
+      "scenario_tags": [
+        "独发",
+        "子孙持世发动",
+        "忌神化回头生",
+        "原神伏藏"
+      ],
+      "verdict": "unlikely",
+      "verdict_label": "难以通过",
+      "judgment": {
+        "verdict": "unlikely",
+        "verdict_label": "难以通过",
+        "yongshen_position": 2,
+        "deciding_evidence": [
+          "世爻子孙酉金独发，冲克二爻官鬼卯木（R-YONG-ZI-01、R-YONG-GUAN-03「子孙持世，休望荣荫」）",
+          "忌神酉金得戌日生、化戌土回头生，为有力之忌神（R-YUANJI-03）"
+        ],
+        "supporting": [
+          "官鬼卯木得月生、日合，本身生多克少",
+          "原神妻财子水伏而有用（B-009：生多克少、飞神旬空已推开），静而旺"
+        ],
+        "adverse": [
+          "应爻父母巳火月破入日墓，应位无扭转之力"
+        ],
+        "conflicts_resolved": [
+          "按 D-016 修正 C（已裁定）：子孙酉金持世发动，得日生、化回头生，当前有效而发动，为有力动忌，可作主要不利依据。官星本身生多克少、原神伏而有用，均已重新分析：伏财静而不能主动生扶非休囚之官星（R-DONGJING-01），接续相生缺伏财发动之依据（D-013），只作转机。八宫图第三「子孙持世且待时」与本轮偏难、后续或有转机相合",
+          "已排除黄金策「福德变官身位合」之例外：本卦子孙化兄弟，不化官（R-QIUMING-01）"
+        ],
+        "rule_ids": [
+          "R-FUSHEN-02",
+          "R-FUSHEN-06",
+          "R-SICHU-01",
+          "R-YINGQI-01",
+          "R-YINGQI-02",
+          "R-YONG-FU-01",
+          "R-YONG-GUAN-02",
+          "R-YONG-GUAN-03",
+          "R-YONG-GUAN-05",
+          "R-YONG-ZI-01",
+          "R-YUANJI-03",
+          "R-YUANJI-05"
+        ],
+        "flow_acknowledgements": [
+          {
+            "flow_id": "HIDDEN@5:妻财子",
+            "accepted": true,
+            "note": "B-009 判有效：伏而有用、静而未发；作转机条件，不作翻判依据（D-013）"
+          },
+          {
+            "flow_id": "CHANGE@4:酉化戌",
+            "accepted": true,
+            "note": "忌神化回头生，变爻戌临日：忌神得助，于用神为凶"
+          }
+        ],
+        "decisive": [
+          {
+            "position": 4,
+            "role": "ji",
+            "effect": "adverse"
+          }
+        ]
+      },
+      "reading": {
+        "title": "偏难通过：克官的子孙坐在你的世爻上，又独自发动",
+        "brief": "这一卦偏难通过。官星本身有气，问题在于你的世爻上坐着克官的子孙，它又是卦中唯一的动爻，直冲官星，还得日辰与变爻相助。生官的财爻伏在下面，有用却未动，只算一线转机。手上的其他机会宜同步推进。",
+        "opening": "面试一问，以官鬼为用神。本卦火泽睽，官鬼卯木在二爻，亥月水旺，正来生它，是有气的；当天戌日又与卯木相合，官星自身站得住。从卦象看，这一轮的机会本身是有分量的。\n麻烦出在世爻。代表你自己的这一爻，坐的是子孙酉金，而子孙在求职卦里正是克官之神，《增删卜易》说它「独占功名者忌之」。克官的力量不在别处，就在你自己这一爻上。",
+        "process": "更要紧的是，这个子孙并不安静，它是全卦唯一发动的一爻。酉金一动，便冲克二爻卯木：金克木，卯酉又相冲。卯木静而得戌日相合，本有被扶起之意，偏偏迎面撞上这一冲。\n酉金逢冬，金气被水泄去，本是休囚之爻；可当天是戌日，戌土生金，它又化出戌土，回头再生自身——一动之后，力气反倒补足了。照《增删卜易》元神忌神衰旺章的标准，这是有力的忌神，不是虚张声势。\n再找生官的力量。妻财在本卦没有明现，子水伏在五爻兄弟未土之下。这个伏神是有用的：亥月水旺，子水当令；发动的酉金金生水，也在生它；当天戌日虽以土克水，生它的力量仍多于克它的；压在上面的未土正值旬空，《增删卜易》说飞神逢空「虽有若无」，压不住它。所以它是卦中一股实在的生气，只是伏着不动。古书讲，安静旺相之爻可以生得休囚之爻；官星得月令之生，并不休囚，静伏的财爻便谈不上主动去生它，自然也抵不住正在发动的子孙。金生水、水生木这条接续相生的路，要等财爻真正动起来才走得通，眼下只算一线转机，不足以改变这一轮的判断。\n应爻父母巳火逢亥月相冲而破，又入戌日之墓，自顾不暇，左右不了局面。",
+        "ending": "单论生克，官星得月令之生、日辰之合，只挨了这一处动克，自身是站得住的。但求名一类的占法另有专条：子孙持世，「休望荣荫」；子孙动于卦中，无论入场还是升迁，「悉如水中捞月」。本卦子孙既持世又发动，两条都占全了，冲克又正落在官星身上；伏财虽然有用，却没有动起来接应。所以这一轮通过的可能偏低，只是并非全无转机。",
+        "timing": {
+          "text": "主导这一卦的，是发动的子孙酉金。按「动而逢合逢值」推算，若有答复，多在酉日（子孙值日）或辰日（辰与酉合）前后，带来的多半是不利的消息。这只是按传统推出的参考时点，不作定论。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-02",
+              "target_event": "不利结果落定",
+              "target_symbol": "四爻子孙酉金（持世发动）",
+              "condition": "忌神发动：动而逢值",
+              "target_branch": "酉",
+              "time_scale": "day",
+              "calculation_basis": "动爻逢值日",
+              "source_reference": "增删卜易·各门类应期总注章「动而逢合逢值」"
+            },
+            {
+              "timing_rule_id": "R-YINGQI-02",
+              "target_event": "不利结果落定",
+              "target_symbol": "四爻子孙酉金（持世发动）",
+              "condition": "忌神发动：动而逢合",
+              "target_branch": "辰",
+              "time_scale": "day",
+              "calculation_basis": "动爻逢合日（辰酉合）",
+              "source_reference": "增删卜易·各门类应期总注章「动而逢合逢值」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。持世的子孙独自发动，又得日辰与回头之生，直冲官星，这股阻力正在起作用；官星生多克少，伏财也有用，可两者都静，抵不住这一动。《增删卜易》说子孙持世「且待时」，这一次期望宜放低些；这边若还有后续沟通，照样认真对待。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "八宫图第三",
+            "quote": "占功名者若得官鬼持世即许成名，子孙持世且待时。",
+            "applies_because": "子孙持世：本轮难成，须待时"
+          },
+          {
+            "rule_id": "R-YONG-ZI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "用神章第八",
+            "quote": "为制鬼之神、为解忧之神、为剥官之神，诸事见之为喜，独占功名者忌之。",
+            "applies_because": "子孙持世并发动"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "子孙持世﹐休望荣荫。",
+            "applies_because": "世爻为子孙酉金"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-05",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易序",
+            "quote": "倘遇子孙持世，或子孙动于卦中，不拘占入场占升迁悉如水中捞月",
+            "applies_because": "子孙持世而又发动"
+          },
+          {
+            "rule_id": "R-YONG-FU-01",
+            "source_book": "黄金策",
+            "source_chapter": "17、求名",
+            "quote": "福如发动，难期金榜之题名。",
+            "applies_because": "子孙（福德）发动克官"
+          },
+          {
+            "rule_id": "R-YUANJI-03",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "忌神旺相或遇日月动爻生扶或临日月者一也。",
+            "applies_because": "酉金得戌日相生，又化回头生"
+          },
+          {
+            "rule_id": "R-FUSHEN-06",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "飞神逢破墓衰空﹐虽有若无﹐所以伏神易于出现。",
+            "applies_because": "飞神未土旬空，压不住伏神子水"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神得动爻生者四",
+            "applies_because": "酉金发动生伏神子水"
+          },
+          {
+            "rule_id": "R-YINGQI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "动而逢合逢值",
+            "applies_because": "以发动之忌神推不利结果的落定时点"
+          },
+          {
+            "rule_id": "R-DONGJING-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动静生克章第十四",
+            "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+            "applies_because": "伏财静而旺，官星得月生而非休囚，伏财不构成主动生扶"
+          }
+        ],
+        "calculation_explanation": "用神取二爻官鬼卯木（本卦唯一官鬼），亥月为相（月生），戌日卯戌相合（静爻合起）。忌神子孙酉金持世（四爻）独发，亥月休囚（泄），得戌日生，化兄弟戌土回头生（变爻戌即日辰），合「忌神旺相或遇日月动爻生扶」之有力条，无力条一项不合。酉动克卯、冲卯，冲开日合。原神妻财不上卦，伏神子水在五爻兄弟未土之下：伏神本身四处生克为生多克少（月扶、酉金动生；戌日克），有力；飞神未土旬空（甲申旬空午未），虽克伏而虽有若无，已被推开；按 B-009 判伏而有用、当前有效。伏财静而旺，官星得月生而非休囚，按动静生克章不构成主动生扶；接续相生缺伏财发动之实际依据，按 D-013 只作转机，不翻判。应爻父母巳火（初爻）月破、入戌日墓。仇神兄弟丑、未安静。巳酉丑三支俱在而只一支发动，不作成局。子孙化兄弟而非化官，黄金策「福德变官身位合」之例不适用。 父母两爻（初爻、上爻巳火）俱月破、入戌日墓（AI-3 复核补列）。"
+      },
+      "calculation_facts": {
+        "primary": "火泽睽（艮宫四世，土）",
+        "changed": "山泽损",
+        "month": "亥",
+        "day": "丙戌",
+        "void": "午未",
+        "lines": [
+          "上爻 青龙 父母己巳火",
+          "五爻 玄武 兄弟己未土（伏妻财子水）",
+          "四爻 白虎 子孙己酉金○世 → 兄弟丙戌土",
+          "三爻 螣蛇 兄弟丁丑土",
+          "二爻 勾陈 官鬼丁卯木",
+          "初爻 朱雀 父母丁巳火应"
+        ],
+        "yongshen": "二爻官鬼卯木",
+        "roles": {
+          "yong": "官鬼",
+          "yuan": "妻财",
+          "ji": "子孙",
+          "chou": "兄弟"
+        }
+      },
+      "flows": [
+        {
+          "flow": "hidden",
+          "id": "HIDDEN@5:妻财子",
+          "role": "yuan",
+          "position": 5,
+          "hidden": "妻财子水",
+          "fly": "五爻兄弟未土",
+          "flyRelation": "飞来克伏（反伤身）",
+          "flyCombine": false,
+          "hasQi": true,
+          "supports": [
+            "伏神旺相",
+            "动爻生伏"
+          ],
+          "openers": [
+            "飞神空破休囚墓绝"
+          ],
+          "obstacles": [
+            "伏神被日月冲克"
+          ],
+          "emergence": "likely",
+          "state": "EFFECTIVE",
+          "hiddenState": {
+            "version": "role-state-0.4.0",
+            "pattern": "日月相反（月生日克）",
+            "seasonal": "旺",
+            "seasonalFive": "旺",
+            "capability": "strong",
+            "attacked": false,
+            "capabilityBasis": "生多克少（生：月建、动爻四爻酉；克：日辰）",
+            "places": [
+              {
+                "place": "月建",
+                "effect": "生",
+                "strong": true
+              },
+              {
+                "place": "日辰",
+                "effect": "克",
+                "strong": true
+              },
+              {
+                "place": "动爻四爻酉",
+                "effect": "生",
+                "strong": false,
+                "dyn": false
+              }
+            ],
+            "limitations": [],
+            "state": "EFFECTIVE",
+            "stateReason": "生多克少（生：月建、动爻四爻酉；克：日辰）",
+            "release": [],
+            "flyPushed": true,
+            "acts": "伏（静）",
+            "ruleIds": [
+              "R-SICHU-01",
+              "R-FUSHEN-02",
+              "R-FUSHEN-03",
+              "R-FUSHEN-05",
+              "R-FUSHEN-06",
+              "R-FUSHEN-08",
+              "R-SUIMU-01"
+            ]
+          },
+          "reason": "伏神有力、飞神已被推开：伏而有用，虽不现亦如现，可参与当前判断（生多克少（生：月建、动爻四爻酉；克：日辰））；飞神虽克伏神，但自身空破休囚，飞神逢破墓衰空虽有若无，克力不实",
+          "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+          "emergenceTiming": [
+            {
+              "rule": "R-FUSHEN-08",
+              "kind": "伏神逢值",
+              "branch": "子"
+            }
+          ],
+          "ruleIds": [
+            "R-FUSHEN-02",
+            "R-FUSHEN-03",
+            "R-FUSHEN-06",
+            "R-FUSHEN-07",
+            "R-FUSHEN-08"
+          ]
+        },
+        {
+          "flow": "change",
+          "id": "CHANGE@4:酉化戌",
+          "role": "ji",
+          "position": 4,
+          "from": "子孙酉金",
+          "to": "兄弟戌土",
+          "huitou": "回头生",
+          "tags": [],
+          "changedStrength": "有气",
+          "verdict": "化回头生：忌神得助，于用神为凶",
+          "ruleIds": [
+            "R-HUA-01",
+            "R-HUA-02",
+            "R-YUEJIAN-03",
+            "R-RIZHEN-05"
+          ]
+        }
+      ],
+      "timing_resolution": [
+        {
+          "target_branch": "酉",
+          "offsetDays": 11,
+          "withinCurrentXun": false,
+          "daysLeftInXun": 7
+        },
+        {
+          "target_branch": "辰",
+          "offsetDays": 6,
+          "withinCurrentXun": true,
+          "daysLeftInXun": 7
+        }
+      ],
+      "authoring": {
+        "author": "Claude（AI 起草）",
+        "status": "draft-complete",
+        "written_at": "2026-11-13",
+        "revision": 8,
+        "revision_note": "AI-6 终审退回：删去断章之 R-YUANJI-06 引文（原例下句为「用神无根，元神有力亦难生」）"
+      },
+      "checks": {
+        "errors": [],
+        "warnings": []
+      },
+      "content_hash": "606a977d6f68cbd35599f601f7a9dd16c58bcd532934edae057e1b5f360c544c",
+      "rules_used": [
+        {
+          "id": "R-FUSHEN-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-06",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-SICHU-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-FU-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-05",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-ZI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUANJI-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUANJI-05",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-DONGJING-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        }
+      ],
+      "rules_unapproved": [],
+      "statuses": {
+        "authoring_status": "draft-complete",
+        "technical_review_status": "passed",
+        "author_full_text_review_status": "pending",
+        "interpretation_review_status": "pending",
+        "ai_review": {
+          "source_check": "resolved",
+          "independent": "resolved",
+          "adversarial": "resolved",
+          "editor": "DONE",
+          "final_qa": "PASS",
+          "missing_conditions": []
+        },
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "AI-6 最终验收复验（独立代理）",
+        "reviewed_at": "2026-11-13",
+        "stale_records": 8
+      }
+    },
+    {
+      "script_id": "IP-0003",
+      "source_file": "authoring/interview-pass/IP-0003.json",
+      "question_id": "career.interview.interview-pass",
+      "question_type": "interview_pass",
+      "domain_id": "career",
+      "question_text": "这次面试能通过吗？",
+      "key": "career.interview.interview-pass|688768|亥|乙未",
+      "chart_input": {
+        "line_values": [
+          6,
+          8,
+          8,
+          7,
+          6,
+          8
+        ],
+        "month_branch": "亥",
+        "day_ganzhi": "乙未"
+      },
+      "rule_profile_id": "zengshan-main",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0",
+      "source_version": "0.5.0",
+      "facts_digest": "ce9dfe8d8913e0419f4a7f1b93c853dca44016e2bd2e199bed8d2c55a314388e",
+      "scenario_tags": [
+        "两爻发动",
+        "原神持世发动生官",
+        "官鬼化进神",
+        "六合卦变"
+      ],
+      "verdict": "pass-but-slow",
+      "verdict_label": "有望通过，但要待时",
+      "judgment": {
+        "verdict": "pass-but-slow",
+        "verdict_label": "有望通过，但要待时",
+        "yongshen_position": 5,
+        "deciding_evidence": [
+          "世爻妻财未土临日发动，土生金，原神动生官鬼申金（R-YONG-GUAN-03「财动生官得美缺」、R-YUANJI-01）",
+          "官鬼申金得未日生，动化酉金为进神、为金之帝旺（R-JINTUI-01、R-HUA-01）"
+        ],
+        "supporting": [
+          "子孙巳火月破又旬空，空破俱全（R-YUANJI-04「忌神静临空破」）",
+          "兄弟卯木得月生而安静，入墓不作真墓，未见发动牵制",
+          "豫为六合卦，变随不冲（R-HE-01）"
+        ],
+        "adverse": [
+          "官鬼申金于亥月休囚，季节无根，力量来自日辰与动爻",
+          "应爻子孙午火得未日合起，静而受月克，有不利因素但不发动"
+        ],
+        "conflicts_resolved": [
+          "官星季节休囚而得日生、动生、化进：依题头总注广义之旺（R-WANG-02），三处生扶，可以吉断（R-SICHU-01）",
+          "应位子孙合起：静爻且受月克，不能主动伤官，只记为保留因素",
+          "财动：考试口径有财动克父之忌（黄金策·求名「财若交重」），本问按谋职（D-010），财动生官为喜",
+          "按 D-019（A）：升选候补章「在即」指旺相之进神；本盘申化酉皆休，待时而进，判有望但偏慢"
+        ],
+        "rule_ids": [
+          "R-HE-01",
+          "R-HE-02",
+          "R-HUA-01",
+          "R-JINTUI-01",
+          "R-JINTUI-02",
+          "R-WANG-02",
+          "R-YINGQI-01",
+          "R-YINGQI-02",
+          "R-YINGQI-10",
+          "R-YONG-GUAN-03",
+          "R-YONG-GUAN-06",
+          "R-YUANJI-01",
+          "R-YUANJI-04"
+        ],
+        "flow_acknowledgements": [
+          {
+            "flow_id": "CHANGE@1:未化子",
+            "accepted": true,
+            "note": "原神化帝旺（土帝旺于子，依增删卜易）为化吉；本爻克变爻、子未相害只列事实"
+          },
+          {
+            "flow_id": "CHANGE@5:申化酉",
+            "accepted": true,
+            "note": "用神化进神、化帝旺，化吉"
+          }
+        ],
+        "decisive": [
+          {
+            "position": 5,
+            "role": "yong",
+            "effect": "support"
+          },
+          {
+            "position": 1,
+            "role": "yuan",
+            "effect": "support"
+          }
+        ]
+      },
+      "reading": {
+        "title": "有望通过，但要待时：世爻发动生官，官星化进而进得慢",
+        "brief": "这一卦有望通过。代表你的世爻发动去生官星，官星得当天日辰相生，自身又化出进神，事情在往前走；克官的子孙两爻都安静，其中一爻又空又破，作不了梗。不足在于官星与进神都不当令，属于待时而进，结果来得慢，这段时间宜主动些。",
+        "opening": "本卦雷地豫，变为泽雷随，两爻发动：初爻是你的世爻妻财未土，五爻是官鬼申金。\n官鬼是这一问的用神，先看它。申金生在亥月，冬令水旺，金气泄于水，单论季节并不旺；好在起卦这天是乙未日，未土生申金，官星在日辰上有了依靠。再看你自己：世爻未土正临当天日辰，自身底气是足的。",
+        "process": "两个动爻正好连成一线。世爻妻财未土发动，土生金，直接生向五爻官鬼申金。求职卦里，财是生官的原神，原神发动来生官，《增删卜易》称「财动生官得美缺」。这股力量从你自己的世爻上发出，从卦象看，这件事要靠你这一方主动去推，而不是坐等。世爻未土同时化出父母子水，父母主文书、材料与通知，在卦中随之而动，按象意，文书材料一类的事宜也须一并留意。若是考试，财动有克父母文书之忌；本问按谋职看，财动生官是喜，不作忌论。\n官星自己也在动：申金化出酉金，同属金而由申进到酉，是进神，酉又是金的帝旺之地。只是申、酉两金在冬月都不当令，《增删卜易》讲进神有四种，其中「动休囚而化休囚，待时而进」说的正是这种情形——这一步要等时候，不会立刻见效。\n再看阻力。克官的子孙有两爻：二爻巳火被月建亥水冲破，又落旬空，空、破俱全，起不了作用；四爻午火在应位，受月建所克，当天未日与它相合，世爻未土动来也与它相合，有被提起之意，但它安静不动，不能主动伤官。应爻午火生世又合世，卦象上是一层配合，只是它本身属克官之神，这一点不利的成分仍在，却不足以左右结果。兄弟卯木得月令之生，旺相而安静，入墓也不作真墓，只是并未发动去分夺官星，兄弟爻未见发动牵制。",
+        "ending": "日辰生它，原神动来生它，它自己又化进神，官星三处得力，都是向上的力量；能伤它的子孙一个空破、一个安静，作梗无力。豫是六合卦，变出的随卦也不逢冲，事情在推进中始终未变成相冲之卦。所以这一轮有望通过；只是金气要等到得时才旺得起来，结果偏慢。",
+        "timing": {
+          "text": "官星申金发动，又化进神。依「动而逢合逢值」与「化进神、逢值逢合」，消息多在申日（官星值日）或巳日（巳与申相合）前后，其中巳日已出本旬，又是子孙巳火值日，只作参考；但申、酉两金眼下都不当令，按「待时而进」，结果真正落定要等金气得时，以申月、酉月金旺之时为准。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-02",
+              "target_event": "结果明朗、得到肯定答复",
+              "target_symbol": "五爻官鬼申金（发动）",
+              "condition": "用神发动：动而逢值",
+              "target_branch": "申",
+              "time_scale": "day",
+              "calculation_basis": "动爻逢值日",
+              "source_reference": "增删卜易·各门类应期总注章「动而逢合逢值」"
+            },
+            {
+              "timing_rule_id": "R-YINGQI-10",
+              "target_event": "结果明朗、得到肯定答复",
+              "target_symbol": "五爻官鬼申金化酉金（进神）",
+              "condition": "用神化进神：逢合",
+              "target_branch": "巳",
+              "time_scale": "day",
+              "calculation_basis": "进神逢合日（申巳合）",
+              "source_reference": "增删卜易·各门类应期总注章「化进神、逢值逢合：如申动酉…有应申月日者，有应巳月日者」"
+            },
+            {
+              "timing_rule_id": "R-JINTUI-02",
+              "target_event": "结果落定（待时而进）",
+              "target_symbol": "五爻官鬼申金化酉金（休囚化休囚）",
+              "condition": "进神休囚化休囚：待旺相之时",
+              "target_branch": "申",
+              "time_scale": "month",
+              "calculation_basis": "金旺之月",
+              "source_reference": "增删卜易·进神退神章「动休囚而化休囚，待时而进」"
+            },
+            {
+              "timing_rule_id": "R-JINTUI-02",
+              "target_event": "结果落定（待时而进）",
+              "target_symbol": "五爻官鬼申金化酉金（休囚化休囚）",
+              "condition": "进神休囚化休囚：待旺相之时",
+              "target_branch": "酉",
+              "time_scale": "month",
+              "calculation_basis": "金旺之月",
+              "source_reference": "增删卜易·进神退神章「动休囚而化休囚，待时而进」"
+            }
+          ]
+        },
+        "conclusion": "有望通过，但要待时。你的世爻动来生官，官星自身又化进神，克官的子孙或空破、或安静，伤不到它，这是能成的依据；不足在于金气不当令，结果来得慢。面试后不妨主动、得体地跟进一次，若需补充材料就尽早备齐，不要只是坐等。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "又曰财动生官得美缺",
+            "applies_because": "世爻妻财未土发动生官鬼申金"
+          },
+          {
+            "rule_id": "R-JINTUI-01",
+            "source_book": "卜筮正宗",
+            "source_chapter": "十七、变出进退神论",
+            "quote": "凡卦中亥变子、丑变辰、寅变卯、辰变未、巳变午、未变戌、申变酉、戌变丑，乃进神也。",
+            "applies_because": "官鬼申金化酉金"
+          },
+          {
+            "rule_id": "R-HUA-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神化吉：凡用神元神动化回头生、化长生、化帝旺、化扶助、化日月皆为化吉。",
+            "applies_because": "官星化帝旺、原神化帝旺"
+          },
+          {
+            "rule_id": "R-YUANJI-04",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "忌神静临空破二也。",
+            "applies_because": "子孙巳火静而空破"
+          },
+          {
+            "rule_id": "R-HE-01",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+            "applies_because": "豫为六合卦，变而不冲；同章亦言须用神有气"
+          },
+          {
+            "rule_id": "R-YINGQI-10",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "化进神、逢值逢合：如申动酉，乃为进神，为福为祸，有应申月日者，有应巳月日者",
+            "applies_because": "本卦正是申动化酉"
+          },
+          {
+            "rule_id": "R-JINTUI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·进神退神章第二十九",
+            "quote": "动休囚而化休囚﹐待时而进﹐二也",
+            "applies_because": "申化酉，两金在亥月皆休囚"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-06",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "世爻发动﹐官化进神﹐望荣除而在即",
+            "applies_because": "世动、官化进神为吉象；按 D-019，休囚之进神不作「在即」"
+          }
+        ],
+        "calculation_explanation": "用神取五爻官鬼申金（本卦唯一官鬼，发动）。申金于亥月休囚（泄），未日生之；初爻妻财未土（世，临日）动来生；申化酉为进神、为金帝旺。原神妻财：初爻未土发动临日、化父母子水（土于子为帝旺，本爻克变爻），上爻戌土安静日扶。忌神子孙：二爻巳火月破、旬空（甲午旬空辰巳），空而又破；四爻午火应位，亥月克之，未日合起，安静。仇神兄弟卯木月生为相，入未日墓、入初爻未土动墓（旺相不作真墓），受申金动克而四处生多克少，安静未动。巳火受五爻申金动合，午火受未日及世爻未土动合。雷地豫为六合卦，变泽雷随，非六冲。亥卯未三支中亥为月建、卯为静爻、未为发动之世爻，只一支来自动爻，按 R-SANHE-01 须至少两支来自动爻或变爻，不作成局。"
+      },
+      "calculation_facts": {
+        "primary": "雷地豫（震宫一世，木）",
+        "changed": "泽雷随",
+        "month": "亥",
+        "day": "乙未",
+        "void": "辰巳",
+        "lines": [
+          "上爻 玄武 妻财庚戌土",
+          "五爻 白虎 官鬼庚申金× → 官鬼丁酉金",
+          "四爻 螣蛇 子孙庚午火应",
+          "三爻 勾陈 兄弟乙卯木",
+          "二爻 朱雀 子孙乙巳火",
+          "初爻 青龙 妻财乙未土×世 → 父母庚子水（伏父母子水）"
+        ],
+        "yongshen": "五爻官鬼申金",
+        "roles": {
+          "yong": "官鬼",
+          "yuan": "妻财",
+          "ji": "子孙",
+          "chou": "兄弟"
+        }
+      },
+      "flows": [
+        {
+          "flow": "change",
+          "id": "CHANGE@1:未化子",
+          "role": "yuan",
+          "position": 1,
+          "from": "妻财未土",
+          "to": "父母子水",
+          "huitou": null,
+          "tags": [
+            "化帝旺"
+          ],
+          "changedStrength": "有气",
+          "verdict": "化帝旺",
+          "ruleIds": [
+            "R-HUA-01",
+            "R-HUA-02",
+            "R-YUEJIAN-03",
+            "R-RIZHEN-05"
+          ]
+        },
+        {
+          "flow": "change",
+          "id": "CHANGE@5:申化酉",
+          "role": "yong",
+          "position": 5,
+          "from": "官鬼申金",
+          "to": "官鬼酉金",
+          "huitou": null,
+          "tags": [
+            "化进神",
+            "化帝旺"
+          ],
+          "changedStrength": "有气",
+          "verdict": "化进神、化帝旺",
+          "ruleIds": [
+            "R-HUA-01",
+            "R-HUA-02",
+            "R-YUEJIAN-03",
+            "R-RIZHEN-05"
+          ]
+        }
+      ],
+      "timing_resolution": [
+        {
+          "target_branch": "申",
+          "offsetDays": 1,
+          "withinCurrentXun": true,
+          "daysLeftInXun": 8
+        },
+        {
+          "target_branch": "巳",
+          "offsetDays": 10,
+          "withinCurrentXun": false,
+          "daysLeftInXun": 8
+        },
+        {
+          "target_branch": "申",
+          "time_scale": "month"
+        },
+        {
+          "target_branch": "酉",
+          "time_scale": "month"
+        }
+      ],
+      "authoring": {
+        "author": "Claude（AI 起草）",
+        "status": "draft-complete",
+        "written_at": "2026-11-13",
+        "revision": 8,
+        "revision_note": "AI-6 复验（round8）：补「从卦象看」限定；兄弟爻按规范措辞；应爻生世合世与动合交代；巳日出旬且为子孙值日注明；计算说明三合与仇神状态改正"
+      },
+      "checks": {
+        "errors": [],
+        "warnings": []
+      },
+      "content_hash": "183277b44ee9f8f60c9d191d52cc1b0185cdb6ea79201d4adc509017b196c1ff",
+      "rules_used": [
+        {
+          "id": "R-HE-01",
+          "status": "pending-professional-review",
+          "open_disputes": []
+        },
+        {
+          "id": "R-HE-02",
+          "status": "pending-professional-review",
+          "open_disputes": []
+        },
+        {
+          "id": "R-HUA-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-JINTUI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-JINTUI-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-WANG-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-10",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-06",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUANJI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUANJI-04",
+          "status": "ai-verified",
+          "open_disputes": []
+        }
+      ],
+      "rules_unapproved": [
+        "R-HE-01(pending-professional-review)",
+        "R-HE-02(pending-professional-review)"
+      ],
+      "statuses": {
+        "authoring_status": "draft-complete",
+        "technical_review_status": "passed",
+        "author_full_text_review_status": "pending",
+        "interpretation_review_status": "pending",
+        "ai_review": {
+          "source_check": "ISSUES",
+          "independent": "ISSUES",
+          "adversarial": "RETURN",
+          "editor": "DONE",
+          "final_qa": "pending",
+          "missing_conditions": [
+            "排盘数据和计算测试全部通过",
+            "所用规则已经批准",
+            "用神选择有明确依据",
+            "正反证据均得到处理",
+            "没有未解决的重大专业冲突",
+            "关键古籍引用已经核查",
+            "传统应期具有适用依据或明确记录不适合取期",
+            "独立专业审核完成",
+            "反向质疑审核完成",
+            "最终语言编辑完成",
+            "没有明显机械重复、套话或病句",
+            "简断、详断和总断结论一致",
+            "原有正式排版完整保留",
+            "内容哈希、规则版本及审核记录一致",
+            "全部相关回归测试通过",
+            "无未经证实的现实事实断言",
+            "没有冒充真人专家认证或现实预测保证"
+          ]
+        },
+        "approval_status": "REVIEW_REQUIRED",
+        "production_allowed": false,
+        "reviewer": null,
+        "reviewed_at": null,
+        "stale_records": 9
+      }
+    },
+    {
+      "script_id": "IP-0004",
+      "source_file": "authoring/interview-pass/IP-0004.json",
+      "question_id": "career.interview.interview-pass",
+      "question_type": "interview_pass",
+      "domain_id": "career",
+      "question_text": "这次面试能通过吗？",
+      "key": "career.interview.interview-pass|777877|亥|丙戌",
+      "chart_input": {
+        "line_values": [
+          7,
+          7,
+          7,
+          8,
+          7,
+          7
+        ],
+        "month_branch": "亥",
+        "day_ganzhi": "丙戌"
+      },
+      "rule_profile_id": "zengshan-main",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0",
+      "source_version": "0.5.0",
+      "facts_digest": "b11b962074da78cc502e946db44be4d3425d0dd50382a89f2a657c4da04b4e17",
+      "scenario_tags": [
+        "六爻安静",
+        "用神不上卦",
+        "伏神有用",
+        "忌神月破"
+      ],
+      "verdict": "pass-but-slow",
+      "verdict_label": "倾向通过，结果偏慢",
+      "judgment": {
+        "verdict": "pass-but-slow",
+        "verdict_label": "倾向通过，结果偏慢",
+        "yongshen_position": null,
+        "hidden_yongshen": {
+          "fly_position": 3,
+          "hidden": "官鬼酉金"
+        },
+        "deciding_evidence": [
+          "官鬼不上卦，月日亦非金，取巽为风三爻官鬼酉金伏于本卦三爻妻财辰土之下（R-FUSHEN-01）",
+          "伏神得日生、得飞神生，飞神休囚又被日辰冲破，伏神有用六条合其四，无用五条皆不合（R-FUSHEN-02、R-FUSHEN-03）"
+        ],
+        "supporting": [
+          "忌神子孙巳火月破、入戌日墓（R-YUANJI-04）",
+          "黄金策·求名「伏藏有用，终辞白屋之人」（R-QIUMING-01）"
+        ],
+        "adverse": [
+          "伏神酉金于亥月休囚",
+          "原神妻财辰土日破、未土旬空，推动力不足",
+          "世爻父母子水受戌日克",
+          "谋职专章「财与官星不可有一而不旺」：财爻辰日破、未旬空（按 D-018 落在待时）",
+          "兄弟寅卯两爻旺相而静；应爻财克世而空"
+        ],
+        "conflicts_resolved": [
+          "用神不现：增删卜易作者主张再占（R-FUSHEN-04），本应用一问一卦，按古法伏神断，分歧见 D-005",
+          "伏神有用而原神乏力：取成而偏慢",
+          "日冲飞神辰土：增删卜易日破与卜筮正宗暗动两说并存（D-001），对伏神皆有利，结论不受影响",
+          "按 D-018（A）：面试以署印谋差章为主；财爻辰日破无力、未旬空待时，取待时者，判有望但偏慢；黄金策·仕宦「官爻隐伏」为在任升迁，不适用"
+        ],
+        "rule_ids": [
+          "R-FUSHEN-01",
+          "R-FUSHEN-02",
+          "R-FUSHEN-03",
+          "R-FUSHEN-05",
+          "R-QIUMING-01",
+          "R-SHIHUAN-01",
+          "R-YINGQI-01",
+          "R-YONG-GUAN-04",
+          "R-YUANJI-04"
+        ],
+        "flow_acknowledgements": [
+          {
+            "flow_id": "HIDDEN@3:官鬼酉",
+            "accepted": true,
+            "note": "伏而有用；日冲飞神两家口径（日破/暗动）均有利出伏"
+          },
+          {
+            "flow_id": "VOID@4:未",
+            "accepted": true,
+            "note": "原神未土有气之空，旬内逢丑日可冲起；不作主判，正文只言暂无动静"
+          }
+        ],
+        "decisive": [
+          {
+            "position": 3,
+            "role": "yong",
+            "effect": "support",
+            "hidden": true
+          }
+        ]
+      },
+      "reading": {
+        "title": "官星伏藏而有用：倾向通过，只是结论来得慢",
+        "brief": "官星没有出现在明面上，结论眼下还没浮出来；但它伏藏之处得日辰相生，压在上面的那一爻又被日辰冲开，出头的条件已经具备，克官的子孙也被月令冲破。只是生官的财爻一破一空，推力不足。倾向通过，需要时间，不妨耐心些。",
+        "opening": "本卦风天小畜，六爻安静。先找官鬼，却找不到：小畜属巽宫，以金为官鬼，而六爻之中没有金。用神不上卦，说明能代表这次结果的那一爻还没有浮到明面上，事情处在未定、待出的状态。\n按《增删卜易》的取法，用神不现，先看月建日辰能否借用。亥月、戌日都不是金，借不上；于是到本宫首卦巽为风中去找，巽为风第三爻是官鬼酉金，它就伏在本卦三爻妻财辰土之下。上面的辰土叫飞神，底下的酉金叫伏神。",
+        "process": "伏神能不能出来，要看几样条件。一是酉金得当天戌日相生，有了根；二是压在上面的辰土在冬月休囚，当天又被戌日冲动，飞神自己站不稳，压不住底下的伏神。辰土与酉金本是土生金、又相合，但飞神既已被冲开，这份生合就不再另算。这一冲，《增删卜易》以休囚静爻逢日冲为日破，《卜筮正宗》以静爻逢冲为暗动，两家说法不同，对伏神出来却都有利。《黄金策》说「伏无提拔终徒尔，飞不推开亦枉然」，这一卦里提拔的有了，推开的也有了。古书列出的伏神不能出的五种情形，这里一条也沾不上。酉金唯一的不足，是冬令金气泄于水，本身不旺。\n再看其余几爻。克官的子孙巳火在五爻，被月建亥水冲破，又入戌日之墓，作不了梗。你的世爻父母子水当令有气，却受戌日所克，眼下处在被动等待的位置。兄弟寅木、卯木两爻得月令之生而旺相，但都安静不动。应爻妻财未土克世，却落在旬空，这一侧暂时没有动静。真正的短处在财爻：谋职专章说「财与官星不可有一而不旺」，本卦生官的财爻，辰土被冲破，未土落了空，正应了这一条。只是旬空的未土并非无力，出空之后仍能生官，所以这条不足落在「慢」上，而不是「不成」。",
+        "ending": "官星伏而有用，克官之神无力，这是能成的格局，《黄金策·求名》所说「伏藏有用，终辞白屋之人」，正合此象。但用神毕竟没有站到明处，推它的力量又不足，结果不会很快到来。总体倾向通过，节奏偏慢。",
+        "timing": {
+          "text": "官星伏在辰土之下，而辰土当天已被戌日冲开，推开飞神这一步已经具备；按传统，伏神逢值而出，酉日（伏神酉金值日，起卦后第十一天）前后，可作为等候结果的参考时点。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "target_event": "结果浮出、得到答复",
+              "target_symbol": "伏神官鬼酉金",
+              "condition": "用神伏藏：伏神逢值",
+              "target_branch": "酉",
+              "time_scale": "day",
+              "calculation_basis": "伏神值日",
+              "source_reference": "增删卜易·各门类应期总注章「静而逢值逢冲」；飞伏神章"
+            }
+          ]
+        },
+        "conclusion": "倾向通过，但结论出得慢。伏藏的官星得日辰相生，压住它的飞神又被冲开，容易引出；克官的子孙既破且入墓，这是主要依据。生官的财爻一破一空，是本卦的短处，也是慢的原因。这段时间可以得体地询问一次进度，不必反复催问，也不要因一时没有消息就放弃。",
+        "classical_sources": [
+          {
+            "rule_id": "R-FUSHEN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之",
+            "applies_because": "本卦无官鬼，月日非金，取巽为风之官鬼酉金为伏神"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神得日月生者一也",
+            "applies_because": "酉金得戌日生"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "飞神辰土休囚且被戌日冲破"
+          },
+          {
+            "rule_id": "R-FUSHEN-06",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "不独飞神空亡而伏神得出﹐但得飞神临破休囚入墓而伏神皆易出也",
+            "applies_because": "飞神辰土休囚又逢戌日冲"
+          },
+          {
+            "rule_id": "R-FUSHEN-05",
+            "source_book": "黄金策",
+            "source_chapter": "1、总断千金赋",
+            "quote": "伏无提拔终徒尔，飞不推开亦枉然。",
+            "applies_because": "伏神得生、飞神被冲"
+          },
+          {
+            "rule_id": "R-QIUMING-01",
+            "source_book": "黄金策",
+            "source_chapter": "17、求名",
+            "quote": "出现无情，难遂青云之志；伏藏有用，终辞白屋之人。",
+            "applies_because": "官星伏藏而有用"
+          },
+          {
+            "rule_id": "R-YUANJI-04",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "忌神静临空破二也。",
+            "applies_because": "子孙巳火静而月破"
+          }
+        ],
+        "calculation_explanation": "风天小畜（巽宫一世）六爻安静，无官鬼（金）。月建亥、日辰戌皆非金，不能以日月为用神。本宫首卦巽为风三爻官鬼酉金伏于本卦三爻妻财辰土之下。伏神有用：日月生伏（戌生酉）、飞来生伏（辰生酉，辰酉又相合）、日月冲克飞神（戌冲辰）、飞神空破休囚（辰休囚、日破）；伏神无用五条皆不合。伏神酉金亥月休囚。忌神子孙巳火（五爻）月破、入戌日墓。原神妻财辰土日破、未土（应）旬空（甲申旬空午未）。世爻父母子水亥月旺（月扶），受戌日克。增删卜易作者主张用神不现即再占（R-FUSHEN-04），本应用一问一卦，按古法伏神断（D-005）。 日冲飞神之效：增删卜易作日破（飞神破），卜筮正宗作暗动（飞神动而生伏），两说对伏神皆有利（D-001）。"
+      },
+      "calculation_facts": {
+        "primary": "风天小畜（巽宫一世，木）",
+        "changed": null,
+        "month": "亥",
+        "day": "丙戌",
+        "void": "午未",
+        "lines": [
+          "上爻 青龙 兄弟辛卯木",
+          "五爻 玄武 子孙辛巳火",
+          "四爻 白虎 妻财辛未土应",
+          "三爻 螣蛇 妻财甲辰土（伏官鬼酉金）",
+          "二爻 勾陈 兄弟甲寅木",
+          "初爻 朱雀 父母甲子水世"
+        ],
+        "yongshen": "伏神官鬼酉金",
+        "roles": {
+          "yong": "官鬼",
+          "yuan": "妻财",
+          "ji": "子孙",
+          "chou": "兄弟"
+        }
+      },
+      "flows": [
+        {
+          "flow": "hidden",
+          "id": "HIDDEN@3:官鬼酉",
+          "role": "yong",
+          "position": 3,
+          "hidden": "官鬼酉金",
+          "fly": "三爻妻财辰土",
+          "flyRelation": "飞来生伏（得长生）",
+          "flyCombine": true,
+          "hasQi": true,
+          "supports": [
+            "日月生伏",
+            "飞来生伏"
+          ],
+          "openers": [
+            "日月动爻冲克飞神",
+            "飞神空破休囚墓绝"
+          ],
+          "obstacles": [],
+          "emergence": "likely",
+          "state": "EFFECTIVE",
+          "hiddenState": {
+            "version": "role-state-0.4.0",
+            "pattern": null,
+            "seasonal": "休囚",
+            "seasonalFive": "休",
+            "capability": "strong",
+            "attacked": false,
+            "capabilityBasis": "四处有生无克（日辰）",
+            "places": [
+              {
+                "place": "日辰",
+                "effect": "生",
+                "strong": true
+              }
+            ],
+            "limitations": [],
+            "state": "EFFECTIVE",
+            "stateReason": "四处有生无克（日辰）",
+            "release": [],
+            "flyPushed": true,
+            "acts": "伏（静）",
+            "ruleIds": [
+              "R-SICHU-01",
+              "R-FUSHEN-02",
+              "R-FUSHEN-03",
+              "R-FUSHEN-05",
+              "R-FUSHEN-06",
+              "R-FUSHEN-08",
+              "R-SUIMU-01"
+            ]
+          },
+          "reason": "伏神有力、飞神已被推开：伏而有用，虽不现亦如现，可参与当前判断（四处有生无克（日辰））；飞伏相合",
+          "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+          "emergenceTiming": [
+            {
+              "rule": "R-FUSHEN-08",
+              "kind": "伏神逢值",
+              "branch": "酉"
+            }
+          ],
+          "ruleIds": [
+            "R-FUSHEN-02",
+            "R-FUSHEN-03",
+            "R-FUSHEN-06",
+            "R-FUSHEN-07",
+            "R-FUSHEN-08"
+          ]
+        },
+        {
+          "flow": "void",
+          "id": "VOID@4:未",
+          "role": "yuan",
+          "position": 4,
+          "branch": "未",
+          "voidKind": "静空",
+          "notVoidReasons": [
+            "日辰生扶"
+          ],
+          "state": "有气之空：旬内暂空；本旬之内逢丑日冲空可以冲起，否则待出旬逢未日填实",
+          "releases": [
+            {
+              "kind": "冲空",
+              "branch": "丑",
+              "offsetDays": 3,
+              "withinCurrentXun": true,
+              "daysLeftInXun": 7,
+              "rule": "R-KONG-06"
+            },
+            {
+              "kind": "出空填实",
+              "branch": "未",
+              "offsetDays": 9,
+              "withinCurrentXun": false,
+              "daysLeftInXun": 7,
+              "rule": "R-YINGQI-08"
+            }
+          ],
+          "huangjince": "自空（黄金策：无故勿空）",
+          "ruleIds": [
+            "R-KONG-02",
+            "R-KONG-03",
+            "R-KONG-04",
+            "R-KONG-06",
+            "R-YINGQI-08"
+          ]
+        }
+      ],
+      "timing_resolution": [
+        {
+          "target_branch": "酉",
+          "offsetDays": 11,
+          "withinCurrentXun": false,
+          "daysLeftInXun": 7
+        }
+      ],
+      "authoring": {
+        "author": "Claude（AI 起草）",
+        "status": "draft-complete",
+        "written_at": "2026-11-13",
+        "revision": 6,
+        "revision_note": "AI-5 中文精修（独立代理，round5b）：只改表达；改动与理由见 reports/review-round5b/ai5-editor.json"
+      },
+      "checks": {
+        "errors": [],
+        "warnings": []
+      },
+      "content_hash": "98f66975ee29eebf63e2b4cd8130c604834e4c4e93797d91bb6ce59d7921e022",
+      "rules_used": [
+        {
+          "id": "R-FUSHEN-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-05",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-QIUMING-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-SHIHUAN-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-04",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUANJI-04",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-06",
+          "status": "ai-verified",
+          "open_disputes": []
+        }
+      ],
+      "rules_unapproved": [],
+      "statuses": {
+        "authoring_status": "draft-complete",
+        "technical_review_status": "passed",
+        "author_full_text_review_status": "pending",
+        "interpretation_review_status": "pending",
+        "ai_review": {
+          "source_check": "resolved",
+          "independent": "resolved",
+          "adversarial": "resolved",
+          "editor": "DONE",
+          "final_qa": "PASS",
+          "missing_conditions": []
+        },
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "AI-6 最终验收（独立代理）",
+        "reviewed_at": "2026-11-13",
+        "stale_records": 6
+      }
+    },
+    {
+      "script_id": "IP-0005",
+      "source_file": "authoring/interview-pass/IP-0005.json",
+      "question_id": "career.interview.interview-pass",
+      "question_type": "interview_pass",
+      "domain_id": "career",
+      "question_text": "这次面试能通过吗？",
+      "key": "career.interview.interview-pass|778888|亥|甲辰",
+      "chart_input": {
+        "line_values": [
+          7,
+          7,
+          8,
+          8,
+          8,
+          8
+        ],
+        "month_branch": "亥",
+        "day_ganzhi": "甲辰"
+      },
+      "rule_profile_id": "zengshan-main",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0",
+      "source_version": "0.5.0",
+      "facts_digest": "38669ef2afe55e7568bfff17868bd6e6fbfe92319446a971afb67f4ae0b3ca33",
+      "scenario_tags": [
+        "六爻安静",
+        "官鬼持世旬空",
+        "原神入日墓",
+        "与 IP-0001 同卦异日"
+      ],
+      "verdict": "wait-then-likely",
+      "verdict_label": "眼下悬而未决，冲空或出旬后有望",
+      "judgment": {
+        "verdict": "wait-then-likely",
+        "verdict_label": "眼下悬而未决，冲空或出旬后有望",
+        "yongshen_position": 2,
+        "deciding_evidence": [
+          "官鬼卯木持世，得亥月生，有气而值甲辰旬空：旬内毕竟为空；本旬第五天酉日冲空可起，第十一天卯日出旬填实（R-KONG-03、R-KONG-05、R-YINGQI-08，VOID@2）",
+          "原神妻财亥水临月建而墓于辰日、受日克：月日相敌，无吉无凶，力量未失而发挥不出（R-YUEJIAN-04，MONTHDAY@5）"
+        ],
+        "supporting": [
+          "忌神子孙酉金得辰日生合而安静，不能主动伤官",
+          "兄弟丑土入辰墓，竞争无动静"
+        ],
+        "adverse": [
+          "用神旬空，眼下不落地",
+          "原神月日相敌，此刻发挥不出",
+          "卯木受辰日泄（我克日）",
+          "冲空之酉日亦为子孙值日，冲起之时带克官之气"
+        ],
+        "conflicts_resolved": [
+          "按 D-017（A）：专章之「官空」指空而无气或空破并见；本卦官星得月生，为有气之空，作待时，正文已引专章并说明为何不作落空",
+          "官星有气而空：依增删卜易取「旬内暂空」，并依「空逢冲而有用」「旬空最爱填冲」列出旬内冲空与出旬填实两个时点；不依黄金策「无故自空」之凶（D-002）",
+          "原神临月建与辰日墓克相敌：依月将章作无吉无凶，不判为失效",
+          "忌神合起而静：静爻不能主动伤官，不作否决"
+        ],
+        "rule_ids": [
+          "R-KONG-02",
+          "R-KONG-03",
+          "R-KONG-05",
+          "R-KONG-06",
+          "R-SANMU-01",
+          "R-YINGQI-01",
+          "R-YINGQI-08",
+          "R-YONG-GUAN-02",
+          "R-YONG-GUAN-07",
+          "R-YUEJIAN-04"
+        ],
+        "flow_acknowledgements": [
+          {
+            "flow_id": "VOID@2:卯",
+            "accepted": true,
+            "note": "旬内第五天酉日冲空可起；第十一天卯日出旬填实"
+          },
+          {
+            "flow_id": "MONTHDAY@5:亥临月",
+            "accepted": true,
+            "note": "月日相敌，无吉无凶；六爻安静无他爻动扶动克"
+          }
+        ],
+        "decisive": [
+          {
+            "position": 2,
+            "role": "yong",
+            "effect": "support"
+          }
+        ]
+      },
+      "reading": {
+        "title": "官星持世却逢旬空：眼下悬而未决，冲空或出旬后有望",
+        "brief": "官星落在你自己的世爻上，又得月令相生，底子不差；但它正逢旬空，此刻不在位，结果眼下悬而未决。生官的应爻财爻本旺，当天却被日墓收住，一时使不上力。本旬内有一次冲起的机会，否则就等出旬；冲起或出旬之后有望通过，眼下宜静候。",
+        "opening": "本卦地泽临，六爻安静。官鬼卯木在二爻持世，正落在你自己这一边；亥月水生木，官星有气，这是能成事的底子。\n要紧的是起卦这天。甲辰日所在的这一旬里没有寅、卯两支，卯木正值旬空。旬空的意思是「此刻不在」。《增删卜易》说得明白，有气之爻逢空并非真的落空，但「在旬内者毕竟为空」。求职求名的专章对官星逢空说得很重：「官位空破，勿恩升迁」，「世空世破官破官空，俱不得」。同书却也一再提醒要辨「何谓空而不空」：旺相之爻逢空，出空之日即不作空论。本卦官星得月令之生，是有气之空，不是专章所说的那种落空；所以眼下落不了地，要等它被冲起，或出旬填实，才真正起作用。",
+        "process": "再看各方的力量。生官的妻财亥水坐在应位，当令的月建正是亥水，本来旺盛；可当天是辰日，辰为水的墓库，又以土克水。临月建而墓于日，是月建与日辰相敌，《增删卜易·月将章》称之为「无吉无凶之象」：这股助力没有失去，只是此刻发挥不出来。卦中六爻安静，没有别的爻动来扶它或克它，它就停在这个搁置的位置上。\n克官的子孙酉金在上爻，冬令本是休囚，但辰日生它，又与它相合，有被提起的意思；好在它安静不动，没有去冲克官星。两爻兄弟丑土同样入了辰墓，也都没有动静。",
+        "ending": "官星有根而暂空，原神旺而被日墓收住，克官之神被提起却安静无为，各方都停在「暂停」的位置上。空爻逢冲可起，出旬可实：本旬之内若有冲动官星之时，结果可能先见分晓；那时若仍无动静，就等出旬、官星填实。这一轮并非无望，只是要等，等到官星出空，有望通过，不宜指望马上就有结果。",
+        "timing": {
+          "text": "官星旬空，依「旬空最爱填冲」，有两个时点：一是本旬之内的酉日（起卦后第五天），日辰冲动卯木，冲空而起；但这天也是子孙酉金值日，冲起之时带着克官之气，消息未必顺遂。二是出旬之后的卯日（起卦后第十一天），官星填实。前一个时点若无定论，以后一个为准。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-08",
+              "target_event": "官星冲空而起，结果可能先见分晓（旬内）",
+              "target_symbol": "二爻官鬼卯木（持世，旬空）",
+              "condition": "用神旬空：冲空",
+              "target_branch": "酉",
+              "time_scale": "day",
+              "calculation_basis": "冲空之日",
+              "source_reference": "增删卜易·各门类应期总注章「旬空最爱填冲」"
+            },
+            {
+              "timing_rule_id": "R-YINGQI-08",
+              "target_event": "出旬填实，结果落定（旬外）",
+              "target_symbol": "二爻官鬼卯木（持世，旬空）",
+              "condition": "用神旬空：出空填实",
+              "target_branch": "卯",
+              "time_scale": "day",
+              "calculation_basis": "出旬后逢值（填实）",
+              "source_reference": "增删卜易·各门类应期总注章「旬空最爱填冲」"
+            }
+          ]
+        },
+        "conclusion": "眼下悬而未决，冲空或出旬之后有望通过。官星持世，得月令之生而逢旬空，是待时之空，不是落空；生官的财爻月日相敌，力量还在，只是暂时发不出；克官的子孙安静未动。这几天不必频繁追问；到第二个时点仍无消息，再礼貌询问一次。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "八宫图第三",
+            "quote": "占功名者若得官鬼持世即许成名",
+            "applies_because": "官鬼卯木持世"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-07",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+            "quote": "世空世破官破官空﹐俱不得。",
+            "applies_because": "官星持世而旬空；按 D-017，有气之空不作此条之「官空」，正文已说明"
+          },
+          {
+            "rule_id": "R-KONG-03",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "古有此说，予试不然，在旬内者毕竟为空。",
+            "applies_because": "官星有气而值旬空，旬内不应"
+          },
+          {
+            "rule_id": "R-YUEJIAN-04",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "爻值月建，墓于日或日建冲克者可以敌之，无吉无凶之象",
+            "applies_because": "原神亥水临月建而墓于辰日、受辰日克"
+          },
+          {
+            "rule_id": "R-KONG-05",
+            "source_book": "黄金策",
+            "source_chapter": "1、总断千金赋",
+            "quote": "空逢冲而有用",
+            "applies_because": "旬内酉日冲动官星，冲空而起"
+          },
+          {
+            "rule_id": "R-KONG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "旬空章第二十六",
+            "quote": "旺不为空，动不为空，有日建动爻生扶者不为空",
+            "applies_because": "官星得月生，出旬即可用"
+          },
+          {
+            "rule_id": "R-SANMU-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "三墓：即用爻入日墓、入动墓、动而化墓",
+            "applies_because": "原神亥水入辰日之墓"
+          },
+          {
+            "rule_id": "R-YINGQI-08",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "旬空最爱填冲",
+            "applies_because": "用神旬空，取冲空、填实之日"
+          }
+        ],
+        "calculation_explanation": "用神取二爻官鬼卯木（唯一官鬼，持世），亥月为相（月生），辰日卯木克辰（耗），卯辰相害（只列事实）。甲辰旬空寅卯，卯木静空，有气（月生）：旬内暂空、出旬可用；非真空（冬季真空为火）。本旬甲辰至癸丑，冲空之酉日为己酉，在起卦后第五天，仍在旬内；填实之卯日为乙卯，在第十一天，已出旬。原神妻财亥水（五爻应）临月建，辰日克之且水墓于辰：临月建而墓于日、受日克，依月将章为月日相敌、无吉无凶；六爻安静，无他爻动扶动克。忌神子孙酉金（上爻）亥月休囚，辰日生之、辰酉相合，安静。兄弟丑土两爻入辰墓。父母巳火月破。与 IP-0001 本卦、动爻相同而日辰不同：用神空否、原神墓否、忌神生合与否三项不同，不能共用正文。"
+      },
+      "calculation_facts": {
+        "primary": "地泽临（坤宫二世，土）",
+        "changed": null,
+        "month": "亥",
+        "day": "甲辰",
+        "void": "寅卯",
+        "lines": [
+          "上爻 玄武 子孙癸酉金",
+          "五爻 白虎 妻财癸亥水应",
+          "四爻 螣蛇 兄弟癸丑土",
+          "三爻 勾陈 兄弟丁丑土",
+          "二爻 朱雀 官鬼丁卯木世",
+          "初爻 青龙 父母丁巳火"
+        ],
+        "yongshen": "二爻官鬼卯木",
+        "roles": {
+          "yong": "官鬼",
+          "yuan": "妻财",
+          "ji": "子孙",
+          "chou": "兄弟"
+        }
+      },
+      "flows": [
+        {
+          "flow": "void",
+          "id": "VOID@2:卯",
+          "role": "yong",
+          "position": 2,
+          "branch": "卯",
+          "voidKind": "静空",
+          "notVoidReasons": [
+            "旺相"
+          ],
+          "state": "有气之空：旬内暂空；本旬之内逢酉日冲空可以冲起，否则待出旬逢卯日填实",
+          "releases": [
+            {
+              "kind": "冲空",
+              "branch": "酉",
+              "offsetDays": 5,
+              "withinCurrentXun": true,
+              "daysLeftInXun": 9,
+              "rule": "R-KONG-06"
+            },
+            {
+              "kind": "出空填实",
+              "branch": "卯",
+              "offsetDays": 11,
+              "withinCurrentXun": false,
+              "daysLeftInXun": 9,
+              "rule": "R-YINGQI-08"
+            }
+          ],
+          "huangjince": "自空（黄金策：无故勿空）",
+          "ruleIds": [
+            "R-KONG-02",
+            "R-KONG-03",
+            "R-KONG-04",
+            "R-KONG-06",
+            "R-YINGQI-08"
+          ]
+        },
+        {
+          "flow": "monthDay",
+          "id": "MONTHDAY@5:亥临月",
+          "role": "yuan",
+          "position": 5,
+          "pattern": "临月建而入日墓、受日克",
+          "verdict": "月日相敌：无吉无凶，力量未失而发挥不出",
+          "ruleIds": [
+            "R-YUEJIAN-04"
+          ]
+        }
+      ],
+      "timing_resolution": [
+        {
+          "target_branch": "酉",
+          "offsetDays": 5,
+          "withinCurrentXun": true,
+          "daysLeftInXun": 9
+        },
+        {
+          "target_branch": "卯",
+          "offsetDays": 11,
+          "withinCurrentXun": false,
+          "daysLeftInXun": 9
+        }
+      ],
+      "authoring": {
+        "author": "Claude（AI 起草）",
+        "status": "draft-complete",
+        "written_at": "2026-11-13",
+        "revision": 6,
+        "revision_note": "AI-6 终审退回：「旬空最爱填冲」规则编号改为 R-YINGQI-08"
+      },
+      "checks": {
+        "errors": [],
+        "warnings": []
+      },
+      "content_hash": "fc9ad0fbf38ce27b9f739ca311c340ac02850e09041781eb1a22f74cea8e1599",
+      "rules_used": [
+        {
+          "id": "R-KONG-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-KONG-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-KONG-05",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-KONG-06",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-SANMU-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-08",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-GUAN-07",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YUEJIAN-04",
+          "status": "ai-verified",
+          "open_disputes": []
+        }
+      ],
+      "rules_unapproved": [],
+      "statuses": {
+        "authoring_status": "draft-complete",
+        "technical_review_status": "passed",
+        "author_full_text_review_status": "pending",
+        "interpretation_review_status": "pending",
+        "ai_review": {
+          "source_check": "resolved",
+          "independent": "resolved",
+          "adversarial": "resolved",
+          "editor": "DONE",
+          "final_qa": "PASS",
+          "missing_conditions": []
+        },
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "AI-6 最终验收复验（独立代理）",
+        "reviewed_at": "2026-11-13",
+        "stale_records": 7
+      }
+    },
+    {
+      "script_id": "IP-0006",
+      "source_file": "authoring/interview-pass/IP-0006.json",
+      "question_id": "career.interview.interview-pass",
+      "question_type": "interview_pass",
+      "domain_id": "career",
+      "question_text": "这次面试能通过吗？",
+      "key": "career.interview.interview-pass|867777|亥|甲午",
+      "chart_input": {
+        "line_values": [
+          8,
+          6,
+          7,
+          7,
+          7,
+          7
+        ],
+        "month_branch": "亥",
+        "day_ganzhi": "甲午"
+      },
+      "rule_profile_id": "zengshan-main",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0",
+      "source_version": "0.5.0",
+      "facts_digest": "a0314892c1ba3bd9adba4704dbc86c31c6a0d902c9e9f973189b49ba7a751774",
+      "scenario_tags": [
+        "独发",
+        "官鬼持世发动",
+        "化回头克",
+        "化绝",
+        "官鬼两现"
+      ],
+      "verdict": "unlikely",
+      "verdict_label": "难以通过",
+      "judgment": {
+        "verdict": "unlikely",
+        "verdict_label": "难以通过",
+        "yongshen_position": 2,
+        "deciding_evidence": [
+          "官鬼两现，取发动之二爻午火（世）为用神（R-LIANGXIAN-01）",
+          "午火动化子孙亥水，亥为当令月建，回头克官，又火绝于亥（R-HUA-01、R-HUA-02）"
+        ],
+        "supporting": [
+          "午火临日、帝旺于午，眼前气势足",
+          "原神妻财寅木伏于世爻之下，得月建生合，伏而有用；伏去生飞为泄气，只一分扶持（HIDDEN@2）"
+        ],
+        "adverse": [
+          "午火受亥月克",
+          "化出之子孙亥水临月建回头克，又化绝",
+          "应爻兄弟申金受日克，应位无扭转之力"
+        ],
+        "conflicts_resolved": [
+          "临日帝旺（目前之吉）与化回头克、化绝（后来之凶）并见：依日辰章临日而动化相克为寡不敌众，伤亦为伤（R-RIZHEN-05）；动为始、变为终，以变爻定结局（R-HUA-01）",
+          "按 D-013，有效伏财可参与判断：生方为临日与伏财，克方为月建与回头克；但临日之爻动化相克，依日辰章为寡不敌众，书中并有同构之例（申月戊午日遁之姤，卒于亥月，R-RIZHEN-06）；变爻之克他爻无从化解（R-DONGBIAN-01），故不作两生两克相抵",
+          "伏财有用而暗生官星：伏而未出为静，且变爻只作用于本位动爻（R-DONGBIAN-01），伏神无从化解回头克，只作缓冲，不改主判",
+          "伏子孙子水：有力而墓于飞神，待冲墓（B-009）；眼下不作主要忌神",
+          "四爻官鬼午火临日受月克而无伤，安静；一爻动者择其动者（R-LIANGXIAN-03），不取为用神"
+        ],
+        "rule_ids": [
+          "R-DONGBIAN-01",
+          "R-FUSHEN-06",
+          "R-FUSHEN-07",
+          "R-HUA-01",
+          "R-HUA-02",
+          "R-LIANGXIAN-01",
+          "R-LIANGXIAN-03",
+          "R-RIZHEN-05",
+          "R-RIZHEN-06",
+          "R-YINGQI-01",
+          "R-YINGQI-11",
+          "R-YONG-ZI-01"
+        ],
+        "flow_acknowledgements": [
+          {
+            "flow_id": "HIDDEN@1:子孙子",
+            "accepted": true,
+            "note": "B-009 判待时：有力而墓于飞神，待冲墓；眼下不作主要忌神"
+          },
+          {
+            "flow_id": "HIDDEN@2:妻财寅",
+            "accepted": true,
+            "note": "伏而有用，伏去生飞，作缓冲"
+          },
+          {
+            "flow_id": "MONTHDAY@2:午临日",
+            "accepted": true,
+            "note": "临日而动化回头克：寡不敌众"
+          },
+          {
+            "flow_id": "MONTHDAY@4:午临日",
+            "accepted": true,
+            "note": "四爻静官逢克无伤，但不取为用"
+          },
+          {
+            "flow_id": "CHANGE@2:午化亥",
+            "accepted": true,
+            "note": "回头克，克神临月建有力"
+          }
+        ],
+        "decisive": [
+          {
+            "position": 2,
+            "role": "yong",
+            "effect": "adverse"
+          }
+        ]
+      },
+      "reading": {
+        "title": "临日之旺挡不住回头之克：这一轮难以通过",
+        "brief": "这一卦起势不弱：官星持世，正落在你这一边，又临当天日辰，眼前正旺。可它一动，就化出当令的子孙回过头来克它，自身也落入绝地，是先扬后抑之象。这次难以通过，不妨早做两手准备。",
+        "opening": "本卦天山遁，二爻世爻上的官鬼午火发动，变成天风姤。卦中官鬼出现了两次，古法舍静用动，以发动的这一爻为用神。\n官星坐的正是你自己的位置。起卦这天是甲午日，午火临日，火到午又是帝旺之地，单论当天，气势正足；从卦象看，面试当场的表现或氛围并不差。只是节令不帮它：亥月水旺，水克火，官星在月令上受克，根基并不牢。",
+        "process": "真正定结局的是这一动。午火官星发动，化出的是子孙亥水。子孙是克官之神，亥水又正是当令的月建，水势最旺，它从变爻回过头来克午火，这叫回头克；同时火绝于亥，官星一变便落进了绝地。《黄金策》说「戒回头之克我」，《增删卜易》也把化回头克、化绝都列为「化凶」。官星临日，本可「遇冲克而无伤」，但日辰章随即指出，本爻若动化相克，就是「寡不敌众，破亦为破，伤亦为伤」，这一卦正是如此。\n卦中另有一爻官鬼午火在四爻，也临日辰，虽受月克而无伤，但安静不动，替代不了世爻上的这一变。本卦子孙没有明现，初爻辰土之下伏有子孙子水。它得月令扶持，虽受午日与动爻相冲，仍算有力，只是墓于飞神辰土，一时出不来，要到冲开墓库之时才可能起作用；眼下真正克官的，是二爻变出的这个亥水。\n能不能有救，要看生官的妻财。妻财不在明处，寅木伏在世爻午火之下。它伏得有力：亥月水生木，寅亥又相合，得月建生合；古书所说伏神无用的几种情形，这里一条也对不上。只是它在下面木生火，《卜筮正宗》说「伏去生飞名泄气」——耗的是伏神自身，对官星虽有一分扶持之意，却不是能扭转局面的力量。何况回头之克出自变爻，变爻只与本位动爻相涉，他爻无从替官星挡下这一克。\n应爻兄弟申金被午火日辰所克，休囚无气，应位这边也找不到转圜之力。",
+        "ending": "临日之旺是眼前之吉，世下伏财的木生火只是一分泄出来的扶持；化出当令的子孙回头相克、又化入绝地，则是后来之凶。动为始、变为终，前两样挡不住变爻这一克，结局便落在后者，所以这一轮难以通过。若后面还有环节，从卦象看，由顺转逆的关口多半在后段。",
+        "timing": {
+          "text": "本卦的结局应在回头克官的亥水上。按「问有应于变爻动爻」推算，不利的消息多在亥日（克官之子孙值日）前后落定。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-11",
+              "target_event": "不利结果落定",
+              "target_symbol": "二爻官鬼午火化子孙亥水（回头克）",
+              "condition": "吉凶应于变爻：变爻逢值",
+              "target_branch": "亥",
+              "time_scale": "day",
+              "calculation_basis": "回头克之变爻值日",
+              "source_reference": "增删卜易·各门类应期总注章「问有应于变爻动爻」"
+            }
+          ]
+        },
+        "conclusion": "这一轮难以通过。持世的官星一动，便化出当令的子孙回头相克，又化入绝地；临日之旺加上伏财那一点扶持，敌不过月建之克与回头之克两重压力。若还有后续环节，尽力去做，结果不必强求。",
+        "classical_sources": [
+          {
+            "rule_id": "R-LIANGXIAN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·两现章第三十二",
+            "quote": "舍其静爻﹐而用动爻",
+            "applies_because": "官鬼午火两现，取发动的二爻"
+          },
+          {
+            "rule_id": "R-HUA-02",
+            "source_book": "黄金策",
+            "source_chapter": "1、总断千金赋",
+            "quote": "戒回头之克我，勿反德以扶人。",
+            "applies_because": "午火化亥水回头克"
+          },
+          {
+            "rule_id": "R-HUA-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神化凶：凡用神元神动化回头克、化绝、化墓、化空、化鬼、化退神皆为化凶。",
+            "applies_because": "官星化回头克、化绝"
+          },
+          {
+            "rule_id": "R-RIZHEN-06",
+            "source_book": "增删卜易",
+            "source_chapter": "日辰章第十七",
+            "quote": "世爻午火临日辰，本主旺相，不宜申金月建生亥水回头克世，卒于亥月。",
+            "applies_because": "书中同构之例：世爻午火临日而化亥水回头克，书断凶、应于亥"
+          },
+          {
+            "rule_id": "R-RIZHEN-05",
+            "source_book": "增删卜易",
+            "source_chapter": "日辰章第十七",
+            "quote": "假使爻中有动出申酉之金或卯爻动化申酉，此谓之寡不敌众，破亦为破，伤亦为伤。",
+            "applies_because": "午火临日而动化亥水回头克，又受月克"
+          },
+          {
+            "rule_id": "R-DONGBIAN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动变生克冲合章第十五",
+            "quote": "夫变出之爻能生克冲合本位之动爻，不能生克他爻，而他爻与本位之动爻，亦不能生克变爻。",
+            "applies_because": "回头克出自变爻，伏财无从替官星化解"
+          },
+          {
+            "rule_id": "R-FUSHEN-07",
+            "source_book": "卜筮正宗",
+            "source_chapter": "三十六、飞伏生克吉凶歌",
+            "quote": "伏去生飞名泄气",
+            "applies_because": "寅木伏于午火之下，木生火：伏神自身被泄，对官星只有一分扶持之意"
+          },
+          {
+            "rule_id": "R-YONG-ZI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "用神章第八",
+            "quote": "独占功名者忌之",
+            "applies_because": "化出之爻为子孙"
+          },
+          {
+            "rule_id": "R-YINGQI-11",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "问有应于变爻动爻",
+            "applies_because": "结局应于回头克之变爻"
+          }
+        ],
+        "calculation_explanation": "官鬼午火两现：二爻（世，发动）与四爻（安静）；依两现章古法舍静用动，取二爻为用神。午火临甲午日，火帝旺于午；亥月克之（休囚）。二爻午火化子孙亥水：亥临月建，水克火为回头克，火绝于亥为化绝；临日而又动化回头克，依日辰章为寡不敌众。四爻午火临日、受月克而安静：逢破不破、遇克无伤，但不发动、不取为用。原神妻财不上卦，伏神寅木在二爻午火之下（乾为天二爻）：亥月生之、寅亥相合，伏神旺相；伏神有用六条合四（日月生伏、伏神旺相、日月冲克飞神、飞神休囚墓绝），无用五条皆不合，判为伏而有用；伏去生飞，暗生用神；但伏而未出、为静，且变爻之克只及本位动爻，伏神无从化解。本卦子孙不明现，另有伏神子水在初爻父母辰土之下：伏神本身得亥月扶，受午日冲、二爻午火动冲，克多生少而生者为月建，按 B-005 为有力而受克；水墓于辰，墓于飞神，按 B-009 待冲墓（戌日，起卦后第四天）；眼下不作主要忌神。二爻动化子孙亥水，回头克官。应爻兄弟申金（五爻）受午日克。父母辰土（初爻）旬空，得日生；上爻戌土得日生。非六冲六合，无反吟伏吟。"
+      },
+      "calculation_facts": {
+        "primary": "天山遁（乾宫二世，金）",
+        "changed": "天风姤",
+        "month": "亥",
+        "day": "甲午",
+        "void": "辰巳",
+        "lines": [
+          "上爻 玄武 父母壬戌土",
+          "五爻 白虎 兄弟壬申金应",
+          "四爻 螣蛇 官鬼壬午火",
+          "三爻 勾陈 兄弟丙申金",
+          "二爻 朱雀 官鬼丙午火×世 → 子孙辛亥水（伏妻财寅木）",
+          "初爻 青龙 父母丙辰土（伏子孙子水）"
+        ],
+        "yongshen": "二爻官鬼午火",
+        "roles": {
+          "yong": "官鬼",
+          "yuan": "妻财",
+          "ji": "子孙",
+          "chou": "兄弟"
+        }
+      },
+      "flows": [
+        {
+          "flow": "hidden",
+          "id": "HIDDEN@1:子孙子",
+          "role": "ji",
+          "position": 1,
+          "hidden": "子孙子水",
+          "fly": "初爻父母辰土",
+          "flyRelation": "飞来克伏（反伤身）",
+          "flyCombine": false,
+          "hasQi": true,
+          "supports": [
+            "伏神旺相"
+          ],
+          "openers": [
+            "飞神空破休囚墓绝"
+          ],
+          "obstacles": [
+            "伏神被日月冲克",
+            "伏神墓绝于日月飞爻"
+          ],
+          "emergence": "deferred",
+          "state": "DEFERRED",
+          "hiddenState": {
+            "version": "role-state-0.4.0",
+            "pattern": "日月相反（月生日克）",
+            "seasonal": "旺",
+            "seasonalFive": "旺",
+            "capability": "strong",
+            "attacked": true,
+            "capabilityBasis": "克多生少而生者为日月：克处逢生，有力而受克（八宫图第三「若得相生之爻旺相者也可断为克处逢凶中得解」，B-005）",
+            "places": [
+              {
+                "place": "月建",
+                "effect": "生",
+                "strong": true
+              },
+              {
+                "place": "日辰",
+                "effect": "克",
+                "strong": true
+              },
+              {
+                "place": "动爻二爻午",
+                "effect": "克",
+                "strong": false,
+                "dyn": false
+              }
+            ],
+            "limitations": [
+              {
+                "kind": "入墓",
+                "detail": "墓于飞神（旺相或有扶，不作真墓）",
+                "trueTomb": false
+              }
+            ],
+            "state": "DEFERRED",
+            "stateReason": "克多生少而生者为日月：克处逢生，有力而受克（八宫图第三「若得相生之爻旺相者也可断为克处逢凶中得解」，B-005）；但入墓，待冲墓戌",
+            "release": [
+              {
+                "kind": "冲墓",
+                "branch": "戌",
+                "offsetDays": 4,
+                "withinCurrentXun": true,
+                "daysLeftInXun": 9,
+                "rule": "R-YINGQI-05"
+              }
+            ],
+            "flyPushed": true,
+            "acts": "伏（静）",
+            "ruleIds": [
+              "R-SICHU-01",
+              "R-FUSHEN-02",
+              "R-FUSHEN-03",
+              "R-FUSHEN-05",
+              "R-FUSHEN-06",
+              "R-FUSHEN-08",
+              "R-SUIMU-01"
+            ]
+          },
+          "reason": "伏神有力而暂受限制，待解除之日（克多生少而生者为日月：克处逢生，有力而受克（八宫图第三「若得相生之爻旺相者也可断为克处逢凶中得解」，B-005）；但入墓，待冲墓戌）；飞神虽克伏神，但自身空破休囚，飞神逢破墓衰空虽有若无，克力不实",
+          "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+          "emergenceTiming": [
+            {
+              "kind": "冲墓",
+              "branch": "戌",
+              "offsetDays": 4,
+              "withinCurrentXun": true,
+              "daysLeftInXun": 9,
+              "rule": "R-YINGQI-05"
+            }
+          ],
+          "ruleIds": [
+            "R-FUSHEN-02",
+            "R-FUSHEN-03",
+            "R-FUSHEN-06",
+            "R-FUSHEN-07",
+            "R-FUSHEN-08"
+          ]
+        },
+        {
+          "flow": "hidden",
+          "id": "HIDDEN@2:妻财寅",
+          "role": "yuan",
+          "position": 2,
+          "hidden": "妻财寅木",
+          "fly": "二爻官鬼午火（发动）",
+          "flyRelation": "伏去生飞（泄气）",
+          "flyCombine": false,
+          "hasQi": true,
+          "supports": [
+            "日月生伏",
+            "伏神旺相"
+          ],
+          "openers": [
+            "日月动爻冲克飞神",
+            "飞神空破休囚墓绝"
+          ],
+          "obstacles": [],
+          "emergence": "likely",
+          "state": "EFFECTIVE",
+          "hiddenState": {
+            "version": "role-state-0.4.0",
+            "pattern": null,
+            "seasonal": "相",
+            "seasonalFive": "相",
+            "capability": "strong",
+            "attacked": false,
+            "capabilityBasis": "四处有生无克（月建）",
+            "places": [
+              {
+                "place": "月建",
+                "effect": "生",
+                "strong": true
+              }
+            ],
+            "limitations": [],
+            "state": "EFFECTIVE",
+            "stateReason": "四处有生无克（月建）",
+            "release": [],
+            "flyPushed": true,
+            "acts": "伏（静）",
+            "ruleIds": [
+              "R-SICHU-01",
+              "R-FUSHEN-02",
+              "R-FUSHEN-03",
+              "R-FUSHEN-05",
+              "R-FUSHEN-06",
+              "R-FUSHEN-08",
+              "R-SUIMU-01"
+            ]
+          },
+          "reason": "伏神有力、飞神已被推开：伏而有用，虽不现亦如现，可参与当前判断（四处有生无克（月建））",
+          "staticNote": "伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待",
+          "emergenceTiming": [
+            {
+              "rule": "R-FUSHEN-08",
+              "kind": "伏神逢值",
+              "branch": "寅"
+            }
+          ],
+          "ruleIds": [
+            "R-FUSHEN-02",
+            "R-FUSHEN-03",
+            "R-FUSHEN-06",
+            "R-FUSHEN-07",
+            "R-FUSHEN-08"
+          ]
+        },
+        {
+          "flow": "monthDay",
+          "id": "MONTHDAY@2:午临日",
+          "role": "yong",
+          "position": 2,
+          "pattern": "临日而受月克",
+          "verdict": "临日而又动化回头克：寡不敌众，伤亦为伤",
+          "ruleIds": [
+            "R-RIZHEN-05"
+          ]
+        },
+        {
+          "flow": "monthDay",
+          "id": "MONTHDAY@4:午临日",
+          "role": "yong",
+          "position": 4,
+          "pattern": "临日而受月克",
+          "verdict": "临日辰：逢破不破、遇克无伤",
+          "ruleIds": [
+            "R-RIZHEN-05"
+          ]
+        },
+        {
+          "flow": "change",
+          "id": "CHANGE@2:午化亥",
+          "role": "yong",
+          "position": 2,
+          "from": "官鬼午火",
+          "to": "子孙亥水",
+          "huitou": "回头克",
+          "tags": [
+            "化绝"
+          ],
+          "changedStrength": "有气",
+          "verdict": "回头克而本爻只临日辰、又受月克：寡不敌众，伤亦为伤",
+          "ruleIds": [
+            "R-HUA-01",
+            "R-HUA-02",
+            "R-YUEJIAN-03",
+            "R-RIZHEN-05"
+          ]
+        }
+      ],
+      "timing_resolution": [
+        {
+          "target_branch": "亥",
+          "offsetDays": 5,
+          "withinCurrentXun": true,
+          "daysLeftInXun": 9
+        }
+      ],
+      "authoring": {
+        "author": "Claude（AI 起草）",
+        "status": "draft-complete",
+        "written_at": "2026-11-13",
+        "revision": 6,
+        "revision_note": "AI-6 终审退回：删去申、酉日两条应期——用神临日，不合「大象凶」须无日月生扶之界定"
+      },
+      "checks": {
+        "errors": [],
+        "warnings": []
+      },
+      "content_hash": "abf5f59606de41aca0cf37ee7205e80df36c3914eaeefacc9c69787bf3702bee",
+      "rules_used": [
+        {
+          "id": "R-DONGBIAN-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-06",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-FUSHEN-07",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-HUA-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-HUA-02",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-LIANGXIAN-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-LIANGXIAN-03",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-RIZHEN-05",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-RIZHEN-06",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YINGQI-11",
+          "status": "ai-verified",
+          "open_disputes": []
+        },
+        {
+          "id": "R-YONG-ZI-01",
+          "status": "ai-verified",
+          "open_disputes": []
+        }
+      ],
+      "rules_unapproved": [],
+      "statuses": {
+        "authoring_status": "draft-complete",
+        "technical_review_status": "passed",
+        "author_full_text_review_status": "pending",
+        "interpretation_review_status": "pending",
+        "ai_review": {
+          "source_check": "resolved",
+          "independent": "resolved",
+          "adversarial": "resolved",
+          "editor": "DONE",
+          "final_qa": "PASS",
+          "missing_conditions": []
+        },
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "AI-6 最终验收复验（独立代理）",
+        "reviewed_at": "2026-11-13",
+        "stale_records": 7
+      }
+    }
+  ]
+}

@@ -1844,11 +1844,14 @@
       "original_text": [
         "子与丑合、寅与亥合、卯与戌合、辰与酉合、巳与申合，午与未合。",
         "爻之合者，静而逢合，谓之合起。动而逢合，合谓之合绊。",
-        "凡得诸合，诸占皆以为吉，占名成，占利利就"
+        "凡得诸合，诸占皆以为吉，占名成，占利利就",
+        "诸合皆以用神旺者为吉，独此六冲卦变六合得不看用神，竟以吉断。",
+        "爻逢六合已为吉兆，动而变六合谓始终而作合也。",
+        "宜合吉，不宜合凶"
       ],
       "modern_explanation": "静爻逢合为合起，动爻逢合为合绊；诸合于求名、求利、婚姻等为吉，但须用神有气。",
-      "applicable_conditions": "地支相合",
-      "exceptions": "同章：「然必用神有气相宜，用若失陷无益」；不能见合即断事成",
+      "applicable_conditions": "地支相合（日月合爻、爻与爻合、动化合）与卦逢六合（六合卦、冲变合、合变合）",
+      "exceptions": "同章：诸合皆以用神旺者为吉，然必用神有气相宜，用若失陷无益；唯六冲卦变六合可不看用神；六合卦变六合方谓始终作合；吉事逢合则成，凶事逢合难结（宜合吉，不宜合凶）。乡试章：凡得六合卦，亦要官父世爻得地，有一失陷不遇生扶者，虽六合亦无益（科举口径，求职参看）",
       "adoption": "adopted",
       "engine_refs": [
         "src/constants.js",
@@ -1856,6 +1859,22 @@
       ],
       "review_status": "pending-professional-review",
       "version": "0.1.0"
+    },
+    {
+      "rule_id": "R-HE-02",
+      "topic": "六合卦须官父世爻得地",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试",
+      "original_text": [
+        "凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐虽六合亦无益矣。"
+      ],
+      "modern_explanation": "求名遇六合卦，仍须官星、父母、世爻有气；一爻失陷无生扶，六合也无益。",
+      "applicable_conditions": "求名求职遇六合卦",
+      "exceptions": "原在乡试章（科举口径）；面试按谋职（D-010）参看",
+      "adoption": "reference",
+      "engine_refs": [],
+      "review_status": "pending-professional-review",
+      "version": "0.6.0"
     },
     {
       "rule_id": "R-CHONG-01",

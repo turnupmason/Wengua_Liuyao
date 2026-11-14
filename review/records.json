@@ -1506,6 +1506,44 @@
         "[minor] register R-YINGQI-11：本篇 rules_used 中 R-YINGQI-11 仍为 pending-professional-review。"
       ],
       "report": "reports/review-round7/ai6-final-qa.json"
+    },
+    {
+      "record_id": "RV-0050",
+      "script_id": "IP-0003",
+      "stage": "ai-final-qa",
+      "status": "FAIL",
+      "reviewer": "AI-6 最终验收复验（独立代理）",
+      "isolated": true,
+      "reviewed_at": "2026-11-13",
+      "content_hash": "fdcc485f55ab9d669c3826fb2bf52cfdd4e68fe3936d8cbcf0c9544a7cdba926",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": false,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": false,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "findings": [
+        "[major] register R-HE-01（本篇所用规则）：登记仍不完整，核验结论 ISSUE，review_status 仍为 pending-professional-review，所以「所用规则已经批准」不成立。",
+        "[major] docs/11 应期栏（渲染：scripts/build-readings.mjs 第 383 行）：月级应期条目被渲染为「申日」「酉日」「结果落定」，与正文「以申月、酉月为准」矛盾，会误导读者以为次日即可落定。",
+        "[minor] reading.process：午火另得世爻动合、巳火被申金动合未交代；应爻生世、合世未提（round6 起连续三轮未改）。",
+        "[minor] reading.timing.text：巳日（乙巳，第 10 天）已出本旬，又是忌神子孙巳火值日、出空之日，正文未注明。",
+        "[minor] reading.process：「意思是这件事要靠你这一方主动去推」缺象意限定；「竞争一方的牵制眼下不显」把兄弟爻直接说成现实中的竞争方（docs/10 第二节、C21）。",
+        "[minor] reading.calculation_explanation：三合不成局的理由不准：亥为月建，卯木安静，并非「只一支发动」；R-JINTUI-02 的相月候选（丑、辰、未、戌）未记。"
+      ],
+      "report": "reports/review-round8/ai6-final-qa.json"
     }
   ]
 }

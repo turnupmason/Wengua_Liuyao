@@ -1,0 +1,175 @@
+{
+ "reviewer": "AI-6 最终验收复验（独立代理）",
+ "reviewed_at": "2026-11-13",
+ "scope_note": "只读复验 IP-0003 当前稿（reports/review-round8，修订 7）。逐字段比对 round7 与 round8 drafts：本轮只改 reading.process 末句（兄弟卯木），其余字段与 facts 均未改。核对 drafts = authoring/interview-pass/IP-0003.json = drafts-built-at-review（judgment、reading 逐字一致），docs/11 哈希前缀 fdcc485f55ab9d66 与构建一致。8 条古籍引文去标点比对 sources/classics 全部命中所注卷章并属所标规则 original_text。R-HE-01 所涉六合章原文（L472、L489、L490）另经维基文库「增刪卜易/19」联网核对，文字一致。只读运行 node --test tests/：59/59 通过；未运行写文件的构建脚本，未运行 git。本记录为 AI 审核，不是人工专家认证。",
+ "cases": [
+  {
+   "script_id": "IP-0003",
+   "content_hash": "fdcc485f55ab9d669c3826fb2bf52cfdd4e68fe3936d8cbcf0c9544a7cdba926",
+   "revision_checked": "修订 7（revision_note：「正文兄弟卯木一句改与事实一致」）。与 round7 稿逐字段比对，只有 reading.process 末句改动；round7 列出的 5 条 minor 均未处理。",
+   "prior_findings": [
+    {
+     "source": "AI-6 round7 / round6",
+     "finding": "（major）reading.process「兄弟卯木虽得月生，却入了未土之墓，又受申金动克，也没有发动来牵制」把旺相、EFFECTIVE 的仇神写成受制，与 judgment、facts 不一致",
+     "resolved": "已解决",
+     "note": "现句「兄弟卯木得月令之生，旺相而安静，入墓也不作真墓，只是并未发动去分夺官星，竞争一方的牵制眼下不显」。与 facts 对照：seasonal 相、capability strong、EFFECTIVE、入墓「旺相或有扶，不作真墓」trueTomb=false、acts「静而旺相」，均一致；受申金动克已不再作为受制理由（计算说明仍以事实形式列出，可以接受）。「分夺官星」可由黄金策·求名「兄弟同经，乃夺标之恶客」（黄金策 L492；卜筮正宗 L745 注「如遇发动……必能夺我之标」）支持。余下措辞问题见 required_fixes（minor）。"
+    },
+    {
+     "source": "AI-6 round7",
+     "finding": "（minor）四爻午火另得世爻未土动合、二爻巳火被申金动合未交代；应生世、合世未提",
+     "resolved": "未解决",
+     "note": "正文仍只写午火日合。facts：巳火 notes「五爻官鬼申动来合（合起）」，午火 notes「初爻妻财未动来合（合起）」、capabilityBasis「生多克少（生：日辰、动爻初爻未）」，fact_sheet「应爻……生世、合世」。"
+    },
+    {
+     "source": "AI-6 round7",
+     "finding": "（minor）巳日（乙巳，第 10 天）已出本旬，且为二爻子孙巳火值日，未注明",
+     "resolved": "未解决",
+     "note": "timing.text 未改。巳日对忌神巳火而言是值日、出空之日，正文以巳日为「结果明朗、得到肯定答复」之期，宜加说明。"
+    },
+    {
+     "source": "AI-6 round7",
+     "finding": "（minor）「意思是这件事要靠你这一方主动去推」缺「从卦象看」限定",
+     "resolved": "未解决",
+     "note": "原句未改。"
+    },
+    {
+     "source": "AI-6 round7",
+     "finding": "（minor）计算说明三合不成局理由不准；R-JINTUI-02 相月候选未记",
+     "resolved": "未解决",
+     "note": "仍为「亥卯未三支俱在而只一支发动，不作成局」；facts timing_candidates R-JINTUI-02 列申、酉、丑、辰、未、戌，计算说明未记相月及只取旺月的理由。"
+    },
+    {
+     "source": "AI-6 round7",
+     "finding": "（major）R-HE-01 登记 ISSUE，「所用规则已经批准」不成立",
+     "resolved": "部分解决",
+     "note": "modern_explanation 已补「诸合于求名、求利、婚姻等为吉，但须用神有气」，exceptions 已补「然必用神有气相宜，用若失陷无益」；round7 要求补入的 L489、L490、L2578 等限制仍未登记，review_status 仍为 pending-professional-review，rules_unapproved 仍为 R-HE-01。详见 rule_verifications。"
+    },
+    {
+     "source": "AI-2（round4）",
+     "finding": "（中等）应期酉日与引文矛盾；（中等）财持世发动未述「财若交重」与 D-010；（中等）R-HE-01 引文与登记、六合限制；（轻微）待时而进、D-004、巳火被动爻合起",
+     "resolved": "部分解决",
+     "note": "应期已改为申、巳日与申、酉月（D-019）；财动已在过程段与 conflicts_resolved 说明；待时而进、D-004 已处理。仍有两处未解决：R-HE-01 登记的限制不全；巳火被申金动合正文仍未交代。"
+    },
+    {
+     "source": "AI-3（round4）",
+     "finding": "独立复算 likely-pass 与终稿 pass-but-slow 不同；午火动合未计；pattern「月克日生」宜作「月克日合」",
+     "resolved": "部分解决",
+     "note": "类别差异已由 D-019（A）消解；facts 已把动合计入午火生扶。pattern 标签仍为「日月相反（月克日生）」（未土合午而不生午），属引擎标签问题，不进正文，不影响结论。"
+    },
+    {
+     "source": "AI-4（round4）",
+     "finding": "major 4 条：休囚化进神未审；应期与引文矛盾；象意写成现实；仇神受制与 facts 不一致",
+     "resolved": "已解决",
+     "note": "前三条在前几轮已解决（D-019、标题与文书句改写），第四条本轮正文已改。"
+    },
+    {
+     "source": "AI-4（round4）",
+     "finding": "minor：三处累计/广义之旺；应爻另得世爻动合、应生世合世；三合理由；六合卦引文、D-004、标签",
+     "resolved": "部分解决",
+     "note": "第一条与第四条已解决；应爻动合、三合理由两条仍未改。"
+    }
+   ],
+   "ai5_concerns": [
+    {
+     "concern": "巳火被申金动合、午火被世爻未土动合，正文只写午火日合",
+     "decision": "需修改",
+     "note": "仍未补（minor）。"
+    },
+    {
+     "concern": "兄弟卯木「入了未土之墓」作受制理由，措辞偏重",
+     "decision": "已解决",
+     "note": "本轮已改为「旺相而安静，入墓也不作真墓」，与 facts 一致。"
+    },
+    {
+     "concern": "R-JINTUI-02 候选月尚含丑、辰、未、戌（相月）",
+     "decision": "无需修改（可选补记）",
+     "note": "D-019 写明取旺相之时，正文取金旺之申、酉月可以接受；建议在计算说明中记下相月候选，并写明为何只取旺月。"
+    }
+   ],
+   "conditions": {
+    "排盘数据和计算测试全部通过": true,
+    "所用规则已经批准": false,
+    "用神选择有明确依据": true,
+    "正反证据均得到处理": true,
+    "没有未解决的重大专业冲突": true,
+    "关键古籍引用已经核查": true,
+    "传统应期具有适用依据或明确记录不适合取期": true,
+    "独立专业审核完成": true,
+    "反向质疑审核完成": true,
+    "最终语言编辑完成": true,
+    "没有明显机械重复、套话或病句": true,
+    "简断、详断和总断结论一致": true,
+    "原有正式排版完整保留": false,
+    "内容哈希、规则版本及审核记录一致": true,
+    "全部相关回归测试通过": true,
+    "无未经证实的现实事实断言": true,
+    "没有冒充真人专家认证或现实预测保证": true
+   },
+   "condition_notes": {
+    "排盘数据和计算测试全部通过": "本轮只读运行 node --test tests/，59/59 通过。drafts-built-at-review 中 IP-0003 的 checks.errors 与 checks.warnings 均为空，technical_review_status 为 passed。",
+    "所用规则已经批准": "不满足。rules_used 12 条中 11 条为 ai-verified；R-HE-01 仍为 pending-professional-review，rules_unapproved 为「R-HE-01(pending-professional-review)」。本轮核验结论仍为 ISSUE（见 rule_verifications）。按 docs/16 第四节的口径，此条不能成立。",
+    "用神选择有明确依据": "官鬼只有五爻申金一爻，且发动（R-YONG-GUAN-01；yongshen_selection status=single）。",
+    "正反证据均得到处理": "满足，但有残留 minor。round7 判此条为 false 的主因是卯木一句（major），本轮已改，现与 facts 一致。其余证据与 facts 一致：官星得日生、动生、化进；原神临日发动；子孙巳火空破而静；午火静而月克；财动依 D-010 说明；进神待时依 D-019。仍有两处只作补充、不改变取舍的事实未写入正文：午火另得世爻动合、巳火被申金动合；应爻生世、合世。均列入 required_fixes（minor）。",
+    "没有未解决的重大专业冲突": "D-019（A）、D-010、D-004 均已裁定，本稿均遵循；rules_used 的 open_disputes 全部为空。",
+    "关键古籍引用已经核查": "8 条引文去标点后逐字见于所注卷章：增删卜易 L2599、L703、L213、L472、L725、L1048、L2612，卜筮正宗 L334（卜筮正宗全书 L107 互校相同）。各条均在所标规则的 original_text 中（R-YINGQI-10 的引文由登记的第 1、2 两句连写而成）。R-HE-01 适用理由已写「同章亦言须用神有气」。六合章原文另经维基文库「增刪卜易/19」联网核对，文字一致。R-HE-01 登记不全的问题归入「所用规则」一条。",
+    "传统应期具有适用依据或明确记录不适合取期": "条目数据有依据：申日（丙申，第 1 天，R-YINGQI-02）；巳日（乙巳，第 10 天，R-YINGQI-10，原文例「申动酉……有应巳月日者」）；申月、酉月（R-JINTUI-02，D-019），time_scale=month，timing_resolution 不再给 offsetDays。残留 minor：巳日已出本旬，又是忌神巳火值日、出空之日，正文未注明。docs/11 把月级条目显示成「申日」「酉日」，这是渲染错误，归入「排版」一条。",
+    "独立专业审核完成": "AI-3 已完成；唯一的结论分歧已由 D-019 解决。",
+    "反向质疑审核完成": "AI-4 的 4 条 major 已全部解决（本轮解决了仇神一条）。余下 2 条 minor（应爻动合、三合理由）未改，列入 required_fixes，不构成 major 退回。",
+    "最终语言编辑完成": "AI-5 在 round5b 完成精修。之后各轮只按审核意见改了个别句子。本轮新句语义通顺，「只是并未发动……」中的转折略显生硬，但不构成病句。",
+    "没有明显机械重复、套话或病句": "未见套话或病句。C14、C23、C24、C25 构建检查均无报错。",
+    "简断、详断和总断结论一致": "标题、简断、结局、总断均为「有望通过，但要待时」或「结果偏慢」，与 verdict pass-but-slow 一致。",
+    "原有正式排版完整保留": "不满足。docs/11 中本篇各栏齐全、次序正确，正文与 drafts 逐段一致。但应期栏两条月级条目（R-JINTUI-02，time_scale=month）被渲染为「- 申日｜结果落定（待时而进）……」「- 酉日｜结果落定（待时而进）……」，与上方应期说明「以申月、酉月金旺之时为准」直接矛盾。读者会把「结果落定」读成次日（丙申）或第 2 天，和「待时而进」的判断相反。原因在 scripts/build-readings.mjs 第 383 行：渲染时固定写「${e.target_branch}日」，没有按 time_scale 取「月」（同文件第 103 行的 C10 检查已按 time_scale 区分）。六篇中只有 IP-0003 含月级条目。round7 未发现此问题，本轮新发现。",
+    "内容哈希、规则版本及审核记录一致": "drafts、authoring 源稿与构建结果三者 judgment、reading 逐字一致；content_hash fdcc485f…与 docs/11 前缀一致；rule_version 为 0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0，source_version 为 0.5.0；facts 与 round7 完全相同。AI-2、AI-3、AI-4 记录绑定旧哈希（stale_records 8），按 review-status.mjs 口径，须各问题已解决才能视为有效，逐项情况见 prior_findings。",
+    "全部相关回归测试通过": "59/59 通过。",
+    "无未经证实的现实事实断言": "满足，但有残留 minor。「意思是这件事要靠你这一方主动去推」仍缺「从卦象看」。新句「竞争一方的牵制眼下不显」把兄弟爻直接换成「竞争一方」，虽然有「眼下不显」的限定，不算定论，但按 docs/10 C21 的示范，宜写成「兄弟爻未见发动牵制」，或加「从卦象看」。",
+    "没有冒充真人专家认证或现实预测保证": "正文没有自称专家认证，也没有保证现实结果；总断只给出有条件的建议。本记录为 AI 审核，不是人工专家认证。"
+   },
+   "required_fixes": [
+    {
+     "severity": "major",
+     "field": "register R-HE-01（本篇所用规则）",
+     "problem": "登记仍不完整，核验结论 ISSUE，review_status 仍为 pending-professional-review，所以「所用规则已经批准」不成立。",
+     "suggested_fix": "按 rule_verifications 补齐 exceptions 与 applicable_conditions，提交核验；核验通过后改为 ai-verified 并重新构建，使 rules_unapproved 为空。"
+    },
+    {
+     "severity": "major",
+     "field": "docs/11 应期栏（渲染：scripts/build-readings.mjs 第 383 行）",
+     "problem": "月级应期条目被渲染为「申日」「酉日」「结果落定」，与正文「以申月、酉月为准」矛盾，会误导读者以为次日即可落定。",
+     "suggested_fix": "渲染时按 e.time_scale === 'month' 输出「申月」「酉月」（与第 103 行 C10 同一口径），然后重建 docs/11；建议在 C10 或 C26 中加一项检查，防止条目单位与 time_scale 不符。"
+    },
+    {
+     "severity": "minor",
+     "field": "reading.process",
+     "problem": "午火另得世爻动合、巳火被申金动合未交代；应爻生世、合世未提（round6 起连续三轮未改）。",
+     "suggested_fix": "补一句：「午火又得世爻动合，仍静而不能主动伤官；巳火空破，虽被申金合起也起不来」；可再补「应爻生世、合世，传统上属配合之象（参看）」。"
+    },
+    {
+     "severity": "minor",
+     "field": "reading.timing.text",
+     "problem": "巳日（乙巳，第 10 天）已出本旬，又是忌神子孙巳火值日、出空之日，正文未注明。",
+     "suggested_fix": "补一句：「巳日已出本旬，也是子孙巳火值日，消息未必全顺，仍以申月、酉月为准」。"
+    },
+    {
+     "severity": "minor",
+     "field": "reading.process",
+     "problem": "「意思是这件事要靠你这一方主动去推」缺象意限定；「竞争一方的牵制眼下不显」把兄弟爻直接说成现实中的竞争方（docs/10 第二节、C21）。",
+     "suggested_fix": "改为「从卦象看，这件事要靠你这一方主动去推」；后句改为「兄弟爻未见发动牵制」，或写成「从卦象看，竞争一方的牵制眼下不显」。"
+    },
+    {
+     "severity": "minor",
+     "field": "reading.calculation_explanation",
+     "problem": "三合不成局的理由不准：亥为月建，卯木安静，并非「只一支发动」；R-JINTUI-02 的相月候选（丑、辰、未、戌）未记。",
+     "suggested_fix": "改为「亥月、未爻俱在而卯木安静，不成局」；补「待时取金旺之申、酉月，相月丑辰未戌亦在候选」。"
+    }
+   ],
+   "status": "FAIL"
+  }
+ ],
+ "rule_verifications": [
+  {
+   "rule_id": "R-HE-01",
+   "verdict": "ISSUE",
+   "notes": "已修正：(1) original_text 三句均逐字见于增删卜易·六合章第十九（L470–472），维基文库「增刪卜易/19」文字一致；(2) modern_explanation 已解释第三句，即「诸合于求名、求利、婚姻等为吉，但须用神有气」，IP-0003 所引正是这一句；(3) exceptions 已录同句后半「然必用神有气相宜，用若失陷无益」，逐字见于 L472。\n\n仍未修正（round7 已明确要求补入，本轮未补）：\n(a) L489「诸合皆以用神旺者为吉，独此六冲卦变六合得不看用神，竟以吉断」。这是「须用神有气」的反向例外，现 exceptions 写「不能见合即断事成」，未载此例外，口径不完整。\n(b) L472 句末「但宜吉事逢之，事必就，不宜凶事逢之，事之难结」：合主事情结合、久远，对凶事则主难以了结，未登记。\n(c) L490 六合卦变六合才称「始终而作合」；同段「惟占讼狱不利，冤仇难解，及占忧疑怪事，终不开心，占孕胎安，占产难生」等不以合为吉的占类，未登记。\n(d) 升选候补章 L2578「凡得六合卦，亦要官父世爻得地，有一失陷不遇生扶者，虽六合亦无益矣」未登记；可注明此条属考试口径，面试依 D-010 只作参看。\n(e) applicable_conditions 只写「地支相合」，没有涵盖同章「相合法有六」中的卦逢六合、六冲变六合、六合变六合（L470）。IP-0003 正是以「豫为六合卦」来用这条规则，适用条件与实际用法不对应。\n\n另作建议（非必须）：modern_explanation 中「动爻逢合为合绊」未区分 L471「爻动与动爻相合……合好」「爻动化合……化扶」；本条没有 ai_verification 记录。\n\n以上补齐后可再提交核验。登记中 (a) 至 (e) 缺漏，本轮不能判 PASS。"
+  }
+ ]
+}
