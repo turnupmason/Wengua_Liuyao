@@ -72,7 +72,7 @@ export function checkClassDraft(src, userTexts) {
       if (!lines.length) { errors.push(`C33 样本 ${tag} 无 ${d.role} 爻`); continue; }
       // 用神当前无力本身即为主要不利依据（R-YUANJI-05「用神无根」）
       const ok = d.effect === 'adverse'
-        ? (d.role === 'yong' ? lines.every((l) => l.state.state === 'INEFFECTIVE') : lines.some((l) => l.state.state === 'EFFECTIVE' && l.state.acts !== '静（不主动作用）'))
+        ? (d.role === 'yong' ? lines.every((l) => l.state.state === 'INEFFECTIVE' || (l.change && (l.change.huitou === '回头克' || l.change.advance === '退神' || ['绝', '墓'].includes(l.change.lifeStage)))) : lines.some((l) => l.state.state === 'EFFECTIVE' && l.state.acts !== '静（不主动作用）'))
         : lines.some((l) => ['EFFECTIVE', 'DEFERRED'].includes(l.state.state));
       if (!ok) errors.push(`C33 样本 ${tag} 的 ${d.role} 不满足主要${d.effect === 'adverse' ? '不利' : '有利'}依据`);
     }
