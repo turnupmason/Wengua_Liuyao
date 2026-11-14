@@ -1,0 +1,728 @@
+{
+  "reviewer": "AI-2 古籍核查（独立代理）",
+  "reviewed_at": "2026-11-13",
+  "method": [
+    "对 6 篇 reading.classical_sources 共 44 条引文，去除标点空白后在 sources/classics 对应书全文中逐字检索，并定位所在章（卷二以后按章名行定位）；全部命中所注书、所注章。",
+    "对 judgment.rule_ids 及正文中出现的全部 rule_id，核对 rules/register.json 的 original_text 是否逐字见于所注卷章（独立脚本，不依赖 npm run verify:rules）；登记内的 R-* 规则全部命中，R-YINGQI-02/08/09/10/11 不在登记表中。",
+    "逐条阅读引文前后文（增删卜易各章、卷二所收千金赋野鹤注、卷三求名诸章；卜筮正宗黄金策直解；卜筮全书），对照 facts 中的确定性排盘事实判断适用性。",
+    "黄金策、卜筮正宗引文用本地另外的录入本（卜筮正宗 yanyilundao 本所收黄金策、卜筮正宗全书知命书院本、卜筮全书、易隐）互校；增删卜易只取得维基文库同一录入本，未取得独立他本。",
+    "行号均指 sources/classics/*.md 当前文件行号。"
+  ],
+  "cases": [
+    {
+      "script_id": "IP-0001",
+      "citations": [
+        {
+          "rule_id": "R-YONG-GUAN-01",
+          "quote": "占功名、官府、雷霆鬼神、妻占夫皆以官鬼爻为用神",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·用神章第八 L182，逐字一致（原文句首有「官鬼爻：」，省略不改义）。仅维基文库原剑录入本一种。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "面试按谋职取官鬼，与 D-010 用户裁定一致。"
+        },
+        {
+          "rule_id": "R-YONG-GUAN-02",
+          "quote": "占功名者若得官鬼持世即许成名，子孙持世且待时。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·八宫图第三 L60；维基文库 增刪卜易/3 现行文字逐字相同（「卽許成名」）。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同章 L64 有两处限制：①「倘若官鬼爻……或值旬空月破或被卦中子孙发动以伤官……虽遇官鬼持世……有何益也」；②此段是野鹤教「全不知五行之理者」的简易法，明言「倘若稍知五行之理者，不可以此为法」。本盘官鬼不空不破、子孙安静，限制①不触发；限制②说明此句只宜作辅证，不宜单独当断语依据。",
+          "verdict": "PASS",
+          "notes": "facts：二爻官鬼卯木持世，相，月生、日生、日长生，无伤损，非空非破；子孙酉金静。适用。"
+        },
+        {
+          "rule_id": "R-YONG-GUAN-03",
+          "quote": "旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之三·升选候补章又第五十五 L2599，逐字一致。",
+          "applies_to_chart": true,
+          "missing_exceptions": "本章原为已仕者候补升选，借用于面试属 D-010 裁定下的类推，应在说明中保持「谋职类推」的表述。",
+          "verdict": "PASS",
+          "notes": "卯木亥月为相，亥日生、长生于亥，按 R-WANG-02 广义之旺可称旺官；持世属实。"
+        },
+        {
+          "rule_id": "R-YUANJI-04",
+          "quote": "忌神虽动，不能克用神者有七：忌神休囚不动",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·元神忌神衰旺章第十 L213。原句为「忌神休囚不动，而动休囚被日、月动爻克者一也」，引文截在句中，只取「静」的一支，文义未变。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同段末句「以上论元神、忌神之有力、无力者，亦要用神有气」——本盘用神有气，限制已满足，可不必另述。",
+          "verdict": "PASS",
+          "notes": "facts：子孙酉金亥月休、亥日无生扶，静，INEFFECTIVE。适用。"
+        },
+        {
+          "rule_id": "R-YINGQI-01",
+          "quote": "静而逢值逢冲：如主事爻临子水不动，后逢子日午日而应之",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类应期总注章第又二十六 L714；维基文库 增刪卜易/26又3 现行文字一致。引文后半是本章例句，登记表 R-YINGQI-01 只收「静而逢值逢冲」，例句同段，可接受。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "用神卯木静、不空不破，取卯日（值）、酉日（冲），与 facts.timing_candidates 一致；timing 条目同用 R-YINGQI-01，编号一致。"
+        }
+      ],
+      "rule_spot_checks": [
+        {
+          "rule_id": "R-RIZHEN-02",
+          "verdict": "ISSUE",
+          "notes": "原文「冲旺相之静爻，既为暗动，冲衰弱之静爻为日破」见日辰章 L379，属实；父母巳火亥月休囚、亥日冲之为日破，适用。但登记表 exceptions 与 D-001 要求「卜筮正宗不分旺衰，凡静而不空逢冲皆曰暗动……断语遇此须说明」，本篇正文与计算说明均未提卜筮正宗口径（IP-0004 已照做）。不影响主判，属轻微遗漏。"
+        },
+        {
+          "rule_id": "R-WANG-02",
+          "verdict": "PASS",
+          "notes": "（正文引用、未列入 rule_ids）原文见题头总注章 L702，「或用爻遇长生逢帝旺，皆谓之旺」，卯木长生于亥日，适用。"
+        },
+        {
+          "rule_id": "R-SHIYING-03",
+          "verdict": "PASS",
+          "notes": "（正文引用、未列入 rule_ids）千金赋「世为己，应为人，大宜契合」属实；草稿已声明应爻生世不作对方态度的事实判断，与登记 exceptions 一致。增删卜易卷二千金赋注 L1219 亦主「欲他扶助我者，喜应爻生合世爻」。"
+        },
+        {
+          "rule_id": "R-YUANJICHOU-01 / R-SICHU-01",
+          "verdict": "PASS",
+          "notes": "原文分别见用神元神忌神仇神章 L189、八宫图第三 L86，属实，适用。"
+        },
+        {
+          "rule_id": "（版本）火绝于亥",
+          "verdict": "PASS",
+          "notes": "计算说明称父母巳火「绝于亥」。增删卜易生旺墓绝章录入本缺火一行（校勘 C-008），此说实出卜筮正宗·四生逐位论 L309「火库于戌绝于亥」，属补校读法，宜在出处说明中注明。"
+        }
+      ],
+      "overall": "ISSUES",
+      "issues": [
+        "（轻微）父母巳火逢亥日冲：只用增删卜易「日破」口径，未按 D-001 说明卜筮正宗「静而不空逢冲皆暗动」之说。",
+        "（备注，非错误）R-YONG-GUAN-02 出自八宫图「全不知五行者」的简易法，同章明言稍知五行者不可以此为法；本盘条件满足，作辅证可以。"
+      ]
+    },
+    {
+      "script_id": "IP-0002",
+      "citations": [
+        {
+          "rule_id": "R-YONG-ZI-01",
+          "quote": "为制鬼之神、为解忧之神、为剥官之神，诸事见之为喜，独占功名者忌之。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·用神章第八 L185，逐字一致。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "facts：四爻子孙酉金持世独发。卜筮正宗·诸爻持世诀 L141「子孙持世事无忧，求名切忌坐当头」可作旁证。"
+        },
+        {
+          "rule_id": "R-YONG-GUAN-03",
+          "quote": "子孙持世﹐休望荣荫。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之三·升选候补章又第五十五 L2600，逐字一致。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同章 L2613「子孙持世值旬空，亦不当升。若占两三日之内者，许之必得……子孙尚未出空不克官也」——本盘酉金不空，例外不触发。",
+          "verdict": "PASS",
+          "notes": "升选候补原为已仕者之占，借用于面试属 D-010 下的类推。"
+        },
+        {
+          "rule_id": "R-YONG-GUAN-05",
+          "quote": "倘遇子孙持世，或子孙动于卦中，不拘占入场占升迁悉如水中捞月",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·增删卜易序 L16，逐字一致。",
+          "applies_to_chart": true,
+          "missing_exceptions": "序中此段是给「浅学者」的显然之卦断法，同序 L26 客问「官与子孙皆不持世，六爻乱动……何以决之」，野鹤答以须奥理深求；本盘子孙持世又发动，属显然一类，D-016 用户裁定亦要求先确认子孙有实际克官能力（facts：酉金得日生、化回头生，EFFECTIVE），已满足。",
+          "verdict": "PASS",
+          "notes": "适用。卷三乡试章 L2557「功名无成者不是子孙持世，即是子孙财爻发动」可作同书旁证。"
+        },
+        {
+          "rule_id": "R-YONG-FU-01",
+          "quote": "福如发动，难期金榜之题名。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "黄金策·17、求名 L491；卜筮正宗 L744、卜筮正宗全书 L201、卜筮全书 L4653 三本互校文字相同。卜筮正宗直解：「唯卜功名，以财福反为恶煞，盖财能克父，子能克鬼故也」。",
+          "applies_to_chart": true,
+          "missing_exceptions": "原文为科举求名（D-010 已裁定面试按谋职，此句作同类旁证可以）。",
+          "verdict": "PASS",
+          "notes": "子孙酉金发动属实。"
+        },
+        {
+          "rule_id": "R-YUANJI-03",
+          "quote": "忌神旺相或遇日月动爻生扶或临日月者一也。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·元神忌神衰旺章第十 L212。同句第二条「忌神动化回头生扶退神者二也」录入本文义不顺（校勘 C-010、D-011 待善本核对），本篇另说「化回头生」时依赖该存疑读法。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "酉金亥月休囚，但戌日生之（遇日生扶），合第一条。"
+        },
+        {
+          "rule_id": "R-FUSHEN-06",
+          "quote": "飞神逢破墓衰空﹐虽有若无﹐所以伏神易于出现。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·飞伏神章第二十八 L816，逐字一致；这是李文辉对黄金策「空下伏神易于引拨」的按语。",
+          "applies_to_chart": true,
+          "missing_exceptions": "飞神未土旬空，但得戌日比扶；旬空章 L645 有「有日建动爻生扶者不为空」，facts 在 IP-0004 同日同支的未土上也把「日辰生扶」列为不空理由。按月将章「在旬内者毕竟为空」，旬内仍可作空看，结论成立，但宜说明这一张力。另：同章「伏神被日月冲克者二也」为无用条（戌日克子水），草稿已列为并见。",
+          "verdict": "PASS",
+          "notes": "飞神未土休囚且旬空属实（甲申旬空午未）。"
+        },
+        {
+          "rule_id": "R-FUSHEN-02",
+          "quote": "伏神得动爻生者四",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·飞伏神章第二十八 L815。",
+          "applies_to_chart": true,
+          "missing_exceptions": "飞伏神章 L838 野鹤本人「予于用神不现，即有伏神亦不用之」——此处伏神是原神不是用神，影响较小；D-013 用户裁定已要求有用无用并见时保持待核，草稿照做。",
+          "verdict": "PASS",
+          "notes": "四爻酉金发动生五爻伏神子水，属实。"
+        },
+        {
+          "rule_id": "R-YUANJI-06",
+          "quote": "忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉。",
+          "exists": true,
+          "complete_in_context": false,
+          "edition_notes": "增删卜易·元神忌神衰旺章第十 L221。",
+          "applies_to_chart": false,
+          "missing_exceptions": "此句是例卦中的一句，紧接着原文为「其如亥水月冲日克，值月破而被克，虽有生扶生之不起，如树无根……果卒于癸卯日……此谓之用神无根，元神有力亦难生」——该例结局是凶，本章要旨是接续相生须以用神有根为前提。单引「化凶而为吉」会给读者相反印象。",
+          "verdict": "ISSUE",
+          "notes": "草稿 applies_because 已声明本盘原神伏而未动、不作接续相生论（D-013），实际未用作依据。建议：要么删去此条出处，要么补足例卦结局与「用神无根」一句。（轻微）"
+        },
+        {
+          "rule_id": "R-KONG-05",
+          "quote": "空逢冲而有用，合遭破以无功。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "黄金策·1、总断千金赋 L24；易隐 L273、卜筮正宗全书 L146、卜筮全书 L3134 互校文字相同。",
+          "applies_to_chart": true,
+          "missing_exceptions": "①卜筮正宗直解 L406 支持本篇读法（「如寅与亥合……若见申日或遇申爻动来冲克寅木……故曰合遭破以无功」）。②但项目主书增删卜易卷二所收千金赋野鹤注 L1238 另有保留：「予得验者，凡三合六合，虽不宜目下日月动爻冲克，又宜后来之月冲开……古之不动，宜为之合，非也，两爻皆动，始为合」，即野鹤不认为合被冲开就一概无功。草稿只引黄金策一面。③登记表中 R-KONG-05 的主题是「空亡（黄金策）」、adoption 为 alternative，「合遭破」半句与空亡分歧 D-002 无关，规则编号与所论内容对应松散。",
+          "verdict": "ISSUE",
+          "notes": "事实：卯木得戌日合、被四爻酉金动冲克，属实。建议补述野鹤注的不同看法，并考虑为「合处逢冲」单独登记规则。（中等）"
+        },
+        {
+          "rule_id": "R-YINGQI-01",
+          "quote": "动而逢合逢值",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类应期总注章 L715（此四字在天时章、寿元章、舟行章亦见）。",
+          "applies_to_chart": true,
+          "missing_exceptions": "原文例句「如主事爻临子水发动」以主事爻为对象；题头总注 L709「主象：即定事吉凶之爻。古法以卦中世爻为主象……即如占父母兄弟则卦中父母爻兄弟爻为主事爻」——野鹤口径的主事爻是用神。本篇以忌神酉金推「不利结果落定」，只能借「古法以世爻为主象」（酉金恰持世）勉强支撑；docs/09 §四 自己也列为待审。对忌神而言，同章更直接的句子是「大象凶而受克，须防克者逢生」（facts 已列 R-YINGQI-09：丑辰未戌）。",
+          "verdict": "ISSUE",
+          "notes": "编号不一致：出处条标 R-YINGQI-01，timing 条目标 R-YINGQI-02，而 R-YINGQI-02 并非登记表条目（只见于 docs/09 与 src/evidence.js）。（轻微）"
+        }
+      ],
+      "rule_spot_checks": [
+        {
+          "rule_id": "R-SICHU-01",
+          "verdict": "PASS",
+          "notes": "八宫图第三 L86 原文属实。官鬼卯木月生、日合，一处动克，按此条「三处相生一处相克，也以吉断」一类偏吉；草稿已明列与求名专章的冲突并按 D-016 裁定处理，未隐瞒。"
+        },
+        {
+          "rule_id": "R-YINGQI-02",
+          "verdict": "ISSUE",
+          "notes": "不在 rules/register.json，见跨篇问题。"
+        }
+      ],
+      "overall": "ISSUES",
+      "issues": [
+        "（中等）「合遭破以无功」只引黄金策；项目主书增删卜易卷二千金赋野鹤注对「合处逢冲」有保留（后来冲开亦可成），未述；R-KONG-05 的登记主题（空亡）与此用法不对应。",
+        "（轻微）R-YUANJI-06 引文断章：原例结局为凶（用神无根，元神有力亦难生），本篇又声明不用此条，宜删或补全语境。",
+        "（轻微）应期以忌神「动而逢合逢值」推不利结果，超出原文「主事爻」口径（项目自己列为待审）；出处编号 R-YINGQI-01 与 timing 编号 R-YINGQI-02 不一致。"
+      ]
+    },
+    {
+      "script_id": "IP-0003",
+      "citations": [
+        {
+          "rule_id": "R-YONG-GUAN-03",
+          "quote": "又曰财动生官得美缺",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之三·升选候补章又第五十五 L2599。",
+          "applies_to_chart": true,
+          "missing_exceptions": "本盘是财爻持世而发动。求名类古籍对此有明确相反论述：黄金策·求名 L491「财若交重，休望青钱之中选」；增删卜易卷三乡试章 L2545「子摇财动，名落孙山。子孙财爻持世，及动于卦中，终须下第」；卜筮正宗直解 L744「唯卜功名，以财福反为恶煞，盖财能克父……如官爻持世，若得财动来生，而财无忌也」（本盘官不持世，此免责条件不成立）。父母不上卦、伏于世爻未土之下，为飞来克伏，世爻又化出父母子水。D-010 登记的采用口径明文要求「遇财动克父须在断语中说明」，本篇正文与计算说明均未说明。可作调和的旁证：卜筮正宗·诸爻持世诀 L143「财爻持世……利身克父丧文风，求官问讼宜财托」。",
+          "verdict": "ISSUE",
+          "notes": "引文本身属实、适用（初爻妻财未土发动生五爻官鬼申金）；问题在于漏述相反古籍与 D-010 的说明要求。（中等）"
+        },
+        {
+          "rule_id": "R-JINTUI-01",
+          "quote": "凡卦中亥变子、丑变辰、寅变卯、辰变未、巳变午、未变戌、申变酉、戌变丑，乃进神也。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "卜筮正宗·十七、变出进退神论 L334；卜筮正宗全书 L107 互校相同。增删卜易进神退神章录入本缺「戌化丑」（校勘 C-007），与本句无关。",
+          "applies_to_chart": true,
+          "missing_exceptions": "增删卜易进神退神章 L1048 野鹤「夫进神之有四：动旺相而化旺，乘势而进，一也；动休囚而化休囚，待时而进，二也；动爻变爻有一而值衰，待旺相之日而进者，三也……」。申、酉于亥月皆休囚（虽得未日生），按野鹤属「待时而进」一类，宜在正文点明「进」要待时，不是即时之进。",
+          "verdict": "PASS",
+          "notes": "申化酉为进神属实。草稿「后势向好」与「待时而进」不矛盾，但应补述。"
+        },
+        {
+          "rule_id": "R-HUA-01",
+          "quote": "用神化吉：凡用神元神动化回头生、化长生、化帝旺、化扶助、化日月皆为化吉。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类题头总注章 L703。",
+          "applies_to_chart": true,
+          "missing_exceptions": "官鬼申化酉为金之帝旺，无争议。原神未土化子水称「化帝旺」依增删卜易「土长生在申，旺在子」（生旺墓绝章 L687），该点属登记分歧 D-004（同章李我平引古法「火土长生在寅」，按此子为土之胎），状态 open；且未土克子水，是本爻克变爻而非变爻生扶本爻。原神这一半宜注明依据与分歧。",
+          "verdict": "PASS",
+          "notes": "用神部分完全适用；原神部分有条件适用。"
+        },
+        {
+          "rule_id": "R-YUANJI-04",
+          "quote": "忌神静临空破二也。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·元神忌神衰旺章第十 L213。",
+          "applies_to_chart": true,
+          "missing_exceptions": "facts 记有二爻巳火被五爻官鬼申「动来合（合起）」，草稿未提。六合章 L472「爻静或与日月动爻合者得合而起，即使爻值休囚亦有旺相之意」；月破章 L751 野鹤「惟（静）而不动又无日辰动爻生助者则到底而破」。合不等于生助，按野鹤巳火仍属到底破，结论不变，但合起这一事实应交代。",
+          "verdict": "PASS",
+          "notes": "巳火静、月破（亥冲巳）、旬空（甲午旬空辰巳）属实。"
+        },
+        {
+          "rule_id": "R-HE-01",
+          "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·六合章第十九 L472，原句后接「……然必用神有气相宜，用若失陷无益」，草稿 applies_because 已提及。",
+          "applies_to_chart": true,
+          "missing_exceptions": "①此句不在登记表 R-HE-01 的 original_text 中（登记只收「子与丑合……」「爻之合者……」两句），规则编号与引文对应不严。②增删卜易卷三乡试章 L2578「凡得六合卦，亦要官父世爻得地，有一失陷不遇生扶者，虽六合亦无益矣」——本盘父母不上卦、伏于世下受飞神未土之克，按 D-010 父母只作辅看，但应说明。③卜筮全书·合处逢冲 L1544–1550 恰以雷地豫为例：「子冲应上午、害世上未，此乃合处逢冲也」，谋事「将成而有变」。本盘世爻未土化出子水（子未相害）、月建亥冲二爻巳火；按增删卜易动变生克冲合章，变爻不能冲他爻，影响有限，但同名卦的直接反例应当提及。",
+          "verdict": "ISSUE",
+          "notes": "豫为六合卦、变随非六冲属实。（中等：编号对应 + 漏述限制）"
+        },
+        {
+          "rule_id": "R-YINGQI-01",
+          "quote": "化进神、逢值逢合：如申动酉，乃为进神，为福为祸，有应申月日者，有应巳月日者",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类应期总注章 L725；维基文库 增刪卜易/26又3 现行文字同为「有應申月日者，有應巳月日者」。",
+          "applies_to_chart": false,
+          "missing_exceptions": "引文本身给出的应期是申（逢值）与巳（逢合），而 timing 条目以此为据定为酉日（「用神化进神：逢值」，编号 R-YINGQI-10）。原文不支持以变爻酉为「化进神逢值」之期。同书进神退神章 L1023 另一例（官鬼申金化酉进神）也「应巳月者，动而逢合之月」。酉日若要保留，可另据「问有应于变爻动爻」（L728）或野鹤进神四法「待旺相之日而进」（L1048），并改正标签。docs/09 与 src/evidence.js 把 R-YINGQI-10 的目标地支定为「本支、变支」，与原文例句「本支、合支」不合，属规则实现层问题。",
+          "verdict": "ISSUE",
+          "notes": "申化酉属实；问题在应期条目与所引原文矛盾。（中等）"
+        }
+      ],
+      "rule_spot_checks": [
+        {
+          "rule_id": "R-YUANJI-01",
+          "verdict": "PASS",
+          "notes": "L201「元神旺相或临日月或日月动爻生扶者一也」属实；原神未土临日、发动，适用。"
+        },
+        {
+          "rule_id": "R-WANG-02",
+          "verdict": "PASS",
+          "notes": "L702 属实；官鬼申金月令休囚，得未日生、动爻生、化进，按广义之旺有气，适用。"
+        },
+        {
+          "rule_id": "R-YINGQI-02 / R-YINGQI-10",
+          "verdict": "ISSUE",
+          "notes": "两编号均不在登记表；R-YINGQI-10 的实现与原文例句不合，见上。"
+        }
+      ],
+      "overall": "ISSUES",
+      "issues": [
+        "（中等）应期酉日标为「化进神逢值」，而所引原文明说申化酉「有应申月日者，有应巳月日者」，同书进神章例也应巳月；酉日缺少所标规则的支持。",
+        "（中等）财爻持世而发动：未述黄金策「财若交重，休望青钱之中选」、增删乡试章「子孙财爻持世，及动于卦中，终须下第」，违反 D-010 采用口径「遇财动克父须在断语中说明」。",
+        "（中等）R-HE-01 引文不在登记原文内；未述乡试章「凡得六合卦，亦要官父世爻得地」及卜筮全书以豫卦为例的「合处逢冲」。",
+        "（轻微）进神未述野鹤「动休囚而化休囚，待时而进」；原神化帝旺依赖未裁定的 D-004；巳火被动爻合起的事实未交代。"
+      ]
+    },
+    {
+      "script_id": "IP-0004",
+      "citations": [
+        {
+          "rule_id": "R-FUSHEN-01",
+          "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·飞伏神章第二十八 L793。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同章 L838 野鹤「予于用神不现，即有伏神亦不用之，再占两卦用神必现」——草稿已引 R-FUSHEN-04 并注 D-005，已交代。同章 L870 引黄金策「飞爻变爻俱无用神者，始寻伏神」——本卦六爻安静无变爻，不触发。",
+          "verdict": "PASS",
+          "notes": "风天小畜无金；亥月戌日非金；巽为风三爻酉金伏于小畜三爻辰土之下，排盘核对无误。"
+        },
+        {
+          "rule_id": "R-FUSHEN-02",
+          "quote": "伏神得日月生者一也",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·飞伏神章 L815。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "戌日土生酉金，属实。"
+        },
+        {
+          "rule_id": "R-FUSHEN-02",
+          "quote": "伏神得遇飞神空破休囚墓绝者六也。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·飞伏神章 L815。",
+          "applies_to_chart": true,
+          "missing_exceptions": "飞神辰土与伏神酉金为辰酉六合，facts 与草稿均未记。卜筮正宗第十问 L1809 正有一例小畜卦「官鬼伏辰爻之下，与飞神作合……伏合乃藏匿之象」（该例问鬼神，取象不同）。本盘戌日冲辰，可视为冲开此合，对出伏有利，但应交代。",
+          "verdict": "PASS",
+          "notes": "辰土亥月休囚、戌日冲为日破（D-001 另说暗动，草稿已述两说）。"
+        },
+        {
+          "rule_id": "R-FUSHEN-06",
+          "quote": "不独飞神空亡而伏神得出﹐但得飞神临破休囚入墓而伏神皆易出也",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·飞伏神章 L816（李文辉按语）。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "适用。记账问题：此条已列为出处，但 judgment.rule_ids 中没有 R-FUSHEN-06。"
+        },
+        {
+          "rule_id": "R-FUSHEN-05",
+          "quote": "伏无提拔终徒尔，飞不推开亦枉然。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "黄金策·1、总断千金赋 L32；卜筮正宗 L419、卜筮正宗全书 L146 互校相同。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "提拔（日生、飞来生伏）、推开（日冲飞神）均属实。"
+        },
+        {
+          "rule_id": "R-QIUMING-01",
+          "quote": "出现无情，难遂青云之志；伏藏有用，终辞白屋之人。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "黄金策·17、求名 L496；卜筮正宗 L753–754、卜筮全书 L4676–4678、增删卜易乡试章 L2558–2559 四处互校文字相同。另：登记表本条所收「爻逢六合，这回必占荐头」，卜筮正宗作「爻达六合，这回必占鳌头」，增删乡试章作「这回可夺鳌头」，有异文（本篇未引该句）。",
+          "applies_to_chart": true,
+          "missing_exceptions": "支持：增删乡试章 L2559 野鹤释「伏藏有用」为「若伏而旺相，或得日月冲去飞神，生起伏神，准登科及第」——本盘戌日既冲飞神辰、又生伏神酉，正合；卜筮正宗直解 L754「如得有用之官爻，俟值年当辞白屋矣」支持「偏慢」。相反：黄金策·18、仕宦 L515「官爻隐伏，莫思爵位升迁」。本篇及 IP-0001/0002/0003 都以升选候补（仕途）类推面试，按同一类推，仕宦章这句相反论述应当提及并说明取舍。",
+          "verdict": "ISSUE",
+          "notes": "引文属实、适用；漏述同书仕宦章的相反条文。（中等）"
+        },
+        {
+          "rule_id": "R-YUANJI-04",
+          "quote": "忌神静临空破二也。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·元神忌神衰旺章 L213。",
+          "applies_to_chart": true,
+          "missing_exceptions": "草稿 supporting 另提巳火「入戌日墓」（同段「忌神入三墓三也」）；增删卜易卷二千金赋注 L1253 野鹤对「入墓难克」有保留：「屡见后逢冲开墓库日，依然木被金伤」，即辰日冲开后忌神仍可作用。月破则「出月则不破」（L751）。面试近事影响有限，可一句带过。",
+          "verdict": "PASS",
+          "notes": "巳火静、月破属实（不空，「空破」取破）。"
+        }
+      ],
+      "rule_spot_checks": [
+        {
+          "rule_id": "R-FUSHEN-03",
+          "verdict": "PASS",
+          "notes": "L818 原文属实。五条逐一核对：酉金得日生不为无气；亥月戌日不冲克酉；飞神辰生酉不克；金墓丑绝寅，与亥戌辰无涉；酉不空（午未空）不破（亥月破巳）。均不合，结论成立。"
+        },
+        {
+          "rule_id": "R-YINGQI-01（伏神逢值）",
+          "verdict": "PASS",
+          "notes": "以伏神酉逢值为期，有飞伏神章 L836「许午日子孙出现必愈」及卜筮正宗「俟值年」为旁证；冲飞神之戌日以 R-FUSHEN-05 为据，属推论，可接受。"
+        }
+      ],
+      "overall": "ISSUES",
+      "issues": [
+        "（中等）以「伏藏有用」断通过，未述黄金策·仕宦「官爻隐伏，莫思爵位升迁」；本项目既以仕途（升选候补）类推面试，此条应取舍说明。",
+        "（轻微）飞神辰与伏神酉为六合，facts 与正文未记；R-FUSHEN-06 已作出处而未列入 judgment.rule_ids。"
+      ]
+    },
+    {
+      "script_id": "IP-0005",
+      "citations": [
+        {
+          "rule_id": "R-YONG-GUAN-02",
+          "quote": "占功名者若得官鬼持世即许成名",
+          "exists": true,
+          "complete_in_context": false,
+          "edition_notes": "增删卜易·八宫图第三 L60；维基文库 增刪卜易/3 现行文字一致。",
+          "applies_to_chart": false,
+          "missing_exceptions": "同章 L64 紧接着说：「倘若官鬼爻……或值旬空月破……虽遇官鬼持世……有何益也」，并说此法只给全不知五行的人，「倘若稍知五行之理者，不可以此为法」。本盘官鬼卯木持世正值旬空，恰是同章明文所说持世无益的情形；登记表本条 exceptions 也已写明「官鬼值空破……持世也无益」。此外同书求名专章对官空、世空均作否定：升选候补章 L2600「官位空破，勿恩升迁」「官临空破墓绝及动变凶，补升无望」；升迁何方章 L2652 野鹤「世空世破官破官空，俱不得」；乡试章 L2557「功名无成者……或是世爻破空」；黄金策求名 L500「病阻试期，无故空临于世位」（卜筮正宗直解 L760 以「动爻日辰来伤世爻」为条件，本盘无此伤，可作减轻理由）。",
+          "verdict": "ISSUE",
+          "notes": "引文只取「即许成名」半句、略去同章针对旬空的否定，属断章取义。本篇以旬空章、月将章的一般理论（有气之空出旬可用）定「冲空或出旬后有望」，可以主张，但必须正面回应上述求名专章明文。IP-0002 取「求名专章明文为主」（D-016），本篇遇同一章「官位空破，勿恩升迁」却未提，两篇方法不一致。（严重）"
+        },
+        {
+          "rule_id": "R-KONG-03",
+          "quote": "古有此说，予试不然，在旬内者毕竟为空。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·月将章第十六 L320；同章后文「逢空不空终非落底之空……待至出空之日则不空也」支持「出旬可用」。",
+          "applies_to_chart": true,
+          "missing_exceptions": "原文针对「爻值月建旺相」者；本盘卯木为相（月生）而非临月建，属举重明轻的推用，可接受。",
+          "verdict": "PASS",
+          "notes": "甲辰旬空寅卯，卯木静空属实。"
+        },
+        {
+          "rule_id": "R-YUEJIAN-04",
+          "quote": "爻值月建，墓于日或日建冲克者可以敌之，无吉无凶之象",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·月将章第十六 L339，后接「倘得他爻又动相扶者为吉兆。恐他爻又来克制用神，虽临月建，亦难敌也」，本盘六爻安静，后半不触发。",
+          "applies_to_chart": true,
+          "missing_exceptions": "原文就用神而言，此处用于原神，属推用。",
+          "verdict": "PASS",
+          "notes": "原神亥水临月建，水墓于辰、辰土克亥，属实。"
+        },
+        {
+          "rule_id": "R-KONG-05",
+          "quote": "空逢冲而有用",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "黄金策 L24，多本互校相同。增删卜易卷二千金赋注 L1254 亦认可：「倘遇本日之日辰冲者，谓之空逢冲而有用，遇后日之日辰冲，谓之冲起，过此一旬而出空者，谓之填实」。",
+          "applies_to_chart": true,
+          "missing_exceptions": "登记 adoption 为 alternative（黄金策口径），增删卜易对应的采用条为 R-KONG-06（已列 rule_ids，未列出处）。按野鹤注，起卦后的酉日冲卯严格说是「冲起」而非「空逢冲」。",
+          "verdict": "PASS",
+          "notes": "旬内己酉日冲卯属实（第 5 天，仍在本旬）。"
+        },
+        {
+          "rule_id": "R-KONG-02",
+          "quote": "旺不为空，动不为空，有日建动爻生扶者不为空",
+          "exists": true,
+          "complete_in_context": false,
+          "edition_notes": "增删卜易·旬空章第二十六 L645。原句续文为「……动而化空、伏而旺相皆不为空。月破为空。有卦不动为空，爻反伏而被克为空，真空为空」。登记表 R-KONG-02 截至「月破为空」，略去「有卦不动为空」一句；维基文库 增刪卜易/26 现行文字同作「有卦不動爲空」，为同一录入本，未能取得他本核对此句（文义不明，若读作「爻静不动则为空」，正对本盘静空之卯不利）。",
+          "applies_to_chart": false,
+          "missing_exceptions": "①本盘卯木为「相」（月生），日辰辰土不生卯、卦无动爻，原文所列「旺」「动」「日建动爻生扶」三条字面均不成立，需把相作旺看才适用。②同章 L646 野鹤自述：「凡遇旬空，命之再占，卦吉者许之出旬而不空，卦得凶者许之空矣」，例卦中他对旺而生世、只是旬空的卦也未凭一卦定断而命再占；本应用一问一卦无法再占，应说明这一点。③同章 L680 李我平「大象不吉，乃可谓到底空也；大象若吉……又可填之」，可作本篇判有望的依据，草稿未引。",
+          "verdict": "ISSUE",
+          "notes": "引文截取有选择，适用依赖「相即旺」的扩张解释；略去的下句方向相反。（中等）"
+        },
+        {
+          "rule_id": "R-SANMU-01",
+          "quote": "三墓：即用爻入日墓、入动墓、动而化墓",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类题头总注章 L708。",
+          "applies_to_chart": true,
+          "missing_exceptions": "元神忌神衰旺章 L211 把「元神入三墓五也」列为元神无力，「无用之元神也，虽有如无」，与本篇「原神力量未失」方向相反。可用随鬼入墓章（R-SUIMU-01）「亦是休囚无气始见危，若旺而有扶亦有求解」调和（facts：日墓、月令旺相，不作真墓），但正文应交代。",
+          "verdict": "ISSUE",
+          "notes": "定义引用无误；漏述同书「元神入墓即无力」的相反条文。（轻微）"
+        },
+        {
+          "rule_id": "R-YINGQI-01",
+          "quote": "旬空最爱填冲",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类应期总注章 L721，原文下注「详空亡论章」。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "冲空酉日（第 5 天，旬内）、填实卯日（第 11 天，乙卯，出旬）计算无误，与月将章例「要到甲寅日出空可得」同法。timing 条目标 R-YINGQI-08，出处标 R-YINGQI-01，编号不一致（见跨篇问题）。"
+        }
+      ],
+      "rule_spot_checks": [
+        {
+          "rule_id": "R-KONG-06",
+          "verdict": "PASS",
+          "notes": "日辰章 L380「爻遇旬空，日辰冲起而有用，谓之冲空则实」属实；后日之冲按卷二千金赋注称「冲起」，用于旬内酉日可以。"
+        },
+        {
+          "rule_id": "R-YINGQI-08",
+          "verdict": "ISSUE",
+          "notes": "不在登记表，见跨篇问题。"
+        }
+      ],
+      "overall": "ISSUES",
+      "issues": [
+        "（严重）引「官鬼持世即许成名」而略去同章「或值旬空月破……虽遇官鬼持世……有何益也」，本盘官鬼持世正值旬空，属断章取义；登记表 exceptions 已写明此限制。",
+        "（严重）未回应增删卜易求名专章对官空、世空的否定（升选候补章「官位空破，勿恩升迁」、升迁何方章「世空世破官破官空，俱不得」、乡试章「世爻破空……功名必无成」），与 IP-0002「以求名专章明文为主」的处理不一致。",
+        "（中等）R-KONG-02 截取至「月破为空」，略去紧接的「有卦不动为空」；卯木为相而非旺，适用需扩张解释；未述野鹤遇旬空即再占、以第二卦定空否的做法。",
+        "（轻微）原神入辰墓：未述元神忌神衰旺章「元神入三墓……虽有如无」，应以随鬼入墓章调和并写明。"
+      ]
+    },
+    {
+      "script_id": "IP-0006",
+      "citations": [
+        {
+          "rule_id": "R-LIANGXIAN-01",
+          "quote": "舍其静爻﹐而用动爻",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易卷之二·两现章第三十二 L1157。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同句后野鹤验法「应乎旬空月破，舍其不空而用旬空」只涉空破；两午火皆不空不破，不触发（D-003）。",
+          "verdict": "PASS",
+          "notes": "二爻午火发动、四爻午火静，属实。"
+        },
+        {
+          "rule_id": "R-HUA-02",
+          "quote": "戒回头之克我，勿反德以扶人。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "黄金策 L41；卜筮正宗 L433、卜筮正宗全书 L146、易隐 L274 互校相同。卜筮正宗直解：「回头克乃用神自化忌神，如火爻化水之类是也。诸占世爻、身爻、用爻遇之不吉也」——正是本盘火化水、世爻兼用爻。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "午火化亥水，水克火，属实。"
+        },
+        {
+          "rule_id": "R-HUA-01",
+          "quote": "用神化凶：凡用神元神动化回头克、化绝、化墓、化空、化鬼、化退神皆为化凶。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·题头总注章 L704。「火绝于亥」：增删卜易生旺墓绝章录入本缺火一行（校勘 C-008），实据卜筮正宗·四生逐位论 L309「火库于戌绝于亥」，宜注明。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "化回头克、化绝属实。"
+        },
+        {
+          "rule_id": "R-RIZHEN-05",
+          "quote": "假使爻中有动出申酉之金或卯爻动化申酉，此谓之寡不敌众，破亦为破，伤亦为伤。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·日辰章第十七 L380。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同章 L381–388 的例卦正是「天山遁变天风姤」、世爻午火临日辰、化亥水回头克，野鹤断「不宜申金月建生亥水回头克世，卒于亥月」，与本盘结构相同（本盘亥水即月建，更重）。这是本篇最直接的古籍先例，草稿未引，建议补入。",
+          "verdict": "PASS",
+          "notes": "午火临日（生），受月克与变爻回头克（克），生少克多，属实。"
+        },
+        {
+          "rule_id": "R-DONGBIAN-01",
+          "quote": "夫变出之爻能生克冲合本位之动爻，不能生克他爻，而他爻与本位之动爻，亦不能生克变爻。",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·动变生克冲合章第十五 L292。",
+          "applies_to_chart": true,
+          "missing_exceptions": "同章「日月如天，能生克动爻、静爻、变爻、飞爻、伏爻」：日辰午火不能制亥水，月建即亥，无日月救解，结论不变。",
+          "verdict": "PASS",
+          "notes": "用于说明伏财不能替官星化解回头克，适用。"
+        },
+        {
+          "rule_id": "R-FUSHEN-07",
+          "quote": "伏去生飞名泄气",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "卜筮正宗·三十六、飞伏生克吉凶歌 L152；卜筮正宗全书 L42、卜筮全书 L1683 互校相同；《钦定古今图书集成·艺术典》第545卷所收卜筮全书「飞伏生克吉凶歌」作「伏去生飛名洩氣」（洩、泄异体），见维基文库。",
+          "applies_to_chart": true,
+          "missing_exceptions": "歌诀对「伏去生飞」的评价是「泄气」，即伏神被飞神耗泄，不是伏神扶助飞神的吉象。草稿把这一关系写成「从底下暗暗扶着官星……本卦最重要的缓冲」，与所引原文的褒贬方向不一致。facts 判伏神有用另依据日月生伏、伏神旺相，可以保留缓冲之说，但不宜以此句为出处。",
+          "verdict": "ISSUE",
+          "notes": "寅木伏于午火之下、木生火属实；引文含义被正面化。（轻微至中等）"
+        },
+        {
+          "rule_id": "R-YONG-ZI-01",
+          "quote": "独占功名者忌之",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·用神章第八 L185。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "变爻亥水为子孙，属实。"
+        },
+        {
+          "rule_id": "R-YINGQI-01",
+          "quote": "大象凶而受克，须防克者逢生",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类应期总注章 L723；维基文库 增刪卜易/26又3 现行文字一致。",
+          "applies_to_chart": true,
+          "missing_exceptions": "原文例句给「大象凶」下了定义：「用神临辰土，既无日月动爻生扶，乃为大象凶也」，并以「得日月动爻生扶」为「大象吉」（L722 对应「须待克神受克」）。本盘午火临日、帝旺于午，按字面属「得日生扶」，并非原文定义的大象凶；判凶来自寡不敌众。facts 另列有「大象吉而受克」一支（巳日冲去克神亥），草稿未讨论。例句中「后逢寅卯亥日」包括克神本支及生克神之支，本篇以亥日（另据 R-YINGQI-11）、申酉日对应，方法与原文一致。",
+          "verdict": "ISSUE",
+          "notes": "应期推法与原文例句一致，但「大象凶」的认定与原文定义不完全吻合，应说明。timing 编号 R-YINGQI-09 与出处编号不一致。（轻微）"
+        },
+        {
+          "rule_id": "R-YINGQI-01",
+          "quote": "问有应于变爻动爻",
+          "exists": true,
+          "complete_in_context": true,
+          "edition_notes": "增删卜易·各门类应期总注章 L728。",
+          "applies_to_chart": true,
+          "missing_exceptions": "",
+          "verdict": "PASS",
+          "notes": "以变爻亥值日为不利落定之期，与日辰章同卦例「卒于亥月」相合。timing 编号 R-YINGQI-11 不在登记表。"
+        }
+      ],
+      "rule_spot_checks": [
+        {
+          "rule_id": "R-FUSHEN-06",
+          "verdict": "ISSUE",
+          "notes": "原文属实（L816）。facts 以飞神午火「休囚」作为伏神寅木易出的理由之一，但同一午火在正文被写作「临日、帝旺……气势是足的」；按日辰章临日「似与月建同权」、题头总注广义之旺，称其「衰」有矛盾。伏神有用另有日月生伏、伏神旺相两条，结论不受影响，但说法应统一。（轻微）"
+        },
+        {
+          "rule_id": "R-YINGQI-09 / R-YINGQI-11",
+          "verdict": "ISSUE",
+          "notes": "不在登记表，见跨篇问题。"
+        }
+      ],
+      "overall": "ISSUES",
+      "issues": [
+        "（轻微至中等）「伏去生飞名泄气」原意是伏神被耗泄，草稿却以之说明伏财「暗生官星、是最重要的缓冲」，引文褒贬方向被反转。",
+        "（轻微）以「大象凶而受克」推不利期，但用神临日帝旺，不合原文「既无日月动爻生扶，乃为大象凶」的定义，未讨论 facts 中大象吉一支（巳日）。",
+        "（轻微）飞神午火在飞伏判别中作「休囚」，在正文中作「临日帝旺」，前后不一。",
+        "（建议）日辰章 L381–388 有同卦（遁之姤，午世临日化亥回头克，卒于亥月）先例，可直接引用，强于现有出处。"
+      ]
+    }
+  ],
+  "cross_case_issues": [
+    "timing 条目使用的 R-YINGQI-02、R-YINGQI-08、R-YINGQI-09、R-YINGQI-10、R-YINGQI-11 均不是 rules/register.json 中的条目，只见于 docs/09_TIMING_RULES.md 与 src/evidence.js；登记表把全部应期句子并入 R-YINGQI-01。于是同一句原文在 classical_sources 中标 R-YINGQI-01、在 timing 中标 R-YINGQI-0x（IP-0002、0003、0005、0006）。建议把分条编号正式登记，或统一引用方式。",
+    "R-YINGQI-10（化进神逢值逢合）在 docs/09 与 src/evidence.js 中目标地支定为「本支、变支」，而原文例句是「如申动酉……有应申月日者，有应巳月日者」，即本支、合支；增删卜易进神退神章另一申化酉例亦应巳月。实现与原文不合（影响 IP-0003）。",
+    "求名类古籍的取用口径不一：IP-0002 以升选候补章「子孙持世，休望荣荫」等专章明文压过一般生克；IP-0005 遇同章「官位空破，勿恩升迁」及升迁何方章「世空世破官破官空，俱不得」却改用旬空章一般理论且不提专章。应统一：专章明文要么一律正面回应，要么在 D-016 之外另立裁定。",
+    "D-010 把面试归入谋职、借用升选候补章（仕途）；按同一类推，黄金策·仕宦「官爻隐伏，莫思爵位升迁」「父母空亡，休望差除宣敕」等也属同类条文，目前各稿未纳入考量（影响 IP-0004）。",
+    "增删卜易全部引文只有维基文库原剑录入本一种；录入者自述据错谬较多的地摊本与白话本对照、未细校。维基文库「增删卜易」简体标题页及 /3、/26、/26又3 等子页经核对为同一录入本的分页嵌入，不构成独立他本。"
+  ],
+  "web_sources_consulted": [
+    {
+      "url": "https://zh.wikisource.org/w/index.php?title=%E5%A2%9E%E5%88%AA%E5%8D%9C%E6%98%93/3&action=raw",
+      "purpose": "核对八宫图第三「占功名者若得官鬼持世即许成名」及同章「……有何益也」「不可以此为法」三句",
+      "result": "三句均在，文字与本地清洗本一致（繁体：卽許成名、𨿽遇、不可以此爲法）。属同一录入本，不是独立他本。"
+    },
+    {
+      "url": "https://zh.wikisource.org/w/index.php?title=%E5%A2%9E%E5%88%A0%E5%8D%9C%E6%98%93/26&action=raw",
+      "purpose": "核对旬空章「旺不为空……月破为空。有卦不动为空……」一句，看是否有「有卦不动为空」的异文",
+      "result": "页面作「有卦不動爲空，爻反伏而被克爲空，眞空爲空」，Textquality 50%；与本地文字相同，为同一录入本，未能解决该句文义。"
+    },
+    {
+      "url": "https://zh.wikisource.org/w/index.php?title=%E5%A2%9E%E5%88%AA%E5%8D%9C%E6%98%93/26%E5%8F%883&action=raw",
+      "purpose": "核对应期总注「化进神、逢值逢合」「静而逢值逢冲」「大象凶而受克」「问有应于变爻动爻」四句",
+      "result": "四句均在，与本地一致；「化進神……有應申月日者，有應巳月日者」确认为巳而非酉。"
+    },
+    {
+      "url": "https://zh.wikisource.org/w/index.php?title=%E5%A2%9E%E5%88%A0%E5%8D%9C%E6%98%93&action=raw",
+      "purpose": "确认维基文库是否另有独立录入本",
+      "result": "该页为全文主页，以 {{/1}} 等嵌入子页；题注「野鶴老人著，楚江李坦我平鑑定，湖南李文輝覺子增刪」，正文「錄入者言」提到据地攤版与白話版，与 manifest 所记原剑录入本为同一系统。"
+    },
+    {
+      "url": "https://zh.wikisource.org/w/api.php?action=query&list=search&srsearch=%E6%97%BA%E4%B8%8D%E7%82%BA%E7%A9%BA&format=json&srlimit=20",
+      "purpose": "在维基文库全站检索「旺不為空」，寻找增删卜易以外的他本",
+      "result": "相关命中只有「增删卜易」主页与「增删卜易/26」，无他本。"
+    },
+    {
+      "url": "https://zh.wikisource.org/w/api.php?action=query&list=search&srsearch=%22%E4%BC%8F%E5%8E%BB%E7%94%9F%E9%A3%9B%22&format=json&srlimit=20",
+      "purpose": "为卜筮正宗「伏去生飞名泄气」寻找他本",
+      "result": "命中《欽定古今圖書集成·博物彙編·藝術典》第545卷。"
+    },
+    {
+      "url": "https://zh.wikisource.org/wiki/%E6%AC%BD%E5%AE%9A%E5%8F%A4%E4%BB%8A%E5%9C%96%E6%9B%B8%E9%9B%86%E6%88%90/%E5%8D%9A%E7%89%A9%E5%BD%99%E7%B7%A8/%E8%97%9D%E8%A1%93%E5%85%B8/%E7%AC%AC545%E5%8D%B7",
+      "purpose": "以古今图书集成所收卜筮全书互校飞伏生克吉凶歌及相关条文",
+      "result": "飞伏生克吉凶歌首四句作「伏剋飛神為出暴，飛來剋伏反傷身，伏去生飛名洩氣，飛來生伏得長生」，与卜筮正宗同（洩/泄异体）。该卷另有「合處逢衝」节以雷地豫为例（与本地卜筮全书 L1544–1550 相同），用于 IP-0003 核查。该卷「諸爻持世訣」子孙、鬼爻两句与 yanyilundao 卜筮正宗本不同（无「求名切忌坐当头」「功名最喜世当权」），故本报告引卜筮正宗该诀只作旁证。黄金策千金赋、求名诸句该卷未收。"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:NLC416-12jh005345-45344_%E5%A2%9E%E5%88%AA%E5%8D%9C%E6%98%93.pdf",
+      "purpose": "寻找增删卜易印本",
+      "result": "中国国家图书馆藏民国十四年（1925）文明书局本《增删卜易》（秦慎安校勘，394 页图像扫描 PDF，约 10.6 MB）。只看了文件说明页，未下载、未核对正文（下载文件需用户许可，且为图像需人工阅读）。"
+    },
+    {
+      "url": "https://ctext.org/wiki.pl?if=gb&res=&searchu=%E6%97%BA%E4%B8%8D%E7%82%BA%E7%A9%BA",
+      "purpose": "在中国哲学书电子化计划检索旬空章他本",
+      "result": "站点对自动访问返回安全检查页，未取得任何内容。"
+    },
+    {
+      "url": "https://blog.udn.com/DejaVu/4270407",
+      "purpose": "检索结果显示可能载有增删卜易目录或正文",
+      "result": "HTTP 403，未取得内容。"
+    },
+    {
+      "url": "（WebSearch）「有气不动亦为空」「若得官鬼持世即许成名」「财动生官得美缺」「增删卜易 旬空章 旺不为空」",
+      "purpose": "寻找增删卜易旬空章、八宫图、升选候补章的其他录入本",
+      "result": "均未找到载有原文的独立网页；「有气不动亦为空」无任何命中，故本报告不主张任何异文，只报告录入本读作「有卦不动为空」且文义不明。"
+    }
+  ],
+  "limitations": [
+    "增删卜易所有引文（本次 44 条中 36 条）只能与维基文库同一录入本核对，未能取得独立他本；旬空章「有卦不动为空」、元神忌神衰旺章「忌神动化回头生扶退神」（C-010）等疑句无法校定。国家图书馆 1925 年文明书局本扫描件已找到网址，但未下载、未阅读，建议人工对照八宫图第三、元神忌神衰旺章第十、月将章第十六、旬空章第二十六、各门类应期总注章、飞伏神章、升选候补章这几处。",
+    "黄金策与卜筮正宗的引文只用本地另外几个网络录入本（yanyilundao、知命书院、卜筮全书虎易点校本、易隐）互校，同样没有影印善本。",
+    "未阅读 reports/review-round4 下其他审核者的文件，以保持独立；也未运行项目测试或构建（本任务只读，未修改任何已有文件、未运行 git）。",
+    "对适用性的判断以 facts 中程序计算的排盘事实为准；只抽查了纳甲、旬空、宫位（6 卦均核对无误），未逐项复算全部旺衰与生克标签。",
+    "「是否遗漏相反古籍论述」只覆盖增删卜易、黄金策、卜筮正宗、卜筮全书中与求名、空亡、飞伏、动变、应期直接相关的章节；易隐、火珠林、断易天机、易林补遗未作系统检索。",
+    "古今图书集成第545卷的内容由抓取工具摘要转述，除上面所列短句外未逐字比对全文。"
+  ]
+}

@@ -33,6 +33,7 @@ const VERDICTS = {
   'pass-but-slow': { need: ['倾向通过', '有望通过'], forbid: ['难以通过', '偏难', '可能偏低'], also: ['慢', '时间', '等'] },
   'wait-then-likely': { need: ['悬而未决', '未定'], forbid: ['难以通过', '偏难', '可能偏低'], also: ['有望'] },
   unlikely: { need: ['难以通过', '偏难', '可能偏低'], forbid: ['倾向通过', '有望通过'] },
+  undetermined: { need: ['成败未定'], forbid: ['倾向通过', '有望通过', '难以通过', '偏难', '可能偏低'] },
 };
 const han = (s) => (String(s).match(/\p{Script=Han}/gu) || []).length;
 
@@ -141,6 +142,7 @@ function check(src, chart, evidence) {
     if (!userBody.includes('伏')) errors.push(`C17 ${f.id}（${f.role === 'yong' ? '用神' : '原神'}伏藏）正文未讲到伏神`);
     if (f.emergence !== 'unlikely') for (const w of HIDDEN_DENIAL) if (userBody.includes(w)) errors.push(`C17 ${f.id} 判为「${f.emergence}」，正文却写「${w}」`);
   }
+  if (userBody.includes('有用与无用并见') && !evidence.flows.some((x) => x.flow === 'hidden' && x.emergence === 'contested')) errors.push('C17 正文称伏神「有用与无用并见」，但判别流程并无并见之伏神');
   for (const f of evidence.flows.filter((x) => x.flow === 'void' && x.role === 'yong')) {
     const inXun = f.releases.find((rel) => rel.kind === '冲空' && rel.withinCurrentXun);
     if (inXun) {

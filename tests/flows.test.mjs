@@ -15,14 +15,20 @@ test('dayOffset：起卦日之后某支之日的天数，以及是否仍在本�
   assert.equal(dayOffset(c, '辰').offsetDays, 12, '同支取下一次');
 });
 
-test('飞伏：飞神旬空为伏神易出之条件；伏神受日克则有用与无用并见（火泽睽之损·丙戌，用户复核 P0）', () => {
+test('飞伏（B-009）：伏神本身生多克少为有力，飞神旬空已被推开，判有效（火泽睽之损·丙戌）', () => {
   const f = flow(ev([7, 7, 8, 9, 8, 7], '亥', '丙戌'), 'HIDDEN@5:妻财子');
   assert.equal(f.role, 'yuan');
   assert.ok(f.openers.includes('飞神空破休囚墓绝'));
-  assert.ok(f.supports.includes('伏神旺相') && f.supports.includes('动爻生伏'));
-  assert.deepEqual(f.obstacles, ['伏神被日月冲克']);
-  assert.equal(f.emergence, 'contested');
+  assert.deepEqual(f.obstacles, ['伏神被日月冲克'], '无用条款照列为证据');
+  assert.equal(f.hiddenState.capability, 'strong');
+  assert.equal(f.emergence, 'likely');
   assert.match(f.reason, /虽有若无/);
+});
+
+test('飞伏（B-009）：伏神有力而墓于飞神，待冲墓（天山遁之姤·甲午，子孙子水墓于辰）', () => {
+  const f = flow(ev([8, 6, 7, 7, 7, 7], '亥', '甲午'), 'HIDDEN@1:子孙子');
+  assert.equal(f.emergence, 'deferred');
+  assert.deepEqual(f.hiddenState.release.map((r) => [r.kind, r.branch, r.offsetDays]), [['冲墓', '戌', 4]]);
 });
 
 test('飞伏：伏神得月建生合、无用条件皆不合，判伏而有用；伏去生飞（天山遁之姤·甲午，用户复核 P1）', () => {

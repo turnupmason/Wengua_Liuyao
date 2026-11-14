@@ -1,0 +1,367 @@
+{
+ "reviewer": "AI-4 反向质疑（独立代理）",
+ "cases": [
+  {
+   "script_id": "IP-0001",
+   "issues": [
+    {
+     "severity": "major",
+     "category": "静爻作用／日辰重复累计",
+     "quote_from_draft": "原神妻财亥水临月建、临日，居应位，静而旺，生世",
+     "problem": "决定性证据第二条把安静的原神亥水当作正在生用神的力量。用神卯木月令为「相」，按项目第三轮第四层（静爻须月令旺相，且只及于休囚之爻），静而旺之亥水不能主动作用于旺相之卯木。且此亥水就是月建、日辰本身：第一条已计「月建生、日辰生、长生于亥日」，第二条再计「原神生」，同一个亥水被计了三到四次（日生与日长生同出亥日）。",
+     "evidence": "facts.yuan[0].state.acts =「静而旺相（可生克休囚之爻）」；facts.yongshen.state.seasonal =「相」，capabilityBasis =「四处有生无克（月建、日辰）」，四处生克中没有原神一项；docs/08 第七节第四层；R-DONGJING-01「六爻安静旺相之爻，可以生得休囚之爻」。",
+     "suggested_fix": "决定性证据只保留「官鬼持世、月日相生」一条；亥水改写为「原神即月日本身，旺而安静；应爻生世为世应配合之象」，移入 supporting，decisive 去掉第 5 爻或注明只作世应关系。正文「安安静静地生扶你的世爻」改为世应相生之象，不写成原神正在出力。"
+    },
+    {
+     "severity": "major",
+     "category": "必然化表述／与结论类别不一致",
+     "quote_from_draft": "六爻安静，结果不会忽然生变，只是需要耐心等通知。",
+     "problem": "「结果不会忽然生变」是对未来的必然断言。「需要耐心等」以及结局段「静卦应事不急，结果可能要等一等才落地」暗示偏慢，与结论类别 likely-pass（不是 pass-but-slow）不一致；「静卦应事不急」在 register 中没有对应条文。按本盘应期，卯日是起卦后第 4 天，仍在本旬之内，并不慢。",
+     "evidence": "judgment.verdict = likely-pass；起卦丁亥日，辛卯为第 4 天（甲申旬内），丁酉为第 10 天；rules/register.json 无「静卦应事不急」一类规则；10 号文禁止写必然结果。",
+     "suggested_fix": "删去「结果不会忽然生变」和「静卦应事不急……才落地」，改为「六爻安静，眼下没有动爻改变官星的状态」。如果认为偏慢，须先给出规则，并把结论类别改为 pass-but-slow。"
+    },
+    {
+     "severity": "minor",
+     "category": "应期事件对应",
+     "quote_from_draft": "结果或通知多在卯日（官星值日）或酉日（冲动官星）前后到来",
+     "problem": "正文自己说父母（主文书、通知）月破、日破、绝于亥，应期事件却写成「通知到来」，二者不协调。酉日同时是忌神子孙酉金值日、冲克官星，只写「冲动官星」，只讲了一面。",
+     "evidence": "process 段「父母在求职里主文书、材料与通知，它被月建亥水冲破」；facts.ji[0].branch = 酉；R-ANDONG-01「暗动者有喜有忌」。",
+     "suggested_fix": "应期事件改为「结果显现」；酉日注明「此日也是子孙值日冲官，属暗动之期，吉凶仍以官星为准」。"
+    },
+    {
+     "severity": "minor",
+     "category": "规则引用",
+     "quote_from_draft": "官星持世而得月日相生",
+     "problem": "R-YONG-GUAN-03 原文是「旺官持世及日月动爻作官星生合世爻」，「日月作官星」指日月本身临官鬼。本卦日月是亥水妻财，不是官星，适用理由误读了原文，本卦只合「旺官持世」一句。另外，deciding_evidence 和 conflicts_resolved 引了 R-WANG-02、R-YUANJICHOU-01、R-SHIYING-03、R-SICHU-01，rule_ids 都没有列入。",
+     "evidence": "rules/register.json R-YONG-GUAN-03 原文；judgment.rule_ids。",
+     "suggested_fix": "适用理由改为「本卦官鬼卯木月令为相而持世，合『旺官持世』」；rule_ids 补齐。"
+    },
+    {
+     "severity": "minor",
+     "category": "象意写成现实",
+     "quote_from_draft": "提示与书面材料、证明文件或后续通知相关的环节容易有疏漏，宜事先核对齐全",
+     "problem": "把「父母受伤」的象意直接写成「容易有疏漏」，没有「从卦象看」之类的限定。问的是已经进行的面试，「事先核对」在时序上也不合。",
+     "evidence": "10 号文第二节「象意推断须带『从卦象看』之类的限定」。",
+     "suggested_fix": "改为「从卦象看，文书一类偏弱；后续若需要补交材料，宜核对清楚」。"
+    },
+    {
+     "severity": "minor",
+     "category": "文字",
+     "quote_from_draft": "又得当令月令和当天日辰相生",
+     "problem": "「当令月令」语义重复。「卦象只说明应位给出的是生扶而不是克制，并不代表已经知道对方的真实态度」是自我声明式的套话，口气生硬。总断「这一轮倾向通过。最关键的依据是官星持世、得月……」与 IP-0005 总断有 15 个汉字连续相同（「通过。最关键的依据是官星持世、得月」），可能触发 C14；六篇总断都用「最关键的依据是」这一个句式，模板痕迹明显。",
+     "evidence": "跨篇比对：IP-0001 与 IP-0005 最长公共串 17 字符（含 15 汉字）。",
+     "suggested_fix": "改为「又得月建、日辰相生」；删去声明句，只保留「传统上属于配合之象」；总断换一种说法。"
+    }
+   ],
+   "verdict_challenge": "无",
+   "overall": "RETURN"
+  },
+  {
+   "script_id": "IP-0002",
+   "issues": [
+    {
+     "severity": "blocker",
+     "category": "违反用户裁定 D-016",
+     "quote_from_draft": "取求名专章明文为主，判偏难；用神本身生多克少一点列为待专业裁决（D-016）",
+     "problem": "D-016 已于 2026-11-13 由用户裁定（修正版 C），稿中仍写「待专业裁决」；取舍理由也还是裁定前的「求名一类以专章明文为主」，而裁定否定的正是这种按明文机械判败的做法。裁定要求以子孙是否有实际克官能力为依据。本卦子孙酉金得日生、化回头生、独发，属有力动忌，结论可以成立，但冲突取舍须按裁定重写。结局段「本卦这两条同时出现，官星的合又被冲开」也是按明文定案的写法。",
+     "evidence": "rules/register.json D-016 status = ruled，ruling「求名占中子孙持世或发动属重要不利条件，但须判断子孙是否具备实际克官能力；有力动忌可作主要不利依据……不得机械判败」；facts.ji[0].state = EFFECTIVE、acts = 发动、capabilityBasis =「四处有生无克（日辰、自身动化）」。",
+     "suggested_fix": "conflicts_resolved 改为：「依 D-016 裁定：子孙酉金持世独发，得日生、化回头生，为有力动忌，具备实际克官能力，可作主要不利依据；官星生多克少，但克它的是唯一的动爻且有力……」。删去「待专业裁决」和「取求名专章明文为主」，结局段同步改为以忌神的实际克力为主、明文为佐证。"
+    },
+    {
+     "severity": "major",
+     "category": "古籍例外被忽略",
+     "quote_from_draft": "只按一般的生克来看，官星得月令相生、得日辰相合，只受这一处动克，本身是站得住的。",
+     "problem": "稿件只把「一般生克」和「专章明文」对立起来，漏掉同书另一条更直接的明文：八宫图第三「子孙持世且待时」（R-YONG-GUAN-02）。本项目在 IP-0001、IP-0005 正是用这一句的前半句（官鬼持世即许成名），后半句却说子孙持世是「待时」，不是「不成」。另外还有克处逢生（R-KECHU-01「受此处之克，得他处之生」），以及事实层给出的有利应期候选 R-YINGQI-09（用神受四爻酉之克，待逢卯冲去克神，用神有气时适用）。这三点都指向「待时」而不是「不通过」，稿件一条也没有讨论或排除。",
+     "evidence": "R-YONG-GUAN-02 原文；R-KECHU-01；facts.timing_candidates 中的 R-YINGQI-09（卯）；facts.yongshen.state = EFFECTIVE（生多克少）。可用于排除的反方书证：升选候补章「子孙持世，子孙动于卦中，升迁无期」（未登记），升迁何方章野鹤「子孙持世、子孙发动，不得」（未登记），署印谋差章「子孙兄弟不可一而动摇」（R-YONG-GUAN-04）。",
+     "suggested_fix": "在 conflicts_resolved 逐条处理「子孙持世且待时」、克处逢生和卯日候选，说明本卦为何取「不得」而不取「待时」（例如：子孙既持世又发动，并得日生、回头生，属「升迁无期」之重者）。把 R-YONG-GUAN-04 补为谋职专章依据，并登记升选候补章那一句。"
+    },
+    {
+     "severity": "major",
+     "category": "古籍取舍偏一面／与事实层不一致",
+     "quote_from_draft": "被这一冲，合也被冲开了，千金赋说「合遭破以无功」，正是这种情形。",
+     "problem": "稿件把动爻之冲直接定为「合已冲开，合而无功」，并列入 adverse。但是：①事实层把这个日合当作「合住待冲开」，以酉、辰为冲开之应期候选（R-YINGQI-06），即程序并不认为合已经破了；②增删卜易对同一句的注解另有验法：「虽不宜目下日月动爻冲克，又宜后来之月冲开。正所谓如逢合住，冲破成功」；③卯木月令为相，六冲章说「用神旺虽冲不破」（R-CHONG-01）。稿件只取卜筮正宗直解的一种说法。",
+     "evidence": "facts.timing_candidates R-YINGQI-06「合住待冲开：冲卯或冲合神戌」→ 酉、辰；sources/classics/增删卜易.md 第 1238 行；R-CHONG-01；facts.yongshen.state.seasonal = 相。",
+     "suggested_fix": "改为「动爻冲卯，日合受扰，传统上有『合遭破』之说；但卯木有气，增删卜易另有冲开成事之验，此点只作次要不利」，从 adverse 降为保留因素。"
+    },
+    {
+     "severity": "major",
+     "category": "应期",
+     "quote_from_draft": "若有答复，多在酉日（子孙值日）或辰日（辰酉相合）前后，届时多半是不利的消息。",
+     "problem": "在事实层，酉、辰两支同时也是有利候选：酉是官星静而逢冲（R-YINGQI-01），酉、辰是冲开日合（R-YINGQI-06）。稿件只取忌神这一种口径，又写「多半是不利的消息」，事件对应不唯一，也偏于一面。docs/09 已把「以忌神逢值逢合推不利结果落定」列为尚待审核。另外编号混用：judgment.rule_ids 列的是 R-YINGQI-01，应期条目用 R-YINGQI-02，古籍依据又以 R-YINGQI-01 引「动而逢合逢值」。",
+     "evidence": "facts.timing_candidates 与 adverse_timing_candidates 都含酉、辰；docs/09 第四节；起卦丙戌日，壬辰为第 6 天（旬内），丁酉为第 11 天（旬外）。",
+     "suggested_fix": "事件改为「结果落定」，写明「这两天既是忌神逢值逢合，也是官星逢冲、日合冲开之日，吉凶以前文判断为准」；删去「多半是不利的消息」；统一编号。"
+    },
+    {
+     "severity": "major",
+     "category": "伏神转机高估／接续相生",
+     "quote_from_draft": "若它日后引出，金生水、水生木，子孙的力量有可能经由财爻转去生官",
+     "problem": "①这是「忌神→伏藏原神→用神」的接续相生链。D-013 裁定「接续相生只有五行路径而缺少实际作用依据时保持待核，不能直接翻吉」，正文却仍把它写成可能的转机；古籍依据里还引了 R-YUANJI-06（原例是两神俱动），本卦原神伏而未动，此条不适用，不应列为依据。②转机被高估：飞神未土得戌日扶（事实层 capability = strong），按 R-KONG-02「有日建动爻生扶者不为空」，飞神未必「虽有若无」；伏神同时受日克和飞来克伏两重克制。简断、总断却把「一线转机」放在显眼位置。",
+     "evidence": "facts.chou[1]（未）support = 日扶、capability = strong；facts.flows HIDDEN@5：obstacles = 伏神被日月冲克，flyRelation = 飞来克伏，state = REVIEW_REQUIRED；equivalence_class.writable = false（原神伏神并见）；D-013、B-002。",
+     "suggested_fix": "删去接续相生一句和 R-YUANJI-06 引文；伏神只写「有用与无用并见，能否引出待核，不作现成助力」；简断「留有一线转机」改为「伏财能否引出尚难确定」。"
+    },
+    {
+     "severity": "major",
+     "category": "D-010 口径",
+     "quote_from_draft": "福如发动，难期金榜之题名。",
+     "problem": "黄金策·求名讲的是科举考试（金榜题名）。D-010 裁定面试按谋职处理，「笔试、考试等另立问事和规则」。用考试的条文作古籍依据，与裁定口径不符；谋职专章本来就有更贴切的条文。",
+     "evidence": "D-010 ruling；R-YONG-GUAN-04 署印谋差章「子孙兄弟不可一而动摇」。",
+     "suggested_fix": "用 R-YONG-GUAN-04 替换 R-YONG-FU-01。"
+    },
+    {
+     "severity": "minor",
+     "category": "文字／象意写成现实",
+     "quote_from_draft": "这一轮考核本身是有分量的机会",
+     "problem": "由「官星有气」推出「这个机会有分量」，是把卦象写成了现实判断。「酉金在冬令本来泄气无力」把月令休囚等同于无力，下一句又说它有力，措辞前后打架。计算说明「无力条一项不合」语义含糊，应为「无力七条皆不合」。verdict_label「难以通过」与正文「偏难」「并非全无转机」程度不一。",
+     "evidence": "10 号文第二节。",
+     "suggested_fix": "改为「官星本身有气」；删去「无力」二字；措辞统一到「偏难通过」或「难以通过」中的一种。"
+    }
+   ],
+   "verdict_challenge": "无（结论可维持；但冲突取舍须按 D-016 裁定重写，并正面排除「子孙持世且待时」、克处逢生和卯日冲去克神这三种「待时」读法）",
+   "overall": "RETURN"
+  },
+  {
+   "script_id": "IP-0003",
+   "issues": [
+    {
+     "severity": "major",
+     "category": "动化：休囚化进神未审",
+     "quote_from_draft": "动而化进，事情越往后越明朗，不是一时的热度。",
+     "problem": "申金在亥月为休，化出的酉金在亥月也是休，属于「动休囚而化休囚」。增删卜易进神退神章，野鹤把进神分为四种，第二种就是「动休囚而化休囚，待时而进」。同章卦例（卯月丙寅日，官鬼申金化酉，变爻值月破）断「官动化进神，秋来得令必迁，后报升于巳月」。稿件判 likely-pass，以申日（第 1 天）、酉日（第 2 天）为应期，完全没有讨论这一条。反方：升选候补章「世爻发动，官化进神，望荣除而在即」与本卦格局正合，支持近应。两条都没有登记，也都没有被引用；取舍会影响结论类别（likely-pass、pass-but-slow 还是 wait-then-likely）和应期。",
+     "evidence": "sources/classics/增删卜易.md 第 1048 行（进神四种）、第 1016–1023 行（解之困例）、第 2612 行（升选候补章）；facts.yongshen.state.seasonal = 休囚，change.advance = 进神。",
+     "suggested_fix": "先把两条登记入 register，核对原文；再在 conflicts_resolved 中说明取舍。如果采「待时而进」，结论类别改为 pass-but-slow 或 wait-then-likely，应期补巳日；如果采升选候补章「在即」，须写明为什么专章优先于进神章的通例。"
+    },
+    {
+     "severity": "major",
+     "category": "应期与引文自相矛盾",
+     "quote_from_draft": "化进神、逢值逢合：如申动酉，乃为进神，为福为祸，有应申月日者，有应巳月日者",
+     "problem": "稿件自己引的原文说「申动化酉」应在申（逢值）或巳（逢合），并没有说应在酉；条目却列了「酉日（化出的进神值日）」。docs/09 把 R-YINGQI-10 写成「本支、变支」，与原文「逢值逢合」不符。书中同类卦例（解之困）也应在巳月。",
+     "evidence": "增删卜易第 725 行；第 1023 行「应巳月者，动而逢合之月」；facts.timing_candidates R-YINGQI-02 = 申、巳。",
+     "suggested_fix": "把酉日条目改为巳日（R-YINGQI-02 动而逢合，巳申合），并注明巳在本旬旬空，乙巳为出旬第一天（第 10 天）；或者给出「应变支」的原文依据。同时把 docs/09 的 R-YINGQI-10「本支、变支」提交复核。"
+    },
+    {
+     "severity": "major",
+     "category": "象意写成现实",
+     "quote_from_draft": "有望通过：你主动推进，官星也在步步向前",
+     "problem": "标题把「世爻发动」直接写成「你主动推进」这一现实行为。过程段「这件事要靠你这一侧主动去推，而不是坐着等」「父母主文书、材料与通知，随你的推动一并出现」，总断「及时补交对方需要的材料」，都是把象意写成现实事实或对方的需求，没有「从卦象看」的限定。",
+     "evidence": "10 号文第二节「不得虚构已发生的现实事件、对方真实心理……象意推断须带『从卦象看』」。",
+     "suggested_fix": "标题改为「有望通过：世爻发动生官，官星化进」；正文加「从卦象看」，删去「随你的推动一并出现」「对方需要的材料」。"
+    },
+    {
+     "severity": "major",
+     "category": "与事实不一致（仇神）",
+     "quote_from_draft": "兄弟卯木入未日墓、又受申金动克，仇神受制",
+     "problem": "事实层的兄弟卯木月令为相，作用状态 EFFECTIVE，入墓注明「月令旺相，不作真墓」，且「静而旺相（可生克休囚之爻）」，可以克休囚的原神未土（未土靠临日才免伤）。稿件写成「仇神受制」，把一个有效的仇神写成了受制。",
+     "evidence": "facts.chou[0].state：capability = strong，state = EFFECTIVE，limitations 入墓 trueTomb = false。",
+     "suggested_fix": "改为「兄弟卯木月令为相，静而有力，入墓不是真墓；它能克的原神未土临日，遇克无伤，所以构不成实际阻碍」。"
+    },
+    {
+     "severity": "minor",
+     "category": "重复累计",
+     "quote_from_draft": "官星得日生、得原神动生、自身又化进神，三处都是向上的力量",
+     "problem": "日辰是未，发动的原神也是临日的未土，它的力量本身就来自日辰。「化进神」「化帝旺」同出于申化酉这一件事，在 supporting 和判别中却分成两项。四处生克形式上可以分处计算，但正文用「三处」显得像三个独立来源，容易误导。另外用神月令为休，这里用的是广义之旺（R-WANG-02），正文应点明（07 号文要求说明用哪一种）。",
+     "evidence": "facts.yongshen.support = 日生、初爻妻财未动来生、化进神、化帝旺；docs/07 第二节。",
+     "suggested_fix": "写明「日辰与临日的世爻同为未土」，化进和化帝旺合为一项，并注明用的是广义之旺。"
+    },
+    {
+     "severity": "minor",
+     "category": "事实遗漏",
+     "quote_from_draft": "四爻午火在应位，受月建所克，只因当天未日与它相合，有一点被提起来的意思",
+     "problem": "事实层应爻午火还有「初爻妻财未动来合（合起）」，capability = contested、REVIEW_REQUIRED（日月相反）；正文只写了日合。另外应爻生世、合世（fact_sheet）这一吉象也没有提到。结论不受影响（午火静而休囚，不能主动作用）。",
+     "evidence": "facts.response.notes、state；fact_sheet「应爻 四爻子孙午火；生世、合世」。",
+     "suggested_fix": "补「又得世爻动合」，说明它静而休囚，不能主动作用；可以补一句世应相合。"
+    },
+    {
+     "severity": "minor",
+     "category": "三合理由不准",
+     "quote_from_draft": "亥卯未三支俱在而只一支发动，不作成局。",
+     "problem": "不成局的结论可以成立：书中萃之否一例，卯木静在卦中仍作「少卯字」。但理由应写准确：月建可以参与三合（书中多例「世与日月同为三合」），缺的是卯木没有动。书中还有「虚一待用」之说，逢卯日木局可成；在本卦这是兄弟局，会合住原神、生子孙，应作为后期的不利条件提一句。",
+     "evidence": "sources/classics/增删卜易.md 第 1278–1285 行（萃之否「因少卯字……虚一待用」）、第 2124、2483 行；src/analysis.js 第 177 行注明三合口径「待审」。",
+     "suggested_fix": "改为「亥月、未爻俱在而卯木安静，依书例为少卯字，不成局；逢卯有虚一待用之说，届时为兄弟局，不利原神」。"
+    },
+    {
+     "severity": "minor",
+     "category": "规则编号／口径",
+     "quote_from_draft": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+     "problem": "六合卦应引 R-GUA-CHONGHE-02；R-HE-01 登记的原文讲的是爻的合起、合绊。「原神化帝旺」依赖 D-004（土长生于申，status 仍为 open），没有注明。verdict_label「有望通过」与 IP-0001 同一类别的「倾向通过」口径不一。「结果要靠持续跟进才落得稳」与申日（次日）的应期在时间感上矛盾。",
+     "evidence": "rules/register.json R-HE-01、R-GUA-CHONGHE-02、D-004。",
+     "suggested_fix": "改用 R-GUA-CHONGHE-02 登记并引用；注明土帝旺于子依 D-004 采用之说；同类别标签统一。"
+    }
+   ],
+   "verdict_challenge": "有（申休化酉休，按进神退神章属「待时而进」，书中同类卦例断为得令方迁、应在巳；与升选候补章「望荣除而在即」相冲突，未经取舍。可能使结论类别由 likely-pass 改为 pass-but-slow 或 wait-then-likely，应期由申、酉改为申、巳）",
+   "overall": "RETURN"
+  },
+  {
+   "script_id": "IP-0004",
+   "issues": [
+    {
+     "severity": "blocker",
+     "category": "凶证轻放／D-010 口径",
+     "quote_from_draft": "《黄金策·求名》说「伏藏有用，终辞白屋之人」，正合此象。",
+     "problem": "①D-010 裁定面试按谋职处理。谋职专章署印谋差章（已登记为 R-YONG-GUAN-04）明言「财与官星不可有一而不旺……世陷财空，不如守己」。本卦官星伏藏、月令为休；原神妻财辰土日破（INEFFECTIVE），未土旬空（DEFERRED），正是「财空」，财、官都不当令。稿件完全没有处理这一条，反而以黄金策·求名（科举口径）作主要古籍支持。②「终辞白屋」是说终究得名，不是说这一轮通过，与问事范围「只回答这一轮面试是否通过」对不上。",
+     "evidence": "R-YONG-GUAN-04；D-010 ruling；facts.yuan[0].state = INEFFECTIVE（日破），facts.yuan[1].state = DEFERRED（旬空）；facts.question.scope。",
+     "suggested_fix": "在 conflicts_resolved 中正面处理署印谋差章。若不能排除，结论应降为 wait-then-likely（以伏神出伏、财爻出空为条件）或待核。黄金策引文降为辅证，并说明「终」字不等于本轮。"
+    },
+    {
+     "severity": "major",
+     "category": "凶证遗漏（仇神）",
+     "quote_from_draft": "其他各爻：克官的子孙巳火在五爻，被月建亥水冲破，又入戌日之墓，没有作梗的力量。",
+     "problem": "「其他各爻」漏掉了两爻兄弟：寅木月生月合，卯木月生日合，事实层都是相、EFFECTIVE、「静而旺相（可生克休囚之爻）」，正好可以克休囚的原神辰土、未土（R-DONGJING-01），在谋事中又是阻神（R-YONG-XIONG-01）。原神乏力的原因之一就在这里，稿件只说「推动的力量不足」，没有讲阻力从哪里来。",
+     "evidence": "facts.chou[0]（寅）、chou[1]（卯）：seasonal = 相，state = EFFECTIVE。",
+     "suggested_fix": "补写仇神兄弟旺相、静而能克休囚的财爻，并列入 adverse。"
+    },
+    {
+     "severity": "major",
+     "category": "重复累计／与采用口径不一",
+     "quote_from_draft": "其二，压在上面的辰土本是土生金，是飞神生伏神，并不压制它；其三，辰土在冬月休囚，当天又被戌日冲动，飞神自己站不稳",
+     "problem": "同一个飞神辰土，既被算作「生伏」的帮助，又被算作「破而推开」的帮助。按本项目采用的增删卜易口径（D-001），休囚静爻逢日冲为日破，事实层辰土为 INEFFECTIVE，它的「生」只是有生之名而无生之实（R-SICHU-01）。按卜筮正宗暗动口径，飞神是动了，却没有被推开。两说各取有利的一半再相加，「有用六条合其四」就有重复累计之嫌。简断「又被日辰冲动」、总断「飞神被日辰冲动」用的也是未采用的卜筮正宗说法，与事实层「日破」不一致。",
+     "evidence": "facts.yuan[0]：damage = 日破，state = INEFFECTIVE；D-001 adopted = 增删卜易；R-SICHU-01「相生之爻休囚者有生之名无生之实」。",
+     "suggested_fix": "主文按增删卜易写：飞神日破、被推开，伏神得日生。「飞来生伏」只列事实，不算独立的助力。简断、总断的「冲动」改为「冲破」。"
+    },
+    {
+     "severity": "major",
+     "category": "对方内部决定写成事实",
+     "quote_from_draft": "这一卦官星没有出现在明面上，说明此刻结论还没定下来",
+     "problem": "把「用神不上卦」直接写成「对方此刻还没有定结论」，这是对对方内部决定的现实断言。开局「事情处在未定、待出的状态」、过程「眼下处在被动等待的位置」也是同一类问题。",
+     "evidence": "10 号文第二节；用户审核要求第 6 项。",
+     "suggested_fix": "改为「从卦象看，代表结果的官星尚在伏藏，还没有显出来」。"
+    },
+    {
+     "severity": "major",
+     "category": "凶证遗漏（应克世、世待核）",
+     "quote_from_draft": "应爻妻财未土落在旬空，这一侧暂时没有动静。",
+     "problem": "fact_sheet 写明「应爻 四爻妻财未土；克世」，稿件没有提。世爻子水在事实层为 REVIEW_REQUIRED（日月相反：月扶日克），正文只写「受戌日所克」。未土旬空只是暂空：本旬丑日（第 3 天）可以冲起，出旬未日（第 9 天）填实，到时应克世就成了实，时间上正好排在伏神应期（第 11、12 天）之前，稿件没有交代。",
+     "evidence": "facts.fact_sheet、facts.world.state = REVIEW_REQUIRED、facts.response.state.release（丑 offsetDays 3，未 offsetDays 9）。",
+     "suggested_fix": "补写应克世以及它出空的时点；世爻状态注明待核。"
+    },
+    {
+     "severity": "minor",
+     "category": "应期逻辑",
+     "quote_from_draft": "戌日（冲开压在上面的辰土）前后",
+     "problem": "起卦日本身就是丙戌日，飞神今天已经被冲，稿件也把这一点当作有利条件；下一个戌日是第 12 天，为什么还要再逢戌才「冲开」，正文没有解释。酉日是第 11 天，两个时点都在旬外，与「偏慢」相合，正文可以写明。",
+     "evidence": "facts.chart.day = 丙戌；丁酉为第 11 天，戊戌为第 12 天。",
+     "suggested_fix": "说明「今日戌冲已推开飞神，取下一次逢戌为再冲之期」，或者只保留酉日。"
+    },
+    {
+     "severity": "minor",
+     "category": "文字",
+     "quote_from_draft": "建议耐心等待，其间可以得体地询问一次进度",
+     "problem": "接近禁用套话「建议耐心等待，保持沟通」。「总体倾向通过」接近「整体来看」。标题「伏得有力」不准：伏神月令为休，事实层的结论是「有用」，不是「有力」。rule_ids 漏了 R-FUSHEN-06、R-FUSHEN-04。",
+     "evidence": "scripts/build-readings.mjs BOILERPLATE；facts.flows HIDDEN@3 emergence = likely。",
+     "suggested_fix": "改写建议句；标题改为「伏而有用」；rule_ids 补齐。"
+    }
+   ],
+   "verdict_challenge": "有（谋职专章「财与官星不可有一而不旺、世陷财空不如守己」未处理；又漏了两爻旺相仇神和应克世。「倾向通过」证据不足，至少应为 wait-then-likely（以伏神出伏、财爻出空为条件）或待核）",
+   "overall": "RETURN"
+  },
+  {
+   "script_id": "IP-0005",
+   "issues": [
+    {
+     "severity": "blocker",
+     "category": "专章明文被忽略／取舍标准不一",
+     "quote_from_draft": "官星有气而空：依增删卜易取「旬内暂空」，并依「空逢冲而有用」「旬空最爱填冲」列出旬内冲空与出旬填实两个时点；不依黄金策「无故自空」之凶（D-002）",
+     "problem": "冲突取舍只驳了黄金策。谋职专章（D-010 指定的口径）对「官空」有三处明文，都没有处理：升选候补章「官位空破，勿恩升迁」（已登记于 R-YONG-GUAN-03）；署印谋差章「官空世破，且让他人」（R-YONG-GUAN-04）；升迁何方章野鹤「此缺我得否……世空世破官破官空，俱不得」。本卦官星就在世爻上，「世空」「官空」同时成立。IP-0002 以「求名专章明文」压过一般生克，本篇对不利的专章明文却一字不提，同一组稿件对专章明文的取舍标准前后不一。",
+     "evidence": "R-YONG-GUAN-03、R-YONG-GUAN-04 原文；sources/classics/增删卜易.md 第 2652 行；facts.yongshen.void =「旬内暂空，出旬可用」；IP-0002 conflicts_resolved。可作反方的书证：升选候补章「子孙持世值旬空……若占两三日之内者，许之必得……子孙尚未出空不克官也」（第 2613 行），说明野鹤认为旬空之爻在旬内不起作用、出空才起作用，可以借来论证「待时」，但必须写明。",
+     "suggested_fix": "在 conflicts_resolved 中正面处理这三条专章明文，说明专章里的「官空」是指有气的旬内暂空，还是空破、真空。若不能排除，结论改为待核或偏难，不宜直接判 wait-then-likely；若采待时之说，须说明旬内（第 5 天酉日之前）有结果时偏于不利。"
+    },
+    {
+     "severity": "major",
+     "category": "应期／凶证轻放",
+     "quote_from_draft": "一是本旬之内的酉日（起卦后第五天），日辰冲动卯木，冲空而起，结果可能先见分晓",
+     "problem": "酉日同时是忌神子孙酉金值日，金克木、卯酉相冲：冲空之日也就是忌神当值克官之日。事实层的忌神酉金已经得辰日生合（EFFECTIVE），稿件只写了「冲空而起」这一面。结局段「各方力量都处在『暂停』的位置」也与事实层忌神 EFFECTIVE 不符。",
+     "evidence": "facts.ji[0].state = EFFECTIVE（日生、日合）；起卦甲辰日，己酉为第 5 天。",
+     "suggested_fix": "写明「酉日既冲起官星，也是子孙值日，吉凶两见，以官星有气为主」，删去「各方力量都处在暂停」。"
+    },
+    {
+     "severity": "minor",
+     "category": "术语错误",
+     "quote_from_draft": "卯木受辰日泄（我克日）",
+     "problem": "我克者为耗，不是泄（泄是我生者）。计算说明自己写的是「辰日卯木克辰（耗）」，判断层与之不一致。",
+     "evidence": "calculation_explanation「辰日卯木克辰（耗）」。",
+     "suggested_fix": "改为「卯木克辰日为耗」。"
+    },
+    {
+     "severity": "minor",
+     "category": "引文适用自相抵触",
+     "quote_from_draft": "官星得月生，出旬即可用",
+     "problem": "R-KONG-02「旺不为空，动不为空，有日建动爻生扶者不为空」说的是「不为空」，与本篇所依的 R-KONG-03「在旬内者毕竟为空」相抵；拿它证明「出旬即可用」是误用。另外卯木为相，不是旺。",
+     "evidence": "classical_sources 中 R-KONG-02 一条。",
+     "suggested_fix": "删去，或改为「旬空章虽有旺不为空之说，月将章作者自言试之不然，本篇从后者」。"
+    },
+    {
+     "severity": "minor",
+     "category": "遗漏",
+     "quote_from_draft": "原神临月建与辰日墓克相敌：依月将章作无吉无凶，不判为失效",
+     "problem": "原神墓于辰日，冲墓的戌日（庚戌，第 6 天，在旬内）没有交代。事实层 stateReason 写「待冲墓之日」，release 却是空的，这是程序侧的问题，也应当报告。docs/09 已把它列为待审，正文可以用一句话说明。",
+     "evidence": "facts.yuan[0].state.stateReason 与 release = []；docs/09 第四节。",
+     "suggested_fix": "补一句「戌日冲开辰墓，原神方可出力；此点不另立应期，待审」，并把 release 为空的问题报告给程序侧。"
+    },
+    {
+     "severity": "minor",
+     "category": "虚构现实／文字",
+     "quote_from_draft": "按对方给出的流程等待",
+     "problem": "这句话假定对方已经给出流程，属于虚构现实。「总体仍有希望」接近空话。总断「最关键的依据是官星持世、得月令之生」与 IP-0001 有 15 个汉字连续相同，可能触发 C14。",
+     "evidence": "10 号文第二节；跨篇比对。",
+     "suggested_fix": "改为「这几天不必频繁追问」；删去「总体」；总断换一种说法。"
+    }
+   ],
+   "verdict_challenge": "有（谋职专章三处明文都判「官空」不得，本卦官即世而旬空，稿件没有处理；若不能以旬空待时之理排除，结论应为待核或偏难，而不是 wait-then-likely）",
+   "overall": "RETURN"
+  },
+  {
+   "script_id": "IP-0006",
+   "issues": [
+    {
+     "severity": "blocker",
+     "category": "违反用户裁定 B-002／D-013（并见伏神强判）",
+     "quote_from_draft": "伏子孙子水：受午日冲、墓于飞爻，难以出伏，不作主要忌神",
+     "problem": "事实层这个伏神 emergence = contested、REVIEW_REQUIRED：伏神旺相、飞神旬空可推开，同时又受日冲、墓于飞爻。等价类也因「忌神伏神有用与无用并见，须权衡规则」标为 writable = false。B-002 裁定「有用与无用冲突时保留冲突与证据，不以固定优先级强判」，稿件却在判断层和正文（「难以出伏」）直接按无用的一方定了案。这一点不改变凶的方向（伏神若出只会加重克官），但违反了裁定对表述的要求，也违背 10 号文 C17「伏神判为有用或并见时正文不得写『引不出』一类结论」的本意。程序的 C17 只检查用神、原神伏藏，所以没有拦下。",
+     "evidence": "facts.flows HIDDEN@1:子孙子；facts.equivalence_class.blockers；register rulings B-002；scripts/build-readings.mjs 中 C17 只过滤 role ∈ {yong, yuan}。",
+     "suggested_fix": "改为「另有子孙子水伏于初爻辰土之下，有用与无用并见，能否出伏待核；即便不计这一爻，二爻化出的亥水已足以克官」。同时建议把 C17 的检查扩展到忌神伏神。"
+    },
+    {
+     "severity": "major",
+     "category": "吉证轻放（有效伏原神）",
+     "quote_from_draft": "伏神又静而未出，一份暗中的生扶敌不过月建之克与回头之克这两重压力",
+     "problem": "事实层伏原神寅木 emergence = likely、EFFECTIVE。D-013 裁定「伏神有用条件当前已成立时可参与当前判断」，事实层又注明有用之伏神「可作有气之静爻看待」；按 R-DONGJING-01，静而旺相（寅木在亥月为相，又得月合）可以生休囚之爻，而午火月令休囚。照此计算，用神是「临日帝旺、伏原神生」对「月克、回头克」，按四处生克是两生两克，须看旺衰（R-SICHU-01），并不当然是「生少克多、寡不敌众」。稿件只用「缓冲」带过，也没有说明为什么不适用克处逢生（R-KECHU-01）；事实层的有利应期候选 R-YINGQI-09（待逢巳冲去克神）也没有讨论。支持原判的书证是日辰章「卯爻动化申酉……寡不敌众」一例（与本卦同构），应当明确以它为据来排除。另外，回头克之所以有力，正因为变爻临月建，同一个亥水被算成「两重压力」。",
+     "evidence": "facts.flows HIDDEN@2：state = EFFECTIVE，staticNote；D-013 ruling；R-DONGJING-01；R-SICHU-01；R-KECHU-01；facts.timing_candidates R-YINGQI-09（巳）。",
+     "suggested_fix": "在 conflicts_resolved 中写明：伏原神可以参与判断、能生用神，但依日辰章明例，临日之爻动化回头克即属寡不敌众，且回头克出自变爻，他爻无从相救（R-DONGBIAN-01），所以仍判难。并交代巳日（冲去亥水）是唯一的转机时点，或者说明不取的理由。「两重压力」改为「当令月建之力，经由变爻回头克官」。"
+    },
+    {
+     "severity": "major",
+     "category": "与事实不一致（另一官鬼）",
+     "quote_from_draft": "卦中另一爻官鬼午火在四爻，安静不动，同样受月建所克，替代不了世爻上的这一变。",
+     "problem": "事实层 MONTHDAY@4 判四爻午火「临日辰：逢破不破、遇克无伤」，flow_acknowledgements 里也写了「四爻静官逢克无伤」，正文却只写「同样受月建所克」，把一个按规则无伤的官星写成同样受伤。D-014 裁定「另一官鬼保留在证据中」，应当如实写出它的状态。（按古法舍静用动，取用本身没有错，不改结论。）",
+     "evidence": "facts.flows MONTHDAY@4:午临日；D-014 ruling；judgment.flow_acknowledgements。",
+     "suggested_fix": "改为「四爻午火也临日，受月克而无伤，但安静不动；依两现章舍静用动，主看二爻」。"
+    },
+    {
+     "severity": "minor",
+     "category": "对已发生的现场作推测",
+     "quote_from_draft": "从卦象看，面试当场的表现或氛围并不差。",
+     "problem": "虽然加了限定语，但仍是对已经发生的现场作推测，用户可以直接验证真假。「若对方后面还有环节，转折多半出在后面」含糊。",
+     "evidence": "10 号文第二节。",
+     "suggested_fix": "改为「从卦象看，眼前的条件并不差」，或者删去。"
+    },
+    {
+     "severity": "minor",
+     "category": "应期事件不可观察",
+     "quote_from_draft": "申日、酉日金生水，也是需要留意的时点",
+     "problem": "「不利因素加重」不是可以观察到的事件。docs/09 也把「克者逢生推不利」列为待审。申日（第 2 天）、酉日（第 3 天）排在亥日（第 5 天）之前，用户无从对应。",
+     "evidence": "docs/09 第四节；起卦甲午日，丙申第 2 天，丁酉第 3 天，己亥第 5 天。",
+     "suggested_fix": "删去，或者写成具体、可以对应的事件。"
+    },
+    {
+     "severity": "minor",
+     "category": "引文方向",
+     "quote_from_draft": "伏去生飞名泄气",
+     "problem": "歌诀说的是伏神泄气（对伏神不利），稿件却拿它作「暗生官星」的依据，方向不同。正文也没有提到世克应（fact_sheet 写明「世克之」）。",
+     "evidence": "R-FUSHEN-07；fact_sheet「应爻 五爻兄弟申金；世克之」。",
+     "suggested_fix": "适用理由改为「伏神生飞神：对官星是生，对伏神是泄」。"
+    }
+   ],
+   "verdict_challenge": "有（不足以推翻，但必须补论）：伏原神 EFFECTIVE，依 D-013 可以参与判断，静而为相可生休囚之官，加上巳日冲去克神这一候选，存在「两生两克、待核或待巳日」的读法。本篇以日辰章寡不敌众的明例维持「难以通过」是可以的，但必须在冲突取舍中写明。",
+   "overall": "RETURN"
+  }
+ ]
+}

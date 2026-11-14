@@ -154,7 +154,7 @@ function selectYongshen(rel, chart, analysis) {
   if (cmp(a.finer, b.finer) !== 0) return { ...base, status: 'selected-by-rule', selectedPosition: a.line.position, decidedBy: '择其旺者', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'] };
   const tied = keyed.filter((k) => cmp(k.key, a.key) === 0 && cmp(k.finer, a.finer) === 0);
   // 实际作用状态（D-015 三层判定）也是「实际作用条件」，先比它
-  const stateRank = { EFFECTIVE: 3, DEFERRED: 2, REVIEW_REQUIRED: 1, INEFFECTIVE: 0 };
+  const stateRank = { EFFECTIVE: 3, DEFERRED: 2, NEUTRAL: 1.5, REVIEW_REQUIRED: 1, INEFFECTIVE: 0 };
   const stateOf = (k) => assessRoleState(k.line, analysis.lines[k.line.position - 1], chart).state;
   const byState = [...tied].sort((x, y) => stateRank[stateOf(y)] - stateRank[stateOf(x)]);
   if (stateRank[stateOf(byState[0])] !== stateRank[stateOf(byState[1])]) {
@@ -180,7 +180,12 @@ function selectYongshen(rel, chart, analysis) {
     // 同支且实际条件、世爻关系皆同：取哪一爻结论都相同，另一爻保留在证据中；所取之爻不以上下次序为吉凶依据
     return { ...base, status: 'equivalent-pair', selectedPosition: tied[0].line.position, decidedBy: '同支等价·取舍不影响结论', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
   }
-  return { ...base, status: 'ambiguous', selectedPosition: null, decidedBy: null, ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
+  // B-010：不同支而以上皆同。比较取各爻时影响结论的要素（作用状态、动化方向、受动克、受限项数）；全同则任取，否则取较不利者
+  const motionRank = (l) => { const ch = analysis.lines[l.position - 1].change; if (!ch) return 2; if (ch.huitou === '回头克' || ch.lifeStage === '绝' || ch.lifeStage === '墓' || ch.advance === '退神') return 0; if (ch.huitou === '回头生' || ch.advance === '进神') return 3; return 1; };
+  const profile = (k) => { const st = assessRoleState(k.line, analysis.lines[k.line.position - 1], chart); return [stateRank[st.state] ?? 1, motionRank(k.line), st.attacked ? 0 : 1, -st.limitations.length]; };
+  const profiled = tied.map((k) => ({ k, p: profile(k) })).sort((x, y) => cmp(y.p, x.p) * -1);
+  const same = profiled.every((x) => cmp(x.p, profiled[0].p) === 0);
+  return { ...base, status: same ? 'equivalent-pair' : 'selected-by-rule', selectedPosition: profiled[0].k.line.position, decidedBy: same ? '不同支并列·取舍不影响结论' : '不同支并列·取较不利者（B-010）', ruleIds: ['R-LIANGXIAN-01', 'R-LIANGXIAN-03'], disputeIds: ['D-014'] };
 }
 
 /** 元神忌神衰旺章：原神有力五条、无力六条；忌神有力五条、无力七条（R-YUANJI-01..04） */
@@ -394,7 +399,7 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
   const roleOf = (relative) => (relative === rel ? 'yong' : relative === roles.yuan ? 'yuan' : relative === roles.ji ? 'ji' : relative === roles.chou ? 'chou' : 'other');
   const flows = [];
   for (const l of chart.lines) {
-    if (l.hidden && ['yong', 'yuan', 'ji'].includes(roleOf(l.hidden.relative))) flows.push(assessHidden(l, lf(l), roleOf(l.hidden.relative)));
+    if (l.hidden && ['yong', 'yuan', 'ji'].includes(roleOf(l.hidden.relative))) flows.push(assessHidden(l, lf(l), roleOf(l.hidden.relative), chart));
   }
   const keyLines = chart.lines.filter((l) => ['yong', 'yuan'].includes(roleOf(l.relative)) || l.isWorld);
   for (const l of keyLines) {

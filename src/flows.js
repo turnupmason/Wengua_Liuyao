@@ -5,7 +5,8 @@ import {
   BRANCHES, CLASH, COMBINE as COMBINE_MAP, LIFE_STAGES, elementRelation, ganzhiIndex,
 } from './constants.js';
 
-export const FLOWS_VERSION = 'flows-0.3.1';
+export const FLOWS_VERSION = 'flows-0.4.0';
+import { assessHiddenState } from './role-state.js';
 
 /** 某支之日距起卦日几天、是否仍在本旬之内（起卦日为第 0 天） */
 export function dayOffset(chart, branch) {
@@ -20,10 +21,10 @@ const flyRelationName = (fly) => ({
 }[fly]);
 
 /**
- * 伏神出伏判别（R-FUSHEN-02/03/06/07/08）
- * 步骤：① 伏神自身有无气 → ② 有无「终不得出」之阻 → ③ 飞神是否被推开（空破休囚墓绝、被日月动爻冲克）→ ④ 有无生扶 → 结论。
+ * 伏神出伏判别（R-FUSHEN-02/03/05/06/07/08，B-009）
+ * 步骤：伏神自身四处生克定有力无力 → 入日墓或墓于飞神、旬空、月破为受限 → 飞神是否被推开 → 有效 / 待时 / 难出。有用、无用六五条只作证据清单。
  */
-export function assessHidden(line, lineFacts, role) {
+export function assessHidden(line, lineFacts, role, chart) {
   const h = lineFacts.hidden;
   const u = h.usable;
   const x = h.unusable;
@@ -32,14 +33,11 @@ export function assessHidden(line, lineFacts, role) {
   const obstacles = Object.entries(x).filter(([, v]) => v).map(([k]) => k);
   const openers = ['日月动爻冲克飞神', '飞神空破休囚墓绝'].filter((k) => u[k]);
   const supports = ['日月生伏', '伏神旺相', '飞来生伏', '动爻生伏'].filter((k) => u[k]);
-  let emergence;
-  let reason;
-  if (!hasQi && !u['飞来生伏'] && !u['动爻生伏']) { emergence = 'unlikely'; reason = '伏神休囚无气，又无生扶，终不得出'; }
-  else if (obstacles.length === 0 && h.calendar.void && h.calendar.void.zengshan !== '冲空则实') { emergence = 'deferred'; reason = '伏神有气而旬空：伏而受限，出空之日则出（R-FUSHEN-08）'; }
-  else if (obstacles.length === 0 && openers.length) { emergence = 'likely'; reason = '有用之条件当前已成立，无用之条件皆不合：伏而有用，虽不现亦如现，可参与当前判断'; }
-  else if (obstacles.length === 0) { emergence = 'deferred'; reason = '伏神有气而飞神未被推开：伏无提拔、飞不推开，待冲开飞神之日（R-FUSHEN-05）'; }
-  else if (hasQi && openers.length) { emergence = 'contested'; reason = `伏神有气、飞神可推开，但有「${obstacles.join('、')}」之阻：有用与无用并见，须权衡`; }
-  else { emergence = 'unlikely'; reason = `有「${obstacles.join('、')}」之阻，飞神又未被推开`; }
+  // B-009：伏神按三层判定——自身四处生克 → 墓、空、破 → 飞神是否推开
+  const hs = assessHiddenState(line, h.calendar, lineFacts.calendar, chart);
+  const emergence = { EFFECTIVE: 'likely', DEFERRED: 'deferred', INEFFECTIVE: 'unlikely', NEUTRAL: 'neutral', REVIEW_REQUIRED: 'contested' }[hs.state];
+  let reason = { likely: '伏神有力、飞神已被推开：伏而有用，虽不现亦如现，可参与当前判断', deferred: '伏神有力而暂受限制，待解除之日', unlikely: '伏神无力：终不得出', neutral: '伏神月日相敌：无吉无凶', contested: '伏神出伏条件现有规则不足以裁决，待核' }[emergence];
+  reason += `（${hs.stateReason}）`;
   if (h.flyRelation === 'controls' && u['飞神空破休囚墓绝']) reason += '；飞神虽克伏神，但自身空破休囚，飞神逢破墓衰空虽有若无，克力不实';
   const flyCombine = COMBINE_MAP.get(line.branch) === h.branch;
   if (flyCombine) reason += '；飞伏相合';
@@ -57,13 +55,11 @@ export function assessHidden(line, lineFacts, role) {
     openers,
     obstacles,
     emergence,
-    state: { likely: 'EFFECTIVE', deferred: 'DEFERRED', contested: 'REVIEW_REQUIRED', unlikely: 'INEFFECTIVE' }[emergence],
+    state: hs.state,
+    hiddenState: hs,
     reason,
     staticNote: '伏神出伏之前为静，不计入月、日、动爻、变爻对用神的四处生克；有用之伏神「虽曰不现亦如现矣」，可作有气之静爻看待',
-    emergenceTiming: [
-      { rule: 'R-FUSHEN-08', kind: '伏神逢值', branch: h.branch },
-      { rule: 'R-FUSHEN-05', kind: '冲开飞神', branch: CLASH.get(line.branch) },
-    ],
+    emergenceTiming: hs.release.length ? hs.release : [{ rule: 'R-FUSHEN-08', kind: '伏神逢值', branch: h.branch }],
     ruleIds: ['R-FUSHEN-02', 'R-FUSHEN-03', 'R-FUSHEN-06', 'R-FUSHEN-07', 'R-FUSHEN-08'],
   };
 }

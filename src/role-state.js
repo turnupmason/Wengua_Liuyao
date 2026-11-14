@@ -1,10 +1,15 @@
-// D-015 三层判定：月令旺衰（事实，不改写）→ 综合作用能力（四处生克）→ 当前作用状态（EFFECTIVE / DEFERRED / INEFFECTIVE / REVIEW_REQUIRED）。
-// 依据：增删卜易·八宫图第三「四处生克」、日辰章「临日…寡不敌众」、月将章「月日相敌」、旬空章、月破章、随鬼入墓章；动静生克章。
+// D-015 三层判定：月令旺衰（事实，不改写）→ 综合作用能力（四处生克）→ 当前作用状态。
+// 状态：EFFECTIVE / DEFERRED / INEFFECTIVE / NEUTRAL（月将章「无吉无凶」）/ REVIEW_REQUIRED（规则仍不足以裁决时）。
+// 依据：增删卜易·八宫图第三「四处生克」、日辰章、月将章、旬空章、月破章、随鬼入墓章、飞伏神章；动静生克章。
+// 用户裁定（2026-11-13，「全部按推荐」）：B-004 日月相反无动以月建为准；B-005 克多生少而生者为日月作克处逢生；
+// B-006 生克相当双方皆有日月比动爻旺衰、相同以月建为准；B-007 临月建受日克冲不入墓为无吉无凶；
+// B-008 空破墓两项以上：空加破无力，空加墓、破加墓待时至最后解除；B-009 伏神按同一三层判定；B-010 两现不同支并列取较不利者。
 
 import { BRANCH_ELEMENT, GENERATES, CLASH, COMBINE, LIFE_STAGES, elementRelation } from './constants.js';
+import { seasonalState } from './analysis.js';
 import { dayOffset } from './flows.js';
 
-export const ROLE_STATE_VERSION = 'role-state-0.3.0';
+export const ROLE_STATE_VERSION = 'role-state-0.4.0';
 
 /** 通行五级称谓（当令旺、令生相、生令休、克令囚、令克死）。本项目古籍库未见定义原文，只作月令事实标签；判断用增删卜易三档 */
 export function seasonalFive(element, monthBranch) {
@@ -16,141 +21,189 @@ export function seasonalFive(element, monthBranch) {
   return '死';
 }
 
+const strongSeason = (element, monthBranch) => ['旺', '相'].includes(seasonalState(element, monthBranch));
+
 /**
- * 四处生克（R-SICHU-01）：月建、日辰、卦中动爻、自身动化各为一处，逐处记生、克或无涉。
- * 生：临、扶、生、合（日辰另含暗动、长生帝旺）；克：克、冲破（日破）；动爻处按生克动爻各记；动化处按回头生克、进退。
+ * 四处生克（R-SICHU-01）。subject：{ kind: 'line'|'hidden', element, branch, position, moving, calendar, change, fly }
+ * 月建、日辰为「日月之力」（strong）；动爻、动化、飞神按其月令旺相记 dyn。
  */
-function fourPlaces(line, facts, chart) {
-  const c = facts.calendar;
+function placesOf(subject, chart) {
+  const c = subject.calendar;
   const m = c.month;
   const d = c.day;
   const places = [];
   if (m.same || m.supports || m.combine) places.push({ place: '月建', effect: '生', strong: true });
   else if (m.controls || m.clash) places.push({ place: '月建', effect: '克', strong: true });
   const dz = c.dayClash?.zengshan;
-  // 日冲优先：休囚静爻逢日冲为日破（即使与日辰同五行），旺相静爻逢日冲为暗动（R-RIZHEN-02）
-  if (dz === '日破') places.push({ place: '日辰', effect: '克', strong: true });
+  if (subject.kind === 'hidden' && d.clash) places.push({ place: '日辰', effect: '克', strong: true });
+  else if (dz === '日破') places.push({ place: '日辰', effect: '克', strong: true }); // 日冲优先于同五行比扶（R-RIZHEN-02）
   else if (dz === '暗动') places.push({ place: '日辰', effect: '生', strong: true });
-  else if (d.same || d.supports || (d.combine && !line.moving) || d.lifeStage === '长生' || d.lifeStage === '帝旺') places.push({ place: '日辰', effect: '生', strong: true });
+  else if (d.same || d.supports || (d.combine && !subject.moving) || d.lifeStage === '长生' || d.lifeStage === '帝旺') places.push({ place: '日辰', effect: '生', strong: true });
   else if (d.controls) places.push({ place: '日辰', effect: '克', strong: true });
   for (const o of chart.lines) {
-    if (!o.moving || o.position === line.position) continue;
-    const er = elementRelation(o.element, line.element);
-    if (er === 'generates' || er === 'same' || (!line.moving && COMBINE.get(o.branch) === line.branch)) places.push({ place: `动爻${o.label}${o.branch}`, effect: '生', strong: false });
-    else if (er === 'controls' || CLASH.get(o.branch) === line.branch) places.push({ place: `动爻${o.label}${o.branch}`, effect: '克', strong: false });
+    if (!o.moving || o.position === subject.position) continue;
+    const er = elementRelation(o.element, subject.element);
+    const dyn = strongSeason(o.element, chart.calendar.monthBranch);
+    if (er === 'generates' || er === 'same' || (!subject.moving && COMBINE.get(o.branch) === subject.branch)) places.push({ place: `动爻${o.label}${o.branch}`, effect: '生', strong: false, dyn });
+    else if (er === 'controls' || CLASH.get(o.branch) === subject.branch) places.push({ place: `动爻${o.label}${o.branch}`, effect: '克', strong: false, dyn });
   }
-  const ch = facts.change;
+  const ch = subject.change;
   if (ch) {
-    if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: '自身动化', effect: '生', strong: false });
-    else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝') places.push({ place: '自身动化', effect: '克', strong: false });
+    const dyn = strongSeason(ch.to.element, chart.calendar.monthBranch);
+    if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: '自身动化', effect: '生', strong: false, dyn });
+    else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝') places.push({ place: '自身动化', effect: '克', strong: false, dyn });
+  }
+  // 飞神：未被推开时其生克计入；空破休囚墓绝、被冲克者「虽有若无」（R-FUSHEN-06）
+  if (subject.kind === 'hidden' && subject.fly && !subject.fly.pushed) {
+    const f = subject.fly;
+    const er = elementRelation(f.element, subject.element);
+    if (er === 'generates' || er === 'same') places.push({ place: `飞神${f.branch}`, effect: '生', strong: false, dyn: f.strong });
+    else if (er === 'controls') places.push({ place: `飞神${f.branch}`, effect: '克', strong: false, dyn: f.strong });
   }
   return places;
 }
 
-function capabilityOf(line, facts, chart) {
-  const c = facts.calendar;
-  const seasonalStrong = c.seasonalStrong;
-  const places = fourPlaces(line, facts, chart);
+function capabilityOf(subject, chart) {
+  const c = subject.calendar;
+  const places = placesOf(subject, chart);
   const g = places.filter((p) => p.effect === '生');
   const k = places.filter((p) => p.effect === '克');
-  const ch = facts.change;
-  // 日辰章：爻临日辰，逢破不破、遇冲克无伤；但又有动爻来克或本爻动化相克，则寡不敌众
-  if (c.day.same) {
-    const movingHit = k.some((p) => p.place.startsWith('动爻')) || (ch && ch.huitou === '回头克');
-    return movingHit ? { capability: 'weak', basis: '临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）', places } : { capability: 'strong', basis: '临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）', places };
+  const month = places.find((p) => p.place === '月建');
+  const byMonth = (why) => (month ? { capability: month.effect === '生' ? 'strong' : 'weak', basis: `${why}，以月建为准（月将章「月克日生遇帮而愈旺，月生日克逢他削而亦衰」，B-004）` } : { capability: strongSeason(subject.element, chart.calendar.monthBranch) ? 'strong' : 'weak', basis: `${why}，以月令旺衰为准（B-004）` });
+  // 日辰章：爻临日辰，逢破不破、遇冲克无伤；又受动克或动化相克则寡不敌众
+  if (subject.kind === 'line' && c.day.same) {
+    const movingHit = k.some((p) => p.place.startsWith('动爻')) || (subject.change && subject.change.huitou === '回头克');
+    return { places, ...(movingHit ? { capability: 'weak', basis: '临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）' } : { capability: 'strong', basis: '临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）' }) };
   }
-  // 月将章：临月建而受日克日冲或墓于日，可以敌之，无吉无凶
-  if (c.month.same && (c.day.controls || c.dayTomb || c.day.clash)) {
-    const other = places.filter((p) => !['月建', '日辰'].includes(p.place));
-    if (!other.length) return { capability: 'balanced', basis: '临月建而受日辰克冲或墓于日：月日相敌，无吉无凶（R-YUEJIAN-04）', places };
+  // 月将章：临月建而受日克日冲或墓于日，无其他生克：无吉无凶（B-007）
+  if (c.month.same && (c.day.controls || c.dayTomb || c.day.clash) && !places.some((p) => !['月建', '日辰'].includes(p.place))) {
+    return { places, capability: c.dayTomb ? 'balanced-tomb' : 'neutral', basis: '临月建而受日辰克冲或墓于日：月日相敌，无吉无凶（R-YUEJIAN-04，B-007）' };
   }
-  let capability;
-  let basis;
-  if (!g.length && !k.length) { capability = seasonalStrong ? 'strong' : 'weak'; basis = seasonalStrong ? '四处无生克，月令旺相' : '四处无生扶，月令休囚'; }
-  else if (!k.length) { capability = 'strong'; basis = `四处有生无克（${g.map((p) => p.place).join('、')}）`; }
-  else if (!g.length) { capability = 'weak'; basis = `四处有克无生（${k.map((p) => p.place).join('、')}）`; }
-  else if (g.length > k.length) { capability = 'strong'; basis = `生多克少（生：${g.map((p) => p.place).join('、')}；克：${k.map((p) => p.place).join('、')}）`; }
-  else if (g.length === k.length) {
-    const gs = g.some((p) => p.strong);
-    const ks = k.some((p) => p.strong);
-    capability = gs && !ks ? 'strong' : ks && !gs ? 'weak' : 'contested';
-    basis = `生克相当，须看旺衰：${capability === 'strong' ? '生者为日月' : capability === 'weak' ? '克者为日月' : '日月或双方皆有力，现有证据不足以裁决，待核'}`;
-  } else {
-    capability = g.some((p) => p.strong) ? 'contested' : 'weak';
-    basis = capability === 'weak' ? '克多生少，生者无力：有生之名无生之实' : '克多生少而相生者为日月：或可克处逢生，待人工裁决';
+  const list = (arr) => arr.map((p) => p.place).join('、');
+  if (!g.length && !k.length) return { places, capability: strongSeason(subject.element, chart.calendar.monthBranch) ? 'strong' : 'weak', basis: '四处无生克，以月令旺衰为准' };
+  if (!k.length) return { places, capability: 'strong', basis: `四处有生无克（${list(g)}）` };
+  if (!g.length) return { places, capability: 'weak', basis: `四处有克无生（${list(k)}）` };
+  if (g.length > k.length) return { places, capability: 'strong', basis: `生多克少（生：${list(g)}；克：${list(k)}）` };
+  const gs = g.some((p) => p.strong);
+  const ks = k.some((p) => p.strong);
+  if (g.length === k.length) {
+    if (gs && !ks) return { places, capability: 'strong', basis: `生克相当，生者为日月（生：${list(g)}；克：${list(k)}）` };
+    if (ks && !gs) return { places, capability: 'weak', basis: `生克相当，克者为日月（生：${list(g)}；克：${list(k)}）` };
+    // 双方皆有或皆无日月：比较动爻（含动化、飞神）旺衰（B-006），相同则以月建为准（B-004）
+    const gd = g.filter((p) => !p.strong && p.dyn).length;
+    const kd = k.filter((p) => !p.strong && p.dyn).length;
+    const dynamic = places.some((p) => !p.strong);
+    if (dynamic && gd !== kd) return { places, capability: gd > kd ? 'strong' : 'weak', basis: `生克相当，比动爻旺衰：生方旺相动爻 ${gd}、克方 ${kd}（八宫图第三「须看旺衰」，B-006）` };
+    return { places, ...byMonth(dynamic ? '生克相当而动爻旺衰亦同' : '日月相反而无动爻动化') };
   }
-  return { capability, basis, places };
+  // 克多生少
+  if (gs) return { places, capability: 'strong', attacked: true, basis: `克多生少而生者为日月：克处逢生，有力而受克（八宫图第三「若得相生之爻旺相者也可断为克处逢凶中得解」，B-005）` };
+  return { places, capability: 'weak', basis: '克多生少，生者无力：有生之名无生之实' };
 }
 
-/**
- * 某一爻（用神、原神、忌神、世）的三层状态。
- * @returns {{ seasonal, seasonalFive, capability, capabilityBasis, places, limitations, state, stateReason, release, acts }}
- */
-export function assessRoleState(line, facts, chart) {
-  const c = facts.calendar;
-  const { capability, basis, places } = capabilityOf(line, facts, chart);
-  const limitations = [];
-  const release = [];
+function limitationsOf(subject, chart, places) {
+  const c = subject.calendar;
+  const out = [];
   if (c.void && c.void.zengshan !== '冲空则实') {
-    limitations.push({ kind: '旬空', detail: c.void.zengshan });
-    const clashB = CLASH.get(line.branch);
-    release.push({ kind: '冲空', branch: clashB, ...dayOffset(chart, clashB), rule: 'R-KONG-06' }, { kind: '出空填实', branch: line.branch, ...dayOffset(chart, line.branch), rule: 'R-YINGQI-08' });
+    const clashB = CLASH.get(subject.branch);
+    out.push({ kind: '旬空', detail: c.void.zengshan, releases: [{ kind: '冲空', branch: clashB, ...dayOffset(chart, clashB), rule: 'R-KONG-06' }, { kind: '出空填实', branch: subject.branch, ...dayOffset(chart, subject.branch), rule: 'R-YINGQI-08' }] });
   }
   if (c.monthBreak) {
-    limitations.push({ kind: '月破', detail: line.moving ? '动而月破：动则能伤（R-YUEPO-02）' : '静而月破' });
-    release.push({ kind: '填实', branch: line.branch, rule: 'R-YUEPO-02' }, { kind: '逢合', branch: COMBINE.get(line.branch), rule: 'R-YUEPO-02' });
+    const comb = COMBINE.get(subject.branch);
+    out.push({ kind: '月破', detail: subject.moving ? '动而月破：动则能伤（R-YUEPO-02）' : '静而月破', releases: [{ kind: '填实', branch: subject.branch, ...dayOffset(chart, subject.branch), rule: 'R-YUEPO-02' }, { kind: '逢合', branch: comb, ...dayOffset(chart, comb), rule: 'R-YUEPO-02' }] });
   }
-  const tombBranch = LIFE_STAGES[line.element].墓;
+  const tombBranch = LIFE_STAGES[subject.element].墓;
   const tombs = [];
   if (c.dayTomb) tombs.push('日墓');
-  if (chart.lines.some((o) => o.moving && o.position !== line.position && o.branch === tombBranch)) tombs.push('动墓');
-  if (facts.change && facts.change.lifeStage === '墓') tombs.push('化墓');
+  if (chart.lines.some((o) => o.moving && o.position !== subject.position && o.branch === tombBranch)) tombs.push('动墓');
+  if (subject.change && subject.change.lifeStage === '墓') tombs.push('化墓');
+  if (subject.kind === 'hidden' && subject.fly && subject.fly.branch === tombBranch) tombs.push('墓于飞神');
   if (tombs.length) {
-    // 随鬼入墓章：休囚无气始见危，旺而有扶亦有求解——月令旺相者不作真墓
+    // 随鬼入墓章：休囚无气始见危，旺而有扶亦有求解
     const trueTomb = !c.seasonalStrong && !places.some((p) => p.effect === '生');
-    limitations.push({ kind: '入墓', detail: `${tombs.join('、')}${trueTomb ? '（月令休囚，须看是否受克而成真墓）' : '（月令旺相，不作真墓）'}`, trueTomb });
-    if (trueTomb) release.push({ kind: '冲墓', branch: CLASH.get(tombBranch), rule: 'R-YINGQI-05' });
+    const cb = CLASH.get(tombBranch);
+    out.push({ kind: '入墓', detail: `${tombs.join('、')}${trueTomb ? '（月令休囚又无生扶）' : '（旺相或有扶，不作真墓）'}`, trueTomb, releases: trueTomb || subject.kind === 'hidden' ? [{ kind: '冲墓', branch: cb, ...dayOffset(chart, cb), rule: 'R-YINGQI-05' }] : [] });
   }
-  const effective = limitations.filter((l) => !(l.kind === '入墓' && !l.trueTomb));
+  return out;
+}
+
+const earliest = (lim) => Math.min(...lim.releases.map((r) => r.offsetDays));
+
+function stateOf(subject, chart) {
+  const c = subject.calendar;
+  const cap = capabilityOf(subject, chart);
+  const { places, capability, basis } = cap;
+  const limitations = limitationsOf(subject, chart, places);
+  let effective = limitations.filter((l) => !(l.kind === '入墓' && !l.trueTomb));
+  // 伏神：旺相或有扶而墓于日、墓于飞神，仍须待冲墓方出（B-009）
+  if (subject.kind === 'hidden') effective = limitations.filter((l) => l.kind !== '入墓' || l.detail.includes('日墓') || l.detail.includes('墓于飞神') || l.trueTomb);
   let state;
   let stateReason;
-  if (capability === 'contested') { state = 'REVIEW_REQUIRED'; stateReason = basis; }
-  else if (capability === 'weak') { state = 'INEFFECTIVE'; stateReason = effective.length ? `${basis}；又${effective.map((l) => l.kind).join('、')}` : basis; }
-  else if (capability === 'balanced') {
-    if (c.dayTomb) {
-      state = 'DEFERRED';
-      stateReason = `${basis}；墓于日，待冲墓之日`;
-      const tb = CLASH.get(chart.calendar.dayBranch);
-      release.push({ kind: '冲墓', branch: tb, ...dayOffset(chart, tb), rule: 'R-YINGQI-05' });
-    }
-    else { state = 'REVIEW_REQUIRED'; stateReason = `${basis}；无墓可冲，须看他爻动扶动克`; }
-  } else if (!effective.length) { state = 'EFFECTIVE'; stateReason = basis + (limitations.length ? '；入墓而月令旺相，不作真墓' : ''); }
-  else if (effective.length > 1) { state = 'REVIEW_REQUIRED'; stateReason = `${basis}；但同时${effective.map((l) => l.kind).join('、')}，须分别判断`; }
+  let release = [];
+  if (capability === 'weak') { state = 'INEFFECTIVE'; stateReason = basis; }
+  else if (capability === 'neutral') { state = 'NEUTRAL'; stateReason = basis; }
+  else if (capability === 'balanced-tomb') {
+    state = 'DEFERRED'; stateReason = `${basis}；墓于日，待冲墓之日`;
+    const tb = CLASH.get(chart.calendar.dayBranch);
+    release = [{ kind: '冲墓', branch: tb, ...dayOffset(chart, tb), rule: 'R-YINGQI-05' }];
+  } else if (capability !== 'strong') { state = 'REVIEW_REQUIRED'; stateReason = basis; }
+  else if (!effective.length) { state = 'EFFECTIVE'; stateReason = basis; }
   else {
-    const lim = effective[0];
-    if (lim.kind === '月破' && line.moving) { state = 'EFFECTIVE'; stateReason = `${basis}；月破而动，动则能伤`; }
-    else if (lim.kind === '入墓' && places.some((p) => p.effect === '克')) { state = 'INEFFECTIVE'; stateReason = `${basis}；月令休囚、受克又入墓：真墓受困`; }
-    else { state = 'DEFERRED'; stateReason = `${basis}；但${lim.kind}（${lim.detail}），待${release.filter((r) => r.kind !== '逢合' || lim.kind === '月破').map((r) => `${r.kind}${r.branch}`).join('或')}`; }
+    const kinds = effective.map((l) => l.kind);
+    if (kinds.includes('旬空') && kinds.includes('月破')) { state = 'INEFFECTIVE'; stateReason = `${basis}；但空而又破，到底之空（旬空章「月破为空」，B-008）`; }
+    else if (kinds.length === 1 && kinds[0] === '月破' && subject.moving) { state = 'EFFECTIVE'; stateReason = `${basis}；月破而动，动则能伤`; }
+    else if (kinds.length === 1 && kinds[0] === '入墓' && effective[0].trueTomb && places.some((p) => p.effect === '克')) { state = 'INEFFECTIVE'; stateReason = `${basis}；月令休囚、受克又入墓：真墓受困`; }
+    else {
+      state = 'DEFERRED';
+      release = effective.flatMap((l) => l.releases);
+      const waitAll = Math.max(...effective.map(earliest));
+      stateReason = `${basis}；但${kinds.join('、')}，${kinds.length > 1 ? `待各项皆解（最迟第 ${waitAll} 天，B-008）` : `待${release.map((r) => `${r.kind}${r.branch}`).join('或')}`}`;
+    }
   }
-  // 能否主动作用于他爻：发动、暗动可；静爻须月令旺相，且只及于休囚之爻（R-DONGJING-01）
-  const acts = line.moving ? '发动' : c.dayClash?.zengshan === '暗动' ? '暗动' : c.seasonalStrong ? '静而旺相（可生克休囚之爻）' : '静（不主动作用）';
-  // 阻塞项一裁定：月克日生、月生日克先记为「日月相反」，再结合有根、动变、其他生克与专用占法判断；无额外生克不自动作不定偏慢
+  // 伏神：有力而飞神未被推开，待冲开飞神（R-FUSHEN-05）
+  if (subject.kind === 'hidden' && state === 'EFFECTIVE' && !subject.fly.pushed) {
+    const cb = CLASH.get(subject.fly.branch);
+    state = 'DEFERRED';
+    release = [{ kind: '冲开飞神', branch: cb, ...dayOffset(chart, cb), rule: 'R-FUSHEN-05' }];
+    stateReason = `${basis}；但飞神${subject.fly.branch}未被推开（伏无提拔、飞不推开亦枉然），待冲开飞神之日`;
+  }
   const mp = places.find((p) => p.place === '月建');
   const dp = places.find((p) => p.place === '日辰');
-  const pattern = mp && dp && mp.effect !== dp.effect ? `日月相反（月${mp.effect}日${dp.effect}）` : null;
   return {
     version: ROLE_STATE_VERSION,
-    pattern,
+    pattern: mp && dp && mp.effect !== dp.effect ? `日月相反（月${mp.effect}日${dp.effect}）` : null,
     seasonal: c.month.seasonal,
-    seasonalFive: seasonalFive(line.element, chart.calendar.monthBranch),
-    capability,
+    seasonalFive: seasonalFive(subject.element, chart.calendar.monthBranch),
+    capability: capability === 'balanced-tomb' ? 'balanced' : capability,
+    attacked: Boolean(cap.attacked),
     capabilityBasis: basis,
     places,
-    limitations,
+    limitations: limitations.map(({ releases, ...rest }) => rest),
     state,
     stateReason,
-    release: state === 'DEFERRED' ? release : [],
-    acts,
-    ruleIds: ['R-SICHU-01', 'R-RIZHEN-05', 'R-YUEJIAN-04', 'R-KONG-02', 'R-YUEPO-02', 'R-SUIMU-01', 'R-DONGJING-01'],
+    release,
   };
+}
+
+/** 卦中明现之爻的三层状态 */
+export function assessRoleState(line, facts, chart) {
+  const subject = { kind: 'line', element: line.element, branch: line.branch, position: line.position, moving: line.moving, calendar: facts.calendar, change: facts.change };
+  const s = stateOf(subject, chart);
+  // 能否主动作用于他爻：发动、暗动可；静爻须月令旺相，且只及于休囚之爻（R-DONGJING-01）
+  const c = facts.calendar;
+  const acts = line.moving ? '发动' : c.dayClash?.zengshan === '暗动' ? '暗动' : c.seasonalStrong ? '静而旺相（可生克休囚之爻）' : '静（不主动作用）';
+  return { ...s, acts, ruleIds: ['R-SICHU-01', 'R-RIZHEN-05', 'R-YUEJIAN-04', 'R-KONG-02', 'R-YUEPO-02', 'R-SUIMU-01', 'R-DONGJING-01'] };
+}
+
+/** 伏神的三层状态（B-009）：伏神自身四处生克 → 墓、空、破 → 飞神是否推开 */
+export function assessHiddenState(flyLine, hiddenCalendar, flyCalendar, chart) {
+  const h = flyLine.hidden;
+  const flyPushed = Boolean(flyCalendar.void) || flyCalendar.monthBreak || !flyCalendar.seasonalStrong || flyCalendar.dayTomb || flyCalendar.dayExtinct
+    || flyCalendar.month.controls || flyCalendar.day.controls || flyCalendar.month.clash || flyCalendar.day.clash
+    || chart.lines.some((m) => m.moving && m.position !== flyLine.position && (elementRelation(m.element, flyLine.element) === 'controls' || CLASH.get(m.branch) === flyLine.branch));
+  const subject = {
+    kind: 'hidden', element: h.element, branch: h.branch, position: flyLine.position, moving: false, calendar: hiddenCalendar, change: null,
+    fly: { branch: flyLine.branch, element: flyLine.element, pushed: flyPushed, strong: flyCalendar.seasonalStrong },
+  };
+  return { ...stateOf(subject, chart), flyPushed, acts: '伏（静）', ruleIds: ['R-SICHU-01', 'R-FUSHEN-02', 'R-FUSHEN-03', 'R-FUSHEN-05', 'R-FUSHEN-06', 'R-FUSHEN-08', 'R-SUIMU-01'] };
 }
