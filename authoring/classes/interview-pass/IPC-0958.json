@@ -1,0 +1,283 @@
+{
+  "script_id": "IPC-0958",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用化出世有气;世世动子孙;原动有力;忌动有力;六合;局官鬼局成吉世在",
+  "class_rank": 958,
+  "class_share_of_casts": 8.1e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "辛亥"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙酉"
+    }
+  ],
+  "scenario_tags": [
+    "官不上卦",
+    "世爻化出官星",
+    "官局已成世在局",
+    "财动生官",
+    "六合卦"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官不上卦，以世爻动而化出之官为用：「世爻发动化出官星…皆吉」（R-YONG-GUAN-03，docs/18 第〇节第 4 条）；化出之官有气",
+      "动财与世爻、化出之官合成官局，世爻在局：「合成官局谓之官旺」「必要世爻在局为美」（R-SANHE-05）"
+    ],
+    "supporting": [
+      "原神妻财发动有力",
+      "应爻（妻财）合世",
+      "卦逢六合"
+    ],
+    "adverse": [
+      "持世之子孙发动",
+      "另有子孙爻在卦"
+    ],
+    "conflicts_resolved": [
+      "持世之子孙发动本属忌神有力，「子孙持世，休望荣荫」；然它化出官星，又入官局，局成官旺，不以忌论（docs/18 第〇节第 1、4 条；R-SANHE-07 类推）",
+      "化出之官受世爻之克，然世爻化出者作有情，不以世克官论",
+      "卦下伏官不取为用"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-HE-01",
+      "R-HUA-01",
+      "R-SANHE-01",
+      "R-SANHE-05",
+      "R-SANHE-07",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YUANJI-01"
+    ],
+    "decisive": [
+      {
+        "role": "gua",
+        "basis": "官鬼局成吉世在",
+        "effect": "support"
+      },
+      {
+        "role": "yuan",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：你世上的子孙化出官星，又合成了官局",
+    "brief": "这一卦倾向通过。卦面上没有官鬼，你的世爻是子孙，正在发动，化出一颗有气的官星，便以它为用；卦中生官的财也在动，几处一起合成了官局，你的世爻就在局里。古书说合成官局谓之官旺，世在局为美。卦逢六合，应位的财合着你。子孙坐世本是忌，这一卦却化成了官。",
+    "opening": "六合卦，世应相合。六爻没有官鬼，卦下伏官不取，用神取你世爻化出的那一颗，有气。起卦月份或官星当令，或财当令，或子孙当令。\n你的世爻是子孙，发动而化出官星；生官的财同在发动，与它们合成官局，世爻在局中。应位是财，受你所生，与你相合。",
+    "process": "升选候补章说子孙持世、休望荣荫，可这颗子孙一动，化出来的正是官星；同一章又说世爻发动化出官星为吉。\n更进一层，动财、世爻与化出之官连成一局，六合章说合成官局谓之官旺，又要世爻在局为美——两条都齐了。卦上另有子孙，安静着，挡不住这股局势。",
+    "ending": "世爻化出官星而官局已成、世在局中，这一轮倾向通过。",
+    "timing": {
+      "text": "按「逢值」取期：化出之官本支值日之日前后，结果较容易出来；官局已成，你的世爻在局中，宜主动推进。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "官鬼（化出之官）",
+          "condition": "用神逢值",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。你世上的子孙化出官星，又合成了官局，你就在局里。主动推进，把握时机。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "世爻发动化出官星"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "子孙持世﹐休望荣荫。官位空破﹐勿恩升迁。",
+        "applies_because": "子孙持世本属不利"
+      },
+      {
+        "rule_id": "R-SANHE-05",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "如占功名合成官局谓之官旺，合成财局财旺生官，倘若合成子孙局者乃伤煞之神也。",
+        "applies_because": "合成官局谓之官旺"
+      },
+      {
+        "rule_id": "R-SANHE-05",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "但三合其局者必要世爻在局者为美，若世爻不在于局内，须要局生世爻为吉，局克世爻为凶",
+        "applies_because": "世爻在局为美"
+      },
+      {
+        "rule_id": "R-YUANJI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神能生用神者有五：元神旺相或临日月或日月动爻生扶者一也。元神动化回头生及化进神者二也。元神长生帝旺于日辰三也。元神与忌神同动四也。元神旺动临空化空五也。",
+        "applies_because": "妻财发动有力，生官"
+      },
+      {
+        "rule_id": "R-HE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+        "applies_because": "卦逢六合"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 958 类，占起卦概率 0.008%，全类 280 盘）：用神「化出世有气」；世爻「世动子孙」；原神妻财发动而有力；忌神子孙发动而有力；卦级「六合」；三合「官鬼局成吉世在」。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：官鬼(31%)、妻财(31%)、子孙(29%)、兄弟(9%)；发动六亲：妻财子孙(51%)、妻财妻财子孙(49%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 1,
+    "revision_note": "初稿（eq-0.13 新类，旧稿未覆盖）：官不上卦，世爻（子孙）动而化出有气之官，与动财合成官局而世在局（docs/18 第〇节第 1、4 条）"
+  }
+}
