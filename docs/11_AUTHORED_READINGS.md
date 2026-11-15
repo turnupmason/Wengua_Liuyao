@@ -517,7 +517,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `a68ca8fde382d40a…`
 - 结论类别：倾向通过；情境：官鬼持世、用神安静有气、原神无力、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天火同人之天山遁，寅月戊寅日
@@ -723,7 +723,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌无力;六合`（interview-pass-eq-0.13.0）；内容哈希 `2369e860d053e375…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、财爻持世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽水困，巳月甲寅日
@@ -774,7 +774,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `86da34c8356e3f13…`
 - 结论类别：有望通过，但要待时；情境：官鬼持世、官星失令而有扶、子孙得相气而静
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水地比之水雷屯，戌月戊子日
@@ -823,7 +823,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;六合`（interview-pass-eq-0.13.0）；内容哈希 `73653061938674e2…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、财爻持世而无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽水困之泽地萃，丑月壬午日
@@ -924,7 +924,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;官世克;原伏难出;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `45ab739f5aab3d11…`
 - 结论类别：偏难通过；情境：官鬼临应、子孙持世克官、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水雷屯，丑月甲申日
@@ -1025,7 +1025,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;官世克;原伏难出;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `a0c08a09e4aaa3b7…`
 - 结论类别：偏难通过；情境：子孙持世、忌神得相有力、官鬼临应、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天泽履，未月丙戌日
@@ -1128,7 +1128,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出`（interview-pass-eq-0.13.0）；内容哈希 `282f0c3631043370…`
 - 结论类别：偏难通过；情境：官鬼同支两现、官星出现无情、财当令持世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之水风井，戌月丁酉日
@@ -1179,7 +1179,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原无力;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `6afd5606567a7e45…`
 - 结论类别：偏难通过；情境：官鬼持世而无力、兄弟当令、子孙得相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水地比，辰月癸巳日
@@ -1229,7 +1229,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用`（interview-pass-eq-0.13.0）；内容哈希 `219df88de6b2a07a…`
 - 结论类别：倾向通过；情境：官鬼持世、忌神安静失令、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天火同人之天山遁，卯月己亥日
@@ -1326,7 +1326,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `8cab9e9c1baf11c9…`
 - 结论类别：偏难通过；情境：官星出现无情、财爻持世、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地水师之山水蒙，戌月己巳日
@@ -1375,7 +1375,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;官无情;原静不作用;忌伏难出`（interview-pass-eq-0.13.0）；内容哈希 `a9b9b131316cc584…`
 - 结论类别：偏难通过；情境：官鬼同支两现、官星出现无情、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地风升之水风井，子月癸酉日
@@ -1475,7 +1475,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌无力;六合`（interview-pass-eq-0.13.0）；内容哈希 `199ca76681e73b2f…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、财当令持世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节，午月戊午日
@@ -1524,7 +1524,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌静不作用;六合`（interview-pass-eq-0.13.0）；内容哈希 `0a7533b1dc55945c…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、财当令持世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷地豫，未月丙午日
@@ -1575,7 +1575,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `bd148cc267de9320…`
 - 结论类别：偏难通过；情境：官星出现无情、财当令持世、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火雷噬嗑，辰月辛酉日
@@ -1626,7 +1626,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官无情;原静旺有力;忌静不作用;六合`（interview-pass-eq-0.13.0）；内容哈希 `d5a80036008c69fc…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地雷复之雷火丰，子月癸未日
@@ -1777,7 +1777,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;官生合世;日月官生合世;原伏难出;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `3f7dab4867b3b7b9…`
 - 结论类别：倾向通过；情境：官鬼临应生世、官星有气、原神伏而难出、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天风姤之火风鼎，丑月辛巳日
@@ -1828,7 +1828,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现[INEFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌伏待时`（interview-pass-eq-0.13.0）；内容哈希 `c3ad68dadb593b5e…`
 - 结论类别：偏难通过；情境：官鬼同支两现而无力、原神伏而难出、忌神伏而待时、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风泽中孚，辰月乙丑日
@@ -1877,7 +1877,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用伏难出;世世受克;原无力;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `5b7a3916ea33a8c2…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、世爻受克、子孙得相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜之风泽中孚，卯月庚寅日
@@ -1925,7 +1925,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用日月为用;世世安;官生合世;原静不作用;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `2cf243b0124f787d…`
 - 结论类别：倾向通过；情境：日月为用、世爻安稳、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风雷益之风地观，酉月己丑日
@@ -1973,7 +1973,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用伏难出;世世安;原无力;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `7ed10df9f23d7084…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、兄弟当令、子孙得相
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜，卯月庚午日
@@ -2022,7 +2022,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官无情;原无力;忌静不作用;六合`（interview-pass-eq-0.13.0）；内容哈希 `d816772c81854cc5…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、世爻受克而无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节之风泽中孚，酉月丁亥日
@@ -2074,7 +2074,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏有效`（interview-pass-eq-0.13.0）；内容哈希 `9d14a7ab87e354d7…`
 - 结论类别：有望通过，但要待时；情境：官鬼同支两现持世、忌神伏而有用、应爻生世
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山天大畜之火天大有，卯月乙未日
@@ -2271,7 +2271,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `bfd6e203999cd4b5…`
 - 结论类别：偏难通过；情境：官星出现无情、财爻持世而无力、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地水师，戌月乙丑日
@@ -2322,7 +2322,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌伏待时`（interview-pass-eq-0.13.0）；内容哈希 `69db783f7b4ce748…`
 - 结论类别：倾向通过；情境：官鬼同支两现、应爻生世、原神伏而难出、忌神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风泽中孚之山泽损，午月甲戌日
@@ -2375,7 +2375,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用日月为用;世世安;官生合世;原静不作用;忌静不作用`（interview-pass-eq-0.13.0）；内容哈希 `4719d142723bc2f4…`
 - 结论类别：倾向通过；情境：官鬼不上卦、日月为用、原忌俱静而不作用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风天小畜之风火家人，申月甲申日
@@ -2425,7 +2425,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌伏有效;六合`（interview-pass-eq-0.13.0）；内容哈希 `a0bb0b08df599dc3…`
 - 结论类别：有望通过，但要待时；情境：官鬼持世、六合卦、忌神伏而有用、原神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山火贲之风火家人，巳月壬辰日
@@ -2475,7 +2475,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原无力;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `46e18944da47643b…`
 - 结论类别：偏难通过；情境：官鬼持世而无力、父母当令泄官、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：地泽临，午月丁丑日
@@ -2522,7 +2522,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌伏难出;六合`（interview-pass-eq-0.13.0）；内容哈希 `785e68d0e17bf2d9…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天地否之泽雷随，午月戊寅日
@@ -2573,7 +2573,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力;六冲`（interview-pass-eq-0.13.0）；内容哈希 `adc0c6328e53200e…`
 - 结论类别：倾向通过；情境：六冲卦、官星有气、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：兑为泽，午月己巳日
@@ -2625,7 +2625,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `f61871705b2843f7…`
 - 结论类别：倾向通过；情境：官星有气、官克世而世有气、原神伏而难出、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之雷山小过，午月丁未日
@@ -2730,7 +2730,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;官生合世;原静旺有力;忌伏难出`（interview-pass-eq-0.13.0）；内容哈希 `2c262f9f5382063e…`
 - 结论类别：倾向通过；情境：官鬼同支两现、财当令生官、世爻受克、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽风大过，辰月丙戌日
@@ -2780,7 +2780,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `77e54b11e50e55fc…`
 - 结论类别：有望通过，但要待时；情境：官星失令而有扶、子孙得相、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水火既济之风火家人，亥月戊子日
@@ -2832,7 +2832,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官克世(世无气);原伏有效;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `cda269f4ed34bd72…`
 - 结论类别：偏难通过；情境：官星有气、官克世而世无气、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽火革之雷火丰，未月丁巳日
@@ -2884,7 +2884,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安子孙;官世克;原伏有效;忌静不作用`（interview-pass-eq-0.13.0）；内容哈希 `191b3fccc48d0f0a…`
 - 结论类别：偏难通过；情境：官鬼临应、子孙持世克官、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天泽履之泽天夬，卯月辛丑日
@@ -2935,7 +2935,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏难出`（interview-pass-eq-0.13.0）；内容哈希 `e7ca70456b3a773f…`
 - 结论类别：倾向通过；情境：官鬼同支两现持世、应爻生世、忌神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：山天大畜之山泽损，卯月辛卯日
@@ -3033,7 +3033,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安子孙;官世克;原伏有效;忌静不作用`（interview-pass-eq-0.13.0）；内容哈希 `4161f8e64fbf5bf7…`
 - 结论类别：偏难通过；情境：子孙持世克官、官星有根、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火泽睽之天泽履，子月丙寅日
@@ -3084,7 +3084,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `5082bfaef9b8c678…`
 - 结论类别：倾向通过；情境：官鬼临应、官星有气、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火天大有，巳月壬午日
@@ -3184,7 +3184,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;官世克;原伏有效;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `3f0f5a33e0bf2c82…`
 - 结论类别：偏难通过；情境：官鬼临应、子孙持世受克而克官、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天泽履之风天小畜，子月丙寅日
@@ -3285,7 +3285,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现临应[EFFECTIVE]静;世世受克子孙;官世克;原静不作用;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `d08b752f10e2c8b0…`
 - 结论类别：偏难通过；情境：官鬼临应、子孙持世受克而克官、官星失令得扶
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽天夬之泽风大过，寅月戊午日
@@ -3336,7 +3336,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用伏难出;世世安;原伏有效;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `1347825e9fc086a1…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、子孙当令、原神伏而有用
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风水涣之风泽中孚，丑月己未日
@@ -3432,7 +3432,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;局妻财局待偏吉生世`（interview-pass-eq-0.13.0）；内容哈希 `b0095a169d632063…`
 - 结论类别：倾向通过；情境：官鬼持世、财局待时成局而生世、原忌俱无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽地萃之雷山小过，辰月丁卯日
@@ -3482,7 +3482,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合`（interview-pass-eq-0.13.0）；内容哈希 `87fe8e9e03e04d3f…`
 - 结论类别：偏难通过；情境：官星无力、子孙得相、六合卦、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽水困之雷水解，酉月丁酉日
@@ -3532,7 +3532,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌静不作用;六合`（interview-pass-eq-0.13.0）；内容哈希 `17f409bc52d1137b…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、原忌俱静
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水泽节，戌月壬午日
@@ -3583,7 +3583,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官克世(世有气);原伏有效;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `e8c98eda35493dd3…`
 - 结论类别：倾向通过；情境：官星有气、原神伏而有用、忌神无力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸之天山遁，未月癸卯日
@@ -3636,7 +3636,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官无情;原静不作用;忌静旺有力;六合`（interview-pass-eq-0.13.0）；内容哈希 `169ebcdad0908409…`
 - 结论类别：偏难通过；情境：六合卦、官星出现无情、子孙得相、世爻受克
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：雷地豫，卯月丁巳日
@@ -3688,7 +3688,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用伏难出;世世安;原伏待时;忌静旺有力`（interview-pass-eq-0.13.0）；内容哈希 `01294af1f18f8fbf…`
 - 结论类别：偏难通过；情境：官鬼伏而难出、子孙当令、原神伏而待时
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风水涣，巳月癸酉日
@@ -3736,7 +3736,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌无力`（interview-pass-eq-0.13.0）；内容哈希 `2294d592ec6bb0f0…`
 - 结论类别：倾向通过；情境：官星失令而有扶、忌神无力、原神伏而难出
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：泽山咸，未月乙未日
@@ -3788,7 +3788,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用日月为用;世世安子孙;官世克;原静不作用;忌静不作用;六合`（interview-pass-eq-0.13.0）；内容哈希 `d70dccf8581093d4…`
 - 结论类别：偏难通过；情境：日月为用、子孙持世克官、六合卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火山旅之雷山小过，亥月辛亥日
