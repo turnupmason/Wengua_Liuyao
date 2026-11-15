@@ -11,8 +11,10 @@ echo "$summary" | grep -q "REVIEW_REQUIRED 0，" || { echo "仍有待审稿，�
 t=$(npm test 2>&1 | grep -E "^# (pass|fail)")
 echo "$t"
 echo "$t" | grep -q "^# fail 0" || { echo "测试未通过，未提交"; exit 1; }
-git add -A
+# git add / commit 失败（如对象库损坏、索引锁）须报错退出，不可静默
+git add -A || { echo "git add 失败，未提交"; exit 1; }
 git commit -q -m "$msg
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" 2>/dev/null
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" || { echo "git commit 失败，未提交"; exit 1; }
+[ -z "$(git status --porcelain)" ] || { echo "提交后工作区仍有改动，请核查"; exit 1; }
 git log --oneline -1
