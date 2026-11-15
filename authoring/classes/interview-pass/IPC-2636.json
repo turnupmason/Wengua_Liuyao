@@ -1,0 +1,262 @@
+{
+  "script_id": "IPC-2636",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用明现临应[EFFECTIVE]静;世世受克子孙;原静不作用;忌静旺有力",
+  "class_rank": 2636,
+  "class_share_of_casts": 4.3e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "庚寅"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "庚寅"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丙戌"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "辛卯"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丙寅"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丁卯"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "辛卯"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "甲戌"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "庚戌"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "戊寅"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        6,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丁卯"
+    }
+  ],
+  "scenario_tags": [
+    "子孙持世得相",
+    "官鬼临应入动墓",
+    "原神静"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "子孙持世而得相（兄弟当令）：「子孙持世，休望荣荫」",
+      "子孙静而旺相，世克应，克休囚之官"
+    ],
+    "supporting": [
+      "官鬼在应位，失令而得日生、月合等，当前有效"
+    ],
+    "adverse": [
+      "官星多入动墓（父母之墓，非生源），或兼入日墓；原神妻财静而多无力"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0202 之理"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-SANMU-01",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YONG-ZI-01",
+      "R-YUANJI-02"
+    ],
+    "decisive": [
+      {
+        "role": "ji",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：得相子孙坐世克官，官星还入了墓",
+    "brief": "这一卦偏难通过。官星在应位，起卦这个月兄弟当令，它失令，靠日辰生它、月建合它，当下尚可用；可它常被发动的父母收进墓里。你世上坐的是得相的子孙，世克应，正压着它。生官的财静着，多半无力。",
+    "opening": "应爻是官鬼，安静；起卦之月兄弟当令，官星休囚，得日生日长生、月合等；多入动墓，或兼入日墓。官星当下有效。\n世爻是子孙，得相；你克应位之官。卦中父母发动，或两爻父母同动。财静而多无力；子孙静而旺相。",
+    "process": "古书说「子孙持世，休望荣荫」；得相子孙世克应，官又困墓。\n所以偏难。",
+    "ending": "得相子孙坐世而官星入墓，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或消息落定",
+          "target_symbol": "应位之官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。得相子孙坐世克官，官星还入了墓。期望放低，同时准备别的机会。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "子孙持世﹐休望荣荫。官位空破﹐勿恩升迁。",
+        "applies_because": "子孙持世，休望荣荫"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而得相，克休囚之官"
+      },
+      {
+        "rule_id": "R-SANMU-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+        "applies_because": "入动墓"
+      },
+      {
+        "rule_id": "R-YUANJI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+        "applies_because": "元神无力"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 2636 类，占起卦概率 0.004%，全类 44 盘）：用神「明现临应[EFFECTIVE]静」；世爻「世受克子孙」；原神妻财安静而月令不旺，不主动作用；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：日生、日长生、月合(20%)、日生、日长生(20%)、日生、月合(20%)、日生(20%)；发动六亲：父母(64%)、父母父母(36%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神（应爻）休囚，日生日长生月合 20%、日生日长生 20%、日生月合 20% 等，入动墓 55%、无伤 27%、兼入日墓 14% 等，三层判定有效 100%；世爻皆子孙（相）；原神静（多无力）；忌神静而旺相；发动：父母 64%、父母父母 36%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
