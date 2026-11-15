@@ -1,0 +1,270 @@
+{
+  "script_id": "IPC-0596",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用明现[EFFECTIVE]静;世世安;官克世(世有气);原动有力;忌静不作用;六合",
+  "class_rank": 596,
+  "class_share_of_casts": 0.00011,
+  "sample_charts": [
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "乙丑"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        6,
+        8,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        6,
+        8,
+        8
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛酉"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        6,
+        8,
+        8
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "戊戌"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "庚辰"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "乙酉"
+    }
+  ],
+  "scenario_tags": [
+    "六合卦",
+    "原神发动有力",
+    "财当令生官"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "原神妻财发动有力，动来生官（R-YONG-GUAN-03）；官星多得月生",
+      "卦逢六合，忌神子孙静而不旺"
+    ],
+    "supporting": [],
+    "adverse": [],
+    "conflicts_resolved": [
+      "财动克父只作提醒（D-010）",
+      "官克世而世有气，作有情（docs/18 第〇节第 1 条）"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-GUA-CHONGHE-02",
+      "R-HE-01",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YONG-GUAN-08",
+      "R-YUANJI-01"
+    ],
+    "decisive": [
+      {
+        "role": "yuan",
+        "effect": "support"
+      },
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：六合之卦，财当令又发动来生官",
+    "brief": "这一卦倾向通过，而且条件很齐。卦逢六合，世应相合；这个月一般是财当令，官星得月生；财还在卦中发动，动来生官，古书说财动生官得美缺。克官的子孙安静不旺。",
+    "opening": "六合卦，世应相合。起卦月份一般是财当令，官星得了相气；若是别的月份，官星也有扶持，以你这一卦的排盘为准。不空不破，无冲克。\n官星克着你世上的兄弟；你的世爻有气，又有动财生官相助，升选候补章说这种情形「世旺者竞升」。",
+    "process": "这一卦的财不但当令，还发动了，动来生官——「财动生官得美缺」。有当令之气，又有动爻之推，官星是被托着往前送的。\n克官的子孙安静不旺，伸不出手。财动亦克父母，文书材料上细致些。",
+    "ending": "卦合、财旺而动、官星有根，这一轮倾向通过，推进有力。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果最容易到来；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。六合之卦，财当令又发动生官，子孙伸不出手。积极跟进，材料细致即可。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "财动生官"
+      },
+      {
+        "rule_id": "R-HE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+        "applies_because": "卦逢六合"
+      },
+      {
+        "rule_id": "R-YUANJI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神能生用神者有五：元神旺相或临日月或日月动爻生扶者一也。元神动化回头生及化进神者二也。元神长生帝旺于日辰三也。元神与忌神同动四也。元神旺动临空化空五也。",
+        "applies_because": "原神发动有力"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而不旺"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-08",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "予屡试之﹐世旺者竞升﹐世衰者不吉。",
+        "applies_because": "官克世，按世爻旺衰论"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 596 类，占起卦概率 0.011%，全类 136 盘）：用神「明现[EFFECTIVE]静」；世爻「世安」；卦级「官克世(世有气)」；原神妻财发动而有力；忌神子孙安静而月令不旺，不主动作用；卦级「六合」。类内各盘不同之处：月建六亲：妻财(97%)、父母(3%)；用神月令：相(97%)、休囚(3%)；用神生扶：妻财动来生、月生(33%)、妻财动来生、月合、月生(33%)、妻财动来生、妻财动来生、月生(14%)、妻财动来生、妻财动来生、月合、月生(14%)；发动六亲：妻财(44%)、妻财妻财(31%)、兄弟妻财(25%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财 80%；财发动 100%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-0176（eq-0.12.5）；旧类中官克世而世有气之盘另立本类（有情），判定仍为倾向通过；卦象段补一句"
+  }
+}
