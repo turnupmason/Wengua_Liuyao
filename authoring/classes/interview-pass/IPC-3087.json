@@ -1,0 +1,239 @@
+{
+  "script_id": "IPC-3087",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用明现持世[INEFFECTIVE]静;世持世;原暗动有力;忌伏有效",
+  "class_rank": 3087,
+  "class_share_of_casts": 3.9e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "辛未"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼持世受月克",
+    "原神暗动",
+    "忌神伏而有用"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼持世，子孙当令而受月克，休囚，三层判定为无力：「用神无根，元神有力亦难生」（R-YUANJI-06）"
+    ],
+    "supporting": [
+      "官星得日生、日合；原神妻财一爻暗动、一爻静而旺相，有力"
+    ],
+    "adverse": [
+      "月建即子孙之五行；忌神子孙伏而有用"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0136 之理"
+    ],
+    "rule_ids": [
+      "R-ANDONG-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-SHIYING-03",
+      "R-SICHU-01",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YUANJI-06",
+      "R-YUEJIAN-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：坐世的官星被月建克住",
+    "brief": "这一卦偏难通过。官星坐在你世上，起卦这个月子孙当令，月建正克着它，官星休囚。当天日辰生它、合它，卦里的财也暗中出力，可官星被月建压着，根不稳，生也扶不起。卦下还伏着子孙，当令有用，克官之势更重。",
+    "opening": "用神官鬼持世，安静；起卦之月子孙当令，月建克官，官星休囚；得日生、日合。官星自身无力。\n应位兄弟受你所克。卦中无动爻。财一爻被日辰冲起而暗动，一爻静而旺相；子孙伏而有用。",
+    "process": "持世之官受月克无根，财虽暗动也生不起；伏子孙当令有用。\n所以偏难。",
+    "ending": "持世之官受月克，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或消息落定",
+          "target_symbol": "持世之官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。坐世的官星被月建克住。这个月不宜强推，等月令转换。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YUANJI-06",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "此谓之用神无根，元神有力亦难生。",
+        "applies_because": "用神无根，元神有力亦难生"
+      },
+      {
+        "rule_id": "R-YUEJIAN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "月将章第十六",
+        "quote": "爻之衰弱者能生之合之、比之、拱之、扶之，衰而亦旺。爻之彊旺者能冲之克之、刑之、破之，旺而亦衰。",
+        "applies_because": "月建克用"
+      },
+      {
+        "rule_id": "R-ANDONG-01",
+        "source_book": "增删卜易",
+        "source_chapter": "暗动章第二十二",
+        "quote": "静爻旺相日辰冲之为暗动，静爻休囚日辰冲之为破，暗动者有喜有忌。",
+        "applies_because": "静爻旺相日辰冲之为暗动，有喜有忌"
+      },
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "子孙伏而有用"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 3087 类，占起卦概率 0.004%，全类 10 盘）：用神「明现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财暗动而有力；忌神子孙不上卦，伏而有用。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：日合、日生(60%)、日生(40%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行；用神（持世）休囚，月克 100%（得日生日合），三层判定无力 100%；原神：暗动有力、静而旺相；伏神：忌神有用 100%；应爻兄弟受世克 100%；无动爻。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
