@@ -1,0 +1,245 @@
+{
+  "script_id": "IPC-3052",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用明现[INEFFECTIVE]静;世世空无气;原无力;忌静旺有力;六冲",
+  "class_rank": 3052,
+  "class_share_of_casts": 3.9e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙酉"
+    }
+  ],
+  "scenario_tags": [
+    "世爻旬空无气",
+    "官星失令无力",
+    "六冲卦"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "世爻（父母）旬空而休囚，无气：「世空世破官破官空﹐俱不得」（R-YONG-GUAN-07）",
+      "官鬼兄弟当令而失令（或受日克、日克日破日绝），三层判定为无力"
+    ],
+    "supporting": [
+      "卦无动爻，子孙虽旺未动"
+    ],
+    "adverse": [
+      "忌神子孙静而旺相；原神妻财无力；卦逢六冲，应爻冲世"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-1114、IPC-0068 之理"
+    ],
+    "rule_ids": [
+      "R-CHONG-01",
+      "R-DONGJING-01",
+      "R-GUA-CHONGHE-01",
+      "R-KONG-02",
+      "R-KONG-03",
+      "R-SHIYING-03",
+      "R-YINGQI-04",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-07",
+      "R-YUANJI-02"
+    ],
+    "decisive": [
+      {
+        "role": "world",
+        "effect": "adverse",
+        "basis": "空破"
+      },
+      {
+        "role": "yong",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：你世上空而无气，官星也失令",
+    "brief": "这一卦偏难通过。起卦这个月兄弟当令，官星休囚，当天日辰还常克它，没根。你世上的父母又正落空，休囚无助，人这一侧接不住。克官的子孙静着却旺，生官的财没力气。卦逢六冲，世应相冲，事情易散。",
+    "opening": "六冲卦，世应相冲。用神官鬼安静；起卦之月兄弟当令，官星休囚；或受日克，或兼日破日绝。官星自身无力。\n你世上是父母，旬空而休囚，无气；应位多是财，克你、冲你，或父母与你比和。卦中无动爻。财无力；子孙静而旺相。",
+    "process": "世空无气，古书说世空者俱不得；官星又失令无根。\n子孙旺在一旁。所以偏难。",
+    "ending": "世爻空而无气、官星失令，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "官星衰而无力，按「衰者遇生遇旺」，若有转机，多在官星得生、得旺的月日；具体对应的地支随排盘列出。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-04",
+          "pool": "favorable",
+          "target_event": "若有转机，在此时",
+          "target_symbol": "官鬼（休囚）",
+          "condition": "衰者遇生遇旺",
+          "time_scale": "day",
+          "calculation_basis": "生官之五行、官星本五行之月日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「衰绝者，遇生遇旺」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。你世上空而无气，官星也失令。这阵子先蓄力，别急着出手。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-07",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+        "quote": "世空世破官破官空﹐俱不得。",
+        "applies_because": "世空世破官破官空﹐俱不得"
+      },
+      {
+        "rule_id": "R-KONG-03",
+        "source_book": "增删卜易",
+        "source_chapter": "月将章第十六",
+        "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+        "applies_because": "世在旬内毕竟为空"
+      },
+      {
+        "rule_id": "R-CHONG-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六冲章第二十",
+        "quote": "冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶",
+        "applies_because": "用神失陷凶而又凶"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而旺相"
+      },
+      {
+        "rule_id": "R-YINGQI-04",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "衰绝者，遇生遇旺",
+        "applies_because": "用神衰而无力，取生旺之时"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 3052 类，占起卦概率 0.004%，全类 10 盘）：用神「明现[INEFFECTIVE]静」；世爻「世空无气」；原神妻财当前无力（INEFFECTIVE）；忌神子孙静而旺相，有力（只作用于休囚之爻）；卦级「六冲」。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：应爻对世：克世、冲世(60%)、与世比和、冲世(40%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神休囚，无伤 50%、日克日破日绝 30%、日克 20%，三层判定无力 100%；世爻父母旬空（静空无助）、无力 100%；原神无力；忌神静而旺相 100%；卦逢六冲；应爻：财克世冲世 60%、父母比和冲世 40%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
