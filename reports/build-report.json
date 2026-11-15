@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 1012,
-  "technical_passed": 1012,
+  "scripts": 1044,
+  "technical_passed": 1044,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 1012,
+  "ai_approved": 1044,
   "review_required": 0,
-  "approved_for_release": 1012,
+  "approved_for_release": 1044,
   "errors": [],
   "warnings": [
     "IPC-0203: C25 与IPC-0270字符六元组相似度 0.33，须复核是否机械复用",
@@ -15,9 +15,11 @@
     "IPC-0270: C25 与IPC-0203字符六元组相似度 0.33，须复核是否机械复用",
     "IPC-0286: C25 与IPC-0353字符六元组相似度 0.35，须复核是否机械复用",
     "IPC-0301: C25 与IPC-0341字符六元组相似度 0.30，须复核是否机械复用",
+    "IPC-0340: C25 与IPC-0405字符六元组相似度 0.40，须复核是否机械复用",
     "IPC-0341: C25 与IPC-0301字符六元组相似度 0.30，须复核是否机械复用",
     "IPC-0353: C25 与IPC-0286字符六元组相似度 0.35，须复核是否机械复用",
     "IPC-0371: C25 与IPC-0207字符六元组相似度 0.31，须复核是否机械复用",
+    "IPC-0405: C25 与IPC-0340字符六元组相似度 0.40，须复核是否机械复用",
     "IPC-0477: C25 与IPC-0513字符六元组相似度 0.36，须复核是否机械复用",
     "IPC-0513: C25 与IPC-0477字符六元组相似度 0.36，须复核是否机械复用",
     "IPC-0522: C25 与IPC-0649字符六元组相似度 0.31，须复核是否机械复用",
@@ -78,6 +80,11 @@
       "jaccard6": 0.422
     },
     {
+      "a": "IPC-0340",
+      "b": "IPC-0405",
+      "jaccard6": 0.396
+    },
+    {
       "a": "IPC-0798",
       "b": "IPC-1019",
       "jaccard6": 0.383
@@ -96,11 +103,6 @@
       "a": "IPC-0286",
       "b": "IPC-0353",
       "jaccard6": 0.349
-    },
-    {
-      "a": "IPC-0203",
-      "b": "IPC-0270",
-      "jaccard6": 0.329
     }
   ]
 }
