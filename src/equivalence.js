@@ -1,7 +1,20 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.12.5';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.13.0';
+
+/**
+ * 官星与世爻之情（docs/18 第〇节第 1 条）：乡试章「出现无情…若不生合世爻﹐或不持世…或被世爻冲克﹐亦属无益」；
+ * 升选候补章「助鬼伤身…世旺者竞升﹐世衰者不吉」。rel 为 relationToWorld 字串（生世、合世、克世、世克之、冲世…）。
+ */
+function qingOf(rel) {
+  if (!rel) return '无情';
+  if (rel.includes('持世')) return '';
+  if (rel.includes('生世') || rel.includes('合世')) return '生合世';
+  if (rel.includes('克世')) return '克世';
+  if (rel.includes('世克之') || rel.includes('冲世')) return '世克';
+  return '无情';
+}
 
 /** 用神之气（月将章「日生月克，兼看生扶…月克日生遇帮而愈旺，月生日克逢他削而亦衰」） */
 function qiPattern(l, cal) {
@@ -71,28 +84,47 @@ export function interviewPassClass(evidence) {
     const hurt = l.damage.some((d) => d.includes('动来克') || d.includes('动来冲')) ? '受动克' : '';
     // 三墓：日墓、动墓、化墓（R-SANMU-01）
     const tomb = l.damage.some((d) => d === '入日墓' || d.includes('动墓') || d === '化墓') ? '入墓' : '';
-    yong = { source: y.selection.status === 'equivalent-pair' ? '同支两现' : '明现', world: l.isWorld ? '持世' : l.isResponse ? '临应' : '', qi: qiPattern(l, l.calendar), vb, motion, hurt, tomb, state: l.state.state, limits: l.state.limitations.filter((x) => !(x.kind === '入墓' && !x.trueTomb)).map((x) => x.kind).join('') };
+    // 令星（docs/18 第〇节第 2 条）：临日辰；或临月建而日辰不冲克
+    const lingxing = l.calendar.day.same || (l.calendar.month.same && !(l.calendar.day.controls || l.calendar.day.clash));
+    const ryGood = (evidence.special.riyueYongToWorld || []).some((r) => qingOf(r.toWorld) === '生合世');
+    yong = { source: y.selection.status === 'equivalent-pair' ? '同支两现' : '明现', world: l.isWorld ? '持世' : l.isResponse ? '临应' : '', qi: qiPattern(l, l.calendar), vb, motion, hurt, tomb, state: l.state.state, limits: l.state.limitations.filter((x) => !(x.kind === '入墓' && !x.trueTomb)).map((x) => x.kind).join(''),
+      qing: l.isWorld ? '' : (evidence.special.changedYong || []).some((c) => c.fromWorld) ? '世化出官' : qingOf(l.relationToWorld), lingxing, riyue: ryGood ? '日月官生合世' : '' };
     if (l.state.state === 'REVIEW_REQUIRED') blockers.push('用神作用状态待核（REVIEW_REQUIRED）');
   } else if (!y.missing) {
     yong = { source: '两现并列' };
     blockers.push('用神两现并列，须作者取舍');
+  } else if (evidence.special.changedYong?.length) {
+    // 官不上卦而动爻化出官星：以化出之官为用（docs/18 第〇节第 4 条）。世爻化出者优先，余取生合世者
+    const cy = [...evidence.special.changedYong].sort((a, b) => (b.fromWorld - a.fromWorld) || (qingOf(a.toWorld) === '生合世' ? -1 : 1))[0];
+    const weak = cy.monthBreak || cy.void || (!['旺', '相'].includes(cy.seasonal) && cy.dayHurt);
+    yong = { source: `化出${cy.fromWorld ? '世' : ''}${weak ? '衰' : '有气'}`, qing: cy.fromWorld ? '' : qingOf(cy.toWorld) };
   } else if (y.missing.monthIsYong || y.missing.dayIsYong) {
     // 日辰为官而月建为子孙：月令克日辰之官，不助反克（IPC-0177 判有望而待时），与月建为官、或月令生扶日辰者分开
     const monthClashesDay = !y.missing.monthIsYong && y.missing.dayIsYong && y.missing.monthRelative === '子孙';
-    yong = { source: monthClashesDay ? '日月为用(月克日)' : '日月为用' };
+    const ry = evidence.special.riyueYongToWorld || [];
+    const ryQing = ry.some((r) => qingOf(r.toWorld) === '生合世') ? '生合世' : ry.some((r) => qingOf(r.toWorld) === '克世') ? '克世' : ry.some((r) => qingOf(r.toWorld) === '世克') ? '世克' : '无情';
+    yong = { source: monthClashesDay ? '日月为用(月克日)' : '日月为用', qing: ryQing };
   } else {
     const hf = evidence.flows.find((f) => f.flow === 'hidden' && f.role === 'yong');
     yong = { source: hf ? `伏${{ likely: '有效', deferred: '待时', contested: '并见', unlikely: '难出', neutral: '平' }[hf.emergence]}` : '无伏' };
     if (hf && hf.emergence === 'contested') blockers.push('用神伏神有用与无用并见，须权衡规则');
   }
+  // 官克世：助鬼伤身，看世爻有气无气（升选候补章「世旺者竞升﹐世衰者不吉」，docs/18 第〇节第 1 条）
+  if (yong.qing === '克世') yong.qing = `克世(世${evidence.world.state.state === 'INEFFECTIVE' ? '无气' : '有气'})`;
   const yuan = effectTier(evidence.yuan, evidence.flows, 'yuan');
-  const ji = effectTier(evidence.ji, evidence.flows, 'ji');
+  let ji = effectTier(evidence.ji, evidence.flows, 'ji');
   if (yuan === '待核' || yuan === '伏并见') blockers.push(yuan === '待核' ? '原神作用状态待核（REVIEW_REQUIRED）' : '原神伏神有用与无用并见，须权衡规则');
   if (ji === '待核' || ji === '伏并见') blockers.push(ji === '待核' ? '忌神作用状态待核（REVIEW_REQUIRED）' : '忌神伏神有用与无用并见，须权衡规则');
   // 忌神与元神同动（元神忌神衰旺章：忌神不能克用神者「忌神与元神同动七也」，R-YUANJI-04）。原神只取最强一爻时，
   // 若最强者是静爻、另有一爻原神发动，同动之事实会被掩去；忌神发动有力时单列，并记发动之原神自身的作用状态
   const movingYuan = evidence.yuan.filter((x) => x.actsOnYong === '发动');
-  const tongdong = ji === '动有力' && yuan !== '动有力' && movingYuan.length ? `忌元同动(原${effectTier(movingYuan, evidence.flows, 'yuan')})` : '';
+  let tongdong = ji === '动有力' && yuan !== '动有力' && movingYuan.length ? `忌元同动(原${effectTier(movingYuan, evidence.flows, 'yuan')})` : '';
+  // docs/18 第〇节第 2 条：官临令星，或发动之忌神入生官之财局（成或待），动忌不以伤论
+  if (ji === '动有力' || ji === '暗动有力') {
+    const activeJi = evidence.ji.filter((x) => x.actsOnYong === '发动' || x.actsOnYong === '暗动').map((x) => x.branch);
+    const inWealthHarmony = (evidence.harmonies || []).some((h) => h.relative === evidence.roles.yuan && ['formed', 'deferred'].includes(h.status) && activeJi.some((b) => h.branches.includes(b)));
+    if (yong.lingxing) { ji = `${ji}(官临令星)`; tongdong = ''; } else if (inWealthHarmony) { ji = `${ji}(入财局)`; tongdong = ''; }
+  }
   if (tongdong.includes('待核')) blockers.push('同动之原神作用状态待核（REVIEW_REQUIRED）');
   const sp = evidence.special;
   const factors = {
@@ -111,6 +143,7 @@ export function interviewPassClass(evidence) {
   const key = [
     `用${yong.source}${yong.world || ''}${yong.state ? `[${yong.state}${yong.limits || ''}]` : ''}${yong.motion || ''}${yong.hurt || ''}`,
     `世${factors.world}${factors.jiHoldsWorld ? '子孙' : ''}`,
+    yong.qing ? `官${yong.qing}` : '', yong.riyue || '',
     `原${yuan}`, `忌${ji}`, tongdong, factors.hexagram, factors.harmonies.length ? `局${factors.harmonies.join('+')}` : '',
   ].filter(Boolean).join(';');
   return { version: EQUIVALENCE_VERSION, key, factors, writable: blockers.length === 0, blockers };

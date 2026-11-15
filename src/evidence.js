@@ -456,6 +456,20 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     yuanMoving: chart.lines.filter((l) => l.moving && l.relative === roles.yuan).map((l) => l.position),
     yongMoving: chart.lines.filter((l) => l.moving && l.relative === rel).map((l) => l.position),
     changedIntoYong: chart.lines.filter((l) => l.moving && l.changed.relative === rel).map((l) => l.position),
+    // 日月作用神之六亲而与世爻生合（升选候补章「日月动爻作官星生合世爻…皆吉」，docs/18 第〇节第 1 条）
+    riyueYongToWorld: [['月建', monthBranch], ['日辰', dayBranch]]
+      .filter(([, b]) => relativeOf(chart.primary.palaceElement, BRANCH_ELEMENT[b]) === rel)
+      .map(([src, b]) => ({ source: src, branch: b, toWorld: relationToWorld({ branch: b, element: BRANCH_ELEMENT[b], position: 0 }) })),
+    // 动爻化出用神（升选候补章「世爻发动化出官星生世皆吉」，docs/18 第〇节第 4 条）
+    changedYong: chart.lines.filter((l) => l.moving && l.changed.relative === rel).map((l) => {
+      const c = lf(l).change;
+      return {
+        position: l.position, fromWorld: l.isWorld, branch: l.changed.branch,
+        toWorld: relationToWorld({ branch: l.changed.branch, element: l.changed.element, position: 0 }),
+        seasonal: c.changedCalendar.month.seasonal, monthBreak: Boolean(c.changedMonthBreak), void: Boolean(c.changedVoid),
+        dayHurt: Boolean(c.changedCalendar.day.controls || c.changedCalendar.day.clash),
+      };
+    }),
     changedIntoJi: chart.lines.filter((l) => l.moving && l.changed.relative === roles.ji).map((l) => l.position),
     sixClash: chart.primary.sixClash,
     sixCombine: chart.primary.sixCombine,
