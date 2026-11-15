@@ -1,0 +1,262 @@
+{
+  "script_id": "IPC-3079",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用明现临应[INEFFECTIVE入墓]静;世世受克子孙;原无力;忌静不作用;变冲",
+  "class_rank": 3079,
+  "class_share_of_casts": 3.9e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        9,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "己未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "己未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丙戌"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        6
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙戌"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼临应泄气入墓",
+    "子孙持世休囚",
+    "动后变六冲"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼在应位，父母当令而泄气，入动墓（或日墓，或兼之），三层判定为无力（R-SANMU-01）"
+    ],
+    "supporting": [
+      "坐世子孙休囚，静而不作用"
+    ],
+    "adverse": [
+      "原神妻财无力；动后变六冲；世克应官"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0801、IPC-1351 之理"
+    ],
+    "rule_ids": [
+      "R-GUA-CHONGHE-01",
+      "R-SANMU-01",
+      "R-SHIYING-03",
+      "R-WANG-02",
+      "R-YINGQI-05",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-02",
+      "R-YUANJI-02",
+      "R-YUANJI-05"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：应位官星泄了气，又被收进墓里",
+    "brief": "这一卦偏难通过。官星在应位，起卦这个月父母当令，官星的气被泄掉；卦里兄弟发动，把它收进墓里，有时当天日辰也来收它。官星本就没力气，再一入墓，困住出不来。生官的财无力。你世上的子孙休囚不动，不是主因。卦动后变六冲。",
+    "opening": "用神官鬼在应位，安静；起卦之月父母当令，官星泄气而休囚；入动墓，或入日墓，或兼而有之。官星自身无力。\n你世上是子孙，休囚，世克应。动的是兄弟，动后变六冲。财无力；子孙静而不作用。",
+    "process": "官星泄气又入墓，无力而受困。\n生官之财无力。所以偏难。",
+    "ending": "应位之官泄气入墓，这一轮通过的可能偏低；墓库冲开之时才有转机。",
+    "timing": {
+      "text": "官星入墓，按「入三墓俱喜冲开」：冲开墓库之日前后，若有转机多在此时；从卦象看，这一轮偏难。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-05",
+          "pool": "favorable",
+          "target_event": "若有转机，在此时",
+          "target_symbol": "入墓之官鬼",
+          "condition": "入墓：喜冲开",
+          "time_scale": "day",
+          "calculation_basis": "冲墓库之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「入三墓俱喜冲开」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。应位官星泄了气，又被收进墓里。暂时别等这边的消息，另寻机会。",
+    "classical_sources": [
+      {
+        "rule_id": "R-SANMU-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+        "applies_because": "入动墓、入日墓"
+      },
+      {
+        "rule_id": "R-YUANJI-05",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。",
+        "applies_because": "用神无根"
+      },
+      {
+        "rule_id": "R-GUA-CHONGHE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "八宫图第三",
+        "quote": "六冲卦者，干为天、坎为水、艮为山、震为雷、巽为风、离为火、坤为地、兑为泽，此八宫第一卦皆是六冲卦，再者天雷无妄、雷天大壮也是六冲卦一共十卦，其馀不是。",
+        "applies_because": "动后变六冲"
+      },
+      {
+        "rule_id": "R-YUANJI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+        "applies_because": "妻财无力"
+      },
+      {
+        "rule_id": "R-YINGQI-05",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "入三墓俱喜冲开",
+        "applies_because": "入三墓俱喜冲开"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 3079 类，占起卦概率 0.004%，全类 30 盘）：用神「明现临应[INEFFECTIVE入墓]静」；世爻「世受克子孙」；原神妻财当前无力（INEFFECTIVE）；忌神子孙安静而月令不旺，不主动作用；卦级「变冲」。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。结构：全类月建为父母之五行；用神（应位）休囚，入动墓 60%、入日墓 20%、兼入动墓日墓 20%，三层判定无力 100%；原神无力；忌神（世爻）子孙休囚，静（不作用）100%；应爻官受世克 100%；发动：兄弟 100%；动后变冲。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
