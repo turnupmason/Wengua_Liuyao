@@ -1,0 +1,247 @@
+{
+  "script_id": "IPC-2249",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用日月为用;世世破;官克世(世有气);原静不作用;忌静不作用;局兄弟局待凶世在",
+  "class_rank": 2249,
+  "class_share_of_casts": 4.5e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸未"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸丑"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸未"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "乙丑"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "戊戌"
+    }
+  ],
+  "scenario_tags": [
+    "月建为官",
+    "世爻月破",
+    "兄弟局待成"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "世爻（兄弟）被月建冲破，有气无气并见：「世空世破官破官空，俱不得」（R-YONG-GUAN-07）、「官空世破，且让他人」（R-YONG-GUAN-04）"
+    ],
+    "supporting": [
+      "以月建为用神（R-FUSHEN-01）"
+    ],
+    "adverse": [
+      "兄弟三合局待时成局，世在局（兄弟为阻）"
+    ],
+    "conflicts_resolved": [
+      "同 旧 IPC-0605：世破有气无气并见，从专章",
+      "官克世而世有气，作有情；然世爻月破，当月接不住，不改偏难"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-SANHE-01",
+      "R-SANHE-06",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-04",
+      "R-YONG-GUAN-07",
+      "R-YONG-XIONG-01",
+      "R-YUEPO-01",
+      "R-YUEPO-02"
+    ],
+    "decisive": [
+      {
+        "role": "world",
+        "effect": "adverse",
+        "basis": "空破"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：月建之官冲破了你的世爻，兄弟局还在凑",
+    "brief": "这一卦偏难通过。卦面上不取官爻，起卦这个月官星当令，以月建之官为用，分量很足；可冲破你世爻的也正是这个月建。你的世爻是兄弟，月破之后虽有气可复，眼下站不住。古书说官空世破，且让他人。卦中兄弟还在凑局，竞争多。",
+    "opening": "卦中没有可取的官鬼，伏官依例不取；起卦之月官星当令，取月建为用。\n持世的兄弟被月建冲破，或静而无助，或另得扶持，出月可复；应位或兄弟，与你比和，或父母，生你。卦中兄弟、父母发动；三支兄弟局待时而成，你在局中。",
+    "process": "月建之官克你，你这一爻破而有气，本可作官来就你；可破就是破，当月之内接不住。\n兄弟局若成，竞争更多；原神、忌神都静，帮不上也伤不到。",
+    "ending": "月建之官冲破你的世爻，兄弟局又待成，这一轮偏难通过。",
+    "timing": {
+      "text": "用神为月建，不在卦爻之中，本卦不按卦爻另列日子；世爻之破，出月或逢合之时可缓。",
+      "entries": []
+    },
+    "conclusion": "偏难通过。月建之官很旺，你的世爻却正被它冲破。调整状态，准备下一次。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-04",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·署印谋差章第六十一",
+        "quote": "财与官星不可有一而不旺﹐子孙兄弟不可一而动摇﹐世陷财空﹐不如守己﹐官空世破﹐且让他人。",
+        "applies_because": "官空世破，且让他人"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-07",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+        "quote": "世空世破官破官空﹐俱不得。",
+        "applies_because": "世破俱不得"
+      },
+      {
+        "rule_id": "R-YUEPO-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·月破章第二十七",
+        "quote": "目下虽破﹐出月则不破﹐今日虽破﹐实破之日则不破﹐合之日则不破﹐近应日远应年月。惟而不动又无日辰动爻生助者则到底而破矣。",
+        "applies_because": "出月则不破"
+      },
+      {
+        "rule_id": "R-SANHE-06",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "官父世爻合成父局官局﹐不遇日月冲破者﹐定许连登﹐倘若合成兄局﹐得遇日月生扶﹐官星亦旺者﹐亦许得意。惟忌合成子孙局者﹐不为吉也。合成财局虽不为美。然亦得验于吉者。",
+        "applies_because": "合成兄局，须得日月生扶、官星亦旺方许得意"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 2249 类，占起卦概率 0.005%，全类 52 盘）：用神「日月为用」；世爻「世破」；卦级「官克世(世有气)」；原神妻财安静而月令不旺，不主动作用；忌神子孙安静而月令不旺，不主动作用；三合「兄弟局待凶世在」。全类一致：月建六亲：官鬼(100%)；用神月令：不现(100%)。类内各盘不同之处：应爻对世：与世比和(65%)、生世(35%)；发动六亲：兄弟父母(48%)、兄弟(35%)、父母(17%)；均不改变本类结论，正文不写，由排盘逐盘列出。用神来源为月建（全类月建为官鬼之五行）；世爻皆兄弟而月破（三层判定待时 51%、无力 49%）；三合：兄弟局待时成局、世在局 100%。不列应期条目。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-0675（eq-0.12.5）；原判偏难不变；类键新增「官克世（世有气）」；旧正文已为 IPC-1262 沿用，正文重写"
+  }
+}
