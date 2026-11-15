@@ -7,7 +7,7 @@ norm = lambda t: re.sub(r'[\s，。、；：？！“”‘’「」﹐﹑﹔﹕
 corpus = ''.join(norm(open(f, encoding='utf-8').read()) for f in glob.glob(f'{ROOT}/sources/classics/*.md'))
 reg = norm(open(f'{ROOT}/rules/register.json', encoding='utf-8').read())
 # 明说「书中没有这种说法」而加引号者，逐条列出
-ALLOW = {('IPC-0503', '局成即可解子孙之克')}
+ALLOW = {('IPC-0503', '局成即可解子孙之克'), ('IPC-0482', '局成即可解子孙之克')}
 bad = 0
 for f in sorted(glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json')):
     d = json.load(open(f, encoding='utf-8')); r = d['reading']
