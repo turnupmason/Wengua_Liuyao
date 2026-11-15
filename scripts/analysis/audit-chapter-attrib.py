@@ -33,6 +33,12 @@ VERIFIED = {
 # （旧稿号指旧版另一类，不能直接沿用于同号新稿，故只保留映射后的新稿号）
 try:
     _kept = json.load(open(f'{ROOT}/reports/eq-0.13-kept.json', encoding='utf-8'))
+    # eq-0.13 重写稿（v2util.v2）在修订说明中写明「底稿为旧稿 IPC-xxxx」；沿用旧正文者，核实结论同样随稿号映射
+    import glob as _glob, re as _re
+    for _f in _glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json'):
+        _d = json.load(open(_f, encoding='utf-8'))
+        _m = _re.search(r'底稿为旧稿 (IPC-\d{4})', _d.get('authoring', {}).get('revision_note', ''))
+        if _m: _kept.append([_m.group(1), _d['script_id']])
     VERIFIED = {(_n, _c) for _o, _n in _kept for (_i, _c) in VERIFIED if _i == _o}
 except FileNotFoundError:
     pass
