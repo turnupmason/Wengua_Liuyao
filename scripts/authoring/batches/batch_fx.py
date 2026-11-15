@@ -117,7 +117,7 @@ specs.append(dict(rank=2148, id='IPC-2148', verdict='pass-but-slow', label='有�
 specs.append(dict(rank=2149, id='IPC-2149', verdict='unlikely', label='偏难通过',
   tags=['官鬼临应当令', '世爻月破无气', '六冲卦'],
   deciding=['世爻（兄弟）被月建冲破，休囚无扶：「世空世破官破官空﹐俱不得」（R-YONG-GUAN-07）'],
-  supporting=['官鬼在应位，当令临月建而旺，有效；忌神子孙无力'], adverse=['卦逢六冲，应爻（官）克世冲世；原神妻财静'], conflicts=['同 IPC-2059 之理：官星虽旺，世破无气'],
+  supporting=['官鬼在应位，当令临月建而旺，有效；忌神子孙无力'], adverse=['卦逢六冲，应爻（官）克世冲世；原神妻财静'], conflicts=['官星虽旺，世破无气，取不利（世破之理同 IPC-2059）'],
   decisive=[{'role': 'world', 'effect': 'adverse', 'basis': '空破'}],
   title='偏难通过：应位官星当令，你的世爻却被月建冲破',
   brief='这一卦偏难通过。官星在应位，起卦这个月它当令，临着月建，日辰也常生它，机会本身很硬。可同一个月建把你世上的兄弟冲破了，失令无扶，破到底；应位的官又克你、冲你。机会在，你却站不住。',
