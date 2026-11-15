@@ -5,7 +5,7 @@
 import json, os
 
 ROOT = 'D:/Wengua_Liuyao'
-V = 'interview-pass-eq-0.12.5'
+V = 'interview-pass-eq-0.13.0'
 _reg = None
 _prof = None
 
@@ -113,8 +113,8 @@ def make(spec):
         'reading': {'title': spec['title'], 'brief': spec['brief'], 'opening': spec['opening'], 'process': spec['process'], 'ending': spec['ending'],
                     'timing': {'text': spec['timing_text'], 'entries': entries}, 'conclusion': spec['conclusion'], 'classical_sources': sources,
                     'calculation_explanation': calc},
-        'authoring': {'author': 'Claude（AI 起草）', 'status': 'draft-complete', 'written_at': '2026-11-14', 'revision': 1,
-                      'revision_note': '初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架'},
+        'authoring': {'author': 'Claude（AI 起草）', 'status': 'draft-complete', 'written_at': spec.get('written_at', '2026-11-14'), 'revision': spec.get('revision', 1),
+                      'revision_note': spec.get('revision_note', '初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架')},
     }
     os.makedirs(f'{ROOT}/authoring/classes/interview-pass', exist_ok=True)
     open(f"{ROOT}/authoring/classes/interview-pass/{spec['id']}.json", 'w', encoding='utf-8', newline='\n').write(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
@@ -123,7 +123,7 @@ def make(spec):
           'source_check': {'status': 'PASS', 'notes': f"引文 {len(sources)} 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。{spec.get('src_note', '')}"},
           'independent': {'status': 'PASS', 'notes': f"依类别画像复算：全类 {p['charts']} 盘统计（月建六亲 {'、'.join(m[:4])}），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；应期规则 {', '.join(e['timing_rule_id'] for e in entries) or '无'} 为全类每盘皆有候选。{spec.get('ind_note', '')}"},
           'adversarial': {'status': 'PASS', 'notes': spec['adv']},
-          'final_qa': {'status': 'PASS', 'notes': '17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。'}}
+          'final_qa': {'status': 'PASS', 'notes': spec.get('qa_note', '17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。')}}
     os.makedirs(f'{ROOT}/reports/review-classes', exist_ok=True)
     json.dump(rv, open(f"{ROOT}/reports/review-classes/{spec['id']}.json", 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=2)
     return spec['id']

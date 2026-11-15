@@ -2,266 +2,267 @@
   "script_id": "IPC-2262",
   "question_id": "career.interview.interview-pass",
   "match": "class",
-  "equivalence_version": "interview-pass-eq-0.12.5",
-  "class_key": "用明现持世[INEFFECTIVE]静受动克;世持世;原无力;忌动有力;六冲;局妻财局待偏吉生世+父母局成参看世在",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用明现持世[EFFECTIVE]静;世持世;原动有力;忌静不作用;局父母局虚参看",
   "class_rank": 2262,
-  "class_share_of_casts": 4.8e-05,
+  "class_share_of_casts": 4.5e-05,
   "sample_charts": [
     {
       "line_values": [
         8,
         8,
+        8,
+        8,
         9,
+        6
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
         6,
         8,
-        7
+        8,
+        8,
+        9,
+        6
       ],
-      "month_branch": "戌",
-      "day_ganzhi": "庚申"
+      "month_branch": "亥",
+      "day_ganzhi": "壬申"
     },
     {
       "line_values": [
         8,
         8,
+        8,
+        8,
         9,
-        6,
-        8,
-        7
+        6
       ],
-      "month_branch": "午",
-      "day_ganzhi": "戊申"
-    },
-    {
-      "line_values": [
-        8,
-        6,
-        9,
-        6,
-        8,
-        7
-      ],
-      "month_branch": "午",
-      "day_ganzhi": "戊辰"
-    },
-    {
-      "line_values": [
-        8,
-        6,
-        9,
-        6,
-        8,
-        7
-      ],
-      "month_branch": "戌",
-      "day_ganzhi": "戊午"
+      "month_branch": "亥",
+      "day_ganzhi": "己酉"
     },
     {
       "line_values": [
         8,
         8,
+        8,
+        8,
         9,
-        8,
-        8,
-        7
+        6
       ],
       "month_branch": "巳",
-      "day_ganzhi": "丙辰"
+      "day_ganzhi": "丁酉"
     },
     {
       "line_values": [
         6,
         8,
-        9,
-        6,
         8,
-        7
-      ],
-      "month_branch": "巳",
-      "day_ganzhi": "甲午"
-    },
-    {
-      "line_values": [
-        6,
         8,
         9,
-        6,
-        8,
-        7
+        6
       ],
-      "month_branch": "戌",
+      "month_branch": "子",
       "day_ganzhi": "戊寅"
     },
     {
       "line_values": [
         8,
         8,
-        9,
-        6,
         8,
-        7
+        8,
+        9,
+        6
       ],
-      "month_branch": "未",
-      "day_ganzhi": "丁酉"
+      "month_branch": "亥",
+      "day_ganzhi": "癸卯"
     },
     {
       "line_values": [
         8,
         8,
+        8,
+        8,
         9,
+        6
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "壬申"
+    },
+    {
+      "line_values": [
         6,
         8,
-        7
+        8,
+        8,
+        9,
+        6
       ],
-      "month_branch": "戌",
-      "day_ganzhi": "辛丑"
+      "month_branch": "子",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        8,
+        9,
+        6
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "丙申"
     },
     {
       "line_values": [
         8,
-        6,
+        8,
+        8,
+        8,
         9,
-        8,
-        8,
-        7
+        6
       ],
-      "month_branch": "未",
-      "day_ganzhi": "甲午"
-    },
-    {
-      "line_values": [
-        8,
-        6,
-        9,
-        6,
-        8,
-        7
-      ],
-      "month_branch": "戌",
-      "day_ganzhi": "丁巳"
+      "month_branch": "子",
+      "day_ganzhi": "癸巳"
     },
     {
       "line_values": [
         8,
         8,
-        9,
-        6,
         8,
-        7
+        8,
+        9,
+        6
       ],
-      "month_branch": "午",
-      "day_ganzhi": "戊戌"
+      "month_branch": "子",
+      "day_ganzhi": "壬申"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        8,
+        9,
+        6
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "戊寅"
     }
   ],
   "scenario_tags": [
-    "官鬼持世失令",
-    "子孙动来冲克",
-    "六冲卦"
+    "官鬼持世",
+    "原神发动有力",
+    "应爻生世"
   ],
   "judgment": {
-    "verdict": "unlikely",
-    "verdict_label": "偏难通过",
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
     "deciding_evidence": [
-      "官鬼持世，兄弟或父母当令而休囚，多无扶，受子孙动克动冲，三层判定为无力：「被卦中子孙发动以伤官」（R-YONG-GUAN-02）"
+      "原神妻财发动有力，动来生持世之官（R-YONG-GUAN-03）",
+      "官鬼持世，多财当令而得相，有效、安静"
     ],
     "supporting": [
-      "三支财局待时成局，局生世（偏吉）"
+      "忌神子孙安静不作用；应爻（财）生世"
     ],
     "adverse": [
-      "忌神子孙发动有力，应爻（子孙）克世冲世；原神妻财静而无力；卦逢六冲"
+      "官星或入发动兄弟之墓，或受日克日绝"
     ],
     "conflicts_resolved": [
-      "同 IPC-0519 之理"
+      "同 旧 IPC-0165 之理"
     ],
     "rule_ids": [
-      "R-CHONG-01",
       "R-KONG-06",
-      "R-SANHE-01",
-      "R-SANHE-03",
+      "R-SANHE-04",
+      "R-SANMU-01",
       "R-SHIYING-03",
-      "R-YINGQI-02",
+      "R-WANG-02",
+      "R-YINGQI-01",
       "R-YONG-GUAN-01",
       "R-YONG-GUAN-02",
-      "R-YUANJI-02",
-      "R-YUANJI-03"
+      "R-YONG-GUAN-03",
+      "R-YUANJI-04"
     ],
     "decisive": [
       {
-        "role": "yong",
-        "effect": "adverse"
+        "role": "yuan",
+        "effect": "support"
       },
       {
-        "role": "ji",
-        "effect": "adverse"
+        "role": "yong",
+        "effect": "support"
       }
     ],
     "flow_acknowledgements": []
   },
   "reading": {
-    "title": "偏难通过：坐世的官星失令，子孙动来冲克",
-    "brief": "这一卦偏难通过。官星坐在你的世爻上，起卦这个月兄弟或父母当令，它失令，多半无扶；卦中子孙在动，冲着你世上的官来克，应位的子孙也冲你。生官的财无力；财局虽在凑，一时生不上。卦逢六冲。",
-    "opening": "六冲卦，世应相冲。持世之官安静；起卦之月多为兄弟当令，余为父母当令，官星休囚，多无扶，或临日；受子孙动克动冲，或兼日克、日破日绝，偶落旬空。官星自身无力。\n应位是子孙，克你、冲你。卦中子孙发动，或兼兄弟、父母；三支财局待时而成，生你的世爻；父母局已成（参看）。财无力。",
-    "process": "八宫图「被卦中子孙发动以伤官」；失令之官受动克，又逢六冲。\n财局待成，远水难救。所以偏难。",
-    "ending": "世上官星无令，又被动着的子孙冲克，这一轮通过的可能偏低。",
+    "title": "倾向通过：坐世的官星得相，财正动来生它",
+    "brief": "这一卦倾向通过。官星就坐在你世上，起卦这个月多为财当令，它得相；卦中的财正在发动，有力，动来生它，应位的财也生你。有时官星被发动的兄弟收进墓里，或受日辰克绝，只是一时之阻。克官的子孙静着不作用。",
+    "opening": "世爻是官鬼，安静；起卦之月多为财当令，余为官星或父母当令；官星得动财之生、月生，或临日帝旺；或入动墓、受日克日绝。官星当下有效。\n应位是财，生你。卦中兄弟、财发动；三支父母局虚一待用（参看）。财发动有力；子孙静而不作用，或落旬空。",
+    "process": "财动生官，升选章说得美缺；官星坐世，生源就在眼前。\n入墓、日克只是一时。所以倾向通过。",
+    "ending": "坐世之官得财动之生，这一轮倾向通过。",
     "timing": {
-      "text": "主导这一卦的是发动的子孙，按「动而逢值逢合」，子孙值日或逢合之日前后，较可能收到不如意的消息；具体日子见排盘。",
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果较容易出来；具体日子见排盘。",
       "entries": [
         {
-          "timing_rule_id": "R-YINGQI-02",
-          "pool": "adverse",
-          "target_event": "不利结果落定",
-          "target_symbol": "发动之子孙",
-          "condition": "忌神发动：逢值逢合",
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "持世之官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
           "time_scale": "day",
-          "calculation_basis": "子孙本支值日之日、与之相合之日",
-          "source_reference": "增删卜易·各门类应期总注章第又二十六「动而逢合逢值」"
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
         }
       ]
     },
-    "conclusion": "这一轮偏难通过。坐世的官星失令，子孙动来冲克。期望放低，调整方向。",
+    "conclusion": "倾向通过。坐世的官星得相，财正动来生它。主动推进，把握时机。",
     "classical_sources": [
       {
-        "rule_id": "R-YONG-GUAN-02",
+        "rule_id": "R-YONG-GUAN-03",
         "source_book": "增删卜易",
-        "source_chapter": "八宫图第三",
-        "quote": "占功名者若得官鬼持世即许成名，子孙持世且待时。",
-        "applies_because": "被卦中子孙发动以伤官"
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "财动生官得美缺"
       },
       {
-        "rule_id": "R-YUANJI-03",
+        "rule_id": "R-WANG-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+        "applies_because": "官星得财令之生"
+      },
+      {
+        "rule_id": "R-YUANJI-04",
         "source_book": "增删卜易",
         "source_chapter": "元神忌神衰旺章第十",
-        "quote": "忌神动而克害用神者有五：忌神旺相或遇日月动爻生扶或临日月者一也。忌神动化回头生扶退神者二也。忌神旺动动临空化空三也。忌神长生帝旺与日辰四也。忌神与仇神同动五也。",
-        "applies_because": "忌神发动伤用"
+        "quote": "忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。",
+        "applies_because": "忌神静而不作用"
       },
       {
-        "rule_id": "R-SANHE-03",
+        "rule_id": "R-SANMU-01",
         "source_book": "增删卜易",
-        "source_chapter": "六合章第十九",
-        "quote": "三爻若有两爻动，不成局，须待后之补凑合成其局，谓之虚三待用。",
-        "applies_because": "待时成局"
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+        "applies_because": "入动墓"
       },
       {
-        "rule_id": "R-CHONG-01",
-        "source_book": "增删卜易",
-        "source_chapter": "六冲章第二十",
-        "quote": "冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶",
-        "applies_because": "冲者散也"
-      },
-      {
-        "rule_id": "R-YINGQI-02",
+        "rule_id": "R-YINGQI-01",
         "source_book": "增删卜易",
         "source_chapter": "各门类应期总注章第又二十六",
-        "quote": "动而逢合逢值",
-        "applies_because": "忌神发动，取值日、合日"
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
       }
     ],
-    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 2262 类，占起卦概率 0.005%，全类 150 盘）：用神「明现持世[INEFFECTIVE]静受动克」；世爻「持世」；原神妻财当前无力（INEFFECTIVE）；忌神子孙发动而有力；卦级「六冲」；三合「妻财局待偏吉生世+父母局成参看世在」。类内各盘不同之处：月建六亲：兄弟(53%)、父母(43%)、官鬼(5%)；用神月令：休囚(95%)、旺(5%)；用神生扶：无(75%)、临日(21%)、临日、月扶(3%)、临日、临月建(2%)；发动六亲：兄弟子孙(33%)、兄弟兄弟子孙(26%)、子孙父母(20%)、兄弟子孙父母(19%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：兄弟之五行 53%、父母之五行 43%、官鬼之五行 5%；用神（即世爻）休囚 95%、旺 5%，无扶 75%、临日 21% 等，受子孙动克动冲 100%（兼日克、日破日绝等；旬空 1%），三层判定无力 100%；忌神发动有力；原神静而无力；三合：财局待时成局、局生世；父母局已成（参看）；卦逢六冲；应爻子孙克世冲世 100%；发动：兄弟子孙 33%、兄弟兄弟子孙 26%、子孙父母 20% 等。"
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 2262 类，占起卦概率 0.005%，全类 162 盘）：用神「明现持世[EFFECTIVE]静」；世爻「持世」；原神妻财发动而有力；忌神子孙安静而月令不旺，不主动作用；三合「父母局虚参看」。类内各盘不同之处：月建六亲：妻财(73%)、官鬼(15%)、父母(12%)；用神月令：相(73%)、旺(15%)、休囚(12%)；用神生扶：妻财动来生、月生(42%)、临日、妻财动来生、日帝旺、月生(10%)、妻财动来生(9%)、妻财动来生、日合、月生(7%)；发动六亲：兄弟兄弟妻财(52%)、兄弟妻财(48%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 73%、官鬼之五行 15%、父母之五行 12%；用神（世爻）相 73%、旺 15%、休囚 12%，财动来生兼月生 42%、临日帝旺 10% 等，入动墓 35%、无伤 30%、日克日绝 9% 等，三层判定有效 100%；原神发动有力；忌神静（旬空 26%）；三合：父母局虚一待用（参看）100%；应爻财生世 100%；发动：兄弟兄弟财 52%、兄弟财 48%。"
   },
   "authoring": {
     "author": "Claude（AI 起草）",
     "status": "draft-complete",
-    "written_at": "2026-11-14",
-    "revision": 1,
-    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 迁移：类键与类内各盘与旧稿 IPC-2450（eq-0.12.5）全同，docs/18 第〇节诸条不改本类判定；正文沿用未改，仅更新稿号、名次与计算说明"
   }
 }

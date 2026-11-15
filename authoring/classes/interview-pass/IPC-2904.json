@@ -2,22 +2,58 @@
   "script_id": "IPC-2904",
   "question_id": "career.interview.interview-pass",
   "match": "class",
-  "equivalence_version": "interview-pass-eq-0.12.5",
-  "class_key": "用明现[EFFECTIVE]静;世世破世受克;原静旺有力;忌静不作用;六合",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用明现持世[EFFECTIVE]静;世持世;原待时(旬空);忌静旺有力;局妻财局待偏吉生世",
   "class_rank": 2904,
-  "class_share_of_casts": 4e-05,
+  "class_share_of_casts": 3.8e-05,
   "sample_charts": [
     {
       "line_values": [
         8,
+        6,
+        8,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "壬戌"
+    },
+    {
+      "line_values": [
         8,
         6,
-        7,
         8,
-        8
+        8,
+        7,
+        6
       ],
       "month_branch": "丑",
-      "day_ganzhi": "丁酉"
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        8,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        8,
+        8,
+        7,
+        6
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "癸亥"
     },
     {
       "line_values": [
@@ -25,11 +61,35 @@
         8,
         6,
         7,
-        8,
+        9,
         8
       ],
+      "month_branch": "申",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "戊寅"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        9,
+        7,
+        8,
+        7
+      ],
       "month_branch": "丑",
-      "day_ganzhi": "丁巳"
+      "day_ganzhi": "丙子"
     },
     {
       "line_values": [
@@ -37,11 +97,35 @@
         8,
         6,
         7,
-        8,
+        9,
         8
       ],
-      "month_branch": "丑",
-      "day_ganzhi": "庚申"
+      "month_branch": "子",
+      "day_ganzhi": "戊申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        9,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "乙亥"
     },
     {
       "line_values": [
@@ -49,163 +133,79 @@
         8,
         6,
         7,
-        8,
+        9,
         8
       ],
-      "month_branch": "丑",
-      "day_ganzhi": "戊辰"
+      "month_branch": "子",
+      "day_ganzhi": "丙午"
     },
     {
       "line_values": [
         8,
-        8,
-        6,
+        7,
+        9,
         7,
         8,
-        8
+        7
       ],
-      "month_branch": "丑",
-      "day_ganzhi": "戊午"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        6,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "己丑"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        6,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "甲午"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        6,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "丙申"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        8,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "癸卯"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        6,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "己酉"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        6,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "庚戌"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        6,
-        7,
-        8,
-        8
-      ],
-      "month_branch": "丑",
-      "day_ganzhi": "辛酉"
+      "month_branch": "辰",
+      "day_ganzhi": "乙亥"
     }
   ],
   "scenario_tags": [
-    "世爻月破",
-    "官鬼得财令之生",
-    "六合卦"
+    "官鬼持世受月克而有效",
+    "忌神静而旺相",
+    "原神旬空待时"
   ],
   "judgment": {
-    "verdict": "unlikely",
-    "verdict_label": "偏难通过",
+    "verdict": "pass-but-slow",
+    "verdict_label": "有望通过，但要待时",
     "deciding_evidence": [
-      "世爻（财）被月建冲破，多破而有气、亦有无力者，相杂从不利：「世空世破官破官空﹐俱不得」（R-YONG-GUAN-07）"
+      "官鬼持世，多子孙当令而受月克，得动财之生或日扶，有效、安静",
+      "忌神子孙静而旺相，原神妻财动而旬空待时，不能接续：主拖延"
     ],
     "supporting": [
-      "官鬼财令得相，有效、安静（多兼日扶、日帝旺、日合日长生）；原神妻财静而旺相；卦逢六合，应爻生世、合世"
+      "三支财局待时而成，局生世"
     ],
     "adverse": [
-      "兄弟发动（化出官星）；官星或受日克、日绝，偶落旬空（冲空则实）"
+      "官星多受月克，或受日克"
     ],
     "conflicts_resolved": [
-      "同 IPC-2788、IPC-1915 之理：世破相杂从不利"
+      "同 旧 IPC-1993 之理"
     ],
     "rule_ids": [
       "R-DONGJING-01",
-      "R-HE-01",
-      "R-KONG-06",
+      "R-KONG-02",
+      "R-KONG-03",
+      "R-SANHE-03",
       "R-SHIYING-03",
-      "R-WANG-02",
       "R-YINGQI-01",
       "R-YONG-GUAN-01",
-      "R-YONG-GUAN-07",
-      "R-YUEPO-01"
+      "R-YONG-GUAN-02",
+      "R-YUEJIAN-01"
     ],
     "decisive": [
       {
-        "role": "world",
-        "effect": "adverse",
-        "basis": "空破"
+        "role": "yong",
+        "effect": "support"
       }
     ],
     "flow_acknowledgements": []
   },
   "reading": {
-    "title": "偏难通过：官星得相，你世上却被月建冲破",
-    "brief": "这一卦偏难通过。起卦这个月财当令，生着官星，官星得相，单看官星是好的；应位还生你、合你。问题在你自己这一侧：你世上的财被月建冲破，它本身虽有气，这个月里却站不稳，若再逢旬空、受日辰之伤，就更无力。古书说世破者俱不得。",
-    "opening": "六合卦，世应相合。用神官鬼安静；起卦之月财当令，官星得相，得月生，多兼日扶日帝旺或日合日长生；或受日克、日绝，偶落旬空（冲空则实）。官星当下有效。\n你的世爻是财，当令而月破，偶兼旬空；应位是子孙，生你、合你。卦中多为兄弟发动（化出官星），或无动爻。财静而旺相；子孙静而不作用。",
-    "process": "官星得相，可你这一侧被月建冲破，世空世破俱不得。\n所以偏难。",
-    "ending": "官星得相而世爻月破，这一轮通过的可能偏低；出了这个月，处境才可能转。",
+    "title": "有望通过，但要待时：坐世的官星受月克，生它的财还落空",
+    "brief": "这一卦有望通过，但要等。官星坐在你世上，起卦这个月多是子孙当令，月建克着它，官星休囚；好在卦里的财在动来生它，或当天日辰扶它，眼下有效。只是那动着的财正落旬空，生力要等出空才接得上；克官的子孙又旺着。财局在凑，日后生世。能成，偏慢。",
+    "opening": "用神官鬼持世，安静；起卦之月多为子孙当令而月克官星，余为兄弟当令；官星休囚，得动财之生，或得日扶；或受日克。官星当下有效。\n应位或子孙克你，或兄弟受你所克，或财生你。卦中财发动，或兼父母、兄弟动；三支财局待时而成，局生世。财动而旬空待时；子孙静而旺相。",
+    "process": "官星受月克而得生扶，有效；生官之财空而待时，子孙又旺。\n所以能成，偏慢。",
+    "ending": "持世之官有效而财空子孙旺，这一轮有望通过，进展偏慢。",
     "timing": {
-      "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，事情会有个说法；你世上月破，出了这个月处境才转。具体日子见排盘。",
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情容易有动静；生官之财出空之后更好推进。具体日子见排盘。",
       "entries": [
         {
           "timing_rule_id": "R-YINGQI-01",
           "pool": "favorable",
-          "target_event": "事情有个说法",
-          "target_symbol": "官鬼（安静）",
+          "target_event": "事情有动静、结果渐明",
+          "target_symbol": "持世之官鬼（安静）",
           "condition": "用神安静：逢值逢冲",
           "time_scale": "day",
           "calculation_basis": "官星本支值日之日、冲动官星之日",
@@ -213,35 +213,35 @@
         }
       ]
     },
-    "conclusion": "这一轮偏难通过。官星得相，你世上却被月建冲破。眼下先稳住，等出了这个月再争取。",
+    "conclusion": "有望通过，但要待时。坐世的官星受月克，生它的财还落空。稳住步子，等财出空再加力。",
     "classical_sources": [
       {
-        "rule_id": "R-YONG-GUAN-07",
+        "rule_id": "R-DONGJING-01",
         "source_book": "增删卜易",
-        "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
-        "quote": "世空世破官破官空﹐俱不得。",
-        "applies_because": "世空世破官破官空﹐俱不得"
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而旺相"
       },
       {
-        "rule_id": "R-WANG-02",
+        "rule_id": "R-KONG-03",
         "source_book": "增删卜易",
-        "source_chapter": "各门类题头总注章第又二十六",
-        "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
-        "applies_because": "官星得财令之生"
+        "source_chapter": "月将章第十六",
+        "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+        "applies_because": "元神在旬内毕竟为空"
       },
       {
-        "rule_id": "R-HE-01",
+        "rule_id": "R-YONG-GUAN-02",
         "source_book": "增删卜易",
-        "source_chapter": "六合章第十九",
-        "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
-        "applies_because": "凡得诸合，诸占皆以为吉"
+        "source_chapter": "八宫图第三",
+        "quote": "占功名者若得官鬼持世即许成名，子孙持世且待时。",
+        "applies_because": "官鬼持世"
       },
       {
-        "rule_id": "R-KONG-06",
+        "rule_id": "R-YUEJIAN-01",
         "source_book": "增删卜易",
-        "source_chapter": "日辰章第十七",
-        "quote": "爻遇旬空，日辰冲起而有用，谓之冲空则实。",
-        "applies_because": "冲空则实"
+        "source_chapter": "月将章第十六",
+        "quote": "爻之衰弱者能生之合之、比之、拱之、扶之，衰而亦旺。爻之彊旺者能冲之克之、刑之、破之，旺而亦衰。",
+        "applies_because": "月建克用"
       },
       {
         "rule_id": "R-YINGQI-01",
@@ -251,13 +251,13 @@
         "applies_because": "用神安静，取值日、冲日"
       }
     ],
-    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 2904 类，占起卦概率 0.004%，全类 25 盘）：用神「明现[EFFECTIVE]静」；世爻「世破世受克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙安静而月令不旺，不主动作用；卦级「六合」。全类一致：月建六亲：妻财(100%)；用神月令：相(100%)。类内各盘不同之处：用神生扶：月生(36%)、日生、月生(32%)、临日、月生(12%)、日帝旺、日扶、月生(12%)；发动六亲：兄弟(88%)、无(12%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为财之五行；用神相 100%，无伤 68%、日克 20%、兼日绝旬空 8% 等，三层判定有效 100%；原神静而旺相；忌神静（不作用）；卦逢六合；世爻皆财，月破而旺（三层判定待时 88%、无力 12%；兼旬空 4%）；应爻子孙生世合世 100%；发动：兄弟 88%、无 12%。"
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 2904 类，占起卦概率 0.004%，全类 46 盘）：用神「明现持世[EFFECTIVE]静」；世爻「持世」；原神妻财待时(旬空)；忌神子孙静而旺相，有力（只作用于休囚之爻）；三合「妻财局待偏吉生世」。全类一致：用神月令：休囚(100%)。类内各盘不同之处：月建六亲：子孙(76%)、兄弟(24%)；用神生扶：妻财动来生、日帝旺、日扶(30%)、妻财动来生、日合(26%)、临日、妻财动来生(17%)、妻财动来生、月合(11%)；应爻对世：克世(43%)、世克之(37%)、生世(20%)；发动六亲：妻财(50%)、妻财父母(33%)、兄弟妻财(7%)、妻财父母父母(7%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：子孙之五行 76%、兄弟之五行 24%；用神（持世）休囚 100%，月克 76%、无伤 11%、日克 11%，三层判定有效 100%；原神发动而旬空待时 100%；忌神静而旺相；三合：财局待时成，局生世；应爻：子孙克世 43%、兄弟受世克 37%、财生世 20%；发动：财 50%、财父母 33% 等。"
   },
   "authoring": {
     "author": "Claude（AI 起草）",
     "status": "draft-complete",
-    "written_at": "2026-11-14",
-    "revision": 1,
-    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 迁移：类键与类内各盘与旧稿 IPC-3111（eq-0.12.5）全同，docs/18 第〇节诸条不改本类判定；正文沿用未改，仅更新稿号、名次与计算说明"
   }
 }

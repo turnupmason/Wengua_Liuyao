@@ -29,6 +29,13 @@ VERIFIED = {
     ('IPC-0057', '动静生克章'),  # 动静生克章「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」
     ('IPC-0651', '旬空章'), ('IPC-0661', '旬空章'), ('IPC-0707', '旬空章'), ('IPC-0725', '旬空章'),  # 旬空章野鹤曰「动不为空」
 }
+# eq-0.13 迁移：沿用稿正文与旧稿逐字相同，旧稿号的核实结论随稿号映射到新稿号
+# （旧稿号指旧版另一类，不能直接沿用于同号新稿，故只保留映射后的新稿号）
+try:
+    _kept = json.load(open(f'{ROOT}/reports/eq-0.13-kept.json', encoding='utf-8'))
+    VERIFIED = {(_n, _c) for _o, _n in _kept for (_i, _c) in VERIFIED if _i == _o}
+except FileNotFoundError:
+    pass
 bad = 0
 pat = re.compile(r'(黄金策|八宫图|[\u4e00-\u9fff]{2,7}章)')
 for f in sorted(glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json')):

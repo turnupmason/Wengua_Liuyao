@@ -65,6 +65,11 @@ export function checkClassDraft(src, userTexts) {
     for (const d of src.judgment.decisive || []) {
       // 卦级依据（如六合变六冲「始吉终凶」，R-CHONG-01）：类键须含所述卦象（样本已由 C30 核为本类）
       if (d.role === 'gua') { if (!d.basis || !String(src.class_key).includes(d.basis)) errors.push(`C33 卦级依据「${d.basis}」不在类键中`); continue; }
+      // 官星与世爻之情（docs/18 第〇节第 1 条，eq-0.13 起入类键）：类键已逐盘由 C30 核对，此处核对所称之情确在类键中
+      const QING = { 无情: '官无情', 世克: '官世克', 助鬼伤身: '官克世(世无气)' };
+      // 世陷财空（docs/18 第〇节第 6 条，D-022）：类键须同时含世空或世破、财空
+      if (d.role === 'yuan' && d.effect === 'adverse' && d.basis === '世陷财空') { const k = String(src.class_key); const w = k.split(';')[1] || ''; if (!((w.includes('世空') || w.includes('世破')) && (k.includes('原待时(旬空)') || k.includes('原空无力')))) errors.push('C33 原神依据「世陷财空」与类键不符'); continue; }
+      if (d.role === 'yong' && d.effect === 'adverse' && QING[d.basis]) { if (!String(src.class_key).includes(QING[d.basis])) errors.push(`C33 用神依据「${d.basis}」与类键不符（类键须含「${QING[d.basis]}」）`); continue; }
       const lines = d.role === 'yong' ? [evidence.yongshen.line].filter(Boolean) : d.role === 'world' ? [evidence.world] : d.role === 'yuan' ? evidence.yuan : d.role === 'ji' ? evidence.ji : [];
       if (d.hidden) {
         const f = evidence.flows.find((x) => x.flow === 'hidden' && x.role === d.role);

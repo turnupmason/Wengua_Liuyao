@@ -2,160 +2,160 @@
   "script_id": "IPC-1020",
   "question_id": "career.interview.interview-pass",
   "match": "class",
-  "equivalence_version": "interview-pass-eq-0.12.5",
-  "class_key": "用伏有效;世世安;原平（无吉无凶）;忌静不作用",
-  "class_rank": 1017,
-  "class_share_of_casts": 8.5e-05,
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用伏有效;世世安;原静旺有力;忌无力;变合",
+  "class_rank": 1020,
+  "class_share_of_casts": 7.8e-05,
   "sample_charts": [
     {
       "line_values": [
-        8,
         7,
         8,
         7,
         8,
+        9,
         7
       ],
-      "month_branch": "酉",
-      "day_ganzhi": "丙午"
+      "month_branch": "丑",
+      "day_ganzhi": "癸巳"
     },
     {
       "line_values": [
-        8,
         7,
         8,
         7,
         8,
+        9,
         7
       ],
-      "month_branch": "酉",
-      "day_ganzhi": "戊午"
-    },
-    {
-      "line_values": [
-        8,
-        7,
-        8,
-        7,
-        7,
-        7
-      ],
-      "month_branch": "申",
-      "day_ganzhi": "壬午"
-    },
-    {
-      "line_values": [
-        8,
-        7,
-        8,
-        7,
-        8,
-        7
-      ],
-      "month_branch": "酉",
-      "day_ganzhi": "癸卯"
-    },
-    {
-      "line_values": [
-        8,
-        7,
-        8,
-        7,
-        7,
-        7
-      ],
-      "month_branch": "申",
-      "day_ganzhi": "甲午"
-    },
-    {
-      "line_values": [
-        6,
-        7,
-        8,
-        7,
-        8,
-        7
-      ],
-      "month_branch": "酉",
-      "day_ganzhi": "壬午"
-    },
-    {
-      "line_values": [
-        6,
-        7,
-        8,
-        7,
-        8,
-        7
-      ],
-      "month_branch": "酉",
-      "day_ganzhi": "己卯"
-    },
-    {
-      "line_values": [
-        6,
-        7,
-        8,
-        7,
-        8,
-        7
-      ],
-      "month_branch": "酉",
+      "month_branch": "丑",
       "day_ganzhi": "乙巳"
     },
     {
       "line_values": [
-        8,
         7,
         8,
         7,
-        7,
+        8,
+        9,
         7
       ],
-      "month_branch": "申",
+      "month_branch": "辰",
+      "day_ganzhi": "己亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "庚戌"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "辰",
       "day_ganzhi": "己巳"
     },
     {
       "line_values": [
-        8,
         7,
         8,
         7,
         8,
+        9,
         7
       ],
-      "month_branch": "酉",
-      "day_ganzhi": "甲午"
+      "month_branch": "辰",
+      "day_ganzhi": "壬辰"
     },
     {
       "line_values": [
+        9,
         8,
+        8,
+        6,
         7,
-        8,
-        7,
-        8,
         7
       ],
-      "month_branch": "酉",
-      "day_ganzhi": "己巳"
+      "month_branch": "未",
+      "day_ganzhi": "癸巳"
     },
     {
       "line_values": [
-        8,
         7,
         8,
         7,
         8,
+        9,
         7
       ],
-      "month_branch": "酉",
-      "day_ganzhi": "丁巳"
+      "month_branch": "辰",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "癸巳"
     }
   ],
   "scenario_tags": [
     "官鬼伏而有用",
-    "财当令",
-    "原神月日相敌"
+    "财持世而旺",
+    "子孙动而无力"
   ],
   "judgment": {
     "verdict": "pass-but-slow",
@@ -164,24 +164,22 @@
       "官鬼不上卦，伏而有用（R-FUSHEN-02），得财令相生，出伏可期"
     ],
     "supporting": [
-      "忌神子孙静而不作用"
+      "原神妻财持世，当令而旺；忌神子孙动而无力；应爻多生世；动后变出六合"
     ],
-    "adverse": [
-      "原神妻财卦中一爻月日相敌，作用平平"
-    ],
+    "adverse": [],
     "conflicts_resolved": [
-      "同 IPC-0540：用伏有效，判待时"
+      "用伏有效，判待时（同 旧 IPC-0910）"
     ],
     "rule_ids": [
       "R-DONGJING-01",
       "R-FUSHEN-01",
       "R-FUSHEN-02",
       "R-FUSHEN-05",
+      "R-HE-01",
       "R-SHIYING-03",
-      "R-WANG-02",
       "R-YINGQI-01",
       "R-YONG-GUAN-01",
-      "R-YUEJIAN-04"
+      "R-YUANJI-04"
     ],
     "decisive": [
       {
@@ -193,11 +191,11 @@
     "flow_acknowledgements": []
   },
   "reading": {
-    "title": "有望通过，但要待时：官星伏而可出，财令生它",
-    "brief": "这一卦有望通过，但要等。官星不在卦面，伏在下面，起卦这个月财当令生它，是有用的伏神，出得来。卦中的财虽临月令，却被日辰压着，作用平平；克官的子孙安静。官星要先出伏，结果才明朗。",
-    "opening": "卦面无官，伏而有用；财当令。\n你的世爻是兄弟，休囚；应位多与你比和，也有父母生你。卦中多无动爻。",
-    "process": "这颗伏官不难出：飞神压得不死，伏官值日或被冲动时便能露面，一露面就有当令之财生它。\n卦中之财月扶日压，不添不减；子孙安静，不来拦。所以是等，不是不成。",
-    "ending": "伏官有用、财令生它，这一轮有望通过，要等官星出伏。",
+    "title": "有望通过，但要待时：官星伏而可出，你世上的财正旺",
+    "brief": "这一卦有望通过，但要等。官星不在卦面，伏在下面，这个月多是财当令生它，是出得来的伏神；坐在你世爻上的就是旺财。卦中子孙在动，却无力，伤不到它；应位多是子孙，生着你。官星要先出伏，结果才明朗；动后卦变六合，后势聚合。",
+    "opening": "卦面无官，伏而有用；这个月多是财当令，也有子孙当令的。\n你的世爻是财，旺；应位多是子孙，生你。卦中子孙发动，动后变为六合卦。",
+    "process": "伏而有用者，飞神推得开，伏官值日或被冲起时便能出来；世上旺财正是生官之源。\n子孙动而无力，「忌神虽动，不能克用神」；变出六合，出伏之后事情易聚。",
+    "ending": "伏官有用、世上财旺，这一轮有望通过，要等官星出伏。",
     "timing": {
       "text": "官星伏藏，按伏神逢值之法：伏官本支值日之日前后，官星较易出伏，事情容易有动静；若当时未定，还要再等。具体日子见排盘。",
       "entries": [
@@ -213,7 +211,7 @@
         }
       ]
     },
-    "conclusion": "有望通过，但要待时。官星伏而可出，财令生它。耐心跟进，等官星出伏。",
+    "conclusion": "有望通过，但要待时。官星伏而可出，你世上的财正旺。耐心跟进，等官星出伏。",
     "classical_sources": [
       {
         "rule_id": "R-FUSHEN-02",
@@ -223,34 +221,34 @@
         "applies_because": "伏而有用"
       },
       {
-        "rule_id": "R-YUEJIAN-04",
-        "source_book": "增删卜易",
-        "source_chapter": "月将章第十六",
-        "quote": "爻值月建，墓于日或日建冲克者可以敌之，无吉无凶之象，倘得他爻又动相扶者为吉兆。恐他爻又来克制用神，虽临月建，亦难敌也。",
-        "applies_because": "月日相敌，无吉无凶之象"
-      },
-      {
         "rule_id": "R-DONGJING-01",
         "source_book": "增删卜易",
         "source_chapter": "动静生克章第十四",
         "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
-        "applies_because": "子孙静而不主动克官"
+        "applies_because": "财静而旺相"
       },
       {
-        "rule_id": "R-WANG-02",
+        "rule_id": "R-YUANJI-04",
         "source_book": "增删卜易",
-        "source_chapter": "各门类题头总注章第又二十六",
-        "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
-        "applies_because": "财当令"
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。",
+        "applies_because": "忌神虽动，不能克用神"
+      },
+      {
+        "rule_id": "R-HE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+        "applies_because": "卦变六合"
       }
     ],
-    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1017 类，占起卦概率 0.008%，全类 28 盘）：用神「伏有效」；世爻「世安」；原神妻财月日相敌，无吉无凶；忌神子孙安静而月令不旺，不主动作用。全类一致：月建六亲：妻财(100%)；用神月令：不现(100%)。类内各盘不同之处：应爻对世：与世比和(71%)、生世(29%)；发动六亲：无(68%)、父母(32%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为财之五行；伏神：用神有用 100%；原神平（月日相敌）；忌神皆静；无动爻 68%。"
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1020 类，占起卦概率 0.008%，全类 66 盘）：用神「伏有效」；世爻「世安」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙当前无力（INEFFECTIVE）；卦级「变合」。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：妻财(88%)、子孙(12%)；世爻六亲：妻财(98%)、兄弟(2%)；应爻对世：生世(88%)、克世(12%)；发动六亲：子孙(88%)、妻财父母(12%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 88%、子孙之五行 12%；伏神：用神有用 100%；世爻多妻财（旺 86%）；忌神动而无力；动后变出六合。"
   },
   "authoring": {
     "author": "Claude（AI 起草）",
     "status": "draft-complete",
-    "written_at": "2026-11-14",
-    "revision": 1,
-    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 迁移：类键与类内各盘与旧稿 IPC-1143（eq-0.12.5）全同，docs/18 第〇节诸条不改本类判定；正文沿用未改，仅更新稿号、名次与计算说明"
   }
 }

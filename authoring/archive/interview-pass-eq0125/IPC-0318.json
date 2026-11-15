@@ -1,0 +1,260 @@
+{
+  "script_id": "IPC-0318",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用伏有效;世世安;原静旺有力;忌动有力",
+  "class_rank": 318,
+  "class_share_of_casts": 0.000185,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "己未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "丁酉"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "辛酉"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "己酉"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "己酉"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊申"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丁酉"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "戊申"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "丁酉"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏而有用",
+    "子孙发动有力",
+    "原神静而旺相"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "忌神子孙发动而有力：「子孙动于卦中…悉如水中捞月」（R-YONG-GUAN-05）"
+    ],
+    "supporting": [
+      "官鬼伏而有用；原神妻财静而旺相"
+    ],
+    "adverse": [],
+    "conflicts_resolved": [
+      "伏官有用，然子孙动而有力；元神静，不成接续相生（R-YUANJI-06）；同 IPC-0241 之理"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-YINGQI-02",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-05",
+      "R-YONG-ZI-01",
+      "R-YUANJI-03",
+      "R-YUANJI-06"
+    ],
+    "decisive": [
+      {
+        "role": "ji",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：伏官出得来，子孙却在卦中动",
+    "brief": "这一卦偏难通过。官星不在卦面，伏在下面，本是有用的伏神，出得来；生官的财也旺。可克官的子孙在卦中发动，动而有力，古书说子孙动于卦中，如水中捞月。财安静不动，接不上这一道生。",
+    "opening": "六爻不见官鬼，伏在本卦一爻之下，属有用之伏。起卦月份一般是财当令，也有子孙当令的。\n动的偏偏是子孙，父母有时也跟着动。",
+    "process": "序里那句「子孙动于卦中，不拘占入场占升迁悉如水中捞月」，在这里格外贴切：机会本可出伏，可剥官之神偏在动。\n生官的财静而旺相，若它也动，子孙生财、财生官，尚可接续相生；它不动，伏官就要独自面对子孙之克。",
+    "ending": "子孙发动、伏官难当，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "主导这一卦的是发动的子孙，按「动而逢值逢合」，子孙值日或逢合之日前后，较可能收到不如意的消息；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-02",
+          "pool": "adverse",
+          "target_event": "不利结果落定",
+          "target_symbol": "发动之子孙",
+          "condition": "忌神发动：逢值逢合",
+          "time_scale": "day",
+          "calculation_basis": "子孙本支值日之日、与之相合之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「动而逢合逢值」"
+        }
+      ]
+    },
+    "conclusion": "这一轮偏难通过。伏着的官星本出得来，可子孙在卦中发动。期望放低，同时准备别的机会。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-05",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易序",
+        "quote": "倘遇子孙持世，或子孙动于卦中，不拘占入场占升迁悉如水中捞月。",
+        "applies_because": "子孙动于卦中，悉如水中捞月"
+      },
+      {
+        "rule_id": "R-YUANJI-03",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神动而克害用神者有五：忌神旺相或遇日月动爻生扶或临日月者一也。忌神动化回头生扶退神者二也。忌神旺动动临空化空三也。忌神长生帝旺与日辰四也。忌神与仇神同动五也。",
+        "applies_because": "忌神有力而动，克害用神"
+      },
+      {
+        "rule_id": "R-YUANJI-06",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉。",
+        "applies_because": "接续相生须元神亦动"
+      },
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "伏神有用"
+      },
+      {
+        "rule_id": "R-YINGQI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "动而逢合逢值",
+        "applies_because": "忌神发动，取值日、合日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 318 类，占起卦概率 0.018%，全类 170 盘）：用神「伏有效」；世爻「世安」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙发动而有力。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：妻财(60%)、子孙(40%)；世爻六亲：兄弟(91%)、妻财(9%)；应爻对世：与世比和(91%)、克世(9%)；发动六亲：子孙(76%)、子孙父母(24%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 60%、子孙之五行 40%；发动六亲：子孙 76%、子孙父母 24%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}

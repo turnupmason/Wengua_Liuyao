@@ -2639,6 +2639,169 @@
       "engine_refs": [
         "src/evidence.js"
       ]
+    },
+    {
+      "rule_id": "R-QIUMING-02",
+      "topic": "求名·出现无情（野鹤释义）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "出现无情﹐难遂青云之志。父与官星虽则出现﹐若不生合世爻﹐或不持世﹐或世爻空破﹐或被世爻冲克﹐亦属无益。父与官星生合世爻﹐若又被日月动爻冲坏者﹐亦作无情之谕。"
+      ],
+      "modern_explanation": "官星虽在卦中，若不持世、也不生合世爻，或被世爻冲克，于求名无益；生合世爻而被日月动爻冲坏者亦同。",
+      "applicable_conditions": "求名、求职、面试（D-021）",
+      "exceptions": "官克世另按助鬼伤身（R-YONG-GUAN-08）；日月作官星生合世爻者为有情（R-YONG-GUAN-03）",
+      "dispute_ids": [
+        "D-021"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/equivalence.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+        "round": "case-validation-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YONG-GUAN-08",
+      "topic": "升选·随官入墓、助鬼伤身",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+      "original_text": [
+        "随官入墓﹐世旺者官升。助鬼伤身﹐身衰者祸至。古以随官入墓﹐助鬼伤身﹐皆以为凶。予屡试之﹐世旺者竞升﹐世衰者不吉。助鬼伤身﹐元神同动者﹐其官必升。世若休囚者﹐必有祸至。"
+      ],
+      "modern_explanation": "官星克世：世爻旺相有气、或元神同动者，反主升；世爻休囚无气者不吉。",
+      "applicable_conditions": "求名、求职、面试",
+      "exceptions": "无",
+      "dispute_ids": [
+        "D-021"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/equivalence.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+        "round": "case-validation-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-LINGXING-01",
+      "topic": "令星不受伤",
+      "source_book": "黄金策",
+      "source_chapter": "1、总断千金赋",
+      "original_text": [
+        "爻遇令星，物难我害；伏居空地，事与愿违。"
+      ],
+      "modern_explanation": "爻临月建、日辰（令星）者，卦中动爻伤它不得。增删卜易引此句，注「日辰月建章注解极明」；月将章又云临月建而日辰冲克、他爻又来克者亦难敌。",
+      "applicable_conditions": "各类",
+      "exceptions": "临月建而日辰冲克、又有动爻来克者，从月将章「虽临月建，亦难敌也」（R-YUEJIAN-04）",
+      "dispute_ids": [
+        "D-021"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/equivalence.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+        "round": "case-validation-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-SANHE-07",
+      "topic": "忌神入生用之局（月将章例）",
+      "source_book": "增删卜易",
+      "source_chapter": "月将章第十六",
+      "original_text": [
+        "寅木官星持世临月建而旺相，虽被申日冲克，喜申子辰合成水局，以生官，不独无害"
+      ],
+      "modern_explanation": "发动之忌神与他爻合成生用神之局者，克转为生，不以忌神论。",
+      "applicable_conditions": "各类",
+      "exceptions": "局须成或待时可成（D-020）",
+      "dispute_ids": [
+        "D-021"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/equivalence.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+        "round": "case-validation-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YUANLI-01",
+      "topic": "援例·世破被克",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·援例章第五十八",
+      "original_text": [
+        "财动生官﹐不宜世临月破﹐破而被克者﹐有官不能享也。"
+      ],
+      "modern_explanation": "世爻月破而又受克者，即使得官也不能享，求官判偏难；世破而有生扶不受克者另按 R-YUEPO-02 作待时。",
+      "applicable_conditions": "求名、求职、面试（类推，援例与谋职同推：署印谋差章「用财而图者与援例同推」）",
+      "exceptions": "无",
+      "dispute_ids": [
+        "D-021"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/equivalence.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+        "round": "case-validation-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-SHUYIN-01",
+      "topic": "署印谋差",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·署印谋差章第六十一",
+      "original_text": [
+        "财与官星不可有一而不旺﹐子孙兄弟不可一而动摇﹐世陷财空﹐不如守己﹐官空世破﹐且让他人。"
+      ],
+      "modern_explanation": "谋差求职，财官都宜有气；世陷而财空者不如守己（D-022：面试只在世陷而财空时据此判偏难）。",
+      "applicable_conditions": "面试（D-010、D-018、D-022）",
+      "exceptions": "财静而无力、财待时不另翻判（D-022）",
+      "dispute_ids": [
+        "D-018",
+        "D-022"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/equivalence.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+        "round": "case-validation-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
+      }
     }
   ],
   "disputes": [
@@ -3039,6 +3202,44 @@
       "ruled_by": "用户（「全部按推荐」）",
       "ruled_at": "2026-11-13",
       "ruling": "采用推荐：① 增删卜易四类成局，卦中三支至少一支发动即成，一明动一暗动亦作两爻动；② 日月可补一支，但卦中另两支须俱动；③ 缺一支（虚一待用）、或一支空破或入墓者现时不成局，缺支待其日月补足，空破待填实，入墓待冲开，局吉判待时、局凶列为防范之时；④ 功名：官局、父局吉，财局生官偏吉，子孙局伤官为凶，兄局须日月生扶且官星旺方不碍；世爻在局为美，局生世吉、局克世凶"
+    },
+    {
+      "dispute_id": "D-021",
+      "topic": "面试取功名诸章还是谋职、谒贵诸章；官星与世爻之情",
+      "positions": [
+        {
+          "source": "增删卜易·乡试章（出现无情）、升选候补章",
+          "view": "官须持世或生合世爻；不持世不生合、世克官者无益；官克世看世旺衰"
+        },
+        {
+          "source": "增删卜易·谒贵求财章",
+          "view": "世克官、官生世，须宜谒见（觉子：见贵之官星勿换作成名而断）"
+        }
+      ],
+      "adopted": "面试属求名求职，用乡试章、升选候补章；谒贵章不用",
+      "status": "ruled",
+      "ruling": "采用功名诸章：出现无情为偏难，令星不受伤、忌入生官之局不以忌论、日月作官星生合世爻者子孙局伤不到、取化出之官、世破被克判偏难（docs/18 第〇节）",
+      "ruled_by": "用户（2026-11-15「前面三条你必须重新修改，漏的2条你必须加上」）",
+      "ruled_at": "2026-11-15"
+    },
+    {
+      "dispute_id": "D-022",
+      "topic": "D-018「官星有效而财爻无力判偏难」的适用范围",
+      "positions": [
+        {
+          "source": "增删卜易·署印谋差章",
+          "view": "财与官星不可有一而不旺；世陷财空，不如守己"
+        },
+        {
+          "source": "古籍卦例（增删 51/20#4 旺官持世财无力而升；50/6#4 官临日建持世而升）",
+          "view": "财静无力不碍成"
+        }
+      ],
+      "adopted": "A",
+      "status": "ruled",
+      "ruling": "D-018 收窄：仅世陷（世空或世破）而财空者判偏难；财静而无力、财待时不另翻判",
+      "ruled_by": "用户（2026-11-15「A开始好好做」）",
+      "ruled_at": "2026-11-15"
     }
   ],
   "rulings": [

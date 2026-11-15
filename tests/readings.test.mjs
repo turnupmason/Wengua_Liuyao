@@ -12,7 +12,7 @@ import { statusesFor, RELEASE_CONDITIONS } from '../scripts/lib/review-status.mj
 const Q = 'career.interview.interview-pass';
 const root = new URL('..', import.meta.url);
 // 先构建：dist/ 不入库，审阅包由构建生成
-execFileSync(process.execPath, ['scripts/build-readings.mjs'], { cwd: root, stdio: 'pipe' });
+execFileSync(process.execPath, ['scripts/build-readings.mjs'], { cwd: root, stdio: 'pipe', maxBuffer: 256 * 1024 * 1024 });
 const release = JSON.parse(readFileSync(new URL('data/release/liuyao-release.json', root), 'utf8'));
 
 function chartOf(values, month, day) {

@@ -1,0 +1,264 @@
+{
+  "script_id": "IPC-1299",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用伏待时;世世安;原无力;忌静旺有力;局兄弟局成凶世在",
+  "class_rank": 1296,
+  "class_share_of_casts": 7.1e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        6,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丙申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "壬寅"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "甲午"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        9
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "甲寅"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        6,
+        7,
+        9,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "甲午"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        9,
+        8,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        6,
+        7,
+        9,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "癸卯"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏而待时",
+    "子孙得相",
+    "兄弟局已成"
+  ],
+  "judgment": {
+    "verdict": "wait-then-likely",
+    "verdict_label": "眼下悬而未决，出伏后有望",
+    "deciding_evidence": [
+      "官鬼不上卦，伏而待时（有气而受阻）"
+    ],
+    "supporting": [
+      "世爻兄弟旺；应爻多生世"
+    ],
+    "adverse": [
+      "忌神子孙得相，静而有力；原神妻财无力；兄弟三合局已成，世在局"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0663 之理：伏官待时，出伏之后仍要过子孙一关；兄局已成为劫财之象"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-FUSHEN-05",
+      "R-SANHE-01",
+      "R-SANHE-06",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-XIONG-01",
+      "R-YUANJI-02"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "hidden": true,
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "眼下悬而未决：官星伏而待时，出来之后还有子孙一关",
+    "brief": "这件事眼下悬而未决：官星伏着，有气却被阻在卦下，出伏之前定不下来。这个月兄弟当令，克官的子孙得相，静而有力，出伏之后仍要过它这一关。三支已合成兄弟局，财受劫，生官之力也弱。",
+    "opening": "官鬼不在卦面，伏而待时，有气而受阻；这个月兄弟当令。三支已合成兄弟局，你的世爻在局里。\n你世上的兄弟当令而旺，应位或生你、或与你比和。克官的子孙得相而静；生官的财无力。",
+    "process": "伏官有气，只差出伏之机；可出来之后，旺相的子孙就在卦上，动静生克章说旺相之爻「亦可以克得休囚之爻」。\n兄弟局成，劫的是财，生官之源更弱；所以是先等出伏，再看能否过关。",
+    "ending": "伏官待时，眼下悬而未决；出伏之后有望，但子孙得相，不轻松。",
+    "timing": {
+      "text": "官星伏藏待时，按「伏神逢值」：伏官本支值日之日前后，较易出伏，事情最易落定；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "官星出伏、结果渐明",
+          "target_symbol": "伏藏之官鬼",
+          "condition": "伏神逢值",
+          "time_scale": "day",
+          "calculation_basis": "伏神本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "眼下悬而未决，出伏后有望，但不轻松。官星伏而待时，出来之后还有子孙一关。耐心等待，也备好别的选择。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "官鬼伏而待时（B-009）"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而得相"
+      },
+      {
+        "rule_id": "R-SANHE-06",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "官父世爻合成父局官局﹐不遇日月冲破者﹐定许连登﹐倘若合成兄局﹐得遇日月生扶﹐官星亦旺者﹐亦许得意。惟忌合成子孙局者﹐不为吉也。合成财局虽不为美。然亦得验于吉者。",
+        "applies_because": "合成兄局（官星不现，不作吉论）"
+      },
+      {
+        "rule_id": "R-YUANJI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+        "applies_because": "妻财无力"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 1296 类，占起卦概率 0.007%，全类 80 盘）：用神「伏待时」；世爻「世安」；原神妻财当前无力（INEFFECTIVE）；忌神子孙静而旺相，有力（只作用于休囚之爻）；三合「兄弟局成凶世在」。全类一致：月建六亲：兄弟(100%)；用神月令：不现(100%)。类内各盘不同之处：应爻对世：生世(66%)、与世比和(34%)；发动六亲：兄弟妻财(21%)、兄弟(20%)、父母(19%)、妻财父母(19%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；伏神：用神待时 100%；忌神静而旺相 100%；原神无力（动而无力 55%）；三合：兄弟局已成、世在局 100%；世爻皆兄弟（旺）。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "script_id": "IPC-0004",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用伏难出;世世安;原静旺有力;忌静旺有力",
+  "class_share_of_casts": 0.001262,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        8,
+        9,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "甲寅"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "甲辰"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼不上卦",
+    "官鬼伏而难出",
+    "忌神当令",
+    "原神旺而静"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼不上卦，伏于飞神之下，伏神判别为终不得出（R-FUSHEN-01、R-FUSHEN-03、R-FUSHEN-05）",
+      "忌神子孙当令，静而旺相，伏官休囚受月克（R-DONGJING-01、R-SICHU-01）"
+    ],
+    "supporting": [],
+    "adverse": [
+      "原神妻财旺而安静，然用神伏而无根，元神有力亦难生（R-YUANJI-05）"
+    ],
+    "conflicts_resolved": [
+      "本类结构：原神、忌神俱旺相，月建必为子孙之五行，伏官必受月克",
+      "世爻安稳只关自身状态，不改变用神伏而难出之判断",
+      "不列应期：用神伏而难出，按飞伏章与黄金策无可靠之出伏时点"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-FUSHEN-05",
+      "R-YUANJI-05",
+      "R-DONGJING-01",
+      "R-SICHU-01",
+      "R-YONG-ZI-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "hidden": true,
+        "effect": "adverse"
+      },
+      {
+        "role": "ji",
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：官星伏在下面出不来，克官的子孙正当令",
+    "brief": "这一卦偏难通过。代表结果的官星没有出现在卦面上，伏在别的爻下面，又没有出头的条件；克官的子孙正当令，旺而在位。生官的财爻虽旺，可官星自身无根，生不起来。这次别抱太大指望，别的机会也要留意。",
+    "opening": "面试看官鬼，可这一卦六爻里没有官鬼。照《增删卜易》的取法，用神不现，先看月建、日辰能不能借用；这一卦借不上，只能到本宫首卦里去找，找到的官星伏在本卦某一爻之下——上面那一爻叫飞神，底下的官星叫伏神。\n伏神能不能出来，有一套标准。这一卦的官星恰恰落在「终不得出」那一边：起卦的月份正是克官的子孙当令，官星在月令上就受了克，本身没有气，上下左右也找不到把它提起来的力量。",
+    "process": "克官的子孙不但上了卦，而且当令。它虽然安静，可安静而旺相的爻，按动静生克章的说法，可以克得休囚之爻；伏着的官星本已失令，正好在它的力量范围之内。\n生官的财爻这一卦也旺，同样安静。论理财能生官，但《增删卜易》元神忌神章说得直白：「用神无根，元神有力亦难生」。官星伏而无气，财再旺也送不到它身上。《黄金策》讲「伏无提拔终徒尔」，说的正是这种没人能把伏神提出来的局面。你的世爻本身倒是安稳，没有受伤，只是光靠自己这一侧，撑不起官星。",
+    "ending": "官星不现，伏而难出；克官的子孙当令在位；生官的财有力却够不着。三样摆在一起，这一轮通过的可能偏低。卦里看不出能把官星提出来的转机，所以不宜把这次结果看得太重。",
+    "timing": {
+      "text": "本卦不列应期。官星伏而难出，按飞伏神章与《黄金策》的说法，推不出可靠的出伏时点；与其盯着某一天，不如把精力放在后续其他机会上。",
+      "entries": []
+    },
+    "conclusion": "这一轮偏难通过。最关键的是官星不在卦面，伏着又出不来，而克它的子孙正当令。财虽有力，生不到无根的官星。这次的期望宜放低，手上若有其他面试或机会，照常推进，不要只押在这一轮上。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官鬼不上卦、日月亦非官鬼，于本宫首卦寻伏神"
+      },
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+        "applies_because": "伏官受月克而无气，判终不得出"
+      },
+      {
+        "rule_id": "R-FUSHEN-05",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "伏无提拔终徒尔，飞不推开亦枉然。",
+        "applies_because": "无力量提拔伏官"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而当令，可克休囚之官"
+      },
+      {
+        "rule_id": "R-YUANJI-05",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。",
+        "applies_because": "官星伏而无气，财旺亦生不起"
+      },
+      {
+        "rule_id": "R-YONG-ZI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "用神章第八",
+        "quote": "子孙福德之神。为制鬼之神、为解忧之神、为剥官之神，诸事见之为喜，独占功名者忌之。",
+        "applies_because": "子孙为克官之忌神"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5）：用神官鬼不上卦，月建、日辰亦非官鬼五行，伏于本宫首卦同位之下，伏神判别为终不得出（unlikely）；世爻不空、不破、不受克；原神妻财静而旺相、有力；忌神子孙静而旺相、有力；卦非六冲六合，无冲合之变，无反吟伏吟，无三合之局。结构推论：原神旺相则月建为财或子孙之五行，忌神旺相则月建为子孙或兄弟之五行，二者并立，月建必为子孙之五行，伏官必受月克而休囚——12 个样本盘伏神判别理由皆含月建克伏，与推论一致。原神旺而用神无根，依 R-YUANJI-05 不作生扶论。不列应期：用神伏而难出，无可靠出伏之期（docs/09「没有依据时应期栏可以只写说明」）。类内各盘不同之处：世爻六亲、应爻与世爻关系、其余爻是否发动，均不改变结论。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依 12 个分散样本盘核对类内共同事实"
+  }
+}

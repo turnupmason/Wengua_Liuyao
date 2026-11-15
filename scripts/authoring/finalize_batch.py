@@ -13,7 +13,8 @@ if bad:
 recs = json.load(open(f'{ROOT}/review/records.json', encoding='utf-8'))['records']
 for i in ids:
     h = drafts[i]['content_hash']
-    if not any(r['script_id'] == i and r['stage'] == 'polish' for r in recs):
+    # 按稿号与内容哈希判重：eq-0.13 重写稿与旧版同号不同类，旧润色记录不算数
+    if not any(r['script_id'] == i and r['stage'] == 'polish' and r.get('content_hash') == h for r in recs):
         r = run('node', 'scripts/polish/record-polish.mjs', i, f'authoring/classes/interview-pass/{i}.json', 'A', h, '--checked', '新稿，写作时按 V5.0 同步润色并通读')
         print(r.stdout.strip() or r.stderr.strip())
     r = run('node', 'scripts/review/record-single-review.mjs', f'reports/review-classes/{i}.json')

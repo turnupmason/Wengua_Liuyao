@@ -37,10 +37,12 @@ function effectTier(arr, flows, hiddenRole) {
   const rank = (x) => {
     const st = x.state.state;
     // 第四步：能否实际影响用神。静而月令休囚之爻不主动作用，不因状态待核而阻塞类别（动静生克章）
-    if (x.state.acts === '静（不主动作用）') return [st === 'INEFFECTIVE' ? 0 : 1.5, st === 'INEFFECTIVE' ? '无力' : '静不作用'];
+    // 原神旬空而无力单列「空无力」（docs/18 第〇节第 6 条，署印谋差章「世陷财空，不如守己」）
+    const voidWeak = hiddenRole === 'yuan' && st === 'INEFFECTIVE' && x.state.limitations.some((l) => l.kind === '旬空');
+    if (x.state.acts === '静（不主动作用）') return [st === 'INEFFECTIVE' ? 0 : 1.5, st === 'INEFFECTIVE' ? (voidWeak ? '空无力' : '无力') : '静不作用'];
     if (st === 'REVIEW_REQUIRED') return [1, '待核'];
     if (st === 'NEUTRAL') return [1.2, '平（无吉无凶）'];
-    if (st === 'INEFFECTIVE') return [0, '无力'];
+    if (st === 'INEFFECTIVE') return [0, voidWeak ? '空无力' : '无力'];
     if (st === 'DEFERRED') return [2, `待时(${x.state.limitations.filter((l) => !(l.kind === '入墓' && !l.trueTomb)).map((l) => l.kind).join('') || '墓'})`];
     const active = x.state.acts === '发动' || x.state.acts === '暗动';
     return active ? [4, `${x.state.acts === '暗动' ? '暗动' : '动'}有力`] : [3, x.state.acts.startsWith('静而旺相') ? '静旺有力' : '静有力不动'];
@@ -88,7 +90,8 @@ export function interviewPassClass(evidence) {
     const lingxing = l.calendar.day.same || (l.calendar.month.same && !(l.calendar.day.controls || l.calendar.day.clash));
     const ryGood = (evidence.special.riyueYongToWorld || []).some((r) => qingOf(r.toWorld) === '生合世');
     yong = { source: y.selection.status === 'equivalent-pair' ? '同支两现' : '明现', world: l.isWorld ? '持世' : l.isResponse ? '临应' : '', qi: qiPattern(l, l.calendar), vb, motion, hurt, tomb, state: l.state.state, limits: l.state.limitations.filter((x) => !(x.kind === '入墓' && !x.trueTomb)).map((x) => x.kind).join(''),
-      qing: l.isWorld ? '' : (evidence.special.changedYong || []).some((c) => c.fromWorld) ? '世化出官' : qingOf(l.relationToWorld), lingxing, riyue: ryGood ? '日月官生合世' : '' };
+      // 官鬼两现而另一爻持世：仍是「官星持世」（升选候补章「官爵荣身﹐须宜持世」），记「另爻持世」作有情
+      qing: l.isWorld ? '' : evidence.world.relative === evidence.roles.yong ? '另爻持世' : (evidence.special.changedYong || []).some((c) => c.fromWorld) ? '世化出官' : qingOf(l.relationToWorld), lingxing, riyue: ryGood ? '日月官生合世' : '' };
     if (l.state.state === 'REVIEW_REQUIRED') blockers.push('用神作用状态待核（REVIEW_REQUIRED）');
   } else if (!y.missing) {
     yong = { source: '两现并列' };
