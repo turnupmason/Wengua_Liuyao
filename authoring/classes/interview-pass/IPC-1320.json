@@ -1,0 +1,249 @@
+{
+  "script_id": "IPC-1320",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用化出有气;世世安子孙;官世克;原静旺有力;忌静不作用;六合",
+  "class_rank": 1320,
+  "class_share_of_casts": 6.6e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "辛亥"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊戌"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "戊戌"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "庚申"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        8,
+        6,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "癸丑"
+    }
+  ],
+  "scenario_tags": [
+    "官不上卦",
+    "兄弟动化出官星",
+    "子孙持世而克官",
+    "六合卦"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官不上卦，以兄弟动而化出之官为用，化出之官有气；然被持世之子孙所克：「被世爻冲克，亦属无益」（R-QIUMING-02，docs/18 第〇节第 4 条）"
+    ],
+    "supporting": [
+      "化出之官得财令而有气",
+      "原神妻财静而旺相",
+      "应爻合世"
+    ],
+    "adverse": [
+      "子孙持世",
+      "兄弟发动"
+    ],
+    "conflicts_resolved": [
+      "八宫图「子孙持世且待时」：乡试章世克官列在无情之中，不论克者强弱，从之（docs/18 第〇节第 1 条）",
+      "卦下伏官多可出，然化出之官在卦面，取化出者为用；六合之合在世应"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-HE-01",
+      "R-QIUMING-02",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-02",
+      "R-YONG-GUAN-03"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse",
+        "basis": "世克"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：兄弟化出有气之官，坐世的子孙却与它相克",
+    "brief": "这一卦偏难通过。卦逢六合；卦面上没有官鬼，这个月财当令，卦中兄弟发动，化出一颗有气的官星，以它为用。可坐在你世爻上的是子孙，与这颗官相克，两下不生不合；你生着应位的财，又与它相合。世爻克官，乡试章判作无益。",
+    "opening": "六合卦，世应相合。六爻没有官鬼，卦下虽伏着官，用神取兄弟化出的那一颗，得财令而有气。\n你的世爻是子孙，休囚，偶落旬空；应位是财，受你所生，与你相合。卦中兄弟发动。",
+    "process": "化出之官有气，财又当令托着，官星这一头不弱。\n可你这一爻是克官的子孙，与它之间只有克。六合合的是你与应位，合不到官与你之间。",
+    "ending": "化出之官有气而与持世子孙相克，这一轮偏难通过。",
+    "timing": {
+      "text": "本卦不列应期。化出之官与持世子孙相克，推不出可靠的时点；更值得做的是同步推进其他机会。",
+      "entries": []
+    },
+    "conclusion": "偏难通过。卦里化出的官星有气，你世上的子孙却与它相克。期望放低，多准备几条路。",
+    "classical_sources": [
+      {
+        "rule_id": "R-QIUMING-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "出现无情﹐难遂青云之志。父与官星虽则出现﹐若不生合世爻﹐或不持世﹐或世爻空破﹐或被世爻冲克﹐亦属无益。",
+        "applies_because": "化出之官被持世之子孙所克"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "吉者为世爻发动化出官星；本类为兄弟化出"
+      },
+      {
+        "rule_id": "R-HE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+        "applies_because": "卦逢六合，合在世应"
+      },
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官不上卦"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1320 类，占起卦概率 0.007%，全类 51 盘）：用神「化出有气」；世爻「世安子孙」；卦级「官世克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙安静而月令不旺，不主动作用；卦级「六合」。全类一致：月建六亲：妻财(100%)；用神月令：不现(100%)。结构：全类月建为财之五行；世爻皆子孙；伏官判别皆为可出（likely）。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-0371（eq-0.12.5）；新类：官不上卦，兄弟动而化出有气之官，持世之子孙克之（世克，出现无情）；旧稿 IPC-0371、IPC-1475、IPC-0279 等之盘归入；改判偏难，正文重写"
+  }
+}
