@@ -105860,6 +105860,935 @@
       }
     },
     {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[EFFECTIVE]静;世世受克;官生合世;原无力;忌伏有效",
+      "script_id": "IPC-1401",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "34fdbe40e0015c59b51a14cd4a2469987c87d871bcfe306a8f91d36990507632",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[EFFECTIVE]静;世世受克;官生合世;原无力;忌伏有效",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "有望通过，但要待时：官星有扶可用，你这一侧吃力",
+        "brief": "这一卦有望通过，但要等。起卦这个月一般兄弟当令，官星失令，靠扶持可用；克官的子孙不在卦面，却伏而有用；生官的财无力，你的世爻也是财，受了克，没有力气。能成，但慢，自己这一侧要多撑一撑。",
+        "opening": "官鬼是用神，起卦月份一般是兄弟当令，官星失令，靠日辰之类扶持而有效；有时入动墓、受日克，仍不至于无力。",
+        "process": "兄弟当令，又克着财：你的世爻和生官的财都弱，推力不足。克官的子孙伏在卦下，属有用之伏，一出来便是阻碍。\n官星本身撑得住，只是助力少、隐患在，事情要慢慢磨。",
+        "ending": "官星可用、子孙暗伏、世财无力，这一轮有望通过，节奏偏慢。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情容易有动静；若当时未定，还要再等。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "事情有动静、结果渐明",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "有望通过，但要待时。官星有扶可用，自己这一侧和助力都弱。耐心跟进。",
+        "classical_sources": [
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星失令而得扶"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "子孙伏而有用"
+          },
+          {
+            "rule_id": "R-YUANJI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+            "applies_because": "妻财无力"
+          },
+          {
+            "rule_id": "R-SHIYING-03",
+            "source_book": "黄金策",
+            "source_chapter": "1、总断千金赋",
+            "quote": "应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。",
+            "applies_because": "世爻受制"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1401 类，占起卦概率 0.006%，全类 21 盘）：用神「明现[EFFECTIVE]静」；世爻「世受克」；卦级「官生合世」；原神妻财当前无力（INEFFECTIVE）；忌神子孙不上卦，伏而有用。类内各盘不同之处：月建六亲：兄弟(90%)、官鬼(10%)；用神月令：休囚(90%)、旺(10%)；用神生扶：日扶(29%)、日长生(19%)、日生(19%)、日生、日长生(14%)；世爻六亲：妻财(76%)、父母(24%)；发动六亲：无(67%)、父母(33%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：兄弟之五行 86%、官鬼之五行 10%、父母之五行 4%；世爻三层判定无力 100%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[EFFECTIVE]静;世世空有气世受克;官克世(世有气);原伏难出;忌静旺有力",
+      "script_id": "IPC-1402",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "182e03f1eabaa19b2abf4b9a1096ca9c7b4ab7693cc39d070776dbb5b90883fa",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[EFFECTIVE]静;世世空有气世受克;官克世(世有气);原伏难出;忌静旺有力",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "有望通过，但要待时：官星靠日辰撑着，子孙得相，你的世爻又空",
+        "brief": "这一卦有望通过，但要等。这个月兄弟当令，官星失令，靠日辰扶持才有效；克官的子孙得相，静静压着它；生官的财伏得深，出不来。你的世爻是兄弟，旺而正落旬空，此刻不在位。能成，阻力不小，节奏偏慢。",
+        "opening": "官鬼是用神，安静；这个月兄弟当令，官星休囚，得日扶而可用；有时入日墓或动墓。\n你的世爻是兄弟，旺而旬空，有气，出旬可实；应位或比和、或生你、或受你所生。克官的子孙得相而静。六爻或全静，或父母、兄弟有一爻在动。",
+        "process": "动静生克章说安静旺相之爻「亦可以克得休囚之爻」；得相的子孙压着失令之官，官星只靠日辰一时之扶。\n财伏而难出，官星没有生源；你这一侧又空着，所以慢。",
+        "ending": "官星靠扶可用、子孙得相、世爻暂空，这一轮有望通过，节奏偏慢。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情容易有动静；若当时未定，还要再等。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "事情有动静、结果渐明",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "有望通过，但要待时。官星靠日辰撑着，子孙得相，你的世爻又空。稳住节奏，耐心跟进。",
+        "classical_sources": [
+          {
+            "rule_id": "R-DONGJING-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动静生克章第十四",
+            "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+            "applies_because": "子孙静而得相，克休囚之官"
+          },
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星失令而得扶"
+          },
+          {
+            "rule_id": "R-FUSHEN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+            "applies_because": "妻财伏而难出"
+          },
+          {
+            "rule_id": "R-KONG-03",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+            "applies_because": "世爻在旬内毕竟为空"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1402 类，占起卦概率 0.006%，全类 27 盘）：用神「明现[EFFECTIVE]静」；世爻「世空有气世受克」；卦级「官克世(世有气)」；原神妻财不上卦，伏而终不得出；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：临日(30%)、临日、日帝旺(22%)、日扶、月合(19%)、临日、月合(19%)；应爻对世：与世比和(44%)、世生之(33%)、生世(22%)；发动六亲：无(41%)、父母(37%)、兄弟(22%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神三层判定有效 100%（入日墓 26%、入动墓 6%）；忌神静而旺相 100%；伏神：原神难出 100%；世爻皆兄弟，旬空（待时 84%、平 16%）。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[EFFECTIVE]静受动克;世世安子孙;官世克;原静旺有力;忌静不作用;六冲;局子孙局待凶世在",
+      "script_id": "IPC-1403",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "8f013555ee1c596be3777bd73fa6616fb82d4ab2393ba580e5232306ad1f07a9",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[EFFECTIVE]静受动克;世世安子孙;官世克;原静旺有力;忌静不作用;六冲;局子孙局待凶世在",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：六冲卦里兄弟冲官，坐世子孙克官，子孙局还在凑",
+        "brief": "这一卦偏难通过。卦逢六冲；这个月财当令，官星得月生，有效；卦中兄弟发动，冲着官星。坐在你世爻上的是子孙，休囚，又被应位父母冲克；它与官星相克，彼此无生无合。三支子孙局还差一支，你的世爻在局中。世克官，乡试章判作无益。",
+        "opening": "六冲卦，世应相冲。起卦月份财当令，官鬼得月生，或兼日生、日帝旺；受兄弟动冲，有时兼日克、入日墓，偶落旬空。\n持世子孙休囚，被应位父母冲克。兄弟一动，三支子孙局只差一支，你的世爻就在局里。",
+        "process": "官星有财令托着，兄弟一冲，它也晃了一晃。\n你这一爻是克官的子孙，自己又被冲克，还要入子孙局；冲卦之中，几层不利叠在一起。",
+        "ending": "兄弟冲官、持世子孙克官，卦又六冲，这一轮偏难通过。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情会有个说法；从卦象看，这一轮偏难。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "事情有个说法",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "偏难通过。官星被兄弟冲着，你世上的子孙也与它相克。期望放低，多准备几条路。",
+        "classical_sources": [
+          {
+            "rule_id": "R-QIUMING-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·乡试章第五十五",
+            "quote": "出现无情﹐难遂青云之志。父与官星虽则出现﹐若不生合世爻﹐或不持世﹐或世爻空破﹐或被世爻冲克﹐亦属无益。",
+            "applies_because": "持世之子孙克官"
+          },
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星得财令之生"
+          },
+          {
+            "rule_id": "R-CHONG-01",
+            "source_book": "增删卜易",
+            "source_chapter": "六冲章第二十",
+            "quote": "冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶",
+            "applies_because": "冲者散也"
+          },
+          {
+            "rule_id": "R-SANHE-05",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "如占功名合成官局谓之官旺，合成财局财旺生官，倘若合成子孙局者乃伤煞之神也。",
+            "applies_because": "合成子孙局为伤煞"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1403 类，占起卦概率 0.006%，全类 49 盘）：用神「明现[EFFECTIVE]静受动克」；世爻「世安子孙」；卦级「官世克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙安静而月令不旺，不主动作用；卦级「六冲」；三合「子孙局待凶世在」。全类一致：月建六亲：妻财(100%)；用神月令：相(100%)。类内各盘不同之处：用神生扶：日生、月生(45%)、月生(22%)、日帝旺、日扶、月生(16%)、日合、日长生、月生(16%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为财之五行；用神得相 100%，受兄弟动冲 100%（兼日克 29%、入日墓 14%），三层判定有效 100%；世爻皆子孙（休囚）；原神静而旺相；卦逢六冲；三合：子孙局待时成局、世在局 100%；发动：兄弟 100%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[INEFFECTIVE]静;世世安;官克世(世有气);原伏待时;忌静不作用",
+      "script_id": "IPC-1404",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "b67ddfc7f8bc644270d21e044622ce85a442697a5c47451cadfdc0351e14a030",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[INEFFECTIVE]静;世世安;官克世(世有气);原伏待时;忌静不作用",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：官星泄气，当天日辰又来克它",
+        "brief": "这一卦偏难通过。起卦这个月父母当令，官星泄气；当天日辰又来克它，有时还冲破它、绝它，官星无力。生官的财伏着等时机，眼下帮不上；克官的子孙安静。应位多生你，只是人情上的一点助力。",
+        "opening": "官鬼是用神，安静；这个月父母当令，官星休囚；受日克，或兼日破，或兼日绝。官星自身无力。\n坐世的兄弟得相；应位多是父母，生你，或子孙受你所生。动爻或无，或是父母，或是兄弟。克官的子孙静而不作用；生官的财伏而待时。",
+        "process": "元神忌神衰旺章说「亦要用神有气」；月令泄它、日辰克它，官星两头失气。\n伏财待时，出伏之后能生；可眼下官星撑不住，只能等它得生得旺之时。",
+        "ending": "官星泄气又受日克，这一轮通过的可能偏低；转机在官星得生得旺的月日。",
+        "timing": {
+          "text": "官星衰而无力，按「衰者遇生遇旺」，若有转机，多在官星得生、得旺的月日；具体对应的地支随排盘列出。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-04",
+              "pool": "favorable",
+              "target_event": "若有转机，在此时",
+              "target_symbol": "官鬼（休囚）",
+              "condition": "衰者遇生遇旺",
+              "time_scale": "day",
+              "calculation_basis": "生官之五行、官星本五行之月日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「衰绝者，遇生遇旺」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。官星泄气，当天日辰又来克它。期望放低，等时运转好再图。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YUANJI-05",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。",
+            "applies_because": "亦要用神有气"
+          },
+          {
+            "rule_id": "R-RIZHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "日辰章第十七",
+            "quote": "冲旺相之静爻，既为暗动，冲衰弱之静爻为日破",
+            "applies_because": "日辰克冲用神"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "妻财伏而待时（B-009）"
+          },
+          {
+            "rule_id": "R-YUANJI-04",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。",
+            "applies_because": "忌神静而不作用"
+          },
+          {
+            "rule_id": "R-YINGQI-04",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "衰绝者，遇生遇旺",
+            "applies_because": "用神衰而无力，取生旺之时"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1404 类，占起卦概率 0.006%，全类 27 盘）：用神「明现[INEFFECTIVE]静」；世爻「世安」；卦级「官克世(世有气)」；原神妻财不上卦，伏而待时；忌神子孙安静而月令不旺，不主动作用。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：应爻对世：生世(63%)、世生之(30%)、与世比和(7%)；发动六亲：无(41%)、父母(33%)、兄弟(26%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行；用神休囚，日克 37%、日克日破 33%、日克日绝 26% 等，三层判定无力 100%；世爻皆兄弟（相）；忌神静而不作用；伏神：原神待时 100%；发动：无 41%、父母 33%、兄弟 26%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[INEFFECTIVE]静;世世破;官无情;原无力;忌静旺有力;六合",
+      "script_id": "IPC-1405",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "9320a45f4e9c18d9b249e460da0c2df422453717b10e3a1d3866fc6c4065519b",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[INEFFECTIVE]静;世世破;官无情;原无力;忌静旺有力;六合",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：官星无根，你的世爻又被冲破",
+        "brief": "这一卦偏难通过。卦逢六合，看着和顺；可起卦这个月兄弟当令，官星失令无扶，自身无力；你的世爻又被月建冲破；克官的子孙得了相气，静而有力。官与世两头失陷，六合也合不成事。",
+        "opening": "六合卦，世应相合。官鬼是用神，起卦月份兄弟当令，官星失令；日辰不生它，有时还克它、破它，或落旬空。\n你的世爻被月建冲破，或兄弟而旺，或财而休囚。",
+        "process": "乡试章讲六合，「亦要官父世爻得地，有一失陷不遇生扶者，虽六合亦无益矣」；这一卦官星与世爻都失陷。得相的子孙又静而能克休囚之官。\n生官的财无力；月破只管当月，可官星本身无根，出月也难改观。",
+        "ending": "官星无根、世爻月破，六合也无益，这一轮通过的可能偏低。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或消息落定",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。官星无根，世爻又破，卦合也帮不上。期望放低，先调整状态。",
+        "classical_sources": [
+          {
+            "rule_id": "R-HE-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·乡试章第五十五",
+            "quote": "凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐虽六合亦无益矣。",
+            "applies_because": "六合须官父世得地"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-07",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+            "quote": "世空世破官破官空﹐俱不得。",
+            "applies_because": "世破俱不得"
+          },
+          {
+            "rule_id": "R-YUANJI-05",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。",
+            "applies_because": "用神无根"
+          },
+          {
+            "rule_id": "R-DONGJING-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动静生克章第十四",
+            "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+            "applies_because": "子孙静而得相"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1405 类，占起卦概率 0.006%，全类 21 盘）：用神「明现[INEFFECTIVE]静」；世爻「世破」；卦级「官无情」；原神妻财当前无力（INEFFECTIVE）；忌神子孙静而旺相，有力（只作用于休囚之爻）；卦级「六合」。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：应爻对世：生世、合世(81%)、世克之、合世(19%)；发动六亲：无(67%)、父母(33%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神三层判定无力 100%；世爻月破，三层判定无力 51%、待时 49%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现临应[EFFECTIVE]静;世世受克;官生合世;原伏待时;忌无力",
+      "script_id": "IPC-1406",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "b25d356e1393e12b47d8e459f21afad98b69748e286ccf210587b2064a9fc466",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现临应[EFFECTIVE]静;世世受克;官生合世;原伏待时;忌无力",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "倾向通过：财令生官，应位的官星又来生你",
+        "brief": "这一卦倾向通过。起卦这个月财当令，应位的官星得相，有效、安静，正生着你世上的父母；克官的子孙无力。你的世爻多失令受制，自己这一侧弱一些；有时卦中父母发动，把官星收进墓里，结果会压一压。",
+        "opening": "官鬼落在应爻，安静；这个月财当令，官星得相；有时入父母之动墓，或入日墓。官星当下有效。\n坐世的父母多休囚无力，应位之官生着它。卦中或兄弟、或父母发动，或无动爻；生官的财伏而待时。",
+        "process": "财令生官，官星有根；应位之官生世，机会朝着你来。\n子孙无力，不成阻碍。父母一动把官星收进墓里的，要等墓库被冲开，结果才放出来。你这一侧无力，靠的是官星来生，所以主动跟进更好。",
+        "ending": "应位之官得财令之生而生世，这一轮倾向通过。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果较容易出来；官星入了墓的，冲开墓库之日更关键。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或通知到来",
+              "target_symbol": "应位之官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "倾向通过。财令生官，官又生你，机会朝着你来。主动跟进，把握时机。",
+        "classical_sources": [
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星得财令之生"
+          },
+          {
+            "rule_id": "R-SHIYING-03",
+            "source_book": "黄金策",
+            "source_chapter": "1、总断千金赋",
+            "quote": "世为己，应为人，大宜契合。",
+            "applies_because": "应位之官生世"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "妻财伏而待时（B-009）"
+          },
+          {
+            "rule_id": "R-YUANJI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+            "applies_because": "子孙无力"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1406 类，占起卦概率 0.006%，全类 33 盘）：用神「明现临应[EFFECTIVE]静」；世爻「世受克」；卦级「官生合世」；原神妻财不上卦，伏而待时；忌神子孙当前无力（INEFFECTIVE）。全类一致：月建六亲：妻财(100%)；用神月令：相(100%)。类内各盘不同之处：用神生扶：日合、月生(61%)、月生(39%)；发动六亲：兄弟(45%)、父母(30%)、无(24%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为财之五行；用神三层判定有效 100%（入动墓 23%、入日墓 8%）；世爻皆父母（无力 77%）；忌神无力；伏神：原神待时 100%；发动：兄弟 44%、父母 31%、无 26%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现临应[EFFECTIVE]静;世世空无气世受克子孙;官世克;原静旺有力;忌无力",
+      "script_id": "IPC-1407",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "5268e11b2eba98a66662798f1309c15a83b54e502fbbcbb86bd840944a6e0b6d",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现临应[EFFECTIVE]静;世世空无气世受克子孙;官世克;原静旺有力;忌无力",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：对面的官星得相，你的世爻却空而无气",
+        "brief": "这一卦偏难通过。官星在应位，起卦这个月财当令，它得相，有效，生官的财也旺。可你的世爻是失令的子孙，正落旬空，空而无气，又受克——子孙空了伤不着官，你这一侧却也没了落脚处，机会在对面，接不住。",
+        "opening": "官鬼落在应爻，安静；这个月财当令，官星得相；常入动墓，或入日墓。官星当下有效。\n你的世爻是子孙，休囚而旬空，无气，又受克。卦中多是父母发动。生官的财静而旺相；克官的子孙即你世上那一爻，空而无力。",
+        "process": "升迁何方章把世空列在「俱不得」里，指的是这种失令无气之空；你这一侧不在位，机会落不到你身上。\n子孙空而无力，本不伤官；官星有时被墓收着，还要等墓开。",
+        "ending": "应位之官得相而你的世爻空而无气，这一轮通过的可能偏低。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；你的世爻失令落空，从卦象看，偏于不如意。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或消息落定",
+              "target_symbol": "应位之官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。对面的官星得相，你的世爻却空而无气。先把自身状态调整好，再图后续。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-07",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+            "quote": "世空世破官破官空﹐俱不得。",
+            "applies_because": "世空俱不得（无气之空）"
+          },
+          {
+            "rule_id": "R-KONG-03",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+            "applies_because": "在旬内者毕竟为空"
+          },
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星得财令之生"
+          },
+          {
+            "rule_id": "R-SANMU-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+            "applies_because": "入动墓、入日墓"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1407 类，占起卦概率 0.006%，全类 43 盘）：用神「明现临应[EFFECTIVE]静」；世爻「世空无气世受克子孙」；卦级「官世克」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙当前无力（INEFFECTIVE）。全类一致：月建六亲：妻财(100%)；用神月令：相(100%)。类内各盘不同之处：用神生扶：月生(58%)、临日、月生(14%)、日生、日长生、月生(14%)、日生、月生(14%)；发动六亲：父母(56%)、父母父母(28%)、无(16%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为财之五行；用神（应爻）得相 100%，三层判定有效 100%（入动墓 47%、入日墓 9%）；世爻皆子孙，休囚而旬空（无力 100%）；原神静而旺相；忌神（即世爻）无力；发动：父母 56%、父母父母 28%、无 16%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现临应[INEFFECTIVE]静;世世空无气世受克子孙;官世克;原无力;忌无力",
+      "script_id": "IPC-1408",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "d1df89f2bd1bdc8dddb441fc0eaf05a7bfecaf6147c6b1a180c272dcd7ff438d",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现临应[INEFFECTIVE]静;世世空无气世受克子孙;官世克;原无力;忌无力",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：对面的官星泄气无扶，你的世爻也空着",
+        "brief": "这一卦偏难通过。官星在应位，起卦这个月父母当令，它泄气，日辰也不扶，没有力气。你的世爻是失令的子孙，正落旬空，空而无气——它伤不着官，可你这一侧也不在位。生官的财无力，卦又多无动爻，没有推力。",
+        "opening": "官鬼落在应爻，安静；这个月父母当令，官星休囚无扶。官星自身无力。\n世上那颗子孙失令落空，无气，还受着克。卦中多无动爻，偶有父母发动。生官的财无力。",
+        "process": "元神忌神衰旺章说「亦要用神有气」，对面的官先没了根；升迁何方章又把世空列在「俱不得」里。\n两头都落空，卦中也没有动爻来补。",
+        "ending": "应位之官无力、世爻空而无气，这一轮通过的可能偏低；转机在官星得生得旺的月日。",
+        "timing": {
+          "text": "官星衰而无力，按「衰者遇生遇旺」，若有转机，多在官星得生、得旺的月日；具体对应的地支随排盘列出。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-04",
+              "pool": "favorable",
+              "target_event": "若有转机，在此时",
+              "target_symbol": "应位之官鬼（休囚）",
+              "condition": "衰者遇生遇旺",
+              "time_scale": "day",
+              "calculation_basis": "生官之五行、官星本五行之月日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「衰绝者，遇生遇旺」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。对面的官星泄气无扶，你的世爻也空着。期望放低，等时运转好再图。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YUANJI-05",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "亦要用神有气，倘若用神无根谓之元神有力亦难生，忌神无力何足喜。",
+            "applies_because": "亦要用神有气"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-07",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升迁何方章第五十六",
+            "quote": "世空世破官破官空﹐俱不得。",
+            "applies_because": "世空俱不得（无气之空）"
+          },
+          {
+            "rule_id": "R-KONG-03",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+            "applies_because": "在旬内者毕竟为空"
+          },
+          {
+            "rule_id": "R-YUANJI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+            "applies_because": "妻财无力"
+          },
+          {
+            "rule_id": "R-YINGQI-04",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "衰绝者，遇生遇旺",
+            "applies_because": "用神衰而无力，取生旺之时"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1408 类，占起卦概率 0.006%，全类 19 盘）：用神「明现临应[INEFFECTIVE]静」；世爻「世空无气世受克子孙」；卦级「官世克」；原神妻财当前无力（INEFFECTIVE）；忌神子孙当前无力（INEFFECTIVE）。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：发动六亲：无(79%)、父母(21%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行；用神（应爻）休囚无扶 100%，三层判定无力 100%；世爻皆子孙，休囚而旬空（无力 100%）；原神、忌神皆无力；发动：无 79%、父母 21%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现临应[INEFFECTIVE入墓]静;世世受克子孙;官世克;原伏有效;忌无力",
+      "script_id": "IPC-1409",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "d81079e8bb95a54011c45c7df017183b71947e8044e36385e276dae8c164763b",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现临应[INEFFECTIVE入墓]静;世世受克子孙;官世克;原伏有效;忌无力",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：对面的官星失令，当天又被日辰收进墓里",
+        "brief": "这一卦偏难通过。官星在应位，起卦这个月父母当令，它泄气，当天日辰又正是它的墓，把它收住。坐在你世爻上的子孙失令，伤不着它，也帮不上。卦中父母一动，变出一爻官星，那只是变爻，不作取用。生官的财伏而有用，可官星困着，接不住。",
+        "opening": "官鬼落在应爻，安静；这个月父母当令，官星休囚，入日墓，无扶。官星自身无力。\n你的世爻是子孙，休囚，克着应位之官。卦中多是父母发动，变出官星之五行。生官的财伏而有用。",
+        "process": "题头总注章列三墓，失令入墓是真困；应期总注章说入三墓「俱喜冲开」，要等日辰冲开这个墓。\n动变生克冲合章说变出之爻「不能生克他爻」，变出来的官星不作取用；伏财有用，可官星困在墓里。",
+        "ending": "应位之官失令入日墓，这一轮通过的可能偏低；墓开或有转机。",
+        "timing": {
+          "text": "官星入墓，按「入三墓俱喜冲开」：冲开墓库之日前后，若有转机多在此时；从卦象看，这一轮偏难。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-05",
+              "pool": "favorable",
+              "target_event": "若有转机，在此时",
+              "target_symbol": "入墓之官鬼",
+              "condition": "入墓：喜冲开",
+              "time_scale": "day",
+              "calculation_basis": "冲墓库之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「入三墓俱喜冲开」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。对面的官星失令，当天又被日辰收进墓里。期望放低，其他机会照常推进。",
+        "classical_sources": [
+          {
+            "rule_id": "R-SANMU-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+            "applies_because": "入日墓"
+          },
+          {
+            "rule_id": "R-YINGQI-05",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "入三墓俱喜冲开",
+            "applies_because": "入三墓俱喜冲开"
+          },
+          {
+            "rule_id": "R-DONGBIAN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动变生克冲合章第十五",
+            "quote": "夫变出之爻能生克冲合本位之动爻，不能生克他爻，而他爻与本位之动爻，亦不能生克变爻。",
+            "applies_because": "变出之爻不能生克他爻"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "妻财伏而有用"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1409 类，占起卦概率 0.006%，全类 39 盘）：用神「明现临应[INEFFECTIVE入墓]静」；世爻「世受克子孙」；卦级「官世克」；原神妻财不上卦，伏而有用；忌神子孙当前无力（INEFFECTIVE）。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)。类内各盘不同之处：发动六亲：父母(46%)、无(23%)、父母父母(23%)、兄弟兄弟(8%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行；用神（应爻）休囚而入日墓 100%，三层判定无力 100%；世爻皆子孙（休囚）；忌神无力；伏神：原神有用 100%；发动：父母 46%、无 23%、父母父母 23% 等。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现持世[INEFFECTIVE]静;世持世;原无力;忌静旺有力;局子孙局待凶克世",
+      "script_id": "IPC-1410",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "19200f1144e00c0b1c799e4c8f83808d7271c1f900b3765003b41d19c6fa048b",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现持世[INEFFECTIVE]静;世持世;原无力;忌静旺有力;局子孙局待凶克世",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：坐世的官星失令，得相的子孙在凑局",
+        "brief": "这一卦偏难通过。官星坐在你的世爻上，这个月兄弟当令，官星失令无扶，自身无力。克官的子孙得相，静而有力；卦中三支还在凑子孙局，局成便克你。应位的财生着你，可财无力，生不起官。",
+        "opening": "官鬼持世，安静；这个月多是兄弟当令，官星休囚无扶，偶受月克。坐世之官自身无力。\n应位是财，生你，却无力。克官的子孙得相而静；卦中父母、兄弟有时发动，三支子孙局只差一道关，局成克你的世爻。",
+        "process": "升选章要「旺官持世」，这颗官失令无扶；动静生克章说安静旺相之爻「亦可以克得休囚之爻」，得相的子孙就在旁边。\n子孙局若成，更是成了形的阻力；财无力，接不上生官这一步。",
+        "ending": "持世之官失令、子孙得相又在凑局，这一轮通过的可能偏低。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或消息落定",
+              "target_symbol": "持世之官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。坐世的官星失令，得相的子孙在凑局。期望放低，调整方向。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+            "applies_because": "升选章要「旺官持世」，本类官星失令"
+          },
+          {
+            "rule_id": "R-DONGJING-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动静生克章第十四",
+            "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+            "applies_because": "子孙静而得相，克休囚之官"
+          },
+          {
+            "rule_id": "R-SANHE-05",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "但三合其局者必要世爻在局者为美，若世爻不在于局内，须要局生世爻为吉，局克世爻为凶",
+            "applies_because": "合成子孙局者乃伤煞之神也"
+          },
+          {
+            "rule_id": "R-YUANJI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+            "applies_because": "妻财无力"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1410 类，占起卦概率 0.006%，全类 80 盘）：用神「明现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财当前无力（INEFFECTIVE）；忌神子孙静而旺相，有力（只作用于休囚之爻）；三合「子孙局待凶克世」。全类一致：用神月令：休囚(100%)。类内各盘不同之处：月建六亲：兄弟(95%)、子孙(5%)；用神生扶：无(95%)、日生、日长生(5%)；发动六亲：父母(25%)、兄弟父母(25%)、兄弟(25%)、兄弟兄弟父母(25%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：兄弟之五行 96%、子孙之五行 4%；用神（即世爻）三层判定无力 100%（月克 4%）；忌神静而旺相 100%；原神无力；三合：子孙局待时成局、局克世 100%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用化出世有气;世世动;原动有力;忌无力;局父母局成吉世在",
+      "script_id": "IPC-1411",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "f4053f7adcadd00743626c29796d3a5cb9608d4cffe4b6b1b0f21d5e370ff121",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用化出世有气;世世动;原动有力;忌无力;局父母局成吉世在",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "倾向通过：你世上的财一动化出官星，财与父母都在帮衬",
+        "brief": "这一卦倾向通过。卦面上没有官鬼，你的世爻是财，正在发动，化出一颗有气的官星，便以它为用——官从你这一爻里生出来。另一爻财也常一同发动，生官之力足；父母与你、与化出之官合成一局，你就在局中。应位的兄弟克着你，过程会有人争、有阻力。",
+        "opening": "卦面无官，伏官不用，便以你世爻所化之官为用，这颗官有气。当令的或是财，或是父母，或是官星。\n你的世爻是财，发动而化出官星；卦中父母同动，或再加一爻财；三支父母局已成，世爻在局中。应位是兄弟，克你。",
+        "process": "升选候补章说世爻发动化出官星为吉；这一卦正是如此，官由你自己这一爻而来，财又在推。\n克官的子孙无力，没人拦；应位兄弟克你，是竞争之象，扛过去就好。局中有你，诸事更易聚拢。",
+        "ending": "世爻化出有气之官、财动相生，这一轮倾向通过；应位有阻，过程要用力。",
+        "timing": {
+          "text": "按「逢值」取期：化出之官本支值日之日前后，结果较容易出来；官从你世上化出，主动推进，更容易应在这时。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或通知到来",
+              "target_symbol": "官鬼（伏藏或化出）",
+              "condition": "用神逢值",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "倾向通过。你世上的财化出官星，财与父母都在帮衬。有竞争，主动推进。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+            "applies_because": "世爻发动化出官星"
+          },
+          {
+            "rule_id": "R-YUANJI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "元神能生用神者有五：元神旺相或临日月或日月动爻生扶者一也。元神动化回头生及化进神者二也。元神长生帝旺于日辰三也。元神与忌神同动四也。元神旺动临空化空五也。",
+            "applies_because": "妻财发动有力，生官"
+          },
+          {
+            "rule_id": "R-SANHE-05",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "凡得三合名利婚姻、家宅、风水，用神旺者无不为吉，必要世爻在局为美",
+            "applies_because": "三合须世爻在局为美"
+          },
+          {
+            "rule_id": "R-SHIYING-03",
+            "source_book": "黄金策",
+            "source_chapter": "1、总断千金赋",
+            "quote": "应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。",
+            "applies_because": "应克世"
+          },
+          {
+            "rule_id": "R-FUSHEN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+            "applies_because": "官不上卦"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1411 类，占起卦概率 0.006%，全类 218 盘）：用神「化出世有气」；世爻「世动」；原神妻财发动而有力；忌神子孙当前无力（INEFFECTIVE）；三合「父母局成吉世在」。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：妻财(52%)、父母(28%)、官鬼(20%)；发动六亲：妻财父母(51%)、妻财妻财父母(49%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[EFFECTIVE]静受动克;世世化吉子孙;官世克;原伏难出;忌动有力;局子孙局待凶世在",
+      "script_id": "IPC-1412",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "411d6c14a89ec35d3ced727b230ec8b0e82d2163233d753cd81b9072c131f11c",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[EFFECTIVE]静受动克;世世化吉子孙;官世克;原伏难出;忌动有力;局子孙局待凶世在",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：你世上的子孙动而得生，正冲克官星",
+        "brief": "这一卦偏难通过。起卦这个月兄弟当令，官星失令，靠月合撑着。可坐在你世爻上的子孙正在发动，所化回头生它，越动越有力，一路冲克官星，有时还把它收进墓里。三支子孙局在凑，你也在局里。生官的财伏着出不来。",
+        "opening": "官鬼是用神，安静；这个月多是兄弟当令，官星休囚，得月合；受世上子孙动克动冲，或兼入动墓、入日墓。官星当下尚有效。\n你的世爻是子孙，多得相，发动而化回头生；应位是父母，克你。子孙多与兄弟一同发动，三支子孙局正待合成，你也在局中。生官的财伏而难出。",
+        "process": "升选章「子孙持世，休望荣荫」，序里又说子孙动于卦中，占功名「悉如水中捞月」；这颗子孙坐世、发动、得生，三样都占。\n官星只靠月合撑着，抵不住；子孙局一般，更重。",
+        "ending": "坐世的子孙动而得生、冲克官星，这一轮通过的可能偏低。",
+        "timing": {
+          "text": "主导这一卦的是发动的子孙，按「动而逢值逢合」，子孙值日或逢合之日前后，较可能收到不如意的消息；具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-02",
+              "pool": "adverse",
+              "target_event": "不利结果落定",
+              "target_symbol": "发动之子孙",
+              "condition": "忌神发动：逢值逢合",
+              "time_scale": "day",
+              "calculation_basis": "子孙本支值日之日、与之相合之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「动而逢合逢值」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。你世上的子孙动而得生，正冲克官星。期望放低，调整方向。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YONG-GUAN-03",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+            "quote": "子孙持世﹐休望荣荫。官位空破﹐勿恩升迁。",
+            "applies_because": "子孙持世，休望荣荫"
+          },
+          {
+            "rule_id": "R-YONG-GUAN-05",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易序",
+            "quote": "倘遇子孙持世，或子孙动于卦中，不拘占入场占升迁悉如水中捞月。",
+            "applies_because": "子孙动于卦中，悉如水中捞月"
+          },
+          {
+            "rule_id": "R-HUA-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神化吉：凡用神元神动化回头生、化长生、化帝旺、化扶助、化日月皆为化吉。",
+            "applies_because": "化回头生（子孙得生）"
+          },
+          {
+            "rule_id": "R-SANHE-05",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "如占功名合成官局谓之官旺，合成财局财旺生官，倘若合成子孙局者乃伤煞之神也。",
+            "applies_because": "合成子孙局者乃伤煞之神也"
+          },
+          {
+            "rule_id": "R-YINGQI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "动而逢合逢值",
+            "applies_because": "忌神发动，取值日、合日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1412 类，占起卦概率 0.006%，全类 88 盘）：用神「明现[EFFECTIVE]静受动克」；世爻「世化吉子孙」；卦级「官世克」；原神妻财不上卦，伏而终不得出；忌神子孙发动而有力；三合「子孙局待凶世在」。类内各盘不同之处：月建六亲：兄弟(91%)、官鬼(9%)；用神月令：休囚(91%)、旺(9%)；用神生扶：日合(27%)、日扶(14%)、日合、月合(14%)、月合(14%)；发动六亲：兄弟子孙(50%)、子孙(38%)、兄弟兄弟子孙(13%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：兄弟之五行 91%、官鬼之五行 9%；用神受子孙动克动冲 100%（兼入动墓 44% 等），三层判定有效 100%；世爻皆子孙（相 91%），动化回头生 100%；忌神发动有力 100%；伏神：原神难出 100%；三合：子孙局待时成局、世在局 100%；应爻克世 100%。"
+      }
+    },
+    {
       "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用伏难出;世世安;原动有力;忌静旺有力;局兄弟局成凶世在",
       "script_id": "IPC-1413",
       "question_id": "career.interview.interview-pass",
@@ -105995,6 +106924,318 @@
           }
         ],
         "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1414 类，占起卦概率 0.006%，全类 20 盘）：用神「伏有效」；世爻「世受克」；原神妻财当前无力（INEFFECTIVE）；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：兄弟(100%)；用神月令：不现(100%)。类内各盘不同之处：世爻六亲：妻财(80%)、父母(20%)；应爻对世：克世(70%)、生世(30%)；发动六亲：无(75%)、父母(15%)、妻财妻财(10%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；伏神：用神有用 100%；忌神静而旺相 100%；原神无力；世爻：财 80%、父母 20%（休囚 100%）；应爻：克世 70%、生世 30%；发动：无 75%、父母 15%、财财 10%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用同支两现[EFFECTIVE]静;世世化吉世空有气;官无情;原待时(旬空);忌伏难出",
+      "script_id": "IPC-1415",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "3bdf5de215ffadebd0306470d912f6b557eba0a7e498311d9a97114710493b40",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用同支两现[EFFECTIVE]静;世世化吉世空有气;官无情;原待时(旬空);忌伏难出",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：你世上的财动着却落空，两爻官星又被墓收着、不顾你",
+        "brief": "这一卦偏难通过。官鬼两现；坐在你世爻上的财在发动，化回头生，本是生官的源头，可它正落旬空，生官之财等于一并空着。两爻官星又被动财收进墓里，也不坐你的世爻、不生合它。世陷而财空，古书劝人守己；官不生合世爻，乡试章判为无益。",
+        "opening": "官鬼两现，起卦月份或财当令，或父母当令，或官星当令；两官入动墓，偶兼日克。\n你的世爻是财，发动而化回头生，旬内暂空；应位也是财，与你比和。卦中财独动，或与父母同动。两爻官星与你的世爻不生不合。",
+        "process": "财动生官本是推力，可这股推力出自一颗空着的世爻；官又被墓收住，眼下双重受困。\n空可以等、墓可以冲开，官与你之间的情却等不来、冲不出。",
+        "ending": "世陷财空、官又入墓无情，这一轮偏难通过。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情会有个说法；墓库被冲开之日也宜留意。从卦象看，这一轮偏难。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "事情有个说法",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "偏难通过。你世上的财空着，墓里的官星也不生合你。这一处期望放低，先把自己这边稳住。",
+        "classical_sources": [
+          {
+            "rule_id": "R-QIUMING-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·乡试章第五十五",
+            "quote": "出现无情﹐难遂青云之志。父与官星虽则出现﹐若不生合世爻﹐或不持世﹐或世爻空破﹐或被世爻冲克﹐亦属无益。",
+            "applies_because": "两官不持世、不生合世爻"
+          },
+          {
+            "rule_id": "R-SHUYIN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·署印谋差章第六十一",
+            "quote": "财与官星不可有一而不旺﹐子孙兄弟不可一而动摇﹐世陷财空﹐不如守己﹐官空世破﹐且让他人。",
+            "applies_because": "世陷财空"
+          },
+          {
+            "rule_id": "R-KONG-03",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+            "applies_because": "在旬内者毕竟为空"
+          },
+          {
+            "rule_id": "R-SANMU-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "三墓：即用爻入日墓、入动墓、动而化墓，非古法之世墓、身墓、命墓。",
+            "applies_because": "入动墓"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1415 类，占起卦概率 0.006%，全类 72 盘）：用神「同支两现[EFFECTIVE]静」；世爻「世化吉世空有气」；卦级「官无情」；原神妻财待时(旬空)；忌神子孙不上卦，伏而终不得出。类内各盘不同之处：月建六亲：妻财(42%)、父母(31%)、官鬼(28%)；用神月令：相(42%)、休囚(31%)、旺(28%)；用神生扶：妻财动来生、日扶、月生(6%)、妻财动来生、日扶(6%)、妻财动来生、日合、日生、月生(6%)、临日、妻财动来生、日帝旺、月生(6%)；发动六亲：妻财(51%)、妻财父母(49%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 42%、父母之五行 31%、官鬼之五行 28%；用神入动墓 97%（兼日克 3%），三层判定有效 100%；世爻皆财，动化回头生而旬空（待时 100%）；原神（即世爻）动而待时；伏神：忌神难出 100%；发动：财 51%、财父母 49%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用同支两现[INEFFECTIVE]静;世世空有气;官无情;原待时(旬空);忌伏有效",
+      "script_id": "IPC-1416",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "22440383ff4f95576d35e45b3647c94f2c9e0cab24f283a450e59b6f088745b9",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用同支两现[INEFFECTIVE]静;世世空有气;官无情;原待时(旬空);忌伏有效",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：两颗官星都被月建克住，你世上的财又空着",
+        "brief": "这一卦偏难通过。官星两现，可起卦这个月子孙当令，月建克着它们，日辰也常添一克，官星没有根。你世上坐的是生官的财，有气，却正落旬空，生不上来。克官的子孙伏在卦下而有用。",
+        "opening": "官鬼两现，安静；这个月子孙当令，月建克官；多兼日克，偶入动墓。官星自身无力。\n坐世的财得相，落在旬空；应位也是财，与你比和。卦中多是父母发动，或无动爻。克官的子孙伏而有用。",
+        "process": "元神忌神衰旺章说「用神无根，元神有力亦难生」；何况生官的财就是你空着的世爻。\n伏子孙有用，出伏又是一层伤。",
+        "ending": "两现之官受月克无根、世上之财暂空，这一轮通过的可能偏低。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，结果多半会有个说法；从卦象看，偏于不如意。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或消息落定",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "这一轮偏难通过。两颗官星都被月建克住，你世上的财又空着。期望放低，等时运转好再图。",
+        "classical_sources": [
+          {
+            "rule_id": "R-YUANJI-06",
+            "source_book": "增删卜易",
+            "source_chapter": "元神忌神衰旺章第十",
+            "quote": "此谓之用神无根，元神有力亦难生。",
+            "applies_because": "用神无根，元神有力亦难生"
+          },
+          {
+            "rule_id": "R-YUEJIAN-01",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "月将即是月建又为月令。掌一月之权，司三旬之令。",
+            "applies_because": "月建克用"
+          },
+          {
+            "rule_id": "R-KONG-03",
+            "source_book": "增删卜易",
+            "source_chapter": "月将章第十六",
+            "quote": "爻值月建旺相，当谓逢空不空，逢伤无害。古有此说，予试不然，在旬内者毕竟为空。",
+            "applies_because": "世在旬内毕竟为空"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "子孙伏而有用"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1416 类，占起卦概率 0.006%，全类 34 盘）：用神「同支两现[INEFFECTIVE]静」；世爻「世空有气」；卦级「官无情」；原神妻财待时(旬空)；忌神子孙不上卦，伏而有用。全类一致：用神月令：休囚(100%)。类内各盘不同之处：月建六亲：子孙(97%)、父母(3%)；用神生扶：无(32%)、日扶(18%)、日合、日生(18%)、日长生(18%)；发动六亲：父母(59%)、无(26%)、妻财父母(15%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：子孙之五行 97%、父母之五行 3%；用神（两现）受月克 100%（兼日克 35%、兼入动墓 6% 等），三层判定无力 100%；世爻皆财，有气而旬空（待时 100%）；伏神：忌神有用 100%；发动：父母 59%、无 26%、财父母 15%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[EFFECTIVE]动平;世世受克;官无情;原无力;忌伏有效;六合",
+      "script_id": "IPC-1417",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "4aa150e8c3963f0940600359b8321561292c5be54d1ac28ec7fd91f09400b7b2",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[EFFECTIVE]动平;世世受克;官无情;原无力;忌伏有效;六合",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "偏难通过：失令的官星借合借扶动起来，仍不往你世上来",
+        "brief": "这一卦偏难通过。卦逢六合；这个月兄弟当令为主，官星失令，靠月合或另一爻官星动来相扶，在卦中发动，事情有动静。你世上的财失令无力，应位父母合着你。可官星不坐你的世爻，也不生合它；克官的子孙伏而有用。乡试章称这样的官星「出现无情」。",
+        "opening": "六合卦，世应相合。起卦月份兄弟当令为主；官鬼休囚，得月合，或两爻官鬼同动相扶；所化平平，偶受日克日绝。\n你的世爻是财，失令无力；应位是父母，受你所克，与你相合。动的或只是官鬼，或两爻官鬼齐动，或父母同动；偶有官星落旬空的。官星与你的世爻不生不合。",
+        "process": "官星借着合、借着同类之扶动起来，劲头有限；伏着的子孙有用，随时能出来压它。\n它与你之间又没有情，你自己还失令无力。卦虽六合，合在世应，官仍在情分之外。",
+        "ending": "失令之官动而与你无情，这一轮偏难通过。",
+        "timing": {
+          "text": "官星发动，按「动而逢值逢合」：官星值日或与官星相合之日前后，事情会有个说法；从卦象看，这一轮偏难。具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-02",
+              "pool": "favorable",
+              "target_event": "事情有个说法",
+              "target_symbol": "官鬼（发动）",
+              "condition": "用神发动：逢值逢合",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、与官星相合之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「动而逢合逢值」"
+            }
+          ]
+        },
+        "conclusion": "偏难通过。官星借力动着，却不生合你失令的世爻。期望放低，同时推进其他机会。",
+        "classical_sources": [
+          {
+            "rule_id": "R-QIUMING-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·乡试章第五十五",
+            "quote": "出现无情﹐难遂青云之志。父与官星虽则出现﹐若不生合世爻﹐或不持世﹐或世爻空破﹐或被世爻冲克﹐亦属无益。",
+            "applies_because": "官星不持世，又不生合世爻"
+          },
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星失令而得扶"
+          },
+          {
+            "rule_id": "R-FUSHEN-02",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+            "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+            "applies_because": "子孙伏而有用"
+          },
+          {
+            "rule_id": "R-HE-01",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+            "applies_because": "卦逢六合，合在世应"
+          },
+          {
+            "rule_id": "R-YINGQI-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "动而逢合逢值",
+            "applies_because": "用神发动，取值日、合日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1417 类，占起卦概率 0.006%，全类 74 盘）：用神「明现[EFFECTIVE]动平」；世爻「世受克」；卦级「官无情」；原神妻财当前无力（INEFFECTIVE）；忌神子孙不上卦，伏而有用；卦级「六合」。类内各盘不同之处：月建六亲：兄弟(84%)、父母(11%)、官鬼(5%)；用神月令：休囚(95%)、旺(5%)；用神生扶：月合(24%)、官鬼动来扶(18%)、官鬼动来扶、月合(12%)、临日、日帝旺(11%)；发动六亲：官鬼(49%)、官鬼官鬼(42%)、官鬼父母(9%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：兄弟之五行 84%、父母之五行 11%、官鬼之五行 5%；用神发动、动平 100%，三层判定有效 100%（日克 8%、日克日绝 5% 等）；世爻皆财（休囚）；伏神：忌神有用 100%；卦逢六合；发动：官鬼 49%、官鬼官鬼 42%、官鬼父母 9%。"
+      }
+    },
+    {
+      "key": "career.interview.interview-pass|interview-pass-eq-0.13.0|用明现[EFFECTIVE]静;世世化凶;官克世(世有气);原静旺有力;忌静不作用;六合",
+      "script_id": "IPC-1418",
+      "question_id": "career.interview.interview-pass",
+      "content_hash": "30032be73104bccaaa90fc39a42ed986af3f660e34db36a244f1c18a503682bb",
+      "match": "class",
+      "equivalence_version": "interview-pass-eq-0.13.0",
+      "class_key": "用明现[EFFECTIVE]静;世世化凶;官克世(世有气);原静旺有力;忌静不作用;六合",
+      "rule_version": "0.1.0|interview-pass-rules-0.2.0|evidence-0.1.0|liuyao-chart-1.0.0|interview-pass-eq-0.13.0",
+      "approval": {
+        "approval_status": "AI_APPROVED",
+        "production_allowed": true,
+        "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+        "reviewed_at": "2026-11-15",
+        "approval_basis": "单 Claude 审核（本哈希终审，非独立）"
+      },
+      "reading": {
+        "title": "倾向通过：官星得财令之生，你自己却有退意",
+        "brief": "这一卦倾向通过。起卦这个月财当令，官星得月生，有效、安静；生官的财旺相，克官的子孙安静；卦逢六合，应位合着你。不足在你自己这一侧：你的世爻在动，化出退神，乡试章说世化退神，必无勇往之心——机会在，别自己先泄了劲。",
+        "opening": "六合卦。官鬼是用神，这个月财当令，官星得相；有时受日克，有时入日墓；若官星落旬空而被日辰冲起，冲空则实。官星仍可用。\n你的世爻是兄弟，发动而化退神；应位是子孙，受你所生，与你相合。",
+        "process": "财令生官，静财又旺，官星有根；子孙不动，六合主聚，结果一头稳。\n乡试章「世化退神…必无勇往之心」，说的是自己这一侧的劲头：化退只作次要，不翻结论，却提醒你别临门松手。",
+        "ending": "官星得生、卦逢六合，这一轮倾向通过；世爻化退，自己别先泄劲。",
+        "timing": {
+          "text": "官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果较容易出来；具体日子见排盘。",
+          "entries": [
+            {
+              "timing_rule_id": "R-YINGQI-01",
+              "pool": "favorable",
+              "target_event": "结果或通知到来",
+              "target_symbol": "官鬼（安静）",
+              "condition": "用神安静：逢值逢冲",
+              "time_scale": "day",
+              "calculation_basis": "官星本支值日之日、冲动官星之日",
+              "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+            }
+          ]
+        },
+        "conclusion": "倾向通过。官星得财令之生，卦逢六合；你自己这一侧有退意，要提起劲来推进。",
+        "classical_sources": [
+          {
+            "rule_id": "R-WANG-02",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类题头总注章第又二十六",
+            "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+            "applies_because": "官星得财令之生"
+          },
+          {
+            "rule_id": "R-SHIHUA-01",
+            "source_book": "增删卜易",
+            "source_chapter": "增删卜易卷之三·乡试章第五十五",
+            "quote": "独不喜化退神﹐世化退神﹐若非临场之阻﹐必无勇往之心",
+            "applies_because": "世化退神，必无勇往之心"
+          },
+          {
+            "rule_id": "R-HE-01",
+            "source_book": "增删卜易",
+            "source_chapter": "六合章第十九",
+            "quote": "凡得诸合，诸占皆以为吉，占名成，占利利就",
+            "applies_because": "卦逢六合"
+          },
+          {
+            "rule_id": "R-DONGJING-01",
+            "source_book": "增删卜易",
+            "source_chapter": "动静生克章第十四",
+            "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+            "applies_because": "财静而旺相"
+          },
+          {
+            "rule_id": "R-YINGQI-01",
+            "source_book": "增删卜易",
+            "source_chapter": "各门类应期总注章第又二十六",
+            "quote": "静而逢值逢冲",
+            "applies_because": "用神安静，取值日、冲日"
+          }
+        ],
+        "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1418 类，占起卦概率 0.006%，全类 74 盘）：用神「明现[EFFECTIVE]静」；世爻「世化凶」；卦级「官克世(世有气)」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙安静而月令不旺，不主动作用；卦级「六合」。全类一致：月建六亲：妻财(100%)；用神月令：相(100%)。类内各盘不同之处：用神生扶：月生(45%)、月合、月生(45%)、日生、月合、月生(5%)、日生、月生(5%)；发动六亲：兄弟兄弟(51%)、兄弟(49%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为财之五行；用神三层判定有效 100%（日克 13%、入日墓 13%）；世爻皆兄弟，动化退神 100%；卦逢六合。"
       }
     },
     {
