@@ -1,0 +1,264 @@
+{
+  "script_id": "IPC-2714",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用明现[EFFECTIVE]动平受动克;世世受克;原伏有效;忌无力;局子孙局虚凶克世",
+  "class_rank": 2714,
+  "class_share_of_casts": 4.2e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "庚辰"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "壬申"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "庚辰"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        9,
+        6,
+        7,
+        8,
+        6,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "戊申"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼发动有效",
+    "子孙动而无力",
+    "原神伏而有用"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官鬼发动（动而化平），财令得相、官令而旺或父母令而得日生等，有效",
+      "发动之子孙无力，克而不伤"
+    ],
+    "supporting": [
+      "原神妻财伏而有用"
+    ],
+    "adverse": [
+      "官星受子孙动克（无力），或兼日绝、入日墓；应爻克世；三支子孙局虚一待用，局克世"
+    ],
+    "conflicts_resolved": [
+      "与 IPC-2420（忌动有力）有别：本类子孙动而无力"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-SANHE-04",
+      "R-SANMU-01",
+      "R-SHIYING-03",
+      "R-WANG-02",
+      "R-YINGQI-02",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-05",
+      "R-YUANJI-04"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：官星在动，子孙动来却无力",
+    "brief": "这一卦倾向通过。官星在发动，起卦这个月或财、或父母、或官当令，它得日生、月生，当下有效。卦中子孙也在动，冲着它克，可那爻子孙自身无力，克而不伤，有时日辰绝它一下也只是一时。生官的财伏着有用。子孙局还缺一支，宜早定。",
+    "opening": "用神官鬼发动，动而化平；起卦之月财当令、父母当令或官星当令；官星得日生、日生月生或日长生月生等；受子孙动克（子孙无力），或兼日绝、入日墓。官星当下有效。\n你的世爻有效；应位克你。卦中子孙、官鬼同动，或兼兄弟；三支子孙局虚一待用，局克世。财伏而有用；动子孙无力。",
+    "process": "官动而有扶，子孙动而无力，克而不伤。\n子孙局缺一支，宜早。所以倾向通过。",
+    "ending": "官星动而有扶、子孙无力，这一轮倾向通过；宜早定。",
+    "timing": {
+      "text": "官星发动，按「动而逢值逢合」：官星值日或与官星相合之日前后，结果较容易出来；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-02",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "官鬼（发动）",
+          "condition": "用神发动：逢值逢合",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、与官星相合之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「动而逢合逢值」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。官星在动，子孙动来却无力。尽早推进，赶在局成之前。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YUANJI-04",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也。",
+        "applies_because": "忌神发动而无力"
+      },
+      {
+        "rule_id": "R-WANG-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+        "applies_because": "官星得扶"
+      },
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "妻财伏而有用"
+      },
+      {
+        "rule_id": "R-SANHE-04",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+        "quote": "殊不知虚一待用﹐待后时之月日可以填之。",
+        "applies_because": "虚一待用"
+      },
+      {
+        "rule_id": "R-YINGQI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "动而逢合逢值",
+        "applies_because": "用神发动，取值日、合日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 2714 类，占起卦概率 0.004%，全类 116 盘）：用神「明现[EFFECTIVE]动平受动克」；世爻「世受克」；原神妻财不上卦，伏而有用；忌神子孙当前无力（INEFFECTIVE）；三合「子孙局虚凶克世」。类内各盘不同之处：月建六亲：妻财(38%)、父母(34%)、官鬼(28%)；用神月令：相(38%)、休囚(34%)、旺(28%)；用神生扶：日生(24%)、日生、月生(12%)、日长生、月生(10%)、月生(10%)；发动六亲：子孙官鬼(78%)、兄弟子孙官鬼(22%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 38%、父母之五行 34%、官鬼之五行 28%；用神相 38%、休囚 34%、旺 28%（发动，动平），日生 24%、日生月生 12%、日长生月生 10% 等，受子孙动克 64%、兼日绝 21%、兼入日墓 16%，三层判定有效 100%；忌神发动而无力；伏神：原神有用 100%；三合：子孙局虚一待用，克世 100%；应爻克世 100%；发动：子孙官鬼 78%、兄弟子孙官鬼 22%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
