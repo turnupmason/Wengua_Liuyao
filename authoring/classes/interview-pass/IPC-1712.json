@@ -1,0 +1,239 @@
+{
+  "script_id": "IPC-1712",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用伏难出;世世安;原空无力;忌无力",
+  "class_rank": 1712,
+  "class_share_of_casts": 5.5e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "壬寅"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "癸卯"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "己亥"
+    },
+    {
+      "line_values": [
+        7,
+        9,
+        7,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己亥"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "甲戌"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸卯"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "壬寅"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "癸未"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "丁丑"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        6,
+        7,
+        8,
+        7,
+        6,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "庚辰"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏而难出",
+    "父母当令",
+    "原忌俱无力"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼不上卦，伏而终不得出（父母当令，伏官泄气无扶）"
+    ],
+    "supporting": [],
+    "adverse": [
+      "原神妻财无力"
+    ],
+    "conflicts_resolved": [
+      "子孙无力，然用神伏而难出；不列应期",
+      "原神妻财静而旬空，更无提拔之力"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-FUSHEN-05",
+      "R-YUANJI-02"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "hidden": true,
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：官星伏而难出，生它的财又落了空",
+    "brief": "这一卦偏难通过。官星不在卦面，伏在一爻之下；起卦这个月父母当令，官生父母，伏官泄气，又没有扶持，出不来。生官的财无力，还落在旬空；克官的子孙也无力。没有阻力，却也没有谁把官星提上来。",
+    "opening": "六爻不见官鬼，官伏于一爻之下；起卦之月父母当令，伏官泄气无扶，出伏无望。\n你的世爻或父母、或兄弟，有气；应位或财，克你，或兄弟，与你比和。卦中或兄弟发动，或子孙与父母同动，也有六爻安静的。财静而落空，无力；子孙亦无力。",
+    "process": "飞伏神章说无力之伏神「终不得出」；这颗官失令无扶，正是此类。\n生官的财空而无力，提拔不了它；黄金策「伏无提拔终徒尔」。",
+    "ending": "伏官无力、生官之财又空，这一轮偏难通过。",
+    "timing": {
+      "text": "本卦不列应期。官星伏而难出，推不出可靠的出伏时点；把精力放在其他机会上更实际。",
+      "entries": []
+    },
+    "conclusion": "偏难通过。官星伏而难出，生它的财又落空。期望放低，另做准备。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+        "applies_because": "伏官终不得出"
+      },
+      {
+        "rule_id": "R-FUSHEN-05",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "伏无提拔终徒尔，飞不推开亦枉然。",
+        "applies_because": "伏无提拔"
+      },
+      {
+        "rule_id": "R-YUANJI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神虽现又有不能生用神者有六：元神休囚，不动或动而休囚又被伤克者一也。元神休囚又逢自空、月破二也。元神休囚动化退神三也。元神衰而又绝四也。元神入三墓五也。元神休囚动而化绝、化克、化破、化散六也。",
+        "applies_because": "妻财无力"
+      },
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官鬼不上卦，寻伏神"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1712 类，占起卦概率 0.006%，全类 29 盘）：用神「伏难出」；世爻「世安」；原神妻财空无力；忌神子孙当前无力（INEFFECTIVE）。全类一致：月建六亲：父母(100%)；用神月令：不现(100%)。类内各盘不同之处：世爻六亲：父母(69%)、兄弟(31%)；应爻对世：克世(69%)、与世比和(31%)；发动六亲：无(34%)、兄弟(28%)、子孙父母(17%)、兄弟兄弟(14%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为父母之五行。不列应期。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-0159（eq-0.12.5）；类键原神一项新注「空」，判定不变；旧正文已为 IPC-0187 沿用，正文重写"
+  }
+}
