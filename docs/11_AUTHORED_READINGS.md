@@ -125791,7 +125791,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;局妻财局成偏吉生世`（interview-pass-eq-0.12.5）；内容哈希 `1b3b6aa0d41ff60c…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;局妻财局成偏吉生世`（interview-pass-eq-0.12.5）；内容哈希 `9c52b57b45034479…`
 - 结论类别：倾向通过；情境：官鬼持世、财局成生世、财动生官
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -125815,7 +125815,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；合成财局生世，一爻之弱变成一局之力。
+财动生官，升选章说得美缺；合成财局生世，一爻之弱变成一局之力。
 
 子孙不动。所以倾向通过。
 
@@ -126051,9 +126051,9 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世动;原动有力;忌伏难出;变合`（interview-pass-eq-0.12.5）；内容哈希 `98cb0ccfd3f667e8…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世动;原动有力;忌伏难出;变合`（interview-pass-eq-0.12.5）；内容哈希 `fad4d9bf5ed99b81…`
 - 结论类别：倾向通过；情境：世爻财动生官、官鬼入生源之墓、原神发动有力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
 
 ```
 样本之一：水风井之地天泰，酉月丁酉日
@@ -126075,7 +126075,7 @@
 
 **详断·过程**
 
-财动生官，八宫图所谓得美缺；世爻自己就是生官之神。
+财动生官，升选章所谓得美缺；世爻自己就是生官之神。
 
 所入之墓即生源，子孙伏而难出。所以倾向通过。
 
@@ -126727,7 +126727,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静不作用;局父母局虚参看`（interview-pass-eq-0.12.5）；内容哈希 `84d3486593ef086b…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静不作用;局父母局虚参看`（interview-pass-eq-0.12.5）；内容哈希 `06665970eeac05c9…`
 - 结论类别：倾向通过；情境：官鬼持世、原神发动有力、应爻生世
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -126751,7 +126751,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；官星坐世，生源就在眼前。
+财动生官，升选章说得美缺；官星坐世，生源就在眼前。
 
 入墓、日克只是一时。所以倾向通过。
 
@@ -129228,7 +129228,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌无力;六冲;局妻财局待偏吉生世`（interview-pass-eq-0.12.5）；内容哈希 `29a24450a47ef022…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌无力;六冲;局妻财局待偏吉生世`（interview-pass-eq-0.12.5）；内容哈希 `8d9c730a3b1ae2a1…`
 - 结论类别：倾向通过；情境：官鬼持世、原神发动有力、六冲卦
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -129252,7 +129252,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；官星旺相，六冲冲不散。
+财动生官，升选章说得美缺；官星旺相，六冲冲不散。
 
 应位子孙无力。所以倾向通过。
 
@@ -131923,7 +131923,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原动有力;忌伏有效;局兄弟局虚凶世在+子孙局虚凶`（interview-pass-eq-0.12.5）；内容哈希 `5b32050e7045e68b…`
+- 匹配键：等价类 `用同支两现[EFFECTIVE]静;世世受克;原动有力;忌伏有效;局兄弟局虚凶世在+子孙局虚凶`（interview-pass-eq-0.12.5）；内容哈希 `e092a60e92cdec92…`
 - 结论类别：倾向通过；情境：两爻官鬼得财生、原神发动有力、应爻克世
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -131947,7 +131947,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；子孙伏而未出。
+财动生官，升选章说得美缺；子孙伏而未出。
 
 两局各缺一支，宜早。所以倾向通过。
 
@@ -133227,7 +133227,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原动有力;忌静旺有力;变冲`（interview-pass-eq-0.12.5）；内容哈希 `09e972ae076b6829…`
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;原动有力;忌静旺有力;变冲`（interview-pass-eq-0.12.5）；内容哈希 `bfa335b33324c7f4…`
 - 结论类别：倾向通过；情境：原神发动有力、官鬼受月克而得财生、动后变六冲
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -133251,7 +133251,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；子孙虽旺而静，动财生在前。
+财动生官，升选章说得美缺；子孙虽旺而静，动财生在前。
 
 所以倾向通过。
 
@@ -134215,7 +134215,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静旺有力;变冲`（interview-pass-eq-0.12.5）；内容哈希 `f69644947ed116ba…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静旺有力;变冲`（interview-pass-eq-0.12.5）；内容哈希 `0362673bc0c5ea88…`
 - 结论类别：倾向通过；情境：官鬼持世得财动之生、墓即生源、原神发动有力
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -134239,7 +134239,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；所入之墓即生源。
+财动生官，升选章说得美缺；所入之墓即生源。
 
 子孙静，动财生在前。所以倾向通过。
 
@@ -134267,7 +134267,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静旺有力;变冲;局父母局成参看世在`（interview-pass-eq-0.12.5）；内容哈希 `98a7f5dff14b3ecb…`
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原动有力;忌静旺有力;变冲;局父母局成参看世在`（interview-pass-eq-0.12.5）；内容哈希 `bdb5018838fbefca…`
 - 结论类别：倾向通过；情境：官鬼持世得财动之生、原神发动有力、父母局成
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -134291,7 +134291,7 @@
 
 **详断·过程**
 
-财动生官，八宫图说得美缺；子孙静而动财在前。
+财动生官，升选章说得美缺；子孙静而动财在前。
 
 所以倾向通过。
 
