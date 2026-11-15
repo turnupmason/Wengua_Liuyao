@@ -126053,7 +126053,7 @@
 - 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
 - 匹配键：等价类 `用明现[EFFECTIVE]静;世世动;原动有力;忌伏难出;变合`（interview-pass-eq-0.12.5）；内容哈希 `fad4d9bf5ed99b81…`
 - 结论类别：倾向通过；情境：世爻财动生官、官鬼入生源之墓、原神发动有力
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 REVIEW_REQUIRED｜production_allowed false
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：水风井之地天泰，酉月丁酉日
