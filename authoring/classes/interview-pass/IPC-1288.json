@@ -1,0 +1,261 @@
+{
+  "script_id": "IPC-1288",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用明现[EFFECTIVE]静;世世受克;官无情;原静不作用;忌静旺有力",
+  "class_rank": 1288,
+  "class_share_of_casts": 6.7e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "甲午"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "壬戌"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "丙辰"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "丁未"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "乙丑"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "己未"
+    }
+  ],
+  "scenario_tags": [
+    "兄弟当令",
+    "官星得日生",
+    "官星出现无情",
+    "应爻克世"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼兄弟当令而失令，得日生、日合而有效；然不持世、不生合世爻：出现无情（R-QIUMING-02）"
+    ],
+    "supporting": [],
+    "adverse": [
+      "世爻（妻财）休囚，应爻（兄弟为主）克世",
+      "忌神子孙静而旺相"
+    ],
+    "conflicts_resolved": [
+      "官偶入日墓、受日克，日生之扶仍在"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-QIUMING-02",
+      "R-SANMU-01",
+      "R-SHIYING-03",
+      "R-WANG-02",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "adverse",
+        "basis": "无情"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：官星靠日辰撑着，与你无情，你还受兄弟之克",
+    "brief": "这一卦偏难通过。这个月兄弟当令，官星失令，靠日辰相生撑着，可用；子孙得相，静静压着。你世上的财休囚，应位多是兄弟，克着你，卦中兄弟也常发动。官星不坐你的世爻，也不生合它，乡试章称这样的官星「出现无情」。",
+    "opening": "起卦月份兄弟当令，官鬼休囚，得日生、日合或日长生；偶入日墓、受日克。\n你的世爻是财，休囚，偶落旬空；应位或兄弟克你，或父母受你所克。卦中有时兄弟动，有时父母动，有时六爻皆静。官星与你的世爻不生不合。",
+    "process": "官星靠日辰撑住，子孙得相在旁，这一头本就吃力。\n它与你之间又没有情；你自己还挨着兄弟之克，是竞争、消耗之象。几样叠在一起，难成。",
+    "ending": "官星吃力又与你无情，这一轮偏难通过。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情会有个说法；从卦象看，这一轮偏难。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "事情有个说法",
+          "target_symbol": "官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "偏难通过。官星靠日辰撑着，不生合你的世爻，你还受兄弟之克。期望放低，多准备几条路。",
+    "classical_sources": [
+      {
+        "rule_id": "R-QIUMING-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "出现无情﹐难遂青云之志。父与官星虽则出现﹐若不生合世爻﹐或不持世﹐或世爻空破﹐或被世爻冲克﹐亦属无益。",
+        "applies_because": "官星不持世，又不生合世爻"
+      },
+      {
+        "rule_id": "R-WANG-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+        "applies_because": "官星失令而得日生"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而旺相"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。",
+        "applies_because": "应克世"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1288 类，占起卦概率 0.007%，全类 36 盘）：用神「明现[EFFECTIVE]静」；世爻「世受克」；卦级「官无情」；原神妻财安静而月令不旺，不主动作用；忌神子孙静而旺相，有力（只作用于休囚之爻）。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：日生(50%)、日合、日生(25%)、日长生(8%)、临日、日帝旺(8%)；应爻对世：克世(89%)、世克之(11%)；发动六亲：兄弟(56%)、无(22%)、父母(22%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神三层判定有效 100%（入日墓 8%、日克 8%）；忌神静而旺相 100%；原神静；世爻：财 95%（受克）；发动：兄弟 53%、无 26%、父母 21%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-1223（eq-0.12.5）；官不持世、不生合世（出现无情），由待时改判偏难，正文重写"
+  }
+}
