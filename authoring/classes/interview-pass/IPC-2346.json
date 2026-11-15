@@ -1,0 +1,242 @@
+{
+  "script_id": "IPC-2346",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用伏难出;世世安;原静旺有力;忌伏平",
+  "class_rank": 2346,
+  "class_share_of_casts": 4.6e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "辛亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "庚子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "己亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "癸亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "乙亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "壬子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "戊子"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏而难出",
+    "子孙当令",
+    "原神旺而静"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难通过",
+    "deciding_evidence": [
+      "官鬼不上卦，伏而难出：「伏神终不得出」（R-FUSHEN-03）"
+    ],
+    "supporting": [
+      "原神妻财（即世爻）静而旺相"
+    ],
+    "adverse": [
+      "起卦之月子孙当令；卦中子孙伏"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0004 之理"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-SHIYING-03",
+      "R-YONG-GUAN-01",
+      "R-YUEJIAN-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "hidden": true,
+        "effect": "adverse"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难通过：官星伏而难出，月令又是子孙",
+    "brief": "这一卦偏难通过。官星不在卦面，伏在下面出不来；起卦这个月子孙当令，克官之势在月令上。你世上的财得相，静着，生不到伏着出不来的官；应位的父母受你所克，帮不上忙。",
+    "opening": "官星伏于卦下，难出；起卦之月子孙当令。\n你的世爻是财，得相；应位是父母，受你克。卦中或父母发动，或无动爻。财静而旺相；子孙伏于卦下。",
+    "process": "伏而终不得出，飞伏神章断为难成；月令子孙当权。\n世财旺而静，引不出伏官。所以偏难。",
+    "ending": "官伏不出，月令又在子孙手里，这一轮通过的可能偏低。",
+    "timing": {
+      "text": "本卦不列应期。官星伏而难出，推不出可靠的出伏时点；更值得做的是同步推进其他机会。",
+      "entries": []
+    },
+    "conclusion": "这一轮偏难通过。官星伏而难出，月令又是子孙。期望放低，同步推进其他机会。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+        "applies_because": "伏神终不得出"
+      },
+      {
+        "rule_id": "R-YUEJIAN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "月将章第十六",
+        "quote": "月将即是月建又为月令。掌一月之权，司三旬之令。",
+        "applies_because": "月建掌一月之权"
+      },
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "财静而旺相"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "世为己，应为人，大宜契合。",
+        "applies_because": "世克应"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 2346 类，占起卦概率 0.005%，全类 18 盘）：用神「伏难出」；世爻「世安」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙不上卦，伏而平。全类一致：月建六亲：子孙(100%)；用神月令：不现(100%)。类内各盘不同之处：发动六亲：无(50%)、父母(50%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为子孙之五行；用神不上卦，伏神：用神难出、忌神（判平）100%；原神（含世爻）静而旺相；世爻皆财（相）；应爻父母 100%；发动：无 50%、父母 50%。不列应期条目。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
