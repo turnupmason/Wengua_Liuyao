@@ -1,0 +1,269 @@
+{
+  "script_id": "IPC-0170",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用同支两现[EFFECTIVE]静;世世安;官克世(世有气);原伏有效;忌伏待时",
+  "class_rank": 170,
+  "class_share_of_casts": 0.000231,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "乙亥"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "壬申"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        6,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛巳"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        6,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        8,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        6,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        8,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "甲子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        6,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "丙子"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        8,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "己亥"
+    },
+    {
+      "line_values": [
+        9,
+        7,
+        8,
+        8,
+        7,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "辛巳"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼同支两现",
+    "应爻生世",
+    "原神伏而有用",
+    "忌神伏而待时"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官鬼同支两现，有效（多得月生）、安静、不受冲克",
+      "忌神子孙伏而待时，眼下不能伤官"
+    ],
+    "supporting": [
+      "原神妻财伏而有用；应爻生世"
+    ],
+    "adverse": [],
+    "conflicts_resolved": [
+      "忌神待时作日后提醒",
+      "官克世而世有气，作有情（docs/18 第〇节第 1 条）"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-LIANGXIAN-03",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YONG-GUAN-08"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：官星有根，应来生你，财伏有用",
+    "brief": "这一卦倾向通过。官星两现同支，一般得财令相生，有根、安静、无伤；应爻生着你的世爻；生官的财伏而有用，克官的子孙伏而待时，眼下伤不到官星。宜趁早把事情落定。",
+    "opening": "官鬼两现、同支。起卦月份一般是财当令，官星得月生而有根；若非财月，也有扶持可用，以你这一卦的排盘为准。不空不破，无冲克。应爻生着你的世爻。\n两爻官星克着你世上的兄弟。你的世爻有气，按升选候补章「世旺者竞升」，官来克一个有气的世，正是官星找到你的样子。",
+    "process": "生克两方都伏着：生官的财伏而有用，是后援；克官的子孙伏而待时，眼下出不来。\n官星有根、应来相就、阻力暂伏，这是对你有利的时段；拖久了，子孙终有出伏之时。",
+    "ending": "官星有根、应来生世，这一轮倾向通过；宜早不宜迟。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，结果最容易到来；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。官星有根，应爻生世，财伏有用。需要确认的事尽早确认。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "官星得月生"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "世为己，应为人，大宜契合。",
+        "applies_because": "应爻生世"
+      },
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "财伏有用、子孙伏而待时"
+      },
+      {
+        "rule_id": "R-LIANGXIAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "八宫图第三",
+        "quote": "若两爻俱动或都不发动，择其旺者为用神。如一爻动者择其动者为用神。",
+        "applies_because": "两官同支"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-08",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "予屡试之﹐世旺者竞升﹐世衰者不吉。",
+        "applies_because": "官克世，按世爻旺衰论"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 170 类，占起卦概率 0.023%，全类 167 盘）：用神「同支两现[EFFECTIVE]静」；世爻「世安」；卦级「官克世(世有气)」；原神妻财不上卦，伏而有用；忌神子孙不上卦，伏而待时。类内各盘不同之处：月建六亲：妻财(72%)、父母(14%)、兄弟(13%)；用神月令：相(72%)、休囚(28%)；用神生扶：月生(47%)、日生(13%)、日生、月生(11%)、日生、日长生(8%)；发动六亲：父母(37%)、兄弟(29%)、父母父母(23%)、无(11%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财 75%、父母 13%、兄弟 12%；应爻生世 100%。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-0174（eq-0.12.5）；原判倾向通过不变；类键新增「官克世(世有气)」，作有情（docs/18 第〇节第 1 条），卦象段补一句"
+  }
+}
