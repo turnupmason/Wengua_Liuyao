@@ -1,0 +1,243 @@
+{
+  "script_id": "IPC-2464",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.12.5",
+  "class_key": "用日月为用;世世安;原静不作用;忌动有力;变合",
+  "class_rank": 2464,
+  "class_share_of_casts": 4.5e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "壬申"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊申"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "丁亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "庚午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "癸丑"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙丑"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        8,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "壬子"
+    }
+  ],
+  "scenario_tags": [
+    "日月为用",
+    "子孙发动",
+    "应爻生世"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官鬼不以卦爻为用（伏官不取），月令即官鬼之五行，以日月为用神（R-FUSHEN-01）",
+      "子孙虽发动有力，卦爻伤不到日月：「爻伤日，徒受其名」"
+    ],
+    "supporting": [
+      "原神妻财（世爻）静；应爻（子孙）生世；动后变六合"
+    ],
+    "adverse": [
+      "忌神子孙发动"
+    ],
+    "conflicts_resolved": [
+      "同 IPC-0604 之理"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-GUA-CHONGHE-01",
+      "R-KONG-06",
+      "R-RIZHEN-01",
+      "R-SHIYING-03",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-05"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：官星是当令的月建，子孙动也伤不到",
+    "brief": "这一卦倾向通过。官星不在卦面上，起卦这个月正是官当令，以月建为用。卦中应位的子孙在动，看着凶，可卦爻伤不到日月，古书说这是徒受其名。子孙生你世上的财，财再生官，倒顺了一路。卦动后变六合。",
+    "opening": "官鬼以月建为用（伏官不取）；起卦之月官星当令。\n你的世爻是财，多休囚，偶落旬空；应位是子孙，生你。卦中子孙发动，动后变六合。财静；子孙发动。",
+    "process": "用神是月建，卦爻伤不到，千金赋所谓爻伤日徒受其名。\n子孙生世财，财又生官。所以倾向通过。",
+    "ending": "月建为官，动子孙伤不到，这一轮倾向通过。",
+    "timing": {
+      "text": "用神为月建或日辰，不在卦爻之中，本卦不按卦爻另列日子；传统上可留意官星值日、值月之时。",
+      "entries": []
+    },
+    "conclusion": "倾向通过。官星是当令的月建，子孙动也伤不到。主动推进，别被表面的波折吓住。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官鬼不上卦，以月建、日辰为用"
+      },
+      {
+        "rule_id": "R-RIZHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "日辰章第十七",
+        "quote": "日辰为六爻之主宰，司四时之旺相。",
+        "applies_because": "爻伤日，徒受其名"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "世为己，应为人，大宜契合。",
+        "applies_because": "应生世"
+      },
+      {
+        "rule_id": "R-GUA-CHONGHE-01",
+        "source_book": "增删卜易",
+        "source_chapter": "八宫图第三",
+        "quote": "六冲卦者，干为天、坎为水、艮为山、震为雷、巽为风、离为火、坤为地、兑为泽，此八宫第一卦皆是六冲卦，再者天雷无妄、雷天大壮也是六冲卦一共十卦，其馀不是。",
+        "applies_because": "动后变六合"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.12.5，写稿顺序第 2464 类，占起卦概率 0.005%，全类 35 盘）：用神「日月为用」；世爻「世安」；原神妻财安静而月令不旺，不主动作用；忌神子孙发动而有力；卦级「变合」。全类一致：月建六亲：官鬼(100%)；用神月令：不现(100%)。结构：全类月建为官鬼之五行；用神以日月为用 100%（伏官有用 69%、待时 31%，不取）；原神静；忌神（应爻）发动；世爻皆财（有效 91%、无力 9%；旬空 3%）；应爻子孙生世 100%；发动：子孙 100%（动后变合）。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-14",
+    "revision": 1,
+    "revision_note": "初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架"
+  }
+}
