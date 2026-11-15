@@ -1,0 +1,274 @@
+{
+  "script_id": "IPC-1450",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用化出有气;世世安;官克世(世有气);原伏有效;忌静不作用;变冲",
+  "class_rank": 1450,
+  "class_share_of_casts": 6.2e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "己酉"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙酉"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "壬申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        8,
+        7,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "甲辰"
+    }
+  ],
+  "scenario_tags": [
+    "官不上卦",
+    "父母动化出官星",
+    "官克世而世有气",
+    "原神伏而有用",
+    "变六冲"
+  ],
+  "judgment": {
+    "verdict": "pass-but-slow",
+    "verdict_label": "有望通过，但要待时",
+    "deciding_evidence": [
+      "官不上卦，以父母动而化出之官为用，化出之官得财令之生而有气（docs/18 第〇节第 4 条）",
+      "化出之官克世而世爻有气：「世旺者竞升」（R-YONG-GUAN-08），作有情",
+      "原神妻财伏而有用"
+    ],
+    "supporting": [
+      "卦下伏官或可出、或待时"
+    ],
+    "adverse": [
+      "动后卦变六冲",
+      "世爻生应位之子孙，泄己之气"
+    ],
+    "conflicts_resolved": [
+      "他爻化出官星，第 4 条以「生合世」为吉；本类化出之官克有气之世，按第 1 条作有情",
+      "卦变六冲，用神有气冲不破，主过程散而慢"
+    ],
+    "rule_ids": [
+      "R-CHONG-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-GUA-CHONGHE-01",
+      "R-HUA-01",
+      "R-QIUMING-02",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YONG-GUAN-08"
+    ],
+    "decisive": [
+      {
+        "role": "world",
+        "effect": "support"
+      },
+      {
+        "role": "yuan",
+        "hidden": true,
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "有望通过，但要待时：父母化出有气之官，来就你有气的世爻",
+    "brief": "这一卦有望通过，但要等。卦面上没有官鬼；这个月财当令为主，卦中父母发动，化出一颗有气的官星，以它为用。这颗官克着你世上的兄弟，你的世爻有扶有气，这一克在求名卦里是官来就你。生官的财伏在卦下而有用。只是父母一动，卦变六冲，过程会散、会慢。",
+    "opening": "卦面不见官鬼，伏官或可出、或待时，用神取父母化出的那一颗，得财令之生而有气。起卦月份财当令，或父母当令。\n你的世爻是兄弟，有气，受化出之官所克；应位是子孙，受你所生。卦中父母发动，动后卦变六冲。",
+    "process": "升选候补章说世旺者遇官来克是竞升之象；你这一爻撑得住，这颗官便是来就你。\n伏财有用，出伏时还能再添一份生。美中不足是卦变六冲，冲主散，事情中途易起变数，所以能成而慢。",
+    "ending": "化出之官有气而来就你，卦又变冲，这一轮有望通过，节奏偏慢。",
+    "timing": {
+      "text": "按「逢值」取期：官星本支值日之日前后，事情较易有眉目；卦变六冲，若当时未定，还要再等。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "事情渐有眉目",
+          "target_symbol": "官鬼（伏藏或化出）",
+          "condition": "用神逢值",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "有望通过，但要待时。父母化出的官星有气，克你是相就；卦变六冲，过程反复。耐心推进。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "吉者为世爻发动化出官星；本类为父母化出"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-08",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "予屡试之﹐世旺者竞升﹐世衰者不吉。",
+        "applies_because": "官克世，按世爻旺衰论"
+      },
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "妻财伏而有用"
+      },
+      {
+        "rule_id": "R-CHONG-01",
+        "source_book": "增删卜易",
+        "source_chapter": "六冲章第二十",
+        "quote": "冲者散也，凡占凶事宜于冲散、占吉事而不宜，必兼用神而言，用神旺虽冲不破，用神失陷凶而又凶",
+        "applies_because": "冲者散也"
+      },
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官不上卦"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 1450 类，占起卦概率 0.006%，全类 48 盘）：用神「化出有气」；世爻「世安」；卦级「官克世(世有气)」；原神妻财不上卦，伏而有用；忌神子孙安静而月令不旺，不主动作用；卦级「变冲」。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：妻财(81%)、父母(19%)；均不改变本类结论，正文不写，由排盘逐盘列出。月建：财之五行 87%、父母之五行 13%；伏神：用神、原神皆有用 100%；动后变出六冲卦。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-0730（eq-0.12.5）；新类：官不上卦，父母动而化出有气之官，克世而世有气（第 1 条作有情）；动后卦变六冲；旧稿 IPC-0730、IPC-1017 之盘归入；判有望而待时，正文重写"
+  }
+}
