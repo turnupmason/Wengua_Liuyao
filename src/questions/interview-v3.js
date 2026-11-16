@@ -495,7 +495,11 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (ziChiShi && wc.void) N('子孙持世而旬空：子孙未出空，暂不克官；若问两三日内之事，许之可得（世福空而亦升）', ['R-ZS-QM-13']);
   const lingXing = g && g.kind === 'line' && g.br === day && gLv >= 1;
   if (ziChiShi && lingXing) { N(`子孙持世，但官${g.br}临日辰（爻遇令星，物难我害；用官忌子孙持世，须是日辰旺相透出用爻，方不畏）`, ['R-DTJ-YQ-01', 'R-LINGXING-01']); minus.push({ text: '子孙持世：虽官临日辰不畏，亦费力中得', rules: ['R-DTJ-YQ-01'] }); }
-  else if (ziChiShi) {
+  // 用户裁定 B-014（D-016）：子孙持世须看有无克官之力；月破、日破、休囚无气而受克者无力，不作否决，改看官父世，亦不自动判过。
+  // 易林补遗总断章问进学例「纵有子兴亦被日辰冲破，此兄子二爻皆无忌也」（R-YLB-ZD-18）。只是旬空者仍依增删升选章否决（R-ZS-QM-13）
+  const ziWuLi = ziChiShi && wLv === 0 && (wc.monthBreak || wc.dayClash?.zengshan === '日破' || ws.places?.some((p) => p.effect === '克'));
+  if (ziChiShi && !lingXing && ziWuLi) N(`子孙${world.branch}持世而${wc.monthBreak ? '月破' : wc.dayClash?.zengshan === '日破' ? '日破' : '休囚受克'}无气，无克官之力：不作否决，改看官父世（纵有子兴亦被日辰冲破……此兄子二爻皆无忌也）`, ['R-YLB-ZD-18', 'R-QIUMING-10']);
+  else if (ziChiShi && !lingXing) {
     if (fFa.length) finalLayer = '子孙持世：录取一层可过（父发），成行一层难（子孙持世，休问功名）';
     else V('子孙持世', '子孙持世（子孙持世，休问功名）', ['R-QIUMING-10', 'R-YONG-GUAN-05']);
   }
