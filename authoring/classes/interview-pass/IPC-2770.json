@@ -1,0 +1,273 @@
+{
+  "script_id": "IPC-2770",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用化出有气;世世安;官生合世;原动有力;忌动有力;局官鬼局虚参看",
+  "class_rank": 2770,
+  "class_share_of_casts": 3.9e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "甲辰"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "辛酉"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "庚午"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "辛未"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "癸亥"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        6,
+        9,
+        7
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "戊申"
+    }
+  ],
+  "scenario_tags": [
+    "官不上卦",
+    "财动化出官星",
+    "化出之官合世",
+    "子孙动而化财接续相生"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "官不上卦，以财爻动而化出之官为用，化出之官有气而合世：化出官星生合世爻为吉（R-YONG-GUAN-03，docs/18 第〇节第 4 条）",
+      "忌神子孙动而有力，然动而化财，与原神同动，接续相生，「化凶而为吉」（R-YUANJI-06）"
+    ],
+    "supporting": [
+      "原神妻财发动有力",
+      "三支官局虚一待用，世生局（参看）"
+    ],
+    "adverse": [
+      "应爻（兄弟）克世",
+      "子孙当令之月，化出之官休囚；化出之官有时受日辰之克"
+    ],
+    "conflicts_resolved": [
+      "他爻化出官星，第 4 条以生合世为吉；本类化出之官合世，作有情",
+      "忌神动而有力，本为主要不利依据；然与原神同动、化出原神，接续相生，书中以为化凶为吉（同 IPC-1922 之理）",
+      "卦下伏官或可出、或待时、或难出，化出之官在卦面，取化出者为用"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-HUA-01",
+      "R-SANHE-04",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-03",
+      "R-YUANJI-01",
+      "R-YUANJI-06"
+    ],
+    "decisive": [
+      {
+        "role": "world",
+        "effect": "support"
+      },
+      {
+        "role": "yuan",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：动财化出官星合你，克官的子孙也动而化财",
+    "brief": "这一卦倾向通过。卦面上没有官鬼，用神取卦中动财化出的那颗官星，它有气，与你世上的财相合，是官来就你。卦中子孙也在动，有力，可它化出的是财，子孙生财、财生官，一路接续相生，古书说这是化凶为吉。应位兄弟克你，竞争在所难免。",
+    "opening": "六爻没有官鬼，卦下伏官不取，用神取动财化出之官，有气；起卦之月子孙、官星或财当令，子孙当令时它休囚，有时受日克。\n持世之财安静，或旺或相或休囚；应位是兄弟，克你。卦中财与子孙同动，或兼父母；子孙化财，财化官。官局三支缺一，你去生它，仅供参看。化出之官与你的世爻相合。",
+    "process": "元神忌神衰旺章说忌神与元神同动，接续相生，化凶而为吉；这一卦的子孙正是动而化财。\n化出之官合你，情分足；子孙当令的月份，官星偏弱，宜早不宜拖。",
+    "ending": "化出之官合世、子孙化财接续相生，这一轮倾向通过。",
+    "timing": {
+      "text": "按「逢值」取期：化出之官本支值日之日前后，结果较容易出来；子孙当令之月官星偏弱，宜早推进。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "官鬼（化出）",
+          "condition": "用神逢值",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。动财化出的官星与你的世爻相合，克官的子孙也动而化财。抓紧推进，留意竞争。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YONG-GUAN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+        "quote": "官爵荣身﹐须宜持世。财禄恩养﹐最喜生身。旺官持世及日月动爻作官星生合世爻﹐或世爻发动化出官星生世皆吉。又曰财动生官得美缺﹐官临日月必超迁。",
+        "applies_because": "化出官星生合世爻为吉"
+      },
+      {
+        "rule_id": "R-YUANJI-06",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "忌神未土反生元神之酉金，金生亥水，接续相生，化凶而为吉。",
+        "applies_because": "接续相生，化凶而为吉"
+      },
+      {
+        "rule_id": "R-YUANJI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "元神忌神衰旺章第十",
+        "quote": "元神能生用神者有五：元神旺相或临日月或日月动爻生扶者一也。元神动化回头生及化进神者二也。元神长生帝旺于日辰三也。元神与忌神同动四也。元神旺动临空化空五也。",
+        "applies_because": "妻财发动有力，生官"
+      },
+      {
+        "rule_id": "R-SHIYING-03",
+        "source_book": "黄金策",
+        "source_chapter": "1、总断千金赋",
+        "quote": "应位遭伤，不利他人之事。世爻受制，岂宜自己之谋。",
+        "applies_because": "应克世"
+      },
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官不上卦"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 2770 类，占起卦概率 0.004%，全类 132 盘）：用神「化出有气」；世爻「世安」；卦级「官生合世」；原神妻财发动而有力；忌神子孙发动而有力；三合「官鬼局虚参看」。全类一致：用神月令：不现(100%)。类内各盘不同之处：月建六亲：子孙(45%)、官鬼(41%)、妻财(14%)；发动六亲：妻财子孙(53%)、妻财子孙父母(47%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 1,
+    "revision_note": "初稿（eq-0.13 新类，旧稿未覆盖）：官不上卦，财爻动而化出有气之官，生合世爻（docs/18 第〇节第 4 条）；子孙动而有力，化财，接续相生（R-YUANJI-06）"
+  }
+}
