@@ -354,6 +354,19 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (gWang && fWang) P('官父两旺', '官父两旺', ['R-QIUMING-15', 'R-QIUMING-14', 'R-HJC-QM-01']);
   if (fFa.length) P('父发', '父母发动而生合世（官衰父发，亦论抡收）', ['R-QIUMING-03']);
   for (const h of harm) if (h.status === 'formed' && ['官鬼', '父母'].includes(h.relative) && h.world === '世在局') P('官父局', `${h.relative}局成而世在局`, ['R-SANHE-05', 'R-HJC-QM-08']);
+  // 待时成局（空破待填、入墓待冲）、虚一待用：成局之日月见其吉凶（R-SANHE-03、R-SANHE-04）
+  for (const h of harm) {
+    if (!['deferred', 'virtual'].includes(h.status)) continue;
+    const how = h.status === 'deferred' ? '待时成局（空破待填满之日、入墓待冲开之日成之）' : '虚一待用（待后时之月日填之）';
+    if (h.relative === '子孙' && !(riyueGuan && special.riyueYongToWorld?.length) && !calGuanToWorld.length) {
+      if (h.status === 'deferred') minus.push({ text: `子孙${h.branches}局${how}：局成之日伤官（合成子孙局者乃伤煞之神）`, rules: ['R-SANHE-03', 'R-SANHE-05'] });
+      else N(`子孙${h.branches}局${how}：眼下未成，补足之年月防其伤官`, ['R-SANHE-04', 'R-SANHE-05']);
+    }
+    if (['官鬼', '父母'].includes(h.relative) && h.world === '世在局') {
+      if (h.status === 'deferred') plus.push({ text: `${h.relative}${h.branches}局${how}而世在局：局成之日得意`, rules: ['R-SANHE-03', 'R-SANHE-05'] });
+      else N(`${h.relative}${h.branches}局${how}而世在局：补足之年月得意`, ['R-SANHE-04', 'R-SANHE-05']);
+    }
+  }
   if (resp && resp.moving && (gen(resp.element, W.el) || he(resp.branch, W.br)) && gLv >= 1 && fLv >= 1) P('应荐', '应爻发动生合世（应合日生，必资鹗荐）', ['R-QIUMING-09', 'R-HJC-QM-13']);
 
   // 子孙持世、官临应：父发者录取层可过，成行层难
