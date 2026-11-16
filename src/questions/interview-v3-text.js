@@ -42,9 +42,10 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // 1. 临场表现（父母）
   const fu = d.fu;
-  if (!fu) out.push(sentence('临场表现', '父母（面试表现、材料、通知）卦中不见，也无伏神可取：表现一层卦中没有明显的象；从卦象看，岗位的名分、编制一时不明（卦无父母，终无所任之邦）。', ['R-QIUMING-14', 'R-DTJ-SH-06']));
+  if (!fu && d.riyueFu) out.push(sentence('临场表现', `父母不上卦，而${d.riyueFu.branches.map((b) => (b === chart.calendar.monthBranch ? `${b}月` : `${b}日`)).join('、')}即父母之五行：以日月为父母（用神不现，即以日月为用神），表现一层有日月撑着。`, ['R-FUSHEN-01']));
+  else if (!fu) out.push(sentence('临场表现', '父母（面试表现、材料、通知）卦中不见，也无伏神可取：表现一层卦中没有明显的象；从卦象看，岗位的名分、编制一时不明（卦无父母，终无所任之邦）。', ['R-QIUMING-14', 'R-DTJ-SH-06']));
   else {
-    const where = fu.kind === 'hidden' ? `父母${fu.branch}伏在${POS[fu.position]}${fu.underWhat}之下` : `父母${fu.branch}在${POS[fu.position]}${fu.spirit ? `，临${fu.spirit}` : ''}`;
+    const where = fu.kind === 'hidden' ? `父母${fu.branch}伏在${POS[fu.position]}${fu.underWhat}之下` : fu.kind === 'changed' ? `父母不上卦，由${POS[fu.position]}${fu.from}动而化出父母${fu.branch}（飞爻变爻俱无用神者，始寻伏神）` : `父母${fu.branch}在${POS[fu.position]}${fu.spirit ? `，临${fu.spirit}` : ''}`;
     let t = `${where}，${LV[fu.level]}`;
     t += fu.level === 2 ? '，临场发挥有底气' : fu.level === 1 ? '，发挥中规中矩' : '，临场容易吃亏（表达、材料或笔试）';
     if (fu.kind === 'hidden') t += `；伏于${fu.underWhat}之下，从卦象看${TOPIC[fu.underWhat] || '题目一时摸不准'}`;
@@ -184,6 +185,7 @@ export function interviewV3Text(chart, ctx = {}) {
   if (h.wandering) ht += '；游魂卦：从卦象看，去处偏外地或要变动';
   if (h.returning) ht += '；归魂卦：从卦象看，去处近，或回原处';
   ht += `；世在${POS[h.worldPosition]}，从卦象看，工作地点离你${h.distance}`;
+  if (d.monthBody?.relatives?.length) ht += `；卦身临${d.monthBody.relatives.join('、')}（只作参考：增删卜易谓卦身不验）`;
   if (h.innerOuter) ht += `；内外卦${h.innerOuter}${h.innerOuter === '内克外' ? '（我能制彼，所求可成之象）' : h.innerOuter === '外克内' ? '（彼来制我，所求偏难之象）' : ''}`;
   if (d.fanFu.fanyin) ht += '；反吟：事情反复，去而复来';
   if (d.fanFu.fuyin) ht += '；伏吟：拖延、淹留';
@@ -204,9 +206,12 @@ export function interviewV3Text(chart, ctx = {}) {
     const t = g.kind === 'hidden' ? `结果看官鬼：官伏藏，以官${b}临值之日为期` : g.void ? `结果看官鬼：官旬空，出空填实或冲空之日` : g.active === '发动' ? `结果看官鬼：官动，逢值（${b}）逢合之日为期` : `结果看官鬼：官静，逢值（${b}）逢冲之日为期`;
     out.push(sentence('应期', `${t}；官属${g.trade.element}${g.trade.element === '火' ? '，火动应期偏快' : g.trade.element === '水' ? '，水动应期偏慢' : ''}。`, ['R-YY-YL-03', 'R-YINGQI-01']));
   }
+  if (g?.voidOrBroken?.length) out.push(sentence('应期', `官鬼两现，其中${g.voidOrBroken.map((x) => `${x.branch}${x.kind}`).join('、')}：应期多应在实空实破之时（${g.voidOrBroken.map((x) => `${x.branch}`).join('、')}之日月）（两现章：舍其不空而用旬空，舍其不破而用月破）。`, ['R-LIANGXIAN-04', 'R-ZS-LI-01']));
+  if (g && g.count >= 3) { const MUB = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' }; out.push(sentence('应期', `官鬼${g.count}现，用爻重叠太过：待墓库（${MUB[g.trade.element]}）收藏之日月，或克制之日月而成（太过者损之斯成）。`, ['R-QJF-05'])); }
   out.push(sentence('应期', `快慢：${tm.speed.join('；')}。`, ['R-YY-MW-01']));
   if (tm.harmonyWait.length) out.push(sentence('应期', `三合待时：${tm.harmonyWait.join('；')}（虚一待用，待所缺之字到时应）。`, ['R-SANHE-03', 'R-SANHE-04']));
   if (tm.season) out.push(sentence('应期', `本卦属${d.hexagram.palace}宫，按卦宫，大的时节在${tm.season}之后（宫居${d.hexagram.palace}，${tm.season}后选）。`, ['R-YY-YL-03']));
+  if (r.notes.some((n) => /^子孙\S*(无力|入墓|化回头克|合住|化退|衰而又绝|化绝|化破)/.test(n.text))) out.push(sentence('应期', '克官的子孙眼下被制，但除恶未尽：日后子孙逢生扶、冲开之年月，仍要防它复起（除恶未尽，须防死灰复燃）。', ['R-QJF-13']));
   out.push(sentence('应期', '若是心里忐忑而子孙持世，结果多在子孙值日出来；若是心里欢喜而官星持世，多在官鬼值日出来（心有忧惧，值子孙之日而发案；心有欢喜，逢官鬼之日而挂榜）。', ['R-ZS-QM-14']));
 
   // 10. 建议：针对最弱一层

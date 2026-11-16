@@ -2,15 +2,15 @@
   "question": "career.interview.interview-pass",
   "equivalence_version": "interview-pass-eq-0.14.0",
   "charts": 2949120,
-  "seconds": 116.454,
+  "seconds": 105.002,
   "fine": {
-    "classes": 409700,
+    "classes": 409648,
     "coverage_by_cast_probability": {
-      "0.5": 18422,
-      "0.8": 79030,
-      "0.9": 138092,
-      "0.95": 195411,
-      "0.99": 302678
+      "0.5": 18419,
+      "0.8": 79027,
+      "0.9": 138082,
+      "0.95": 195391,
+      "0.99": 302648
     },
     "top": [
       {
@@ -154,13 +154,13 @@
         "share": 0.00028
       },
       {
-        "fingerprint": "用[不现::伏deferred:generates];原[静有力];忌[伏unlikely];仇动0;世他;化官0化忌0;;;;",
-        "charts": 108,
+        "fingerprint": "用[持世,静,休囚,,,,,生1克0,持世,伏:unlikely,];原[伏unlikely];忌[伏unlikely];仇动0;世官;化官0化忌0;;;;",
+        "charts": 106,
         "share": 0.00028
       },
       {
-        "fingerprint": "用[持世,静,休囚,,,,,生1克0,持世,伏:unlikely,];原[伏unlikely];忌[伏unlikely];仇动0;世官;化官0化忌0;;;;",
-        "charts": 106,
+        "fingerprint": "用[不现::伏deferred:generates];原[静有力];忌[伏unlikely];仇动0;世他;化官0化忌0;;;;",
+        "charts": 108,
         "share": 0.00028
       },
       {
@@ -174,12 +174,12 @@
         "share": 0.00027
       },
       {
-        "fingerprint": "用[,静,旺,,,,,生2克0,世生之,,];原[静无力];忌[静无力];仇动0;世他;化官0化忌0;合;;;",
+        "fingerprint": "用[持世,静,休囚,,,,,生1克0,持世,,];原[静无力];忌[静有力];仇动0;世官;化官0化忌0;;;;",
         "charts": 69,
         "share": 0.00027
       },
       {
-        "fingerprint": "用[持世,静,休囚,,,,,生1克0,持世,,];原[静无力];忌[静有力];仇动0;世官;化官0化忌0;;;;",
+        "fingerprint": "用[,静,旺,,,,,生2克0,世生之,,];原[静无力];忌[静无力];仇动0;世他;化官0化忌0;合;;;",
         "charts": 69,
         "share": 0.00027
       },
@@ -194,8 +194,8 @@
         "share": 0.00026
       },
       {
-        "fingerprint": "用[,静,旺,,,,,生2克0,克世,,];原[伏unlikely];忌[静无力];仇动0;世他;化官0化忌0;;;;",
-        "charts": 102,
+        "fingerprint": "用[持世,静,相,,,,,生1克1,持世,,];原[静有力];忌[静并见];仇动0;世官;化官0化忌0;;;;",
+        "charts": 68,
         "share": 0.00026
       },
       {
@@ -204,8 +204,8 @@
         "share": 0.00026
       },
       {
-        "fingerprint": "用[持世,静,相,,,,,生1克1,持世,,];原[静有力];忌[静并见];仇动0;世官;化官0化忌0;;;;",
-        "charts": 68,
+        "fingerprint": "用[,静,旺,,,,,生2克0,克世,,];原[伏unlikely];忌[静无力];仇动0;世他;化官0化忌0;;;;",
+        "charts": 102,
         "share": 0.00026
       },
       {
@@ -274,12 +274,12 @@
         "share": 0.00024
       },
       {
-        "fingerprint": "用[,静,旺,,,,,生2克0,克世,,];原[伏likely];忌[静无力];仇动0;世他;化官0化忌0;;;;",
+        "fingerprint": "用[不现::伏unlikely:controlledBy];原[静并见];忌[静并见];仇动0;世他;化官0化忌0;;;;",
         "charts": 92,
         "share": 0.00024
       },
       {
-        "fingerprint": "用[不现::伏unlikely:controlledBy];原[静并见];忌[静并见];仇动0;世他;化官0化忌0;;;;",
+        "fingerprint": "用[,静,旺,,,,,生2克0,克世,,];原[伏likely];忌[静无力];仇动0;世他;化官0化忌0;;;;",
         "charts": 92,
         "share": 0.00024
       },
@@ -309,26 +309,31 @@
         "share": 0.00023
       },
       {
-        "fingerprint": "用[不现::伏deferred:controlledBy];原[静并见];忌[静并见];仇动0;世他;化官0化忌0;;;;",
-        "charts": 90,
+        "fingerprint": "用[持世,静,旺,,,,,生1克0,持世,,];原[静无力];忌[静并见];仇动0;世官;化官0化忌0;;;;",
+        "charts": 60,
         "share": 0.00023
       }
     ]
   },
   "classes": {
-    "classes": 1008364,
+    "classes": 1028938,
     "coverage_by_cast_probability": {
-      "0.5": 36914,
-      "0.8": 184868,
-      "0.9": 341822,
-      "0.95": 478453,
-      "0.99": 749293
+      "0.5": 39035,
+      "0.8": 192144,
+      "0.9": 353772,
+      "0.95": 491366,
+      "0.99": 766527
     },
     "top": [
       {
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌无力;三版pass|过旺官持世",
+        "charts": 234,
+        "share": 0.00076
+      },
+      {
         "fingerprint": "W|用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail|否官无力",
-        "charts": 301,
-        "share": 0.00084
+        "charts": 261,
+        "share": 0.00073
       },
       {
         "fingerprint": "W|用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力+父无力",
@@ -336,49 +341,44 @@
         "share": 0.0007
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌无力;三版pass|过旺官持世",
-        "charts": 194,
-        "share": 0.00061
-      },
-      {
         "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌静不作用;三版pass|过旺官持世",
-        "charts": 190,
-        "share": 0.00053
+        "charts": 224,
+        "share": 0.00065
       },
       {
         "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版pass|过官父两旺+旺官持世",
-        "charts": 145,
-        "share": 0.00043
+        "charts": 132,
+        "share": 0.0005
       },
       {
-        "fingerprint": "W|用明现临应[EFFECTIVE]静;世世安;官生合世;日月官生合世;原伏难出;忌无力;三版pass|过官父两旺+日月官生合世+旺官生合世+旺父就世",
-        "charts": 243,
-        "share": 0.00042
-      },
-      {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官无情;原静旺有力;忌静不作用;六合;三版wait",
-        "charts": 278,
-        "share": 0.0004
-      },
-      {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版fail",
-        "charts": 177,
-        "share": 0.00037
-      },
-      {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌伏难出;三版pass|过旺官持世",
-        "charts": 121,
-        "share": 0.00037
-      },
-      {
-        "fingerprint": "W|用同支两现[EFFECTIVE]静;世世受克;官生合世;原静旺有力;忌伏难出;三版pass|过旺官生合世",
-        "charts": 144,
-        "share": 0.00037
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌无力;六合;三版wait",
+        "charts": 138,
+        "share": 0.00046
       },
       {
         "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力;三版pass|过旺官持世",
-        "charts": 112,
+        "charts": 135,
+        "share": 0.00045
+      },
+      {
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版wait|过官父两旺+旺官持世",
+        "charts": 136,
+        "share": 0.00042
+      },
+      {
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+        "charts": 125,
+        "share": 0.00038
+      },
+      {
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官无情;原静旺有力;忌静不作用;六合;三版wait",
+        "charts": 227,
         "share": 0.00037
+      },
+      {
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌无力;六合;三版wait",
+        "charts": 112,
+        "share": 0.00036
       },
       {
         "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail",
@@ -386,33 +386,53 @@
         "share": 0.00036
       },
       {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
-        "charts": 195,
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世",
+        "charts": 109,
+        "share": 0.00035
+      },
+      {
+        "fingerprint": "W|用明现临应[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力;三版wait|过官父两旺+日月官生合世+旺官生合世+旺父就世",
+        "charts": 122,
+        "share": 0.00035
+      },
+      {
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版wait|过官父两旺+旺官持世",
+        "charts": 114,
         "share": 0.00034
       },
       {
-        "fingerprint": "W|用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
-        "charts": 148,
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌伏难出;三版pass|过旺官持世",
+        "charts": 105,
+        "share": 0.00034
+      },
+      {
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;六合;三版wait|过官父两旺",
+        "charts": 131,
         "share": 0.00033
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌无力;六合;三版wait",
-        "charts": 97,
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力;六冲;三版wait|过官父两旺+日月官生合世+旺官生合世+旺父就世",
+        "charts": 85,
         "share": 0.00033
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
-        "charts": 92,
+        "fingerprint": "W|用明现临应[EFFECTIVE]静;世世安;官生合世;日月官生合世;原伏难出;忌无力;三版pass|过官父两旺+日月官生合世+旺官生合世+旺父就世",
+        "charts": 150,
+        "share": 0.00033
+      },
+      {
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世+官克世|过官父两旺+旺父就世",
+        "charts": 113,
         "share": 0.00032
       },
       {
-        "fingerprint": "W|用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
-        "charts": 159,
+        "fingerprint": "W|用同支两现[EFFECTIVE]静;世世受克;官生合世;原静旺有力;忌伏难出;三版pass|过旺官生合世",
+        "charts": 107,
         "share": 0.00032
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌无力;六合;三版wait",
-        "charts": 92,
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌静不作用;六合;三版wait",
+        "charts": 96,
         "share": 0.00031
       },
       {
@@ -421,19 +441,9 @@
         "share": 0.00031
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌静不作用;六合;三版wait",
-        "charts": 96,
-        "share": 0.0003
-      },
-      {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过旺官持世",
-        "charts": 101,
-        "share": 0.0003
-      },
-      {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌无力;三版pass|过旺官持世",
-        "charts": 142,
-        "share": 0.00028
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+        "charts": 100,
+        "share": 0.00029
       },
       {
         "fingerprint": "W|用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子孙持世+官无力",
@@ -441,59 +451,39 @@
         "share": 0.00028
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世+官克世|过官父两旺+旺父就世",
-        "charts": 99,
-        "share": 0.00028
-      },
-      {
-        "fingerprint": "W|用同支两现[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌伏难出;三版pass|过官父两旺+日月官生合世+旺官生合世+旺父就世",
-        "charts": 106,
-        "share": 0.00027
-      },
-      {
         "fingerprint": "W|用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力+父无力",
         "charts": 86,
         "share": 0.00027
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
-        "charts": 95,
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;变合;三版wait|过官父两旺+旺官持世",
+        "charts": 206,
         "share": 0.00027
       },
       {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌无力;三版pass|过官父两旺+旺官持世",
-        "charts": 165,
-        "share": 0.00027
-      },
-      {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌静不作用;三版pass|过官父两旺+旺官持世",
-        "charts": 181,
+        "fingerprint": "W|用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+        "charts": 123,
         "share": 0.00026
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原动有力;忌伏难出;三版pass|过旺官持世",
-        "charts": 201,
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌静不作用;三版fail|否兄持世+官克世|过官父两旺+旺父就世",
+        "charts": 87,
         "share": 0.00026
       },
       {
-        "fingerprint": "W|用明现持世[INEFFECTIVE]静;世持世;原待时(旬空);忌静旺有力;三版fail|否官无力",
-        "charts": 94,
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原静不作用;忌静不作用;六合;三版wait",
+        "charts": 82,
+        "share": 0.00026
+      },
+      {
+        "fingerprint": "W|用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+        "charts": 118,
         "share": 0.00025
       },
       {
-        "fingerprint": "W|用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail|否官无力+父无力",
-        "charts": 65,
-        "share": 0.00025
-      },
-      {
-        "fingerprint": "W|用日月为用;世世安;官无情;原静不作用;忌静不作用;三版wait|过日月官生合世",
-        "charts": 64,
-        "share": 0.00025
-      },
-      {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;六合;三版pass|过官父两旺",
-        "charts": 97,
-        "share": 0.00025
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过旺官持世",
+        "charts": 68,
+        "share": 0.00024
       },
       {
         "fingerprint": "W|用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
@@ -501,29 +491,9 @@
         "share": 0.00024
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世",
-        "charts": 80,
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版fail",
+        "charts": 116,
         "share": 0.00024
-      },
-      {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力;六冲;三版pass|过官父两旺+日月官生合世+旺官生合世+旺父就世",
-        "charts": 61,
-        "share": 0.00024
-      },
-      {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安子孙;官世克;原伏待时;忌静旺有力;三版fail|否子孙持世+官临应+父无力",
-        "charts": 69,
-        "share": 0.00024
-      },
-      {
-        "fingerprint": "W|用伏有效;世世安;原静旺有力;忌静不作用;三版fail|否兄持世+官克世+父无力",
-        "charts": 61,
-        "share": 0.00024
-      },
-      {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌静不作用;三版fail|否父无力",
-        "charts": 66,
-        "share": 0.00023
       },
       {
         "fingerprint": "W|用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
@@ -531,13 +501,13 @@
         "share": 0.00023
       },
       {
-        "fingerprint": "W|用明现临应[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力;三版wait|过官父两旺+日月官生合世+旺官生合世+旺父就世",
-        "charts": 92,
+        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌静不作用;三版fail|否父无力",
+        "charts": 66,
         "share": 0.00023
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌静不作用;三版wait|过旺官持世",
-        "charts": 100,
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原无力;忌伏难出;三版wait|过旺官持世",
+        "charts": 117,
         "share": 0.00023
       },
       {
@@ -546,8 +516,13 @@
         "share": 0.00023
       },
       {
-        "fingerprint": "W|用同支两现[EFFECTIVE]静;世世受克;官生合世;原静不作用;忌伏难出;三版pass|过旺官生合世",
-        "charts": 85,
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官无情;原静不作用;忌静旺有力;六合;三版wait",
+        "charts": 98,
+        "share": 0.00023
+      },
+      {
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏有效;忌无力;三版pass|过旺官持世",
+        "charts": 76,
         "share": 0.00023
       },
       {
@@ -556,8 +531,8 @@
         "share": 0.00023
       },
       {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
-        "charts": 80,
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;三版fail|否官临应|过官父两旺",
+        "charts": 59,
         "share": 0.00023
       },
       {
@@ -566,28 +541,18 @@
         "share": 0.00022
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官无情;原静不作用;忌静旺有力;六合;三版wait",
-        "charts": 112,
-        "share": 0.00022
-      },
-      {
-        "fingerprint": "W|用明现持世[EFFECTIVE]静;世持世;原静旺有力;忌无力;三版wait|过旺官持世",
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安子孙;官世克;原伏待时;忌静旺有力;三版fail|否子孙持世+官临应+父无力",
         "charts": 66,
         "share": 0.00022
       },
       {
-        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;变合;三版wait|过官父两旺+旺官持世",
-        "charts": 172,
+        "fingerprint": "W|用伏有效;世世安;原静旺有力;忌静不作用;三版fail|否兄持世+官克世+父无力",
+        "charts": 58,
         "share": 0.00022
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌静不作用;三版fail|否兄持世+官克世|过官父两旺+旺父就世",
-        "charts": 73,
-        "share": 0.00022
-      },
-      {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;六合;三版fail",
-        "charts": 85,
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世",
+        "charts": 64,
         "share": 0.00022
       },
       {
@@ -606,35 +571,70 @@
         "share": 0.00022
       },
       {
-        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世+官克世|过旺父就世",
-        "charts": 79,
+        "fingerprint": "W|用明现持世[INEFFECTIVE]静;世持世;原待时(旬空);忌静旺有力;三版fail|否官无力",
+        "charts": 78,
         "share": 0.00022
       },
       {
-        "fingerprint": "W|用明现临应[INEFFECTIVE]静;世世受克子孙;官世克;原静不作用;忌静不作用;三版fail|否子孙持世+官临应+官无力",
-        "charts": 70,
+        "fingerprint": "W|用明现[INEFFECTIVE]静;世世受克;官无情;原静不作用;忌静旺有力;六合;三版fail|否官无力",
+        "charts": 125,
         "share": 0.00022
+      },
+      {
+        "fingerprint": "W|用明现[EFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世+官克世|过旺父就世",
+        "charts": 78,
+        "share": 0.00021
+      },
+      {
+        "fingerprint": "W|用同支两现[EFFECTIVE]静;世世受克;官生合世;原静不作用;忌伏难出;三版pass|过旺官生合世",
+        "charts": 71,
+        "share": 0.00021
+      },
+      {
+        "fingerprint": "W|用同支两现[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌伏难出;三版wait|过官父两旺+日月官生合世+旺官生合世+旺父就世",
+        "charts": 82,
+        "share": 0.00021
+      },
+      {
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版fail|否父化凶|过官父两旺+旺官持世+父发",
+        "charts": 159,
+        "share": 0.0002
       },
       {
         "fingerprint": "W|用伏难出;世世安;原伏待时;忌静旺有力;三版fail|否兄持世+官克世+官无力+父无力",
-        "charts": 56,
-        "share": 0.00022
+        "charts": 53,
+        "share": 0.0002
       },
       {
-        "fingerprint": "W|用明现持世[INEFFECTIVE]静;世持世;原静不作用;忌静不作用;三版fail|否官无力",
-        "charts": 60,
-        "share": 0.00022
+        "fingerprint": "W|用伏待时;世世安;原静旺有力;忌无力;三版fail",
+        "charts": 76,
+        "share": 0.0002
+      },
+      {
+        "fingerprint": "W|用明现持世[INEFFECTIVE]静;世持世;原无力;忌静不作用;三版fail|否官无力",
+        "charts": 56,
+        "share": 0.0002
+      },
+      {
+        "fingerprint": "W|用明现持世[NEUTRAL]静;世持世;原静不作用;忌静不作用;三版fail",
+        "charts": 65,
+        "share": 0.0002
+      },
+      {
+        "fingerprint": "W|用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌无力;三版pass|过官父两旺+旺官持世",
+        "charts": 54,
+        "share": 0.0002
       }
     ]
   },
   "writable": {
-    "classes": 1008364,
+    "classes": 1028938,
     "share": 1,
     "classes_needed_for_share_of_all_casts": {
-      "0.1": 970,
-      "0.2": 3890,
-      "0.3": 9758,
-      "0.4": 20096
+      "0.1": 1023,
+      "0.2": 4131,
+      "0.3": 10372,
+      "0.4": 21227
     }
   },
   "blockers": {}

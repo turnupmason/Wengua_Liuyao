@@ -4291,7 +4291,7 @@
       ],
       "modern_explanation": "卦身临官父有成，临财福难。",
       "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
-      "exceptions": "",
+      "exceptions": "增删卜易千金赋注「卦身亦不验……偶然凑合耳，何足为法」（R-QJF-01）：本项目以增删为主线，卦身只写象意，不作加减",
       "dispute_ids": [
         "D-023"
       ],
@@ -4299,7 +4299,7 @@
       "engine_refs": [],
       "review_status": "ai-verified",
       "version": "0.1.0",
-      "usage": "判、象",
+      "usage": "象",
       "ai_verification": {
         "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
         "round": "classics-sweep-2026-11-15",
@@ -6388,6 +6388,422 @@
       "review_status": "ai-verified",
       "version": "0.1.0",
       "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-XINGSHA-01",
+      "topic": "星煞·独验贵人禄神驿马天喜",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·《星煞章》第三十三",
+      "original_text": [
+        "诸书星煞最多﹐予留心四十馀载独验贵人禄神驿马天喜﹐然不能独操祸福之权﹐用神旺者见之愈吉﹐用神失陷虽有如无。"
+      ],
+      "modern_explanation": "星煞只验贵人、禄神、驿马、天喜，不能独操祸福；用神旺者见之愈吉，用神失陷虽有如无。",
+      "applicable_conditions": "全部（D-024）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-024"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "次要判据、象",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-LIANGXIAN-04",
+      "topic": "两现·应期取空破之爻",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·两现章第三十二",
+      "original_text": [
+        "用神两现﹐如占父母卦中两爻父母者是也。舍其休囚﹐用其旺相﹐舍其静爻﹐而用动爻﹐舍其月破﹐而用不破﹐舍其旬空﹐用其不空﹐舍其被伤﹐用其不伤。此古法也。得其验者﹐应乎旬空月破﹐舍其不空﹐而用旬空﹐舍其不破﹐而用月破。"
+      ],
+      "modern_explanation": "两现古法舍弱用旺；野鹤验得应期多应在旬空、月破之爻，即实空实破之期。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "期",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-SUIMU-02",
+      "topic": "随鬼入墓·功名冲开墓库之期",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·随鬼入墓章第三十",
+      "original_text": [
+        "占功名﹐世旺得地﹐冲开墓库之年月成名﹐世若空破休囚﹐始终难成之象"
+      ],
+      "modern_explanation": "占功名随鬼入墓：世旺得地，冲开墓库之年月成名；世空破休囚，始终难成。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判、期",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-01",
+      "topic": "千金赋·卦身不验",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "不验者身位﹐宜删而不宜存。旧系最要者身位﹐喜扶而不喜伤。原注有云﹐古用身世而不验﹐故用卦身。野鹤曰卦身亦不验﹐亦用世爻。或曰间有验者。予用世爻﹐百发无不百中也。然间有之验﹐乃偶然凑合耳﹐何足为法。"
+      ],
+      "modern_explanation": "卦身不验，用世爻；偶有验者乃凑合，不足为法。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "原则",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-02",
+      "topic": "千金赋·世应俱空",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "世应俱空﹐人无准实。世空自己不真﹐应空他人不实﹐世应俱空﹐彼此皆无准实。"
+      ],
+      "modern_explanation": "世空自己不真，应空他人不实，世应俱空彼此无准实。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-03",
+      "topic": "千金赋·贪生贪合",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "贪生贪合﹐刑冲克害皆忘。此亦指主事爻而言﹐且如主象临卯木﹐遇申爻动而克之﹐卦中动出亥水﹐申金贪水之生﹐不来克木。又如主事爻临子水欲卯木动而相刑﹐若得旁爻动出戌字﹐卯与戌合﹐不来刑子﹐此乃贪合忘刑。"
+      ],
+      "modern_explanation": "忌神贪生他爻、或被他爻合住，则忘克用神。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-04",
+      "topic": "千金赋·入墓难克",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "入墓难克。旧注墓者﹐滞也。忌神入墓不克用神。且如木为用神﹐金为忌神﹐若在丑日占者﹐金入墓矣﹐焉能克木。卦中动出丑爻﹐亦向此推。金爻动而化丑亦是﹐馀仿此。野鹤曰﹕是则是也﹐屡见后逢冲开墓库日﹐依然木被金伤。"
+      ],
+      "modern_explanation": "忌神入日墓、动墓、化墓则不克用神；但冲开墓库之日依然受伤。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判、期",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-05",
+      "topic": "千金赋·太过者损之",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "太过者损之斯成。旧注主事爻重复太多﹐事不专一﹐故宜损之。且如土为主事爻多﹐卦中多逢丑戌辰未﹐谓之大过﹐须待寅卯月日克制土爻﹐然彼成事﹐或占时得遇寅卯日月亦好。野鹤曰﹕不独后逢寅卯月日﹐得逢辰月辰日者﹐或许成事﹐何也﹖辰乃土之墓库﹐谓之用爻重叠﹐须墓库以收藏是也﹐馀仿此。"
+      ],
+      "modern_explanation": "用爻重叠太多，事不专一，待克制之日月或墓库收藏之日月而成。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "期",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-06",
+      "topic": "千金赋·间爻发动",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "事阻隔兮间发。旧注世应中间两爻谓之间爻﹐动则事事阻隔。谓之两爻在世应之中﹐动阻两家之事﹐使彼此不能相通。又曰世应中间两爻发动所求多阻隔。觉子曰﹕以此爻作为间爻试之果验﹐但看所占何事﹐须是彼此两家之事始"
+      ],
+      "modern_explanation": "世应中间两爻为间爻，发动则彼此之事阻隔；须是彼此两家之事。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-07",
+      "topic": "千金赋·世无故自空主退悔",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "心退悔兮世空。旧注自占世为主象﹐若无明动爻伤克而世爻无故自空者﹐必主心惰意懒﹐自不向前。野鹤曰﹕此论为是。前曰无故之空﹐如入深渊大壑﹐诸占大凶者﹐非也﹗"
+      ],
+      "modern_explanation": "世无明动伤克而自空，主心惰意懒、自不向前；非诸占大凶。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-08",
+      "topic": "千金赋·杀生身莫将吉断",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "杀生身莫将吉断﹐用克世勿作凶看。盖生中有刑害之两妨﹐合处有克伤之二虑。杀生世者﹐是日月动爻动临忌神而生世﹐非凶煞也﹐不以吉断者﹐何也﹖谓忌神既旺﹐用衰矣﹐世虽逢生何益﹖"
+      ],
+      "modern_explanation": "忌神临日月动爻而生世，不以吉断：忌神既旺，用神必衰。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-09",
+      "topic": "千金赋·刑害不宜临用",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "刑害不宜临用。主事爻与日月动爻作三刑者﹐占事不成。占物不好。占病必死。占人有患。占妇人不贞洁。占文书有破绽。占讼必有罪责。动化刑亦然。"
+      ],
+      "modern_explanation": "主事爻与日月动爻作三刑者，占事不成，文书有破绽；动化刑亦然。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-10",
+      "topic": "千金赋·死绝岂可持世",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "死绝岂可持世。用爻世爻绝于日辰﹐或化绝﹐有旧注诸事不利﹐予以休囚被克而又绝者﹐是也。旺相不妨"
+      ],
+      "modern_explanation": "世与用爻绝于日辰或化绝，休囚被克而又绝者诸事不利；旺相不妨。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-11",
+      "topic": "千金赋·六神动而克世",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "元武为盗贼之事﹐亦必官爻。朱雀为口舌之神﹐必须兄弟。此论欠理﹐元武朱雀勾陈腾蛇动而不克世者﹐无碍。动而克世者﹐皆以为凶﹐勿分兄弟官鬼。"
+      ],
+      "modern_explanation": "玄武、朱雀、勾陈、螣蛇动而不克世者无碍，动而克世者皆以为凶。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-024"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-12",
+      "topic": "千金赋·水要看源",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "水要看源﹐木要寻根。凡占身命﹑家宅﹑功名﹑坟墓﹑贸易等事﹐欲其久远者。用神虽则为重﹐而元神必须兼看。用神为事之体﹐元神为事之本。用神虽旺﹐元神若被伤克者﹐即如水无泉源﹐木无根蒂﹐金火土者皆同。"
+      ],
+      "modern_explanation": "功名等欲久远之事，用神虽旺，元神被伤克者如水无源、木无根。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QJF-13",
+      "topic": "千金赋·除恶未尽",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "除恶未尽﹐须防死灰复燃。克害刑冲之神﹐若得日月动爻克制者﹐须尽其根﹐若除而未尽﹐将来遇生扶之年月﹐仍复为祸。如卯月甲申日占病得地山谦变水山蹇兄弟酉金⚋　　子孙子水⚋子孙亥水ㄨ世　父母戌土⚊父母丑土⚋　　兄弟申金⚋兄弟申金⚊　　兄弟申金⚊官鬼午火⚋应　官鬼午火⚋父母辰土⚋　　父母辰土⚋断曰﹕亥水子孙长生于申日﹐世遇日建逢生﹐虽化戌土之克﹐春令土衰﹐卯月克制﹐有杀无妨。果于丁亥日全愈。岂知卯木虽克戌土﹐还有相合之意﹐亥水虽长生﹐戌土亦得长生于申﹐后至巳月亥逢月破﹐巳火生助戌土﹐谚语﹕斩艸不除根﹐萌芽依旧生。复得病而死。伤害不重﹐枯木犹有逢春。世与动爻有气﹐若被日月动爻冲克者﹐目下虽克伤﹐他日逢生再发。"
+      ],
+      "modern_explanation": "克害之神被制而未尽，遇生扶之年月复为祸；有气之爻受伤，他日逢生再发。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "期",
       "ai_verification": {
         "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
         "round": "classics-sweep-2026-11-15",

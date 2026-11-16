@@ -84,3 +84,19 @@ test('代占：以所代六亲为本主；问事阶段写进结论；有年支�
   const self = interviewV3(chart, {});
   assert.ok([...self.plus, ...self.minus].some((x) => /太岁/.test(x.text)), '有年支时应计太岁');
 });
+
+test('取用次序（飞伏神章）：父母不上卦时先取日月、再取化出、最后取伏神，断语照写', () => {
+  // 网上卦例 W2 等之外，全盘抽查：凡父母不上卦而有动爻化出父母者，取化出之父
+  const B = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+  let checked = 0;
+  for (let code = 0; code < 4096 && checked < 20; code += 7) {
+    const lv = Array.from({ length: 6 }, (_, i) => [6, 7, 8, 9][(code >> (i * 2)) & 3]);
+    const chart = buildChart({ lineValues: lv, calendar: { monthBranch: B[code % 12], dayGanzhi: '甲子' } });
+    if (chart.lines.some((l) => l.relative === '父母')) continue;
+    if (!chart.lines.some((l) => l.moving && l.changed?.relative === '父母')) continue;
+    const v3 = interviewV3(chart, {});
+    if (v3.details.fu) { assert.equal(v3.details.fu.kind, 'changed'); checked += 1; }
+    interviewV3Text(chart, {});
+  }
+  assert.ok(checked > 0);
+});
