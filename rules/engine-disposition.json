@@ -1,0 +1,215 @@
+{
+  "note": "已采用之规则而引擎代码未直接写规则号者的处置（2026-11-16，用户「漏看，漏用，记录错误，没有调用，忘了用，这些都是绝对不允许的」）。implemented 者写明实现所在文件与一段必须存在的代码片段，scripts/analysis/audit-engine-rules.mjs 逐条核对片段仍在；不适用面试、与增删相异者在 register.json 的 adoption 改为 reference / alternative 并写明理由，不在此表。",
+  "implemented": {
+    "R-WUXING-02": {
+      "file": "src/constants.js",
+      "find": "CONTROLS",
+      "how": "五行相克表"
+    },
+    "R-DONG-01": {
+      "file": "src/chart.js",
+      "find": "changed",
+      "how": "动爻成变、静爻不变"
+    },
+    "R-BAGONG-01": {
+      "file": "src/chart.js",
+      "find": "palace",
+      "how": "八宫归宫"
+    },
+    "R-SHIYING-02": {
+      "file": "src/chart.js",
+      "find": "isResponse",
+      "how": "隔世两位为应"
+    },
+    "R-SHIYING-03": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const resp = L.find((l) => l.isResponse);",
+      "how": "世为己、应为人（应作对方）"
+    },
+    "R-YOUGUI-01": {
+      "file": "src/chart.js",
+      "find": "isWandering",
+      "how": "游魂归魂"
+    },
+    "R-NAJIA-01": {
+      "file": "src/chart.js",
+      "find": "纳甲",
+      "how": "纳甲装卦"
+    },
+    "R-BIANYAO-LIUQIN": {
+      "file": "src/chart.js",
+      "find": "palaceElement",
+      "how": "变爻六亲照本宫五行"
+    },
+    "R-YUEPO-01": {
+      "file": "src/analysis.js",
+      "find": "monthBreak",
+      "how": "月建冲之为月破"
+    },
+    "R-RIZHEN-01": {
+      "file": "src/analysis.js",
+      "find": "dayClash",
+      "how": "日辰生扶克冲各爻"
+    },
+    "R-RIZHEN-03": {
+      "file": "src/analysis.js",
+      "find": "动爻逢冲不散",
+      "how": "旺相动爻逢日冲不散，休囚间有冲散"
+    },
+    "R-ANDONG-01": {
+      "file": "src/role-state.js",
+      "find": "isAnDong",
+      "how": "静爻旺相日冲为暗动、休囚为日破"
+    },
+    "R-SWMJ-02": {
+      "file": "src/constants.js",
+      "find": "土: { 长生: '申'",
+      "how": "生旺墓绝表（水土同宫）"
+    },
+    "R-GUA-CHONGHE-01": {
+      "file": "src/chart.js",
+      "find": "sixClash",
+      "how": "六冲卦"
+    },
+    "R-GUA-CHONGHE-02": {
+      "file": "src/chart.js",
+      "find": "sixCombine",
+      "how": "六合卦"
+    },
+    "R-DONGBIAN-01": {
+      "file": "src/role-state.js",
+      "find": "自身动化",
+      "how": "变爻只与本位动爻生克（他爻生克不计变爻）"
+    },
+    "R-KECHU-01": {
+      "file": "src/role-state.js",
+      "find": "克处逢生",
+      "how": "克少生多为吉；克多生少而生者为日月作克处逢生（B-005）"
+    },
+    "R-YUANJI-02": {
+      "file": "src/evidence.js",
+      "find": "原神有力五条、无力六条",
+      "how": "原神不能生用神六条"
+    },
+    "R-YUANJI-05": {
+      "file": "src/questions/interview-v3.js",
+      "find": "官无力而父母也不发动",
+      "how": "用神无根（官无力）则原神有力亦难生，第三版以官无力定"
+    },
+    "R-RIZHEN-06": {
+      "file": "src/role-state.js",
+      "find": "寡不敌众",
+      "how": "临日而动化回头克、受动克多于生扶者寡不敌众"
+    },
+    "R-DUFA-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "一爻独发",
+      "how": "成败应期由乎用神；一爻独发只作走向之象"
+    },
+    "R-QIANJIN-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const gWang",
+      "how": "用神有气（官旺）为成之本"
+    },
+    "R-YONG-ZI-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const ziMovers",
+      "how": "子孙为求名忌神"
+    },
+    "R-YONG-XIONG-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const xiongMovers",
+      "how": "兄弟为阻神"
+    },
+    "R-QIUMING-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "福德变官身位合",
+      "how": "妻财助鬼父爻空可图侥幸；福德变官身位合亦忝科名"
+    },
+    "R-QIUMING-02": {
+      "file": "src/questions/interview-v3.js",
+      "find": "出现无情",
+      "how": "官父出现而不生合世者无益：官生合应而不就世否决；官不就世者不计能过"
+    },
+    "R-YONG-GUAN-06": {
+      "file": "src/questions/interview-v3.js",
+      "find": "化进神",
+      "how": "官化进神、世化进神加分"
+    },
+    "R-HJC-QM-07": {
+      "file": "src/questions/interview-v3-text.js",
+      "find": "考官一层",
+      "how": "月建克身：只作象（与考官要的路子不合）"
+    },
+    "R-BZZ-QM-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "V('父无力'",
+      "how": "父官伤一则不成：官无力、父无力皆否决"
+    },
+    "R-BZZ-QM-05": {
+      "file": "src/questions/interview-v3.js",
+      "find": "风云未际",
+      "how": "官被日月冲减分；官两现相冲题目生涩（断语象意）"
+    },
+    "R-BZZ-SS-02": {
+      "file": "src/questions/interview-v3.js",
+      "find": "用神旺者见之愈吉",
+      "how": "神煞只作次要判据，用神不旺不加分"
+    },
+    "R-BQS-WN-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "用神旺者见之愈吉",
+      "how": "同上，勿泥神杀"
+    },
+    "R-XINGSHA-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "用神旺者见之愈吉",
+      "how": "用神旺者见之愈吉，用神失陷虽有如无"
+    },
+    "R-BQS-QM-04": {
+      "file": "src/questions/interview-v3.js",
+      "find": "世无故自空",
+      "how": "世无故自空减分"
+    },
+    "R-ZS-QM-12": {
+      "file": "src/questions/interview-v3.js",
+      "find": "兄弟持世，但父母动来生合世",
+      "how": "兄弟有喜有忌：父官两动或世旺官父得地者不作兄持世否决"
+    },
+    "R-YLB-ZD-02": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const zs = st(z); if (level(zs) === 0",
+      "how": "子孙动而休囚，只有受克或空破者才不克官（一爻独发纵值休囚也能制旺）"
+    },
+    "R-YLB-ZD-14": {
+      "file": "src/questions/interview-v3.js",
+      "find": "!(x.lv === 2 && level(st(o)) === 0)",
+      "how": "休囚动爻冲不动旺相之爻；日辰冲不拘衰旺"
+    },
+    "R-HZL-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const fFa",
+      "how": "用官以父辅之：官父并看（D-023）"
+    },
+    "R-DTJ-SH-02": {
+      "file": "src/questions/interview-v3.js",
+      "find": "const gWang",
+      "how": "谋望利名先要鬼爻旺相、宣敕看父母兴衰"
+    },
+    "R-LIUSHEN-02": {
+      "file": "src/questions/interview-v3-text.js",
+      "find": "SHENSHA_SHORT",
+      "how": "六神神煞只作象，不改吉凶"
+    },
+    "R-BZZ-SH-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "原神妻财皆被伤无力",
+      "how": "未仕求名不要财爻：财弱只减久远，不作否决"
+    },
+    "R-BQS-JS-01": {
+      "file": "src/questions/interview-v3.js",
+      "find": "V('子动克官'",
+      "how": "忌神宜静：子孙发动克官否决；忌神逢日月冲克（日月制煞）、化绝化破等七不克者不论"
+    }
+  }
+}

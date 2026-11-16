@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.9.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.10.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -231,7 +231,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (f.moving && fBadHua === '回头克' && riyueZhi(fc.to?.branch)) N(`父${f.br}动而化回头克，但所化之${fc.to.branch}被日月冲克（日月为制煞之将军，亦许得意）`, ['R-ZS-QM-10']);
     else if (f.moving && fBadHua) V('父化凶', `父${f.br}${fShuai && fBadHua !== '回头克' ? '衰而' : ''}动而化${fBadHua}（衰化退神及化克化空破墓绝或回头克者，窗下午日长，场中一日短）`, ['R-QIUMING-05', ...(['空', '墓', '绝', '真空'].includes(fBadHua) ? ['R-YLB-WS-01'] : [])]);
     else if (f.moving && fc && fc.advance === '退神') minus.push({ text: `父${f.br}旺而化退神（化退神者，前篇稍遂，后劲不力）`, rules: ['R-QIUMING-05'] });
-    else if (f.moving && fc && fc.changedVoid) N(`父${f.br}旺而化出之爻旬空，出空可用（待时）`, ['R-KONG-02', 'D-017']);
+    else if (f.moving && fc && fc.changedVoid) N(`父${f.br}旺而化出之爻旬空，出空可用（动而化空，亦不为空）`, ['R-KONG-02', 'R-QJF-15']);
     else if (f.moving && fc && ['墓', '绝'].includes(fc.lifeStage) && !fShuai) N(`父${f.br}动而化${fc.lifeStage}，但本爻旺相（化墓化绝，若动爻旺相，亦无大害）`, ['R-HUA-03']);
   }
   if (kind === 'written') {
@@ -240,6 +240,14 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   }
   // 妻财持世而旺，克父（子孙财爻持世，终须下第；静旺之爻可克休囚之爻）
   if (wRel === '妻财' && wWang && f && ke(W.el, f.el) && !fWang && kind === 'written') V('财持世', `妻财${world.branch}持世而旺，克父母${f.br}（子孙财爻持世，终须下第）`, ['R-QIUMING-10', 'R-QIUMING-04', 'R-DONGJING-01']);
+  // 世陷财空，不如守己（署印谋差章，R-YONG-GUAN-04、R-SHUYIN-01；用户裁定 D-022「仅世陷（世空或世破）而财空者判偏难」）。
+  // 世动者不论（终身功名章「惟世与官星空破而动者，勿以此断」）
+  {
+    const caiL = L.filter((l) => l.relative === '妻财');
+    const caiH = L.filter((l) => l.hidden?.relative === '妻财');
+    const caiKong = caiL.length ? caiL.every((l) => fact(l).calendar.void || fact(l).calendar.monthBreak) : caiH.length > 0 && caiH.every((l) => fact(l).hidden.calendar.void || fact(l).hidden.calendar.monthBreak);
+    if (!proxy && !world.moving && (wc.void || wc.monthBreak) && caiKong) V('世陷财空', `世${world.branch}${wc.monthBreak ? '月破' : '旬空'}而妻财又空破（世陷财空，不如守己）`, ['R-YONG-GUAN-04', 'R-SHUYIN-01']);
+  }
   // 世爻失位
   const wHit = wc.month.controls || wc.month.clash || wc.day.controls || wc.day.clash;
   const wHelpCal = wc.month.supports || wc.day.supports;
@@ -307,7 +315,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const gc = g.change; const strongBase = gLv === 2;
     const bad = huiKe(g.line, gc) ? '化回头克' : gc.to?.relative === '子孙' ? '化出子孙' : (gc.changedVoid && gc.changedCalendar?.void?.trueVoid) ? '化真空'
       : (['墓', '绝'].includes(gc.lifeStage) && !strongBase && gc.huitou !== '回头生' && !gc.changedVoid && !(gc.lifeStage === '墓' && chong(day, gc.to?.branch))) ? `化${gc.lifeStage}` : (gc.advance === '退神' && !strongBase) ? '化退神' : null;
-    if (['墓', '绝'].includes(gc.lifeStage) && !strongBase && (gc.changedVoid || (gc.lifeStage === '墓' && chong(day, gc.to?.branch)))) N(`官${g.br}动而化${gc.lifeStage}${gc.to.branch}，但${gc.changedVoid ? '所化之爻旬空' : '墓被日辰冲开'}，非真${gc.lifeStage}（墓绝真伪之辨）`, ['R-YLB-ZD-05']);
+    if (['墓', '绝'].includes(gc.lifeStage) && !strongBase && (gc.changedVoid || (gc.lifeStage === '墓' && chong(day, gc.to?.branch)))) N(`官${g.br}动而化${gc.lifeStage}${gc.to.branch}，但${gc.changedVoid ? '所化之爻旬空' : '墓被日辰冲开'}，非真${gc.lifeStage}（此乃非绝非墓也）`, ['R-YLB-ZD-05']);
     const guanHeld = wRel === '官鬼' || gen(g.el, W.el) || he(g.br, W.br);
     if (['墓', '绝'].includes(gc.lifeStage) && gc.huitou === '回头生') N(`官${g.br}动而化${gc.lifeStage}，但所化回头生之（巳火反能生土，论生不论绝）`, ['R-SWMJ-03', 'R-HUA-01']);
     if (bad && gWang && guanHeld) minus.push({ text: `官${g.br}旺而就你，但动而${bad}：能被录取，却难长久（鬼化福冲当代职；若鬼动化子，必有别官代职）`, rules: ['R-HJC-SH-02', 'R-BQS-SH-03', 'R-YLB-SH-02'] });
@@ -326,7 +334,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const gHit = gcal.month.controls || gcal.day.controls || L.some((o) => o.moving && o !== g.line && ke(o.element, g.el));
     if (gcal.void && gLv >= 1 && gHit) V('官空', `官${g.br}静而旬空又受克（静空遇克却为空）`, ['R-BZZ-KW-01', 'R-QIUMING-15']);
     else if (gcal.void && gLv === 0) V('官空', `官${g.br}静而旬空无气（世与官星有一而逢空破者，不须指望）`, ['R-QIUMING-15', 'R-YONG-GUAN-07']);
-    else if (gcal.void) { N(`官${g.br}旬空而有气：眼下不实，出空之时再看（D-017）`, ['R-KONG-02', 'R-QIUMING-15']); minus.push({ text: `官${g.br}旬空（待出空）`, rules: ['R-KONG-02'] }); }
+    else if (gcal.void) { N(`官${g.br}旬空而有气：眼下不实，出空之时再看（旺不为空）`, ['R-KONG-02', 'R-QIUMING-15']); minus.push({ text: `官${g.br}旬空（待出空）`, rules: ['R-KONG-02'] }); }
   }
   // 死绝岂可持世：世休囚被克而又绝于日、或化绝（旺相不妨）（R-QJF-10）
   if (wLv === 0 && !wc.seasonalStrong && (wc.dayExtinct || (world.moving && fact(world).change?.lifeStage === '绝')) && wHit) V('世绝', `世${world.branch}休囚被克而又${wc.dayExtinct ? '绝于日' : '化绝'}（死绝岂可持世）`, ['R-QJF-10']);
@@ -351,7 +359,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const xingHeavy = (x) => xingCal(x) || x.lv < 2 || (x.br !== day && L.some((o) => (o.moving || anDong(o)) && o !== x.line && ke(o.element, x.el) && effMover(o)));
   for (const [x, nm, code, what] of [[g, '官', '官三刑', '占事不成'], [f, '父', '父三刑', '占文书有破绽']]) {
     if (!sanXing(x)) continue;
-    if (xingHeavy(x)) V(code, xingCal(x) ? `${nm}${x.br}与月建${month}、日辰${day}共作三刑（三刑章野鹤唯一验例：月建、日建与用爻共作三刑，无他爻之伤而验；主事爻与日月作三刑者，${what}）` : `${nm}${x.br}${x.lv < 2 ? '不旺' : '受动爻克'}，又与日月动爻共作三刑（用神休囚又兼他爻犯之，刑者则见凶；${what}）`, ['R-QJF-09', 'R-XING-02']);
+    if (xingHeavy(x)) V(code, xingCal(x) ? `${nm}${x.br}与月建${month}、日辰${day}共作三刑（月建在寅，日建在申，与巳爻子孙共作三刑，独此一卦，无他爻之伤也；主事爻与日月作三刑者，${what}）` : `${nm}${x.br}${x.lv < 2 ? '不旺' : '受动爻克'}，又与日月动爻共作三刑（用神休囚又兼他爻犯之，刑者则见凶；${what}）`, ['R-QJF-09', 'R-XING-02']);
     else minus.push({ text: `${nm}${x.br}与日月动爻共作三刑，但${nm}旺而别无他伤（独犯三刑得验者少；刑害不宜临用，${what}）`, rules: ['R-XING-02', 'R-QJF-09'] });
   }
   if (g && g.kind === 'line' && g.moving && g.change?.to) { const XG = { 寅: '巳', 巳: '申', 申: '寅', 丑: '戌', 戌: '未', 未: '丑', 子: '卯', 卯: '子' }; if (XG[g.br] === g.change.to.branch || XG[g.change.to.branch] === g.br) V('官化刑', `官${g.br}动而化刑（动化刑亦然）`, ['R-QJF-09']); }
@@ -364,7 +372,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (fly.relative === '官鬼') N('官伏于另一爻官鬼之下（官鬼伏官，小人作难；亲自去见可成）', ['R-HZL-04']);
     if (fly.relative === '兄弟' && !(gLv === 2 && (fly.isWorld || g.br === day))) minus.push({ text: `官${g.br}伏于兄弟${fly.branch}之下（用鬼伏兄，同类欺凌，所谋到底脱空）`, rules: ['R-HZL-10'] });
     if (fly.relative === '妻财' && !(gLv === 2 && fly.isWorld) && !(f && f.kind === 'line' && f.br === day)) minus.push({ text: `官${g.br}伏于妻财${fly.branch}之下（鬼伏财乡，官吏阻节，文书有阻）`, rules: ['R-HZL-11'] });
-    if (fly.isWorld) minus.push({ text: '官伏于世下（世下伏官者，迟选）', rules: ['R-YY-YL-01'] });
+    if (fly.isWorld) minus.push({ text: '官伏于世下（世下伏官，或伏驿马印绶者，迟选）', rules: ['R-YY-YL-01'] });
   }
   // 官绝逢生（易隐·候选：官绝逢生者，事虽有沮，终得贵人力而成）
   const SISHENG = ['寅', '申', '巳', '亥'];
@@ -486,7 +494,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       if (ke(o.element, W.el) || chong(o.branch, W.br)) minus.push({ text: `岁君${o.relative}${o.branch}发动冲克世（最恶者岁君，宜静不宜动）`, rules: ['R-BZZ-QJ-08'] });
       else if (gen(o.element, W.el) || he(o.branch, W.br)) plus.push({ text: `岁君${o.relative}${o.branch}发动生合世（际遇频加）`, rules: ['R-BZZ-QJ-08'] });
     }
-    if (g && g.kind === 'line' && g.br === yr && (chong(day, g.br) || L.some((o) => o.moving && o !== g.line && chong(o.branch, g.br)))) minus.push({ text: `官${g.br}临岁君而被日辰动爻冲（谓之犯上，宜谨慎）`, rules: ['R-BZZ-QJ-08'] });
+    if (g && g.kind === 'line' && g.br === yr && (chong(day, g.br) || L.some((o) => o.moving && o !== g.line && chong(o.branch, g.br)))) minus.push({ text: `官${g.br}临岁君而被日辰动爻冲（谓之犯上，毋论公私，皆宜谨慎可也）`, rules: ['R-BZZ-QJ-08'] });
   }
   // 财临白虎持身，帏前枕块：财持世或财动而父休囚空破，或财化父、父化财（R-ZS-QM-25，只作象）
   { const caiAct = wRel === '妻财' || L.some((o) => o.relative === '妻财' && o.moving);
@@ -549,8 +557,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   { const MUW = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' }[W.el]; const ms = L.filter((o) => o !== world && o.branch === MUW && (o.moving || o === resp)); if (ms.length) minus.push({ text: `${ms.map((o) => (o === resp ? '应' : '动爻') + o.branch).join('、')}为世之墓（应又是世之墓，动又是世之墓，皆不中）`, rules: ['R-HZL-08'] }); }
   // 谒贵：世克应致怨，当俯仰小心；世应相生合则吉（R-HZL-07）
   // 谒贵世应：增删「贵人谒贵宜世应以相生，平人见贵宜官贵而相合」——求职者为平人，以官为主，世应生克只作态度之象，不计加减
-  if (resp && !proxy && ke(W.el, resp.element)) N('世克应（谒贵：世克应，致怨之象，当俯仰小心；平人见贵以官为主，只作态度之象）', ['R-HZL-07', 'R-YONG-YE-01']);
-  if (resp && !proxy && (gen(resp.element, W.el) || he(resp.branch, W.br) || gen(W.el, resp.element))) N('世应相生合（谒贵：世应相生合，得遇和喜；平人见贵以官为主，只作态度之象）', ['R-HZL-07', 'R-YONG-YE-01']);
+  if (resp && !proxy && ke(W.el, resp.element)) N('世克应：平人见贵以官为主，只作态度之象（谒贵：世克应，致怨之象，当俯仰小心）', ['R-HZL-07', 'R-YONG-YE-01']);
+  if (resp && !proxy && (gen(resp.element, W.el) || he(resp.branch, W.br) || gen(W.el, resp.element))) N('世应相生合：平人见贵以官为主，只作态度之象（谒贵：世应相生合，得遇和喜）', ['R-HZL-07', 'R-YONG-YE-01']);
   // 乱动之卦：财官乘旺相俱动，公私两用皆可成（火珠林；与增删乱动之说两记）（R-HZL-14）
   if (L.filter((o) => o.moving).length >= 4 && gWang && g?.moving && L.some((o) => o.relative === '妻财' && o.moving && fact(o).calendar.seasonalStrong)) N('乱动而财官俱旺俱动（火珠林：财官乘旺相俱动，公私两用皆可成；增删以乱动为难成，两说并记）', ['R-HZL-14']);
   if (resp && !proxy && (ke(resp.element, W.el))) minus.push({ text: `应${resp.branch}克世（世应相克则凶；应又不克，事体分明）`, rules: ['R-BZZ-SY-01', 'R-HZL-15', 'R-HZL-07'] });
@@ -774,7 +782,7 @@ function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceS
       name: p.name, palace: p.palace, wandering: p.isWandering, returning: p.isReturning, sixClash: p.sixClash, sixCombine: p.sixCombine,
       changedName: chart.changed?.name ?? null, changedSixClash: chart.changed?.sixClash ?? null, changedSixCombine: chart.changed?.sixCombine ?? null,
       innerOuter: io, worldPosition: W.position, distance: W.position <= 2 ? '近' : W.position <= 4 ? '远' : '更远',
-      rules: ['R-YY-YL-04', 'R-YLB-SH-01', 'R-DTJ-SH-06'],
+      rules: ['R-YY-YL-04', 'R-YLB-SH-01', 'R-DTJ-SH-06', 'R-DTJ-QS-01'],
     },
     monthBody: { ...chart.monthBody, relatives: chart.monthBody.positions.map((pos) => L[pos - 1].relative), rules: ['R-BQS-QM-06'] },
     spirits: L.map((l) => ({ position: l.position, relative: l.relative, spirit: l.spirit, moving: l.moving, shensha: shenOf(l.position) })),

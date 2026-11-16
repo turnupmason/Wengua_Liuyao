@@ -2,7 +2,7 @@
 // 文字只用排盘事实与古籍规则组织；象意一律带「从卦象看」限定（C21）；规则编号只放在 rules 字段，不进正文（C06）。
 import { interviewV3 } from './interview-v3.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.0.1';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.2.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -19,7 +19,7 @@ const TEMPER = { 青龙: '和蔼、好说话', 朱雀: '话多、容易较真', 
 // 六神象意（R-LIUSHEN-01/02 只作象意）
 const SPIRIT = { 青龙: '喜庆、体面', 朱雀: '文书、口头、消息', 勾陈: '迟缓、稳当', 螣蛇: '虚惊、反复', 白虎: '压力、严格', 玄武: '暗处的变数、不尽实' };
 // 神煞象意短语（只作象意；出处见 SHENSHA_RELEVANCE）
-const SHENSHA_SHORT = { 驿马: '变动、奔走', 禄神: '丰足、待遇', 天乙贵人: '得人提携', 天喜: '喜事', 劫煞: '破耗、阻隔', 天马: '升迁之兆', 唐符国印: '有名分', 太岁: '上层关注', 将星: '有统领之象，职位不低', 华盖: '偏专业、孤高', 咸池: '人缘、私情', 羊刃: '刚硬、竞争硬', 文昌: '文才（出处薄弱）' };
+const SHENSHA_SHORT = { 驿马: '变动、奔走', 禄神: '丰足、待遇', 天乙贵人: '得人提携', 天喜: '喜事', 劫煞: '破耗、阻隔', 天马: '升迁之兆', 唐符国印: '有名分', 太岁: '上层关注', 将星: '主统领，职位不低', 华盖: '偏专业、孤高', 咸池: '人缘、私情', 羊刃: '刚硬、竞争硬', 文昌: '文才（出处薄弱）' };
 // 五行长生、帝旺之支（衰者宜生旺之日）
 const SHENG_WANG = { 水: '申日长生、子日帝旺', 木: '亥日长生、卯日帝旺', 火: '寅日长生、午日帝旺', 金: '巳日长生、酉日帝旺', 土: '申日长生、子日帝旺（土随水）' };
 const KIND = { 正: '正职、主岗', 佐: '副职、辅助岗位', 杂: '事务性岗位' };
@@ -61,7 +61,7 @@ export function interviewV3Text(chart, ctx = {}) {
     const mo = d.calendarToWorld.monthOnFu;
     if (mo === '克') t += '；月建克父母（月克文书，程式背而不中）：从卦象看，表现与考官要的路子不太对';
     else if (mo === '生' || mo === '合') t += '；月建生合父母：从卦象看，表现合考官的意';
-    out.push(sentence('临场表现', `${t}。`, fu.rules.concat(['R-QIUMING-03', 'R-QIUMING-05'])));
+    out.push(sentence('临场表现', `${t}。`, fu.rules.concat(['R-QIUMING-03', 'R-QIUMING-05'], t.includes('始寻伏神') ? ['R-FUSHEN-01'] : [])));
     if (has('父化凶')) out.push(sentence('临场表现', veto.find((v) => v.code === '父化凶').text.replace(/（.*）/, '') + '：平时准备得不少，临场失分。', ['R-QIUMING-05']));
     for (const m of (d.changedCaiOnFu || []).filter((x) => x.from !== '父母')) out.push(sentence('临场表现', `${POS[m.position]}${m.from}动而化出妻财${m.branch}，财来克父母：从卦象看，有人或有事从中作梗，坏了你的表现。`, ['R-BQS-QM-01', 'R-HJC-QM-02']));
     if (has('财动克父')) out.push(sentence('临场表现', '妻财发动克父母：从卦象看，答题容易出破绽，或材料上有疏漏。', ['R-QIUMING-04', 'R-BQS-QM-02']));
@@ -81,10 +81,10 @@ export function interviewV3Text(chart, ctx = {}) {
     if (g.trade?.text) t += `；官属${g.trade.element}，性质近于${g.trade.text}`;
     if (g.twoAndClash) t += '；两爻官鬼相冲，从卦象看，岗位或问题有两头，题目偏生';
     if (g.changesToGuan) t += '；官化官，事情会有反复';
-    if (g.soleMover) t += r.layers.hiring.level === 2 ? '；官鬼独发而有气：对方那边先有动作，功名可望（官鬼独发，若临吉神，功名可望）' : '；官鬼独发而无气：对方那边有事端，或有纠纷（若临囚神，主兴讼）';
+    if (g.soleMover) t += r.layers.hiring.level === 2 ? '；官鬼独发而有气：对方那边先有动作，功名可望（官鬼独发，若临吉神，功名可望）' : '；官鬼独发而无气：对方那边有事端，或有纠纷（若临囚神，必主兴讼）';
     if (g.position === 1) t += '；官在初爻：从卦象看，岗位在本地或基层';
     if (g.position >= 5) t += '；官在五六爻：从卦象看，岗位偏远或层级高';
-    out.push(sentence('能否录取', `${t}。`, g.rank.rules.concat(g.trade.rules)));
+    out.push(sentence('能否录取', `${t}。`, g.rank.rules.concat(g.trade.rules, g.soleMover ? ['R-HZL-05'] : [])));
   }
   for (const code of ['子动克官', '官克世', '官临应', '官无力', '无官', '子孙局']) if (has(code)) { const v = veto.find((x) => x.code === code); out.push(sentence('能否录取', `${v.text}。`, v.rules)); }
   for (const p of r.pass) out.push(sentence('能否录取', `有利：${p.text}。`, p.rules));
@@ -172,7 +172,7 @@ export function interviewV3Text(chart, ctx = {}) {
   const mv = [...new Set(d.movingRelatives.map((m) => m.relative))];
   const ziNote = r.notes.find((n) => n.text.startsWith('子孙'));
   const moveText = (rel) => (rel === '子孙' && ziNote && !has('子动克官') ? `子孙虽动，${ziNote.text.replace(/^子孙\S+?(发动|暗动)?，?/, '')}` : MOVE[rel]);
-  if (mv.length) out.push(sentence('卦象', `动爻：${mv.map(moveText).join('；')}${d.moving.count === 1 ? '；一爻独发，事情的走向由它定' : d.moving.count >= 4 ? '；动爻多，事情变数大' : ''}。`, ['R-BQS-QM-01', 'R-HZL-06']));
+  if (mv.length) out.push(sentence('卦象', `动爻：${mv.map(moveText).join('；')}${d.moving.count === 1 ? '；一爻独发，事情的走向由它定' : d.moving.count >= 4 ? '；动爻多，事情变数大' : ''}。`, ['R-BQS-QM-01', 'R-HZL-06', ...(mv.map(moveText).join('').includes('贪生贪合') ? ['R-QJF-03'] : [])]));
   else out.push(sentence('卦象', '六爻安静：事情按原样推进，看日月对官父的生克。', ['R-BQS-QM-01']));
 
   // 卦级与工作地点
@@ -186,7 +186,7 @@ export function interviewV3Text(chart, ctx = {}) {
   if (h.returning) ht += '；归魂卦：从卦象看，去处近，或回原处';
   ht += `；世在${POS[h.worldPosition]}，从卦象看，工作地点离你${h.distance}`;
   if (d.monthBody?.relatives?.length) ht += `；卦身临${d.monthBody.relatives.join('、')}（只作参考：增删卜易谓卦身不验）`;
-  if (h.innerOuter) ht += `；内外卦${h.innerOuter}${h.innerOuter === '内克外' ? '（我能制彼，所求可成之象）' : h.innerOuter === '外克内' ? '（彼来制我，所求偏难之象）' : ''}`;
+  if (h.innerOuter) ht += `；内外卦${h.innerOuter}${h.innerOuter === '内克外' ? '（若内卦克外卦，则所求可成）' : h.innerOuter === '外克内' ? '（若外卦克内卦，则主难成）' : ''}`;
   if (d.fanFu.fanyin) ht += '；反吟：事情反复，去而复来';
   if (d.fanFu.fuyin) ht += '；伏吟：拖延、淹留';
   const NAME = { 火地晋: '晋卦，有进而得遇之象', 地风升: '升卦，有上进之象', 水雷屯: '屯卦，开局艰难（世旺者无妨）', 水山蹇: '蹇卦，行路艰难（世旺者无妨）' };
@@ -214,9 +214,9 @@ export function interviewV3Text(chart, ctx = {}) {
   if (g && g.count >= 3) { const MUB = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' }; out.push(sentence('应期', `官鬼${g.count}现，用爻重叠太过：待墓库（${MUB[g.trade.element]}）收藏之日月，或克制之日月而成（太过者损之斯成）。`, ['R-QJF-05'])); }
   if (g && r.layers.hiring.level === 2 && r.veto.some((v) => /子动克官|官克世|官三刑/.test(v.code))) out.push(sentence('应期', '官星眼下旺相而受克：目下尚得令，过了旺时更受其害（旺相之爻被克，目下贪荣得令，过时仍受其毒）。', ['R-BZZ-WX-01']));
   if (g && r.layers.hiring.level <= 1 && r.notes.some((n) => /扶起|逢生|回头生/.test(n.text))) out.push(sentence('应期', '官星眼下不旺而得生扶：目下难以如意，到官星旺相之时得意（休囚得生扶，遇时仍然得意）。', ['R-BZZ-WX-01']));
-  out.push(sentence('应期', `快慢：${tm.speed.join('；')}。`, ['R-YY-MW-01']));
+  out.push(sentence('应期', `快慢：${tm.speed.join('；')}。`, ['R-YY-MW-01', 'R-HZL-15']));
   if (tm.banzhu?.length) out.push(sentence('应期', `合绊待冲：${tm.banzhu.join('；')}（动逢合而绊住，后逢冲开之日月，吉凶俱成）。`, ['R-QJF-14', 'R-BZZ-QJ-04']));
-  if (tm.harmonyWait.length) out.push(sentence('应期', `三合待时：${tm.harmonyWait.join('；')}（虚一待用，待所缺之字到时应）。`, ['R-SANHE-03', 'R-SANHE-04']));
+  if (tm.harmonyWait.length) out.push(sentence('应期', `三合待时：${tm.harmonyWait.join('；')}（虚一待用，待后时之月日可以填之）。`, ['R-SANHE-03', 'R-SANHE-04']));
   if (tm.season) out.push(sentence('应期', `本卦属${d.hexagram.palace}宫，按卦宫，大的时节在${tm.season}之后（宫居${d.hexagram.palace}，${tm.season}后选）。`, ['R-YY-YL-03']));
   if (r.notes.some((n) => /^子孙\S*(无力|入墓|化回头克|合住|化退|衰而又绝|化绝|化破)/.test(n.text))) out.push(sentence('应期', '克官的子孙眼下被制，但除恶未尽：日后子孙逢生扶、冲开之年月，仍要防它复起（除恶未尽，须防死灰复燃）。', ['R-QJF-13']));
   out.push(sentence('应期', '若是心里忐忑而子孙持世，结果多在子孙值日出来；若是心里欢喜而官星持世，多在官鬼值日出来（心有忧惧，值子孙之日而发案；心有欢喜，逢官鬼之日而挂榜）。', ['R-ZS-QM-14']));
@@ -236,5 +236,9 @@ export function interviewV3Text(chart, ctx = {}) {
     if (!body.includes(key(x.text))) out.push(sentence('判断依据', `${x.text}。`, x.rules));
   }
 
+  // 断语句中凡嵌入判定条文之括注引文者，补引该条之规则（引擎逐字核对：断语句不得只引固定规则而漏引所嵌条文之出处）
+  const allItems = [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes];
+  const quoteSegs = (t) => [...String(t).matchAll(/（([^（）]+)）/g)].map((m) => m[1]).filter((q) => q.length >= 6);
+  for (const s0 of out) for (const x of allItems) if (quoteSegs(x.text).some((q) => s0.text.includes(q))) s0.rules = [...new Set([...s0.rules, ...(x.rules || [])])];
   return { version: INTERVIEW_V3_TEXT_VERSION, verdict: r.verdict, items: out };
 }

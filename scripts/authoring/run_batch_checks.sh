@@ -15,4 +15,7 @@ pr=$(python scripts/analysis/audit-pending-rules.py) || rc=1
 echo "$pr" | tail -1
 lx=$(node scripts/analysis/audit-liangxian-branch.mjs) || rc=1
 echo "$lx" | tail -1
+# 引擎逐字核对：所引规则存在、不引不采用之规则、引文与规则对应、已采用规则皆有着落
+ea=$(node scripts/analysis/audit-engine-rules.mjs 20000) || rc=1
+echo "$ea" | head -1
 exit $rc
