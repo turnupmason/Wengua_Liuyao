@@ -1,5 +1,5 @@
 {
-  "register_version": "0.5.0",
+  "register_version": "0.6.0",
   "rule_profile": "zengshan-main",
   "policy": "原文须逐字见于 sources/classics 所注卷章（去除标点空白后比对）。review_status 只有专业审核者可以改为 approved；脚本核对通过只说明原文出处属实，不说明断法已经审核。",
   "rules": [
@@ -2802,6 +2802,392 @@
         "date": "2026-11-15",
         "note": "原文逐字取自 sources/classics，verify-rules 核对；释义依 docs/18 第〇节，未经专业审核。"
       }
+    },
+    {
+      "rule_id": "R-QIUMING-03",
+      "topic": "求名·官父兴衰（童试）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·童试章第四十九",
+      "original_text": [
+        "父旺官兴﹐堪期首选。官衰父发﹐亦论抡收。官星持世﹐得日月动爻相生相合﹐道选无疑。父爻持世﹐得日月动爻相生相合者﹐亦要官星有气﹐始许成名。"
+      ],
+      "modern_explanation": "考选之事官父并看：父母（文章、表现、文书）旺而官星兴为上；官星衰而父母发动，也能被录取；官持世得生合必选；父持世得生合者，还要官星有气。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-04",
+      "topic": "求名·子动克官、财动克父",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·童试章第四十九",
+      "original_text": [
+        "子兴财发于卦中﹐难游泮水。子动克官﹐财动克父﹐或持于世爻者皆不宜也。"
+      ],
+      "modern_explanation": "子孙发动克官、妻财发动克父，或子孙、妻财持世，于考选皆不利。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "财动而接续相生（财生官、官生世或生父）者不作克父论（R-QIUMING-06 岁考例）；官临日辰者子孙伤它不到（R-LINGXING-01）；子孙合入生官之局者不作克官论（R-QIUMING-13）",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-05",
+      "topic": "求名·父母动变（场中表现）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·童试章第四十九",
+      "original_text": [
+        "父衰动而化回头生﹑化进神﹐文章得意胜于前。皆不宜化退神﹐化退神者﹐前篇稍遂﹐后劲不力﹐衰化退神及化克化空破墓绝或回头克者﹐窗下午日长﹐场中一日短。",
+        "父旺遭伤﹐收而复弃。冲中逢合﹐见弃复收。"
+      ],
+      "modern_explanation": "父母动而化回头生、化进神，临场发挥越来越好；化退神前好后弱；化回头克、化空破墓绝，平时用功而临场失利。父旺而受伤，录了又弃；冲中逢合，弃而复收。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "化出之爻旬空而非真空者，作出空之时再看（D-017）",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-06",
+      "topic": "求名·父宜旺、官宜生身（岁科考）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·岁科考章第五十",
+      "original_text": [
+        "父宜旺相﹐最忌休囚﹔官宜生身﹐不宜克世。",
+        "父爻受克而无救﹐难免涂鸦﹔世爻受克而有扶﹐亦业姑许。",
+        "财动克父﹐乃不通变之论也。此卦乃亥水父爻持世﹐申月生之﹐父旺而身亦旺﹐巳日冲之﹐为暗动﹐未土财爻虽动﹐喜其生助酉金﹐酉官生世﹐名为接续相生﹐一定篇篇华锦。"
+      ],
+      "modern_explanation": "父母宜旺相，休囚最忌；官星宜生世，不宜克世。父受克无救，表现必差；世受克而有扶，仍可姑许。财虽动而生官、官生世，是接续相生，不作财克父论。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-07",
+      "topic": "求名·考核录用（考道才）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·考道才章第五十二",
+      "original_text": [
+        "官爻持世生世﹐我必业收。父母空破墓绝﹐他不见用。如世爻受克及空破墓绝﹐或动而变凶﹑或子孙持身动于卦中﹐皆不录之。父母生世持世者吉﹐休囚空破者凶。"
+      ],
+      "modern_explanation": "官持世、生世者必录；父母空破墓绝者不被录用；世受克、空破墓绝、动而变凶，或子孙持世、子孙发动，都不录；父母生世持世吉，休囚空破凶。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "官旺而持世生世者，父衰不碍（R-QIUMING-08「父衰官旺堪许登科」）",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-08",
+      "topic": "求名·父旺官衰、父衰官旺",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "父旺官衰终须下第。父爻旺相官临空破墓绝及动而变凶变克﹐虽有锦绣文章﹐终遇红纱蔽目。",
+        "父衰官旺堪许登科。官爻旺而生世持世﹐若是父爻不旺﹐谓之福齐文不齐﹐反许遂志。"
+      ],
+      "modern_explanation": "父旺而官衰（空破墓绝、动而变凶变克），表现再好也不取；官旺而生世持世，父虽不旺仍许得成。官为主，父为辅。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-09",
+      "topic": "求名·应爻荐举",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "应合日生必资鹗荐。官父两旺而世爻不旺﹐或得日月扶助﹐又得应爻动而生合世爻者﹐必得推荐之力。",
+        "动伤日克还守鸡窗。应爻动爻虽来生合世爻﹐而应爻又被日月冲克者﹐荐亦无功。"
+      ],
+      "modern_explanation": "应爻（对方、荐举之人）动而生合世，官父有气，得人推荐；应爻生合世而自身受日月冲克，推荐无功。面试中应爻作对方单位、面试官看（类推，例 5、例 7）。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-10",
+      "topic": "求名·无成之象",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "子摇财动﹐名落孙山。子孙财爻持世﹐及动于卦中﹐终须下第。",
+        "予见占功名必中者﹐卦象一成﹐若非旺父生身﹐定是旺官持世。功名无成者不是子孙持世﹐即是子孙财爻发动﹐或是世爻破空﹐或是六爻乱动﹐功名必无成。"
+      ],
+      "modern_explanation": "必中之象：旺父生身，或旺官持世。无成之象：子孙持世、子孙或妻财发动、世爻破空、六爻乱动。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-11",
+      "topic": "求名·世爻为本",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "日月冲克世﹐且守青灯。卦中官父虽旺而世爻休囚空破墓绝及动而变凶﹐或日月冲克世爻﹐须知求名在我﹐我位既失﹐何以成名。"
+      ],
+      "modern_explanation": "官父虽旺，世爻休囚空破墓绝、动而变凶，或日月冲克世爻，自己站不住，不成。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "世受克而有扶者姑许（R-QIUMING-06 野鹤语）",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-12",
+      "topic": "求名·兄弟夺标",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "兄弟乃夺标之恶客。",
+        "卦中官星不动﹐但遇兄弟持世﹑兄父发动﹑及财爻持世化兄弟﹐百无一成"
+      ],
+      "modern_explanation": "兄弟为竞争者。官星不动而兄弟持世、兄动，或财持世化兄弟，难成。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "财爻同兴时兄动制财，有喜有忌（同章）",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-13",
+      "topic": "求名·暗动会局反生世",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "寅木旺官持世﹐申日冲之﹐暗动又得日辰会成财局﹐不惟不克世爻﹐反来生世﹐一定高捷﹐果得及第。"
+      ],
+      "modern_explanation": "旺官持世，被日冲为暗动；又会成财局，不但不克世，反来生世，必中。卦中之爻合入生官、生世之局者，不以其本性论克。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-14",
+      "topic": "求名·伏藏有用、官父两旺",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "伏藏有用﹐终辞白屋之人。官父有一而不上卦﹐须看伏神﹐若伏而旺相﹐或得日月冲去飞神﹐生起伏神﹐准登科及第。",
+        "凡得六冲卦﹐官父世爻俱旺者﹐不必再占﹐竟许必得。",
+        "凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐虽六合亦无益矣。"
+      ],
+      "modern_explanation": "官父有一不上卦，看伏神，伏而旺相或飞神被冲去者可成。六冲卦官父世俱旺者仍许必得；六合卦也要官父世得地，有一失陷而无生扶，六合无益。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-15",
+      "topic": "求名·文试官父并重",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·武试章第五十九亦可以与文试看",
+      "original_text": [
+        "文试者﹐官父而重。武试者﹐首重官爻。",
+        "世破官空休指望﹐官兴财旺亦堪图。世与官星有一而逢空破者﹐不须指望。",
+        "试期病阻乃因官鬼克世。"
+      ],
+      "modern_explanation": "文试官父并重；世或官逢空破，不必指望；官鬼克世，临场有病阻。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-16",
+      "topic": "求名·父母应期（发案）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·发案持榜章第五十三",
+      "original_text": [
+        "父为用神﹐衰者宜生旺之日﹔旺而静者﹐逢值冲之日﹔动而逢值逢合之日﹔空与入墓﹐必待冲开﹔破与旬空﹐须期填实。"
+      ],
+      "modern_explanation": "以父母看放榜、通知之期：衰者待生旺之日，旺而静者逢值逢冲，动者逢值逢合，空墓待冲开，破与旬空待填实。",
+      "applicable_conditions": "面试、笔试、考核、选拔类求职（D-023）；升职、内调、补缺仍用升选候补章",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-QIUMING-17",
+      "topic": "求名·官生应而不生世",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+      "original_text": [
+        "断曰﹕内卦巳酉丑合成官局﹐而生应爻﹐不来生世﹐正所谓出现无情﹐此缺不得。彼曰﹕如何不得﹖予曰﹕官生应爻﹐一定不得﹐后果另选别人。"
+      ],
+      "modern_explanation": "官星（或官局）生应爻而不生世，是出现无情，位置给了别人。",
+      "applicable_conditions": "求名、求职、面试（D-021、D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
+        "round": "held-out-cases-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文逐字取自 sources/classics，verify-rules 核对；释义与面试问的适用依 docs/18 第〇〇节（第三版），未经专业审核。"
+      }
     }
   ],
   "disputes": [
@@ -3239,6 +3625,29 @@
       "status": "ruled",
       "ruling": "D-018 收窄：仅世陷（世空或世破）而财空者判偏难；财静而无力、财待时不另翻判",
       "ruled_by": "用户（2026-11-15「A开始好好做」）",
+      "ruled_at": "2026-11-15"
+    },
+    {
+      "dispute_id": "D-023",
+      "topic": "面试问取用：只看官鬼（升选候补章），还是官父并看（童试、岁科考、考道才、乡试、武试诸章）",
+      "positions": [
+        {
+          "source": "增删卜易·升选候补章",
+          "view": "官为用神；官克世而世旺者竞升（R-YONG-GUAN-08）；父母不入判定"
+        },
+        {
+          "source": "增删卜易·童试章、岁科考章、考道才章、乡试章、武试章",
+          "view": "文试官父并重：父母为文章、表现、文书，官为功名；官宜生身，不宜克世；财动克父、子动克官皆不宜"
+        },
+        {
+          "source": "外部现代卦例 9 例（reports/held-out-cases-interview.md）",
+          "view": "原断者多以父母看面试、笔试一关，以官看录用；只看官鬼的现行断法 9 例错 4"
+        }
+      ],
+      "adopted": "B",
+      "status": "ruled",
+      "ruling": "面试、笔试、考核、选拔类求职按考试诸章官父并看（docs/18 第〇〇节）；升职、内调、补缺、保官仍按升选候补章。官克世：世旺有扶者姑许，世不旺者不宜（岁科考章野鹤语）。官临月建不免于子孙发动（乡试章「子摇财动，名落孙山」；例 6），R-LINGXING-01 在面试问中只保留官临日辰一款。",
+      "ruled_by": "用户（2026-11-15「更新我们的规则，要从中学习到不足，断错的地方」「跟古籍活学活用」）",
       "ruled_at": "2026-11-15"
     }
   ],
