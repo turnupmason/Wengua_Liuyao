@@ -499,7 +499,7 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
   }
   for (const l of chart.lines.filter((x) => x.moving)) flows.push(assessChange(l, lf(l), roleOf(l.relative)));
 
-  return {
+  const evidence = {
     version: EVIDENCE_VERSION,
     questionId,
     questionRuleVersion: q.rule_version,
@@ -523,4 +523,8 @@ export function buildEvidence(questionId, chart, analysis = analyzeChart(chart))
     timingCandidates: [...(yong ? timingCandidates(yong, lf(yong), chart, SCALE_NEAR) : hiddenTiming(missing)), ...harmonyTiming(harmonies, false)],
     adverseTimingCandidates: [...adverseTiming(chart, { ...roles, yong: rel }, analysis), ...harmonyTiming(harmonies, true)],
   };
+  // 排盘与分析随证据带出（不可枚举：不进事实指纹 facts_digest），供第三版判定与 eq-0.14 类键使用
+  Object.defineProperty(evidence, 'chart', { value: chart, enumerable: false });
+  Object.defineProperty(evidence, 'analysis', { value: analysis, enumerable: false });
+  return evidence;
 }

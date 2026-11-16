@@ -1,7 +1,8 @@
 // 等价条件（判断要素指纹）：按真正影响结论的专业条件给卦盘归类，供多个等价情境共用一篇审核通过的正文。
 // 60 日干支全部参与计算；六神、地支名、爻位等不改变结论的细节不进指纹。草案版本，未经专业审核。
 
-export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.13.0';
+export const EQUIVALENCE_VERSION = 'interview-pass-eq-0.14.0';
+import { interviewV3, interviewV3Signature } from './questions/interview-v3.js';
 
 /**
  * 官星与世爻之情（docs/18 第〇节第 1 条）：乡试章「出现无情…若不生合世爻﹐或不持世…或被世爻冲克﹐亦属无益」；
@@ -149,7 +150,12 @@ export function interviewPassClass(evidence) {
     yong.qing ? `官${yong.qing}` : '', yong.riyue || '',
     `原${yuan}`, `忌${ji}`, tongdong, factors.hexagram, factors.harmonies.length ? `局${factors.harmonies.join('+')}` : '',
   ].filter(Boolean).join(';');
-  return { version: EQUIVALENCE_VERSION, key, factors, writable: blockers.length === 0, blockers };
+  // eq-0.14（2026-11-15）：在 eq-0.13 键后接第三版签名（结论、否决、能过、分层；docs/18 第〇〇节）。
+  // 用户「最高标准做事」：否决、能过的每种组合各自成类，类稿对类内每一卦都成立；逐卦细节由逐卦断语段承担。
+  if (!evidence.chart) throw new Error('eq-0.14 类键需要排盘：请用 buildEvidence() 生成证据');
+  const v3 = interviewV3(evidence.chart, { analysis: evidence.analysis, evidence });
+  const baseKey = key;
+  return { version: EQUIVALENCE_VERSION, key: `${baseKey};${interviewV3Signature(v3)}`, baseKey, v3Verdict: v3.verdict, factors: { ...factors, v3: interviewV3Signature(v3) }, writable: blockers.length === 0, blockers };
 }
 
 export function classKeyFor(questionId, evidence) {
