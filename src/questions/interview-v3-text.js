@@ -123,10 +123,14 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // 5. 竞争（兄弟）
   const x = d.xiong;
-  if (x.holdsWorld || x.moving.length || has('兄局')) {
+  if (x.holdsWorld || x.moving.length || x.riyue || has('兄局')) {
     let t = x.holdsWorld ? '兄弟持世，自己这边分心或开销大' : '';
     if (x.moving.length) t += `${t ? '；' : ''}兄弟在${x.moving.map((p) => POS[p]).join('、')}发动，从卦象看，同场竞争的人有动作`;
+    if (x.riyue) t += `${t ? '；' : ''}月建、日辰都带兄弟，同场竞争的人多`;
     if (has('兄局')) t += '；兄弟成局，竞争的人多';
+    if (x.moving.length || x.riyue) t += '；纵然能成，名次也难居前（如遇发动，或月建日辰俱带兄弟，则同经者多……纵大象可成，名亦落后）';
+    else if (x.holdsWorld) t += '；纵然能成，难拔头筹（兄不能抡元而夺魁也）';
+    if (x.moving.length && x.caiAlso) t += '；但财爻同动，兄动正好制财、护住文书（所喜者卦中财爻同兴，喜其兄动以制财也）';
     out.push(sentence('竞争', `${t}。`, x.rules));
   } else out.push(sentence('竞争', '兄弟爻未见明显发动牵制，竞争一层卦中没有突出的象。', x.rules));
 

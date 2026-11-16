@@ -5904,9 +5904,10 @@
       "source_book": "增删卜易",
       "source_chapter": "增删卜易卷之三·乡试章第五十五",
       "original_text": [
-        "兄弟乃夺标之恶客。俗传兄弟爻兴难上榜﹐凡见兄爻持世及动者﹐皆以为之不吉﹐殊不知有喜有忌﹐所喜者卦中财爻同兴﹐喜其兄动以制财也。卦中父官两动者﹐又喜兄爻持世﹐父动以生世也。"
+        "兄弟乃夺标之恶客。俗传兄弟爻兴难上榜﹐凡见兄爻持世及动者﹐皆以为之不吉﹐殊不知有喜有忌﹐所喜者卦中财爻同兴﹐喜其兄动以制财也。卦中父官两动者﹐又喜兄爻持世﹐父动以生世也。",
+        "兄不能抡元而夺魁也﹐故谓之兄弟乃夺标之客。"
       ],
-      "modern_explanation": "兄动有喜有忌：财同动则兄制财为喜；父官两动则喜兄持世。",
+      "modern_explanation": "兄动有喜有忌：财同动则兄制财为喜；父官两动则喜兄持世。兄弟持世或发动者，纵得科名，亦不能抡元夺魁。",
       "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
       "exceptions": "",
       "dispute_ids": [
@@ -5921,7 +5922,7 @@
         "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
         "round": "classics-sweep-2026-11-15",
         "date": "2026-11-15",
-        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。；2026-11-16 古籍逐段台账（增删 2546）补「兄不能抡元而夺魁也」一句（原段已登记而此句未入规则）"
       }
     },
     {
@@ -6145,12 +6146,14 @@
       ],
       "modern_explanation": "六冲变六合，先难后成；占功名始则艰阻、终则荣显。",
       "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
-      "exceptions": "",
+      "exceptions": "六冲变六合之卦，否决俱改作「始则艰阻」之注，结论作过（用户裁定 B-013）",
       "dispute_ids": [
         "D-023"
       ],
       "adoption": "adopted",
-      "engine_refs": [],
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
       "review_status": "ai-verified",
       "version": "0.1.0",
       "usage": "判（次要）、象",
@@ -9534,6 +9537,118 @@
         "note": "古籍逐段台账（增删卜易 3163）：第三版子孙与财同动免克未查兄弟同动克财。"
       },
       "dispute_ids": []
+    },
+    {
+      "rule_id": "R-BZZ-QM-10",
+      "topic": "求名注·妻财助鬼父爻空",
+      "source_book": "卜筮正宗",
+      "source_chapter": "九、求名",
+      "original_text": [
+        "父母空亡，若得财爻发动生扶官鬼，侥幸可成；若财官两动而父爻旬空，反不宜用，父爻不空可望。"
+      ],
+      "modern_explanation": "父空而财动生官，侥幸可成；但财官两动而父旬空者反不宜用；父不空则可望。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（卜筮正宗 751）：第三版「妻财助鬼」未除官亦动者。"
+      }
+    },
+    {
+      "rule_id": "R-BZZ-QM-11",
+      "topic": "求名注·福德变官身位合",
+      "source_book": "卜筮正宗",
+      "source_chapter": "九、求名",
+      "original_text": [
+        "正卦无官，若得子孙变出官鬼，与世身生合，得文书有气，功名有望，但不能高中也。"
+      ],
+      "modern_explanation": "正卦无官，子孙动化出官鬼而生合世，文书有气者，功名有望而不能高中。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "卦身不取（增删不验，R-QJF-01），只验世爻",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（卜筮正宗 752）：第三版子孙化官生合世之免克注未查正卦无官与文书有气。"
+      }
+    },
+    {
+      "rule_id": "R-BZZ-QM-12",
+      "topic": "求名注·身兴变鬼",
+      "source_book": "卜筮正宗",
+      "source_chapter": "九、求名",
+      "original_text": [
+        "卦遇不成之兆，而得身世爻变官鬼有气，而父母不坏者，下帷可中也。"
+      ],
+      "modern_explanation": "卦本不成，而世爻动化官鬼有气、父母不坏者，可中。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "与增删世化官两路（千金赋世旺而无破损、乡试章父母旺相，R-HUA-04、R-ZS-QM-31）并取",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（卜筮正宗 763）：2026-11-16 依增删改世化官时漏了「变官鬼有气」「父母不坏」两句。"
+      }
+    },
+    {
+      "rule_id": "R-ZS-QM-35",
+      "topic": "乡试·官子同动最怕兄兴",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "觉子曰﹕卦中官鬼子孙同动﹐官临旺相遇生扶﹐子孙弱而被克﹐再宜父动﹐最怕兄兴。"
+      ],
+      "modern_explanation": "官鬼子孙同动、官旺有扶而子孙弱被克者，子孙克不动官，更宜父动制之；最怕兄弟发动生起子孙。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删 2546）：原段已登记而觉子此句未入规则。弱子孙受克不能克官已由忌神不能克七条实现（role-state moverBlocked），兄动生之则不在弱列；此条补注其依据。"
+      }
     }
   ],
   "disputes": [
@@ -10134,6 +10249,13 @@
       "topic": "第三版「旺」的口径：月日一生一克之爻（与 B-004 之别）",
       "ruling": "保持第三版：月日一生一克、无动爻相帮、不临日者作平（有气不旺），不按 B-004「以月建为准」定强弱。B-004 只用于用神三层状态（role-state）；第三版旺官持世、官父两旺等「旺」之判，月日一生一克作平。例外有原文者照旧：有动爻来生扶作旺（R-YUEJIAN-05、R-YUEJIAN-04）、临日辰作旺（R-RIZHEN-05）、月合作旺（R-YUEJIAN-01）。",
       "ruled_by": "用户（「Keep v3 as 平」）",
+      "ruled_at": "2026-11-16"
+    },
+    {
+      "id": "B-013",
+      "topic": "六冲变六合是否连否决一并不看",
+      "ruling": "连否决一并不看：卦得六冲变六合，凡否决（含官、父、世之否决）俱改作「始则艰阻」之注，结论作过。依六合章「诸合皆以用神旺者为吉，独此六冲卦变六合得不看用神，竟以吉断」及卦例离之旅「此卦从来难以吉断……此婚一定还成」（R-HE-03）。",
+      "ruled_by": "用户（2026-11-16「Override vetoes too」）",
       "ruled_at": "2026-11-16"
     }
   ]
