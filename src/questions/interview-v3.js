@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.0.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.0.1';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -192,7 +192,12 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (f.lv === 0 && !f.moving) {
       if (guanWangQing) N(`父${f.br}无力，但官旺而持世或生世（父衰官旺，堪许登科）`, ['R-QIUMING-08', 'R-BZZ-QM-08']);
       else if (caiZhuGui) N(`父${f.br}空而无力，但财动生官、子孙安静（妻财助鬼父爻空，可图侥幸）：名虽有望，难许高中`, ['R-HJC-QM-06']);
-      else V('父无力', `父${f.br}空破墓绝而静（父母空破墓绝，他不见用）`, ['R-QIUMING-07', 'R-HJC-SH-02']);
+      else {
+        // 文字按实情写：空、破、墓、绝者引考道才章；只是休囚无气者引岁科考章「父宜旺相，最忌休囚」
+        const fcal = f.kind === 'line' ? fact(f.line).calendar : null;
+        const bad = fcal ? [fcal.void ? '旬空' : '', fcal.monthBreak ? '月破' : '', fcal.dayTomb ? '入墓' : '', fcal.dayExtinct ? '绝于日' : ''].filter(Boolean).join('、') : '';
+        V('父无力', bad ? `父${f.br}${bad}而静（父母空破墓绝，他不见用）` : `父${f.br}${f.kind === 'hidden' ? '伏而' : ''}休囚无气而静（父宜旺相，最忌休囚）`, bad ? ['R-QIUMING-07', 'R-HJC-SH-02'] : ['R-QIUMING-06', 'R-QIUMING-07']);
+      }
     }
     const HAI = { 子: '未', 未: '子', 丑: '午', 午: '丑', 寅: '巳', 巳: '寅', 卯: '辰', 辰: '卯', 申: '亥', 亥: '申', 酉: '戌', 戌: '酉' };
     const XING = { 寅: '巳', 巳: '申', 申: '寅', 丑: '戌', 戌: '未', 未: '丑', 子: '卯', 卯: '子' };
@@ -242,7 +247,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const xiongOk = fFa.length > 0 || (wWang && ((gWang && fWang) || G.shown.some((x) => x.moving && f && gen(x.el, f.el))));
   if (wRel === '兄弟' && xiongOk) N('兄弟持世，但父母动来生合世，或世旺而官父得地（兄弟持世，若临日月或旺相，再得官父两旺、或官动生父、父动生世，必添科名；兄弟临身，喜父母化吉而拱合）', ['R-ZS-QM-21', 'R-ZS-QM-22']);
   else if (wRel === '兄弟' && !(g && g.acts) && !(F.shown.some((x) => x.moving) && G.shown.some((x) => x.moving))) {
-    V('兄持世', '兄弟持世而官不动（子孙兄弟持世，谋署谋差自投罗网）', ['R-ZS-QM-03', 'R-QIUMING-12']);
+    V('兄持世', '兄弟持世而官不动（子孙兄弟持世，谋署谋差自投罗网）', ['R-ZS-QM-03', 'R-QIUMING-12', 'R-YUANLI-02']);
   }
   // 六爻乱动
   if (L.filter((l) => l.moving).length >= 4) {

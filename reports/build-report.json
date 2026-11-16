@@ -1,65 +1,65 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 6,
-  "technical_passed": 6,
+  "scripts": 16,
+  "technical_passed": 16,
   "author_reviewed": 1,
   "professionally_reviewed": 0,
-  "ai_approved": 6,
+  "ai_approved": 16,
   "review_required": 0,
-  "approved_for_release": 6,
+  "approved_for_release": 16,
   "errors": [],
   "warnings": [],
   "similarity": [
     {
-      "a": "IP-0001",
-      "b": "IP-0005",
-      "jaccard6": 0.017
+      "a": "IPC-0003",
+      "b": "IPC-0005",
+      "jaccard6": 0.079
     },
     {
-      "a": "IP-0002",
-      "b": "IP-0005",
-      "jaccard6": 0.007
+      "a": "IPC-0004",
+      "b": "IPC-0008",
+      "jaccard6": 0.058
     },
     {
-      "a": "IP-0004",
-      "b": "IP-0006",
-      "jaccard6": 0.006
+      "a": "IPC-0003",
+      "b": "IPC-0007",
+      "jaccard6": 0.046
     },
     {
-      "a": "IP-0003",
-      "b": "IP-0004",
-      "jaccard6": 0.005
+      "a": "IPC-0005",
+      "b": "IPC-0007",
+      "jaccard6": 0.039
     },
     {
-      "a": "IP-0001",
-      "b": "IP-0003",
-      "jaccard6": 0.004
+      "a": "IPC-0003",
+      "b": "IPC-0008",
+      "jaccard6": 0.035
     },
     {
-      "a": "IP-0002",
-      "b": "IP-0004",
-      "jaccard6": 0.003
+      "a": "IPC-0001",
+      "b": "IPC-0003",
+      "jaccard6": 0.034
     },
     {
-      "a": "IP-0002",
-      "b": "IP-0006",
-      "jaccard6": 0.003
+      "a": "IPC-0003",
+      "b": "IPC-0009",
+      "jaccard6": 0.034
     },
     {
-      "a": "IP-0001",
-      "b": "IP-0002",
-      "jaccard6": 0.002
+      "a": "IPC-0004",
+      "b": "IPC-0006",
+      "jaccard6": 0.032
     },
     {
-      "a": "IP-0001",
-      "b": "IP-0004",
-      "jaccard6": 0.002
+      "a": "IPC-0005",
+      "b": "IPC-0009",
+      "jaccard6": 0.03
     },
     {
-      "a": "IP-0002",
-      "b": "IP-0003",
-      "jaccard6": 0.002
+      "a": "IPC-0006",
+      "b": "IPC-0009",
+      "jaccard6": 0.027
     }
   ]
 }

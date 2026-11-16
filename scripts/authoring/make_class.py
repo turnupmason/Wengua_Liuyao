@@ -5,7 +5,7 @@
 import json, os
 
 ROOT = 'D:/Wengua_Liuyao'
-V = 'interview-pass-eq-0.13.0'
+V = 'interview-pass-eq-0.14.0'
 _reg = None
 _prof = None
 
@@ -60,6 +60,28 @@ TIER = {'无力': '当前无力（INEFFECTIVE）', '静不作用': '安静而月
         '伏平': '不上卦，伏而平', '无': '不上卦亦无伏', '平（无吉无凶）': '月日相敌，无吉无凶'}
 
 
+V3NAME = {'pass': '倾向通过', 'wait': '悬而未决', 'fail': '偏难'}
+
+
+def v3gloss(sig):
+    parts = sig.split('|')
+    out = f"第三版结论「{V3NAME[parts[0][2:]]}」"
+    for x in parts[1:]:
+        out += {'否': '；否决项「', '过': '；能过项「', '层': '；分层否决「'}[x[0]] + '、'.join(x[1:].split('+')) + '」'
+    return out
+
+
+def sig_of(key):
+    return next(x for x in key.split(';') if x.startswith('三版'))
+
+
+def sig_codes(key):
+    return [c for x in sig_of(key).split('|')[1:] for c in x[1:].split('+') if c]
+
+
+V3_OK = {'pass': ['likely-pass', 'pass-but-slow'], 'wait': ['pass-but-slow', 'wait-then-likely'], 'fail': ['unlikely']}
+
+
 def gloss(key):
     parts = key.split(';')
     out = [f'用神「{parts[0][1:]}」']
@@ -69,18 +91,22 @@ def gloss(key):
             t = p[1:]
             out.append(f"{SEG[p[0]]}{TIER.get(t, t)}")
         elif p.startswith('局'): out.append(f'三合「{p[1:]}」')
+        elif p.startswith('三版'): out.append(v3gloss(p))
+        elif p.startswith('官'): out.append(f'官星与世「{p[1:]}」')
+        elif p == '日月官生合世': out.append('日月作官星生合世')
+        elif p.startswith('忌元同动'): out.append(f'忌神原神同动「{p[4:]}」')
         else: out.append(f'卦级「{p}」')
     return '；'.join(out)
 
 
 def variations(p):
     s = p['stats']
-    keys = ['月建六亲', '用神月令', '用神生扶', '世爻六亲', '应爻对世', '发动六亲']
+    keys = ['月建六亲', '用神月令', '用神生扶', '世爻六亲', '应爻对世', '发动六亲', '三版官层', '三版父层', '三版世层', '三版加减']
     seg = []
     for k in keys:
         v = s.get(k, [])
         if len(v) > 1: seg.append(f"{k}：{'、'.join(v[:4])}")
-    fixed = [f"{k}：{s[k][0]}" for k in ['月建六亲', '用神月令'] if len(s.get(k, [])) == 1]
+    fixed = [f"{k}：{s[k][0]}" for k in ['月建六亲', '用神月令', '三版官层', '三版父层', '三版世层'] if len(s.get(k, [])) == 1]
     return '；'.join(seg), '；'.join(fixed)
 
 
@@ -90,6 +116,11 @@ def make(spec):
     for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion']:
         spec[k] = convert(spec[k])
     p = prof(spec['rank'])
+    sig = sig_of(p['key'])
+    assert spec['verdict'] in V3_OK[sig[2:].split('|')[0]], f"{spec['id']} 结论 {spec['verdict']} 与第三版 {sig} 不符"
+    v3basis = [{'code': c, 'text': t, 'rules': list(r)} for c, t, r in spec.get('v3', [])]
+    missing = set(sig_codes(p['key'])) - {b['code'] for b in v3basis}
+    assert not missing, f"{spec['id']} 第三版依据未写：{missing}"
     sources = [src(*x) if isinstance(x, tuple) else x for x in spec['sources']]
     entries = []
     for t in spec.get('timing', []):
@@ -98,7 +129,7 @@ def make(spec):
         r = reg()[rule]
         entries.append({'timing_rule_id': rule, 'pool': pool, 'target_event': event, 'target_symbol': symbol, 'condition': cond, 'time_scale': 'day',
                         'calculation_basis': basis, 'source_reference': f"{r['source_book']}·{r['source_chapter']}「{r['original_text'][0]}」"})
-    rule_ids = sorted(set([s['rule_id'] for s in sources] + [e['timing_rule_id'] for e in entries] + spec.get('extra_rules', [])))
+    rule_ids = sorted(set([s['rule_id'] for s in sources] + [e['timing_rule_id'] for e in entries] + spec.get('extra_rules', []) + [r for b in v3basis for r in b['rules']]))
     var, fixed = variations(p)
     calc = (f"本类判别条件（等价条件 {V}，写稿顺序第 {p['rank']} 类，占起卦概率 {p['share']*100:.3f}%，全类 {p['charts']} 盘）："
             f"{gloss(p['key'])}。" + (f"全类一致：{fixed}。" if fixed else '') + (f"类内各盘不同之处：{var}；均不改变本类结论，正文不写，由排盘逐盘列出。" if var else '')
@@ -109,19 +140,19 @@ def make(spec):
         'scenario_tags': spec['tags'],
         'judgment': {'verdict': spec['verdict'], 'verdict_label': spec['label'], 'deciding_evidence': spec['deciding'], 'supporting': spec.get('supporting', []),
                      'adverse': spec.get('adverse', []), 'conflicts_resolved': spec.get('conflicts', []), 'rule_ids': rule_ids,
-                     'decisive': spec['decisive'], 'flow_acknowledgements': []},
+                     'decisive': spec['decisive'], 'v3_basis': v3basis, 'flow_acknowledgements': []},
         'reading': {'title': spec['title'], 'brief': spec['brief'], 'opening': spec['opening'], 'process': spec['process'], 'ending': spec['ending'],
                     'timing': {'text': spec['timing_text'], 'entries': entries}, 'conclusion': spec['conclusion'], 'classical_sources': sources,
                     'calculation_explanation': calc},
-        'authoring': {'author': 'Claude（AI 起草）', 'status': 'draft-complete', 'written_at': spec.get('written_at', '2026-11-14'), 'revision': spec.get('revision', 1),
-                      'revision_note': spec.get('revision_note', '初稿：依类别画像（全类统计与 12 个分散样本盘）与 docs/18 判断框架')},
+        'authoring': {'author': 'Claude（AI 起草）', 'status': 'draft-complete', 'written_at': spec.get('written_at', '2026-11-16'), 'revision': spec.get('revision', 1),
+                      'revision_note': spec.get('revision_note', 'eq-0.14 初稿：依类别画像（全类统计、第三版逐项分布与 12 个分散样本盘）与 docs/18 第〇〇节官父并看')},
     }
     os.makedirs(f'{ROOT}/authoring/classes/interview-pass', exist_ok=True)
     open(f"{ROOT}/authoring/classes/interview-pass/{spec['id']}.json", 'w', encoding='utf-8', newline='\n').write(json.dumps(doc, ensure_ascii=False, indent=2) + '\n')
     m = p['stats'].get('月建六亲', [])
     rv = {'script_id': spec['id'],
           'source_check': {'status': 'PASS', 'notes': f"引文 {len(sources)} 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。{spec.get('src_note', '')}"},
-          'independent': {'status': 'PASS', 'notes': f"依类别画像复算：全类 {p['charts']} 盘统计（月建六亲 {'、'.join(m[:4])}），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；应期规则 {', '.join(e['timing_rule_id'] for e in entries) or '无'} 为全类每盘皆有候选。{spec.get('ind_note', '')}"},
+          'independent': {'status': 'PASS', 'notes': f"依类别画像复算：全类 {p['charts']} 盘统计（月建六亲 {'、'.join(m[:4])}），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 {', '.join(e['timing_rule_id'] for e in entries) or '无'} 为全类每盘皆有候选。{spec.get('ind_note', '')}"},
           'adversarial': {'status': 'PASS', 'notes': spec['adv']},
           'final_qa': {'status': 'PASS', 'notes': spec.get('qa_note', '17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。')}}
     os.makedirs(f'{ROOT}/reports/review-classes', exist_ok=True)

@@ -25,7 +25,9 @@ for f in sorted(glob.glob(f'{ROOT}/authoring/classes/interview-pass/IPC-*.json')
         for sent in re.split(r'(?<=[。！？\n])', r[k]):
             s = sent.strip()
             if not s: continue
-            why = [n for n, p in PATS if p.search(s)]
+            # 「」内为古籍原文（如「百无一成」），不按读者视角查
+            plain = re.sub(r'「[^」]*」', '「」', s)
+            why = [n for n, p in PATS if p.search(plain)]
             if world_subject_error(s): why.append('主语')
             if why: bad.append((d['script_id'], k, '、'.join(why), s))
 if '--dump' in sys.argv:

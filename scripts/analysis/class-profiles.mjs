@@ -4,12 +4,12 @@
 import { Worker, isMainThread, parentPort, workerData } from 'node:worker_threads';
 import { cpus } from 'node:os';
 import { readFileSync, writeFileSync } from 'node:fs';
-import { buildChart, buildEvidence, allHexagrams, BRANCHES, ganzhiFromIndex, interviewPassClass, BRANCH_ELEMENT, relativeOf } from '../../src/index.js';
+import { buildChart, buildEvidence, allHexagrams, BRANCHES, ganzhiFromIndex, interviewPassClass, BRANCH_ELEMENT, relativeOf, interviewV3 } from '../../src/index.js';
 
 const Q = 'career.interview.interview-pass';
 const vals = (code, mask) => code.split('').map((b, i) => (b === '1' ? (mask[i] === '1' ? 9 : 7) : (mask[i] === '1' ? 6 : 8)));
 const PROB = { 6: 1 / 8, 7: 3 / 8, 8: 3 / 8, 9: 1 / 8 };
-const norm = (s) => String(s).replace(/(初|二|三|四|五|上)爻/g, '').replace(/[子丑寅卯辰巳午未申酉戌亥](?=动|日|月)/g, '').replace(/[子丑寅卯辰巳午未申酉戌亥]/g, '支');
+const norm = (s) => String(s).replace(/(初|二|三|四|五|上)爻/g, '').replace(/日辰/g, '日〇').replace(/[子丑寅卯辰巳午未申酉戌亥](?=动|日|月)/g, '').replace(/[子丑寅卯辰巳午未申酉戌亥](?!孙)/g, '支').replace(/日〇/g, '日辰');
 
 function profileOf(chart, e) {
   const y = e.yongshen.line;
@@ -35,6 +35,20 @@ function profileOf(chart, e) {
     伏神: e.flows.filter((x) => x.flow === 'hidden').map((x) => `${x.role}:${x.emergence}`).sort().join('、') || '无',
     三合: e.harmonies.map((h) => `${h.relative}局${h.statusLabel}${h.effect}${h.world}`).join('、') || '无',
   };
+  // eq-0.14：第三版判定的逐项分布（类键只含结论、否决、能过；加减分与象注类内各盘不同，由逐卦断语段写出）
+  const v3 = interviewV3(chart, { evidence: e });
+  const LV = ['无气', '有气', '旺'];
+  Object.assign(f, {
+    三版官层: v3.layers.hiring.line ? `官${LV[v3.layers.hiring.level]}（${v3.layers.hiring.line.kind}）` : '无官',
+    三版父层: v3.layers.performance.line ? `父${LV[v3.layers.performance.level]}（${v3.layers.performance.line.kind}）` : '无父',
+    三版世层: `世${LV[v3.layers.self.level]}`,
+    三版加减: `加${v3.plus.length}减${v3.minus.length}`,
+    三版否决: v3.veto.map((x) => norm(x.text)),
+    三版能过: v3.pass.map((x) => norm(x.text)),
+    三版加分: v3.plus.map((x) => norm(x.text)),
+    三版减分: v3.minus.map((x) => norm(x.text)),
+    三版象注: v3.notes.map((x) => norm(x.text)),
+  });
   const fav = [...new Set(e.timingCandidates.filter((c) => c.target_branches.length).map((c) => c.timing_rule_id))];
   const adv = [...new Set(e.adverseTimingCandidates.filter((c) => c.target_branches.length).map((c) => c.timing_rule_id))];
   return { f, fav, adv };
@@ -75,7 +89,7 @@ if (isMainThread) {
           }
           const top = (o) => Object.entries(o).sort((x, y) => y[1] - x[1]).map(([v, c]) => `${v}(${Math.round((100 * c) / m.charts)}%)`);
           return { rank: m.rank, key: m.key, share: m.share, cumulative: m.cumulative, charts: m.charts,
-            stats: Object.fromEntries(Object.entries(m.stats).map(([k, v]) => [k, top(v).slice(0, 8)])),
+            stats: Object.fromEntries(Object.entries(m.stats).map(([k, v]) => [k, top(v).slice(0, k.startsWith('三版') ? 24 : 8)])),
             timing_rules_all_charts: { favorable: Object.entries(m.fav).filter(([, c]) => c === m.charts).map(([r]) => r), adverse: Object.entries(m.adv).filter(([, c]) => c === m.charts).map(([r]) => r) },
             timing_rules_some_charts: { favorable: top(m.fav).filter((x) => !x.endsWith('(100%)')), adverse: top(m.adv).filter((x) => !x.endsWith('(100%)')) },
             samples: picked };
@@ -105,7 +119,7 @@ if (isMainThread) {
       if (!a) { a = { charts: 0, stats: {}, fav: {}, adv: {}, samples: [] }; acc.set(key, a); }
       a.charts += 1;
       const p = profileOf(chart, e);
-      for (const [sk, v] of Object.entries(p.f)) { a.stats[sk] = a.stats[sk] || {}; a.stats[sk][v] = (a.stats[sk][v] || 0) + 1; }
+      for (const [sk, v] of Object.entries(p.f)) { a.stats[sk] = a.stats[sk] || {}; for (const x of (Array.isArray(v) ? (v.length ? [...new Set(v)] : ['无']) : [v])) a.stats[sk][x] = (a.stats[sk][x] || 0) + 1; }
       for (const r of p.fav) a.fav[r] = (a.fav[r] || 0) + 1;
       for (const r of p.adv) a.adv[r] = (a.adv[r] || 0) + 1;
       if (a.samples.length < 12) a.samples.push({ h: rnd(), hex: h.name, ci: { line_values: lv, month_branch: m, day_ganzhi: g.stem + g.branch } });

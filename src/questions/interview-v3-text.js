@@ -2,7 +2,7 @@
 // 文字只用排盘事实与古籍规则组织；象意一律带「从卦象看」限定（C21）；规则编号只放在 rules 字段，不进正文（C06）。
 import { interviewV3 } from './interview-v3.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.0.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.0.1';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -222,8 +222,11 @@ export function interviewV3Text(chart, ctx = {}) {
   out.push(sentence('应期', '若是心里忐忑而子孙持世，结果多在子孙值日出来；若是心里欢喜而官星持世，多在官鬼值日出来（心有忧惧，值子孙之日而发案；心有欢喜，逢官鬼之日而挂榜）。', ['R-ZS-QM-14']));
 
   // 10. 建议：针对最弱一层
-  const weakest = [['临场表现', r.layers.performance.level], ['能否录取', r.layers.hiring.level], ['自身状态', r.layers.self.level]].sort((p, q) => p[1] - q[1])[0];
-  const advice = { 临场表现: '最弱的是表现一层：把材料、表达、笔试再打磨，答题宁稳勿杂。', 能否录取: '最弱的是职位一层：同时推进其他机会，不把结果押在这一处。', 自身状态: '最弱的是你自身这一层：先把状态和准备补足，必要时请人引荐。' }[weakest[0]];
+  // 三层同为最弱者一并写出；三层皆旺则无「最弱」可言
+  const layerLv = [['临场表现', r.layers.performance.level], ['能否录取', r.layers.hiring.level], ['自身状态', r.layers.self.level]];
+  const minLv = Math.min(...layerLv.map((x) => x[1]));
+  const ADV = { 临场表现: '表现一层：把材料、表达、笔试再打磨，答题宁稳勿杂。', 能否录取: '职位一层：同时推进其他机会，不把结果押在这一处。', 自身状态: '你自身这一层：先把状态和准备补足，必要时请人引荐。' };
+  const advice = minLv === 2 ? '官、父、世三层都旺，照常准备、按时应对即可，不必另作补救。' : `最弱的是${layerLv.filter((x) => x[1] === minLv).map((x) => ADV[x[0]]).join('同样弱的还有')}`;
   out.push(sentence('建议', advice + (a?.toWorld === '克世' ? '对方要求严，谈条件时留余地。' : '') + '若同时有几个机会，最好指定一个具体岗位再起一卦问（指其缺而问之，无不验也）。', ['R-ZS-QM-01']));
 
   // 判断依据：凡判定用到而上文没写到的，逐条补写（判定依据必须全部写进断语）

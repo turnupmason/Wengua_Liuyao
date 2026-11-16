@@ -4,6 +4,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { buildChart, buildEvidence, allHexagrams } from '../../src/index.js';
 import { classKeyFor, EQUIVALENCE_VERSION } from '../../src/equivalence.js';
+import { interviewV3 } from '../../src/questions/interview-v3.js';
 
 export function loadClassDrafts(root) {
   const dir = join(root, 'authoring/classes');
@@ -17,6 +18,7 @@ export function loadClassDrafts(root) {
   return out;
 }
 
+const V3_OK = { pass: ['likely-pass', 'pass-but-slow'], wait: ['pass-but-slow', 'wait-then-likely'], fail: ['unlikely'] };
 const HEX_NAMES = allHexagrams().map((h) => h.name).filter((n) => n.length >= 3);
 const SPECIFIC = [
   [/[子丑寅卯辰巳午未申酉戌亥][日月木火土金水时年]/g, '具体地支'],
@@ -44,6 +46,24 @@ export function checkClassDraft(src, userTexts) {
     samples.push({ ci, chart, evidence });
   }
   const r = src.reading;
+  // C34 eq-0.14：类键末段为第三版签名（结论、否决、能过），结论须与之相合（docs/18 第〇〇节；与逐盘稿 C11b 同口径）
+  const sig = String(src.class_key || '').split(';').find((x) => x.startsWith('三版')) || '';
+  const m3 = sig.match(/^三版(pass|wait|fail)/);
+  if (src.equivalence_version >= 'interview-pass-eq-0.14' && src.question_id === 'career.interview.interview-pass') {
+    if (!m3) errors.push('C34 类键缺第三版签名');
+    else if (!V3_OK[m3[1]].includes(src.judgment.verdict)) errors.push(`C34 结论「${src.judgment.verdict}」与类键第三版「${m3[1]}」不符`);
+    // C35 判定依据须写进断语（用户 2026-11-15「判定用到的每条都必须写进断语」）：签名中每个否决、能过之项，judgment.v3_basis 须逐项对应，且所述原句确在正文中
+    const codes = new Set(sig.split('|').slice(1).flatMap((x) => x.slice(1).split('+')).filter(Boolean));
+    const basis = new Map((src.judgment.v3_basis || []).map((b) => [b.code, b]));
+    const bodyAll = ['brief', 'opening', 'process', 'ending', 'conclusion'].map((k) => r[k]).join('');
+    for (const c of codes) {
+      const b = basis.get(c);
+      if (!b) errors.push(`C35 第三版依据「${c}」未在 judgment.v3_basis 中对应`);
+      else if (!b.text || !bodyAll.includes(b.text)) errors.push(`C35 第三版依据「${c}」的对应句不在正文中：${b.text}`);
+      else if (!(b.rules || []).length) errors.push(`C35 第三版依据「${c}」未列规则`);
+    }
+    for (const c of basis.keys()) if (!codes.has(c)) errors.push(`C35 judgment.v3_basis 列了类键签名之外的「${c}」`);
+  }
   const texts = { ...userTexts(r), timing: r.timing?.text || '' };
   for (const [k, v] of Object.entries(texts)) {
     for (const [re, what] of SPECIFIC) for (const m of String(v).matchAll(re)) errors.push(`C31 ${k} 写了${what}「${m[0]}」；类内各盘不同，须由程序逐盘列出`);
@@ -63,6 +83,14 @@ export function checkClassDraft(src, userTexts) {
     if (evidence.flows.some((f) => f.flow === 'hidden' && ['yong', 'yuan'].includes(f.role)) && !body.includes('伏')) errors.push(`C33 样本 ${tag} 有用神或原神伏藏，正文未讲到伏神`);
     if (evidence.yongshen.line?.void && !body.includes('空')) errors.push(`C33 样本 ${tag} 用神旬空，正文未讲到`);
     for (const d of src.judgment.decisive || []) {
+      // 第三版依据（eq-0.14）：否决、能过之项即类键签名，样本已由 C30 核为本类
+      if (d.role === 'v3') { if (!sig.split('|').slice(1).some((x) => x.slice(1).split('+').includes(d.basis))) errors.push(`C33 第三版依据「${d.basis}」不在类键签名中`); continue; }
+      // 父母一层（D-023 官父并看）：有利须父有气，不利须父无气
+      if (d.role === 'fu') {
+        const lv = interviewV3(samples.find((x) => x.ci === ci).chart, { evidence }).layers.performance.level;
+        if (d.effect === 'support' ? lv < 1 : lv > 0) errors.push(`C33 样本 ${tag} 的父母一层（${lv}）不满足主要${d.effect === 'adverse' ? '不利' : '有利'}依据`);
+        continue;
+      }
       // 卦级依据（如六合变六冲「始吉终凶」，R-CHONG-01）：类键须含所述卦象（样本已由 C30 核为本类）
       if (d.role === 'gua') { if (!d.basis || !String(src.class_key).includes(d.basis)) errors.push(`C33 卦级依据「${d.basis}」不在类键中`); continue; }
       // 官星与世爻之情（docs/18 第〇节第 1 条，eq-0.13 起入类键）：类键已逐盘由 C30 核对，此处核对所称之情确在类键中

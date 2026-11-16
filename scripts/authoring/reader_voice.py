@@ -55,6 +55,16 @@ RULES = [
 ]
 
 def convert(t):
+    # 「」内为古籍引文，须逐字保留（曾把「百无一成」改成「百无一般」）
+    keep = []
+    def stash(m):
+        keep.append(m.group(0)); return f'\uE000{len(keep) - 1}\uE001'
+    t = re.sub(r'「[^」]*」', stash, t)
+    t = _convert(t)
+    return re.sub(r'\uE000(\d+)\uE001', lambda m: keep[int(m.group(1))], t)
+
+
+def _convert(t):
     for a, b in SPECIFIC:
         t = t.replace(a, b)
     for pat, rep in RULES:

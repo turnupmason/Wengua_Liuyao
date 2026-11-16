@@ -8,7 +8,8 @@ lines = open(f'{ROOT}/sources/classics/增删卜易.md', encoding='utf-8').read(
 paras, chapter = [], ''
 for l in lines:
     if l.startswith('## '): chapter = l[3:].strip()
-    elif re.match(r'^[一-鿿]{1,12}章(?:又)?第[一-鿿]+$', l.strip()): chapter = l.strip()
+    # 章题后可带注（援例章第五十八﹝凡用财图名者同此﹞、武试章第五十九亦可以与文试看），章名可含「﹑」（面圣上书﹑叩阉…章）
+    elif re.match(r'^[一-鿿﹑]{1,40}章(?:又)?第[一-鿿]+(?:﹝[^﹞]*﹞|[一-鿿]{0,10})$', l.strip()): chapter = l.strip()
     else: paras.append((chapter, norm(l)))
 SHORT = {'序': '增删卜易序', '八宫图': '八宫图'}
 bad = 0
