@@ -67,7 +67,20 @@ test('逐卦断语：十项齐全，判定依据都写进断语，无内部用�
     const items = new Set(text.items.map((x) => x.item));
     for (const n of need) assert.ok(items.has(n), `${lv} 缺「${n}」`);
     const body = text.items.map((x) => x.text).join('');
-    for (const v of [...v3.veto, ...v3.pass]) assert.ok(body.includes(v.text.replace(/（.*）/, '').slice(0, 6)), `${lv} 判定未写进断语：${v.text}`);
+    for (const v of [...v3.veto, ...v3.layerVeto, ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes]) assert.ok(body.includes(v.text.replace(/（.*?）/g, '').slice(0, 6)), `${lv} 判定未写进断语：${v.text}`);
     for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!body.includes(b), `${lv} 含「${b}」`);
   }
+});
+
+test('代占：以所代六亲为本主；问事阶段写进结论；有年支时计太岁', () => {
+  const chart = buildChart({ lineValues: [8, 6, 8, 7, 7, 8], calendar: { monthBranch: '申', dayGanzhi: '丁巳', yearBranch: '寅' } });
+  assert.equal(chart.calendar.yearBranch, '寅');
+  const proxy = interviewV3(chart, { subjectRelative: '子孙', stage: 'after' });
+  assert.equal(proxy.subject.relative, '子孙');
+  assert.notEqual(proxy.subject.position, chart.lines.find((l) => l.isWorld).position);
+  const text = interviewV3Text(chart, { subjectRelative: '子孙', stage: 'after' });
+  assert.match(text.items[0].text, /代占/);
+  assert.match(text.items[0].text, /已经考过/);
+  const self = interviewV3(chart, {});
+  assert.ok([...self.plus, ...self.minus].some((x) => /太岁/.test(x.text)), '有年支时应计太岁');
 });

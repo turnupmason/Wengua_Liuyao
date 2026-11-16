@@ -17,7 +17,10 @@ export function normalizeCalendar(calendar) {
   if (!BRANCHES.includes(monthBranch)) throw new Error(`月建无效: ${monthBranch}`);
   if (!STEMS.includes(dayStem) || !BRANCHES.includes(dayBranch)) throw new Error(`日辰无效: ${dayStem}${dayBranch}`);
   if (STEMS.indexOf(dayStem) % 2 !== BRANCHES.indexOf(dayBranch) % 2) throw new Error(`日辰阴阳不配: ${dayStem}${dayBranch}`);
-  return { monthBranch, dayStem, dayBranch, dayGanzhi: dayStem + dayBranch, source: calendar.instantUtc ? calendar : null };
+  // 太岁（年支）：有完整历法或调用方给出时带上；只作象意与次要判据，不进匹配键
+  const yearBranch = calendar.year?.branch ?? calendar.yearBranch ?? null;
+  if (yearBranch && !BRANCHES.includes(yearBranch)) throw new Error(`年支无效: ${yearBranch}`);
+  return { monthBranch, dayStem, dayBranch, dayGanzhi: dayStem + dayBranch, yearBranch, source: calendar.instantUtc ? calendar : null };
 }
 
 function decorate(hex, palaceElement) {
@@ -107,7 +110,7 @@ export function buildChart({ lineValues, calendar }) {
     lineValues: [...lineValues],
     movingMask: infos.map((x) => (x.moving ? '1' : '0')).join(''),
     movingPositions,
-    calendar: { monthBranch: cal.monthBranch, dayStem: cal.dayStem, dayBranch: cal.dayBranch, dayGanzhi: cal.dayGanzhi },
+    calendar: { monthBranch: cal.monthBranch, dayStem: cal.dayStem, dayBranch: cal.dayBranch, dayGanzhi: cal.dayGanzhi, ...(cal.yearBranch ? { yearBranch: cal.yearBranch } : {}) },
     primary: hexFacts(primary, pcc),
     changed: changed ? hexFacts(changed, ccc) : null,
     lines,
