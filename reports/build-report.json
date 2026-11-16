@@ -1,13 +1,13 @@
 {
   "content_version": "liuyao-readings-0.1.0",
   "sources_manifest_generated": "2026-11-13",
-  "scripts": 2699,
-  "technical_passed": 2699,
+  "scripts": 2800,
+  "technical_passed": 2800,
   "author_reviewed": 0,
   "professionally_reviewed": 0,
-  "ai_approved": 2699,
+  "ai_approved": 2800,
   "review_required": 0,
-  "approved_for_release": 2699,
+  "approved_for_release": 2800,
   "errors": [],
   "warnings": [
     "IPC-0203: C25 与IPC-0270字符六元组相似度 0.33，须复核是否机械复用",
@@ -181,8 +181,15 @@
     "IPC-2530: C16 简断术语偏多（3 个）",
     "IPC-2543: C25 与IPC-1930字符六元组相似度 0.31，须复核是否机械复用",
     "IPC-2551: C25 与IPC-2231字符六元组相似度 0.31，须复核是否机械复用",
+    "IPC-2588: C25 与IPC-2693字符六元组相似度 0.32，须复核是否机械复用",
+    "IPC-2605: C25 与IPC-2712字符六元组相似度 0.40，须复核是否机械复用",
     "IPC-2614: C16 简断术语偏多（3 个）",
     "IPC-2639: C25 与IPC-2743字符六元组相似度 0.43，须复核是否机械复用",
+    "IPC-2693: C25 与IPC-2588字符六元组相似度 0.32，须复核是否机械复用",
+    "IPC-2712: C25 与IPC-2605字符六元组相似度 0.40，须复核是否机械复用",
+    "IPC-2725: C16 简断术语偏多（3 个）",
+    "IPC-2728: C25 与IPC-2729字符六元组相似度 0.33，须复核是否机械复用",
+    "IPC-2729: C25 与IPC-2728字符六元组相似度 0.33，须复核是否机械复用",
     "IPC-2743: C25 与IPC-2639字符六元组相似度 0.43，须复核是否机械复用"
   ],
   "similarity": [
@@ -232,9 +239,9 @@
       "jaccard6": 0.396
     },
     {
-      "a": "IPC-0798",
-      "b": "IPC-1019",
-      "jaccard6": 0.383
+      "a": "IPC-2605",
+      "b": "IPC-2712",
+      "jaccard6": 0.396
     }
   ]
 }

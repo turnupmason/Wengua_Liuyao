@@ -1,0 +1,264 @@
+{
+  "script_id": "IPC-2644",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用明现[EFFECTIVE]静;世世安;官克世(世有气);原伏难出;忌静旺有力;局子孙局待凶世在",
+  "class_rank": 2644,
+  "class_share_of_casts": 4.1e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        9,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "辛卯"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        9,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "壬寅"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "壬寅"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "乙未"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "癸卯"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        9,
+        8
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        7,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "癸卯"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        9,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "庚寅"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        9,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        9,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "丁亥"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼失令而有效",
+    "忌神旺相",
+    "子孙局待时世在局"
+  ],
+  "judgment": {
+    "verdict": "pass-but-slow",
+    "verdict_label": "有望通过，但要待时",
+    "deciding_evidence": [
+      "官鬼兄弟当令而失令，有效、安静（多得月合，或日生）",
+      "忌神子孙得相，静而有力"
+    ],
+    "supporting": [
+      "世爻当令而旺；应爻或受世生、或生世"
+    ],
+    "adverse": [
+      "原神妻财伏而难出；三支子孙局待时而成，世在局；官星或受日绝、日克"
+    ],
+    "conflicts_resolved": [
+      "同 旧 IPC-0074 之理；子孙局未成，宜早（成则同 旧 IPC-1663 偏难）",
+      "官克世而世有气，作有情（docs/18 第〇节第 1 条）；待时之据另在，不改"
+    ],
+    "rule_ids": [
+      "R-DONGJING-01",
+      "R-FUSHEN-01",
+      "R-FUSHEN-03",
+      "R-SANHE-03",
+      "R-SANHE-05",
+      "R-SHIYING-03",
+      "R-WANG-02",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "有望通过，但要待时：官星失令，子孙得相，子孙局也在凑",
+    "brief": "这一卦有望通过，但要等。起卦这个月兄弟当令，官星失令，好在多有月建来合它，仍然有效。卦里的子孙得相，安静却有力；子孙局也在凑，你在局中，凑成了就更难。生官的财伏着，出不来。所以宜早，局成之前把事办妥。",
+    "opening": "用神官鬼安静；起卦之月兄弟当令，官星休囚；多得月合，或兼日生；或受日绝、日克。官星当下有效。\n你的世爻是兄弟，当令而旺；应位或为子孙受你所生，或为父母生你。卦中兄弟或父母发动，偶无动爻；三支子孙局待时而成，世在局。财伏而难出；子孙静而得相。",
+    "process": "官星失令而有效；子孙得相在旁，子孙局待成。\n伏财出不来。所以能成，偏慢，宜早。",
+    "ending": "官星有效而子孙得相，这一轮有望通过；局成之前越早越稳。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情容易有动静；子孙局成局之前越早越稳。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "事情有动静、结果渐明",
+          "target_symbol": "官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "有望通过，但要待时。官星失令，子孙得相，子孙局也在凑。尽早推进，别等局成。",
+    "classical_sources": [
+      {
+        "rule_id": "R-DONGJING-01",
+        "source_book": "增删卜易",
+        "source_chapter": "动静生克章第十四",
+        "quote": "六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻",
+        "applies_because": "子孙静而得相"
+      },
+      {
+        "rule_id": "R-SANHE-03",
+        "source_book": "增删卜易",
+        "source_chapter": "六合章第十九",
+        "quote": "三爻若有两爻动，不成局，须待后之补凑合成其局，谓之虚三待用。",
+        "applies_because": "待时成局"
+      },
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "又伏神终不得出者有五。伏神休囚无气者一也﹔伏神被日月冲克者二也﹔伏神被旺相之飞神克者三也﹔伏神墓绝于日月飞爻者四也﹔伏神伏囚值空月破者五也。",
+        "applies_because": "妻财伏而难出"
+      },
+      {
+        "rule_id": "R-WANG-02",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类题头总注章第又二十六",
+        "quote": "用神宜旺，不可指定旺于四时，但得用神临日月、或遇日月动爻变爻生扶、或用爻遇长生逢帝旺，皆谓之旺。",
+        "applies_because": "兄弟当令"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "用神安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 2644 类，占起卦概率 0.004%，全类 25 盘）：用神「明现[EFFECTIVE]静」；世爻「世安」；卦级「官克世(世有气)」；原神妻财不上卦，伏而终不得出；忌神子孙静而旺相，有力（只作用于休囚之爻）；三合「子孙局待凶世在」。全类一致：月建六亲：兄弟(100%)；用神月令：休囚(100%)。类内各盘不同之处：用神生扶：日合(24%)、日生(20%)、日生、日长生(16%)、日生、月合(12%)；应爻对世：世生之(52%)、生世(48%)；发动六亲：兄弟(44%)、父母(32%)、无(16%)、兄弟父母(8%)；均不改变本类结论，正文不写，由排盘逐盘列出。结构：全类月建为兄弟之五行；用神休囚，无伤 68%、日绝 24%、日克 8%，三层判定有效 100%；忌神静而旺相；伏神：原神难出 100%；三合：子孙局待时成局，世在局；世爻皆兄弟而旺；应爻：子孙（世生之）52%、父母（生世）48%；发动：兄弟 44%、父母 32%、无 16% 等。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 2,
+    "revision_note": "eq-0.13 重写（docs/18 第〇节）：底稿为旧稿 IPC-2833（eq-0.12.5）；原判不变；类键新增官世之情一项；正文沿用"
+  }
+}
