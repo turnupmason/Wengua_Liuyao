@@ -88,7 +88,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const ws = st(world); const wLv = level(ws);
   const wc = fact(world).calendar;
   // 「旺」须当令得相、或得月日之生、或临日月；日月只合不生者是有扶而非旺（W13 复盘：午月亥水得寅日合，原断「世官亥水弱」）
-  const wangCal = (cal, line = null) => Boolean(cal && (cal.seasonalStrong || cal.month.same || (cal.month.element === 'generates' && !cal.month.clash) || cal.day.same || (cal.day.element === 'generates' && !cal.day.clash)
+  // 生扶都算：月日生之或比扶（同五行）皆是（R-WANG-02「遇日月动爻变爻生扶」）；冲者不算（calendarRelation.supports 已除冲）
+  const wangCal = (cal, line = null) => Boolean(cal && (cal.seasonalStrong || cal.month.same || cal.month.supports || cal.day.same || cal.day.supports
     || ['长生', '帝旺'].includes(cal.day.lifeStage)
     || (line && L.some((o) => o !== line && (o.moving || anDong(o)) && gen(o.element, line.element)))
     || (line && line.moving && fact(line).change?.huitou === '回头生')));
@@ -163,6 +164,13 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       else if (caiZhuGui) N(`父${f.br}空而无力，但财动生官、子孙安静（妻财助鬼父爻空，可图侥幸）：名虽有望，难许高中`, ['R-HJC-QM-06']);
       else V('父无力', `父${f.br}空破墓绝而静（父母空破墓绝，他不见用）`, ['R-QIUMING-07', 'R-HJC-SH-02']);
     }
+    const HAI = { 子: '未', 未: '子', 丑: '午', 午: '丑', 寅: '巳', 巳: '寅', 卯: '辰', 辰: '卯', 申: '亥', 亥: '申', 酉: '戌', 戌: '酉' };
+    const XING = { 寅: '巳', 巳: '申', 申: '寅', 丑: '戌', 戌: '未', 未: '丑', 子: '卯', 卯: '子' };
+    // 只取刑，不取害：增删卜易不以害断事（R-HAI-01；网上卦例 W2 父申化亥而成、B3 父未化子而败，害不定吉凶）。
+    // 官真旺而持世、生世者不论（父衰官旺堪许登科；增删·萃之否例）
+    if (f.moving && fc?.to && !guanWangQing && (XING[f.br] === fc.to.branch || XING[fc.to.branch] === f.br || (fc.to.branch === f.br && ['辰', '午', '酉', '亥'].includes(f.br)))) {
+      V('父化刑', `父${f.br}动而化出${fc.to.branch}，与本爻相刑（凡带父刑害败病等爻，及化出者，其文皆有败破，不能录取）`, ['R-BQS-QM-02', 'R-XING-01']);
+    }
     if (f.moving && fc && (fc.huitou === '回头克' || realVoid || fc.advance === '退神')) V('父化凶', `父${f.br}动而化${fc.huitou === '回头克' ? '回头克' : realVoid ? '真空' : '退神'}（场中一日短）`, ['R-QIUMING-05']);
     else if (f.moving && fc && fc.changedVoid) N(`父${f.br}化出之爻旬空，出空可用（待时）`, ['R-KONG-02', 'D-017']);
   }
@@ -220,8 +228,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (g && g.kind === 'line' && g.moving && g.change) {
     const gc = g.change; const strongBase = gLv === 2;
     const bad = gc.huitou === '回头克' ? '化回头克' : gc.to?.relative === '子孙' ? '化出子孙' : (gc.changedVoid && gc.changedCalendar?.void?.trueVoid) ? '化真空'
-      : (['墓', '绝'].includes(gc.lifeStage) && !strongBase) ? `化${gc.lifeStage}` : (gc.advance === '退神' && !strongBase) ? '化退神' : null;
+      : (['墓', '绝'].includes(gc.lifeStage) && !strongBase && gc.huitou !== '回头生') ? `化${gc.lifeStage}` : (gc.advance === '退神' && !strongBase) ? '化退神' : null;
     const guanHeld = world.relative === '官鬼' || gen(g.el, W.el) || he(g.br, W.br);
+    if (['墓', '绝'].includes(gc.lifeStage) && gc.huitou === '回头生') N(`官${g.br}动而化${gc.lifeStage}，但所化回头生之（巳火反能生土，论生不论绝）`, ['R-SWMJ-03', 'R-HUA-01']);
     if (bad && gWang && guanHeld) V('官旺化凶', `官${g.br}旺而就你，但动而${bad}：能被录取，却难长久（鬼化福冲当代职；若鬼动化子，必有别官代职）`, ['R-HJC-SH-02', 'R-BQS-SH-03', 'R-YLB-SH-02']);
     else if (bad) V('官化凶', `官${g.br}动而${bad}（官临空破墓绝及动而变凶变克；官化子孙，非降即调）`, ['R-QIUMING-08', 'R-YLB-SH-02', 'R-ZS-QM-20', 'R-HUA-01']);
     else if (['墓', '绝'].includes(gc.lifeStage)) N(`官${g.br}动而化${gc.lifeStage}，但本爻旺相（化墓化绝，若动爻旺相，亦无大害）`, ['R-HUA-03']);
@@ -241,6 +250,11 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (!world.moving && wc.monthBreak && !veto.some((v) => v.code === '世破被克')) {
     if (wLv === 0) V('世破', `世${world.branch}静而月破无气（破空临世，终须白屋之人）`, ['R-ZS-QM-08', 'R-YONG-GUAN-07']);
     else minus.push({ text: `世${world.branch}月破而有气（出月则不破，眼下吃亏）`, rules: ['R-ZS-QM-08', 'R-YUEPO-02'] });
+  }
+  // 官与月建、日辰共作三刑（三刑章：月建在寅、日建在申，与巳爻共作三刑，独此一卦，无他爻之伤也而验）
+  if (g && g.kind === 'line') {
+    const trio = new Set([month, day, g.br]);
+    if (trio.size === 3 && (['寅', '巳', '申'].every((b) => trio.has(b)) || ['丑', '戌', '未'].every((b) => trio.has(b)))) V('官三刑', `官${g.br}与${month}月、${day}日共作三刑（三刑章：月日与爻共作三刑者，野鹤唯一验例；网上卦例 B3）`, ['R-XING-02']);
   }
   // 官伏何下（火珠林）；世下伏官迟（易隐·候选）
   if (g && g.kind === 'hidden') {

@@ -80,6 +80,8 @@ function placesOf(subject, chart) {
     else if (er === 'controls') places.push({ place: `飞神${f.branch}`, effect: '克', strong: false, dyn: f.strong });
   }
   // 三刑章：「或因用神休囚又兼他爻犯之，刑者则见凶，而独犯三刑得验者少」——休囚而已受他克者，日月之刑再记一伤；独刑不论
+  const trio = new Set([chart.calendar.monthBranch, chart.calendar.dayBranch, subject.branch]);
+  if (trio.size === 3 && (['寅', '巳', '申'].every((b) => trio.has(b)) || ['丑', '戌', '未'].every((b) => trio.has(b)))) places.push({ place: '月日共作三刑', effect: '克', strong: true });
   const weakNow = !strongSeason(subject.element, chart.calendar.monthBranch) || CLASH.get(subject.branch) === chart.calendar.monthBranch;
   if (weakNow && places.some((p) => p.effect === '克')) {
     if (m.punish) places.push({ place: '月建刑', effect: '克', strong: true });
@@ -102,6 +104,10 @@ function capabilityOf(subject, chart) {
     const movingHit = k.some((p) => p.place.startsWith('动爻') || p.place.startsWith('暗动') || p.place === '自身动化') || (subject.change && subject.change.huitou === '回头克');
     const outnumbered = movingHit && k.length > g.length;
     return { places, ...(outnumbered ? { capability: 'weak', basis: `临日而受克多于生扶：寡不敌众（生：${g.map((p) => p.place).join('、')}；克：${k.map((p) => p.place).join('、')}；R-RIZHEN-05）` } : movingHit ? { capability: 'strong', attacked: true, basis: `临日而受动克，但生扶不少于克伤（生多克少锦上添花，R-RIZHEN-05；生：${g.map((p) => p.place).join('、')}；克：${k.map((p) => p.place).join('、')}）` } : { capability: 'strong', basis: '临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）' }) };
+  }
+  // 元神忌神衰旺章：「元神动化回头生及化进神者二也」「忌神动化回头生扶……」——动而化回头生、化进神者本身即有力（月破者不论）
+  if (subject.kind === 'line' && subject.moving && subject.change && (subject.change.huitou === '回头生' || subject.change.advance === '进神') && !c.monthBreak) {
+    return { places, capability: 'strong', ...(k.length ? { attacked: true } : {}), basis: `动而${subject.change.huitou === '回头生' ? '化回头生' : '化进神'}，有力（元神忌神衰旺章，R-YUANJI-01、R-YUANJI-03）` };
   }
   // 月将章：临月建而受日克日冲或墓于日，无其他生克：无吉无凶（B-007）
   if (c.month.same && (c.day.controls || c.dayTomb || c.day.clash) && !places.some((p) => !['月建', '日辰'].includes(p.place))) {
