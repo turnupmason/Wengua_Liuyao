@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.2.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.3.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -49,6 +49,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const lvOf = (l, s) => {
     const v = level(s);
     if (v !== 1 || s.state !== 'EFFECTIVE' || !(s.pattern && s.pattern.startsWith('日月相反'))) return v;
+    // 日辰章：爻临日辰「逢月破而不破，遇冲克而无伤，似与月建同权」（R-RIZHEN-05）——临日而受月克者不作相敌；
+    // 受动克多于生扶（寡不敌众）者状态已判为弱，不在此列。月将章相敌（R-YUEJIAN-04）专指临月建而受日克
+    if (fact(l).calendar.day.same && s.capability === 'strong') return 2;
     return L.some((o) => o !== l && (o.moving || anDong(o)) && (GEN[o.element] === l.element || o.element === l.element) && effMover(o)) ? 2 : v;
   };
   // 本主之爻：自占为世；代占取所代六亲最有力的一爻（R-HJC-QM-15）

@@ -1,4 +1,4 @@
-# eq-0.14 类别稿 第 1 批：名次 1–10（稿号 = 名次）
+# eq-0.14 类别稿 第 1 批：名次 1–9、20（稿号 = 名次；第 1.3.0 版引擎改临日之后，原第 9 类移到第 20 名、原第 10 类移到第 9 名）
 import sys; sys.path.insert(0, 'D:/Wengua_Liuyao/scripts/authoring')
 from cls14 import *
 
@@ -164,7 +164,7 @@ make(dict(
 ))
 
 make(dict(
-    id='IPC-0009', rank=9, verdict='likely-pass', label='倾向通过',
+    id='IPC-0020', rank=20, verdict='likely-pass', label='倾向通过',
     tags=['旺官持世', '忌神伏而难出', '世克应'],
     title='倾向通过：官星得生持世，克官的子孙根本没上卦',
     brief='这一卦倾向通过。当月妻财当令生官，官鬼旺而坐在你的世爻上；克官的子孙不在卦面上，伏在别爻之下而出不来。官旺持世，伤官之神缺席，录取这一层站得很稳。',
@@ -183,7 +183,7 @@ make(dict(
 ))
 
 make(dict(
-    id='IPC-0010', rank=10, verdict='wait-then-likely', label='悬而未决',
+    id='IPC-0009', rank=9, verdict='wait-then-likely', label='悬而未决',
     tags=['官旺而不就世', '妻财持世受克', '六合卦', '兄弟发动'],
     title='悬而未决：官星旺，却不来就你，你的世爻又受克',
     brief='这一卦悬而未决。官鬼当月得生而旺，录取之神本身有力，有望之根在；但它不持世、也不来生合你的世爻，你世上的妻财又克着文书，兄弟若发动还来克你的世。好坏相抵，结果要再等等看。',
