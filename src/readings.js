@@ -9,6 +9,7 @@ import { digestOf } from './hash.js';
 import { xunVoid } from './constants.js';
 import { classKeyFor, EQUIVALENCE_VERSION } from './equivalence.js';
 import { dayOffset } from './flows.js';
+import { interviewV3Text } from './questions/interview-v3-text.js';
 
 export const PENDING_MESSAGE = '本卦断语尚在整理';
 export const RELEASE_SCHEMA = 'liuyao-release-1';
@@ -81,7 +82,9 @@ export function createReadingRepository({ releasePackage }) {
       if (!supported.has(questionId)) return pending('question-rules-not-established');
       const key = readingKey(questionId, chart);
       const evidence = buildEvidence(questionId, chart);
-      const common = { key, contentVersion: releasePackage.content_version, chartFacts: chartFactSheet(questionId, chart, evidence) };
+      // 逐卦断语段（面试问第三版）：判定用到的每一条都写成断语，与类稿并列显示
+      const chartReading = questionId === 'career.interview.interview-pass' ? interviewV3Text(chart, { evidence }) : null;
+      const common = { key, contentVersion: releasePackage.content_version, chartFacts: chartFactSheet(questionId, chart, evidence), chartReading };
       const entry = byKey.get(key);
       if (entry) {
         if (digestOf(evidence) !== entry.facts_digest) return pending('facts-digest-mismatch', { key, scriptId: entry.script_id });

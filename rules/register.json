@@ -5976,6 +5976,59 @@
         "date": "2026-11-15",
         "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
       }
+    },
+    {
+      "rule_id": "R-YY-SS-01",
+      "topic": "神煞·日干诸星（易隐）",
+      "source_book": "易隐",
+      "source_chapter": "年月日时起神杀例",
+      "original_text": [
+        "干甲乙丙丁戊己庚辛壬癸 干德甲庚丙壬戊甲庚丙壬戊 干德合己乙辛丁癸己乙辛丁癸 干合己庚辛壬癸甲乙丙丁戊 干支合寅辰巳未巳未申戌亥丑 干禄寅卯巳午巳午申酉亥子 天乙贵人丑未子申亥酉亥酉丑未子申丑未午寅巳卯巳卯 天福贵人酉申子亥卯寅午巳午巳主一生福禄福星贵人寅丑亥子戌酉申未午巳辰卯主中科甲被光宠文昌巳子申卯申卯亥午寅酉主少年科甲"
+      ],
+      "modern_explanation": "按日干起干德、干合、干禄、天乙贵人、天福贵人、福星贵人、文昌等。",
+      "applicable_conditions": "全部（D-024）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-024"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "象",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-SS-03",
+      "topic": "神煞歌例·天医、月德",
+      "source_book": "卜筮全书",
+      "source_chapter": "神煞歌例",
+      "original_text": [
+        "天医正卯二猪临，三月随丑四未寻，五蛇六兔七居亥，八丑九羊十巳存，十一再来寻卯上，十二亥上作医人。",
+        "寅午戌月丙，申子辰月壬，亥卯未月甲，巳酉丑月庚。"
+      ],
+      "modern_explanation": "天医按月取；月德按月取天干。",
+      "applicable_conditions": "全部（D-024）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-024"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "象",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-15",
+        "date": "2026-11-15",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
     }
   ],
   "disputes": [

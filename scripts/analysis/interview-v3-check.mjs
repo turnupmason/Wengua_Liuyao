@@ -1,7 +1,13 @@
 // 第三版面试断法原型检验：9 个外部卦例、古籍功名卦例、已写类影响面。只读，不改断语。
 // 用法：node scripts/analysis/validate-classic-cases.mjs <classic.json>；再 node scripts/analysis/interview-v3-check.mjs <classic.json> <impact-out.json>
 import fs from 'node:fs';
-import { judgeValues } from './interview-v3-judge.mjs';
+import { buildChart, buildEvidence, analyzeChart, interviewV3 } from '../../src/index.js';
+const judgeValues = (lv, m, d) => {
+  const chart = buildChart({ lineValues: lv, calendar: { monthBranch: m, dayGanzhi: d } });
+  const analysis = analyzeChart(chart);
+  const r = interviewV3(chart, { analysis, evidence: buildEvidence('career.interview.interview-pass', chart, analysis) });
+  return { ...r, veto: r.veto.map((v) => `${v.code} ${v.text}`), pass: r.pass.map((v) => `${v.code} ${v.text}`), notes: [...r.notes, ...r.plus.map((x) => '+' + x.text), ...r.minus.map((x) => '-' + x.text)].map((x) => x.text ?? x), layerNote: r.layers.final || '' };
+};
 const [classicPath, impactOut] = process.argv.slice(2);
 const modern = [
   [1, '868888', '酉', '辛丑', 'pass'], [2, '697879', '戌', '丁巳', 'fail'], [3, '788878', '午', '乙巳', 'fail'],
