@@ -49,8 +49,12 @@ export function interviewV3Text(chart, ctx = {}) {
     if (fu.changesTo === '父母') t += '；父化父，答的内容容易杂、前后有出入';
     if (fu.changesTo === '官鬼') t += '；父化官，立意不算新';
     if (fu.twoAndClash) t += '；两爻父母相冲，题目对你来说偏生';
+    const mo = d.calendarToWorld.monthOnFu;
+    if (mo === '克') t += '；月建克父母（月克文书，程式背而不中）：从卦象看，表现与考官要的路子不太对';
+    else if (mo === '生' || mo === '合') t += '；月建生合父母：从卦象看，表现合考官的意';
     out.push(sentence('临场表现', `${t}。`, fu.rules.concat(['R-QIUMING-03', 'R-QIUMING-05'])));
     if (has('父化凶')) out.push(sentence('临场表现', veto.find((v) => v.code === '父化凶').text.replace(/（.*）/, '') + '：平时准备得不少，临场失分。', ['R-QIUMING-05']));
+    for (const m of d.changedCaiOnFu || []) out.push(sentence('临场表现', `${POS[m.position]}${m.from}动而化出妻财${m.branch}，财来克父母：从卦象看，有人或有事从中作梗，坏了你的表现。`, ['R-BQS-QM-01', 'R-HJC-QM-02']));
     if (has('财动克父')) out.push(sentence('临场表现', '妻财发动克父母：从卦象看，答题容易出破绽，或材料上有疏漏。', ['R-QIUMING-04', 'R-BQS-QM-02']));
     out.push(sentence('单位情况', `父母${LV[fu.level]}，从卦象看，用人单位规模${fu.unitSize === '大' ? '较大' : fu.unitSize === '中' ? '中等' : '不大，或这个部门偏冷'}。`, ['R-BQS-SH-01', 'R-HJC-SH-05']));
   }
@@ -79,7 +83,10 @@ export function interviewV3Text(chart, ctx = {}) {
   let wt = `你的世爻是${w.relativeHeld}${w.branch}，在${POS[w.position]}${w.spirit ? `，临${w.spirit}` : ''}，${LV[r.layers.self.level]}`;
   if (w.moving) wt += '，正在动，主动去争取';
   if (w.dayTomb) wt += '；世入日墓：从卦象看，对对方的底细看不清，容易被说法蒙住，墓冲开时才看明白';
-  if (w.void && !veto.some((v) => v.code === '世空无气')) wt += '；世落旬空：你这边一时不实，心意未定或准备未足';
+  if (w.void && !veto.some((v) => v.code === '世空无气')) {
+    const WHERE = { 1: '在家准备时', 2: '在家准备时', 3: '出门前后', 4: '出门前后', 5: '赴考途中', 6: '到场之时' };
+    wt += `；世落旬空：你这边一时不实，心意未定或准备未足；世空临试，须防${WHERE[w.position]}身体或状态出问题`;
+  }
   if (w.change?.changedVoid) wt += '；世动化空：成了之后也未必享得住';
   if (w.change?.advance === '退神') wt += '；世化退神：临场有阻，或自己劲头不足';
   out.push(sentence('自身状态', `${wt}。`, ['R-QIUMING-11', 'R-BZZ-QM-06']));
@@ -96,6 +103,12 @@ export function interviewV3Text(chart, ctx = {}) {
     if (a.moving) t += '；应爻发动，对方那边有变化';
     out.push(sentence('对方态度', `${t}。`, a.rules));
   }
+
+  // 月建为考官、日辰为主事之人（易隐·小试占·考官；黄金策注「月建为考试官」）
+  const cw = d.calendarToWorld;
+  const calText = (who, x) => ({ 生世: `${who}生你，合意`, 合世: `${who}合你，合意`, 克世: `${who}克你，难合其意`, 冲世: `${who}冲你，难合其意` }[x.rel] || null);
+  const ct = [calText(`月建${cw.month.branch}（考官一层）`, cw.month), calText(`日辰${cw.day.branch}（具体经办的人）`, cw.day)].filter(Boolean);
+  if (ct.length) out.push(sentence('对方态度', `从卦象看：${ct.join('；')}。`, cw.rules));
 
   // 5. 竞争（兄弟）
   const x = d.xiong;
@@ -138,6 +151,14 @@ export function interviewV3Text(chart, ctx = {}) {
   for (const p of r.plus) out.push(sentence('象意', `加分：${p.text}。`, p.rules));
   for (const m of r.minus) out.push(sentence('象意', `减分：${m.text}。`, m.rules));
 
+  // 各类动爻之意（卜筮全书·黄金策注「财动则伤父，子动则伤官，兄动则他人有所先，鬼动则事体有变，父动则文不纯正」）
+  const MOVE = { 妻财: '财动伤父：答题易出破绽，或材料上被挑', 子孙: '子动伤官：职位一层受阻', 兄弟: '兄动：有人抢在你前面', 官鬼: '鬼动：对方那边事情有变动', 父母: '父动：表达容易不够纯熟，或通知、手续有变' };
+  const mv = [...new Set(d.movingRelatives.map((m) => m.relative))];
+  const ziNote = r.notes.find((n) => n.text.startsWith('子孙'));
+  const moveText = (rel) => (rel === '子孙' && ziNote && !has('子动克官') ? `子孙虽动，${ziNote.text.replace(/^子孙\S+?(发动|暗动)?，?/, '')}` : MOVE[rel]);
+  if (mv.length) out.push(sentence('卦象', `动爻：${mv.map(moveText).join('；')}${d.moving.count === 1 ? '；一爻独发，事情的走向由它定' : d.moving.count >= 4 ? '；动爻多，事情变数大' : ''}。`, ['R-BQS-QM-01', 'R-HZL-06']));
+  else out.push(sentence('卦象', '六爻安静：事情按原样推进，看日月对官父的生克。', ['R-BQS-QM-01']));
+
   // 卦级与工作地点
   const h = d.hexagram;
   let ht = `本卦${h.name}${h.changedName ? `，变${h.changedName}` : ''}`;
@@ -148,7 +169,12 @@ export function interviewV3Text(chart, ctx = {}) {
   if (h.wandering) ht += '；游魂卦：从卦象看，去处偏外地或要变动';
   if (h.returning) ht += '；归魂卦：从卦象看，去处近，或回原处';
   ht += `；世在${POS[h.worldPosition]}，从卦象看，工作地点离你${h.distance}`;
-  if (h.innerOuter) ht += `；内外卦${h.innerOuter}`;
+  if (h.innerOuter) ht += `；内外卦${h.innerOuter}${h.innerOuter === '内克外' ? '（我能制彼，所求可成之象）' : h.innerOuter === '外克内' ? '（彼来制我，所求偏难之象）' : ''}`;
+  if (d.fanFu.fanyin) ht += '；反吟：事情反复，去而复来';
+  if (d.fanFu.fuyin) ht += '；伏吟：拖延、淹留';
+  const NAME = { 火地晋: '晋卦，有进而得遇之象', 地风升: '升卦，有上进之象', 水雷屯: '屯卦，开局艰难（世旺者无妨）', 水山蹇: '蹇卦，行路艰难（世旺者无妨）' };
+  if (NAME[h.name]) ht += `；${NAME[h.name]}`;
+  if (h.changedName && NAME[h.changedName]) ht += `；变出${NAME[h.changedName]}`;
   out.push(sentence('卦象', `${ht}。`, h.rules));
 
   // 9. 应期（通知看父母，录取看官）

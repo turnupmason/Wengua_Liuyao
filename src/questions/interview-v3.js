@@ -235,12 +235,13 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       final: finalLayer,
     },
     veto: effectiveVeto, layerVeto: effectiveVeto === veto ? [] : veto, pass, plus, minus, notes,
-    details: detailFacts({ chart, analysis, g, f, world, resp, G, F, shen }),
+    details: detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceSpecial: special }),
   };
 }
 
 /** 逐卦细节事实：只给事实与出处，措辞由断语层按 docs/10 第四之二节组织 */
-function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen }) {
+const BEL0 = { 子: '水', 亥: '水', 寅: '木', 卯: '木', 巳: '火', 午: '火', 申: '金', 酉: '金', 辰: '土', 戌: '土', 丑: '土', 未: '土' };
+function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceSpecial }) {
   const L = chart.lines;
   const fact = (l) => analysis.lines[l.position - 1];
   const W = world;
@@ -293,6 +294,15 @@ function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen }) {
       ...L.filter((l) => l.hidden?.relative === '妻财').map((l) => ({ kind: 'hidden', position: l.position, branch: l.hidden.branch, under: l.relative, void: Boolean(fact(l).hidden.calendar.void), seasonalStrong: fact(l).hidden.calendar.seasonalStrong })),
     ],
     xiong: { holdsWorld: W.relative === '兄弟', moving: L.filter((l) => l.relative === '兄弟' && l.moving).map((l) => l.position), rules: ['R-HJC-QM-03', 'R-BZZ-QM-03'] },
+    calendarToWorld: {
+      month: { branch: chart.calendar.monthBranch, rel: relTo({ position: 0, element: BEL0[chart.calendar.monthBranch], branch: chart.calendar.monthBranch }) },
+      day: { branch: chart.calendar.dayBranch, rel: relTo({ position: 0, element: BEL0[chart.calendar.dayBranch], branch: chart.calendar.dayBranch }) },
+      monthOnFu: f ? (ke(BEL0[chart.calendar.monthBranch], f.el) ? '克' : gen(BEL0[chart.calendar.monthBranch], f.el) ? '生' : he(chart.calendar.monthBranch, f.br) ? '合' : chong(chart.calendar.monthBranch, f.br) ? '冲' : null) : null,
+      rules: ['R-YY-XS-04', 'R-HJC-QM-05', 'R-BQS-QM-03'],
+    },
+    movingRelatives: moving.map((l) => ({ position: l.position, relative: l.relative })),
+    changedCaiOnFu: f ? moving.filter((l) => l.relative !== '妻财' && fact(l).change?.to?.relative === '妻财' && ke(fact(l).change.to.element, f.el)).map((l) => ({ position: l.position, from: l.relative, branch: fact(l).change.to.branch })) : [],
+    fanFu: { fanyin: Boolean(chart.primary && evidenceSpecial?.fanyin), fuyin: Boolean(evidenceSpecial?.fuyin) },
     moving: { count: moving.length, sole: moving.length === 1 ? { position: moving[0].position, relative: moving[0].relative, spirit: moving[0].spirit } : null, meaning: 'R-BQS-QM-01' },
     hexagram: {
       name: p.name, palace: p.palace, wandering: p.isWandering, returning: p.isReturning, sixClash: p.sixClash, sixCombine: p.sixCombine,
@@ -304,4 +314,10 @@ function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen }) {
     spirits: L.map((l) => ({ position: l.position, relative: l.relative, spirit: l.spirit, moving: l.moving, shensha: shenOf(l.position) })),
     shensha: shen,
   };
+}
+
+/** eq-0.14 类键的第三版部分：结论 + 否决 + 能过 + 是否分层。等价类正文按此写判断，逐卦细节由逐卦断语段承担 */
+export function interviewV3Signature(v3) {
+  const codes = (xs) => [...new Set(xs.map((x) => x.code))].sort().join('+');
+  return `三版${v3.verdict}${v3.veto.length ? `|否${codes(v3.veto)}` : ''}${v3.layerVeto?.length ? `|层${codes(v3.layerVeto)}` : ''}${v3.pass.length ? `|过${codes(v3.pass)}` : ''}`;
 }
