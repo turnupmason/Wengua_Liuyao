@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.4.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.5.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -237,7 +237,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const wHelpCal = wc.month.supports || wc.day.supports;
   // 扶：动爻、暗动生合世；世休囚时静而旺相之爻生世（动静生克章）；世自身动化回头生、化比和（化扶）
   // 杀生身莫将吉断：子孙（忌神）动来生世不算扶（R-QJF-08）
-  const wHelpMove = L.some((l) => l !== world && l.relative !== '子孙' && acts(l) && (gen(l.element, W.el) || he(l.branch, W.br)) && effMover(l))
+  // 动爻比扶（同五行）也是扶：R-WANG-02「遇日月动爻变爻生扶」；此前静旺之爻比扶算、动爻比扶反不算（2026-11-16 网上卦例 E4 断前查出）
+  const wHelpMove = L.some((l) => l !== world && l.relative !== '子孙' && acts(l) && (gen(l.element, W.el) || l.element === W.el || he(l.branch, W.br)) && effMover(l))
     || (!wc.seasonalStrong && L.some((l) => l !== world && !l.moving && fact(l).calendar.seasonalStrong && (gen(l.element, W.el) || l.element === W.el)))
     || (world.moving && ['回头生'].includes(fact(world).change?.huitou)) || (world.moving && fact(world).change?.to?.element === W.el);
   const wHelpResp = resp && (gen(resp.element, W.el) || he(resp.branch, W.br));
