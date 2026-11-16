@@ -1285,6 +1285,32 @@
       }
     },
     {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.2.0",
+      "rule_id": "R-YUEJIAN-05",
+      "topic": "月将·日月一生一克兼看生扶",
+      "source_book": "增删卜易",
+      "source_chapter": "月将章第十六",
+      "original_text": [
+        "日生月克，兼看生扶，日克月生，兼查冲克。",
+        "月克日生遇帮而愈旺，月生日克逢他削而亦衰。"
+      ],
+      "modern_explanation": "爻得日生而受月克、或得月生而受日克，不能只看日月：再看动爻生扶或冲克。月克日生而有动爻来帮则旺；月生日克而又被他爻削则衰。",
+      "applicable_conditions": "全部",
+      "exceptions": "无动爻动化者以月建为准（B-004）",
+      "engine_refs": [
+        "src/flows.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文逐字取自 sources/classics 增删卜易月将章；写类稿时查出未入登记。"
+      },
+      "dispute_ids": []
+    },
+    {
       "rule_id": "R-YUEPO-01",
       "topic": "月破",
       "source_book": "增删卜易",

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildChart, buildEvidence, analyzeChart, interviewV3, interviewV3Text, shenshaTable, shenshaFacts } from '../src/index.js';
+import { buildChart, buildEvidence, analyzeChart, interviewV3, interviewV3Text, shenshaTable, shenshaFacts, allHexagrams } from '../src/index.js';
 import { BANNED, ABSOLUTE } from '../src/questions/text-guards.js';
 
 const Q = 'career.interview.interview-pass';
@@ -109,4 +109,18 @@ test('易林补遗总断章两例：需之兑进学（凶中有吉，入泮之�
   // 丑月辛丑日 坤之剥：子孙酉持世发动化官（子化官兮防祸患），以后参官果受其累
   const b = buildChart({ lineValues: [8, 8, 8, 8, 8, 6], calendar: { monthBranch: '丑', dayGanzhi: '辛丑' } });
   assert.equal(interviewV3(b, {}).verdict, 'fail');
+});
+
+test('兄弟持世合乡试章「必添科名」之条件者，官克世不作否决（兄弟本位之受官克）', () => {
+  // 乡试章：兄弟持世，若临日月或旺相，再得官父两旺、或官动生父、父动生世，必添科名；岁科考章：世爻受克而有扶，亦业姑许
+  let found = 0;
+  for (const h of allHexagrams()) {
+    for (const m of ['寅', '巳', '申', '亥']) {
+      const lv = h.code.split('').map((b, i) => (i === 2 ? (b === '1' ? 9 : 6) : (b === '1' ? 7 : 8)));
+      const c = buildChart({ lineValues: lv, calendar: { monthBranch: m, dayGanzhi: '甲子' } });
+      const v = interviewV3(c, {});
+      if (v.notes.some((n) => /克兄弟之世，但/.test(n.text))) { found += 1; assert.ok(!v.veto.some((x) => x.code === '官克世')); }
+    }
+  }
+  assert.ok(found > 0);
 });

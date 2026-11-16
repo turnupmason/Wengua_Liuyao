@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.0.1';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.2.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -44,6 +44,13 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const acts = (l) => l.moving || anDong(l);
   // 碎金赋：动爻被另一动爻克（克者又不贪生他动爻）则不能生扶他爻——「财动生鬼，切忌兄摇」「兄动克财，子动能解」（R-BQS-SJ-01、R-BZZ-SJ-01）
   const effMover = (o) => !L.some((k) => k !== o && k.moving && KE[k.element] === o.element && !L.some((m) => m !== k && m !== o && m.moving && GEN[k.element] === m.element));
+  // 月日一生一克者本作「平」（level 1）；月将章「日生月克，兼看生扶……月克日生遇帮而愈旺」、R-YUEJIAN-04「倘得他爻又动相扶者为吉兆」：
+  // 有发动（或暗动）之爻来生扶、且该动爻未被克制者，作旺（R-YUEJIAN-05；2026-11-16 写类稿时查出此前一律压作平）
+  const lvOf = (l, s) => {
+    const v = level(s);
+    if (v !== 1 || s.state !== 'EFFECTIVE' || !(s.pattern && s.pattern.startsWith('日月相反'))) return v;
+    return L.some((o) => o !== l && (o.moving || anDong(o)) && (GEN[o.element] === l.element || o.element === l.element) && effMover(o)) ? 2 : v;
+  };
   // 本主之爻：自占为世；代占取所代六亲最有力的一爻（R-HJC-QM-15）
   const subjectCands = subjectRelative ? L.filter((l) => l.relative === subjectRelative) : [];
   const world = subjectCands.length ? [...subjectCands].sort((a, b) => level(st(b)) - level(st(a)) || (b.moving - a.moving))[0] : L.find((l) => l.isWorld);
@@ -66,7 +73,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const pick = (rel) => {
     const shown = L.filter((l) => l.relative === rel).map((l) => {
       const s = st(l);
-      return { kind: 'line', line: l, el: l.element, br: l.branch, s, lv: level(s), acts: acts(l), moving: l.moving, change: fact(l).change };
+      return { kind: 'line', line: l, el: l.element, br: l.branch, s, lv: lvOf(l, s), acts: acts(l), moving: l.moving, change: fact(l).change };
     });
     const hidden = [];
     for (const l of L) if (l.hidden?.relative === rel) {
@@ -106,7 +113,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const calGuanToWorld = [month, day].filter((b) => BEL[b] === guanEl && (gen(guanEl, world.element) || he(b, world.branch)));
   const gLv = g ? g.lv : (riyueGuan ? 2 : 0);
   const fLv = f ? f.lv : (riyueFu ? 2 : 0);
-  const ws = st(world); const wLv = level(ws);
+  const ws = st(world); const wLv = lvOf(world, ws);
   const wc = fact(world).calendar;
   // 「旺」须当令得相、或得月日之生、或临日月；日月只合不生者是有扶而非旺（W13 复盘：午月亥水得寅日合，原断「世官亥水弱」）
   // 生扶都算：月日生之或比扶（同五行）皆是（R-WANG-02「遇日月动爻变爻生扶」）；冲者不算（calendarRelation.supports 已除冲）
@@ -235,7 +242,11 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   else if (wHit) N(`世受日月冲克而有扶（${wHelpCal ? '日月' : wHelpMove ? '动爻' : '应爻生合'}），姑许`, ['R-QIUMING-06']);
   // 官克世：尚未见用而问收用，官克世不禄（D-025）
   const tanSheng = g && g.kind === 'line' && F.shown.some((x) => x.moving && gen(g.el, x.el) && gen(x.el, W.el));
+  // 兄弟持世，官鬼必克世：乡试章野鹤明言兄弟持世「若临日月或旺相，再得官父两旺、或官动生父、父动生世，必添科名」，
+  // 是知兄弟本位之受官克不作不禄；岁科考章「世爻受克而有扶，亦业姑许」。合此条件者官克世只作象（2026-11-16 类别稿核对时发现此例外被官克世否决架空）
+  const xiongOk0 = wRel === '兄弟' && (fFa.length > 0 || (wWang && ((gWang && fWang) || G.shown.some((x) => x.moving && f && gen(x.el, f.el)))));
   if (g && wRel !== '官鬼' && ke(g.el, W.el) && tanSheng) N(`官${g.br}克世，但官生动父、父生世，贪生忘克`, ['R-YUANJI-06', 'R-YONG-GUAN-08']);
+  else if (g && ke(g.el, W.el) && xiongOk0) N(`官${g.br}克兄弟之世，但父母动来生合世、或世旺而官父得地（兄弟持世…必添科名；世爻受克而有扶，亦业姑许）`, ['R-QIUMING-12', 'R-QIUMING-06', 'R-ZS-QM-21']);
   else if (g && wRel !== '官鬼' && ke(g.el, W.el)) V('官克世', `官${g.br}克世（官爻克世及空破者不禄；官宜生身，不宜克世）`, ['R-ZS-QM-02', 'R-QIUMING-06', 'R-ZS-QM-06', 'R-QIUMING-15']);
   // 官临应而不就世；官或官局生合应而不就世
   const guanAtResp = g && g.kind === 'line' && g.line.isResponse;
@@ -244,7 +255,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     V('官临应', guanAtResp ? '官临应爻而不就世（官临应爻，不得）' : '官生合应而不就世（出现无情）', ['R-ZS-QM-01', 'R-QIUMING-17', 'R-BZZ-QM-07']);
   }
   // 兄弟持世
-  const xiongOk = fFa.length > 0 || (wWang && ((gWang && fWang) || G.shown.some((x) => x.moving && f && gen(x.el, f.el))));
+  const xiongOk = xiongOk0;
   if (wRel === '兄弟' && xiongOk) N('兄弟持世，但父母动来生合世，或世旺而官父得地（兄弟持世，若临日月或旺相，再得官父两旺、或官动生父、父动生世，必添科名；兄弟临身，喜父母化吉而拱合）', ['R-ZS-QM-21', 'R-ZS-QM-22']);
   else if (wRel === '兄弟' && !(g && g.acts) && !(F.shown.some((x) => x.moving) && G.shown.some((x) => x.moving))) {
     V('兄持世', '兄弟持世而官不动（子孙兄弟持世，谋署谋差自投罗网）', ['R-ZS-QM-03', 'R-QIUMING-12', 'R-YUANLI-02']);
