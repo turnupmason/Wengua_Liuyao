@@ -102,11 +102,14 @@ export function monthStemFor(yearStem, monthBranch) {
  * 起卦时间的全部历法事实。
  * @param {object} p
  * @param {number|Date|string} p.instant 起卦瞬间
- * @param {string} [p.timeZone] IANA 时区，默认 Asia/Shanghai
+ * @param {string} [p.timeZone] 卦主所在地的 IANA 时区（B-011）；未传时按 Asia/Shanghai 并给 time-zone-default 提示
  * @param {'midnight'} [p.dayBoundary] 只接受 midnight（D-009）
  * @param {object} [p.jieTable] 可注入的节气表
  */
-export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoundary = 'midnight', jieTable = JIE_TABLE }) {
+export function castingCalendar({ instant, timeZone, dayBoundary = 'midnight', jieTable = JIE_TABLE }) {
+  // B-011：起卦时刻按卦主当地时间（卦主所在地的 IANA 时区）。未传时区时退回默认并给提示。
+  const timeZoneSource = timeZone ? 'caller' : 'default';
+  if (!timeZone) timeZone = DEFAULT_TIME_ZONE;
   const ms = instant instanceof Date ? instant.getTime() : typeof instant === 'string' ? Date.parse(instant) : instant;
   if (!Number.isFinite(ms)) throw new TypeError('起卦时间无效');
   if (!DAY_BOUNDARY_POLICIES[dayBoundary]) throw new Error(`未知换日口径: ${dayBoundary}`);
@@ -120,6 +123,9 @@ export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoun
   if (month.minutesSinceJie < NEAR_JIE_MINUTES || month.minutesToNextJie < NEAR_JIE_MINUTES) {
     warnings.push({ code: 'near-jie-boundary', message: `起卦时刻距交节不足 ${NEAR_JIE_MINUTES} 分钟，月建可能因历表精度而不同` });
   }
+  if (timeZoneSource === 'default') {
+    warnings.push({ code: 'time-zone-default', message: `未传入卦主当地时区，暂按 ${DEFAULT_TIME_ZONE} 换算日辰；按 B-011 应取卦主所在地时间` });
+  }
   if (civil.hour === 23) {
     warnings.push({ code: 'zi-hour', message: '起卦在 23 时（子初）：按 D-009 不提前换日，仍取当日日辰', dayBoundary });
   }
@@ -128,6 +134,7 @@ export function castingCalendar({ instant, timeZone = DEFAULT_TIME_ZONE, dayBoun
     jieTableVersion: jieTable.version,
     instantUtc: new Date(ms).toISOString(),
     timeZone,
+    timeZoneSource,
     dayBoundary,
     dayBoundaryVersion: DAY_BOUNDARY_VERSION,
     civil,

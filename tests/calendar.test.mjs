@@ -103,3 +103,14 @@ test('旬空：六十甲子全部与「甲子旬中戌亥空」等六句一致',
     assert.equal(v.xunHead, ganzhiFromIndex(i - (i % 10)).stem + ganzhiFromIndex(i - (i % 10)).branch);
   }
 });
+
+test('起卦时刻按卦主当地时间（B-011）：传入时区即用之；未传则按默认并提示', () => {
+  const instant = '2023-11-08T11:30:00+08:00';
+  const local = castingCalendar({ instant, timeZone: 'America/Los_Angeles' });
+  assert.equal(local.timeZoneSource, 'caller');
+  assert.ok(!local.warnings.some((w) => w.code === 'time-zone-default'));
+  const dflt = castingCalendar({ instant });
+  assert.equal(dflt.timeZoneSource, 'default');
+  assert.ok(dflt.warnings.some((w) => w.code === 'time-zone-default'));
+  assert.notEqual(local.day.ganzhi, dflt.day.ganzhi, '例 4：北京为午日，卦主当地仍是前一日');
+});
