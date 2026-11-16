@@ -2,10 +2,10 @@
 // 用法：node scripts/analysis/validate-classic-cases.mjs <classic.json>；再 node scripts/analysis/interview-v3-check.mjs <classic.json> <impact-out.json>
 import fs from 'node:fs';
 import { buildChart, buildEvidence, analyzeChart, interviewV3 } from '../../src/index.js';
-const judgeValues = (lv, m, d) => {
+const judgeValues = (lv, m, d, kind = 'interview') => {
   const chart = buildChart({ lineValues: lv, calendar: { monthBranch: m, dayGanzhi: d } });
   const analysis = analyzeChart(chart);
-  const r = interviewV3(chart, { analysis, evidence: buildEvidence('career.interview.interview-pass', chart, analysis) });
+  const r = interviewV3(chart, { analysis, kind, evidence: buildEvidence('career.interview.interview-pass', chart, analysis) });
   return { ...r, veto: r.veto.map((v) => `${v.code} ${v.text}`), pass: r.pass.map((v) => `${v.code} ${v.text}`), notes: [...r.notes, ...r.plus.map((x) => '+' + x.text), ...r.minus.map((x) => '-' + x.text)].map((x) => x.text ?? x), layerNote: r.layers.final || '' };
 };
 const [classicPath, impactOut] = process.argv.slice(2);
@@ -37,7 +37,7 @@ if (classicPath) {
     for (const r of rows) {
       if (!set[r.id] || r.error) continue;
       const [m, d] = FIX[r.id] || [r.month, r.day];
-      const v = judgeValues(r.lineValues.split('').map(Number), m, d);
+      const v = judgeValues(r.lineValues.split('').map(Number), m, d, name === '考试' ? 'written' : 'interview');
       n++; k += bin(v.verdict) === set[r.id];
       console.log(`${r.id} ${r.chart} → ${v.verdict} 实${set[r.id]} | ${v.veto.join('；')} | ${v.pass.join('；')}`);
     }

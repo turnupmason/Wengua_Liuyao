@@ -1,8 +1,8 @@
 // D-015 三层判定回归：月令旺衰（事实）→ 综合作用能力（四处生克）→ 当前作用状态。以六篇样稿及空、破、墓各情形为例。
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildChart, buildEvidence, interviewPassClass } from '../src/index.js';
-import { seasonalFive } from '../src/role-state.js';
+import { buildChart, buildEvidence, interviewPassClass, analyzeChart } from '../src/index.js';
+import { seasonalFive, assessRoleState } from '../src/role-state.js';
 
 const Q = 'career.interview.interview-pass';
 const ev = (v, m, d) => buildEvidence(Q, buildChart({ lineValues: v, calendar: { monthBranch: m, dayGanzhi: d } }));
@@ -78,7 +78,9 @@ test('进神退神章（R-JINTUI-03）：用神当令得相而化退神，占近
 });
 
 test('元神忌神衰旺章（R-YUANJI-04）：忌神发动有力而另一爻原神同动，最强原神为静爻时，指纹单列「忌元同动」', () => {
-  const td = interviewPassClass(ev([8, 7, 6, 9, 8, 6], '辰', '戊戌')).key; // 子孙与妻财同动，另有妻财静而旺相
+  // 2026-11-15：原例 [8,7,6,9,8,6] 辰月戊戌日之上爻妻财戌临日，按日辰章「生多克少锦上添花」改判有力，不再是原神无力之例，换例
+  // 2026-11-15 再改：动静生克章「静而旺相之爻可以生克休囚之爻」计入后，前例强弱又变，再换例
+  const td = interviewPassClass(ev([7, 6, 6, 9, 7, 7], '戌', '戊戌')).key; // 子孙与妻财同动，另有妻财静而旺相
   assert.match(td, /原静旺有力;忌动有力;忌元同动\(原无力\)/);
   const solo = interviewPassClass(ev([8, 7, 6, 7, 8, 8], '巳', '庚午')).key; // 只有子孙发动
   assert.match(solo, /忌动有力/);
@@ -90,4 +92,16 @@ test('日月为用：日辰为官而月建为子孙，月令克日辰之官（IP
   assert.match(ke, /^用日月为用\(月克日\);/);
   const sheng = interviewPassClass(ev([7, 8, 8, 8, 8, 7], '丑', '甲申')).key; // 丑月土生申日金官
   assert.match(sheng, /^用日月为用;/);
+});
+
+test('日辰章：临日之爻数生克，生多克少锦上添花，克多才寡不敌众（R-RIZHEN-05）；月冲为破先于同气（R-YUEPO-01）', () => {
+  // 网上卦例 W10：辰月癸丑日，世父丑临日、得辰月同气，只受动卯一克 → 有力
+  const c = buildChart({ lineValues: [7, 9, 8, 7, 8, 8], calendar: { monthBranch: '辰', dayGanzhi: '癸丑' } });
+  const a = analyzeChart(c);
+  const w = c.lines.find((l) => l.isWorld);
+  assert.equal(assessRoleState(w, a.lines[w.position - 1], c).capability, 'strong');
+  // 辰月戊戌日上爻妻财戌：月破（辰戌冲）记克，不作同气之扶
+  const c2 = buildChart({ lineValues: [8, 7, 6, 9, 8, 6], calendar: { monthBranch: '辰', dayGanzhi: '戊戌' } });
+  const s2 = assessRoleState(c2.lines[5], analyzeChart(c2).lines[5], c2);
+  assert.ok(s2.places.some((p) => p.place === '月建' && p.effect === '克'));
 });

@@ -39,7 +39,8 @@ function calendarRelation(sourceBranch, branch, element) {
     punish: punishes(sourceBranch, branch),
     // generates: 日月生爻；controls: 日月克爻；same: 比扶；generatedBy: 爻生日月（泄）；controlledBy: 爻克日月
     element: er,
-    supports: er === 'generates' || er === 'same',
+    // 冲者不作扶：辰戌丑未互冲虽同属土，仍是冲（月破章「月建冲之为月破」；日辰章冲之则为暗动或日破）
+    supports: (er === 'generates' || er === 'same') && CLASH.get(branch) !== sourceBranch,
     controls: er === 'controls',
   };
 }
@@ -61,7 +62,8 @@ export function calendarFacts(t, chart) {
   const residualQi = RESIDUAL_QI[monthBranch] === t.element;
   const dayStage = lifeStageOf(t.element, dayBranch);
   // 旺相（狭义，四时旺相章）与得令合（月将章「衰而亦旺」）
-  const seasonalStrong = seasonal === '旺' || seasonal === '相';
+  // 月破之爻不作旺相（月破章「用神临月破……即是枯根木，逢生生之不起」；四时旺相章「未土旺，辰戌次之」，被冲之丑不在旺列）
+  const seasonalStrong = (seasonal === '旺' || seasonal === '相') && CLASH.get(t.branch) !== monthBranch;
   // 区分暗动与日破的「旺相」（R-RIZHEN-02）：四时旺相，或得月合（月将章「合之…衰而亦旺」）。
   // 静爻休囚而得他爻动生、再逢日冲者如何论，书中未见明例，列为未决分歧 D-012。
   const strongForClash = seasonalStrong || month.combine;

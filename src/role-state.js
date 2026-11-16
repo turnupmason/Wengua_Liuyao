@@ -22,6 +22,12 @@ export function seasonalFive(element, monthBranch) {
 }
 
 const strongSeason = (element, monthBranch) => ['旺', '相'].includes(seasonalState(element, monthBranch));
+// 暗动：静爻旺相（或得月合）而日辰冲之（暗动章「静爻旺相日辰冲之为暗动……用神休囚得元神暗动以相生」），月破者不论
+const isAnDong = (o, chart) => {
+  const { monthBranch, dayBranch } = chart.calendar;
+  if (o.moving || CLASH.get(o.branch) !== dayBranch || CLASH.get(o.branch) === monthBranch) return false;
+  return strongSeason(o.element, monthBranch) || COMBINE.get(o.branch) === monthBranch;
+};
 
 /**
  * 四处生克（R-SICHU-01）。subject：{ kind: 'line'|'hidden', element, branch, position, moving, calendar, change, fly }
@@ -32,26 +38,39 @@ function placesOf(subject, chart) {
   const m = c.month;
   const d = c.day;
   const places = [];
-  if (m.same || m.supports || m.combine) places.push({ place: '月建', effect: '生', strong: true });
-  else if (m.controls || m.clash) places.push({ place: '月建', effect: '克', strong: true });
+  // 月冲为月破，先于同五行之扶（月破章「月建冲之为月破……用神临月破……即是枯根木，逢生生之不起」；
+  // 四时旺相章「六月未为月建，未土旺，辰戌次之」，不列被冲之丑）：辰戌丑未互冲者作克，不作扶
+  if (m.clash) places.push({ place: '月建', effect: '克', strong: true });
+  else if (m.same || m.supports || m.combine) places.push({ place: '月建', effect: '生', strong: true });
+  else if (m.controls) places.push({ place: '月建', effect: '克', strong: true });
   const dz = c.dayClash?.zengshan;
   if (subject.kind === 'hidden' && d.clash) places.push({ place: '日辰', effect: '克', strong: true });
   else if (dz === '日破') places.push({ place: '日辰', effect: '克', strong: true }); // 日冲优先于同五行比扶（R-RIZHEN-02）
   else if (dz === '暗动') places.push({ place: '日辰', effect: '生', strong: true });
   else if (d.same || d.supports || (d.combine && !subject.moving) || d.lifeStage === '长生' || d.lifeStage === '帝旺') places.push({ place: '日辰', effect: '生', strong: true });
   else if (d.controls) places.push({ place: '日辰', effect: '克', strong: true });
+  // 动静生克章：「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——受方休囚时，静而旺相（不破）之爻亦计入
+  const subjectWeak = !strongSeason(subject.element, chart.calendar.monthBranch) || CLASH.get(subject.branch) === chart.calendar.monthBranch;
+  const staticStrong = (o) => !o.moving && strongSeason(o.element, chart.calendar.monthBranch) && CLASH.get(o.branch) !== chart.calendar.monthBranch;
   for (const o of chart.lines) {
-    if (!o.moving || o.position === subject.position) continue;
+    if (o.position === subject.position) continue;
+    const an = !o.moving && isAnDong(o, chart);
+    const st = !o.moving && !an && subjectWeak && staticStrong(o) && subject.kind !== 'hidden';
+    if (!o.moving && !an && !st) continue;
+    // 六合章：「爻动或与日月……合者谓之动逢合而绊住，反不能动之意」——被日辰、月建合住的动爻暂不生克他爻（待冲开）
+    if (o.moving && (COMBINE.get(o.branch) === chart.calendar.dayBranch || COMBINE.get(o.branch) === chart.calendar.monthBranch)) continue;
     const er = elementRelation(o.element, subject.element);
     const dyn = strongSeason(o.element, chart.calendar.monthBranch);
-    if (er === 'generates' || er === 'same' || (!subject.moving && COMBINE.get(o.branch) === subject.branch)) places.push({ place: `动爻${o.label}${o.branch}`, effect: '生', strong: false, dyn });
-    else if (er === 'controls' || CLASH.get(o.branch) === subject.branch) places.push({ place: `动爻${o.label}${o.branch}`, effect: '克', strong: false, dyn });
+    const tag = an ? '暗动' : st ? '静旺' : '动爻';
+    // 静旺之爻只论生克（动静生克章），冲合须动爻或日月
+    if (er === 'generates' || er === 'same' || (!st && !subject.moving && COMBINE.get(o.branch) === subject.branch)) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '生', strong: false, dyn });
+    else if (er === 'controls' || (!st && CLASH.get(o.branch) === subject.branch)) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '克', strong: false, dyn });
   }
   const ch = subject.change;
   if (ch) {
     const dyn = strongSeason(ch.to.element, chart.calendar.monthBranch);
     if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: '自身动化', effect: '生', strong: false, dyn });
-    else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝') places.push({ place: '自身动化', effect: '克', strong: false, dyn });
+    else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝' || ch.clash) places.push({ place: '自身动化', effect: '克', strong: false, dyn }); // 化回头冲，如逢仇敌（六冲章）
   }
   // 飞神：未被推开时其生克计入；空破休囚墓绝、被冲克者「虽有若无」（R-FUSHEN-06）
   if (subject.kind === 'hidden' && subject.fly && !subject.fly.pushed) {
@@ -59,6 +78,12 @@ function placesOf(subject, chart) {
     const er = elementRelation(f.element, subject.element);
     if (er === 'generates' || er === 'same') places.push({ place: `飞神${f.branch}`, effect: '生', strong: false, dyn: f.strong });
     else if (er === 'controls') places.push({ place: `飞神${f.branch}`, effect: '克', strong: false, dyn: f.strong });
+  }
+  // 三刑章：「或因用神休囚又兼他爻犯之，刑者则见凶，而独犯三刑得验者少」——休囚而已受他克者，日月之刑再记一伤；独刑不论
+  const weakNow = !strongSeason(subject.element, chart.calendar.monthBranch) || CLASH.get(subject.branch) === chart.calendar.monthBranch;
+  if (weakNow && places.some((p) => p.effect === '克')) {
+    if (m.punish) places.push({ place: '月建刑', effect: '克', strong: true });
+    if (d.punish) places.push({ place: '日辰刑', effect: '克', strong: true });
   }
   return places;
 }
@@ -71,9 +96,12 @@ function capabilityOf(subject, chart) {
   const month = places.find((p) => p.place === '月建');
   const byMonth = (why) => (month ? { capability: month.effect === '生' ? 'strong' : 'weak', basis: `${why}，以月建为准（月将章「月克日生遇帮而愈旺，月生日克逢他削而亦衰」，B-004）` } : { capability: strongSeason(subject.element, chart.calendar.monthBranch) ? 'strong' : 'weak', basis: `${why}，以月令旺衰为准（B-004）` });
   // 日辰章：爻临日辰，逢破不破、遇冲克无伤；又受动克或动化相克则寡不敌众
+  // 原文「生多克少锦上添花，生少克多，寡不敌众」：例为酉月卯日、爻临卯（月破）而又有申酉动克，月克加动克多于日辰之扶。
+  // 故临日之爻须数生克：生扶（日辰、月建同气或生、动爻生、动化生）不少于克伤（月克月冲、动爻克、动化克）者仍作有力。
   if (subject.kind === 'line' && c.day.same) {
-    const movingHit = k.some((p) => p.place.startsWith('动爻')) || (subject.change && subject.change.huitou === '回头克');
-    return { places, ...(movingHit ? { capability: 'weak', basis: '临日而又受动克或动化相克：寡不敌众（R-RIZHEN-05）' } : { capability: 'strong', basis: '临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）' }) };
+    const movingHit = k.some((p) => p.place.startsWith('动爻') || p.place.startsWith('暗动') || p.place === '自身动化') || (subject.change && subject.change.huitou === '回头克');
+    const outnumbered = movingHit && k.length > g.length;
+    return { places, ...(outnumbered ? { capability: 'weak', basis: `临日而受克多于生扶：寡不敌众（生：${g.map((p) => p.place).join('、')}；克：${k.map((p) => p.place).join('、')}；R-RIZHEN-05）` } : movingHit ? { capability: 'strong', attacked: true, basis: `临日而受动克，但生扶不少于克伤（生多克少锦上添花，R-RIZHEN-05；生：${g.map((p) => p.place).join('、')}；克：${k.map((p) => p.place).join('、')}）` } : { capability: 'strong', basis: '临日辰：逢破不破、遇冲克而无伤（R-RIZHEN-05）' }) };
   }
   // 月将章：临月建而受日克日冲或墓于日，无其他生克：无吉无凶（B-007）
   if (c.month.same && (c.day.controls || c.dayTomb || c.day.clash) && !places.some((p) => !['月建', '日辰'].includes(p.place))) {
