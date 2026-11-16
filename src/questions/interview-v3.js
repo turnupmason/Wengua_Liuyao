@@ -321,3 +321,13 @@ export function interviewV3Signature(v3) {
   const codes = (xs) => [...new Set(xs.map((x) => x.code))].sort().join('+');
   return `三版${v3.verdict}${v3.veto.length ? `|否${codes(v3.veto)}` : ''}${v3.layerVeto?.length ? `|层${codes(v3.layerVeto)}` : ''}${v3.pass.length ? `|过${codes(v3.pass)}` : ''}`;
 }
+
+// 否决、能过的主次（定类只取最主要的一条；其余由逐卦断语逐条写出）
+const VETO_ORDER = ['无官', '官无力', '子孙持世', '子动克官', '官克世', '官临应', '父无力', '父化凶', '财动克父', '世破被克', '世空无气', '日月冲克世', '兄持世', '子孙局', '兄局', '乱动'];
+const PASS_ORDER = ['旺官持世', '日月官生合世', '旺官生合世', '官父两旺', '旺父就世', '父发', '官父局', '应荐'];
+/** eq-0.14 粗签名：结论 + 主依据 + 是否分层 */
+export function interviewV3MainSignature(v3) {
+  const first = (xs, order) => order.find((c) => xs.some((x) => x.code === c)) || '';
+  const main = v3.veto.length ? `否${first(v3.veto, VETO_ORDER)}` : v3.pass.length ? `过${first(v3.pass, PASS_ORDER)}` : '无主';
+  return `三版${v3.verdict}|${main}${v3.layerVeto?.length ? '|分层' : ''}`;
+}

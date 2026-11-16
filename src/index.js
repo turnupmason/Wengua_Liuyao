@@ -20,6 +20,6 @@ export { EQUIVALENCE_VERSION, interviewPassClass, classKeyFor } from './equivale
 export { FLOWS_VERSION, dayOffset } from './flows.js';
 export { sha256Hex, canonicalJson, digestOf } from './hash.js';
 export { DOMAINS, TAXONOMY_VERSION, entryOfQuestion } from './questions/taxonomy.js';
-export { INTERVIEW_V3_VERSION, interviewV3, interviewV3Signature } from './questions/interview-v3.js';
+export { INTERVIEW_V3_VERSION, interviewV3, interviewV3Signature, interviewV3MainSignature } from './questions/interview-v3.js';
 export { SHENSHA_VERSION, SHENSHA_RELEVANCE, shenshaTable, shenshaFacts } from './shensha.js';
 export { INTERVIEW_V3_TEXT_VERSION, interviewV3Text } from './questions/interview-v3-text.js';

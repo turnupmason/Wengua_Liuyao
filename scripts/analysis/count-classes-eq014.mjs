@@ -1,10 +1,11 @@
 // eq-0.14 试算：在 eq-0.13 类键后接第三版签名（结论、否决、能过、分层），遍历全部 4096×12×60 盘，
 // 按掷钱概率排出新类序，并统计已写 eq-0.13 各类在新键下拆成几类、改判几类。不改现行类键与断语。
 // 用法：node scripts/analysis/count-classes-eq014.mjs [workers]
+// 默认用最细签名（否决、能过的每种组合各自成类）；用户 2026-11-15「最高标准做事」，粗签名 EQ014_SIG=main 只作对照，不用于写稿
 import { Worker, isMainThread, parentPort, workerData } from 'node:worker_threads';
 import { cpus } from 'node:os';
 import { writeFileSync, readFileSync, readdirSync } from 'node:fs';
-import { buildChart, buildEvidence, analyzeChart, interviewPassClass, interviewV3, interviewV3Signature, allHexagrams, BRANCHES, ganzhiFromIndex } from '../../src/index.js';
+import { buildChart, buildEvidence, analyzeChart, interviewPassClass, interviewV3, interviewV3Signature, interviewV3MainSignature, allHexagrams, BRANCHES, ganzhiFromIndex } from '../../src/index.js';
 
 const Q = 'career.interview.interview-pass';
 const vals = (code, mask) => code.split('').map((b, i) => (b === '1' ? (mask[i] === '1' ? 9 : 7) : (mask[i] === '1' ? 6 : 8)));
@@ -47,7 +48,7 @@ if (isMainThread) {
         classes_needed_for_share: marks, written_eq013_classes: byBase.size, written_share_of_casts: +writtenShare.toFixed(4),
         eq014_classes_covering_written: newClassesFromWritten, written_fate: fate,
       };
-      writeFileSync('reports/interview-pass-class-order-eq014-trial.json', `${JSON.stringify({ ...summary, classes: list.slice(0, 20000) }, null, 1)}\n`);
+      writeFileSync(`reports/interview-pass-class-order-eq014-${process.env.EQ014_SIG === 'main' ? 'main' : 'fine'}-trial.json`, `${JSON.stringify({ ...summary, classes: list.slice(0, 20000) }, null, 1)}\n`);
       console.log(JSON.stringify(summary));
     });
   }
@@ -64,7 +65,8 @@ if (isMainThread) {
       const analysis = analyzeChart(chart);
       const ev = buildEvidence(Q, chart, analysis);
       const base = interviewPassClass(ev).key;
-      const key = `${base};${interviewV3Signature(interviewV3(chart, { analysis, evidence: ev }))}`;
+      const v3 = interviewV3(chart, { analysis, evidence: ev });
+      const key = `${base};${process.env.EQ014_SIG === 'main' ? interviewV3MainSignature(v3) : interviewV3Signature(v3)}`;
       const p = lv.reduce((s, v) => s * PROB[v], 1);
       const cur = counts.get(key) || [0, 0, base]; cur[0] += 1; cur[1] += p; counts.set(key, cur);
       charts += 1;
