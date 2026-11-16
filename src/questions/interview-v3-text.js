@@ -198,14 +198,18 @@ export function interviewV3Text(chart, ctx = {}) {
   const tm = d.timing;
   if (fu) {
     const b = fu.branch;
-    const t = fu.kind === 'hidden' ? `通知看父母：父母伏藏，待${b}值日前后出来` : fu.void ? `通知看父母：父母旬空，待出空填实（${b}日）或冲空之日` : fu.level === 0 ? `通知看父母：父母衰，待生旺之日前后（${SHENG_WANG[fu.element] || ''}）` : `通知看父母：父母${fu.moving ? '动，逢值逢合之日' : '旺而静，逢值逢冲之日'}前后（${b}日或冲${b}之日）`;
+    const t = fu.kind === 'hidden' ? `通知看父母：父母伏藏，待${b}值日前后出来` : fu.void ? `通知看父母：父母旬空，待出空填实（${b}日）或冲空之日` : fu.level === 0 ? `通知看父母：父母衰，待生旺之日前后（${SHENG_WANG[fu.element] || ''}）` : `通知看父母：父母${fu.moving ? '动，逢值逢合之日' : '旺而静，逢值逢冲之日'}前后（${b}日或${fu.moving ? '合' : '冲'}${b}之${(fu.moving ? { 子: '丑', 丑: '子', 寅: '亥', 亥: '寅', 卯: '戌', 戌: '卯', 辰: '酉', 酉: '辰', 巳: '申', 申: '巳', 午: '未', 未: '午' } : { 子: '午', 午: '子', 丑: '未', 未: '丑', 寅: '申', 申: '寅', 卯: '酉', 酉: '卯', 辰: '戌', 戌: '辰', 巳: '亥', 亥: '巳' })[b]}日）`;
     out.push(sentence('应期', `${t}。`, ['R-QIUMING-16']));
   }
   if (g) {
     const b = g.branch;
     const t = g.kind === 'hidden' ? `结果看官鬼：官伏藏，以官${b}临值之日为期` : g.void ? `结果看官鬼：官旬空，出空填实或冲空之日` : g.active === '发动' ? `结果看官鬼：官动，逢值（${b}）逢合之日为期` : `结果看官鬼：官静，逢值（${b}）逢冲之日为期`;
-    out.push(sentence('应期', `${t}；官属${g.trade.element}${g.trade.element === '火' ? '，火动应期偏快' : g.trade.element === '水' ? '，水动应期偏慢' : ''}。`, ['R-YY-YL-03', 'R-YINGQI-01']));
+    out.push(sentence('应期', `${t}${g.void ? '（旬空最爱填冲）' : g.active === '发动' ? '（动而逢合逢值）' : g.kind === 'line' ? '（静而逢值逢冲）' : ''}；官属${g.trade.element}${g.trade.element === '火' ? '，火动应期偏快' : g.trade.element === '水' ? '，水动应期偏慢' : ''}。`, ['R-YY-YL-03', 'R-YINGQI-01', 'R-YINGQI-02', 'R-YINGQI-08']));
   }
+  // 应期总注逐条（R-YINGQI-03..11）：官、父各自补列
+  const qiText = (who, xs) => xs.map((x) => (x.code === '受克' ? (r.verdict === 'fail' ? `${who}受${x.killer}之克：防克神逢生之日月（${x.sheng}）（大象凶而受克，须防克者逢生）` : `${who}受${x.killer}之克：待克神受制之日月（${x.zhi}）（大象吉而受克，须待克神受克）`) : `${who}${x.text}`));
+  for (const [who, xs] of [['官', tm.guanQi || []], ['父', tm.fuQi || []]]) if (xs.length) out.push(sentence('应期', `${qiText(who, xs).join('；')}。`, [...new Set(xs.flatMap((x) => x.rules))]));
+  out.push(sentence('应期', '面试结果是近事，应期多以日计；若问入职、转正等较远之事，以月计（远事定之以年月，近事应之于日时）。', ['R-YINGQI-12']));
   if (g?.voidOrBroken?.length) out.push(sentence('应期', `官鬼两现，其中${g.voidOrBroken.map((x) => `${x.branch}${x.kind}`).join('、')}：应期多应在实空实破之时（${g.voidOrBroken.map((x) => `${x.branch}`).join('、')}之日月）（两现章：舍其不空而用旬空，舍其不破而用月破）。`, ['R-LIANGXIAN-04', 'R-ZS-LI-01']));
   if (g && g.count >= 3) { const MUB = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' }; out.push(sentence('应期', `官鬼${g.count}现，用爻重叠太过：待墓库（${MUB[g.trade.element]}）收藏之日月，或克制之日月而成（太过者损之斯成）。`, ['R-QJF-05'])); }
   if (g && r.layers.hiring.level === 2 && r.veto.some((v) => /子动克官|官克世|官三刑/.test(v.code))) out.push(sentence('应期', '官星眼下旺相而受克：目下尚得令，过了旺时更受其害（旺相之爻被克，目下贪荣得令，过时仍受其毒）。', ['R-BZZ-WX-01']));
