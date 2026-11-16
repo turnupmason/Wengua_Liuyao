@@ -59,6 +59,8 @@ function placesOf(subject, chart) {
     if (!o.moving && !an && !st) continue;
     // 六合章：「爻动或与日月……合者谓之动逢合而绊住，反不能动之意」——被日辰、月建合住的动爻暂不生克他爻（待冲开）
     if (o.moving && (COMBINE.get(o.branch) === chart.calendar.dayBranch || COMBINE.get(o.branch) === chart.calendar.monthBranch)) continue;
+    // 同章「爻动或与日月动爻合者谓之动逢合而绊住」；正宗「如旁爻动来合之，须待冲那旁爻之日至」（R-QJF-14、R-BZZ-QJ-04）
+    if (o.moving && chart.lines.some((x) => x.position !== o.position && x.moving && COMBINE.get(o.branch) === x.branch)) continue;
     const er = elementRelation(o.element, subject.element);
     const dyn = strongSeason(o.element, chart.calendar.monthBranch);
     const tag = an ? '暗动' : st ? '静旺' : '动爻';
@@ -67,7 +69,12 @@ function placesOf(subject, chart) {
     else if (er === 'controls' || (!st && CLASH.get(o.branch) === subject.branch)) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '克', strong: false, dyn });
   }
   const ch = subject.change;
-  if (ch) {
+  // 合中带克论（卜筮正宗）：子化丑旺相得扶者作合；申化巳作合化长生，寅月寅日三刑会聚者不论（R-BZZ-HZK-01）
+  const heZhongKe = ch && ch.huitou === '回头克' && ch.combine && (
+    (subject.branch === '申' && ch.to.branch === '巳' && chart.calendar.monthBranch !== '寅' && chart.calendar.dayBranch !== '寅')
+    || (subject.branch === '子' && ch.to.branch === '丑' && (strongSeason(subject.element, chart.calendar.monthBranch) || c.month.supports || c.day.supports)));
+  if (heZhongKe) places.push({ place: '自身动化（合中带克，作合论）', effect: '生', strong: false, dyn: true });
+  if (ch && !heZhongKe) {
     const dyn = strongSeason(ch.to.element, chart.calendar.monthBranch);
     if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: '自身动化', effect: '生', strong: false, dyn });
     else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝' || ch.clash) places.push({ place: '自身动化', effect: '克', strong: false, dyn }); // 化回头冲，如逢仇敌（六冲章）

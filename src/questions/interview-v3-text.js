@@ -208,7 +208,10 @@ export function interviewV3Text(chart, ctx = {}) {
   }
   if (g?.voidOrBroken?.length) out.push(sentence('应期', `官鬼两现，其中${g.voidOrBroken.map((x) => `${x.branch}${x.kind}`).join('、')}：应期多应在实空实破之时（${g.voidOrBroken.map((x) => `${x.branch}`).join('、')}之日月）（两现章：舍其不空而用旬空，舍其不破而用月破）。`, ['R-LIANGXIAN-04', 'R-ZS-LI-01']));
   if (g && g.count >= 3) { const MUB = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' }; out.push(sentence('应期', `官鬼${g.count}现，用爻重叠太过：待墓库（${MUB[g.trade.element]}）收藏之日月，或克制之日月而成（太过者损之斯成）。`, ['R-QJF-05'])); }
+  if (g && r.layers.hiring.level === 2 && r.veto.some((v) => /子动克官|官克世|官三刑/.test(v.code))) out.push(sentence('应期', '官星眼下旺相而受克：目下尚得令，过了旺时更受其害（旺相之爻被克，目下贪荣得令，过时仍受其毒）。', ['R-BZZ-WX-01']));
+  if (g && r.layers.hiring.level <= 1 && r.notes.some((n) => /扶起|逢生|回头生/.test(n.text))) out.push(sentence('应期', '官星眼下不旺而得生扶：目下难以如意，到官星旺相之时得意（休囚得生扶，遇时仍然得意）。', ['R-BZZ-WX-01']));
   out.push(sentence('应期', `快慢：${tm.speed.join('；')}。`, ['R-YY-MW-01']));
+  if (tm.banzhu?.length) out.push(sentence('应期', `合绊待冲：${tm.banzhu.join('；')}（动逢合而绊住，后逢冲开之日月，吉凶俱成）。`, ['R-QJF-14', 'R-BZZ-QJ-04']));
   if (tm.harmonyWait.length) out.push(sentence('应期', `三合待时：${tm.harmonyWait.join('；')}（虚一待用，待所缺之字到时应）。`, ['R-SANHE-03', 'R-SANHE-04']));
   if (tm.season) out.push(sentence('应期', `本卦属${d.hexagram.palace}宫，按卦宫，大的时节在${tm.season}之后（宫居${d.hexagram.palace}，${tm.season}后选）。`, ['R-YY-YL-03']));
   if (r.notes.some((n) => /^子孙\S*(无力|入墓|化回头克|合住|化退|衰而又绝|化绝|化破)/.test(n.text))) out.push(sentence('应期', '克官的子孙眼下被制，但除恶未尽：日后子孙逢生扶、冲开之年月，仍要防它复起（除恶未尽，须防死灰复燃）。', ['R-QJF-13']));
