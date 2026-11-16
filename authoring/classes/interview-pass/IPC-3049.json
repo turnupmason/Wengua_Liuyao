@@ -1,0 +1,249 @@
+{
+  "script_id": "IPC-3049",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用伏有效;世世破世受克;原待时(月破);忌伏有效",
+  "class_rank": 3049,
+  "class_share_of_casts": 3.6e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "甲寅"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "辛卯"
+    },
+    {
+      "line_values": [
+        7,
+        6,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "戊辰"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "庚寅"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "乙卯"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        8,
+        8,
+        6,
+        7
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "甲寅"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏而有用",
+    "世爻旺而月破",
+    "应爻受世克"
+  ],
+  "judgment": {
+    "verdict": "pass-but-slow",
+    "verdict_label": "有望通过，但要待时",
+    "deciding_evidence": [
+      "官鬼不上卦，伏而有用：伏神有力、飞神已被推开，虽不现亦如现（R-FUSHEN-02）",
+      "世爻（妻财）当令而月破，出月可复（R-YUEPO-02）"
+    ],
+    "supporting": [
+      "忌神子孙伏而未动"
+    ],
+    "adverse": [
+      "世爻月破，当月站不稳",
+      "原神（即世爻）月破待时"
+    ],
+    "conflicts_resolved": [
+      "世爻当令而月破，出月则不破，待时"
+    ],
+    "rule_ids": [
+      "R-FUSHEN-01",
+      "R-FUSHEN-02",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YONG-GUAN-07",
+      "R-YUEPO-02"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "hidden": true,
+        "effect": "support"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "有望通过，但要待时：伏官有用，你世上的旺财却被月建冲破",
+    "brief": "这一卦有望通过，但要等。官星不在卦面，伏在下面，有力而出得来，虽不现亦如现。你世上的财当令而旺，却与月建相冲而破，这个月站不稳；出了月，破自然消。应位父母受你所克。克官的子孙也伏着。",
+    "opening": "六爻不见官鬼，卦下伏官有用；这个月财当令。\n你的世爻是财，当令而旺，与月建相冲而破；应位是父母，受你所克。父母或动一爻、或动两爻，也有六爻俱静的。子孙伏于卦下而有用。",
+    "process": "伏官有力，只差一个出头的日子；你世上的财是生官之源，旺而暂破。\n破在当令之爻，出月可复，所以是等，不是空。",
+    "ending": "伏官有用、世财暂破，这一轮有望通过，要等过这个月。",
+    "timing": {
+      "text": "官星伏藏，按「伏神逢值」：伏官本支值日之日前后，较易出伏，事情渐有眉目；若当时未定，还要再等。具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "官星出伏、结果渐明",
+          "target_symbol": "伏藏之官鬼",
+          "condition": "伏神逢值",
+          "time_scale": "day",
+          "calculation_basis": "伏神本支值日之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "有望通过，但要待时。伏官有用，你世上的旺财却被月建冲破。耐心等过这个月，再推进。",
+    "classical_sources": [
+      {
+        "rule_id": "R-FUSHEN-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神有用者有六﹕伏神得日月生者一也﹔伏神旺相者二也﹔伏神得飞神生者三也﹔伏神得动爻生者四﹔伏神得遇日月动爻冲克飞神者五也﹔伏神得遇飞神空破休囚墓绝者六也。",
+        "applies_because": "伏官有用"
+      },
+      {
+        "rule_id": "R-FUSHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "若用神不现﹐即以日月为用神﹐倘日月非用神者﹐则本宫首卦寻之﹐因本宫首卦﹐父子财官六亲俱全之故耳",
+        "applies_because": "官鬼不上卦，寻伏神"
+      },
+      {
+        "rule_id": "R-YUEPO-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·月破章第二十七",
+        "quote": "动则能伤于爻﹐变则能伤于动",
+        "applies_because": "目下虽破，出月则不破"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 3049 类，占起卦概率 0.004%，全类 22 盘）：用神「伏有效」；世爻「世破世受克」；原神妻财待时(月破)；忌神子孙不上卦，伏而有用。全类一致：月建六亲：妻财(100%)；用神月令：不现(100%)。类内各盘不同之处：发动六亲：父母(45%)、无(23%)、父母父母(23%)、兄弟(5%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 1,
+    "revision_note": "初稿（eq-0.13 新类，旧稿未覆盖）：官鬼伏而有用（同 IPC-1742、IPC-1909 之理）"
+  }
+}

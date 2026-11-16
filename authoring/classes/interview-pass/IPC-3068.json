@@ -1,0 +1,245 @@
+{
+  "script_id": "IPC-3068",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.13.0",
+  "class_key": "用明现持世[NEUTRAL]静;世持世;原静不作用;忌伏有效",
+  "class_rank": 3068,
+  "class_share_of_casts": 3.6e-05,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "庚午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "乙巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        9
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "癸巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        8,
+        8,
+        7
+      ],
+      "month_branch": "酉",
+      "day_ganzhi": "庚午"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼持世临月建",
+    "受日克",
+    "月日相敌"
+  ],
+  "judgment": {
+    "verdict": "undetermined",
+    "verdict_label": "成败未定",
+    "deciding_evidence": [
+      "官鬼持世而临月建，旺；日辰克之，月日相敌，「无吉无凶之象」（R-YUEJIAN-04），三层判定为平（NEUTRAL）",
+      "他爻无动而相扶"
+    ],
+    "supporting": [
+      "官鬼持世"
+    ],
+    "adverse": [
+      "官星受日克"
+    ],
+    "conflicts_resolved": [
+      "月将章言「倘得他爻又动相扶者为吉兆」，本类无此；无主要不利依据，亦不判通过，判成败未定（同 IPC-0224）"
+    ],
+    "rule_ids": [
+      "R-RIZHEN-01",
+      "R-SHIYING-03",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-01",
+      "R-YUEJIAN-04"
+    ],
+    "decisive": [
+      {
+        "role": "yong",
+        "effect": "neutral"
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "成败未定：官星坐你世上临月建，日辰却克它",
+    "brief": "这件事成败未定。官星坐在你的世爻上，起卦这个月官星当令，临着月建，或兼日长生；可当天日辰克它，月扶日克，两相抵着，古书说这是无吉无凶之象。卦中没有生官之爻来扶，应位兄弟受你所克，克官的子孙伏着。",
+    "opening": "用神官鬼持世，安静；起卦之月官星当令，临月建，或兼日长生；受日克。\n应位是兄弟，受你所克。卦中或六爻安静，或兄弟一爻动。财静不出力；子孙伏而可出。",
+    "process": "月建扶它、日辰克它，力量相抵；月将章说要有他爻动来相扶才算吉兆。\n这一卦没人来扶，所以悬着，看日后的变化。",
+    "ending": "持世之官旺于月而困于日，这一轮成败未定。",
+    "timing": {
+      "text": "官星持世而静，按「静而逢值逢冲」：官星值日或日辰冲动官星之日前后，事情容易见分晓；具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "事情见分晓",
+          "target_symbol": "持世之官鬼（安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "成败未定。官星坐你世上临月建，日辰却克它。别急着下结论，看官星值日、冲动之时。",
+    "classical_sources": [
+      {
+        "rule_id": "R-YUEJIAN-04",
+        "source_book": "增删卜易",
+        "source_chapter": "月将章第十六",
+        "quote": "爻值月建，墓于日或日建冲克者可以敌之，无吉无凶之象，倘得他爻又动相扶者为吉兆。恐他爻又来克制用神，虽临月建，亦难敌也。",
+        "applies_because": "月日相敌，无吉无凶之象"
+      },
+      {
+        "rule_id": "R-YONG-GUAN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "用神章第八",
+        "quote": "官鬼爻：占功名、官府、雷霆鬼神、妻占夫皆以官鬼爻为用神。",
+        "applies_because": "官鬼持世"
+      },
+      {
+        "rule_id": "R-RIZHEN-01",
+        "source_book": "增删卜易",
+        "source_chapter": "日辰章第十七",
+        "quote": "日辰为六爻之主宰，司四时之旺相。",
+        "applies_because": "日辰克官"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.13.0，写稿顺序第 3068 类，占起卦概率 0.004%，全类 14 盘）：用神「明现持世[NEUTRAL]静」；世爻「持世」；原神妻财安静而月令不旺，不主动作用；忌神子孙不上卦，伏而有用。全类一致：月建六亲：官鬼(100%)；用神月令：旺(100%)。类内各盘不同之处：用神生扶：临月建、日长生(57%)、临月建(43%)；发动六亲：无(50%)、兄弟(50%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-15",
+    "revision": 1,
+    "revision_note": "初稿（eq-0.13 新类，旧稿未覆盖）：官鬼持世，临月建而受日克，月日相敌（R-YUEJIAN-04），他爻无相扶（同 IPC-0224 之理）"
+  }
+}
