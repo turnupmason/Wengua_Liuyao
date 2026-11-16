@@ -1726,7 +1726,7 @@
         "by": "AI-6 最终验收（独立代理）",
         "round": "review-round6",
         "date": "2026-11-13",
-        "note": "「夫进神之有四﹕动旺相而化旺﹐乘势而进﹐一也﹔动休囚而化休囚﹐待时而进﹐二也」逐字见于卷二进神退神章第二十九（L1048，野鹤曰）。解释准确；与升选候补章「在即」之取舍已由 D-019 裁定。可补后两种（值衰待旺日、空破待填实），供今后取期。"
+        "note": "「夫进神之有四﹕动旺相而化旺﹐乘势而进﹐一也﹔动休囚而化休囚﹐待时而进﹐二也」逐字见于卷二进神退神章第二十九（L1048，野鹤曰）。解释准确；与升选候补章「在即」之取舍已由 D-019 裁定。可补后两种（值衰待旺日、空破待填实），供今后取期。；2026-11-16 子孙化退神免克加旺衰条件时引用"
       }
     },
     {
@@ -1997,7 +1997,10 @@
       "source_book": "增删卜易",
       "source_chapter": "增删卜易卷之二·随鬼入墓章第三十",
       "original_text": [
-        "便是世爻用爻随鬼入日墓入动墓或动而化墓﹐亦是休囚无气始见危﹐若旺而有扶亦有求解。"
+        "便是世爻用爻随鬼入日墓入动墓或动而化墓﹐亦是休囚无气始见危﹐若旺而有扶亦有求解。",
+        "只验世爻入墓有三﹕世爻随鬼入日墓﹐入动墓﹐动而化墓。",
+        "惟世爻休囚被克﹐而又入墓者﹐是也。",
+        "墓神破﹐日月动爻冲破﹐亦非真也。墓破如破网﹐容易而出矣。"
       ],
       "modern_explanation": "入墓须看旺衰：休囚无气（月令休囚，又无月建、日辰、发动之爻生扶）而入墓，始为真墓；月令旺相或有生扶者，不作真墓。",
       "applicable_conditions": "用神、原神、忌神、世爻入日墓、动墓、化墓",
@@ -2013,7 +2016,7 @@
         "by": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
         "round": "review-round11",
         "date": "2026-11-14",
-        "note": "逐字核对所注卷章（verify-rules 通过）；解释、适用条件、例外与原文及 D-020 裁定一致；程序口径已在例外中注明；原文限于随鬼入墓，推广属程序口径，已注明"
+        "note": "逐字核对所注卷章（verify-rules 通过）；解释、适用条件、例外与原文及 D-020 裁定一致；程序口径已在例外中注明；原文限于随鬼入墓，推广属程序口径，已注明；2026-11-16 台账补入 1091「惟世爻休囚被克而又入墓者」「墓神破，日月动爻冲破，亦非真也」"
       }
     },
     {
@@ -6448,7 +6451,8 @@
       "source_book": "增删卜易",
       "source_chapter": "生旺墓绝章第又二十六",
       "original_text": [
-        "觉子曰：金虽长生在巳，且宜金爻旺相，或日月动爻生扶，再遇巳日占卦，或是卦中动出巳爻，或是金爻动而化出巳火，皆谓长生。倘若金爻休囚无气，再遇巳午火多者，烈火煎金，论克不论生也。金爻虽墓于丑土，若得未土冲动，或卦中土多生金，论生不论墓也。土爻虽绝于巳，必须休囚无气，又逢巳爻谓之绝。若土爻旺相，或得日月动爻生扶，再遇巳爻，巳火反能生土，论生不论绝也。"
+        "觉子曰：金虽长生在巳，且宜金爻旺相，或日月动爻生扶，再遇巳日占卦，或是卦中动出巳爻，或是金爻动而化出巳火，皆谓长生。倘若金爻休囚无气，再遇巳午火多者，烈火煎金，论克不论生也。金爻虽墓于丑土，若得未土冲动，或卦中土多生金，论生不论墓也。土爻虽绝于巳，必须休囚无气，又逢巳爻谓之绝。若土爻旺相，或得日月动爻生扶，再遇巳爻，巳火反能生土，论生不论绝也。",
+        "巳爻虽长生于寅，倘日月动爻及变出之爻又逢申金者，谓之三刑，论刑不论生也。"
       ],
       "modern_explanation": "金休囚而火多，论克不论生；金得冲墓或土多生之，论生不论墓；土必休囚无气逢巳方为绝，旺相或得日月动爻生扶者，巳火反生土，论生不论绝。",
       "applicable_conditions": "全部",
@@ -6457,7 +6461,11 @@
         "D-023"
       ],
       "adoption": "adopted",
-      "engine_refs": [],
+      "engine_refs": [
+        "src/analysis.js",
+        "src/role-state.js",
+        "src/questions/interview-v3.js"
+      ],
       "review_status": "ai-verified",
       "version": "0.1.0",
       "usage": "判",
@@ -6465,7 +6473,7 @@
         "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
         "round": "classics-sweep-2026-11-15",
         "date": "2026-11-15",
-        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。；2026-11-16 台账补入「巳爻虽长生于寅……论刑不论生也」并全条实现于 analysis swmjJudge"
       }
     },
     {
@@ -8703,7 +8711,7 @@
       ],
       "modern_explanation": "绝而有动爻、变爻、日辰生起为绝处逢生，用神遇之最吉；救绝须得寅申巳亥之爻。",
       "applicable_conditions": "全部",
-      "exceptions": "",
+      "exceptions": "「救绝须得寅申巳亥之爻」一句与增删千金赋「若在辰戌丑未月，或爻中动出辰戌丑未，以土生酉金，皆谓之绝处逢生」不合，从增删，此句不用（2026-11-16）",
       "dispute_ids": [
         "D-023"
       ],
@@ -9063,6 +9071,314 @@
         "date": "2026-11-16",
         "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
       }
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-YUEJIAN-06",
+      "topic": "月将·天象吉凶与出月",
+      "source_book": "增删卜易",
+      "source_chapter": "月将章第十六",
+      "original_text": [
+        "天象吉者从斯而泰，天象凶者出月遭殃。克少生多者天象吉也，克多生少者天象凶也。天象虽凶，在月内还许不碍，出此月而受其殃。",
+        "此谓之当时旺相无伤，过时有害。"
+      ],
+      "modern_explanation": "爻临月建而克少生多者吉；克多生少者凶，但月内还不碍，出了这个月才受其害（当时旺相无伤，过时有害）。",
+      "applicable_conditions": "临月建之用神、世爻",
+      "exceptions": "只作应期与远近之注，不改旺衰判定（克多生少已按四处生克判弱）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 356、366）查出未入登记。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-CHONG-02",
+      "topic": "六冲·化冲而不克",
+      "source_book": "增删卜易",
+      "source_chapter": "六冲章第二十",
+      "original_text": [
+        "世爻酉金化卯相冲及反复之卦，幸辰日合之，冲中逢合，又得戌土为财，暗动生世，虽则反复不常，却有财利。果此人去而复反者三次，中途发财。",
+        "前曰：爻动化冲，如逢他敌，乃是化回头之克也。此卦世爻酉金化卯冲世而不克世，又得辰日冲动戌财生世所以为吉。"
+      ],
+      "modern_explanation": "动而化冲，若变爻并不克本爻，不是回头克，只主反复不常，并无大害；「如逢仇敌」专指化回头之克。",
+      "applicable_conditions": "动爻化出相冲之爻而变爻不克本爻者",
+      "exceptions": "化冲而又回头克者按回头克论；忌神化散（化冲）不能克用神另见元神忌神衰旺章（R-YUANJI-04）",
+      "engine_refs": [
+        "src/role-state.js",
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 531）查出：role-state 原把一切化冲作克。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-FANFU-02",
+      "topic": "反伏·伏吟分用神旺衰",
+      "source_book": "增删卜易",
+      "source_chapter": "反伏章第二十五",
+      "original_text": [
+        "反伏者有内外伏呤者，内外忧郁呻吟之象。内卦动变伏吟，内则呻吟，外卦动变伏吟，外则忧郁。占名者久困官途，淹留任路。",
+        "然伏吟而较反吟者，反吟有冲有克，爻若受克，得祸不轻。伏吟之卦，用神旺相，冲开之年月，其志则伸，用神休囚，冲开之年月，忧郁不吉。"
+      ],
+      "modern_explanation": "伏吟主内外忧郁呻吟、功名淹留；用神旺相者冲开之年月得伸，用神休囚者冲开之年月仍忧郁不吉。反吟有冲有克，爻若受克，祸重。",
+      "applicable_conditions": "卦得伏吟或反吟",
+      "exceptions": "",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 626）查出：伏吟原一律减分，未分用神旺衰。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-YUEPO-03",
+      "topic": "月破·元神破而动，接续力轻",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·月破章第二十七",
+      "original_text": [
+        "若非子水动爻﹐去位必矣﹐幸有子孙接续相生﹐降级离任而不免耳。",
+        "子水破而化空﹐卜书有曰﹕虽有如无﹐作元神而无用﹐予因不依古法﹐而断神兆机于动﹐动必有因﹐所以断之降级而已。"
+      ],
+      "modern_explanation": "忌神动克而元神同动接续相生，本可化凶为吉；但元神月破又化空，接续之力轻，凶减而不能全免（降级而不削职）。",
+      "applicable_conditions": "忌神与元神同动，而元神月破或旬空",
+      "exceptions": "",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 782）查出：子孙与财同动一律免克，未看财之破空。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-SUIMU-03",
+      "topic": "随鬼入墓·墓爻空破待填实",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·随鬼入墓章第三十",
+      "original_text": [
+        "诸占世爻若旺﹐墓爻而值空破﹐待墓爻填实之日月而吉﹔世爻空破休囚者﹐又在墓爻填实这日月而凶。"
+      ],
+      "modern_explanation": "世旺而墓爻空破者，待墓爻填实之日月而吉；世空破休囚者，墓爻填实之日月而凶。",
+      "applicable_conditions": "世随官入墓而墓爻旬空、月破",
+      "exceptions": "",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1093）查出未入登记。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-HUA-04",
+      "topic": "千金赋·化官鬼吉凶有二",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "化官鬼兮吉凶有二。动爻变出官﹐吉凶有二﹐何也﹖占功名者﹐世爻旺相﹐或临日月或日月生扶动而变出官星﹐又无破损﹐乃为得官之兆也。世若休囚﹐受克动而变出官星者乃为变鬼﹐不惟难于王家食禄﹐须忧梦沈黄梁。"
+      ],
+      "modern_explanation": "占功名，世旺（或临日月、得日月生扶）动而化出官星、所化无破损者为得官之兆；世休囚又受克而化出官星者为变鬼，难于食禄。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）：世动化出官鬼",
+      "exceptions": "化官而回头克世者另见世化鬼克（R-QIUMING-15、R-HJC-QM-14）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1407、1415）：原「世化官」只看所化之官有气，不看世之旺衰与受克。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-QJF-17",
+      "topic": "千金赋·用克世（觉子：功名官克世非灾即祸）",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "觉子曰﹕此论未必全是﹐予之得验如占财财为用神﹐财爻克世者必得。占行人用神克世者即至﹐占医药子孙为用﹐子孙克世者即愈﹐此外数占皆不宜用神克世也﹐若占功名﹐官鬼克世﹐非灾即祸﹐岂可曰勿作凶看。"
+      ],
+      "modern_explanation": "旧注用神克世为事来赶我；觉子以为只占财、行人、医药可如此看，占功名官鬼克世非灾即祸。",
+      "applicable_conditions": "求名、求职、面试（D-023、D-025）",
+      "exceptions": "世受克而有扶者按 D-025 姑许（岁科考章）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1459）查出未入登记，作官克世之又一依据。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-QJF-18",
+      "topic": "千金赋·伏神与飞神日月共作三刑",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "野鹤曰﹕伏而又空﹐事之不成者是也。但此卦文书之不成者﹐非因空也﹐乃因飞神在寅﹐伏神在巳与申日作三刑之故耳﹐何也。申日冲动﹐寅木以生巳火谓之飞来生伏得长生﹐伏神既得长生﹐则为有气不空﹐不然何以谓之飞不冲开亦枉然﹐予故曰﹕非因空也﹐三刑也。"
+      ],
+      "modern_explanation": "伏神与其飞神、日辰（或月建）共成寅巳申、丑戌未三刑者，伏神受伤，事不成。",
+      "applicable_conditions": "伏神",
+      "exceptions": "三刑章：独犯三刑得验者少（R-XING-02），此为野鹤自注之例",
+      "engine_refs": [
+        "src/role-state.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1296）：role-state 三刑原只取月建、日辰与本爻。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-QJF-19",
+      "topic": "千金赋·制中弱主",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "制中弱主难以维持。用爻休囚又被月建日辰制服﹐纵遇生扶﹐亦不济事也。"
+      ],
+      "modern_explanation": "用爻月令休囚，又被月建、日辰俱克，纵有动爻生扶也不济事。",
+      "applicable_conditions": "全部",
+      "exceptions": "临日、临月建者不在此列",
+      "engine_refs": [
+        "src/role-state.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1299）：role-state 原以生扶之数多于克者作有力。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-QJF-20",
+      "topic": "千金赋·合非合因少支神",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "野鹤曰﹕若爻中二子不合二丑﹐名为合﹐不成者﹐亦有理也。"
+      ],
+      "modern_explanation": "卦中两爻同支，对两爻同支相合（如二子对二丑），名为合而不成合。",
+      "applicable_conditions": "爻与爻之合",
+      "exceptions": "日月合爻、冲爻不受此限（同条「日月如天，无处不沾雨露」）",
+      "engine_refs": [
+        "src/role-state.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1259、1260）。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-QJF-21",
+      "topic": "千金赋·墓中人不冲不发，克破其墓",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "墓中人不冲不发。旧注大抵用爻入墓﹐则被阻滞﹐诸事费力难成﹐须得日辰动爻冲破或克破其墓﹐方有力也。",
+        "以用空入墓许以无财者﹐非也﹐殊不知虽空而遇冲﹐冲空则实﹐虽墓而克破﹐破墓则开。",
+        "野鹤曰﹕此极有理﹐屡试屡验﹐但要用神有力﹐方可许之﹐倘若用神休囚无气﹐虽遇冲开之日﹐亦难发矣。"
+      ],
+      "modern_explanation": "用爻入墓须冲破或克破其墓方出；墓神被日月动爻冲克者墓即开；但用神休囚无气，虽冲开亦难发。",
+      "applicable_conditions": "日墓以外之动墓、化墓",
+      "exceptions": "日墓之墓神即日辰，无从冲克",
+      "engine_refs": [
+        "src/analysis.js",
+        "src/role-state.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1309、1317、1318）：原只按支取墓，墓神被冲克者仍作墓。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-QJF-22",
+      "topic": "千金赋·绝逢生而事成",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+      "original_text": [
+        "绝逢生而事成。大凡世与用神或绝于日或化绝﹐若得日月动爻生者﹐谓之绝处逢生﹐且入寅日占卦酉为用神﹐酉绝于寅﹐若在辰戌丑月未月﹐或爻中动出辰戌丑未﹐以土生酉金﹐皆谓之绝处逢生。"
+      ],
+      "modern_explanation": "世或用神绝于日辰或动而化绝，得月建、日辰或动爻生之者为绝处逢生，事成；所举救绝者有辰戌丑未，不限寅申巳亥。",
+      "applicable_conditions": "世爻、用神绝于日或化绝",
+      "exceptions": "易林补遗「救绝须得寅申巳亥之爻」与此不合，从增删（R-YLB-ZD-09 该句不用）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 1471）：第三版原只认寅申巳亥之动爻救绝。"
+      },
+      "dispute_ids": []
     }
   ],
   "disputes": [

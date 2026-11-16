@@ -4,7 +4,7 @@
 import {
   CLASH, COMBINE, BRANCH_ELEMENT, LIFE_STAGES, elementRelation, supportRolesFor, GENERATES, relativeOf,
 } from './constants.js';
-import { analyzeChart } from './analysis.js';
+import { analyzeChart, isMovingTomb } from './analysis.js';
 import { assessRoleState } from './role-state.js';
 import { getQuestionRule } from './questions/index.js';
 import {
@@ -51,7 +51,7 @@ function ledger(line, facts, chart) {
     if (er === 'controls') damage.push(`${other.label}${other.relative}${other.branch}动来克`);
     if (CLASH.get(other.branch) === line.branch) damage.push(`${other.label}${other.relative}${other.branch}动来冲`);
     if (COMBINE.get(other.branch) === line.branch) notes.push(`${other.label}${other.relative}${other.branch}动来合${line.moving ? '（合绊）' : '（合起）'}`);
-    if (LIFE_STAGES[line.element].墓 === other.branch) damage.push(`入${other.label}${other.branch}动墓`);
+    if (isMovingTomb(line, other, chart)) damage.push(`入${other.label}${other.branch}动墓`);
   }
   const ch = facts.change;
   if (ch) {
@@ -195,7 +195,7 @@ function effectiveness(role, line, facts, chart, roles) {
   // 元神忌神衰旺章条文原样核对：「休囚」取月令事实（D-015）。条文之间的冲突不在此处改写，交由 role-state 三层判定
   const weak = cal.month.seasonal === '休囚';
   const hurt = cal.month.controls || cal.day.controls || chart.lines.some((o) => o.moving && o.position !== line.position && elementRelation(o.element, line.element) === 'controls');
-  const movingTomb = chart.lines.some((o) => o.moving && o.position !== line.position && LIFE_STAGES[line.element].墓 === o.branch);
+  const movingTomb = chart.lines.some((o) => isMovingTomb(line, o, chart));
   const threeTombs = cal.dayTomb || movingTomb || (ch && ch.lifeStage === '墓');
   const sameMovingRole = (r) => chart.lines.some((o) => o.moving && o.relative === r && o.position !== line.position);
   const dayStage = cal.day.lifeStage;

@@ -50,6 +50,78 @@ function hasMovingSupport(target, chart, excludePos) {
 }
 
 /**
+ * 生旺墓绝章觉子（R-SWMJ-03）：长生、墓、绝须看本爻衰旺与卦中情形，不可一概论之。
+ *   金长生在巳：「且宜金爻旺相，或日月动爻生扶……皆谓长生。倘若金爻休囚无气，再遇巳午火多者，烈火煎金，论克不论生也」
+ *   金墓于丑：「若得未土冲动，或卦中土多生金，论生不论墓也」
+ *   土绝于巳：「必须休囚无气，又逢巳爻谓之绝。若土爻旺相，或得日月动爻生扶，再遇巳爻，巳火反能生土，论生不论绝也」
+ *   巳长生于寅：「倘日月动爻及变出之爻又逢申金者，谓之三刑，论刑不论生也」
+ * 程序口径：「巳午火多」取长生之巳以外，月建、日辰、他爻动出或变出另有巳午；「土多」取墓爻以外卦中另有土爻发动；
+ *   「未土冲动」取月建、日辰为未或卦中未爻发动。
+ * @param {object} t 受论之爻 { branch, element, position }
+ * @param {string} stageBranch 长生、墓、绝所在之地支（日辰或变爻）
+ * @param {'day'|'change'|'move'} via 日辰、本爻动化、或他爻发动（动墓）
+ * @param {number} [srcPos] via 为 'move' 时，作墓之动爻爻位（不计入「土多」）
+ * @returns {null | '论生' | '论克' | '不作长生' | '论墓' | '论绝' | '论刑'}
+ */
+export function swmjJudge(t, stageBranch, chart, via, srcPos = null) {
+  const { monthBranch, dayBranch } = chart.calendar;
+  const stage = lifeStageOf(t.element, stageBranch);
+  const others = chart.lines.filter((l) => l.position !== t.position && l.position !== srcPos);
+  const month = calendarRelation(monthBranch, t.branch, t.element);
+  const day = calendarRelation(dayBranch, t.branch, t.element);
+  const seasonal = seasonalState(t.element, monthBranch);
+  const strong = (seasonal === '旺' || seasonal === '相') && CLASH.get(t.branch) !== monthBranch;
+  const helped = strong || month.supports || (via !== 'day' && day.supports) || others.some((l) => l.moving && ['generates', 'same'].includes(elementRelation(l.element, t.element)));
+  if (t.element === '金' && stage === '长生') {
+    if (helped) return '论生';
+    const fire = [monthBranch, ...(via !== 'day' ? [dayBranch] : []), ...others.filter((l) => l.moving).flatMap((l) => [l.branch, l.changed?.branch])];
+    return fire.some((b) => b === '巳' || b === '午') ? '论克' : '不作长生';
+  }
+  if (t.element === '金' && stage === '墓') {
+    const weiChong = monthBranch === '未' || dayBranch === '未' || others.some((l) => l.moving && l.branch === '未');
+    const tuDuo = others.some((l) => l.moving && l.element === '土');
+    return weiChong || tuDuo ? '论生' : '论墓';
+  }
+  if (t.element === '土' && stage === '绝') return helped ? '论生' : '论绝';
+  if (t.branch === '巳' && stageBranch === '寅') {
+    const shen = monthBranch === '申' || dayBranch === '申' || others.some((l) => l.moving && (l.branch === '申' || l.changed?.branch === '申'));
+    return shen ? '论刑' : null;
+  }
+  return null;
+}
+
+/**
+ * 墓神被破：月建、日辰冲克墓爻，或他爻发动冲之（随鬼入墓章「墓神破，日月动爻冲破，亦非真也。墓破如破网，容易而出矣」；
+ * 千金赋「墓中人不冲不发……用爻入墓，喜得日辰克破……虽墓而克破，破墓则开」）
+ */
+export function tombBroken(tombBranch, chart, exclude = []) {
+  const { monthBranch, dayBranch } = chart.calendar;
+  const el = BRANCH_ELEMENT[tombBranch];
+  const hit = (b) => CLASH.get(tombBranch) === b || elementRelation(BRANCH_ELEMENT[b], el) === 'controls';
+  return hit(monthBranch) || hit(dayBranch) || chart.lines.some((l) => l.moving && !exclude.includes(l.position) && CLASH.get(tombBranch) === l.branch);
+}
+
+/** 他爻发动而为某爻之墓（动墓），金墓于丑按 R-SWMJ-03 论生论墓；不论墓神破否 */
+export function isMovingTombRaw(t, m, chart) {
+  if (!m.moving || m.position === t.position || lifeStageOf(t.element, m.branch) !== '墓') return false;
+  return t.element !== '金' || swmjJudge(t, m.branch, chart, 'move', m.position) === '论墓';
+}
+
+/** 动墓：墓神被日月动爻冲克者不作墓（R-SUIMU-01、R-QJF-21） */
+export function isMovingTomb(t, m, chart) {
+  return isMovingTombRaw(t, m, chart) && !tombBroken(m.branch, chart, [t.position, m.position]);
+}
+
+// 按 R-SWMJ-03 修正之长生墓绝：返回修正后的阶段（null 表示不作该阶段论）
+function gatedStage(stage, judge) {
+  if (!judge) return stage;
+  if (judge === '论墓') return '墓';
+  if (judge === '论绝') return '绝';
+  if (judge === '论生') return stage === '长生' ? '长生' : null;
+  return null; // 论克、不作长生、论刑
+}
+
+/**
  * 单个地支（本卦爻、变爻或伏神）的日月事实
  * @param {object} t { branch, element, moving, kind: 'line'|'changed'|'hidden', position }
  */
@@ -60,7 +132,13 @@ export function calendarFacts(t, chart) {
   const day = calendarRelation(dayBranch, t.branch, t.element);
   const seasonal = seasonalState(t.element, monthBranch);
   const residualQi = RESIDUAL_QI[monthBranch] === t.element;
-  const dayStage = lifeStageOf(t.element, dayBranch);
+  // 生旺墓绝章觉子（R-SWMJ-03）：日之长生墓绝按本爻衰旺与卦中情形论生、论克、论墓、论绝、论刑
+  const daySwmj = swmjJudge(t, dayBranch, chart, 'day');
+  const dayStage = gatedStage(lifeStageOf(t.element, dayBranch), daySwmj);
+  if (daySwmj) { day.swmj = daySwmj; if (['论墓', '论绝', '论刑', '论克'].includes(daySwmj)) day.supports = false; }
+  // 巳爻临寅月而日月动变逢申：论刑不论生
+  const monthSwmj = t.branch === '巳' && monthBranch === '寅' ? swmjJudge(t, monthBranch, chart, 'day') : null;
+  if (monthSwmj) { month.swmj = monthSwmj; month.supports = false; }
   // 旺相（狭义，四时旺相章）与得令合（月将章「衰而亦旺」）
   // 月破之爻不作旺相（月破章「用神临月破……即是枯根木，逢生生之不起」；四时旺相章「未土旺，辰戌次之」，被冲之丑不在旺列）
   const seasonalStrong = (seasonal === '旺' || seasonal === '相') && CLASH.get(t.branch) !== monthBranch;
@@ -137,15 +215,26 @@ export function changeFacts(line, chart) {
   const c = line.changed;
   const er = elementRelation(c.element, line.element); // 从变爻角度
   const cal = calendarFacts({ branch: c.branch, element: c.element, moving: false, kind: 'changed', position: line.position }, chart);
+  const huitouRaw = er === 'generates' ? '回头生' : er === 'controls' ? '回头克' : null;
+  // 生旺墓绝章觉子（R-SWMJ-03）：金化巳、金化丑、土化巳、巳化寅按本爻衰旺与卦中情形论
+  const swmj = swmjJudge(line, c.branch, chart, 'change');
+  const huitou = !swmj ? huitouRaw : swmj === '论生' ? (huitouRaw === '回头生' ? '回头生' : null) : swmj === '论克' || swmj === '不作长生' ? huitouRaw : null;
+  const stageZs = gatedStage(lifeStageOf(line.element, c.branch), swmj);
+  const muPo = stageZs === '墓' && tombBroken(c.branch, chart, [line.position]);
   return {
     to: { branch: c.branch, element: c.element, relative: c.relative },
-    huitou: er === 'generates' ? '回头生' : er === 'controls' ? '回头克' : null,
+    huitou,
+    huitouRaw,
+    swmj,
     elementRelation: er, // same: 比和；generatedBy: 化泄（本爻生变爻）；controlledBy: 本爻克变爻
     advance: advanceOrRetreat(line.branch, c.branch),
     clash: CLASH.get(line.branch) === c.branch, // 回头冲（爻反吟）
     combine: COMBINE.get(line.branch) === c.branch, // 化合（化扶）
     sameBranch: line.branch === c.branch, // 爻伏吟
-    lifeStage: lifeStageOf(line.element, c.branch), // 化长生 / 化帝旺 / 化墓 / 化绝
+    // 化长生 / 化帝旺 / 化墓 / 化绝（R-SWMJ-03 修正）；化墓而所化之墓被日月动爻冲克者不作墓（墓破如破网，R-SUIMU-01）
+    lifeStage: muPo ? null : stageZs,
+    lifeStageRaw: stageZs,
+    muPo,
     changedVoid: Boolean(cal.void),
     changedMonthBreak: cal.monthBreak,
     changedCalendar: cal,
@@ -167,7 +256,7 @@ function movingInteractions(chart) {
         same: er === 'same',
         clash: CLASH.get(m.branch) === t.branch,
         combine: COMBINE.get(m.branch) === t.branch,
-        tomb: lifeStageOf(t.element, m.branch) === '墓', // 入动墓
+        tomb: isMovingTomb(t, m, chart), // 入动墓（金墓于丑按 R-SWMJ-03）
         punish: punishes(m.branch, t.branch),
       };
       if (item.generates || item.controls || item.same || item.clash || item.combine || item.tomb || item.punish) out.push(item);
@@ -214,7 +303,7 @@ function threeHarmonies(chart, lineFacts) {
       const tombs = [];
       if (src.cal.dayTomb && !inSame) tombs.push('日墓');
       if (src.change && src.change.lifeStage === '墓' && !inSame) tombs.push('化墓');
-      if (!inSame && chart.lines.some((m) => m.moving && m.position !== src.position && m.branch === tb)) tombs.push('动墓');
+      if (!inSame && chart.lines.some((m) => m.branch === tb && isMovingTomb(src, m, chart))) tombs.push('动墓');
       if (tombs.length) imps.push({ kind: '入墓', detail: tombs.join('、'), release: { kind: '冲墓', branches: [CLASH.get(tb)] } });
     }
     return imps;

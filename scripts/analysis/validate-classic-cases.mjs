@@ -12,7 +12,7 @@ const order = JSON.parse(fs.readFileSync(path.join(LY, 'reports/interview-pass-c
 const rankOf = new Map(order.map((c) => [c.key, c.rank]));
 const verdictOf = new Map();
 const dir = path.join(LY, 'authoring/classes/interview-pass');
-for (const f of fs.readdirSync(dir)) {
+for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.json'))) {
   const d = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
   verdictOf.set(d.class_key, { id: d.script_id, verdict: d.judgment?.verdict });
 }
