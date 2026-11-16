@@ -185,6 +185,31 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (wLv === 0) V('随鬼入墓', `世${world.branch}无气而官鬼${MU[world.element]}为其墓（衰世随鬼入墓，谋署谋差，自投罗网）`, ['R-ZS-QM-03', 'R-YLB-MY-02', 'R-YONG-GUAN-08']);
     else N(`官鬼${MU[world.element]}为世之墓，而世有气（随官入墓，世旺者官升）`, ['R-YONG-GUAN-08']);
   }
+  // 官动化变：化回头克、化子孙、化真空、化墓绝（本爻不旺无帮扶）、化退（休囚）→ 否决；化回头生、化进神 → 加分
+  //（乡试章「官临空破墓绝及动而变凶变克……终遇红纱蔽目」；易林补遗「官化子孙，非降即调」；面圣章「官空及动化回头之克，皆主罢职休官」）
+  if (g && g.kind === 'line' && g.moving && g.change) {
+    const gc = g.change; const strongBase = gLv === 2;
+    const bad = gc.huitou === '回头克' ? '化回头克' : gc.to?.relative === '子孙' ? '化出子孙' : (gc.changedVoid && gc.changedCalendar?.void?.trueVoid) ? '化真空'
+      : (['墓', '绝'].includes(gc.lifeStage) && !strongBase) ? `化${gc.lifeStage}` : (gc.advance === '退神' && !strongBase) ? '化退神' : null;
+    if (bad) V('官化凶', `官${g.br}动而${bad}（官临空破墓绝及动而变凶变克；官化子孙，非降即调）`, ['R-QIUMING-08', 'R-YLB-SH-02', 'R-ZS-QM-20', 'R-HUA-01']);
+    else if (['墓', '绝'].includes(gc.lifeStage)) N(`官${g.br}动而化${gc.lifeStage}，但本爻旺相（化墓化绝，若动爻旺相，亦无大害）`, ['R-HUA-03']);
+    else if (gc.advance === '退神') N(`官${g.br}化退神而当令得相（当相得令，占近事岂可曰退）`, ['R-JINTUI-03']);
+    else if (gc.huitou === '回头生' || gc.advance === '进神') plus.push({ text: `官${g.br}动而${gc.huitou === '回头生' ? '化回头生' : '化进神'}（官化进气，又主重超美职）`, rules: ['R-YLB-SH-02', 'R-HUA-01'] });
+    if (gc.to?.relative === '妻财' && !bad) N(`官${g.br}化财（官化财平陛品级）`, ['R-YLB-SH-02']);
+  }
+  // 官静而空破（世与官星有一而逢空破者，不须指望；动者勿以此断）：月破者否决；旬空而有气者按 D-017 作待时
+  if (g && g.kind === 'line' && !g.moving) {
+    const gcal = fact(g.line).calendar;
+    if (gcal.monthBreak && gLv === 0) V('官破', `官${g.br}静而月破无气（世破官空休指望）`, ['R-QIUMING-15', 'R-YONG-GUAN-07']);
+    else if (gcal.monthBreak) minus.push({ text: `官${g.br}月破而有生扶（目下虽破，出月则不破）`, rules: ['R-QIUMING-15', 'R-YUEPO-02'] });
+    if (gcal.void && gLv === 0) V('官空', `官${g.br}静而旬空无气（世与官星有一而逢空破者，不须指望）`, ['R-QIUMING-15', 'R-YONG-GUAN-07']);
+    else if (gcal.void) { N(`官${g.br}旬空而有气：眼下不实，出空之时再看（D-017）`, ['R-KONG-02', 'R-QIUMING-15']); minus.push({ text: `官${g.br}旬空（待出空）`, rules: ['R-KONG-02'] }); }
+  }
+  // 世静而月破（世静而临旬空月破，皆主不得成名；动者勿以此断）
+  if (!world.moving && wc.monthBreak && !veto.some((v) => v.code === '世破被克')) {
+    if (wLv === 0) V('世破', `世${world.branch}静而月破无气（破空临世，终须白屋之人）`, ['R-ZS-QM-08', 'R-YONG-GUAN-07']);
+    else minus.push({ text: `世${world.branch}月破而有气（出月则不破，眼下吃亏）`, rules: ['R-ZS-QM-08', 'R-YUEPO-02'] });
+  }
   // 官伏何下（火珠林）；世下伏官迟（易隐·候选）
   if (g && g.kind === 'hidden') {
     const fly = g.line;
@@ -214,7 +239,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 子孙持世、官临应：父发者录取层可过，成行层难
   let finalLayer = null;
   const ziChiShi = world.relative === '子孙';
-  const layerOnly = new Set(['官临应', '官无力']);
+  const layerOnly = new Set(['官临应', '官无力', '官破', '官空']); // 官衰（无力、空破、临应不就世）而父发，亦论抡收（R-QIUMING-03）
   if (ziChiShi && wc.void) N('子孙持世而旬空：子孙未出空，暂不克官；若问两三日内之事，许之可得（世福空而亦升）', ['R-ZS-QM-13']);
   if (ziChiShi) {
     if (fFa.length) finalLayer = '子孙持世：录取一层可过（父发），成行一层难（子孙持世，休问功名）';
