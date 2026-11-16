@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.3.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.4.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -120,7 +120,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const wc = fact(world).calendar;
   // 「旺」须当令得相、或得月日之生、或临日月；日月只合不生者是有扶而非旺（W13 复盘：午月亥水得寅日合，原断「世官亥水弱」）
   // 生扶都算：月日生之或比扶（同五行）皆是（R-WANG-02「遇日月动爻变爻生扶」）；冲者不算（calendarRelation.supports 已除冲）
-  const wangCal = (cal, line = null) => Boolean(cal && (cal.seasonalStrong || cal.month.same || cal.month.supports || cal.day.same || cal.day.supports
+  // 月合：月将章「爻之衰弱者能生之合之、比之、拱之、扶之，衰而亦旺」（R-YUEJIAN-01）——月建合爻作旺，合中带克者除外（R-BZZ-HZK-01）；
+  // 日合只作扶（W13：午月亥水得寅日合，原断「世官亥水弱」）
+  const wangCal = (cal, line = null) => Boolean(cal && (cal.seasonalStrong || cal.month.same || cal.month.supports || (cal.month.combine && !cal.month.controls) || cal.day.same || cal.day.supports
     || ['长生', '帝旺'].includes(cal.day.lifeStage)
     || (line && L.some((o) => o !== line && (o.moving || anDong(o)) && gen(o.element, line.element) && effMover(o)))
     || (line && line.moving && fact(line).change?.huitou === '回头生')));

@@ -26,6 +26,16 @@ def prof(rank):
     return _prof[rank]
 
 
+_rank = None
+
+
+def rank_of(key):
+    global _rank
+    if _rank is None:
+        _rank = {c['key']: c['rank'] for c in json.load(open(f'{ROOT}/reports/interview-pass-class-order.json', encoding='utf-8'))['classes']}
+    return _rank[key]
+
+
 def exact_charts():
     # 已有逐盘精确稿的盘：查询时精确稿优先，不能再充当类别稿的样本盘
     import glob
@@ -115,7 +125,11 @@ def make(spec):
     from reader_voice import convert
     for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion']:
         spec[k] = convert(spec[k])
+    if 'key' in spec:  # eq-0.14：按类键定名次与稿号（引擎修订后类序会变，稿号随名次）
+        spec['rank'] = rank_of(spec['key'])
+        spec['id'] = f"IPC-{spec['rank']:04d}"
     p = prof(spec['rank'])
+    assert p['key'] == spec.get('key', p['key']), f"{spec['id']} 画像类键与稿件类键不符"
     sig = sig_of(p['key'])
     assert spec['verdict'] in V3_OK[sig[2:].split('|')[0]], f"{spec['id']} 结论 {spec['verdict']} 与第三版 {sig} 不符"
     v3basis = [{'code': c, 'text': t, 'rules': list(r)} for c, t, r in spec.get('v3', [])]
