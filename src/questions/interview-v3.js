@@ -236,7 +236,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 六爻乱动
   if (L.filter((l) => l.moving).length >= 4) {
     // 岁科考章野鹤：六爻乱动，父旺世旺，还考平等（R-ZS-QM-24）；面试官父并看，另须官有气
-    if (fWang && wWang && (kind === 'written' || gLv >= 1)) { N('四爻以上发动，但父旺世旺（六爻乱动，父旺世旺，还考平等）', ['R-ZS-QM-24']); minus.push({ text: '六爻乱动：虽父旺世旺可过，难许高等，事多翻腾', rules: ['R-ZS-QM-24', 'R-HJC-QM-04'] }); }
+    if (fWang && wWang && (kind === 'written' || gLv >= 1)) { N('四爻以上发动，但父旺世旺（六爻乱动，父旺世旺，还考平等；若逢乱动，先观用爻）', ['R-ZS-QM-24', 'R-DTJ-TX-01', 'R-DTJ-DD-01']); minus.push({ text: '六爻乱动：虽父旺世旺可过，难许高等，事多翻腾', rules: ['R-ZS-QM-24', 'R-HJC-QM-04'] }); }
     else V('乱动', '四爻以上发动（六爻竞发，功名恍惚以难成；父衰或世衰，孙山无疑）', ['R-QIUMING-10', 'R-HJC-QM-04', 'R-ZS-QM-24']);
   }
   // 局
@@ -339,7 +339,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const ziChiShi = wRel === '子孙';
   const layerOnly = new Set(['官临应', '官无力', '官破', '官空']); // 官衰（无力、空破、临应不就世）而父发，亦论抡收（R-QIUMING-03）
   if (ziChiShi && wc.void) N('子孙持世而旬空：子孙未出空，暂不克官；若问两三日内之事，许之可得（世福空而亦升）', ['R-ZS-QM-13']);
-  if (ziChiShi) {
+  const lingXing = g && g.kind === 'line' && g.br === day && gLv >= 1;
+  if (ziChiShi && lingXing) { N(`子孙持世，但官${g.br}临日辰（爻遇令星，物难我害；用官忌子孙持世，须是日辰旺相透出用爻，方不畏）`, ['R-DTJ-YQ-01', 'R-LINGXING-01']); minus.push({ text: '子孙持世：虽官临日辰不畏，亦费力中得', rules: ['R-DTJ-YQ-01'] }); }
+  else if (ziChiShi) {
     if (fFa.length) finalLayer = '子孙持世：录取一层可过（父发），成行一层难（子孙持世，休问功名）';
     else V('子孙持世', '子孙持世（子孙持世，休问功名）', ['R-QIUMING-10', 'R-YONG-GUAN-05']);
   }
@@ -382,7 +384,10 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 应动或兄动克世：同袍抢夺（易林补遗·选缺参房章）
   if ((resp && resp.moving && ke(resp.element, world.element)) || L.some((l) => l.relative === '兄弟' && l.moving && ke(l.element, world.element))) minus.push({ text: '应动或兄动来克世（必有同袍抢夺）', rules: ['R-YLB-SQ-01'] });
   // 间爻发动：世应中间两爻动，彼此之事阻隔（面试为我与单位两家之事）（R-QJF-06）
-  if (resp) { const lo = Math.min(world.position, resp.position); const hi = Math.max(world.position, resp.position); const jian = L.filter((o) => o.position > lo && o.position < hi && o.moving); if (jian.length) minus.push({ text: `间爻${jian.map((o) => o.relative + o.branch).join('、')}发动（事阻隔兮间发）`, rules: ['R-QJF-06'] }); }
+  if (resp) { const lo = Math.min(world.position, resp.position); const hi = Math.max(world.position, resp.position); const jian = L.filter((o) => o.position > lo && o.position < hi && o.moving);
+    const goodJ = jian.filter((o) => ['官鬼', '父母', '妻财'].includes(o.relative)); const badJ = jian.filter((o) => !goodJ.includes(o));
+    if (badJ.length) minus.push({ text: `间爻${badJ.map((o) => o.relative + o.branch).join('、')}发动（事阻隔兮间发；忌神发动莫相交）`, rules: ['R-QJF-06', 'R-DTJ-JY-01'] });
+    if (goodJ.length) N(`间爻${goodJ.map((o) => o.relative + o.branch).join('、')}发动，为官父或其元神（元神与用当中动，事到后来始得利）：有周折，慢慢方得`, ['R-DTJ-JY-01', 'R-QJF-06']); }
   // 玄武、朱雀、勾陈、螣蛇动而克世，皆以为凶（R-QJF-11）
   for (const o of L) if (o !== world && o.moving && ['玄武', '朱雀', '勾陈', '螣蛇'].includes(o.spirit) && ke(o.element, W.el) && o.relative !== '官鬼') minus.push({ text: `${o.spirit}临${o.relative}${o.branch}动而克世（动而克世者皆以为凶）`, rules: ['R-QJF-11'] });
   // 水要看源：功名求久远，官旺而原神妻财被伤克（R-QJF-12）
@@ -413,6 +418,20 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (wLv < 2 && gLv < 2 && g && g.kind === 'line' && (chong(month, g.br) || chong(day, g.br))) minus.push({ text: `世官不旺而官${g.br}被日月相冲（风云未际，冲上加冲）`, rules: ['R-ZS-QM-26'] });
   // 伏藏旺相也遭伤，赏罚不定：父伏而旺，却被飞神或日月冲克（R-ZS-QM-28）
   if (f && f.kind === 'hidden' && f.lv === 2) { const hc = fact(f.line).hidden.calendar; if (ke(f.line.element, f.el) || hc.month.clash || hc.day.clash || hc.month.controls || hc.day.controls) minus.push({ text: `父${f.br}伏藏虽旺而遭伤（伏藏旺相也遭伤，赏罚不定）`, rules: ['R-ZS-QM-28'] }); }
+  // 父化父文书不实，官化官事体翻腾（进神者不论，见卜筮正宗六亲变化歌）（R-DTJ-SH-05）
+  for (const x of [...G.shown, ...F.shown]) if (x.moving && x.change?.to?.relative === x.line.relative && x.change.advance !== '进神' && x.change.huitou !== '回头生')
+    minus.push({ text: x.line.relative === '父母' ? `父${x.br}化父${x.change.to.branch}而非进神（父化父，文书不实）` : `官${x.br}化官${x.change.to.branch}而非进神（官化官，事体翻腾；见贵求官事尽难）`, rules: ['R-DTJ-SH-05'] });
+  // 合处逢冲：六合之卦官、父逢日辰或动爻冲（贵人见许复不作成，文书将完而不就；冲开之月日方成）（R-DTJ-HC-01、R-QJF-16）
+  if (chart.primary.sixCombine) for (const x of [g, f]) {
+    if (!x || x.kind !== 'line') continue;
+    if (chong(day, x.br) || L.some((o) => o.moving && o !== x.line && chong(o.branch, x.br))) minus.push({ text: `六合之卦而${x === g ? '官' : '父'}${x.br}逢冲（合处逢冲：${x === g ? '贵人见许，复不作成' : '文书将完而不就'}）`, rules: ['R-DTJ-HC-01', 'R-QJF-16'] });
+  }
+  // 父绝处逢生：文书虽有阻节，终有贵人主张（R-DTJ-JC-01）
+  if (f && f.kind === 'line' && fact(f.line).calendar.dayExtinct && L.some((o) => o.moving && o !== f.line && gen(o.element, f.el))) plus.push({ text: `父${f.br}绝于日而有动爻生之（父母绝处逢生，文书虽有阻节，终有贵人主张）`, rules: ['R-DTJ-JC-01'] });
+  // 官暗动生合世：吉神暗动，合世生身，暗中得人作成（R-DTJ-AD-01）
+  if (g && g.kind === 'line' && !g.moving && anDong(g.line) && (gen(g.el, W.el) || he(g.br, W.br))) plus.push({ text: `官${g.br}暗动生合世（吉神暗动，合世生身；有无心之机会，暗中得人作成）`, rules: ['R-DTJ-AD-01'] });
+  // 官临日月必超迁（升选章）；月建临于用爻，求官必定迁高职（卜筮全书·通玄妙论）（R-YONG-GUAN-03、R-BQS-TX-01）
+  if (g && g.kind === 'line' && gLv >= 1 && (g.br === month || g.br === day)) plus.push({ text: `官${g.br}临${g.br === month ? '月建' : '日辰'}（官临日月必超迁；月建临于用爻，求官必定迁高职）`, rules: ['R-YONG-GUAN-03', 'R-BQS-TX-01'] });
   // 用爻重叠，喜墓库之收藏：官两现以上而世为官之墓库（R-BZZ-QJ-01）
   { const MUQ = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' }; if (G.shown.length >= 2 && guanEl && world.branch === MUQ[guanEl]) plus.push({ text: `官鬼${G.shown.length}现而世为其墓库（用爻重叠，喜墓库之收藏）`, rules: ['R-BZZ-QJ-01'] }); }
   // 鬼虽祸灾，伏犹无气：占名以官为用，官伏藏不现谓之卦中无气（R-BZZ-QJ-02）
@@ -421,7 +440,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 父母独发，坐休囚不可凭准（R-HZL-12）
   if (L.filter((o) => o.moving).length === 1 && f && f.kind === 'line' && f.moving && f.lv === 0) minus.push({ text: `父${f.br}独发而休囚（父母独发，若坐休囚，不可凭准）`, rules: ['R-HZL-12'] });
   // 求职宜官鬼出现，忌动发（火珠林；增删、正宗以官动生合世为必得，两说并记，只在官动而不生合世时减分）（R-HZL-15）
-  if (g && g.kind === 'line' && g.moving && !(gen(g.el, W.el) || he(g.br, W.br)) && wRel !== '官鬼') minus.push({ text: `官${g.br}发动而不生合世（求职请判，宜官鬼出现，忌动发）`, rules: ['R-HZL-15'] });
+  if (g && g.kind === 'line' && g.moving && !(gen(g.el, W.el) || he(g.br, W.br)) && wRel !== '官鬼') minus.push({ text: `官${g.br}发动而不生合世（求职请判，宜官鬼出现，忌动发；凡欲久长，用宜安静）`, rules: ['R-HZL-15', 'R-YY-ZX-01'] });
   // 乾兑坎宫，谋事不一（R-HZL-15）
   // 只作象：野鹤以卦名论吉凶为非（乾震之卦亦当官父两旺，R-ZS-QM-29），故宫名不计加减
   if (['乾', '兑', '坎'].includes(chart.primary.palace)) N(`${chart.primary.palace}宫之卦（火珠林：乾兑坎宫，谋事不一；只作象，不计加减）`, ['R-HZL-15', 'R-ZS-QM-29']);
@@ -435,9 +454,11 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (L.filter((o) => o.moving).length >= 4 && gWang && g?.moving && L.some((o) => o.relative === '妻财' && o.moving && fact(o).calendar.seasonalStrong)) N('乱动而财官俱旺俱动（火珠林：财官乘旺相俱动，公私两用皆可成；增删以乱动为难成，两说并记）', ['R-HZL-14']);
   if (resp && !proxy && (ke(resp.element, W.el))) minus.push({ text: `应${resp.branch}克世（世应相克则凶；应又不克，事体分明）`, rules: ['R-BZZ-SY-01', 'R-HZL-15', 'R-HZL-07'] });
   if (resp && !proxy && fact(resp).calendar.void && !fact(world).calendar.void) minus.push({ text: `应${resp.branch}旬空（应空他意难同）`, rules: ['R-BZZ-SY-01'] });
-  if (F.shown.some((x) => x.moving && !(x.change && (x.change.huitou === '回头克' || x.change.advance === '退神')))) plus.push({ text: '父母发动而不化凶（士人科举登金榜）', rules: ['R-BZZ-LQ-01'] });
-  if (G.shown.some((x) => x.moving && x.change?.to?.relative === '父母')) plus.push({ text: '官化父母（化父文书遂）', rules: ['R-BZZ-LQ-02'] });
-  if (F.shown.some((x) => x.moving && x.change?.to?.relative === '官鬼')) plus.push({ text: '父化官鬼（化官鬼迁举；易隐另谓父化鬼意思未奇，两说并记）', rules: ['R-BZZ-LQ-02', 'R-YY-XS-03'] });
+  // 六亲发动诀、六亲变化歌：京房断法，只在一爻独发时用（易隐·海底眼「若卦有两爻动，便不准矣」，R-YY-HDY-01）
+  const soleMove = L.filter((o) => o.moving).length === 1;
+  if (soleMove && F.shown.some((x) => x.moving && !(x.change && (x.change.huitou === '回头克' || x.change.advance === '退神')))) plus.push({ text: '父母独发而不化凶（士人科举登金榜）', rules: ['R-BZZ-LQ-01', 'R-YY-HDY-01'] });
+  if (soleMove && G.shown.some((x) => x.moving && x.change?.to?.relative === '父母')) plus.push({ text: '官独发化父母（化父文书遂；断易天机另谓官化文书官未顺，两说并记）', rules: ['R-BZZ-LQ-02', 'R-DTJ-BY-01', 'R-YY-HDY-01'] });
+  if (soleMove && F.shown.some((x) => x.moving && x.change?.to?.relative === '官鬼')) plus.push({ text: '父独发化官鬼（化官鬼迁举；易隐另谓父化鬼意思未奇，两说并记）', rules: ['R-BZZ-LQ-02', 'R-YY-XS-03', 'R-YY-HDY-01'] });
   if (resp && fact(world).calendar.void && fact(resp).calendar.void) minus.push({ text: '世应俱空（世空自己不真，应空他人不实，彼此皆无准实）', rules: ['R-QJF-02'] });
   const movers = L.filter((l) => l.moving);
   if (xiongMovers.length && !(movers.length === 1 && movers[0].relative === '兄弟')) minus.push({ text: `仇神兄弟发动（仇神发动，则原神被伤，用神无根，忌神倍力；兄动，事不实，难成）`, rules: ['R-BZZ-CS-01', 'R-HZL-15'] });
@@ -618,6 +639,7 @@ function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceS
         ...(moving.some((l) => l.position <= 2) ? ['初二爻动，速'] : []),
         ...(moving.some((l) => l.position >= 5) ? ['五六爻动，迟'] : []),
         ...(g && g.kind === 'line' && g.lv >= 1 && !fact(g.line).calendar.void ? ['官出现有气，可速成（若现有气，可速成，怕落空）'] : []),
+        ...(g && g.lv === 0 ? ['官休囚，祸福应迟（旺相则吉凶来速，休囚则祸福应迟）'] : g && g.lv === 2 ? ['官旺相，吉凶来速'] : []),
         ...(g && ['卯', '酉'].includes(g.br) ? ['官临卯酉（日月之门户），速'] : []),
         ...(g && ['辰', '戌'].includes(g.br) ? ['官临辰戌（天罗地网），迟'] : []),
         ...(g && g.br === chart.calendar.monthBranch ? ['官临月建，不出一月'] : []),
