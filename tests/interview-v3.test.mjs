@@ -82,7 +82,8 @@ test('代占：以所代六亲为本主；问事阶段写进结论；有年支�
   assert.match(text.items[0].text, /代占/);
   assert.match(text.items[0].text, /已经考过/);
   const self = interviewV3(chart, {});
-  assert.ok([...self.plus, ...self.minus].some((x) => /太岁/.test(x.text)), '有年支时应计太岁');
+  // 太岁不入卦发动者只作象（增删千金赋注「太岁生世要入卦，不在爻中，不能生世」），故查注
+  assert.ok([...self.plus, ...self.minus, ...self.notes].some((x) => /太岁/.test(x.text)), '有年支时应计太岁');
 });
 
 test('取用次序（飞伏神章）：父母不上卦时先取日月、再取化出、最后取伏神，断语照写', () => {
@@ -99,4 +100,13 @@ test('取用次序（飞伏神章）：父母不上卦时先取日月、再取�
     interviewV3Text(chart, {});
   }
   assert.ok(checked > 0);
+});
+
+test('易林补遗总断章两例：需之兑进学（凶中有吉，入泮之首）不判不过；坤之剥见官（子孙持世，吉处藏凶）判不过', () => {
+  // 巳月甲寅日 需之兑：子孙申持世发动而官寅临日辰（令星），文书巳伏于寅下长生；申与寅日、巳月成三刑，官旺无他伤只减分（三刑章「独犯三刑得验者少」）
+  const a = buildChart({ lineValues: [7, 7, 9, 6, 7, 8], calendar: { monthBranch: '巳', dayGanzhi: '甲寅' } });
+  assert.notEqual(interviewV3(a, { kind: 'written' }).verdict, 'fail');
+  // 丑月辛丑日 坤之剥：子孙酉持世发动化官（子化官兮防祸患），以后参官果受其累
+  const b = buildChart({ lineValues: [8, 8, 8, 8, 8, 6], calendar: { monthBranch: '丑', dayGanzhi: '辛丑' } });
+  assert.equal(interviewV3(b, {}).verdict, 'fail');
 });

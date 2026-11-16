@@ -8088,6 +8088,875 @@
         "date": "2026-11-15",
         "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
       }
+    },
+    {
+      "rule_id": "R-BQS-SJ-01",
+      "topic": "碎金赋·财动生鬼忌兄摇、财兴克父兄动无忧",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "财动生鬼，切忌兄摇；子动克鬼，财动能消。摇，动也。盖财动能生鬼，若是兄动克财，鬼不能生矣。若子孙发动，则能克鬼，若得财爻发动，则泄子孙之气，而生官鬼之精神矣。",
+        "财兴克父，兄动无忧；若然子动，父命难留。财动必克父。若得兄动克财，财不能克父也。若是子孙发动，生助妻财，其势转盛，其父必难救援也。"
+      ],
+      "modern_explanation": "动爻生用，若有克此动爻之爻同动（又不贪生他爻），生不成；财动克父，兄动克财则克不成，子孙又动则贪生，父难救。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-YC-01",
+      "topic": "元辰歌·元辰出现用伏也不妨",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "元辰出现志扬扬，用伏藏兮也不妨。须要生扶兼旺相，最嫌冲克及刑伤。"
+      ],
+      "modern_explanation": "元神出现旺相有生扶，用神伏藏也不妨。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-FC-01",
+      "topic": "用爻伏藏诀·平平不久长",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "用在旁宫号伏藏，若遭刑克定非祥，纵然生旺无刑克，作事平平不久长。"
+      ],
+      "modern_explanation": "用神伏藏遭刑克非祥；纵生旺无刑克，作事平平不久长。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-CX-01",
+      "topic": "用爻出现诀·出现纵值休囚亦不凶",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "用爻出现在亲宫，纵值休囚亦不凶，更得生扶兼旺相，管教作事永亨通。"
+      ],
+      "modern_explanation": "用爻出现纵值休囚亦不凶（与增删「官父皆不旺」不成异，不取）。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "not-adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-KW-01",
+      "topic": "用爻空亡诀·伏不论空、忌神逢空吉、真空",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "空在旁宫不断空，（即伏藏不论空亡也。）空如出现却为空；忌神最喜逢空吉，用与元辰不可空。春土夏金秋是木，三冬逢火是真空；（春之辰戌丑未，夏之申酉，秋之寅卯，冬之巳午，四季月之亥子，是为真空。）旬中占得真空卦，纵吉须知到底凶。"
+      ],
+      "modern_explanation": "伏藏不论空；忌神逢空吉，用与元辰不可空；休囚之空为真空。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-JS-01",
+      "topic": "忌神歌·忌神宜静",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "看卦先须看忌神，忌神宜静不宜兴；忌神急要逢冲克，若遇生扶用受刑。（忌爻若遇生扶，用爻便受刑克。）"
+      ],
+      "modern_explanation": "忌神宜静不宜动；忌神逢冲克为吉，遇生扶则用受刑。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-LS-01",
+      "topic": "六神歌断·青龙忌临金落空、朱雀交重文印旺",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "发动青龙万事通，进财进禄福无穷。临凶遇杀都无碍，惟忌临金与落空。",
+        "朱雀交重文印旺，杀神相并谩劳功。"
+      ],
+      "modern_explanation": "青龙发动进禄，惟忌临金爻、落空；朱雀动，文印旺。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判、象",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-RY-01",
+      "topic": "儒业科举章·父旺加朱雀、父逢六合、世忌三刑",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章·凡占儒业究诸身",
+      "original_text": [
+        "父爻旺相加朱雀，雄辩高言大有声。",
+        "父母最宜逢六合，世身切忌犯三刑，刑杀克身兼克世，陷身取辱误平生。"
+      ],
+      "modern_explanation": "父旺临朱雀，雄辩有声；父母宜逢六合；世切忌犯三刑，刑杀克世陷身取辱。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-QG-01",
+      "topic": "求官诗·驿马空亡徒费力、鬼临符印最佳",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章·凡占进职与升官",
+      "original_text": [
+        "鬼临身世得官真，卦爻旺相为欢欣。驿马空亡徒费力，卦遭胎没枉劳神。",
+        "唐符国印，求官必须用之。",
+        "鬼临符印最为佳，当作朝中资辅翼。"
+      ],
+      "modern_explanation": "官临世得官；驿马空亡徒费力；唐符国印求官必须用，官临符印最佳（卦遭胎没以卦名论，不取）。",
+      "applicable_conditions": "求官、谋差、升迁、在任（象意与判定）；求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-LQ-01",
+      "topic": "六亲变化歌·官化官为禄",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "官化官为禄，求官宜疾速；化财占病凶，化父文书逐；化子必伤官，化兄家不睦。"
+      ],
+      "modern_explanation": "卜筮全书：官化官为禄，求官宜疾速；卜筮正宗作「官化进神禄」，断易天机作「官化官事体翻腾」。三说并记，判定从正宗：进神加分，非进神减分。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "alternative",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-BQS-WN-01",
+      "topic": "断易勿泥神杀歌",
+      "source_book": "卜筮全书",
+      "source_chapter": "阐奥歌章",
+      "original_text": [
+        "易卦阴阳在变通，五行生克妙无穷；时人不辨阴阳理，神杀将来定吉凶。"
+      ],
+      "modern_explanation": "断卦以五行生克为主，不可专凭神杀。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "原则",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-01",
+      "topic": "总断·静难制动、休囚不克旺相",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "静受动伤，静难制动，柔遭刚克，柔岂伐刚。静者，少阳少阴；动者，老阳老阴。自古上能伐下，下不能伐上，故此动能克静，静不能克动也。又论柔者，休囚之象，刚者，旺相之爻。休囚为退度之神，旺相乃当权之职，故此旺相能克休囚，休囚不克旺相也。"
+      ],
+      "modern_explanation": "动能克静；旺相能克休囚，休囚不克旺相。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "原则",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-02",
+      "topic": "总断·一神独发势大、乱动不用京房变法",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "惟有一爻独发，其势愈大，却比所开诸爻大不同也，纵值休囚也能制旺，单不克日月二神，其余皆忌。如去生扶他象，其力更深。如值元神，福非浅受；如临忌象，祸不轻当，",
+        "凡乱动之爻变者理道周易，取动爻与变爻各配相生相克及长生十二之宫决其休咎，切莫用五章变法书推。"
+      ],
+      "modern_explanation": "一爻独发，纵值休囚也能制旺；临忌神祸不轻。乱动之卦取生克，不用京房五章变法。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-03",
+      "topic": "总断·用神旺相纵发忌神终无大害（异说）",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "人间占卜切莫乱言，一不可将卦名而断，又不可凭星煞而推，单看用爻，丝毫无惑。如婚姻卦内，男占妇，以财为主，女占夫，以鬼为先。儒学以文书为用，仕宦以官鬼为凭。俗言考试看官父，结婚推财鬼。凡用神只有一爻，岂云二象？凡占事，若得用神旺相，永远亨通，纵发忌神，终无大害。主象若值休囚，即时愁欢，如遇元神动助，远可为祥，若遭忌客来伤，必成凶咎。如或化出生扶，仍为吉断。"
+      ],
+      "modern_explanation": "不以卦名、星煞断；用神旺相纵发忌神终无大害（与增删求名「子摇财动名落孙山」异，求名从增删）；又谓「考试看官父」为俗言（面试官父并看从增删，D-023）。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "alternative",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-04",
+      "topic": "总断·忌神不动元神司权，独无用爻待值日",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "凡占事体，各有用爻，若卦内仇神忌神不动，元神已得司权，独无用爻者，未可便言不吉，待后用爻值日，无不佳矣！"
+      ],
+      "modern_explanation": "仇忌不动、元神得地而用神不现，未可便言不吉，待用爻值日。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判、期",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-05",
+      "topic": "总断·墓绝真伪",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "凡卦变为墓绝者，事事皆凶，其中有绝而不绝，墓而不墓者也。且如离卦为火变干卦，地福诀云：戌亥属干垣，故此戌亥二爻乃干卦之本也，离火墓于戌、绝于亥，凡若甲子旬占，戌亥皆空，此火亦非墓绝也，又如甲辰旬丁未日卜得兑之艮卦，兑者属金，丑寅乃艮卦之本，金绝在寅，寅空绝于何处？金墓在丑，丑得未日冲开，此乃非绝非墓也。"
+      ],
+      "modern_explanation": "化墓化绝，若所化之墓绝逢空、或被日辰冲开，非真墓绝。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-06",
+      "topic": "总断·世应空动",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "世空，则已心懒动；应空，则他意无成。世应俱空，彼我皆当退悔。世动则己变，应动则他更。世应皆动者，事纵见成，向后定然改换。若得世应相合，动中有绊住之功，虽变还须迟滞，目下无妨。"
+      ],
+      "modern_explanation": "世动己变，应动他更；世应皆动，事纵见成，向后改换；世应相合则绊住迟滞。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "象",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-07",
+      "topic": "总断·间爻动阻、中破无妨",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "间爻者，世应中之二爻也。近世之爻，恰似我家之友，近应之象，犹如彼室之亲。故此二爻皆不宜动，动则事多阻节，若得中破无妨。"
+      ],
+      "modern_explanation": "间爻动则事多阻节，间爻月破者无妨。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-08",
+      "topic": "总断·合处逢冲、月建不能冲散",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "空亡之爻若临旺相、或得日月扶持、或变为生，便为有气，凡事可成。六合之卦若被日辰。冲世或冲应、或冲用爻、或变为六冲，皆为合处逢冲之象，诸般遇此盖不为佳，惟独月建之爻不能冲散。"
+      ],
+      "modern_explanation": "六合之卦日辰冲世、冲应、冲用爻，或变六冲，为合处逢冲；临月建之爻不能冲散。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-09",
+      "topic": "总断·绝逢生起有数倍之功、救绝须四生",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "合处逢冲者，永不相合也。非惟不合，见冲反凶。凡爻遇绝者却，凡卦无此象也；若得动爻及变爻或日辰生起，便为绝处逢生，比在卦不绝之爻，其功愈大，用神遇之最吉，忌神遇之最凶。",
+        "死绝二爻各有分辨，死处还轻，绝中尤重，死象救而还易，绝爻生起尤难。救死不论阴阳，三象扶助回生。救绝须得寅申巳亥之爻，遇之有用。"
+      ],
+      "modern_explanation": "绝而有动爻、变爻、日辰生起为绝处逢生，用神遇之最吉；救绝须得寅申巳亥之爻。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-10",
+      "topic": "总断·用旺凶星难作祸、主衰吉曜那为佳",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "凡占卦，先推用象，次察元神，若临旺相或遇生扶便言吉断，纵有凶星恶煞，虽以为殃。象若值休囚又无生助者，岂得如心，有天喜青龙贵人吉曜同宫，终非为福。"
+      ],
+      "modern_explanation": "用神旺相，凶星恶煞难作祸；用神休囚无助，吉曜同宫亦非福。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "原则",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-11",
+      "topic": "总断·青龙忌冲空破伤",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "但不宜冲，冲则其神失半，又不宜空，空则永无嘉兆也。",
+        "青龙妻才子孙贵人、天喜、禄马、天医等象、咸作吉推，如临月破旬空或被动爻及变爻伤克，便不吉也。"
+      ],
+      "modern_explanation": "青龙动无不为祥，逢冲失半、空则无兆；临月破旬空或被动爻变爻伤克便不吉。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判、象",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-12",
+      "topic": "总断·子动官退、子空功名反吉",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "子孙为至吉之神，动则朝无奸佞，民有祯祥，多生儿女，广获财源。惟有占官职并问夫病，亦不宜动也。此爻又不宜空，空则儿孙受害，蚕畜虚浮，问功名及夫病者，遇空反吉。"
+      ],
+      "modern_explanation": "子孙动不宜占官职；子孙空，问功名反吉。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-13",
+      "topic": "总断·太岁占久远大事",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "太岁乃帝君之星，占久远大事者不可不用，如问目前小事不必论之。"
+      ],
+      "modern_explanation": "太岁占久远大事用，目前小事不必论。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "reference",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-14",
+      "topic": "总断·冲有衰旺",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "凡冲者有二：有日辰冲，有动爻冲。若日辰冲，不拘衰旺。动爻冲却辨三：衰旺相善能冲休囚，休囚不能冲旺相。又云空逢冲则实，静逢冲则动，动逢冲则散，惟日月二爻从动逢冲决不散也。自古旺相见冲则发。休囚见冲则散。"
+      ],
+      "modern_explanation": "日辰冲不拘衰旺；动爻冲须辨衰旺：旺相能冲休囚，休囚不能冲旺相。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "原则",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-15",
+      "topic": "总断·值日不受害（野鹤不取）",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "凡值日之爻纵变冲克墓绝，亦不受其害也。虽遇月建来伤，当日无咎过后成凶。月乃万卜之提纲，能管往来之祸福，用象如临月内，永远亨通，如值忌神，始终坎坷。纵被日辰冲克，不过当日为殃，改日无咎。"
+      ],
+      "modern_explanation": "值日之爻纵变冲克墓绝不受害（野鹤日辰章例：世临日辰化回头克，卒于亥月。不取）。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "not-adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-16",
+      "topic": "总断·月建不落旬空（野鹤不取）",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "惟月建之爻，永不落旬中之空也。且如四月甲午旬占者，巳爻不空也。"
+      ],
+      "modern_explanation": "月建之爻不落旬空（野鹤月将章「予试不然，在旬内者毕竟为空」。不取）。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "not-adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-ZD-17",
+      "topic": "总断·月破永不能生扶（李我平驳）",
+      "source_book": "易林补遗",
+      "source_chapter": "易林总断章 第一",
+      "original_text": [
+        "卦内空亡及月破之爻，永不能生扶他象，又不克制他人，冲合亦然。空亡又不受他爻生克。"
+      ],
+      "modern_explanation": "空亡、月破之爻不能生扶他爻（增删艮之观例李我平驳之：月破之爻值月建填实、值太岁当权仍能用事。从增删：动而月破能伤能生）。",
+      "applicable_conditions": "全部",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "not-adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-YJ-05",
+      "topic": "应举·官值世爻财静旺、父临月建定帮粮",
+      "source_book": "易林补遗",
+      "source_chapter": "应举科名章 第二十八",
+      "original_text": [
+        "鬼兴助印名书榜，财动伤文空返乡，官值世爻财静旺，父临月建定帮粮。",
+        "凡占懦业，父作文章鬼兴生父，似时雨滋苗，财动伤文如秋霜杀草。若得官爻持世、或值太岁日辰财又旺而不动，卦无兄弟交重，父母再居旺地，考占优等帮补驰名。"
+      ],
+      "modern_explanation": "官动生父名书榜；官持世、财静旺、父临月建，考占优等。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-MW-02",
+      "topic": "谋望·世应冲破绝空难成、日辰合世合应允成",
+      "source_book": "易林补遗",
+      "source_chapter": "谋望成事章 第三十九",
+      "original_text": [
+        "凡成事体一应谋为，皆取世应为主，或世或应，如临绝地或犯旬空月破日冲，皆难成就。",
+        "世应二爻自相会合，或得日辰合世合应，纵若心中不欲，也得允成。"
+      ],
+      "modern_explanation": "世或应临绝、旬空、月破、日冲，皆难成就；日辰合世合应，纵心中不欲也得允成。",
+      "applicable_conditions": "谋望、求职",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-QY-01",
+      "topic": "趋谒·应克世相逢得意、应象交重人不遇（异说）",
+      "source_book": "易林补遗",
+      "source_chapter": "趋谒贵人章 第三十八",
+      "original_text": [
+        "复看世为主，应为实。又以内为主，外为实。如遇内外世应相生、或比和、或应克世、外克内，皆主相逢得意也。惟独世克应与内克外，主反触宾，纵然相见亦不相投。",
+        "若还应象交重，谓人不遇。"
+      ],
+      "modern_explanation": "谒贵：世应相生比和或应克世皆相逢得意，惟世克应反触宾；应动谓人不遇（与火珠林求职「应又不克，事体分明」异，求职从火珠林）。",
+      "applicable_conditions": "谒贵",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "alternative",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-WS-01",
+      "topic": "文书消息·父冲破化绝化空不见信",
+      "source_book": "易林补遗",
+      "source_chapter": "文书消息章 第三十七",
+      "original_text": [
+        "父母若被日月冲破、或化绝化空，此契不能见信于人。父母若遇生扶、或变为有气，此书纵假而可为真也。"
+      ],
+      "modern_explanation": "父被日月冲破、或化绝化空，文书不见信；父遇生扶、变为有气，纵假可真。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "判",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
+    },
+    {
+      "rule_id": "R-YLB-SQ-03",
+      "topic": "选缺·鬼克世身不须畏忌（异说）",
+      "source_book": "易林补遗",
+      "source_chapter": "选缺参房章 第三十二",
+      "original_text": [
+        "论选缺者，亦要官兴，最嫌子动，鬼克世身，不须畏忌。但遇随官入墓，恐罹灾患。"
+      ],
+      "modern_explanation": "选缺官兴、忌子动，鬼克世不须畏忌（与 D-025 面试「官克世不禄」异，不取）。",
+      "applicable_conditions": "求官、谋差、升迁、在任（象意与判定）",
+      "exceptions": "",
+      "dispute_ids": [
+        "D-023"
+      ],
+      "adoption": "not-adopted",
+      "engine_refs": [],
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "usage": "参看",
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立；用户 2026-11-15「所有古籍……都要认真学习，你不能漏任何东西」「越多的古籍原文作依据肯定越好」）",
+        "round": "classics-sweep-2026-11-16",
+        "date": "2026-11-16",
+        "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
+      }
     }
   ],
   "disputes": [
