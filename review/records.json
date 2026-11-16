@@ -863873,6 +863873,100 @@
         "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
         "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
       }
+    },
+    {
+      "record_id": "RV-38740",
+      "script_id": "IP-0005",
+      "stage": "author-full-text-review",
+      "status": "completed",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-16",
+      "content_hash": "ee9bb8bb67bd58f784ae8aaa348415d9f861faf97aec909f14d1e72396b4ca9e",
+      "report": "reports/review-round12/IP-0005-single-claude.json"
+    },
+    {
+      "record_id": "RV-38741",
+      "script_id": "IP-0005",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-16",
+      "content_hash": "ee9bb8bb67bd58f784ae8aaa348415d9f861faf97aec909f14d1e72396b4ca9e",
+      "report": "reports/review-round12/IP-0005-single-claude.json",
+      "findings": [
+        "月破之引文初稿误标月将章，已改为月破章"
+      ]
+    },
+    {
+      "record_id": "RV-38742",
+      "script_id": "IP-0005",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-16",
+      "content_hash": "ee9bb8bb67bd58f784ae8aaa348415d9f861faf97aec909f14d1e72396b4ca9e",
+      "report": "reports/review-round12/IP-0005-single-claude.json"
+    },
+    {
+      "record_id": "RV-38743",
+      "script_id": "IP-0005",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-16",
+      "content_hash": "ee9bb8bb67bd58f784ae8aaa348415d9f861faf97aec909f14d1e72396b4ca9e",
+      "report": "reports/review-round12/IP-0005-single-claude.json"
+    },
+    {
+      "record_id": "RV-38744",
+      "script_id": "IP-0005",
+      "stage": "ai-editor",
+      "status": "DONE",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-16",
+      "content_hash": "ee9bb8bb67bd58f784ae8aaa348415d9f861faf97aec909f14d1e72396b4ca9e",
+      "report": "reports/review-round12/IP-0005-single-claude.json"
+    },
+    {
+      "record_id": "RV-38745",
+      "script_id": "IP-0005",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-16",
+      "content_hash": "ee9bb8bb67bd58f784ae8aaa348415d9f861faf97aec909f14d1e72396b4ca9e",
+      "report": "reports/review-round12/IP-0005-single-claude.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 按引擎第三版逐项复算，非独立代理，如实注明",
+        "反向质疑审核完成": "同一 Claude 逐条反驳，非独立代理",
+        "全部相关回归测试通过": "node --test tests/：86/86 通过"
+      },
+      "findings": []
     }
   ]
 }

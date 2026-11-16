@@ -13,6 +13,9 @@ import { dayOffset } from '../src/flows.js';
 import { factsDigest, RELEASE_SCHEMA } from '../src/readings.js';
 import { EQUIVALENCE_VERSION } from '../src/equivalence.js';
 import { loadClassDrafts, checkClassDraft } from './lib/class-drafts.mjs';
+import { interviewV3 } from '../src/questions/interview-v3.js';
+// 面试问第三版（D-023，eq-0.14）结论与作者稿结论类别的对应
+const V3_OK = { pass: ['likely-pass', 'pass-but-slow'], wait: ['pass-but-slow', 'wait-then-likely'], fail: ['unlikely'] };
 
 const CONTENT_VERSION = 'liuyao-readings-0.1.0';
 const register = JSON.parse(readFileSync(join(ROOT, 'rules/register.json'), 'utf8'));
@@ -122,6 +125,11 @@ function check(src, chart, evidence) {
     if (v.also && !v.also.some((w) => `${r.brief}${r.conclusion}`.includes(w))) errors.push(`C11 简断/总断未体现「${v.also.join('/')}」`);
   }
   if (/吉凶参半|事有变化/.test(r.title)) errors.push('C11 标题过于笼统');
+  // C11b 逐盘稿结论须与引擎第三版一致（面试问）
+  if (chart && src.question_id === 'career.interview.interview-pass') {
+    const v3 = interviewV3(chart, { analysis: analyzeChart(chart), evidence });
+    if (!V3_OK[v3.verdict].includes(j.verdict)) errors.push(`C11b 结论「${j.verdict}」与引擎第三版「${v3.verdict}」不符（${[...v3.veto.map((x) => x.code), ...v3.pass.map((x) => x.code)].join('、')}）`);
+  }
   // C12 古籍依据
   for (const c of r.classical_sources || []) {
     if (!ruleIds.has(c.rule_id)) errors.push(`C12 古籍依据引用未登记规则 ${c.rule_id}`);
@@ -178,6 +186,8 @@ function check(src, chart, evidence) {
     }
     const line = chart.lines[dcs.position - 1];
     const roleLine = [evidence.yongshen.line, ...evidence.yuan, ...evidence.ji, evidence.world].find((x) => x && x.position === dcs.position);
+    // 面试问第三版官父并看（D-023）：父母为表现一层之用神，可作主要依据
+    if (!roleLine && src.question_id === 'career.interview.interview-pass' && line.relative === '父母' && dcs.role === 'fu') continue;
     if (!roleLine) { errors.push(`C22 第${dcs.position}爻不是用神、原神、忌神或世爻`); continue; }
     const st = roleLine.state;
     if (dcs.effect === 'adverse' && line.relative === evidence.roles.ji && !(st.state === 'EFFECTIVE' && st.acts !== '静（不主动作用）')) errors.push(`C22 忌神${line.label}${line.branch}当前「${st.state}/${st.acts}」，不得作为主要不利依据`);
