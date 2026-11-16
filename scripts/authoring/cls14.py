@@ -29,6 +29,7 @@ V3R = {
     '官父两旺': ('R-QIUMING-15', 'R-QIUMING-14', 'R-HJC-QM-01'),
     '父发': ('R-QIUMING-03',),
     '应荐': ('R-QIUMING-09', 'R-HJC-QM-13'),
+    '兄局得意': ('R-SANHE-06',),
 }
 
 

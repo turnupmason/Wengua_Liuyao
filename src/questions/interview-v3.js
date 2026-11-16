@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.5.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.6.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -251,7 +251,10 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 兄弟持世，官鬼必克世：乡试章野鹤明言兄弟持世「若临日月或旺相，再得官父两旺、或官动生父、父动生世，必添科名」，
   // 是知兄弟本位之受官克不作不禄；岁科考章「世爻受克而有扶，亦业姑许」。合此条件者官克世只作象（2026-11-16 类别稿核对时发现此例外被官克世否决架空）
   const xiongOk0 = wRel === '兄弟' && (fFa.length > 0 || (wWang && ((gWang && fWang) || G.shown.some((x) => x.moving && f && gen(x.el, f.el)))));
-  if (g && wRel !== '官鬼' && ke(g.el, W.el) && tanSheng) N(`官${g.br}克世，但官生动父、父生世，贪生忘克`, ['R-YUANJI-06', 'R-YONG-GUAN-08']);
+  // 贪合忘克：官与世同入已成之三合局（千金赋「贪生贪合，刑冲克害皆忘」，R-QJF-03；六合章「一爻动而合局」，R-SANHE-01）
+  const tanHe = g && g.kind === 'line' && harm.find((h) => h.status === 'formed' && h.world === '世在局' && h.branches.includes(g.br) && h.branches.includes(W.br));
+  if (g && wRel !== '官鬼' && ke(g.el, W.el) && tanHe) N(`官${g.br}与世同入${tanHe.branches}${tanHe.relative}局，贪合忘克（贪生贪合，刑冲克害皆忘）`, ['R-QJF-03', 'R-SANHE-01']);
+  else if (g && wRel !== '官鬼' && ke(g.el, W.el) && tanSheng) N(`官${g.br}克世，但官生动父、父生世，贪生忘克`, ['R-YUANJI-06', 'R-YONG-GUAN-08']);
   else if (g && ke(g.el, W.el) && xiongOk0) N(`官${g.br}克兄弟之世，但父母动来生合世、或世旺而官父得地（兄弟持世…必添科名；世爻受克而有扶，亦业姑许）`, ['R-QIUMING-12', 'R-QIUMING-06', 'R-ZS-QM-21']);
   else if (g && wRel !== '官鬼' && ke(g.el, W.el)) V('官克世', `官${g.br}克世（官爻克世及空破者不禄；官宜生身，不宜克世）`, ['R-ZS-QM-02', 'R-QIUMING-06', 'R-ZS-QM-06', 'R-QIUMING-15']);
   // 官临应而不就世；官或官局生合应而不就世
@@ -277,6 +280,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (h.status !== 'formed') continue;
     if (h.relative === '子孙' && !(riyueGuan && special.riyueYongToWorld?.length) && !calGuanToWorld.length) V('子孙局', '子孙局成（合成子孙局者乃伤煞之神）', ['R-SANHE-05', 'R-SANHE-06']);
     if (h.relative === '兄弟' && h.world === '世在局' && !(h.condition?.calendarSupportsHarmony && gLv === 2)) V('兄局', '兄局成而世在局，竞争者众', ['R-SANHE-06', 'R-HJC-QM-03']);
+    // 乡试章「倘若合成兄局，得遇日月生扶，官星亦旺者，亦许得意」（R-SANHE-06）：此前只用来免否决，未作能过
+    if (h.relative === '兄弟' && h.world === '世在局' && h.condition?.calendarSupportsHarmony && gWang) P('兄局得意', `${h.branches}兄局成而世在局，得日月生扶，官星亦旺（倘若合成兄局，得遇日月生扶，官星亦旺者，亦许得意）`, ['R-SANHE-06']);
   }
   // 随官入墓：官鬼为世之墓库（世旺者官升，世衰者祸至；衰世随鬼入墓，自投罗网；身世随官入墓，祸不可当）
   const MU = { 水: '辰', 土: '辰', 木: '未', 火: '戌', 金: '丑' };
@@ -769,7 +774,7 @@ export function interviewV3Signature(v3) {
 
 // 否决、能过的主次（定类只取最主要的一条；其余由逐卦断语逐条写出）
 const VETO_ORDER = ['无官', '官无力', '子孙持世', '子动克官', '官克世', '官临应', '父无力', '父化凶', '财动克父', '世破被克', '世空无气', '日月冲克世', '兄持世', '子孙局', '兄局', '乱动'];
-const PASS_ORDER = ['旺官持世', '日月官生合世', '官动生合世', '旺官生合世', '官父两旺', '旺父就世', '父发', '官父局', '应荐'];
+const PASS_ORDER = ['旺官持世', '日月官生合世', '官动生合世', '旺官生合世', '官父两旺', '旺父就世', '父发', '官父局', '兄局得意', '应荐'];
 /** eq-0.14 粗签名：结论 + 主依据 + 是否分层 */
 export function interviewV3MainSignature(v3) {
   const first = (xs, order) => order.find((c) => xs.some((x) => x.code === c)) || '';
