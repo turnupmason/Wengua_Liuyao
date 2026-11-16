@@ -4,7 +4,7 @@ import { analyzeChart } from '../analysis.js';
 import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.6.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.7.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -266,7 +266,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 兄弟持世
   const xiongOk = xiongOk0;
   if (wRel === '兄弟' && xiongOk) N('兄弟持世，但父母动来生合世，或世旺而官父得地（兄弟持世，若临日月或旺相，再得官父两旺、或官动生父、父动生世，必添科名；兄弟临身，喜父母化吉而拱合）', ['R-ZS-QM-21', 'R-ZS-QM-22']);
-  else if (wRel === '兄弟' && !(g && g.acts) && !(F.shown.some((x) => x.moving) && G.shown.some((x) => x.moving))) {
+  // 原文「卦中官星不动，但遇兄弟持世」（R-YUANLI-02）：看卦中任一官星，不只所取之官（2026-11-16 网上卦例 E13 断前查出：官两现，一静一动，原先只看所取之静官）
+  else if (wRel === '兄弟' && !G.shown.some((x) => x.acts) && !(F.shown.some((x) => x.moving) && G.shown.some((x) => x.moving))) {
     V('兄持世', '兄弟持世而官不动（子孙兄弟持世，谋署谋差自投罗网）', ['R-ZS-QM-03', 'R-QIUMING-12', 'R-YUANLI-02']);
   }
   // 六爻乱动
