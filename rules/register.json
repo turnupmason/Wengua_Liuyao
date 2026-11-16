@@ -252,7 +252,8 @@
       "adoption": "reference",
       "engine_refs": [],
       "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "version": "0.1.0",
+      "adoption_note": "2026-11-16 补记：纳甲装卦定义，排盘层 src/chart.js 实现（182 个书中卦盘逐爻一致），判定层不引"
     },
     {
       "rule_id": "R-NAJIA-03",
@@ -911,7 +912,8 @@
         "D-003"
       ],
       "review_status": "pending-professional-review",
-      "version": "0.1.0"
+      "version": "0.1.0",
+      "adoption_note": "2026-11-16 补记：野鹤两现应空破之验只用于应期（interview-v3-text 应期「官鬼两现……应期多应在实空实破之时」，引 R-LIANGXIAN-04），取用仍按古法五项（R-LIANGXIAN-01、03）"
     },
     {
       "rule_id": "R-LIANGXIAN-03",
@@ -2069,7 +2071,8 @@
         "round": "review-round9",
         "date": "2026-11-13",
         "note": "原文「凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐虽六合亦无益矣。」逐字见于增删卜易卷之三·乡试章第五十五 L2578（本地底本）。维基文库「增刪卜易」卷三鄕試章作「凡得六合卦﹐亦要官父世爻得地﹐有一失陷不遇生扶者﹐𨿽六合亦無益矣」，仅简繁之别与「𨿽」（虽）异体，文字一致；前一句为「凡得六沖卦﹐官父世爻俱旺者﹐不必再占﹐竟許必得」，可作对照。解释：「求名遇六合卦，仍须官星、父母、世爻有气；一爻失陷无生扶，六合也无益」，以「有气」释「得地」，与「失陷不遇生扶」相对，可以接受。适用条件：「求名求职遇六合卦」；例外：「原在乡试章（科举口径）；面试按谋职（D-010）参看」。口径与 D-010 一致，adoption=reference 也与「参看」相符。round7、round8 曾误标为升选候补章，本次登记已改正为乡试章。minor：source_chapter 宜写全为「乡试章第五十五」（见 required_fixes）。在 IP-0003 中的使用尚未落到正文，见 required_fixes。"
-      }
+      },
+      "adoption_note": "2026-11-16 补记：与 R-QIUMING-14 第三句同文（乡试章），引擎以 R-QIUMING-14 实现（六合卦而官父世得地方加分），本条作参照不重复引用"
     },
     {
       "rule_id": "R-CHONG-01",
@@ -7540,7 +7543,8 @@
         "round": "classics-sweep-2026-11-15",
         "date": "2026-11-15",
         "note": "原文由脚本按起止句从 sources/classics 原样截取，verify-rules 核对；释义与适用见 reports/qiuming-classics-catalog.md，未经专业审核。"
-      }
+      },
+      "adoption_note": "2026-11-16 补记：升选候补章「元神衰静曳气爻摇」专论升迁（父动泄官）；面试按考试诸章官父并看（D-023），父发为吉（官衰父发，亦论抡收），故不入面试判定"
     },
     {
       "rule_id": "R-ZS-QM-28",
@@ -9377,6 +9381,157 @@
         "round": "classics-ledger-2026-11-16",
         "date": "2026-11-16",
         "note": "古籍逐段台账（增删卜易 1471）：第三版原只认寅申巳亥之动爻救绝。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-ZS-QM-30",
+      "topic": "童试·世破身空兼墓绝",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·童试章第四十九",
+      "original_text": [
+        "世破身空兼墓绝﹐再奋芸窗。世爻空破墓绝﹐或被日月动爻冲克及动而变凶者﹐不能遂志。"
+      ],
+      "modern_explanation": "世爻空破墓绝，或被日月动爻冲克，或动而变凶者，不能遂志。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "墓按随鬼入墓章只验三墓，休囚无气始真（R-SUIMU-01）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 2499、2703）：第三版随官入墓之外未有世入墓之条。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-ZS-QM-31",
+      "topic": "乡试·世动化官化克",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·乡试章第五十五",
+      "original_text": [
+        "惟验于世爻﹐而世爻化鬼亦有两验。卦中父母旺相而世爻化出官星者﹐若不回头克世乃为变官﹐今科即中﹐岂等来科﹖若休囚被克﹐动而化出官星者﹐乃为化鬼﹐不惟不中﹐且见危灾。化出鬼爻克世者更凶。",
+        "身兴化旺化生﹐龙池变化。世爻旺相动而变出官星回头生合世爻者﹐不作变鬼﹐乃为变官。"
+      ],
+      "modern_explanation": "世爻动而化出官星：卦中父母旺相、或世爻旺相而官回头生合世者为变官，今科即中；世休囚被克而化官者为化鬼，不中且见危灾；化出鬼爻克世者更凶。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "旧注以卦身论身官化鬼，野鹤试之不验（2591 异说不取）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 2583、2593）：世化官原只取世旺一路。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-ZS-QM-32",
+      "topic": "升选·雨露承恩名中逢合",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+      "original_text": [
+        "雨露承恩﹐名中逢合。世与官星三合官局财局﹐或生世﹐或世在局中﹐或官星持世与日月动爻相合﹐得逢六合卦及卦动变六合者﹐皆是天赐之恩。"
+      ],
+      "modern_explanation": "世与官星三合官局财局而生世或世在局中、官星持世与日月动爻相合、得六合卦或卦动变六合者，皆是天赐之恩。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "合须用神得地（乡试章「凡得六合卦，亦要官父世爻得地」，R-QIUMING-14）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 2601）。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-ZS-QM-33",
+      "topic": "升选·晋升之卦屡验",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·升选候补章又第五十五",
+      "original_text": [
+        "古以晋升为吉﹐又云屯蹇为凶。晋卦升卦﹐果得屡验。亦要世爻得地﹐若失陷﹐亦不为吉。屯卦蹇卦﹐世爻旺者何妨。前篇亥月丙寅日占验﹐世爻旺者﹐竟超升﹐岂非屯卦耶﹖"
+      ],
+      "modern_explanation": "晋卦、升卦占升迁屡验，但世爻须得地；屯卦、蹇卦世旺者无妨（不以为凶）。",
+      "applicable_conditions": "求名、求职、面试、笔试、考选（D-023）",
+      "exceptions": "野鹤「古以蹇为不吉，予重用神」（2776）：不以屯蹇卦名断凶",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 2641）。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-ZS-QM-34",
+      "topic": "子嗣·代占六亲先看世爻",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之三·子嗣章第四十四",
+      "original_text": [
+        "代占六亲﹐不宜世爻化鬼。占父母﹑兄弟﹑妻妾﹑儿孙﹐先看世爻﹐虽占六亲﹐常有带出自身之凶者﹐世爻化鬼﹑化回头克﹑休囚化空破墓绝及随鬼入墓﹐日月同克﹐休问他人﹐且防自己。"
+      ],
+      "modern_explanation": "代占六亲时，问者自己的世爻若化鬼、化回头克、休囚而化空破墓绝、随鬼入墓或日月同克，休问他人，先防自己。",
+      "applicable_conditions": "代占（subjectRelative）",
+      "exceptions": "只作注，不改所代之人之判断",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 2443）。"
+      },
+      "dispute_ids": []
+    },
+    {
+      "adoption": "adopted",
+      "review_status": "ai-verified",
+      "version": "0.1.0",
+      "rule_id": "R-ZS-JB-01",
+      "topic": "疾病·忌摇元动仇兴",
+      "source_book": "增删卜易",
+      "source_chapter": "增删卜易卷之四·疾病章第九十九",
+      "original_text": [
+        "散破无援脱气﹐忌摇元动仇兴。用神临散遇破乃全无生扶﹐或脱气休囚者﹐皆无根蒂﹐少吉多凶﹐忌神动克用神﹐若有元神发动许之有救﹐只恐仇神又动﹐当许凶危﹐须于元神章内详之。"
+      ],
+      "modern_explanation": "忌神动克用神时，元神同动可救（接续相生）；若仇神（克元神者）又动，元神受伤，不能救，仍凶。",
+      "applicable_conditions": "全部（忌神、元神、仇神同动者）",
+      "exceptions": "克者贪生他动爻者不克（碎金赋，effMover）",
+      "engine_refs": [
+        "src/questions/interview-v3.js"
+      ],
+      "ai_verification": {
+        "by": "Claude（单 AI，非独立）",
+        "round": "classics-ledger-2026-11-16",
+        "date": "2026-11-16",
+        "note": "古籍逐段台账（增删卜易 3163）：第三版子孙与财同动免克未查兄弟同动克财。"
       },
       "dispute_ids": []
     }
