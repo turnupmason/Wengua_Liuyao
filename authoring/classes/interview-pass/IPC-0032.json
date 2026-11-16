@@ -1,0 +1,306 @@
+{
+  "script_id": "IPC-0032",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.14.0",
+  "class_key": "用明现[EFFECTIVE]静;世世安;官生合世;日月官生合世;原无力;忌无力;六冲;三版pass|过官父两旺+日月官生合世+旺官生合世+旺父就世",
+  "class_rank": 32,
+  "class_share_of_casts": 0.000236,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "癸卯"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "辰",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "丙寅"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "庚辰"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "午",
+      "day_ganzhi": "戊寅"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "丁卯"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "壬午"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "寅",
+      "day_ganzhi": "庚午"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        7,
+        7,
+        8,
+        8
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "庚午"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "巳",
+      "day_ganzhi": "癸酉"
+    }
+  ],
+  "scenario_tags": [
+    "六冲卦而官父世俱旺",
+    "官旺生合世",
+    "旺父持世",
+    "日月作官"
+  ],
+  "judgment": {
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
+    "deciding_evidence": [
+      "六冲卦而官父世俱旺（R-QIUMING-14）",
+      "官旺生合世、日月作官（R-ZS-QM-02、R-YONG-GUAN-03）"
+    ],
+    "supporting": [],
+    "adverse": [
+      "原神被伤无力（R-QJF-12）",
+      "应冲世"
+    ],
+    "conflicts_resolved": [
+      "六冲卦一般为减分，官父世俱旺者不论（R-QIUMING-14）"
+    ],
+    "rule_ids": [
+      "R-HJC-QM-01",
+      "R-QIUMING-03",
+      "R-QIUMING-08",
+      "R-QIUMING-14",
+      "R-QIUMING-15",
+      "R-QJF-12",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-03",
+      "R-ZS-QM-01",
+      "R-ZS-QM-02",
+      "R-ZS-QM-15"
+    ],
+    "decisive": [
+      {
+        "role": "v3",
+        "effect": "support",
+        "basis": "旺官生合世"
+      },
+      {
+        "role": "v3",
+        "effect": "support",
+        "basis": "旺父就世"
+      }
+    ],
+    "v3_basis": [
+      {
+        "code": "官父两旺",
+        "text": "这一卦官鬼旺，父母旺而持世",
+        "rules": [
+          "R-QIUMING-15",
+          "R-QIUMING-14",
+          "R-HJC-QM-01"
+        ]
+      },
+      {
+        "code": "日月官生合世",
+        "text": "日月本身又是官星来生合你",
+        "rules": [
+          "R-YONG-GUAN-03",
+          "R-ZS-QM-01"
+        ]
+      },
+      {
+        "code": "旺官生合世",
+        "text": "官星旺而生合你的世爻",
+        "rules": [
+          "R-QIUMING-08",
+          "R-ZS-QM-02"
+        ]
+      },
+      {
+        "code": "旺父就世",
+        "text": "你的世爻是旺父",
+        "rules": [
+          "R-QIUMING-03",
+          "R-ZS-QM-15"
+        ]
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "倾向通过：六冲卦而官、父、世三层俱旺，正合「竟许必得」",
+    "brief": "这一卦倾向通过。官鬼旺而来生合你的世爻，日辰或月建本身也是官星；你世上是旺相的父母；官、父、世三层俱旺。乡试章说六冲卦「官父世爻俱旺者﹐不必再占﹐竟许必得」，这一卦正是。",
+    "opening": "六冲卦一般主事散、主变，求名多不取。但乡试章专门讲了例外：「凡得六冲卦﹐官父世爻俱旺者﹐不必再占﹐竟许必得」。这一卦官鬼旺，父母旺而持世，世即父母也旺，三层俱旺，六冲反而是来得快、定得快的意思。",
+    "process": "官星旺而生合你的世爻，日月本身又是官星来生合你，内外两重官星同时就你；你的世爻是旺父，「父爻持世，得日月动爻相生相合者，亦要官星有气，始许成名」，官星有气这一条也齐了。\n生官的妻财被伤无力，录取以后的长久与待遇要打折扣。应爻冲世，对方态度上有些不顺，或要求偏严，都是减分，不改三层俱旺的大局。",
+    "ending": "六冲而官父世俱旺，官又来就你，倾向通过；财源受伤只关乎长久。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被冲之日前后，消息来得快；六冲主速，具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果或通知到来",
+          "target_symbol": "官鬼（旺而生合世）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "倾向通过。三层俱旺，官星又主动来就你，结果可期、来得也快；入选以后的待遇偏弱，到时再谈。",
+    "classical_sources": [
+      {
+        "rule_id": "R-QIUMING-14",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "凡得六冲卦﹐官父世爻俱旺者﹐不必再占﹐竟许必得",
+        "applies_because": "本类六冲而官父世俱旺"
+      },
+      {
+        "rule_id": "R-ZS-QM-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·投麾效用入武从军章第六十",
+        "quote": "官来生合世爻者必收。官爻克世及空破者﹐不禄",
+        "applies_because": "本类官旺生合世"
+      },
+      {
+        "rule_id": "R-QIUMING-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·童试章第四十九",
+        "quote": "父爻持世﹐得日月动爻相生相合者﹐亦要官星有气﹐始许成名",
+        "applies_because": "本类父母持世而官有气"
+      },
+      {
+        "rule_id": "R-QJF-12",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+        "quote": "用神虽旺﹐元神若被伤克者﹐即如水无泉源﹐木无根蒂",
+        "applies_because": "本类原神妻财被伤无力"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "官星安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.14.0，写稿顺序第 32 类，占起卦概率 0.024%，全类 61 盘）：用神「明现[EFFECTIVE]静」；世爻「世安」；官星与世「生合世」；日月作官星生合世；原神妻财当前无力（INEFFECTIVE）；忌神子孙当前无力（INEFFECTIVE）；卦级「六冲」；第三版结论「倾向通过」；能过项「官父两旺、日月官生合世、旺官生合世、旺父就世」。全类一致：三版官层：官旺（line）(100%)；三版父层：父旺（line）(100%)；三版世层：世旺(100%)。类内各盘不同之处：月建六亲：官鬼(70%)、父母(30%)；用神月令：旺(70%)、休囚(30%)；用神生扶：临月建(18%)、临日(13%)、临月建、日帝旺、日扶(10%)、临日、月扶(10%)；应爻对世：与世比和、冲世(72%)、克世、冲世(28%)；三版加减：加2减2(26%)、加3减2(25%)、加3减3(10%)、加3减1(8%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-16",
+    "revision": 1,
+    "revision_note": "eq-0.14 初稿：依类别画像（全类统计、第三版逐项分布与 12 个分散样本盘）与 docs/18 第〇〇节官父并看"
+  }
+}
