@@ -142,6 +142,8 @@ def make(spec):
         for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion', 'timing_text']:
             if k in ov:
                 spec[k] = ov[k]
+        if ov.get('process_append'):  # 补写全类皆判到之条目（audit-class-coverage）
+            spec['process'] = spec['process'].rstrip() + ov['process_append']
         if ov.get('v3'):
             assert set(ov['v3']) <= {c for c, _, _ in spec['v3']}, f"{spec['key']} 复润稿 v3 码不在原稿"
             spec['v3'] = [(c, ov['v3'].get(c, t), r) for c, t, r in spec['v3']]

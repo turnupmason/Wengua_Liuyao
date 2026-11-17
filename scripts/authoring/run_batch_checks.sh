@@ -18,4 +18,7 @@ echo "$lx" | tail -1
 # 引擎逐字核对：所引规则存在、不引不采用之规则、引文与规则对应、已采用规则皆有着落
 ea=$(node scripts/analysis/audit-engine-rules.mjs 20000) || rc=1
 echo "$ea" | head -1
+# 覆盖核对：类稿写到全类每卦皆判到之条目；逐卦断语写到每卦判到之每一条
+python scripts/analysis/audit-class-coverage.py | tail -1 || rc=1
+node scripts/analysis/audit-v3-text-coverage.mjs 5000 | head -1
 exit $rc

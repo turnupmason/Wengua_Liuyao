@@ -2,7 +2,7 @@
 // 文字只用排盘事实与古籍规则组织；象意一律带「从卦象看」限定（C21）；规则编号只放在 rules 字段，不进正文（C06）。
 import { interviewV3 } from './interview-v3.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.2.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.2.1';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -235,7 +235,8 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // 判断依据：凡判定用到而上文没写到的，逐条补写（判定依据必须全部写进断语）
   const body = out.map((x) => x.text).join('');
-  const key = (t) => t.replace(/（.*?）/g, '').slice(0, 8);
+  // 带「——」转折的条目（如六冲变六合下被压下的否决「……——此只作『始则艰阻』之处」）整句比对：只比前 8 字会把转折吞掉（2026-11-16 覆盖核对查出）
+  const key = (t) => (t.includes('——') ? t.replace(/（.*?）/g, '') : t.replace(/（.*?）/g, '').slice(0, 8));
   for (const x of [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes]) {
     if (!body.includes(key(x.text))) out.push(sentence('判断依据', `${x.text}。`, x.rules));
   }
