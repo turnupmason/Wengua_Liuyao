@@ -1,0 +1,321 @@
+{
+  "script_id": "IPC-0007",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.14.0",
+  "class_key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+  "class_rank": 7,
+  "class_share_of_casts": 0.000426,
+  "sample_charts": [
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "庚午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "辛丑"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "甲午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "癸酉"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丁巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "戊午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丙午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "己巳"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "戊申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "丙申"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "甲午"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        8,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "丁巳"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼伏兄下而无力",
+    "兄弟持世",
+    "父母无气"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难",
+    "deciding_evidence": [
+      "兄持世（R-ZS-QM-03、R-QIUMING-12、R-YUANLI-02）",
+      "官无力（R-QIUMING-08、R-YONG-GUAN-07）",
+      "父无力（R-QIUMING-06、R-QIUMING-07）"
+    ],
+    "supporting": [],
+    "adverse": [
+      "官星克你的世爻，好在世爻有扶，「世爻受克而有扶，亦业姑许」，只算一分压力",
+      "官伏在兄弟之下，「用鬼伏兄，同类欺凌」，竞争者压在官星上面",
+      "官鬼不上卦而伏，古人说「伏藏有气，只利暂时」，即使成了也难长久"
+    ],
+    "conflicts_resolved": [],
+    "rule_ids": [
+      "R-FUSHEN-03",
+      "R-QIUMING-03",
+      "R-QIUMING-06",
+      "R-QIUMING-07",
+      "R-QIUMING-08",
+      "R-QIUMING-12",
+      "R-QIUMING-14",
+      "R-QIUMING-15",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-07",
+      "R-YUANLI-02",
+      "R-ZS-QM-03"
+    ],
+    "decisive": [
+      {
+        "role": "v3",
+        "effect": "adverse",
+        "basis": "官无力"
+      }
+    ],
+    "v3_basis": [
+      {
+        "code": "官无力",
+        "text": "官星伏而无力，录取之神没有着落",
+        "rules": [
+          "R-QIUMING-08",
+          "R-YONG-GUAN-07"
+        ]
+      },
+      {
+        "code": "兄持世",
+        "text": "这一卦兄弟持世而官不动",
+        "rules": [
+          "R-ZS-QM-03",
+          "R-QIUMING-12",
+          "R-YUANLI-02"
+        ]
+      },
+      {
+        "code": "父无力",
+        "text": "文书父母上了卦，却休囚无气",
+        "rules": [
+          "R-QIUMING-06",
+          "R-QIUMING-07"
+        ]
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难：官星伏在兄弟之下出不来，你世上又是兄弟",
+    "brief": "官鬼不上卦，伏在兄弟之下，又逢当月子孙当令，透不出来，这一轮偏难。你的世爻正是兄弟，官星不动，争的人就压在你这一爻上；文书父母也休囚无气，录取、表现两层都缺。",
+    "opening": "面试要看两样：官鬼定能否被录取，父母定你的表现与文书。这一卦六爻里找不到官鬼，它伏在兄弟爻下面；起卦的月份又是克官的子孙当令，伏神被月令压住，无气可出。官星伏而无力，录取之神没有着落。\n你的世爻是兄弟。兄弟与官鬼本是相克的一对，官若出来，是来克你的世；好在你的世爻另有扶持，这一层只算压力，不算致命。",
+    "process": "真正卡住的是另一面。署印谋差章说「子孙兄弟持世﹐谋署谋差﹐自投罗网」，援例章也说「卦中官星不动﹐但遇兄弟持世……百无一成」。这一卦兄弟持世而官不动，又偏偏是官伏兄下，古人谓之「用鬼伏兄，同类欺凌」：争名之神既坐在你身上，又压在官星头上。\n文书父母上了卦，却休囚无气，表现一层也立不起来。生官的妻财、克官的子孙在卦中都静而旺相，按兵不动，没有谁把伏着的官引出来。退一步说，就算官星日后透出，「伏藏有气，只利暂时」，也难长久。",
+    "ending": "录取一层，官伏兄下而出不来；表现一层，父母无气；你自己这一爻，又是兄弟当身、官星不动。三处各自都够判难，合在一起，这一轮偏难。",
+    "timing": {
+      "text": "官星伏而不现，按「静而逢值逢冲」：伏着的官星值日，或日辰冲去其上飞神之日前后，事情会有个说法；从卦象看这一轮偏难，具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果落定",
+          "target_symbol": "伏藏之官鬼",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "偏难。官星伏着出不来，世上又是争名的兄弟，文书也弱，眼下几乎找不到借力之处。准备可以照做，心思不妨同时放在别的机会上。",
+    "classical_sources": [
+      {
+        "rule_id": "R-QIUMING-15",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·武试章第五十九亦可以与文试看",
+        "quote": "文试者﹐官父而重",
+        "applies_because": "面试一事，官与父母并看"
+      },
+      {
+        "rule_id": "R-QIUMING-06",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·岁科考章第五十",
+        "quote": "父宜旺相﹐最忌休囚﹔官宜生身﹐不宜克世",
+        "applies_because": "官宜生身，不宜克世"
+      },
+      {
+        "rule_id": "R-ZS-QM-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·署印谋差章第六十一",
+        "quote": "子孙兄弟持世﹐谋署谋差﹐自投罗网",
+        "applies_because": "本类兄弟持世而官不动"
+      },
+      {
+        "rule_id": "R-YUANLI-02",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·援例章第五十八",
+        "quote": "卦中官星不动﹐但遇兄弟持世﹑兄父发动﹑及财爻持世化兄弟﹐百无一成",
+        "applies_because": "官不动而兄持世，百无一成"
+      },
+      {
+        "rule_id": "R-QIUMING-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·童试章第四十九",
+        "quote": "官衰父发﹐亦论抡收",
+        "applies_because": "官衰须父发来救，本类父母不发动生合世"
+      },
+      {
+        "rule_id": "R-QIUMING-14",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "官父有一而不上卦﹐须看伏神﹐若伏而旺相﹐或得日月冲去飞神﹐生起伏神﹐准登科及第",
+        "applies_because": "反面：本类官伏而不旺，飞神又不受冲制"
+      },
+      {
+        "rule_id": "R-QIUMING-07",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·考道才章第五十二",
+        "quote": "父母空破墓绝﹐他不见用",
+        "applies_because": "父母失陷则他不见用"
+      },
+      {
+        "rule_id": "R-FUSHEN-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·飞伏神章第二十八",
+        "quote": "伏神休囚无气者一也",
+        "applies_because": "本类官鬼伏而终不得出"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "官星安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.14.0，写稿顺序第 7 类，占起卦概率 0.043%，全类 111 盘）：用神「伏难出」；世爻「世安」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙静而旺相，有力（只作用于休囚之爻）；第三版结论「偏难」；否决项「兄持世、官无力、父无力」。全类一致：月建六亲：子孙(100%)；用神月令：不现(100%)；三版官层：官无气（hidden）(100%)；三版父层：父无气（line）(100%)。类内各盘不同之处：应爻对世：生世(75%)、与世比和(25%)；发动六亲：无(99%)、子孙(1%)；三版世层：世旺(72%)、世无气(28%)；三版加减：加0减3(34%)、加0减4(23%)、加0减5(19%)、加0减6(11%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-16",
+    "revision": 1,
+    "revision_note": "eq-0.14 拼装稿（docs/19 断语库）经单 Claude 润色：逐句对照判断字段与卦盘事实，去模板味"
+  }
+}
