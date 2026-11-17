@@ -244,6 +244,15 @@ def assemble(rank, qname='interview'):
             p1.append(((L.FU_HIDDEN.get(fbase) if '（hidden）' in fl else None) or pick(L.FU[fbase], 'fu')) + '。')
         else:
             p1.append(pick(L.FU_MIXED, 'fumix') + '。')
+    # 世应：类内每一卦都相同的关系才写（官临应者已在官星句中交代）
+    vals = [v.rsplit('(', 1)[0].split('、') for v in p['stats'].get('应爻对世', [])]
+    if vals and pos != '临应':
+        common = set(vals[0]).intersection(*vals[1:])
+        base = [x for x in common if x in L.SHIYING]
+        sy = [pick(L.SHIYING[base[0]], 'sy')] if base else []
+        sy += [L.SHIYING_ADD[x] for x in sorted(common) if x in L.SHIYING_ADD]
+        if sy and not any(h in ('应支克世',) for h in all100(p, '三版减分')):
+            p2.append('；'.join(sy) + '。')
     for g in K['gua']:
         p2.append(pick(L.GUA[g], f'gua{g}') + '。')
         if g in L.GUA_Q:
