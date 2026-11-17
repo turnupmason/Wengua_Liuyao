@@ -23,4 +23,6 @@ python scripts/analysis/audit-class-coverage.py | tail -1 || rc=1
 node scripts/analysis/audit-v3-text-coverage.mjs 5000 | head -1
 # 引擎括注引文须在所引规则原文中查得（核不上者列出即不通过）
 qs=$(node scripts/analysis/audit-engine-quote-source.mjs | tail -1); echo "引文出处：$qs"; echo "$qs" | grep -q '共 0 处' || rc=1
+# 逐卦断语正文毛病：缺五行、冒号、内部用语、篇内重复、决定重要条目未写进正文等（2026-11-17）
+rs=$(node scripts/analysis/reading-smell.mjs 3000 | tail -1); echo "逐卦断语毛病：$rs"; echo "$rs" | grep -q '^无$' || rc=1
 exit $rc

@@ -23,10 +23,10 @@ for (let n = 0; n < N; n += 1) {
   // 分层：每条进依据栏；决定性与重要者还须进正文
   const basisText = (t.basis || []).map((x) => x.text).join('').replace(/：/g, '，');
   const nz = (u) => u.replace(/（[^（）]*）/g, '').replace(/：/g, '，').replace(/父母([子丑寅卯辰巳午未申酉戌亥])/g, '父$1').replace(/官鬼([子丑寅卯辰巳午未申酉戌亥])/g, '官$1');
-  // 能过之项在正文里换成读者说法（PASS_SAY），按名目不比对
-  for (const b of (t.basis || []).filter((x) => ['决定', '重要'].includes(x.level) && !/^(旺官持世|官父两旺|旺官生合世|官动生合世|日月作官星|父母发动而生合世|六冲卦变六合)/.test(x.text) && !(/化出之爻旬空/.test(x.text) && body.includes('亦逢旬空')))) {
-    const k = nz(b.text).replace(/[，；].*$/, '').replace(/^(官|父|世|子孙|财|妻财|兄弟|兄)[子丑寅卯辰巳午未申酉戌亥]/, '').slice(0, 5);
-    if (!nz(body).includes(k)) { const kk = '正文缺：' + norm(b.text); const m = miss.get(kk) || { n: 0, ex: '〔' + b.level + '〕' + b.text }; m.n += 1; miss.set(kk, m); seen.set(kk, (seen.get(kk) || 0) + 1); }
+  // 3.0.0 起正文用读者话：决定、重要之条目由生成时逐条记 said 与所在段，这里核每条都已写到、所在段确在正文
+  const paras = new Set(['结论', ...(t.items || []).map((x) => x.item)]);
+  for (const b of (t.basis || []).filter((x) => ['决定', '重要'].includes(x.level) && !(x.said && paras.has(x.saidIn)))) {
+    const kk = '正文缺：' + norm(b.text); const m = miss.get(kk) || { n: 0, ex: '〔' + b.level + '〕' + b.text }; m.n += 1; miss.set(kk, m); seen.set(kk, (seen.get(kk) || 0) + 1);
   }
   const items = [...v3.veto, ...(v3.layerVeto || []), ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes].map((x) => x.text);
   for (const it of items) {
