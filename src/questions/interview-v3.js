@@ -56,17 +56,23 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     return L.some((o) => o !== l && (o.moving || anDong(o)) && (GEN[o.element] === l.element || o.element === l.element) && effMover(o)) ? 2 : v;
   };
   // 旺衰理由：写给读者看「为何旺、为何有气、为何无力」（2026-11-16 评审：「不旺不衰」「官有气」须对应明确的综合判断依据）
-  const MREL = (c, who) => (c.same ? `临${who}` : c.clash ? `被${who}冲` : c.combine ? `与${who}相合` : c.supports ? `得${who}生` : c.controls ? `受${who}克` : '');
+  // 生、扶、合起、合绊照实写（2026-11-16 评审：未土与戌土是同类相扶，不是相生）
+  const MREL = (c, who, moving) => (c.same ? `临${who}` : c.clash ? `被${who}冲` : c.combine ? (moving ? `与${who}相合` : `与${who}相合，静而逢合为合起`) : c.element === 'generates' ? `得${who}生` : c.element === 'same' ? `得${who}扶` : c.controls ? `受${who}克` : '');
   function lvWhy(x) {
     const l = x?.line || x; if (!l || !l.position) return '';
     const c = fact(l).calendar; const s0 = st(l);
-    const mrel = MREL(c.month, `${month}月`);
-    const bits = [mrel || (c.seasonal ? `${month}月${c.seasonal}` : ''), MREL(c.day, `${day}日`), c.day.lifeStage === '长生' || c.day.lifeStage === '帝旺' ? `${c.day.lifeStage}于${day}日` : ''].filter(Boolean);
-    const movers = (s0.places || []).filter((q) => !/^(月建|日辰)/.test(q.place)).map((q) => `${q.place}${q.effect === '生' ? '来生' : '来克'}`);
+    const mrel = MREL(c.month, `${month}月`, l.moving);
+    const all = [mrel || (c.month.seasonal ? `${month}月${c.month.seasonal}${c.month.residualQi ? '而有余气' : ''}` : ''), MREL(c.day, `${day}日`, l.moving), c.day.lifeStage === '长生' || c.day.lifeStage === '帝旺' ? `${c.day.lifeStage}于${day}日` : ''].filter(Boolean);
+    const mv = (s0.places || []).filter((q) => !/^(月建|日辰)/.test(q.place)).map((q) => ({ t: q.place.startsWith('自身动化') ? `动而化${q.place.replace('自身动化', '')}${q.place.includes('进神') ? '（同类相扶）' : ''}` : `${q.place}${q.effect === '生' ? '来生扶' : '来克'}`, bad: q.effect !== '生' }));
+    // 月令休囚、受克、被冲是不利条件，放在「虽」后，不当作旺的理由
+    const isBad = (x) => /^(受|被.{1,3}冲)|休囚/.test(x);
+    const good = [...all.filter((x) => !isBad(x)), ...mv.filter((x) => !x.bad).map((x) => x.t)];
+    const badl = [...all.filter(isBad), ...mv.filter((x) => x.bad).map((x) => x.t)];
+    const bits = good; const movers = badl.length ? [`虽${badl.join('、')}`] : [];
     const lv = lvOf(l, s0);
     // 括号里只写理由，不重复「旺、不旺不衰、无力」这一结论
     const verdictWhy = s0.pattern ? `月日${s0.pattern.includes('月生') ? '一扶一克' : '一克一扶'}，相敌作平${lv === 2 ? '，又得动爻相扶而转旺' : ''}` : '';
-    return [...bits, ...movers, verdictWhy].filter(Boolean).join('、').replace(/、月日/, '，月日');
+    return [bits.join('、'), ...movers, verdictWhy].filter(Boolean).join('；');
   }
   // 本主之爻：自占为世；代占取所代六亲最有力的一爻（R-HJC-QM-15）
   const subjectCands = subjectRelative ? L.filter((l) => l.relative === subjectRelative) : [];
@@ -286,7 +292,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (f.moving && fBadHua === '回头克' && riyueZhi(fc.to?.branch)) N(`父${f.br}动而化回头克，但所化之${fc.to.branch}被日月冲克（日月为制煞之将军，亦许得意）`, ['R-ZS-QM-10']);
     else if (f.moving && fBadHua) V('父化凶', `父${f.br}${fShuai && fBadHua !== '回头克' ? '衰而' : ''}动而化${fBadHua}（衰化退神及化克化空破墓绝或回头克者，窗下午日长，场中一日短）`, ['R-QIUMING-05', ...(['空', '墓', '绝', '真空'].includes(fBadHua) ? ['R-YLB-WS-01'] : [])]);
     else if (f.moving && fc && fc.advance === '退神') minus.push({ text: `父${f.br}旺而化退神（化退神者，前篇稍遂，后劲不力）`, rules: ['R-QIUMING-05'] });
-    else if (f.moving && fc && fc.changedVoid) N(`父${f.br}旺而化出之爻旬空，出空可用（动而化空，亦不为空）`, ['R-KONG-02', 'R-QJF-15']);
+    else if (f.moving && fc && fc.changedVoid) N(`父${f.br}${fLv === 2 ? "旺" : fLv === 1 ? "有气" : "无力"}而化出之爻旬空，出空可用（动而化空，亦不为空）`, ['R-KONG-02', 'R-QJF-15']);
     else if (f.moving && fc && ['墓', '绝'].includes(fc.lifeStage) && !fShuai) N(`父${f.br}动而化${fc.lifeStage}，但本爻旺相（化墓化绝，若动爻旺相，亦无大害）`, ['R-HUA-03']);
   }
   if (kind === 'written') {
@@ -508,7 +514,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if ((riyueGuan && special.riyueYongToWorld?.length) || calGuanToWorld.length) P('日月官生合世', '日月作官星生合世', ['R-YONG-GUAN-03', 'R-ZS-QM-01']);
   if ((f || riyueFu) && fWang && fuQing && gLv >= 1) {
     const fuHow = !f ? '日月作父母生合世' : wRel === '父母' ? `父${f.br}旺而持世` : f.underWorld ? `父${f.br}旺而伏于世下` : `父${f.br}旺而${gen(f.el, W.el) ? '生' : '合'}世`;
-    const guanHow = g ? `官${g.br}${gLv === 2 ? '旺' : '有气'}（${lvWhy(g)}）` : '日月作官星';
+    const guanHow = g ? `官${g.br}${gLv === 2 ? '旺' : '有气'}，因${lvWhy(g)}` : '日月作官星';
     P('旺父就世', `${fuHow}，${guanHow}`, ['R-QIUMING-03', 'R-ZS-QM-15']);
   }
   if (gWang && fWang) P('官父两旺', '官父两旺', ['R-QIUMING-15', 'R-QIUMING-14', 'R-HJC-QM-01']);
@@ -621,7 +627,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       ...L.filter((l) => l.moving && l !== f.line && (keMover(l) || (chong(l.branch, f.br) && level(st(l)) >= 1))).map((l) => `动爻${l.relative}${l.branch}${keMover(l) ? '克' : '冲'}`)].filter(Boolean);
     const huaBy = fch ? `动而化${fch.to.branch}，${fch.to.branch}${[fch.clash ? '冲本爻' : '', fch.changedMonthBreak ? '逢月破' : '', fch.changedVoid ? '逢空' : '', fch.lifeStage === '墓' ? '为其墓' : '', fch.advance === '退神' ? '为退神' : ''].filter(Boolean).join('、')}` : '';
     const healBy = [fcal.month.combine ? `${month}月` : '', fcal.day.combine ? `${day}日` : '', ...L.filter((l) => l.moving && l !== f.line && he(l.branch, f.br)).map((l) => `动爻${l.relative}${l.branch}`)].filter(Boolean);
-    if ((hurt || huaShang) && heal) plus.push({ text: `父${f.br}旺${hurt ? `而受${hurtBy.join('、')}` : `，${huaBy}`}，又得${healBy.join('、')}来合（冲中逢合，见弃复收${hurt ? '' : '；父母旺相，若化休囚空破墓冲，若得日月动爻相合者，谓之冲中逢合必获绩取'}）`, rules: ['R-QIUMING-05'] });
+    // 写明合的是本爻；本爻发动而逢日月合，按六合章本为合绊，此局童试章专论「冲中逢合」，专章从之（2026-11-16 评审核实）
+    const banNote = f.moving && (fcal.month.combine || fcal.day.combine) ? `，本爻发动而逢合，按六合章本为合绊，此局依童试章专论作冲中逢合` : '';
+    if ((hurt || huaShang) && heal) plus.push({ text: `父${f.br}旺${hurt ? `而受${hurtBy.join('、')}` : `，${huaBy}`}；${healBy.join('、')}与本爻${f.br}相合${banNote}（冲中逢合，见弃复收${hurt ? '' : '；父母旺相，若化休囚空破墓冲，若得日月动爻相合者，谓之冲中逢合必获绩取'}）`, rules: ['R-QIUMING-05'] });
     else if (hurt) minus.push({ text: `父${f.br}旺而受冲克（父旺遭伤，收而复弃）`, rules: ['R-QIUMING-05'] });
     else if (fch && (fch.clash || fch.changedMonthBreak)) minus.push({ text: `父${f.br}旺而动化${fch.clash ? '冲' : '月破'}（父母旺相，若化休囚空破墓冲……父旺遭伤，收而复弃）`, rules: ['R-QIUMING-05'] });
   }

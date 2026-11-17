@@ -1,9 +1,9 @@
 // 面试问第三版：逐卦断语段（docs/10 第四之二节十项）。判定用到的每一条都要写进断语，不得只判不写。
 // 文字只用排盘事实与古籍规则组织；象意一律带「从卦象看」限定（C21）；规则编号只放在 rules 字段，不进正文（C06）。
 import { interviewV3 } from './interview-v3.js';
-import { RULE_SOURCES } from '../data/rule-sources.js';
+import { RULE_SOURCES, RULE_TEXTS } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.1.1';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.2.1';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -60,7 +60,15 @@ const BOOK = { 火珠林: '火珠林', 易隐: '易隐', 黄金策: '黄金策',
 const NOTE_PART = /只作象|不计加减|不计成败|只作态度/;
 // 编者用语改成读者话（不是古书原话的，不加「」）
 const EDITOR = [[/不作否决/g, '不算致命'], [/改看官父世/g, '成败改看官、父与世爻'], [/，?两说并记/g, ''], [/只作态度之象/g, '只看作往来态度']];
-function render(text, tone) {
+// 依据栏：括注逐段核对，规则原文里查得到的才作古书原话（2026-11-16 评审：「古书说」后面不能是引擎推算）
+const NORM = (u) => String(u).replace(/[﹐，、；。：:「」『』？！?!\s·.]/g, '');
+function isQuote(part, rules) {
+  const hay = NORM((rules || []).map((id) => RULE_TEXTS[id] || '').join(''));
+  const chunks = String(part).split(/……|…/).map(NORM).filter((x) => x.length >= 2);
+  return hay.length > 0 && chunks.length > 0 && chunks.every((c) => hay.includes(c));
+}
+function render(text, tone, rules) {
+  if (rules) return renderChecked(text, tone, rules);
   const m = text.match(/^([^（]*)（([^（）]*)）(.*)$/);
   let s;
   if (!m || m[2].length < 6) s = text;
@@ -101,8 +109,10 @@ const PASS_SAY = {
 // 证据分级：决定（否决、能过、定结论的象注）、重要（关乎官父世三层的加减）、一般（应、兄弟、妻财、卦级、神煞）、参考（其余象注）
 const DECISIVE_NOTE = /下第|官父皆不旺|出现无情|不作旺官|始则艰阻|不作否决|不算致命/;
 const CORE = new Set(['能否录取', '临场表现', '自身状态']);
-function levelOf(kind, text) {
+function levelOf(kind, text, byCount = false) {
   if (kind === 'veto' || kind === 'pass') return '决定';
+  // 无否决时结论由有利、不利多寡而定，加减条目都关乎结论（2026-11-16 评审：应爻旬空等须在正文解释）
+  if (byCount && (kind === 'plus' || kind === 'minus')) return '重要';
   // 核心三层里的象注多是限定条件（化空、不作真墓、贪生忘克、克不动），与所限定之条目一起说，列为重要
   if (kind === 'note') return DECISIVE_NOTE.test(text) ? '决定' : CORE.has(sectionOf(text)) && !NOTE_PART.test(text) ? '重要' : '参考';
   const h = text.replace(/（.*$/, '');
@@ -121,6 +131,34 @@ function sourcesOf(rules) {
   }
   return out;
 }
+function renderChecked(text, tone, rules) {
+  let first = true; let aside = false;
+  let s = String(text).replace(/（([^（）]*)）/g, (all, q) => {
+    const said = [];
+    const plain = [];
+    for (const p of q.split('；').map((x) => x.trim()).filter(Boolean)) {
+      const b = p.match(/^([^：]{2,6})：(.+)$/);
+      const other = p.match(/^(.{2,6}?)另谓(.+?)(，两说并记)?$/);
+      const view = p.match(/^(野鹤|觉子|易隐|卜筮全书|黄金策|火珠林)谓(.+)$/);
+      if (NOTE_PART.test(p) && !b) { aside = true; continue; }
+      if (other) { said.push(`${other[1]}另有一说，认为${other[2]}`); continue; }
+      if (view) { said.push(`${view[1]}认为${view[2]}`); continue; }
+      const body = b ? b[2] : p;
+      if (body.length >= 4 && isQuote(body, rules)) said.push(b && BOOK[b[1]] ? `${BOOK[b[1]]}说「${body}」` : said.length || !first ? `又说「${body}」` : `${pickBy(LEAD, text)}「${body}」`);
+      else plain.push(p);
+    }
+    const out = `${plain.length ? `（${plain.join('；')}）` : ''}${said.length ? `，${said.join('，')}` : ''}`;
+    if (said.length) first = false;
+    return out;
+  });
+  s = s.replace(/^(.*?)：/, '$1，').replace(/，，/g, '，');
+  if (aside) s += '；这一条只作卦象参看，不左右成败';
+  if (tone === 'good') s += `，${pickBy(GOOD, text)}`;
+  if (tone === 'bad') s += `，${pickBy(BAD, text)}`;
+  for (const [a, b] of EDITOR) s = s.replace(a, b);
+  return s.replace(/。，/g, '，');
+}
+
 // 正文用：条目名目（去括注引文），能过之项换成读者说法；条件（旬空、月破等）由成段时统一交代
 function sayOf(x, kind) {
   if (kind === 'pass' && PASS_SAY[x.code]) return PASS_SAY[x.code];
@@ -152,10 +190,10 @@ function weave(out, r) {
   const basis = [];
   const condText = (x) => (x.cond || []).map((c) => c.text);
   const add = (x, kind, tone, force = false) => {
-    const level = levelOf(kind, x.text);
+    const level = levelOf(kind, x.text, !r.veto.length);
     const sec = sectionOf(x.text);
     const cs = condText(x);
-    basis.push({ level, section: sec, text: `${render(x.text, tone)}${cs.length ? `；条件：${cs.join('；')}` : ''}。`, sources: sourcesOf([...(x.rules || []), ...(x.cond || []).flatMap((c) => c.rules)]), rules: x.rules || [] });
+    basis.push({ level, section: sec, text: `${render(x.text, tone, x.rules || [])}${cs.length ? `；条件：${cs.join('；')}` : ''}。`, sources: sourcesOf([...(x.rules || []), ...(x.cond || []).flatMap((c) => c.rules)]), rules: x.rules || [] });
     if (!['决定', '重要'].includes(level)) return;
     if (!force && covered(x.text)) return;
     if (!groups.has(sec)) groups.set(sec, { entries: [], rules: [] });
@@ -202,7 +240,7 @@ export function interviewV3Text(chart, ctx = {}) {
   else if (!fu) out.push(sentence('临场表现', '父母（面试表现、材料、通知）卦中不见，也无伏神可取：表现一层卦中没有明显的象；从卦象看，岗位的名分、编制一时不明（卦无父母，终无所任之邦）。', ['R-QIUMING-14', 'R-DTJ-SH-06']));
   else {
     const where = fu.kind === 'hidden' ? `父母${fu.branch}伏在${POS[fu.position]}${fu.underWhat}之下` : fu.kind === 'changed' ? `父母不上卦，由${POS[fu.position]}${fu.from}动而化出父母${fu.branch}（飞爻变爻俱无用神者，始寻伏神）` : `父母${fu.branch}在${POS[fu.position]}${fu.spirit ? `，临${fu.spirit}` : ''}`;
-    let t = `${where}，${LV[fu.level]}${fu.why ? `（${fu.why}）` : ''}`;
+    let t = `${where}，${LV[fu.level]}${fu.why ? `，因${fu.why}` : ''}`;
     t += fu.level === 2 ? '，临场发挥有底气' : fu.level === 1 ? '，发挥中规中矩' : '，临场容易吃亏（表达、材料或笔试）';
     if (fu.kind === 'hidden') t += `；伏于${fu.underWhat}之下，从卦象看${TOPIC[fu.underWhat] || '题目一时摸不准'}`;
     if (fu.toWorld === '生世' || fu.toWorld === '合世' || fu.toWorld === '伏于世下') t += '；父母与你相生相合，表现能落到你身上';
@@ -229,7 +267,7 @@ export function interviewV3Text(chart, ctx = {}) {
   if (!g) out.push(sentence('能否录取', '官鬼（职位）卦中不见，也无可用的伏神，录取一层缺了主角。', ['R-YLB-MY-02']));
   else {
     const where = g.kind === 'hidden' ? `官鬼${g.branch}伏在${POS[g.position]}之下` : g.kind === 'changed' ? `官鬼${g.branch}由${POS[g.position]}动而化出` : `官鬼${g.branch}在${POS[g.position]}${g.spirit ? `，临${g.spirit}` : ''}`;
-    let t = `${where}，${LV[r.layers.hiring.level]}${g.why ? `（${g.why}）` : ''}`;
+    let t = `${where}，${LV[r.layers.hiring.level]}${g.why ? `，因${g.why}` : ''}`;
     t += { 同爻: '，官就持在你的世爻上', 生世: '，官来生你', 合世: '，官来合你', 克世: '，官来克你', 世生它: '，只是你去生官，官不就你', 世克它: '，你去克官', 冲世: '，官与你相冲', 比和: '，官与你比和' }[g.toWorld] || '';
     if (g.active === '暗动') t += '；被日辰冲起而暗动，对方那边已有动静';
     if (g.active === '发动') t += '；官鬼发动，对方那边在推进';
@@ -247,7 +285,7 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // 3. 自身状态（世爻）
   const w = d.world;
-  let wt = `你的世爻是${w.relativeHeld}${w.branch}，在${POS[w.position]}${w.spirit ? `，临${w.spirit}` : ''}，${LV[r.layers.self.level]}${w.why && !(g?.kind === 'line' && g.position === w.position) ? `（${w.why}）` : ''}`;
+  let wt = `你的世爻是${w.relativeHeld}${w.branch}，在${POS[w.position]}${w.spirit ? `，临${w.spirit}` : ''}，${LV[r.layers.self.level]}${w.why && !(g?.kind === 'line' && g.position === w.position) ? `，因${w.why}` : ''}`;
   if (w.moving) wt += '，正在动，主动去争取';
   if (w.dayTomb) wt += '；世入日墓：从卦象看，对对方的底细看不清，容易被说法蒙住，墓冲开时才看明白';
   if (w.void && !veto.some((v) => v.code === '世空无气')) {
@@ -288,7 +326,7 @@ export function interviewV3Text(chart, ctx = {}) {
     else if (x.holdsWorld) t += '；纵然能成，难拔头筹（兄不能抡元而夺魁也）';
     if (x.moving.length && x.caiAlso) t += '；但财爻同动，兄动正好制财、护住文书（所喜者卦中财爻同兴，喜其兄动以制财也）';
     out.push(sentence('竞争', `${t}。`, x.rules));
-  } else out.push(sentence('竞争', '兄弟爻未见明显发动牵制，竞争一层卦中没有突出的象。', x.rules));
+  } // 兄弟不发动、不持世：不写「竞争没有突出的象」——没有不利之象，不等于已证明顺利（2026-11-16 评审）
 
   // 6. 待遇（妻财）
   const cai = d.cai;
@@ -311,7 +349,7 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // 7. 去留
   if (r.layers.final) out.push(sentence('去留', `${r.layers.final}。`, ['R-QIUMING-10', 'R-ZS-QM-01']));
-  else out.push(sentence('去留', w.relativeHeld === '子孙' ? '子孙持世，就算被取，自己也未必去。' : '世不持子孙，录取后成行一层没有明显阻碍之象。', ['R-QIUMING-10']));
+  else if (w.relativeHeld === '子孙') out.push(sentence('去留', '子孙持世，就算被取，自己也未必去。', ['R-QIUMING-10']));
 
   // 8. 象意细节：六神与神煞（只取本问用得上的）
   const keyPos = new Set([w.position, a?.position, fu?.kind === 'line' ? fu.position : null, g?.kind === 'line' ? g.position : null, ...d.spirits.filter((s) => s.moving).map((s) => s.position)].filter(Boolean));

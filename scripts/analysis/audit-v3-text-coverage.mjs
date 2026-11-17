@@ -21,7 +21,7 @@ for (let n = 0; n < N; n += 1) {
   const t = interviewV3Text(chart, { evidence, v3 });
   const body = (t.items || []).map((x) => x.text || '').join('');
   // 分层：每条进依据栏；决定性与重要者还须进正文
-  const basisText = (t.basis || []).map((x) => x.text).join('');
+  const basisText = (t.basis || []).map((x) => x.text).join('').replace(/：/g, '，');
   const nz = (u) => u.replace(/（[^（）]*）/g, '').replace(/：/g, '，').replace(/父母([子丑寅卯辰巳午未申酉戌亥])/g, '父$1').replace(/官鬼([子丑寅卯辰巳午未申酉戌亥])/g, '官$1');
   // 能过之项在正文里换成读者说法（PASS_SAY），按名目不比对
   for (const b of (t.basis || []).filter((x) => ['决定', '重要'].includes(x.level) && !/^(旺官持世|官父两旺|旺官生合世|官动生合世|日月作官星|父母发动而生合世|六冲卦变六合)/.test(x.text) && !(/化出之爻旬空/.test(x.text) && body.includes('亦逢旬空')))) {

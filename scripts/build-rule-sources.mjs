@@ -11,7 +11,8 @@ export function ruleSourcesFromRegister(reg) {
 if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}` || process.argv[1]?.endsWith('build-rule-sources.mjs')) {
   const reg = JSON.parse(readFileSync(new URL('../rules/register.json', import.meta.url), 'utf8'));
   const map = ruleSourcesFromRegister(reg);
-  const body = `// 自动生成，勿手改：node scripts/build-rule-sources.mjs（来源 rules/register.json，${Object.keys(map).length} 条）\nexport const RULE_SOURCES = ${JSON.stringify(map, null, 0).replace(/\],"/g, '],\n  "')};\n`;
+  const texts = {}; for (const r of reg.rules) texts[r.rule_id] = (r.original_text || []).join('｜');
+  const body = `// 自动生成，勿手改：node scripts/build-rule-sources.mjs（来源 rules/register.json，${Object.keys(map).length} 条）\nexport const RULE_SOURCES = ${JSON.stringify(map, null, 0).replace(/\],"/g, '],\n  "')};\n// 规则原文（依据栏核对括注是否真是古书原话）\nexport const RULE_TEXTS = ${JSON.stringify(texts)};\n`;
   writeFileSync(new URL('../src/data/rule-sources.js', import.meta.url), body);
   console.log(`rule-sources：${Object.keys(map).length} 条`);
 }

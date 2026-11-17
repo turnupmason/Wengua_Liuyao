@@ -76,6 +76,7 @@ function placesOf(subject, chart) {
   // 四时旺相章「六月未为月建，未土旺，辰戌次之」，不列被冲之丑）：辰戌丑未互冲者作克，不作扶
   if (m.clash) places.push({ place: '月建', effect: '克', strong: true });
   else if (m.swmj === '论刑') places.push({ place: '月建（巳长生于寅而逢申，论刑不论生，R-SWMJ-03）', effect: '克', strong: true });
+  // 动爻逢月合：六合章谓之合绊（「反不能动之意」），原文未言其失月扶；旺衰暂仍按合扶计，待用户裁定（B-017，2026-11-16）
   else if (m.same || m.supports || m.combine) places.push({ place: '月建', effect: '生', strong: true });
   else if (m.controls) places.push({ place: '月建', effect: '克', strong: true });
   const dz = c.dayClash?.zengshan;
@@ -119,9 +120,10 @@ function placesOf(subject, chart) {
   if (heZhongKe) places.push({ place: '自身动化（合中带克，作合论）', effect: '生', strong: false, dyn: true });
   if (ch && !heZhongKe) {
     const dyn = strongSeason(ch.to.element, chart.calendar.monthBranch);
-    if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: '自身动化', effect: '生', strong: false, dyn });
+    // 写清是哪一种化：进神是同类相扶，不是回头来生（2026-11-16 评审）
+    if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: `自身动化${ch.huitou === '回头生' ? '回头生' : ch.advance === '进神' ? '进神' : ch.lifeStage}`, effect: '生', strong: false, dyn });
     // 六冲章「动爻化回头冲，如逢仇敌」——同章卦例自注「爻动化冲，如逢他敌，乃是化回头之克也。此卦世爻酉金化卯冲世而不克世」：化冲而不克者不作克（R-CHONG-02）
-    else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝') places.push({ place: '自身动化', effect: '克', strong: false, dyn });
+    else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝') places.push({ place: `自身动化${ch.huitou === '回头克' ? '回头克' : ch.advance === '退神' ? '退神' : '绝'}`, effect: '克', strong: false, dyn });
     else if (ch.swmj === '论刑') places.push({ place: '自身动化（巳化寅而逢申，论刑不论生，R-SWMJ-03）', effect: '克', strong: false, dyn });
   }
   // 飞神：未被推开时其生克计入；空破休囚墓绝、被冲克者「虽有若无」（R-FUSHEN-06）
