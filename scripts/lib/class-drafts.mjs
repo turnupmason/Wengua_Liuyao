@@ -18,7 +18,8 @@ export function loadClassDrafts(root) {
   return out;
 }
 
-const V3_OK = { pass: ['likely-pass', 'pass-but-slow'], wait: ['pass-but-slow', 'wait-then-likely'], fail: ['unlikely'] };
+// recast：六冲而父旺、官父世未俱旺，乡试章「须再占一卦」（B-020），稿件结论须写「成败未定」
+const V3_OK = { pass: ['likely-pass', 'pass-but-slow'], wait: ['pass-but-slow', 'wait-then-likely'], fail: ['unlikely'], recast: ['undetermined'] };
 const HEX_NAMES = allHexagrams().map((h) => h.name).filter((n) => n.length >= 3);
 const SPECIFIC = [
   [/[子丑寅卯辰巳午未申酉戌亥][日月木火土金水时年]/g, '具体地支'],

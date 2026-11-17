@@ -172,7 +172,7 @@ test('B-018 合克并见：原书剥卦例（丑月庚辰日占子病）子水�
 test('B-020：无必中之格不作偏难之据；六冲卦而父旺者须再占（乡试章）', () => {
   // 乾为天未月乙亥日：父戌旺持世而不得生合，官午不旺不衰——乡试章「虽系六冲，世父皆逢旺地，不敢决之，请再占一卦」
   const { v3, text } = run('777777', '未', '乙亥');
-  assert.equal(v3.verdict, 'wait');
+  assert.equal(v3.verdict, 'recast');
   assert.equal(v3.reCast, true);
   assert.ok(text.items.find((x) => x.item === '建议').text.includes('再起一卦'));
   // 结论只写实有的利弊，不写「另审」之类审核记录
@@ -182,13 +182,27 @@ test('B-020：无必中之格不作偏难之据；六冲卦而父旺者须再占
   assert.ok(text.basis.some((b) => /再占一卦/.test(b.text)));
 });
 
-test('B-019 童试章「冲中逢合」两本异文：现行按本地底本，另一本原文存于登记', () => {
-  // 本地底本「父母旺相﹐若化休囚空破墓冲﹐若得日月动爻相合者﹐谓之冲中逢合」：父戌化巳而巳空，又与卯月相合，算冲中逢合。
-  // 全学网本作「父母旺相，若化休囚、空破、墓绝，化回头克，及被冲克者，始取终弃。世与父爻，动而逢冲，若得日月动爻相合者，谓之冲中逢合」：
-  // 照此本，本卦父戌动而未逢冲，不成冲中逢合，化空反属「始取终弃」。择定底本前两本并存，此测试防现行口径无意中改动。
+test('B-019 以校对本童试章为据：父旺遭伤与冲中逢合分为两条，化坏逢合不再算冲中逢合', () => {
+  // 校对本：「父母旺相，若化休囚、空破、墓绝，化回头克，及被冲克者，始取终弃。世与父爻，动而逢冲，若得日月动爻相合者，谓之冲中逢合，定获续取。」
+  // 小过之晋卯月乙未日：父戌发动化巳而巳空，又与卯月相合——父戌动而未逢冲，不成冲中逢合；化空属父旺遭伤
   const { v3 } = run('889786', '卯', '乙未');
-  assert.ok(v3.plus.some((x) => x.text.includes('冲中逢合')));
+  assert.ok(!v3.plus.some((x) => x.text.includes('冲中逢合')));
+  assert.ok(v3.minus.some((x) => x.rules.includes('R-QIUMING-18') && x.text.includes('化巳，巳逢空')));
+  // 冲中逢合须「动而逢冲」再得合：遍历找一例核对条件
+  let found = null;
+  for (const h of allHexagrams()) {
+    for (const m of ['子', '卯', '午', '酉']) for (const d of ['甲子', '乙丑', '丙寅', '丁卯', '戊辰', '己巳', '庚午', '辛未']) {
+      const lv = h.code.split('').map((c, i) => (i === 5 ? (c === '1' ? 9 : 6) : c === '1' ? 7 : 8));
+      const chart = buildChart({ lineValues: lv, calendar: { monthBranch: m, dayGanzhi: d } });
+      const v = interviewV3(chart, {});
+      const x = v.plus.find((p) => p.rules.includes('R-QIUMING-19'));
+      if (x) { found = x; break; }
+    }
+    if (found) break;
+  }
+  assert.ok(found && /发动而逢.*冲.*又得.*相合/.test(found.text), found?.text);
   const reg = JSON.parse(readFileSync(new URL('../rules/register.json', import.meta.url), 'utf8'));
   const b19 = reg.rulings.find((x) => x.id === 'B-019').ruling;
-  assert.ok(b19.includes('若化休囚空破墓冲') && b19.includes('世与父爻，动而逢冲'));
+  assert.ok(b19.includes('若化休囚空破墓冲') && b19.includes('SUSPECTED_OMISSION'));
+  assert.equal(reg.rules.find((r) => r.rule_id === 'R-QIUMING-19').source_book, '增删卜易校对本');
 });

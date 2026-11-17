@@ -28,6 +28,7 @@ console.log(`卦例 ${n}（其中可信度高 ${hi.length}）：引擎对 ${acc}
 console.log(`只看可信度高者：引擎对 ${hi.filter((r) => r.ok).length}/${hi.length}；一律判不过 ${hi.filter((r) => r.outcome === 'fail').length}；一律判能过 ${hi.filter((r) => r.outcome === 'pass').length}`);
 const pp = rows.filter((r) => r.verdict !== 'fail'); const pf = rows.filter((r) => r.verdict === 'fail');
 console.log(`判有望 ${pp.length} 例，实际过 ${pp.filter((r) => r.outcome === 'pass').length}；判偏难 ${pf.length} 例，实际没过 ${pf.filter((r) => r.outcome === 'fail').length}`);
+console.log(`其中判「须再占」${rows.filter((r) => r.verdict === 'recast').length} 例（计分时与待定同作非偏难）：${rows.filter((r) => r.verdict === 'recast').map((r) => r.id).join(' ') || '无'}`);
 console.log(rows.map((r) => `${r.id}${r.ok ? '✓' : '✗'}`).join(' '));
 if (process.argv.includes('--items')) {
   const stat = new Map();

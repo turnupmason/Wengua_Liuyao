@@ -3,7 +3,7 @@
 import { interviewV3 } from './interview-v3.js';
 import { RULE_SOURCES, RULE_TEXTS } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.5.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.6.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -59,7 +59,7 @@ const BAD = ['于你不利', '这一点要提防', '是不利之处', '会拖累
 const BOOK = { 火珠林: '火珠林', 易隐: '易隐', 黄金策: '黄金策', 卜筮全书: '卜筮全书', 天玄赋: '天玄赋', 易林补遗: '易林补遗', 断易天机: '断易天机', 谒贵: '谒贵之法', 增删卜易: '增删卜易' };
 const NOTE_PART = /只作象|不计加减|不计成败|只作态度/;
 // 编者用语改成读者话（不是古书原话的，不加「」）
-const EDITOR = [[/不作否决/g, '不算致命'], [/改看官父世/g, '成败改看官、父与世爻'], [/，?两说并记/g, ''], [/只作态度之象/g, '只看作往来态度']];
+const EDITOR = [[/，为官父或其元神[：，]有周折，慢慢方得/g, '，这一爻夹在你与对方之间，又是官、父一路的爻，事情要绕些弯，慢慢才有结果'], [/不作否决/g, '不算致命'], [/改看官父世/g, '成败改看官、父与世爻'], [/，?两说并记/g, ''], [/只作态度之象/g, '只看作往来态度']];
 // 依据栏：括注逐段核对，规则原文里查得到的才作古书原话（2026-11-16 评审：「古书说」后面不能是引擎推算）
 const NORM = (u) => String(u).replace(/[﹐﹑﹔﹕﹒，、；。：:「」『』？！?!\s·.]/g, '').replace(/乾/g, '干');
 function isQuote(part, rules) {
@@ -188,7 +188,7 @@ function composeSection(entries) {
   if (bad.length) parts.push((good.length ? '不过，' : '') + bad.join('；'));
   if (neu.length) parts.push((parts.length ? '另外，' : '') + neu.join('；'));
   let t = parts.join('。');
-  if (conds.length) t += `。${good.length && !bad.length ? '要留意的是：' : '还要看条件：'}${conds.join('；')}`;
+  if (conds.length) t += `。${good.length && !bad.length ? '要留意的是，' : '还有一层，'}${conds.join('；')}`;
   return `${t}。`;
 }
 function weave(out, r) {
@@ -198,6 +198,7 @@ function weave(out, r) {
   const groups = new Map();
   const basis = [];
   const condText = (x) => (x.cond || []).map((c) => c.text);
+  const condSay = (x) => (x.cond || []).map((c) => c.say || c.text);
   const add = (x, kind, tone, force = false) => {
     const level = levelOf(kind, x.text, !r.veto.length);
     const sec = sectionOf(x.text);
@@ -210,7 +211,7 @@ function weave(out, r) {
     const say = sayOf(x, kind);
     // 象注若只是复述别条已带的条件（如「化出之爻旬空」），正文不再重说
     if (kind === 'note' && /化出之爻旬空|出空可用/.test(x.text) && g.entries.some((e) => e.cond.some((c) => c.includes('化出之')))) return;
-    if (!g.entries.some((e) => e.say === say)) { g.entries.push({ say, tone, cond: cs }); g.rules.push(...(x.rules || []), ...(x.cond || []).flatMap((c) => c.rules)); }
+    if (!g.entries.some((e) => e.say === say)) { g.entries.push({ say, tone, cond: condSay(x) }); g.rules.push(...(x.rules || []), ...(x.cond || []).flatMap((c) => c.rules)); }
   };
   for (const x of [...r.veto, ...(r.layerVeto || [])]) add(x, 'veto', 'bad');
   for (const x of r.pass) add(x, 'pass', 'good', true);
@@ -240,16 +241,21 @@ export function interviewV3Text(chart, ctx = {}) {
   const has = (code) => veto.some((v) => v.code === code);
 
   // 总的分层结论
-  const verdictText = { pass: '从卦象看，这一轮有望通过', wait: '从卦象看，这一轮能否通过尚未成定局', fail: '从卦象看，这一轮偏难通过' }[r.verdict];
+  const verdictText = { pass: '从卦象看，这一轮有望通过', wait: '从卦象看，这一轮能否通过尚未成定局', fail: '从卦象看，这一轮偏难通过', recast: '从卦象看，单凭这一卦还定不下来' }[r.verdict];
   // 结论只写实有的有利、不利，用读者能懂的话；判定过程（审过哪些条、为何不够）只进依据栏（2026-11-17 评审：「这属于内部审核记录，不应该出现在用户看到的结论中」）
   const head = (x, kind) => sayOf(x, kind).replace(/，?因.*$/, '').replace(/[，；]$/, '');
   // 没有能过之象时，三层旺衰本身就是要说的有利、不利（父旺、官无力之类）
-  const lay = r.pass.length ? [] : [['父母', r.layers.performance.level, d.fu?.branch], ['官鬼', r.layers.hiring.level, d.guan?.branch]].filter((x) => x[2]);
-  const goods = [...r.pass.map((x) => head(x, 'pass')), ...lay.filter((x) => x[1] === 2).map((x) => `${x[0]}${x[2]}旺`), ...r.plus.map((x) => head(x, 'plus'))];
-  const bads = [...veto.map((x) => head(x, 'veto')), ...lay.filter((x) => x[1] === 0).map((x) => `${x[0]}${x[2]}无力`), ...r.notes.filter((n) => /下第|官星无气|不作旺官|出现无情/.test(n.text)).map((n) => head(n, 'note')), ...r.minus.map((x) => head(x, 'minus'))];
+  const lay = r.pass.length ? [] : [['父母', r.layers.performance.level, d.fu?.branch, r.layers.performance.line?.position], ['官鬼', r.layers.hiring.level, d.guan?.branch, r.layers.hiring.line?.position]].filter((x) => x[2]);
+  // 同一爻的证据只举一次（2026-11-17 评审：「不能把同一官星的多个描述全部当成互相独立的吉证」）；能过之象已说到的爻，不再以该爻的加分重复举证
+  const passPos = new Set(r.pass.flatMap((x) => ({ 旺官持世: ['g', 'w'], 官父两旺: ['g', 'f'], 旺官生合世: ['g'], 官动生合世: ['g'], 旺父就世: ['f'], 父发: ['f'] })[x.code] || [])
+    .map((k) => `L${k === 'w' ? d.world.position : k === 'g' ? r.layers.hiring.line?.position : r.layers.performance.line?.position}`));
+  const once = (xs, keys, skip = new Set()) => { const seen = new Set(skip); const out = []; xs.forEach((x, i) => { const k = keys[i]; if (seen.has(k)) return; seen.add(k); out.push(x); }); return out; };
+  const passSay = r.pass.map((x) => (x.code === '官父两旺' && r.pass.some((p) => ['旺官持世', '旺官生合世'].includes(p.code)) ? '父母也旺，表现一层有底' : head(x, 'pass')));
+  const goods = [...passSay, ...lay.filter((x) => x[1] === 2).map((x) => `${x[0]}${x[2]}旺`), ...once(r.plus.map((x) => head(x, 'plus')), r.weighed?.plusKeys || r.plus.map((_, i) => i), new Set([...passPos, ...lay.filter((x) => x[1] === 2).map((x) => `L${x[3]}`)]))];
+  const bads = [...veto.map((x) => head(x, 'veto')), ...lay.filter((x) => x[1] === 0).map((x) => `${x[0]}${x[2]}无力`), ...r.notes.filter((n) => /下第|官星无气|不作旺官|出现无情/.test(n.text)).map((n) => head(n, 'note')), ...once(r.minus.map((x) => head(x, 'minus')), r.weighed?.minusKeys || r.minus.map((_, i) => i))];
   const top = (xs, n) => [...new Set(xs)].slice(0, n);
   const why = [goods.length ? `有利的是：${top(goods, 3).join('；')}` : '', bads.length ? `${goods.length ? '不利的是' : '不利之处'}：${top(bads, 3).join('；')}` : ''].filter(Boolean).join('。');
-  const close = r.veto.length ? '这一处是硬伤，其余有利之处补不回来' : r.verdict === 'fail' ? '不利之处多于有利，整体仍有阻碍' : r.verdict === 'wait' && r.reCast ? '卦得六冲而父母旺，古书遇此不下断语，要再起一卦，后卦吉以吉断，后卦凶以凶推' : r.verdict === 'wait' ? (r.pass.length ? '虽有能过之象，不利之处也不少，要等正式结果才能确认' : '卦中没有足以定下录取的强象，也没有致命之处，成与不成要看后面的进展，以正式结果为准') : '有利之处占上风';
+  const close = r.veto.length ? '这一处是硬伤，其余有利之处补不回来' : r.verdict === 'fail' ? '不利之处多于有利，整体仍有阻碍' : r.verdict === 'recast' ? '卦得六冲，父母虽旺，官、父、世却没有全都旺相；按乡试章的做法，这种卦要再起一卦合看，后卦吉以吉断，后卦凶以凶推' : r.verdict === 'wait' ? (r.pass.length ? '虽有能过之象，不利之处也不少，要等正式结果才能确认' : '卦中没有足以定下录取的强象，也没有致命之处，成与不成要看后面的进展，以正式结果为准') : '综合来看，有利之处占上风，倾向有望通过';
   const stageText = r.stage === 'before' ? '面试、笔试还没考：先看父母（临场表现），再看官鬼（职位）。' : r.stage === 'after' ? '已经考过、等结果：先看官鬼（职位、结果），父母看通知。' : '';
   const subjText = r.subject ? (r.subject.found ? `这是代占：以所问之人（${r.subject.relative}${POS[r.subject.position]}）为本主，不看你自己的世爻。` : `这是代占，但卦中不见${r.subject.relative}，本主之爻暂以世爻代看。`) : '';
   out.push(sentence('结论', `${subjText}${stageText}${verdictText}。${why ? `${why}。${close}。` : ''}${r.layers.final ? `另：${r.layers.final}。` : ''}`, [...new Set([...veto, ...r.pass].flatMap((x) => x.rules).concat(/功名无成者/.test(r.layers.final || '') ? ['R-QIUMING-10'] : []))]));
@@ -274,7 +280,9 @@ export function interviewV3Text(chart, ctx = {}) {
     if (fu.twoAndClash) t += '；两爻父母相冲，题目对你来说偏生';
     const mo = d.calendarToWorld.monthOnFu;
     if (mo === '克') t += '；月建克父母（月克文书，程式背而不中）：从卦象看，表现与考官要的路子不太对';
-    else if (mo === '生' || mo === '合') t += '；月建生合父母：从卦象看，表现合考官的意';
+    else if (mo === '合克作合') t += '；父母虽受月建克，但与月建相合，又另有生扶，按合克并见之例仍作合看，月建这一层不作克论';
+    else if (mo === '生') t += '；月建生父母，表现一层得当月之助';
+    else if (mo === '合') t += '；月建与父母相合，表现一层得当月之助';
     out.push(sentence('临场表现', `${t}。`, fu.rules.concat(['R-QIUMING-03', 'R-QIUMING-05'], t.includes('始寻伏神') ? ['R-FUSHEN-01'] : [])));
     if (has('父化凶')) out.push(sentence('临场表现', veto.find((v) => v.code === '父化凶').text.replace(/（.*）/, '') + '：平时准备得不少，临场失分。', ['R-QIUMING-05']));
     // 动爻化出妻财去克父母一句已撤：动变生克冲合章「变出之爻……不能生克他爻」（2026-11-16）
@@ -440,7 +448,7 @@ export function interviewV3Text(chart, ctx = {}) {
   const minLv = Math.min(...layerLv.map((x) => x[1]));
   const ADV = { 临场表现: '表现一层：把材料、表达、笔试再打磨，答题宁稳勿杂。', 能否录取: '职位一层：同时推进其他机会，不把结果押在这一处。', 自身状态: '你自身这一层：先把状态和准备补足，必要时请人引荐。' };
   const advice = minLv === 2 ? (g?.kind === 'line' && g.position === w.position ? '官星就是你的世爻，与父母都旺，照常准备、按时应对即可，不必另作补救。' : '官、父、世三层都旺，照常准备、按时应对即可，不必另作补救。') : `最弱的是${layerLv.filter((x) => x[1] === minLv).map((x) => ADV[x[0]]).join('同样弱的还有')}`;
-  const reCastAdv = r.reCast ? '本卦六冲而父母旺，按古法须就同一件事再起一卦：后卦吉以吉断，凶以凶推（如父旺者，须再占一卦，再得吉者，以吉断之，后卦凶者，即以凶推）。' : '';
+  const reCastAdv = r.reCast ? '本卦六冲，父母虽旺而官父世未俱旺，按乡试章宜就同一件事再起一卦：后卦吉以吉断，凶以凶推（如父旺者，须再占一卦，再得吉者，以吉断之，后卦凶者，即以凶推）。' : '';
   out.push(sentence('建议', reCastAdv + advice + (a?.toWorld === '克世' ? '对方要求严，谈条件时留余地。' : '') + '若同时有几个机会，最好指定一个具体岗位再起一卦问（指其缺而问之，无不验也）。', ['R-ZS-QM-01', ...(r.reCast ? ['R-QIUMING-14'] : [])]));
 
   // 织入：判定用到而上文没写到的每一条（否决、能过、加分、减分、象注），按所论之爻写进对应一段，

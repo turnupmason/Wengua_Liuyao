@@ -70,7 +70,7 @@ TIER = {'无力': '当前无力（INEFFECTIVE）', '静不作用': '安静而月
         '伏平': '不上卦，伏而平', '无': '不上卦亦无伏', '平（无吉无凶）': '月日相敌，无吉无凶'}
 
 
-V3NAME = {'pass': '倾向通过', 'wait': '悬而未决', 'fail': '偏难'}
+V3NAME = {'pass': '倾向通过', 'wait': '悬而未决', 'fail': '偏难', 'recast': '须再占'}
 
 
 def v3gloss(sig):
@@ -89,7 +89,7 @@ def sig_codes(key):
     return [c for x in sig_of(key).split('|')[1:] for c in x[1:].split('+') if c]
 
 
-V3_OK = {'pass': ['likely-pass', 'pass-but-slow'], 'wait': ['pass-but-slow', 'wait-then-likely'], 'fail': ['unlikely']}
+V3_OK = {'pass': ['likely-pass', 'pass-but-slow'], 'wait': ['pass-but-slow', 'wait-then-likely'], 'fail': ['unlikely'], 'recast': ['undetermined']}
 
 
 def gloss(key):

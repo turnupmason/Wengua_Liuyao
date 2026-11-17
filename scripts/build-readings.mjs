@@ -15,7 +15,8 @@ import { EQUIVALENCE_VERSION } from '../src/equivalence.js';
 import { loadClassDrafts, checkClassDraft } from './lib/class-drafts.mjs';
 import { interviewV3 } from '../src/questions/interview-v3.js';
 // 面试问第三版（D-023，eq-0.14）结论与作者稿结论类别的对应
-const V3_OK = { pass: ['likely-pass', 'pass-but-slow'], wait: ['pass-but-slow', 'wait-then-likely'], fail: ['unlikely'] };
+// recast：六冲而父旺、官父世未俱旺，乡试章「须再占一卦」（B-020），稿件结论须写「成败未定」
+const V3_OK = { pass: ['likely-pass', 'pass-but-slow'], wait: ['pass-but-slow', 'wait-then-likely'], fail: ['unlikely'], recast: ['undetermined'] };
 
 const CONTENT_VERSION = 'liuyao-readings-0.1.0';
 const register = JSON.parse(readFileSync(join(ROOT, 'rules/register.json'), 'utf8'));

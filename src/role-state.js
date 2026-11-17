@@ -304,7 +304,7 @@ export function assessRoleState(line, facts, chart) {
   // 能否主动作用于他爻：发动、暗动可；静爻须月令旺相，且只及于休囚之爻（R-DONGJING-01）
   const c = facts.calendar;
   const acts = line.moving ? '发动' : c.dayClash?.zengshan === '暗动' ? '暗动' : c.seasonalStrong ? '静而旺相（可生克休囚之爻）' : '静（不主动作用）';
-  return { ...s, acts, ruleIds: ['R-SICHU-01', 'R-RIZHEN-05', 'R-YUEJIAN-04', 'R-KONG-02', 'R-YUEPO-02', 'R-SUIMU-01', 'R-DONGJING-01'] };
+  return { ...s, acts, ruleIds: ['R-SICHU-01', 'R-HE-05', 'R-RIZHEN-05', 'R-YUEJIAN-04', 'R-KONG-02', 'R-YUEPO-02', 'R-SUIMU-01', 'R-DONGJING-01'] };
 }
 
 /** 伏神的三层状态（B-009）：伏神自身四处生克 → 墓、空、破 → 飞神是否推开 */
