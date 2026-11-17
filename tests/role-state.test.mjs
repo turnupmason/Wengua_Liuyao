@@ -74,7 +74,8 @@ test('进神退神章（R-JINTUI-03）：用神当令得相而化退神，占近
   assert.ok(['旺', '相'].includes(y.seasonal));
   const k = interviewPassClass(e).key;
   assert.match(k, /化退旺/);
-  assert.doesNotMatch(k, /化凶/);
+  // 只核用神（官）一段；第三版签名里另有父母之否决（两现取动者，2026-11-16 起）
+  assert.doesNotMatch(k.split(';')[0], /化凶/);
 });
 
 test('元神忌神衰旺章（R-YUANJI-04）：忌神发动有力而另一爻原神同动，最强原神为静爻时，指纹单列「忌元同动」', () => {

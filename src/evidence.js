@@ -136,7 +136,7 @@ function finerStrength(line, facts) {
  * ① 古法五项（R-LIANGXIAN-01）→ ② 择其旺者细比（R-LIANGXIAN-03）→
  * ③ 地支相同、事实等价：持世者先、临应者次（项目补充，D-014）→ ④ 仍并列则标 ambiguous，由作者取舍。
  */
-function selectYongshen(rel, chart, analysis) {
+export function selectYongshen(rel, chart, analysis) {
   const cands = chart.lines.filter((l) => l.relative === rel);
   if (cands.length === 0) return { status: 'absent', candidates: [] };
   const cmp = (a, b) => { for (let i = 0; i < a.length; i += 1) if (a[i] !== b[i]) return b[i] - a[i]; return 0; };
