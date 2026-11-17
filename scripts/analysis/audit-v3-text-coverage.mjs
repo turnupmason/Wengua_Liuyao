@@ -25,7 +25,7 @@ for (let n = 0; n < N; n += 1) {
   const nz = (u) => u.replace(/（[^（）]*）/g, '').replace(/：/g, '，').replace(/父母([子丑寅卯辰巳午未申酉戌亥])/g, '父$1').replace(/官鬼([子丑寅卯辰巳午未申酉戌亥])/g, '官$1');
   // 能过之项在正文里换成读者说法（PASS_SAY），按名目不比对
   for (const b of (t.basis || []).filter((x) => ['决定', '重要'].includes(x.level) && !/^(旺官持世|官父两旺|旺官生合世|官动生合世|日月作官星|父母发动而生合世|六冲卦变六合)/.test(x.text) && !(/化出之爻旬空/.test(x.text) && body.includes('亦逢旬空')))) {
-    const k = nz(b.text).replace(/[，；].*$/, '').slice(0, 6);
+    const k = nz(b.text).replace(/[，；].*$/, '').replace(/^(官|父|世|子孙|财|妻财|兄弟|兄)[子丑寅卯辰巳午未申酉戌亥]/, '').slice(0, 5);
     if (!nz(body).includes(k)) { const kk = '正文缺：' + norm(b.text); const m = miss.get(kk) || { n: 0, ex: '〔' + b.level + '〕' + b.text }; m.n += 1; miss.set(kk, m); seen.set(kk, (seen.get(kk) || 0) + 1); }
   }
   const items = [...v3.veto, ...(v3.layerVeto || []), ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes].map((x) => x.text);

@@ -41,9 +41,14 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const L = chart.lines;
   const fact = (l) => analysis.lines[l.position - 1];
   const st = (l) => assessRoleState(l, fact(l), chart);
+  const COMBINE_OF = { 子: '丑', 丑: '子', 寅: '亥', 亥: '寅', 卯: '戌', 戌: '卯', 辰: '酉', 酉: '辰', 巳: '申', 申: '巳', 午: '未', 未: '午' };
+  const CHONG_OF = (a, b) => ({ 子: '午', 午: '子', 丑: '未', 未: '丑', 寅: '申', 申: '寅', 卯: '酉', 酉: '卯', 辰: '戌', 戌: '辰', 巳: '亥', 亥: '巳' })[a] === b;
   const anDong = (l) => !l.moving && fact(l).calendar.dayClash?.zengshan === '暗动';
   const acts = (l) => l.moving || anDong(l);
   // 碎金赋：动爻被另一动爻克（克者又不贪生他动爻）则不能生扶他爻——「财动生鬼，切忌兄摇」「兄动克财，子动能解」（R-BQS-SJ-01、R-BZZ-SJ-01）
+  // B-017（用户 2026-11-16 定）：动爻被日月合住为合绊（六合章「动而逢合，谓之合绊」、千金赋增删「后逢冲开之日月，吉凶俱成」）。
+  // 力量照算月合之扶；发动之作用暂不发，待冲开之日——规则照判，条件里写明
+  const bound = (o) => Boolean(o && o.moving && ((COMBINE_OF[o.branch] === month && !CHONG_OF(o.branch, day)) || COMBINE_OF[o.branch] === day));
   const effMover = (o) => !L.some((k) => k !== o && k.moving && KE[k.element] === o.element && !L.some((m) => m !== k && m !== o && m.moving && GEN[k.element] === m.element));
   // 月日一生一克者本作「平」（level 1）；月将章「日生月克，兼看生扶……月克日生遇帮而愈旺」、R-YUEJIAN-04「倘得他爻又动相扶者为吉兆」：
   // 有发动（或暗动）之爻来生扶、且该动爻未被克制者，作旺（R-YUEJIAN-05；2026-11-16 写类稿时查出此前一律压作平）
@@ -512,10 +517,18 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 官动生合世爻者，必得（升迁何方章野鹤，不论旺衰；用爻发动纵值休囚亦不凶）
   if (g && g.kind === 'line' && g.moving && wRel !== '官鬼' && (gen(g.el, W.el) || he(g.br, W.br)) && !veto.some((v) => ['官化凶', '官旺化凶', '官化刑'].includes(v.code))) P('官动生合世', `官${g.br}发动来生合世（官动生合世爻者，必得）`, ['R-ZS-QM-01', 'R-BZZ-FD-01']);
   if ((riyueGuan && special.riyueYongToWorld?.length) || calGuanToWorld.length) P('日月官生合世', '日月作官星生合世', ['R-YONG-GUAN-03', 'R-ZS-QM-01']);
-  if ((f || riyueFu) && fWang && fuQing && gLv >= 1) {
-    const fuHow = !f ? '日月作父母生合世' : wRel === '父母' ? `父${f.br}旺而持世` : f.underWorld ? `父${f.br}旺而伏于世下` : `父${f.br}旺而${gen(f.el, W.el) ? '生' : '合'}世`;
+  // 父母能过之象，按原文分情形（2026-11-16 用户定 D-023 照用考试诸章、补齐全条件）：
+  //  父持世——童试章「父爻持世，得日月动爻相生相合者，亦要官星有气，始许成名」：须月、日或未被合绊之动爻生之或合之，且官有气；
+  //  父生世——乡试章「若非旺父生身，定是旺官持世」：旺父生世即是；父合世、父伏世下原文无此格，不作能过之象。
+  if ((f || riyueFu) && fWang && gLv >= 1) {
     const guanHow = g ? `官${g.br}${gLv === 2 ? '旺' : '有气'}，因${lvWhy(g)}` : '日月作官星';
-    P('旺父就世', `${fuHow}，${guanHow}`, ['R-QIUMING-03', 'R-ZS-QM-15']);
+    if (f && f.kind === 'line' && wRel === '父母') {
+      const fc0 = fact(f.line).calendar;
+      const helpers = [fc0.month.element === 'generates' ? `${month}月生之` : '', fc0.month.combine ? `${month}月合之` : '', fc0.day.element === 'generates' ? `${day}日生之` : '', fc0.day.combine && !f.moving ? `${day}日合之` : '',
+        ...L.filter((o) => o !== f.line && acts(o) && !bound(o) && (gen(o.element, f.el) || he(o.branch, f.br))).map((o) => `动爻${o.relative}${o.branch}${gen(o.element, f.el) ? '生之' : '合之'}`)].filter(Boolean);
+      if (helpers.length) P('旺父就世', `父${f.br}旺而持世，得${helpers.join('、')}，${guanHow}`, ['R-QIUMING-03']);
+      else N(`父${f.br}旺而持世，但不得日月动爻相生相合（父爻持世，得日月动爻相生相合者，亦要官星有气，始许成名）：所以不算成名之象`, ['R-QIUMING-03']);
+    } else if ((f && gen(f.el, W.el)) || (riyueFu && !f && riyueFuQing)) P('旺父就世', `${f ? `父${f.br}旺而生世` : '日月作父母而生合世'}，${guanHow}（若非旺父生身，定是旺官持世）`, ['R-QIUMING-10', 'R-QIUMING-03']);
   }
   if (gWang && fWang) P('官父两旺', '官父两旺', ['R-QIUMING-15', 'R-QIUMING-14', 'R-HJC-QM-01']);
   if (fFa.length) P('父发', '父母发动而生合世（官衰父发，亦论抡收）', ['R-QIUMING-03']);
@@ -844,7 +857,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 官旺而官父皆不就世（不持世、不生合世、不伏世下）者不许（2026-11-16 逐句核实查出：此前官旺即可凭加减分判过）
   else if (gWang && !guanQing && !g?.underWorld && !fuQing) { verdict = 'fail'; N('官虽旺，而官父皆不持世、不生合世（出现无情，难遂青云之志；父与官星虽则出现，若不生合世爻，或不持世……亦属无益）', ['R-QIUMING-02', 'R-BZZ-QM-07']); }
   else if (gWang) verdict = plus.length > minus.length ? 'pass' : 'wait';
-  else { verdict = 'fail'; N(fWang ? '父旺官衰（终须下第）' : '官父皆不旺', ['R-QIUMING-08']); }
+  // 官不旺又无能过之象：真衰（无气）者引乡试章「父旺官衰终须下第」；官平（不旺不衰）者照实写，依乡试章「必中者……若非旺父生身，定是旺官持世」（2026-11-16 评审核实）
+  else { verdict = 'fail'; if (gLv === 0) N(fWang ? '父旺官衰（父旺官衰终须下第）' : '官父皆不旺', ['R-QIUMING-08']); else N(`官星${gLv === 1 ? '不旺不衰' : '不旺'}，父母${fWang ? '虽旺而不生身' : '亦不旺'}，卦中也没有别的取中之象（予见占功名必中者﹐卦象一成﹐若非旺父生身﹐定是旺官持世）`, ['R-QIUMING-10']); }
 
   // 条件审查（2026-11-16 评审：「规则命中但关键条件不满足」）：涉及官、父、世之条目，逐条查本爻与化出之爻的旬空、月破，写明适用条件
   const CODE_TARGET = { 旺官持世: ['world'], 旺官生合世: ['g'], 官动生合世: ['g'], 官父两旺: ['g'], 旺父就世: ['f'], 父发: ['f'], 官无力: ['g'], 官临应: ['g'], 父无力: ['f'], 官化凶: ['g'], 官旺化凶: ['g'] };
@@ -852,6 +866,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (!l || !l.position) return [];
     const c = fact(l).calendar; const ch = l.moving ? fact(l).change : null; const out = [];
     const nm = `${l.relative === '官鬼' ? '官' : l.relative === '父母' ? '父' : l.relative}${l.branch}`;
+    if (bound(l)) { const by = COMBINE_OF[l.branch] === day ? `${day}日` : `${month}月`; const cb = { 子: '午', 午: '子', 丑: '未', 未: '丑', 寅: '申', 申: '寅', 卯: '酉', 酉: '卯', 辰: '戌', 戌: '辰', 巳: '亥', 亥: '巳' }[l.branch];
+      out.push({ text: `${nm}发动而被${by}合住：动逢合而绊住，力量照算，发动之作用暂不发，待冲开之${cb}日（后逢冲开之日月，吉凶俱成）`, rules: ['R-HE-01', 'R-QJF-14'] }); }
     if (c.void) out.push(l.moving ? { text: `${nm}发动而逢旬空：动不为空，作用应在出空、冲空之日`, rules: ['R-KONG-02', 'R-QJF-15'] } : lvOf(l, st(l)) === 2 ? { text: `${nm}旬空而旺：旺不为空，出空之日用事`, rules: ['R-KONG-02'] } : { text: `${nm}静而旬空，又不旺：眼下落空，须待出空、冲空`, rules: ['R-KONG-02'] });
     if (c.monthBreak) out.push({ text: `${nm}逢月破：${l.moving ? '动则能伤，出月实破之时用事' : '破而无力，待出月实破之时'}`, rules: ['R-YUEPO-02'] });
     if (ch?.changedVoid) out.push({ text: `化出之${ch.to.branch}亦逢旬空：动而化空，亦不为空，吉凶应在冲空、实空之日`, rules: ['R-KONG-02', 'R-QJF-15'] });
@@ -860,8 +876,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   };
   const lineOfTag = (tag) => (tag === 'world' ? world : tag === 'g' ? (g?.kind === 'line' ? g.line : null) : (f?.kind === 'line' ? f.line : null));
   const annotate = (x) => {
-    const m = x.text.match(/^(官|父|世)([子丑寅卯辰巳午未申酉戌亥])/);
-    const targets = m ? [m[1] === '世' ? world : L.find((l) => l.branch === m[2] && l.relative === (m[1] === '官' ? '官鬼' : '父母'))] : (CODE_TARGET[x.code] || []).map(lineOfTag);
+    const m = x.text.match(/^(官|父|世|子孙|财|妻财|兄弟|兄)([子丑寅卯辰巳午未申酉戌亥])/);
+    const REL = { 官: '官鬼', 父: '父母', 子孙: '子孙', 财: '妻财', 妻财: '妻财', 兄弟: '兄弟', 兄: '兄弟' };
+    const targets = m ? [m[1] === '世' ? world : L.find((l) => l.branch === m[2] && l.relative === REL[m[1]])] : (CODE_TARGET[x.code] || []).map(lineOfTag);
     const cond = [...new Set(targets.filter(Boolean))].flatMap(condOf);
     if (cond.length) x.cond = cond;
   };

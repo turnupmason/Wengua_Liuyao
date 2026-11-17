@@ -30,6 +30,8 @@ MARK = {
     '父支旬空': ['父母落旬空', '父母也落旬空', '文书落空', '父母旬空'],
     '应支旬空': ['应爻落旬空', '应爻落空', '应空'],
 }
+# 世应关系（2026-11-16 起照实分写）：每一种关系各自须写到
+SY_MARK = {'应支生世': ['应爻来生', '应来生', '应生世', '应爻生你', '世应相生', '生你的世爻', '生合你的世爻'], '世支生应': ['世生应', '去生应', '生应爻', '世应相生'], '世支应支相合': ['世应相合', '世应又相合', '与应相合', '世应相生相合']}
 STAT_MARK = {  # 用神、世爻之空破伤损动化（全类一致时）
     '月破': ['月破'], '日破': ['日破'], '旬空': ['旬空', '落空'], '日克': ['日辰', '日克', '克'], '月克': ['月', '克'],
     '入日墓': ['墓'], '入动墓': ['墓'], '日绝': ['绝'], '回头克': ['回头克'], '回头生': ['回头生'], '退神': ['退神', '退'], '进神': ['进神', '进'],
@@ -60,6 +62,17 @@ def main():
             if ':' in n:
                 k, v = n.split(':', 1)
                 marks = [m for t, ms in STAT_MARK.items() if t in v for m in ms]
+            elif n.endswith('平人见贵以官为主，只作态度之象'):
+                parts = n.split('：')[0].split('、')
+                if any(x not in SY_MARK for x in parts):
+                    print(f"{d['script_id']} 须人工核：{n}")
+                    bad += 1
+                    continue
+                miss = [x for x in parts if not any(m in body for m in SY_MARK[x])]
+                if miss:
+                    print(f"{d['script_id']} 未写到：{'、'.join(miss)}")
+                    bad += 1
+                continue
             else:
                 marks = MARK.get(n)
             if marks is None or not marks:

@@ -3,7 +3,7 @@
 import { interviewV3 } from './interview-v3.js';
 import { RULE_SOURCES, RULE_TEXTS } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.2.1';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.3.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -170,7 +170,14 @@ function sayOf(x, kind) {
   return u.replace(/：只作态度之象/, '').replace(/^(.*?)：(.*)$/, '$1，$2').replace(/^父([子丑寅卯辰巳午未申酉戌亥])/, '父母$1').replace(/^官([子丑寅卯辰巳午未申酉戌亥])/, '官鬼$1').trim();
 }
 function composeSection(entries) {
-  const good = entries.filter((e) => e.tone === 'good').map((e) => e.say);
+  const merge = (xs) => xs.reduce((acc, x) => {
+    const sub = (u) => (u.match(/^(官鬼|父母|子孙|妻财|兄弟)[子丑寅卯辰巳午未申酉戌亥]/) || [])[0];
+    const last = acc[acc.length - 1];
+    if (last && sub(x) && sub(last) === sub(x) && !/^[旺，]/.test(x.slice(sub(x).length))) acc[acc.length - 1] = `${last}，又${x.slice(sub(x).length).replace(/^而/, '')}`;
+    else acc.push(x);
+    return acc;
+  }, []);
+  const good = merge(entries.filter((e) => e.tone === 'good').map((e) => e.say));
   const bad = entries.filter((e) => e.tone === 'bad').map((e) => e.say);
   const neu = entries.filter((e) => !e.tone).map((e) => e.say);
   const conds = [...new Set(entries.flatMap((e) => e.cond))];
@@ -201,7 +208,7 @@ function weave(out, r) {
     const say = sayOf(x, kind);
     // 象注若只是复述别条已带的条件（如「化出之爻旬空」），正文不再重说
     if (kind === 'note' && /化出之爻旬空|出空可用/.test(x.text) && g.entries.some((e) => e.cond.some((c) => c.includes('化出之')))) return;
-    if (!g.entries.some((e) => e.say === say)) { g.entries.push({ say, tone, cond: cs }); g.rules.push(...(x.rules || [])); }
+    if (!g.entries.some((e) => e.say === say)) { g.entries.push({ say, tone, cond: cs }); g.rules.push(...(x.rules || []), ...(x.cond || []).flatMap((c) => c.rules)); }
   };
   for (const x of [...r.veto, ...(r.layerVeto || [])]) add(x, 'veto', 'bad');
   for (const x of r.pass) add(x, 'pass', 'good', true);
@@ -224,11 +231,14 @@ export function interviewV3Text(chart, ctx = {}) {
   const r = ctx.v3 || interviewV3(chart, ctx);
   const d = r.details;
   const out = [];
+  // 参考象：古书有此象而不能当作已证实之现实情况者（单位规模、岗位主副与行业、地点远近、待遇），不进正文，只进依据栏（2026-11-16 评审）
+  const refs = [];
+  const REF = (section, text, rules = []) => refs.push({ level: '参考', section, text: `${text.replace(/。$/, '')}；此为卦象所示，只作参考，不当作已证实之事。`, sources: sourcesOf(rules), rules });
   const veto = r.veto.concat(r.layerVeto || []);
   const has = (code) => veto.some((v) => v.code === code);
 
   // 总的分层结论
-  const verdictText = { pass: '从卦象看，这一轮有望通过', wait: '从卦象看，有望通过，但要等时机', fail: '从卦象看，这一轮偏难通过' }[r.verdict];
+  const verdictText = { pass: '从卦象看，这一轮有望通过', wait: '从卦象看，有望通过，但不利之处不少于有利，尚未成定局', fail: '从卦象看，这一轮偏难通过' }[r.verdict];
   const why = r.veto.length ? r.veto.map((v) => v.text).join('；') : r.verdict === 'fail' ? r.notes.filter((n) => /下第|不旺|不作旺官/.test(n.text)).map((n) => n.text).join('；') : r.pass.map((p) => p.text).join('；');
   const stageText = r.stage === 'before' ? '面试、笔试还没考：先看父母（临场表现），再看官鬼（职位）。' : r.stage === 'after' ? '已经考过、等结果：先看官鬼（职位、结果），父母看通知。' : '';
   const subjText = r.subject ? (r.subject.found ? `这是代占：以所问之人（${r.subject.relative}${POS[r.subject.position]}）为本主，不看你自己的世爻。` : `这是代占，但卦中不见${r.subject.relative}，本主之爻暂以世爻代看。`) : '';
@@ -259,7 +269,7 @@ export function interviewV3Text(chart, ctx = {}) {
     if (has('父化凶')) out.push(sentence('临场表现', veto.find((v) => v.code === '父化凶').text.replace(/（.*）/, '') + '：平时准备得不少，临场失分。', ['R-QIUMING-05']));
     // 动爻化出妻财去克父母一句已撤：动变生克冲合章「变出之爻……不能生克他爻」（2026-11-16）
     if (has('财动克父')) out.push(sentence('临场表现', '妻财发动克父母：从卦象看，答题容易出破绽，或材料上有疏漏。', ['R-QIUMING-04', 'R-BQS-QM-02']));
-    out.push(sentence('单位情况', `父母${LV[fu.level]}，从卦象看，用人单位规模${fu.unitSize === '大' ? '较大' : fu.unitSize === '中' ? '中等' : '不大，或这个部门偏冷'}。`, ['R-BQS-SH-01', 'R-HJC-SH-05']));
+    REF('临场表现', `父母${LV[fu.level]}，按象推用人单位规模${fu.unitSize === '大' ? '较大' : fu.unitSize === '中' ? '中等' : '不大，或这个部门偏冷'}`, ['R-BQS-SH-01', 'R-HJC-SH-05']);
   }
 
   // 2. 能否录取（官鬼）
@@ -271,13 +281,12 @@ export function interviewV3Text(chart, ctx = {}) {
     t += { 同爻: '，官就持在你的世爻上', 生世: '，官来生你', 合世: '，官来合你', 克世: '，官来克你', 世生它: '，只是你去生官，官不就你', 世克它: '，你去克官', 冲世: '，官与你相冲', 比和: '，官与你比和' }[g.toWorld] || '';
     if (g.active === '暗动') t += '；被日辰冲起而暗动，对方那边已有动静';
     if (g.active === '发动') t += '；官鬼发动，对方那边在推进';
-    if (g.rank?.kind) t += `；从卦象看，岗位偏${KIND[g.rank.kind]}${g.rank.atCalendar ? `，官${g.rank.atCalendar}，位置有分量` : ''}`;
-    if (g.trade?.text) t += `；官属${g.trade.element}，性质近于${g.trade.text}`;
+    const gRef = [g.rank?.kind ? `岗位偏${KIND[g.rank.kind]}${g.rank.atCalendar ? `，官${g.rank.atCalendar}，位置有分量` : ''}` : '', g.trade?.text ? `官属${g.trade.element}，性质近于${g.trade.text}` : '',
+      g.position === 1 ? '官在初爻，岗位在本地或基层' : '', g.position >= 5 ? '官在五六爻，岗位偏远或层级高' : ''].filter(Boolean);
+    if (gRef.length) REF('能否录取', `官鬼${g.branch}：${gRef.join('；')}`, [...(g.rank?.rules || []), ...(g.trade?.rules || [])]);
     if (g.twoAndClash) t += '；两爻官鬼相冲，从卦象看，岗位或问题有两头，题目偏生';
     if (g.changesToGuan) t += '；官化官，事情会有反复';
     if (g.soleMover) t += r.layers.hiring.level === 2 ? '；官鬼独发而旺：对方那边先有动作，功名可望（官鬼独发，若临吉神，功名可望）' : r.layers.hiring.level === 0 ? '；官鬼独发而休囚无气：对方那边有事端，或有纠纷（若临囚神，必主兴讼）' : '；官鬼独发，不旺不衰：对方那边先有动作，成与不成还看官父世';
-    if (g.position === 1) t += '；官在初爻：从卦象看，岗位在本地或基层';
-    if (g.position >= 5) t += '；官在五六爻：从卦象看，岗位偏远或层级高';
     out.push(sentence('能否录取', `${t}。`, g.rank.rules.concat(g.trade.rules, g.soleMover ? ['R-HZL-05'] : [])));
   }
   for (const code of ['子动克官', '官克世', '官临应', '官无力', '无官', '子孙局']) if (has(code)) { const v = veto.find((x) => x.code === code); out.push(sentence('能否录取', `${v.text}。`, v.rules)); }
@@ -331,21 +340,21 @@ export function interviewV3Text(chart, ctx = {}) {
   // 6. 待遇（妻财）
   const cai = d.cai;
   const shownCai = cai.filter((c) => c.kind === 'line');
-  if (!cai.length) out.push(sentence('待遇', '妻财不上卦，也无伏神，从卦象看，待遇这一层一时谈不上来。', ['R-HJC-QM-11', 'R-ZS-QM-16']));
+  if (!cai.length) REF('待遇', '妻财不上卦，也无伏神，从卦象看，待遇这一层一时谈不上来。', ['R-HJC-QM-11', 'R-ZS-QM-16']);
   else if (!shownCai.length) {
     const c = cai[0];
-    out.push(sentence('待遇', `妻财${c.branch}伏在${POS[c.position]}${c.under}之下${c.void ? '，又落旬空：从卦象看，待遇谈不上去，财伏逢空' : c.seasonalStrong ? '，伏而有气：从卦象看，待遇有，但不会摆在明面上谈' : '，伏而无气：从卦象看，待遇偏低，或不愿多给'}。`, ['R-HJC-QM-11', 'R-ZS-QM-16', 'R-FUSHEN-02']));
+    REF('待遇', `妻财${c.branch}伏在${POS[c.position]}${c.under}之下${c.void ? '，又落旬空：从卦象看，待遇谈不上去，财伏逢空' : c.seasonalStrong ? '，伏而有气：从卦象看，待遇有，但不会摆在明面上谈' : '，伏而无气：从卦象看，待遇偏低，或不愿多给'}。`, ['R-HJC-QM-11', 'R-ZS-QM-16', 'R-FUSHEN-02']);
   } else {
     const c = shownCai[0];
     let t = `妻财${c.branch}在${POS[c.position]}`;
     t += c.void ? '，正落旬空：从卦象看，待遇眼下不实，可能比预期低' : c.moving ? '，发动：钱的事会被提出来谈' : c.seasonalStrong ? '，安静而旺：待遇一层不错' : '，安静而不旺：待遇一般';
-    out.push(sentence('待遇', `${t}。`, ['R-HJC-SH-01', 'R-ZS-QM-16']));
+    REF('待遇', `${t}。`, ['R-HJC-SH-01', 'R-ZS-QM-16']);
   }
 
   const gl = r.layers.hiring.level; const wl = r.layers.self.level;
   const caiStrong = cai.some((c) => c.seasonalStrong && !c.void);
-  if (gl === 2 && caiStrong && wl === 0) out.push(sentence('待遇', '财官两旺而你自身失陷：从卦象看，就算得了，也难安享（财官两旺而世爻失陷者，终使得官难安享）。', ['R-ZS-QM-16']));
-  if (gl === 2 && wl === 2 && !caiStrong) out.push(sentence('待遇', '官与你都旺而财弱：从卦象看，名分有，待遇一般（官世两旺财星失陷者，乃有例而无财）。', ['R-ZS-QM-16']));
+  if (gl === 2 && caiStrong && wl === 0) REF('待遇', '财官两旺而你自身失陷：从卦象看，就算得了，也难安享（财官两旺而世爻失陷者，终使得官难安享）。', ['R-ZS-QM-16']);
+  if (gl === 2 && wl === 2 && !caiStrong) REF('待遇', '官与你都旺而财弱：从卦象看，名分有，待遇一般（官世两旺财星失陷者，乃有例而无财）。', ['R-ZS-QM-16']);
 
   // 7. 去留
   if (r.layers.final) out.push(sentence('去留', `${r.layers.final}。`, ['R-QIUMING-10', 'R-ZS-QM-01']));
@@ -378,9 +387,7 @@ export function interviewV3Text(chart, ctx = {}) {
   if (h.sixCombine) ht += '，六合卦：有成合之意（还要官父世得地）';
   if (h.changedSixClash && !h.sixClash) ht += '；变出六冲：先合后散';
   if (h.changedSixCombine && !h.sixCombine) ht += '；变出六合：后段有合';
-  if (h.wandering) ht += '；游魂卦：从卦象看，去处偏外地或要变动';
-  if (h.returning) ht += '；归魂卦：从卦象看，去处近，或回原处';
-  ht += `；世在${POS[h.worldPosition]}，从卦象看，工作地点离你${h.distance}`;
+  REF('卦象', `${h.wandering ? '游魂卦，去处偏外地或要变动；' : h.returning ? '归魂卦，去处近或回原处；' : ''}世在${POS[h.worldPosition]}，工作地点离你${h.distance}`, h.rules);
   if (d.monthBody?.relatives?.length) ht += `；卦身临${d.monthBody.relatives.join('、')}（只作参考：增删卜易谓卦身不验）`;
   if (h.innerOuter) ht += `；内外卦${h.innerOuter}${h.innerOuter === '内克外' ? '（若内卦克外卦，则所求可成）' : h.innerOuter === '外克内' ? '（若外卦克内卦，则主难成）' : ''}`;
   if (d.fanFu.fanyin) ht += '；反吟：事情反复，去而复来';
@@ -422,13 +429,13 @@ export function interviewV3Text(chart, ctx = {}) {
   const layerLv = [['临场表现', r.layers.performance.level], ['能否录取', r.layers.hiring.level], ['自身状态', r.layers.self.level]];
   const minLv = Math.min(...layerLv.map((x) => x[1]));
   const ADV = { 临场表现: '表现一层：把材料、表达、笔试再打磨，答题宁稳勿杂。', 能否录取: '职位一层：同时推进其他机会，不把结果押在这一处。', 自身状态: '你自身这一层：先把状态和准备补足，必要时请人引荐。' };
-  const advice = minLv === 2 ? '官、父、世三层都旺，照常准备、按时应对即可，不必另作补救。' : `最弱的是${layerLv.filter((x) => x[1] === minLv).map((x) => ADV[x[0]]).join('同样弱的还有')}`;
+  const advice = minLv === 2 ? (g?.kind === 'line' && g.position === w.position ? '官星就是你的世爻，与父母都旺，照常准备、按时应对即可，不必另作补救。' : '官、父、世三层都旺，照常准备、按时应对即可，不必另作补救。') : `最弱的是${layerLv.filter((x) => x[1] === minLv).map((x) => ADV[x[0]]).join('同样弱的还有')}`;
   out.push(sentence('建议', advice + (a?.toWorld === '克世' ? '对方要求严，谈条件时留余地。' : '') + '若同时有几个机会，最好指定一个具体岗位再起一卦问（指其缺而问之，无不验也）。', ['R-ZS-QM-01']));
 
   // 织入：判定用到而上文没写到的每一条（否决、能过、加分、减分、象注），按所论之爻写进对应一段，
   // 古籍原句以「」嵌进句中，按吉凶说明于你有利或不利；不再以「判断依据」「加分：」「减分：」清单堆在文末。
   // 用户 2026-11-16：「引擎断了什么，用了什么规则，所有都要写出来」「既不能过度模板说话」。
-  const basis = weave(out, r);
+  const basis = [...weave(out, r), ...refs];
 
   // 断语句中凡嵌入判定条文之括注引文者，补引该条之规则（引擎逐字核对：断语句不得只引固定规则而漏引所嵌条文之出处）
   const allItems = [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes];

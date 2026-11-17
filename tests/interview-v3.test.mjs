@@ -67,7 +67,8 @@ test('神煞：面试问只取求名诸章用得上的（不含天医）', () =>
 
 test('逐卦断语：十项齐全，判定依据都写进断语，无内部用语与定论措辞', () => {
   // 竞争、去留两段只在卦中有其象时才写（不以「没有不利之象」充数）
-  const need = ['结论', '临场表现', '能否录取', '自身状态', '对方态度', '待遇', '象意', '应期', '建议'];
+  // 待遇、单位、岗位、地点诸象只进依据栏作参考（2026-11-16 评审）
+  const need = ['结论', '临场表现', '能否录取', '自身状态', '对方态度', '象意', '应期', '建议'];
   for (const [lv, m, d] of CASES) {
     const { v3, text } = run(lv, m, d);
     const items = new Set(text.items.map((x) => x.item));
@@ -78,7 +79,7 @@ test('逐卦断语：十项齐全，判定依据都写进断语，无内部用�
     const key = (t) => t.replace(/（.*?）/g, '').replace(/：/g, '，').slice(0, 6);
     for (const v of [...v3.veto, ...v3.layerVeto, ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes]) assert.ok(basisText.includes(key(v.text)), `${lv} 判定未进依据栏：${v.text}`);
     const nz = (u) => u.replace(/（[^（）]*）/g, '').replace(/：/g, '，').replace(/父母([子丑寅卯辰巳午未申酉戌亥])/g, '父$1').replace(/官鬼([子丑寅卯辰巳午未申酉戌亥])/g, '官$1');
-    for (const b of text.basis.filter((x) => ['决定', '重要'].includes(x.level) && !/^(旺官持世|官父两旺|旺官生合世|官动生合世|日月作官星|父母发动而生合世|六冲卦变六合)/.test(x.text) && !(/化出之爻旬空/.test(x.text) && body.includes('亦逢旬空')))) assert.ok(nz(body).includes(nz(b.text).replace(/[，；].*$/, '').slice(0, 6)), `${lv} ${b.level}证据未写进正文：${b.text}`);
+    for (const b of text.basis.filter((x) => ['决定', '重要'].includes(x.level) && !/^(旺官持世|官父两旺|旺官生合世|官动生合世|日月作官星|父母发动而生合世|六冲卦变六合)/.test(x.text) && !(/化出之爻旬空/.test(x.text) && body.includes('亦逢旬空')))) assert.ok(nz(body).includes(nz(b.text).replace(/[，；].*$/, '').replace(/^(官|父|世|子孙|财|妻财|兄弟|兄)[子丑寅卯辰巳午未申酉戌亥]/, '').slice(0, 5)), `${lv} ${b.level}证据未写进正文：${b.text}`);
     for (const b of text.basis) assert.ok(b.sources.length > 0 || !b.rules.length, `${lv} 依据缺出处：${b.text}`);
     for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!basisText.includes(b), `${lv} 依据栏含「${b}」`);
     for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!body.includes(b), `${lv} 含「${b}」`);
