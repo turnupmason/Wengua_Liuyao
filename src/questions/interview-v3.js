@@ -5,7 +5,7 @@ import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 import { selectYongshen } from '../evidence.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.12.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.13.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -120,19 +120,16 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const F = pick('父母');
   // 取用次序（飞伏神章）：用神不现即以日月为用；日月非用神，飞爻、变爻俱无，始寻伏神
   //「若用神不现，即以日月为用神，倘日月非用神者，则本宫首卦寻之」「飞爻变爻俱无用神者，始寻伏神」
-  //「伏神有用者有六：伏神得日月生者一也」——伏神有用时取伏神（日月为其生扶）；伏神无用或无伏神时以日月为用。
-  // 网上卦例 W13、B10：父母伏而有用、日辰同五行，取伏神断对；先取日月则断错。
-  const hiddenUsable = (xs) => xs.filter((x) => x.lv >= 1).sort((a, b) => b.lv - a.lv)[0] || null;
+  // 月将章「卦无用神即以月建为用神，不必寻伏神也」。次序：明现 → 化出 → 日月 → 伏神。
+  // 用户裁定 B-015（2026-11-16「Follow 增删」）：此前「有用之伏神先于日月」系据网上卦例 W13、B10 之结果而定，不合增删原文，改回
   let riyueGuan = missing.monthIsYong || missing.dayIsYong;
   let g = G.best;
   if (!g && G.changed.length) g = [...G.changed].sort((a, b) => b.lv - a.lv)[0];
-  if (!g && hiddenUsable(G.hidden)) { g = hiddenUsable(G.hidden); riyueGuan = false; }
   if (!g && !riyueGuan && G.hidden.length) g = [...G.hidden].sort((a, b) => b.lv - a.lv)[0];
   const ELB = { 子: '水', 亥: '水', 寅: '木', 卯: '木', 巳: '火', 午: '火', 申: '金', 酉: '金', 辰: '土', 戌: '土', 丑: '土', 未: '土' };
   const fuEl = Object.keys(GEN).find((e) => GEN[e] === chart.primary.palaceElement);
   let f = F.best;
   if (!f && F.changed.length) f = [...F.changed].sort((a, b) => b.lv - a.lv)[0];
-  if (!f && hiddenUsable(F.hidden)) f = hiddenUsable(F.hidden);
   const riyueFu = !f && (ELB[month] === fuEl || ELB[day] === fuEl);
   if (!f && !riyueFu && F.hidden.length) f = [...F.hidden].sort((a, b) => b.lv - a.lv)[0];
   // 月建、日辰本身为官之五行而生合世（月建作官星而合世）
