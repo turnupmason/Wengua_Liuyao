@@ -3,7 +3,7 @@
 import { interviewV3 } from './interview-v3.js';
 import { RULE_SOURCES, RULE_TEXTS } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.7.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.8.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -60,7 +60,7 @@ const BOOK = { 火珠林: '火珠林', 易隐: '易隐', 黄金策: '黄金策',
 const NOTE_PART = /只作象|不计加减|不计成败|只作态度/;
 // 编者用语改成读者话（不是古书原话的，不加「」）
 // 正文里只剩名目的几种应爻、世墓条目：保留名目，补出意思（括注引文在依据栏）
-const PLAIN = [[/^(应[子丑寅卯辰巳午未申酉戌亥]旬空)$/, '$1，对方那边眼下心意未定，说法未必落实'],
+const PLAIN = [[/^(应[子丑寅卯辰巳午未申酉戌亥]旬空)$/, '$1，对方回应能否落实，尚需观察'],
   [/^(应[子丑寅卯辰巳午未申酉戌亥]月破)$/, '$1，对方那头一时难有实在的回应'],
   [/^(应[子丑寅卯辰巳午未申酉戌亥]绝于日[子丑寅卯辰巳午未申酉戌亥])$/, '$1，对方那边眼下提不起劲'],
   [/^(应[子丑寅卯辰巳午未申酉戌亥]被日[子丑寅卯辰巳午未申酉戌亥]冲破)$/, '$1，对方那边心意不稳'],
@@ -106,7 +106,7 @@ function render(text, tone, rules) {
 }
 // 能过之项在正文里的说法（条目本身只是名目，正文要说清它是什么意思）
 const PASS_SAY = {
-  旺官持世: '官星旺而坐在你的世爻上，录取之神就在你身上',
+  旺官持世: '官星旺而持世，是求名的一项重要有利条件',
   官父两旺: '官星与父母都旺，录取和表现两层都有底',
   旺官生合世: '官星旺，又来生合你的世爻',
   日月官生合世: '当月或当天本身就是官星，并来生合你的世爻',
@@ -291,7 +291,7 @@ export function interviewV3Text(chart, ctx = {}) {
     if (fu.twoAndClash) t += '；两爻父母相冲，题目对你来说偏生';
     const mo = d.calendarToWorld.monthOnFu;
     if (mo === '克') t += '；月建克父母（月克文书，程式背而不中）：从卦象看，表现与考官要的路子不太对';
-    else if (mo === '合克作合') t += '；父母虽受月建克，但与月建相合，又另有生扶，按合克并见之例仍作合看，月建这一层不作克论';
+    else if (mo === '合克作合') t += '；月建克父母的事实仍在，只是二者相合，父母又另有生扶，综合起来作合看';
     else if (mo === '生') t += '；月建生父母，表现一层得当月之助';
     else if (mo === '合') t += '；月建与父母相合，表现一层得当月之助';
     out.push(sentence('临场表现', `${t}。`, fu.rules.concat(['R-QIUMING-03', 'R-QIUMING-05'], t.includes('始寻伏神') ? ['R-FUSHEN-01'] : [])));
