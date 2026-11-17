@@ -21,4 +21,6 @@ echo "$ea" | head -1
 # 覆盖核对：类稿写到全类每卦皆判到之条目；逐卦断语写到每卦判到之每一条
 python scripts/analysis/audit-class-coverage.py | tail -1 || rc=1
 node scripts/analysis/audit-v3-text-coverage.mjs 5000 | head -1
+# 引擎括注引文须在所引规则原文中查得（核不上者列出即不通过）
+qs=$(node scripts/analysis/audit-engine-quote-source.mjs | tail -1); echo "引文出处：$qs"; echo "$qs" | grep -q '共 0 处' || rc=1
 exit $rc

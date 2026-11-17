@@ -39,9 +39,9 @@ const FUYIN = { 寅: ['巳', '亥'], 申: ['巳', '亥'], 巳: ['寅', '申'], �
  */
 export const SHENSHA_RELEVANCE = Object.freeze({
   'career.interview.interview-pass': {
-    驿马: { use: '判', rules: ['R-DTJ-SH-03', 'R-DTJ-XJ-01', 'R-YY-YL-01'], why: '官爻禄马两重旺；驿马空亡徒费力；世下伏驿马迟选' },
-    禄神: { use: '判', rules: ['R-DTJ-SH-03', 'R-BZZ-SS-01'], why: '禄马扶身，风云际会；禄系丰足之神' },
-    天乙贵人: { use: '判', rules: ['R-DTJ-SH-03', 'R-BZZ-SS-01'], why: '贵人持世承恩；临官父主高迁' },
+    驿马: { use: '判', rules: ['R-DTJ-SH-03', 'R-DTJ-XJ-01', 'R-DTJ-SH-01', 'R-YY-YL-01'], why: '官爻禄马两重旺；驿马空亡徒费力；世下伏官，或伏驿马印绶者，迟选' },
+    禄神: { use: '判', rules: ['R-DTJ-SH-03', 'R-BZZ-SS-01'], why: '禄马扶身，万里风云际会；禄系丰足之神' },
+    天乙贵人: { use: '判', rules: ['R-DTJ-SH-03', 'R-BZZ-SS-01'], why: '贵人持世，九天雨露承恩；若临官鬼及文书，主官职高迁' },
     天喜: { use: '判', rules: ['R-DTJ-XJ-01'], why: '一带喜神来合卦，今秋荣达定无疑' },
     劫煞: { use: '判', rules: ['R-DTJ-SH-04', 'R-DTJ-XJ-01'], why: '劫杀临官节节蹉；劫杀交重损己' },
     天马: { use: '象', rules: ['R-BQS-SS-02'], why: '占仕宦遇此有升迁之兆（求职只作象意）' },

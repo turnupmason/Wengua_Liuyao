@@ -61,7 +61,7 @@ const NOTE_PART = /只作象|不计加减|不计成败|只作态度/;
 // 编者用语改成读者话（不是古书原话的，不加「」）
 const EDITOR = [[/不作否决/g, '不算致命'], [/改看官父世/g, '成败改看官、父与世爻'], [/，?两说并记/g, ''], [/只作态度之象/g, '只看作往来态度']];
 // 依据栏：括注逐段核对，规则原文里查得到的才作古书原话（2026-11-16 评审：「古书说」后面不能是引擎推算）
-const NORM = (u) => String(u).replace(/[﹐，、；。：:「」『』？！?!\s·.]/g, '');
+const NORM = (u) => String(u).replace(/[﹐﹑﹔﹕﹒，、；。：:「」『』？！?!\s·.]/g, '').replace(/乾/g, '干');
 function isQuote(part, rules) {
   const hay = NORM((rules || []).map((id) => RULE_TEXTS[id] || '').join(''));
   const chunks = String(part).split(/……|…/).map(NORM).filter((x) => x.length >= 2);
@@ -242,7 +242,7 @@ export function interviewV3Text(chart, ctx = {}) {
   const why = r.veto.length ? r.veto.map((v) => v.text).join('；') : r.verdict === 'fail' ? r.notes.filter((n) => /下第|不旺|不作旺官/.test(n.text)).map((n) => n.text).join('；') : r.pass.map((p) => p.text).join('；');
   const stageText = r.stage === 'before' ? '面试、笔试还没考：先看父母（临场表现），再看官鬼（职位）。' : r.stage === 'after' ? '已经考过、等结果：先看官鬼（职位、结果），父母看通知。' : '';
   const subjText = r.subject ? (r.subject.found ? `这是代占：以所问之人（${r.subject.relative}${POS[r.subject.position]}）为本主，不看你自己的世爻。` : `这是代占，但卦中不见${r.subject.relative}，本主之爻暂以世爻代看。`) : '';
-  out.push(sentence('结论', `${subjText}${stageText}${verdictText}。${why ? `关键在：${why}。` : ''}${r.layers.final ? `另：${r.layers.final}。` : ''}`, [...new Set([...veto, ...r.pass].flatMap((x) => x.rules))]));
+  out.push(sentence('结论', `${subjText}${stageText}${verdictText}。${why ? `关键在：${why}。` : ''}${r.layers.final ? `另：${r.layers.final}。` : ''}`, [...new Set([...veto, ...r.pass].flatMap((x) => x.rules).concat(/功名无成者/.test(r.layers.final || '') ? ['R-QIUMING-10'] : []))]));
 
   // 1. 临场表现（父母）
   const fu = d.fu;

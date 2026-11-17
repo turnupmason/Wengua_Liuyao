@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { buildChart, buildEvidence } from '../../src/index.js';
 import { interviewV3 } from '../../src/questions/interview-v3.js';
 import { RULE_TEXTS } from '../../src/data/rule-sources.js';
-const NORM = (u) => String(u).replace(/[﹐，、；。：:「」『』？！?!\s·.]/g, '');
+const NORM = (u) => String(u).replace(/[﹐﹑﹔﹕﹒，、；。：:「」『』？！?!\s·.]/g, '').replace(/乾/g, '干');
 const SRC = NORM(readFileSync('D:/Wengua_Liuyao/sources/classics/增删卜易.md', 'utf8'));
 const books = {};
 for (const f of ['增删卜易', '黄金策', '卜筮正宗', '易林补遗', '易隐', '火珠林', '断易天机', '卜筮全书']) { try { books[f] = NORM(readFileSync(`D:/Wengua_Liuyao/sources/classics/${f}.md`, 'utf8')); } catch { } }

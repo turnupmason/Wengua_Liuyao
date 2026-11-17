@@ -117,7 +117,7 @@ function placesOf(subject, chart) {
     (subject.branch === '申' && ch.to.branch === '巳' && chart.calendar.monthBranch !== '寅' && chart.calendar.dayBranch !== '寅')
     || (((subject.branch === '子' && ch.to.branch === '丑') || (subject.branch === '戌' && ch.to.branch === '卯')) && (strongSeason(subject.element, chart.calendar.monthBranch) || c.month.supports || c.day.supports
       || chart.lines.some((o) => o.moving && o.position !== subject.position && elementRelation(o.element, subject.element) === 'generates'))));
-  if (heZhongKe) places.push({ place: '自身动化（合中带克，作合论）', effect: '生', strong: false, dyn: true });
+  if (heZhongKe) places.push({ place: '自身动化合中带克，作合论', effect: '生', strong: false, dyn: true });
   if (ch && !heZhongKe) {
     const dyn = strongSeason(ch.to.element, chart.calendar.monthBranch);
     // 写清是哪一种化：进神是同类相扶，不是回头来生（2026-11-16 评审）
