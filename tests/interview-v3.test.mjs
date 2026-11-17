@@ -72,7 +72,13 @@ test('逐卦断语：十项齐全，判定依据都写进断语，无内部用�
     const items = new Set(text.items.map((x) => x.item));
     for (const n of need) assert.ok(items.has(n), `${lv} 缺「${n}」`);
     const body = text.items.map((x) => x.text).join('');
-    for (const v of [...v3.veto, ...v3.layerVeto, ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes]) assert.ok(body.includes(v.text.replace(/（.*?）/g, '').slice(0, 6)), `${lv} 判定未写进断语：${v.text}`);
+    // 分层（用户 2026-11-16「采用分层」）：每条判定都进依据栏；决定性与重要的还须写进正文
+    const basisText = text.basis.map((x) => x.text).join('');
+    const key = (t) => t.replace(/（.*?）/g, '').slice(0, 6);
+    for (const v of [...v3.veto, ...v3.layerVeto, ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes]) assert.ok(basisText.includes(key(v.text)), `${lv} 判定未进依据栏：${v.text}`);
+    for (const b of text.basis.filter((x) => ['决定', '重要'].includes(x.level))) assert.ok(body.includes(b.text.replace(/，.*$/, '').slice(0, 6)), `${lv} ${b.level}证据未写进正文：${b.text}`);
+    for (const b of text.basis) assert.ok(b.sources.length > 0 || !b.rules.length, `${lv} 依据缺出处：${b.text}`);
+    for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!basisText.includes(b), `${lv} 依据栏含「${b}」`);
     for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!body.includes(b), `${lv} 含「${b}」`);
   }
 });
@@ -128,4 +134,12 @@ test('兄弟持世合乡试章「必添科名」之条件者，官克世不作�
     }
   }
   assert.ok(found > 0);
+});
+
+test('依据栏出处表与规则登记一致（src/data/rule-sources.js 由 scripts/build-rule-sources.mjs 生成）', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { RULE_SOURCES } = await import('../src/data/rule-sources.js');
+  const reg = JSON.parse(readFileSync(new URL('../rules/register.json', import.meta.url), 'utf8'));
+  for (const r of reg.rules) assert.deepEqual(RULE_SOURCES[r.rule_id], [r.source_book, r.source_chapter], `${r.rule_id} 出处表过期，请重跑 build-rule-sources`);
+  assert.equal(Object.keys(RULE_SOURCES).length, reg.rules.length);
 });

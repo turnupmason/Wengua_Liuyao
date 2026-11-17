@@ -1,8 +1,9 @@
 // 面试问第三版：逐卦断语段（docs/10 第四之二节十项）。判定用到的每一条都要写进断语，不得只判不写。
 // 文字只用排盘事实与古籍规则组织；象意一律带「从卦象看」限定（C21）；规则编号只放在 rules 字段，不进正文（C06）。
 import { interviewV3 } from './interview-v3.js';
+import { RULE_SOURCES } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.4.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.0.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -88,24 +89,58 @@ function render(text, tone) {
   for (const [a, b] of EDITOR) s = s.replace(a, b);
   return s.replace(/。，/g, '，');
 }
+// 证据分级：决定（否决、能过、定结论的象注）、重要（关乎官父世三层的加减）、一般（应、兄弟、妻财、卦级、神煞）、参考（其余象注）
+const DECISIVE_NOTE = /下第|官父皆不旺|出现无情|不作旺官|始则艰阻|不作否决|不算致命/;
+const CORE = new Set(['能否录取', '临场表现', '自身状态']);
+function levelOf(kind, text) {
+  if (kind === 'veto' || kind === 'pass') return '决定';
+  // 核心三层里的象注多是限定条件（化空、不作真墓、贪生忘克、克不动），与所限定之条目一起说，列为重要
+  if (kind === 'note') return DECISIVE_NOTE.test(text) ? '决定' : CORE.has(sectionOf(text)) && !NOTE_PART.test(text) ? '重要' : '参考';
+  const h = text.replace(/（.*$/, '');
+  if (SHEN_NAMES.some((n) => h.startsWith(n))) return '一般';
+  return CORE.has(sectionOf(text)) ? '重要' : '一般';
+}
+// 出处：规则编号 → 《书·章》（章名去卷次、序号）
+const chapShort = (c) => String(c).replace(/^.*?·/, '').replace(/^\d+、/, '').replace(/^[一二三四五六七八九十]+、/, '').replace(/第[一二三四五六七八九十百又〇零]+.*$/, '').replace(/又$/, '').replace(/《/g, '〈').replace(/》/g, '〉').trim();
+function sourcesOf(rules) {
+  const seen = new Set(); const out = [];
+  for (const id of rules || []) {
+    const src = RULE_SOURCES[id];
+    if (!src) continue;
+    const t = `《${src[0]}${chapShort(src[1]) && chapShort(src[1]) !== src[0] ? `·${chapShort(src[1])}` : ''}》`;
+    if (!seen.has(t)) { seen.add(t); out.push(t); }
+  }
+  return out;
+}
+// 正文用：只留第一处古籍原句，免得一句话里堆四五处「又说」
+function renderMain(text, tone) {
+  const m = text.match(/^([^（]*)（([^（）]*)）(.*)$/);
+  if (!m || m[2].length < 6) return render(text, tone);
+  const first = m[2].split('；').map((x) => x.trim()).find((x) => x.length >= 6 && !NOTE_PART.test(x));
+  return render(first ? `${m[1]}（${first}）${m[3]}` : `${m[1]}${m[3]}`, tone);
+}
 function weave(out, r) {
   const body = () => out.map((x) => x.text).join('');
   const head = (t) => t.replace(/（.*?）/g, '').replace(/——.*$/, (m) => m.replace(/（.*?）/g, ''));
   const covered = (t) => body().includes(head(t));
   const groups = new Map();
-  const add = (x, tone, force = false) => {
-    if (!force && covered(x.text)) return;
+  const basis = [];
+  const add = (x, kind, tone, force = false) => {
+    const level = levelOf(kind, x.text);
     const sec = sectionOf(x.text);
+    basis.push({ level, section: sec, text: `${render(x.text, tone)}。`, sources: sourcesOf(x.rules), rules: x.rules || [] });
+    if (!['决定', '重要'].includes(level)) return;
+    if (!force && covered(x.text)) return;
     if (!groups.has(sec)) groups.set(sec, { texts: [], rules: [] });
     const g = groups.get(sec);
-    const s = render(x.text, tone);
-    if (!g.texts.includes(s)) { g.texts.push(s); g.rules.push(...(x.rules || [])); }
+    const t = renderMain(x.text, tone);
+    if (!g.texts.includes(t)) { g.texts.push(t); g.rules.push(...(x.rules || [])); }
   };
-  for (const x of [...r.veto, ...(r.layerVeto || [])]) add(x, 'bad');
-  for (const x of r.pass) add(x, 'good', true);
-  for (const x of r.plus) add(x, 'good');
-  for (const x of r.minus) add(x, 'bad');
-  for (const x of r.notes) add(x, null);
+  for (const x of [...r.veto, ...(r.layerVeto || [])]) add(x, 'veto', 'bad');
+  for (const x of r.pass) add(x, 'pass', 'good', true);
+  for (const x of r.plus) add(x, 'plus', 'good');
+  for (const x of r.minus) add(x, 'minus', 'bad');
+  for (const x of r.notes) add(x, 'note', null);
   for (const [sec, g] of groups) {
     const text = `${g.texts.join('。')}。`;
     let at = -1;
@@ -114,6 +149,8 @@ function weave(out, r) {
     if (at >= 0) out.splice(at + 1, 0, item);
     else out.push(item);
   }
+  const ORDER = { 决定: 0, 重要: 1, 一般: 2, 参考: 3 };
+  return basis.sort((p, q) => ORDER[p.level] - ORDER[q.level]);
 }
 
 export function interviewV3Text(chart, ctx = {}) {
@@ -323,11 +360,12 @@ export function interviewV3Text(chart, ctx = {}) {
   // 织入：判定用到而上文没写到的每一条（否决、能过、加分、减分、象注），按所论之爻写进对应一段，
   // 古籍原句以「」嵌进句中，按吉凶说明于你有利或不利；不再以「判断依据」「加分：」「减分：」清单堆在文末。
   // 用户 2026-11-16：「引擎断了什么，用了什么规则，所有都要写出来」「既不能过度模板说话」。
-  weave(out, r);
+  const basis = weave(out, r);
 
   // 断语句中凡嵌入判定条文之括注引文者，补引该条之规则（引擎逐字核对：断语句不得只引固定规则而漏引所嵌条文之出处）
   const allItems = [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes];
   const quoteSegs = (t) => [...String(t).matchAll(/（([^（）]+)）/g)].map((m) => m[1]).filter((q) => q.length >= 6);
   for (const s0 of out) for (const x of allItems) if (quoteSegs(x.text).some((q) => s0.text.includes(q))) s0.rules = [...new Set([...s0.rules, ...(x.rules || [])])];
-  return { version: INTERVIEW_V3_TEXT_VERSION, verdict: r.verdict, items: out };
+  // items：正文（决定性与重要证据织入各段）；basis：依据栏（全部判定条目，分级、所在段、说明、古籍原句、出处、规则号），供展开查看
+  return { version: INTERVIEW_V3_TEXT_VERSION, verdict: r.verdict, items: out, basis };
 }

@@ -20,16 +20,22 @@ for (let n = 0; n < N; n += 1) {
   const v3 = interviewV3(chart, { evidence });
   const t = interviewV3Text(chart, { evidence, v3 });
   const body = (t.items || []).map((x) => x.text || '').join('');
+  // 分层：每条进依据栏；决定性与重要者还须进正文
+  const basisText = (t.basis || []).map((x) => x.text).join('');
+  for (const b of (t.basis || []).filter((x) => ['决定', '重要'].includes(x.level))) {
+    const k = b.text.replace(/，.*$/, '').slice(0, 6);
+    if (!body.includes(k)) { const kk = '正文缺：' + norm(b.text); const m = miss.get(kk) || { n: 0, ex: '〔' + b.level + '〕' + b.text }; m.n += 1; miss.set(kk, m); seen.set(kk, (seen.get(kk) || 0) + 1); }
+  }
   const items = [...v3.veto, ...(v3.layerVeto || []), ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes].map((x) => x.text);
   for (const it of items) {
     const head = it.replace(/（.*$/, '').replace(/：.*$/, '');
     const k = norm(it);
     seen.set(k, (seen.get(k) || 0) + 1);
-    if (!body.includes(head)) {
+    if (!basisText.includes(head)) {
       const m = miss.get(k) || { n: 0, ex: it };
       m.n += 1; miss.set(k, m);
     }
   }
 }
-console.log(`逐卦断语覆盖：${N} 盘，判断条目 ${seen.size} 种；未写进断语 ${miss.size} 种`);
+console.log(`逐卦断语覆盖（分层）：${N} 盘，判断条目全部进依据栏、决定与重要者进正文；缺 ${miss.size} 种`);
 for (const [k, m] of [...miss].sort((a, b) => b[1].n - a[1].n)) console.log(`  ${m.n}/${seen.get(k)}  ${m.ex}`);
