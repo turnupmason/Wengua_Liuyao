@@ -932872,6 +932872,3006 @@
         "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
         "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
       }
+    },
+    {
+      "record_id": "RV-41815",
+      "script_id": "IPC-0001",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "生官的妻财、克官的子孙都没有上卦，伏在别的爻下面而出不来。克官的出不来，是好事；生官的也出不来，官星少一分外助，但它自己当令或得日月扶起，用不着借力。\n若有兄弟发动，算是竞争者露头的减分，各卦不同；它动不了官父两旺的大局。官星出现于卦面而旺，古人称「为久为远」，录取之后也坐得住。",
+          "after": "生官的妻财、克官的子孙都没有上卦，伏在别的爻下面而出不来。克官的出不来，是好事；生官的也出不来，官星少一分外助，但它自己当令或得日月扶起，用不着借力。\n若有兄弟发动，就是竞争者露了头，各卦不同；它动不了官父两旺的大局。官星出现于卦面而旺，古人称「为久为远」，录取之后也坐得住。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0001.eq014.p21.json",
+      "original_content_hash": "a5607a651a27fa874ba0e7b2a0df51635044270a7bc3f6c89eb0d83e669183c5",
+      "content_hash": "160951a762d1bd885270e6b8e92145d6b2307fff82b55f81830a55d349db6c14",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41816",
+      "script_id": "IPC-0001",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "160951a762d1bd885270e6b8e92145d6b2307fff82b55f81830a55d349db6c14",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0001.json"
+    },
+    {
+      "record_id": "RV-41817",
+      "script_id": "IPC-0001",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "160951a762d1bd885270e6b8e92145d6b2307fff82b55f81830a55d349db6c14",
+      "findings": [],
+      "notes": "依类别画像复算：全类 312 盘统计（月建六亲 官鬼(52%)、父母(48%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0001.json"
+    },
+    {
+      "record_id": "RV-41818",
+      "script_id": "IPC-0001",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "160951a762d1bd885270e6b8e92145d6b2307fff82b55f81830a55d349db6c14",
+      "findings": [],
+      "notes": "反方：原神伏而不出，官无根，旺不长久。驳：官星当令或临日月而旺，无须原神；忌神同样伏而不出，伤不到官；第三版两项能过、无否决。",
+      "report": "reports/review-classes/IPC-0001.json"
+    },
+    {
+      "record_id": "RV-41819",
+      "script_id": "IPC-0001",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "160951a762d1bd885270e6b8e92145d6b2307fff82b55f81830a55d349db6c14",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0001.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41820",
+      "script_id": "IPC-0003",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "ending",
+          "before": "录取之神旺而持世，伤官之神无力，结果倾向通过。文书、应爻、神煞这些细处的加减各卦不同，排盘时另列，都不改这一判断。",
+          "after": "录取之神旺而持世，伤官之神无力，结果倾向通过。文书、应爻、神煞这些细处的好坏各卦不同，排盘时另列，都不改这一判断。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0003.eq014.p20.json",
+      "original_content_hash": "67e7cc14d2a5b3c023ac51a54da4cd7424ff757334ce14b56d92a4ed1cbcaad2",
+      "content_hash": "4a65436faaa297a3e1f094d55e810cbafaaff50796076d5a472c3afd94f13f96",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41821",
+      "script_id": "IPC-0003",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "4a65436faaa297a3e1f094d55e810cbafaaff50796076d5a472c3afd94f13f96",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0003.json"
+    },
+    {
+      "record_id": "RV-41822",
+      "script_id": "IPC-0003",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "4a65436faaa297a3e1f094d55e810cbafaaff50796076d5a472c3afd94f13f96",
+      "findings": [],
+      "notes": "依类别画像复算：全类 229 盘统计（月建六亲 妻财(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0003.json"
+    },
+    {
+      "record_id": "RV-41823",
+      "script_id": "IPC-0003",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "4a65436faaa297a3e1f094d55e810cbafaaff50796076d5a472c3afd94f13f96",
+      "findings": [],
+      "notes": "反方：面试一事，官与父母并看，父母无气不该判通过。驳：乡试章明文「父衰官旺堪许登科」「福齐文不齐，反许遂志」；第三版旺官持世为能过之项，且全类无否决项。",
+      "report": "reports/review-classes/IPC-0003.json"
+    },
+    {
+      "record_id": "RV-41824",
+      "script_id": "IPC-0003",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "4a65436faaa297a3e1f094d55e810cbafaaff50796076d5a472c3afd94f13f96",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0003.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41825",
+      "script_id": "IPC-0005",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process",
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "子孙是克官之神。它在卦中安静不动，不主动去克，官星不受它的伤。官星若正逢旬空，它得月生而旺，或又被日辰冲起，都不是落底之空，出空、冲实便用得上。\n父母这一层，或有气或无气。无气时，乡试章「官爻旺而生世持世﹐若是父爻不旺﹐谓之福齐文不齐﹐反许遂志」照样许你；有气时更稳。父母若独自发动而休囚，算一分减，不足以动摇旺官持世。旺官明现，「为久为远」，入选之后位置也稳。",
+          "after": "子孙是克官之神。它在卦中安静不动，不主动去克，官星不受它的伤。官星若正逢旬空，它得月生而旺，或又被日辰冲起，都不是落底之空，出空、冲实便用得上。\n父母这一层，或有气或无气。无气时，乡试章「官爻旺而生世持世﹐若是父爻不旺﹐谓之福齐文不齐﹐反许遂志」照样许你；有气时更稳。父母若独自发动而休囚，表现上会弱一些，不足以动摇旺官持世。旺官明现，「为久为远」，入选之后位置也稳。"
+        },
+        {
+          "field": "ending",
+          "before": "旺官持世而不受伤，倾向通过。应爻、父母、神煞的细节加减，各卦有别，排盘里一项项列着。",
+          "after": "旺官持世而不受伤，倾向通过。应爻、父母、神煞的细节好坏，各卦有别，排盘里一项项列着。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0005.eq014.p20.json",
+      "original_content_hash": "5c87268ddfac905adf89bb93977aeab8b55ad24ed2862657e4b7dc6ef14fc63a",
+      "content_hash": "16dba0031fb0f811f23e27146d588c6ff5204eafc2e7b7083b6fe0e4afb3e00f",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41826",
+      "script_id": "IPC-0005",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16dba0031fb0f811f23e27146d588c6ff5204eafc2e7b7083b6fe0e4afb3e00f",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0005.json"
+    },
+    {
+      "record_id": "RV-41827",
+      "script_id": "IPC-0005",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16dba0031fb0f811f23e27146d588c6ff5204eafc2e7b7083b6fe0e4afb3e00f",
+      "findings": [],
+      "notes": "依类别画像复算：全类 166 盘统计（月建六亲 妻财(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0005.json"
+    },
+    {
+      "record_id": "RV-41828",
+      "script_id": "IPC-0005",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16dba0031fb0f811f23e27146d588c6ff5204eafc2e7b7083b6fe0e4afb3e00f",
+      "findings": [],
+      "notes": "反方：子孙有气在卦，求名所忌。驳：增删「子孙财爻持世，及动于卦中，终须下第」，忌在持世与发动；本类子孙安静不持世，第三版无否决。",
+      "report": "reports/review-classes/IPC-0005.json"
+    },
+    {
+      "record_id": "RV-41829",
+      "script_id": "IPC-0005",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16dba0031fb0f811f23e27146d588c6ff5204eafc2e7b7083b6fe0e4afb3e00f",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0005.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41830",
+      "script_id": "IPC-0006",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "brief",
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "brief",
+          "before": "官鬼在应爻上，旺而来生你的世爻；坐在世上的是父母，同样旺相；当天日辰或月建本身就是官星，也来生合你。官父两旺，四项能过之象同时出现，倾向通过。",
+          "after": "官鬼在应爻上，旺而来生你的世爻；坐在世上的是父母，同样旺相；当天日辰或月建本身就是官星，也来生合你。官父两旺，四处有利之象同时出现，倾向通过。"
+        },
+        {
+          "field": "process",
+          "before": "更难得的是，当天的日辰或当月的月建本身就是官鬼，并生合你的世爻；升选候补章所说「日月动爻作官星生合世爻」皆吉，这一卦占了。\n生官的妻财伏而不出，克官的子孙在卦中无力，都不碍事。若有兄弟发动，或父母化出同类而不进，各算一分减，盖不过这几项能过之象。临应之官明现而旺，主「为久为远」，事成之后不易生变。",
+          "after": "更难得的是，当天的日辰或当月的月建本身就是官鬼，并生合你的世爻；升选候补章所说「日月动爻作官星生合世爻」皆吉，这一卦占了。\n生官的妻财伏而不出，克官的子孙在卦中无力，都不碍事。若有兄弟发动，或父母化出同类而不进，各是一处小不利，盖不过这几处有利之象。临应之官明现而旺，主「为久为远」，事成之后不易生变。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0006.eq014.p20.json",
+      "original_content_hash": "22220380dbb444623c6ff17328ccf2dc08e8893430b94077841c35cb3f2ff5d9",
+      "content_hash": "6306090be42ef0009402ac56022ed26513fba4d2eebc9df11f000681f24f2dba",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41831",
+      "script_id": "IPC-0006",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6306090be42ef0009402ac56022ed26513fba4d2eebc9df11f000681f24f2dba",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0006.json"
+    },
+    {
+      "record_id": "RV-41832",
+      "script_id": "IPC-0006",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6306090be42ef0009402ac56022ed26513fba4d2eebc9df11f000681f24f2dba",
+      "findings": [],
+      "notes": "依类别画像复算：全类 234 盘统计（月建六亲 官鬼(65%)、父母(35%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0006.json"
+    },
+    {
+      "record_id": "RV-41833",
+      "script_id": "IPC-0006",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6306090be42ef0009402ac56022ed26513fba4d2eebc9df11f000681f24f2dba",
+      "findings": [],
+      "notes": "反方：官临应爻，易林等谓「官临应爻，不得」。驳：增删求名以官与世之情为准，官来生合世爻者必收；「官临应不得」指官生合应而不顾世（出现无情），本类官生世。",
+      "report": "reports/review-classes/IPC-0006.json"
+    },
+    {
+      "record_id": "RV-41834",
+      "script_id": "IPC-0006",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6306090be42ef0009402ac56022ed26513fba4d2eebc9df11f000681f24f2dba",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0006.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41835",
+      "script_id": "IPC-0009",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "应爻是兄弟，被你的世爻所克。谒贵之法以世克应为致怨之象，但平人求职以官为主，世应生克只看作对方态度，不计成败。\n父母或有气，或偏弱；若安静逢合，是「父母最宜逢六合」的加分。兄弟、妻财若有发动，或应爻落空，各算一分减，排盘时另列。上卦之官旺相，「为久为远」，录取后也站得稳当。",
+          "after": "应爻是兄弟，被你的世爻所克。谒贵之法以世克应为致怨之象，但平人求职以官为主，世应生克只看作对方态度，不计成败。\n父母或有气，或偏弱；若安静逢合，合了「父母最宜逢六合」，是好事。兄弟、妻财若有发动，或应爻落空，各是一处小阻，排盘时另列。上卦之官旺相，「为久为远」，录取后也站得稳当。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0009.eq014.p18.json",
+      "original_content_hash": "719125ab1de86bb6147f755ca23a5ff829c0073e0c3897154ab40aebdd775173",
+      "content_hash": "7373b4fcafd7768edda5ed5903c811812c9adab1fcf2d2864dfc87514564ca0c",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41836",
+      "script_id": "IPC-0009",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7373b4fcafd7768edda5ed5903c811812c9adab1fcf2d2864dfc87514564ca0c",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0009.json"
+    },
+    {
+      "record_id": "RV-41837",
+      "script_id": "IPC-0009",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7373b4fcafd7768edda5ed5903c811812c9adab1fcf2d2864dfc87514564ca0c",
+      "findings": [],
+      "notes": "依类别画像复算：全类 143 盘统计（月建六亲 妻财(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0009.json"
+    },
+    {
+      "record_id": "RV-41838",
+      "script_id": "IPC-0009",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7373b4fcafd7768edda5ed5903c811812c9adab1fcf2d2864dfc87514564ca0c",
+      "findings": [],
+      "notes": "反方：世克应，谒贵所忌。驳：第三版求职以官为主，世应生克除应克世、应空外只作象；本类旺官持世，无否决。",
+      "report": "reports/review-classes/IPC-0009.json"
+    },
+    {
+      "record_id": "RV-41839",
+      "script_id": "IPC-0009",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7373b4fcafd7768edda5ed5903c811812c9adab1fcf2d2864dfc87514564ca0c",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0009.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41840",
+      "script_id": "IPC-0012",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "妻财与子孙都静而不起作用。财不来生，官星少一分助力；子孙不来克，官星也少一分威胁。两头都静，官星的旺衰便是全卦的重心。\n文书父母一般有气，表现一层站得住；若父母独自发动而不化凶，另算一分加分。应爻来克世、或落旬空、绝于日，只关乎对方态度，各卦不同。官鬼明现又旺，主「为久为远」，录取以后不易动摇。",
+          "after": "妻财与子孙都静而不起作用。财不来生，官星少一分助力；子孙不来克，官星也少一分威胁。两头都静，官星的旺衰便是全卦的重心。\n文书父母一般有气，表现一层站得住；若父母独自发动而不化凶，表现上更添一分底气。应爻来克世、或落旬空、绝于日，只关乎对方态度，各卦不同。官鬼明现又旺，主「为久为远」，录取以后不易动摇。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0012.eq014.p15.json",
+      "original_content_hash": "b473c79721d09a1db2846c83333aa794e468ac9732450ed49b71c8ca4993e2d7",
+      "content_hash": "48003254ff4730521b05e2d7458dfddd016e4ddd6a0429add584570f04108713",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41841",
+      "script_id": "IPC-0012",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "48003254ff4730521b05e2d7458dfddd016e4ddd6a0429add584570f04108713",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0012.json"
+    },
+    {
+      "record_id": "RV-41842",
+      "script_id": "IPC-0012",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "48003254ff4730521b05e2d7458dfddd016e4ddd6a0429add584570f04108713",
+      "findings": [],
+      "notes": "依类别画像复算：全类 108 盘统计（月建六亲 父母(51%)、官鬼(49%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0012.json"
+    },
+    {
+      "record_id": "RV-41843",
+      "script_id": "IPC-0012",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "48003254ff4730521b05e2d7458dfddd016e4ddd6a0429add584570f04108713",
+      "findings": [],
+      "notes": "反方：父母月份里官星休囚，旺不起来。驳：官泄于父不同于受克；日辰生之，状态判有力，第三版旺之口径含「月日之生」。",
+      "report": "reports/review-classes/IPC-0012.json"
+    },
+    {
+      "record_id": "RV-41844",
+      "script_id": "IPC-0012",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "48003254ff4730521b05e2d7458dfddd016e4ddd6a0429add584570f04108713",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0012.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41845",
+      "script_id": "IPC-0013",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "妻财、子孙都伏在别爻之下，没有上卦。它们伏而待时，不是永远出不来：飞伏神章说伏神得日月生、或伏神旺相，都算有用。克官的子孙一旦出伏，就可能来伤官，这是暗处的隐患。\n兄弟若在卦中发动，兄弟克财，伏着的财更难出来；兄弟又是争名之神，竞争会激烈一些。这些都是减分，不是否决。持世之官明现而旺，「为久为远」，眼下站得住，往后也站得长。",
+          "after": "妻财、子孙都伏在别爻之下，没有上卦。它们伏而待时，不是永远出不来：飞伏神章说伏神得日月生、或伏神旺相，都算有用。克官的子孙一旦出伏，就可能来伤官，这是暗处的隐患。\n兄弟若在卦中发动，兄弟克财，伏着的财更难出来；兄弟又是争名之神，竞争会激烈一些。这些只是阻力，不至于翻盘。持世之官明现而旺，「为久为远」，眼下站得住，往后也站得长。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0013.eq014.p15.json",
+      "original_content_hash": "96cf10776c0c7620ca7e2db8848c8d244ba86def06707f98f5d7989d76b639cf",
+      "content_hash": "ce325c207c3f356b2a4672b0ee4d35c93ddda2ec5a83cb7e4fad8a81c362fcf3",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41846",
+      "script_id": "IPC-0013",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "ce325c207c3f356b2a4672b0ee4d35c93ddda2ec5a83cb7e4fad8a81c362fcf3",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0013.json"
+    },
+    {
+      "record_id": "RV-41847",
+      "script_id": "IPC-0013",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "ce325c207c3f356b2a4672b0ee4d35c93ddda2ec5a83cb7e4fad8a81c362fcf3",
+      "findings": [],
+      "notes": "依类别画像复算：全类 159 盘统计（月建六亲 妻财(84%)、官鬼(9%)、兄弟(8%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0013.json"
+    },
+    {
+      "record_id": "RV-41848",
+      "script_id": "IPC-0013",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "ce325c207c3f356b2a4672b0ee4d35c93ddda2ec5a83cb7e4fad8a81c362fcf3",
+      "findings": [],
+      "notes": "反方：原神不上卦，官无源。驳：官星当令或得月生，自身旺相；原神伏而待时只减久远，不改这一轮。",
+      "report": "reports/review-classes/IPC-0013.json"
+    },
+    {
+      "record_id": "RV-41849",
+      "script_id": "IPC-0013",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "ce325c207c3f356b2a4672b0ee4d35c93ddda2ec5a83cb7e4fad8a81c362fcf3",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0013.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41850",
+      "script_id": "IPC-0014",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "日月本身就是官鬼，并生合你的世爻，这是升选候补章所说「日月动爻作官星生合世爻」的吉象，与卦中的官星一内一外，双重来就你。\n生官的妻财却被伤无力。《增删卜易》千金赋注说「用神虽旺﹐元神若被伤克者﹐即如水无泉源﹐木无根蒂」，官星眼下旺，来源却断了，录取之后能否长久，要打个折扣。兄弟若发动、或应爻是你的墓，另有减分。应上的官星明现旺相，古人谓「为久为远」；只因财源受伤，这份长久仍要打折扣。",
+          "after": "日月本身就是官鬼，并生合你的世爻，这是升选候补章所说「日月动爻作官星生合世爻」的吉象，与卦中的官星一内一外，双重来就你。\n生官的妻财却被伤无力。《增删卜易》千金赋注说「用神虽旺﹐元神若被伤克者﹐即如水无泉源﹐木无根蒂」，官星眼下旺，来源却断了，录取之后能否长久，要打个折扣。兄弟若发动、或应爻是你的墓，另有阻滞。应上的官星明现旺相，古人谓「为久为远」；只因财源受伤，这份长久仍要打折扣。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0014.eq014.p19.json",
+      "original_content_hash": "a28619c5bc6cfe741ad7eb1d612ae4f7260db18486b044db9e7f7f37a88a4232",
+      "content_hash": "f61660d4604405814fa2809322edbd1d5b8feff947bc1c3dbb98d5d3d2498279",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41851",
+      "script_id": "IPC-0014",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f61660d4604405814fa2809322edbd1d5b8feff947bc1c3dbb98d5d3d2498279",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0014.json"
+    },
+    {
+      "record_id": "RV-41852",
+      "script_id": "IPC-0014",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f61660d4604405814fa2809322edbd1d5b8feff947bc1c3dbb98d5d3d2498279",
+      "findings": [],
+      "notes": "依类别画像复算：全类 103 盘统计（月建六亲 官鬼(68%)、父母(32%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0014.json"
+    },
+    {
+      "record_id": "RV-41853",
+      "script_id": "IPC-0014",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f61660d4604405814fa2809322edbd1d5b8feff947bc1c3dbb98d5d3d2498279",
+      "findings": [],
+      "notes": "反方：原神被伤，用神无根。驳：「水要看源」论久远；官星本身临日月或当令而旺，这一轮能否录取看官父两旺。",
+      "report": "reports/review-classes/IPC-0014.json"
+    },
+    {
+      "record_id": "RV-41854",
+      "script_id": "IPC-0014",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f61660d4604405814fa2809322edbd1d5b8feff947bc1c3dbb98d5d3d2498279",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0014.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41855",
+      "script_id": "IPC-0015",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "偏难",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process",
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "第二重难处在官星。官鬼不在卦面，藏于妻财之下，飞神虽是生官之财，官星本身却休囚无气，又被当令的子孙压着，飞伏神章所谓「终不得出」。\n卦是六合，世应相生相合，对方态度不坏，谈得下去。但乡试章说「凡得六合卦﹐亦要官父世爻得地」，官父都不得地，六合只是表面的融洽。兄弟若发动来生合世，算一点加分，不改大局。官星伏藏不出，古人说「伏藏有气，只利暂时」，何况它连气都没有。",
+          "after": "第二重难处在官星。官鬼不在卦面，藏于妻财之下，飞神虽是生官之财，官星本身却休囚无气，又被当令的子孙压着，飞伏神章所谓「终不得出」。\n卦是六合，世应相生相合，对方态度不坏，谈得下去。但乡试章说「凡得六合卦﹐亦要官父世爻得地」，官父都不得地，六合只是表面的融洽。兄弟若发动来生合世，略有帮衬，不改大局。官星伏藏不出，古人说「伏藏有气，只利暂时」，何况它连气都没有。"
+        },
+        {
+          "field": "ending",
+          "before": "子孙旺而持世，官星伏而不出，两处都是否决，这一轮偏难。",
+          "after": "子孙旺而持世，官星伏而不出，两处都足以定局，这一轮偏难。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0015.eq014.p18.json",
+      "original_content_hash": "de9ed947f7f43bb29132fef40dcf8566c1ab814be8c5f96e5f8f106464f77dc7",
+      "content_hash": "63f5926042ceaf1e5852d1572d0ec185db38fd1ad92741fe959f55c6ddc37727",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41856",
+      "script_id": "IPC-0015",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "63f5926042ceaf1e5852d1572d0ec185db38fd1ad92741fe959f55c6ddc37727",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0015.json"
+    },
+    {
+      "record_id": "RV-41857",
+      "script_id": "IPC-0015",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "63f5926042ceaf1e5852d1572d0ec185db38fd1ad92741fe959f55c6ddc37727",
+      "findings": [],
+      "notes": "依类别画像复算：全类 126 盘统计（月建六亲 子孙(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0015.json"
+    },
+    {
+      "record_id": "RV-41858",
+      "script_id": "IPC-0015",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "63f5926042ceaf1e5852d1572d0ec185db38fd1ad92741fe959f55c6ddc37727",
+      "findings": [],
+      "notes": "反方：官伏财下，飞来生伏，得长生之助，可出。驳：伏神休囚而被当令子孙所克，飞伏神章列为终不得出；又子孙持世已是否决。",
+      "report": "reports/review-classes/IPC-0015.json"
+    },
+    {
+      "record_id": "RV-41859",
+      "script_id": "IPC-0015",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "63f5926042ceaf1e5852d1572d0ec185db38fd1ad92741fe959f55c6ddc37727",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0015.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41860",
+      "script_id": "IPC-0018",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "克官的子孙伏在别爻之下，休囚受制，出不来，官星头上没有阻力。生官的财也伏着，但它是待时之伏，得日月生扶、或飞神受冲之时便能出来助官，这一点比一般的旺官持世卦更厚实。\n兄弟、父母若在卦中同动，父母化回头生是加分，兄弟克财、争名则是减分。官星现而旺，「为久为远」，录取之后根基也稳。",
+          "after": "克官的子孙伏在别爻之下，休囚受制，出不来，官星头上没有阻力。生官的财也伏着，但它是待时之伏，得日月生扶、或飞神受冲之时便能出来助官，这一点比一般的旺官持世卦更厚实。\n兄弟、父母若在卦中同动，父母化回头生是助力，兄弟克财、争名则是阻力。官星现而旺，「为久为远」，录取之后根基也稳。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0018.eq014.p17.json",
+      "original_content_hash": "d0b1cd5995b01c87670ac6b99a9c3f9fad2c14b4701d6898c154aa20f3a6de90",
+      "content_hash": "57207dce8c7ba86c157194eaa628d0efe836e0a2e336c2126df4378662b95b00",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41861",
+      "script_id": "IPC-0018",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "57207dce8c7ba86c157194eaa628d0efe836e0a2e336c2126df4378662b95b00",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0018.json"
+    },
+    {
+      "record_id": "RV-41862",
+      "script_id": "IPC-0018",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "57207dce8c7ba86c157194eaa628d0efe836e0a2e336c2126df4378662b95b00",
+      "findings": [],
+      "notes": "依类别画像复算：全类 147 盘统计（月建六亲 妻财(50%)、官鬼(44%)、父母(5%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0018.json"
+    },
+    {
+      "record_id": "RV-41863",
+      "script_id": "IPC-0018",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "57207dce8c7ba86c157194eaa628d0efe836e0a2e336c2126df4378662b95b00",
+      "findings": [],
+      "notes": "反方：原神不上卦，官旺无源。驳：原神伏而待时，非绝无；官自旺，第三版两项能过、无否决。",
+      "report": "reports/review-classes/IPC-0018.json"
+    },
+    {
+      "record_id": "RV-41864",
+      "script_id": "IPC-0018",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "57207dce8c7ba86c157194eaa628d0efe836e0a2e336c2126df4378662b95b00",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0018.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41865",
+      "script_id": "IPC-0020",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "生官的妻财在卦中被伤无力，官星背后少了来源，成了之后能否长久要打折扣。克官的子孙有气而静，不主动作用。\n应爻若来克世，对方要求会严一些；若父母独自发动而不化凶，另算加分。这些细处各卦不同，排盘时另列。官旺而明现，本主「为久为远」；财被伤，长久上仍要留意。",
+          "after": "生官的妻财在卦中被伤无力，官星背后少了来源，成了之后能否长久要打折扣。克官的子孙有气而静，不主动作用。\n应爻若来克世，对方要求会严一些；若父母独自发动而不化凶，又添一分助力。这些细处各卦不同，排盘时另列。官旺而明现，本主「为久为远」；财被伤，长久上仍要留意。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0020.eq014.p18.json",
+      "original_content_hash": "36d5e2794ad48f60be45669b4372cdf73634b66c6f2573b392d6fd2d70dc17b3",
+      "content_hash": "f2720bf8b96102b09510e81cb53244809466ba4542228125e16d1ddb2a8bcd65",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41866",
+      "script_id": "IPC-0020",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f2720bf8b96102b09510e81cb53244809466ba4542228125e16d1ddb2a8bcd65",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0020.json"
+    },
+    {
+      "record_id": "RV-41867",
+      "script_id": "IPC-0020",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f2720bf8b96102b09510e81cb53244809466ba4542228125e16d1ddb2a8bcd65",
+      "findings": [],
+      "notes": "依类别画像复算：全类 111 盘统计（月建六亲 官鬼(77%)、父母(23%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0020.json"
+    },
+    {
+      "record_id": "RV-41868",
+      "script_id": "IPC-0020",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f2720bf8b96102b09510e81cb53244809466ba4542228125e16d1ddb2a8bcd65",
+      "findings": [],
+      "notes": "反方：原神被伤又应来克世，两项减分。驳：第三版两项能过、无否决，能过之项在则减分只降为慢、不翻判；本类加分一般不少于减分。",
+      "report": "reports/review-classes/IPC-0020.json"
+    },
+    {
+      "record_id": "RV-41869",
+      "script_id": "IPC-0020",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f2720bf8b96102b09510e81cb53244809466ba4542228125e16d1ddb2a8bcd65",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0020.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41870",
+      "script_id": "IPC-0021",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "悬而未决",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "能过之象有三：日辰或月建本身也是官星，来生合你；官父两旺；你世上就是旺相的父母。童试章说「父爻持世﹐得日月动爻相生相合者﹐亦要官星有气﹐始许成名」，这一卦条件齐备。\n不利的在细处。应爻来克你的世爻，对方那一头的态度偏硬；卦中若有兄弟发动，竞争者露头，「兄爻独发，定见阻挠」。生官的妻财与克官的子孙都安静无为，帮不上，也添不了乱。",
+          "after": "有利之象有三：日辰或月建本身也是官星，来生合你；官父两旺；你世上就是旺相的父母。童试章说「父爻持世﹐得日月动爻相生相合者﹐亦要官星有气﹐始许成名」，这一卦条件齐备。\n不利的在细处。应爻来克你的世爻，对方那一头的态度偏硬；卦中若有兄弟发动，竞争者露头，「兄爻独发，定见阻挠」。生官的妻财与克官的子孙都安静无为，帮不上，也添不了乱。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0021.eq014.p14.json",
+      "original_content_hash": "84e13bab9b71762d8324aad854ff69ed98e38c755bb46646caf0ecf39b3b69c5",
+      "content_hash": "70512d5e528252ca4a6617725a6f829292fe6fb544820a592cc07bc97ec953a3",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41871",
+      "script_id": "IPC-0021",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "70512d5e528252ca4a6617725a6f829292fe6fb544820a592cc07bc97ec953a3",
+      "findings": [],
+      "notes": "引文 6 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0021.json"
+    },
+    {
+      "record_id": "RV-41872",
+      "script_id": "IPC-0021",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "70512d5e528252ca4a6617725a6f829292fe6fb544820a592cc07bc97ec953a3",
+      "findings": [],
+      "notes": "依类别画像复算：全类 168 盘统计（月建六亲 官鬼(89%)、父母(11%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0021.json"
+    },
+    {
+      "record_id": "RV-41873",
+      "script_id": "IPC-0021",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "70512d5e528252ca4a6617725a6f829292fe6fb544820a592cc07bc97ec953a3",
+      "findings": [],
+      "notes": "反方：三项能过之象俱全，该判通过。驳：能过之象只说明有望之根；本类应爻克世为每卦皆有之减分，兄弟发动、父旺受冲等又常见，减分多于加分，依第三版判待定，不判通过，也不判否决。",
+      "report": "reports/review-classes/IPC-0021.json"
+    },
+    {
+      "record_id": "RV-41874",
+      "script_id": "IPC-0021",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "70512d5e528252ca4a6617725a6f829292fe6fb544820a592cc07bc97ec953a3",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0021.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41875",
+      "script_id": "IPC-0022",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "brief",
+        "process",
+        "judgment.v3_basis.text"
+      ],
+      "changes": [
+        {
+          "field": "brief",
+          "before": "官鬼在卦中两现，旺而生合你的世爻；坐在你世上的是旺父；日辰或月建本身也是官星来生合你。官父两旺，四项能过之象齐备，倾向通过；只是生官的妻财受伤，长久上弱一些。",
+          "after": "官鬼在卦中两现，旺而生合你的世爻；坐在你世上的是旺父；日辰或月建本身也是官星来生合你。官父两旺，四处有利之象齐备，倾向通过；只是生官的妻财受伤，长久上弱一些。"
+        },
+        {
+          "field": "process",
+          "before": "当天日辰或当月月建本身是官鬼，又生合你的世爻，内外两处官星同时来就你。父母若发动而不化凶，还另有加分。\n克官的子孙伏而出不来，伤不到官；生官的妻财却被伤无力，官星之旺缺了来源，录取以后的长久与待遇要打折扣。应爻若来克世、或绝于日，只是对方态度上的减分。两爻官星明现而旺，合「为久为远」之象；原神受伤，这一点要打折扣。",
+          "after": "当天日辰或当月月建本身是官鬼，又生合你的世爻，内外两处官星同时来就你。父母若发动而不化凶，还另添助力。\n克官的子孙伏而出不来，伤不到官；生官的妻财却被伤无力，官星之旺缺了来源，录取以后的长久与待遇要打折扣。应爻若来克世、或绝于日，只是对方态度上的不顺。两爻官星明现而旺，合「为久为远」之象；原神受伤，这一点要打折扣。"
+        },
+        {
+          "field": "judgment.v3_basis.text",
+          "before": "[[\"官父两旺\",\"官父两旺，四项能过之象齐备\"],[\"日月官生合世\",\"当天日辰或当月月建本身是官鬼，又生合你的世爻\"],[\"旺官生合世\",\"都旺，也都与你的世爻相生相合\"],[\"旺父就世\",\"你的世爻是父母，旺而持世\"]]",
+          "after": "[[\"官父两旺\",\"官父两旺，四处有利之象齐备\"],[\"日月官生合世\",\"当天日辰或当月月建本身是官鬼，又生合你的世爻\"],[\"旺官生合世\",\"都旺，也都与你的世爻相生相合\"],[\"旺父就世\",\"你的世爻是父母，旺而持世\"]]"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0022.eq014.p17.json",
+      "original_content_hash": "a662031af0579584eb28dfc48f18b28f21a722498a2d661d35158234e653e621",
+      "content_hash": "6664316206ccf0053230c51a7cb296138773ada949e724de4ca7064b875fc335",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41876",
+      "script_id": "IPC-0022",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6664316206ccf0053230c51a7cb296138773ada949e724de4ca7064b875fc335",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0022.json"
+    },
+    {
+      "record_id": "RV-41877",
+      "script_id": "IPC-0022",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6664316206ccf0053230c51a7cb296138773ada949e724de4ca7064b875fc335",
+      "findings": [],
+      "notes": "依类别画像复算：全类 104 盘统计（月建六亲 官鬼(72%)、父母(28%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0022.json"
+    },
+    {
+      "record_id": "RV-41878",
+      "script_id": "IPC-0022",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6664316206ccf0053230c51a7cb296138773ada949e724de4ca7064b875fc335",
+      "findings": [],
+      "notes": "反方：官两现，事不专一。驳：两现之官同来生合世，非出现无情；第三版四项能过、无否决。",
+      "report": "reports/review-classes/IPC-0022.json"
+    },
+    {
+      "record_id": "RV-41879",
+      "script_id": "IPC-0022",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "6664316206ccf0053230c51a7cb296138773ada949e724de4ca7064b875fc335",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0022.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41880",
+      "script_id": "IPC-0023",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "克官的子孙伏而出不来，伤不到官。父母若在卦中发动而不化凶，是一分加分；应爻若来克世，只是对方要求偏严。\n要留意的是你的世爻本身偏弱、又受克，要看它有无日月或动爻相扶，有扶便姑许。各卦扶在何处不同，排盘里写出。两现之官都旺，明现于卦，「为久为远」，录取后也不易生变。",
+          "after": "克官的子孙伏而出不来，伤不到官。父母若在卦中发动而不化凶，表现上更有底气；应爻若来克世，只是对方要求偏严。\n要留意的是你的世爻本身偏弱、又受克，要看它有无日月或动爻相扶，有扶便姑许。各卦扶在何处不同，排盘里写出。两现之官都旺，明现于卦，「为久为远」，录取后也不易生变。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0023.eq014.p13.json",
+      "original_content_hash": "e48bc666242caa24545cdec40dcc46ead3a47279bee06f1ecfe57d89cf1b5803",
+      "content_hash": "87373704dfbef3f15b938725867abedb9e74ec7e8aea3a2aa2ee937b7840ed9e",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41881",
+      "script_id": "IPC-0023",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "87373704dfbef3f15b938725867abedb9e74ec7e8aea3a2aa2ee937b7840ed9e",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0023.json"
+    },
+    {
+      "record_id": "RV-41882",
+      "script_id": "IPC-0023",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "87373704dfbef3f15b938725867abedb9e74ec7e8aea3a2aa2ee937b7840ed9e",
+      "findings": [],
+      "notes": "依类别画像复算：全类 103 盘统计（月建六亲 妻财(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0023.json"
+    },
+    {
+      "record_id": "RV-41883",
+      "script_id": "IPC-0023",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "87373704dfbef3f15b938725867abedb9e74ec7e8aea3a2aa2ee937b7840ed9e",
+      "findings": [],
+      "notes": "反方：世爻休囚受克，求名在我，我位既失。驳：世之受克多有日月或动爻之扶（姑许）；第三版无否决，旺官生合世为能过之项。",
+      "report": "reports/review-classes/IPC-0023.json"
+    },
+    {
+      "record_id": "RV-41884",
+      "script_id": "IPC-0023",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "87373704dfbef3f15b938725867abedb9e74ec7e8aea3a2aa2ee937b7840ed9e",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0023.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41885",
+      "script_id": "IPC-0025",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "偏难",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "世爻旺本是好事，可妻财的本性是克父母。黄金策「财若交重，休望青钱之中选」，财临世而克文书，表现一层受你自己牵累。\n生官的妻财在卦中安静旺相，底子在而不出力；克官的子孙无力，伤不到官。官星缺的不是根，而是眼下透不出来的那股劲：官星伏而不旺，撑不起录取一层，又没有别的能过之象来补。",
+          "after": "世爻旺本是好事，可妻财的本性是克父母。黄金策「财若交重，休望青钱之中选」，财临世而克文书，表现一层受你自己牵累。\n生官的妻财在卦中安静旺相，底子在而不出力；克官的子孙无力，伤不到官。官星缺的不是根，而是眼下透不出来的那股劲：官星伏而不旺，撑不起录取一层，又没有别的有利之象来补。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0025.eq014.p9.json",
+      "original_content_hash": "67a7fb237b63d9662a0b8219c6d13393f9f417e6401ad07559a0117103cf3763",
+      "content_hash": "1557a58a59913ed4d17b765ccab9afef81b4eb4eaf365eb542dccf01a07874a9",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41886",
+      "script_id": "IPC-0025",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1557a58a59913ed4d17b765ccab9afef81b4eb4eaf365eb542dccf01a07874a9",
+      "findings": [],
+      "notes": "引文 4 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0025.json"
+    },
+    {
+      "record_id": "RV-41887",
+      "script_id": "IPC-0025",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1557a58a59913ed4d17b765ccab9afef81b4eb4eaf365eb542dccf01a07874a9",
+      "findings": [],
+      "notes": "依类别画像复算：全类 127 盘统计（月建六亲 妻财(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0025.json"
+    },
+    {
+      "record_id": "RV-41888",
+      "script_id": "IPC-0025",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1557a58a59913ed4d17b765ccab9afef81b4eb4eaf365eb542dccf01a07874a9",
+      "findings": [],
+      "notes": "反方：伏神有气，又得月建妻财相生，待时可出。驳：伏而有气只是待时，第三版官层仅「有气」而不旺；乡试章「父旺官衰终须下第」，本类又无能过之象可补，且财临世克父。",
+      "report": "reports/review-classes/IPC-0025.json"
+    },
+    {
+      "record_id": "RV-41889",
+      "script_id": "IPC-0025",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1557a58a59913ed4d17b765ccab9afef81b4eb4eaf365eb542dccf01a07874a9",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0025.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41890",
+      "script_id": "IPC-0026",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "ending",
+          "before": "录取一层，两现之官中有一爻旺而持世，伤官的子孙伏而不出；表现一层强弱不一，按「福齐文不齐」也不碍。所以倾向通过。卦中若有兄弟发动，竞争会激烈一些，细处的加减各卦不同，排盘后逐条写出。",
+          "after": "录取一层，两现之官中有一爻旺而持世，伤官的子孙伏而不出；表现一层强弱不一，按「福齐文不齐」也不碍。所以倾向通过。卦中若有兄弟发动，竞争会激烈一些，细处的好坏各卦不同，排盘后逐条写出。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0026.eq014.p16.json",
+      "original_content_hash": "895d15f555ed72af6b4438da34661d12218e5bcf020a968cee7f1ed3b48cf74e",
+      "content_hash": "b8368dd458aae7cedd546b8852020ad905b89c01babfa31299da804111ade47d",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41891",
+      "script_id": "IPC-0026",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "b8368dd458aae7cedd546b8852020ad905b89c01babfa31299da804111ade47d",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0026.json"
+    },
+    {
+      "record_id": "RV-41892",
+      "script_id": "IPC-0026",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "b8368dd458aae7cedd546b8852020ad905b89c01babfa31299da804111ade47d",
+      "findings": [],
+      "notes": "依类别画像复算：全类 92 盘统计（月建六亲 妻财(67%)、官鬼(33%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0026.json"
+    },
+    {
+      "record_id": "RV-41893",
+      "script_id": "IPC-0026",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "b8368dd458aae7cedd546b8852020ad905b89c01babfa31299da804111ade47d",
+      "findings": [],
+      "notes": "反方：面试官父并看，父母或弱，不该判过。驳：乡试章明文「父衰官旺堪许登科」「福齐文不齐，反许遂志」；旺官持世为能过之项，本类无否决。",
+      "report": "reports/review-classes/IPC-0026.json"
+    },
+    {
+      "record_id": "RV-41894",
+      "script_id": "IPC-0026",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "b8368dd458aae7cedd546b8852020ad905b89c01babfa31299da804111ade47d",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0026.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41895",
+      "script_id": "IPC-0027",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "妻财与子孙都不在卦面上。妻财伏而出不来，官星得不到它的生助；子孙伏而待时，眼下伤不到官，日后它若得生扶出伏，还会是个隐患。\n兄弟一动，便是争名之人露面，又克着伏下的财，算作减分；兄弟同动两爻时，竞争更显。这些都排在旺官持世、官父两旺之后。两现之官明现旺相，「为久为远」，得了也做得长。",
+          "after": "妻财与子孙都不在卦面上。妻财伏而出不来，官星得不到它的生助；子孙伏而待时，眼下伤不到官，日后它若得生扶出伏，还会是个隐患。\n兄弟一动，便是争名之人露面，又克着伏下的财，是一层阻力；兄弟同动两爻时，竞争更显。这些都排在旺官持世、官父两旺之后。两现之官明现旺相，「为久为远」，得了也做得长。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0027.eq014.p13.json",
+      "original_content_hash": "8fc7b5209dcd41566d81e69fc9afc3a2dc0251c867dd362dc0dd1963ae4ee8ca",
+      "content_hash": "1e5b3e13bb555ae31d62b2d869e165c6483b5ad3e955e74be2aaef2cd5591fb3",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41896",
+      "script_id": "IPC-0027",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1e5b3e13bb555ae31d62b2d869e165c6483b5ad3e955e74be2aaef2cd5591fb3",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0027.json"
+    },
+    {
+      "record_id": "RV-41897",
+      "script_id": "IPC-0027",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1e5b3e13bb555ae31d62b2d869e165c6483b5ad3e955e74be2aaef2cd5591fb3",
+      "findings": [],
+      "notes": "依类别画像复算：全类 90 盘统计（月建六亲 官鬼(50%)、父母(28%)、兄弟(22%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0027.json"
+    },
+    {
+      "record_id": "RV-41898",
+      "script_id": "IPC-0027",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1e5b3e13bb555ae31d62b2d869e165c6483b5ad3e955e74be2aaef2cd5591fb3",
+      "findings": [],
+      "notes": "反方：子孙伏而待时，等于随时会出。驳：伏神待时，须逢生扶冲飞之时方出；眼下伤不到官，第三版两项能过、无否决。",
+      "report": "reports/review-classes/IPC-0027.json"
+    },
+    {
+      "record_id": "RV-41899",
+      "script_id": "IPC-0027",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "1e5b3e13bb555ae31d62b2d869e165c6483b5ad3e955e74be2aaef2cd5591fb3",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0027.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41900",
+      "script_id": "IPC-0029",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "官星旺而生合你的世爻，日月本身又是官星来生合你，内外两重官星同时就你；你的世爻是旺父，「父爻持世，得日月动爻相生相合者，亦要官星有气，始许成名」，官星有气这一条也齐了。\n生官的妻财被伤无力，录取以后的长久与待遇要打折扣。应爻冲世，对方态度上有些不顺，或要求偏严，都是减分，不改三层俱旺的大局。官星明现而旺，主「为久为远」；财源受伤，久远上仍要打个折扣。",
+          "after": "官星旺而生合你的世爻，日月本身又是官星来生合你，内外两重官星同时就你；你的世爻是旺父，「父爻持世，得日月动爻相生相合者，亦要官星有气，始许成名」，官星有气这一条也齐了。\n生官的妻财被伤无力，录取以后的长久与待遇要打折扣。应爻冲世，对方态度上有些不顺，或要求偏严，都是小不顺，不改三层俱旺的大局。官星明现而旺，主「为久为远」；财源受伤，久远上仍要打个折扣。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0029.eq014.p13.json",
+      "original_content_hash": "4ae6de37d10d5643ab86443ee1956a0ec21505823caa028512f2b19f1da15e32",
+      "content_hash": "16f39435da193f7940cb2e5c2b593355aabe3a9a04510d6a9ced2bdcb43a0752",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41901",
+      "script_id": "IPC-0029",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16f39435da193f7940cb2e5c2b593355aabe3a9a04510d6a9ced2bdcb43a0752",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0029.json"
+    },
+    {
+      "record_id": "RV-41902",
+      "script_id": "IPC-0029",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16f39435da193f7940cb2e5c2b593355aabe3a9a04510d6a9ced2bdcb43a0752",
+      "findings": [],
+      "notes": "依类别画像复算：全类 66 盘统计（月建六亲 官鬼(71%)、父母(29%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0029.json"
+    },
+    {
+      "record_id": "RV-41903",
+      "script_id": "IPC-0029",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16f39435da193f7940cb2e5c2b593355aabe3a9a04510d6a9ced2bdcb43a0752",
+      "findings": [],
+      "notes": "反方：六冲卦主散，求名不吉。驳：乡试章明文六冲而官父世俱旺者竟许必得；第三版四项能过、无否决。",
+      "report": "reports/review-classes/IPC-0029.json"
+    },
+    {
+      "record_id": "RV-41904",
+      "script_id": "IPC-0029",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "16f39435da193f7940cb2e5c2b593355aabe3a9a04510d6a9ced2bdcb43a0752",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0029.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41905",
+      "script_id": "IPC-0032",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "ending",
+          "before": "录取一层，官旺持世；表现一层，父母不输官星；伤官之神无力。三处都顺，所以倾向通过。父母若逢冲、卦中若有兄弟发动，只是细处的减分，各卦不同，排盘后逐条写出。",
+          "after": "录取一层，官旺持世；表现一层，父母不输官星；伤官之神无力。三处都顺，所以倾向通过。父母若逢冲、卦中若有兄弟发动，只是细处的小不顺，各卦不同，排盘后逐条写出。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0032.eq014.p12.json",
+      "original_content_hash": "9a0113a964092e5ba258a8dcf5dc8ecca7f214dffd181862916dfeaf2d9e7450",
+      "content_hash": "c76369deebd955676b70a032b012fcef4e82da9018a01c03a8fecc043b057023",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41906",
+      "script_id": "IPC-0032",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "c76369deebd955676b70a032b012fcef4e82da9018a01c03a8fecc043b057023",
+      "findings": [],
+      "notes": "引文 6 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0032.json"
+    },
+    {
+      "record_id": "RV-41907",
+      "script_id": "IPC-0032",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "c76369deebd955676b70a032b012fcef4e82da9018a01c03a8fecc043b057023",
+      "findings": [],
+      "notes": "依类别画像复算：全类 75 盘统计（月建六亲 官鬼(65%)、父母(35%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0032.json"
+    },
+    {
+      "record_id": "RV-41908",
+      "script_id": "IPC-0032",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "c76369deebd955676b70a032b012fcef4e82da9018a01c03a8fecc043b057023",
+      "findings": [],
+      "notes": "反方：官旺持世而父母或逢冲，「父旺遭伤，收而复弃」。驳：父旺受冲只见于部分卦，第三版记为减分；本类旺官持世、官父两旺两项能过，无否决，加分不少于减分。",
+      "report": "reports/review-classes/IPC-0032.json"
+    },
+    {
+      "record_id": "RV-41909",
+      "script_id": "IPC-0032",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "c76369deebd955676b70a032b012fcef4e82da9018a01c03a8fecc043b057023",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0032.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41910",
+      "script_id": "IPC-0033",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "倾向通过",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "文书父母同样旺相。官父两旺，录取与表现两层都有根，童试章所谓「父旺官兴﹐堪期首选」。生官的妻财伏在下面出不来，官星少一份外援，但它自身已旺；克官的子孙无力，伤不到它。\n不顺的一面在应爻：应爻来克你的世爻，主事的一方未必好说话，过程中或有为难之处；卦中若再有兄弟发动，竞争也会露头。这些都只是减分，盖不过官旺持世与官父两旺。官星出现旺相，「为久为远」，录取之后也坐得稳。",
+          "after": "文书父母同样旺相。官父两旺，录取与表现两层都有根，童试章所谓「父旺官兴﹐堪期首选」。生官的妻财伏在下面出不来，官星少一份外援，但它自身已旺；克官的子孙无力，伤不到它。\n不顺的一面在应爻：应爻来克你的世爻，主事的一方未必好说话，过程中或有为难之处；卦中若再有兄弟发动，竞争也会露头。这些都只是阻力，盖不过官旺持世与官父两旺。官星出现旺相，「为久为远」，录取之后也坐得稳。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0033.eq014.p10.json",
+      "original_content_hash": "dee9233db2aabf5a4b3d3a6c8d6094a90c1c4021d773919f2414ba87134b761a",
+      "content_hash": "d87ff54550772f0a3471b8c2f89258859dd43026cfe68263cdd99ba9b4721170",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41911",
+      "script_id": "IPC-0033",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "d87ff54550772f0a3471b8c2f89258859dd43026cfe68263cdd99ba9b4721170",
+      "findings": [],
+      "notes": "引文 7 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0033.json"
+    },
+    {
+      "record_id": "RV-41912",
+      "script_id": "IPC-0033",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "d87ff54550772f0a3471b8c2f89258859dd43026cfe68263cdd99ba9b4721170",
+      "findings": [],
+      "notes": "依类别画像复算：全类 114 盘统计（月建六亲 官鬼(50%)、父母(50%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0033.json"
+    },
+    {
+      "record_id": "RV-41913",
+      "script_id": "IPC-0033",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "d87ff54550772f0a3471b8c2f89258859dd43026cfe68263cdd99ba9b4721170",
+      "findings": [],
+      "notes": "反方：应爻克世，「世应相克则凶」。驳：应克世为减分；本类旺官持世、官父两旺两项能过，无否决，第三版判过。",
+      "report": "reports/review-classes/IPC-0033.json"
+    },
+    {
+      "record_id": "RV-41914",
+      "script_id": "IPC-0033",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "d87ff54550772f0a3471b8c2f89258859dd43026cfe68263cdd99ba9b4721170",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0033.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41915",
+      "script_id": "IPC-0035",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "偏难",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "process",
+          "before": "你的世爻是妻财，当令而旺。财克父母，文书一层被你自己世上的财压住，休囚无气而静。卜筮全书说财福临世大忌，增删面圣章「财爻持世破文书」，说的都是这件事。应爻同是妻财，与你的世爻比和，往来平常，不计成败。\n父母休囚无气、又不发动，岁科考章「父宜旺相，最忌休囚」，表现一层判为无力。克官的子孙伏而出不来，这一点是好的，但不改父母这一层的落空。官星明现旺相，本有「为久为远」之象，可惜它不来就你，这份长久落不到你身上。两爻官星又都以你的世爻为墓库，古人说「用爻重叠，喜墓库之收藏」；卦得升卦而世爻得地，升选候补章说「晋卦升卦，果得屡验」：这两处都是加分，只是抵不过父母无力这一条。",
+          "after": "你的世爻是妻财，当令而旺。财克父母，文书一层被你自己世上的财压住，休囚无气而静。卜筮全书说财福临世大忌，增删面圣章「财爻持世破文书」，说的都是这件事。应爻同是妻财，与你的世爻比和，往来平常，不计成败。\n父母休囚无气、又不发动，岁科考章「父宜旺相，最忌休囚」，表现一层判为无力。克官的子孙伏而出不来，这一点是好的，但不改父母这一层的落空。官星明现旺相，本有「为久为远」之象，可惜它不来就你，这份长久落不到你身上。两爻官星又都以你的世爻为墓库，古人说「用爻重叠，喜墓库之收藏」；卦得升卦而世爻得地，升选候补章说「晋卦升卦，果得屡验」：这两处都于你有利，只是抵不过父母无力这一条。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0035.eq014.p11.json",
+      "original_content_hash": "40c1c5440aa8569ff74a87976e6673c558110620abc7129f01be2ddf6bd79153",
+      "content_hash": "5237e39dc19633281fbda52d5f1b7e24786d4ce33c6c3a1d865676e124a049f1",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41916",
+      "script_id": "IPC-0035",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "5237e39dc19633281fbda52d5f1b7e24786d4ce33c6c3a1d865676e124a049f1",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0035.json"
+    },
+    {
+      "record_id": "RV-41917",
+      "script_id": "IPC-0035",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "5237e39dc19633281fbda52d5f1b7e24786d4ce33c6c3a1d865676e124a049f1",
+      "findings": [],
+      "notes": "依类别画像复算：全类 63 盘统计（月建六亲 妻财(100%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0035.json"
+    },
+    {
+      "record_id": "RV-41918",
+      "script_id": "IPC-0035",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "5237e39dc19633281fbda52d5f1b7e24786d4ce33c6c3a1d865676e124a049f1",
+      "findings": [],
+      "notes": "反方：官旺，父衰官旺堪许登科。驳：乡试章原句是「官爻旺而生世持世，若是父爻不旺……反许遂志」，须官生世或持世；本类官不就世。",
+      "report": "reports/review-classes/IPC-0035.json"
+    },
+    {
+      "record_id": "RV-41919",
+      "script_id": "IPC-0035",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "5237e39dc19633281fbda52d5f1b7e24786d4ce33c6c3a1d865676e124a049f1",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0035.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41920",
+      "script_id": "IPC-0036",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "偏难",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "brief",
+        "process",
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "brief",
+          "before": "官鬼旺、父母旺，父母还来生你，本是好象；但你的世爻是兄弟，官星又按兵不动，正是兄弟持世而官不动，此番偏难。官鬼克兄弟之世，因世爻有日月之扶，只作减分；乡试章的例外要世爻旺相，此卦世爻只算平。",
+          "after": "官鬼旺、父母旺，父母还来生你，本是好象；但你的世爻是兄弟，官星又按兵不动，正是兄弟持世而官不动，此番偏难。官鬼克兄弟之世，因世爻有日月之扶，只算压力，不致命；乡试章的例外要世爻旺相，此卦世爻只算平。"
+        },
+        {
+          "field": "process",
+          "before": "官鬼克兄弟，官星越旺，克世越重；投麾效用章说「官爻克世及空破者﹐不禄」。不过你的世爻在月建、日辰之间一生一克，有扶在，岁科考章「世爻受克而有扶﹐亦业姑许」，这一层只作减分。\n乡试章另有一条：兄弟持世，「若临日月或旺相，再得官父两旺」，必添科名。官父两旺是有的，难在前半句：世爻一生一克只算平，不算旺相，又没有父母发动来生合它，例外不成立。生官的妻财伏而出不来，官星之旺另有来处。官星明现而旺，本主「为久为远」，可兄弟当身，这份好处先要过竞争这一关。",
+          "after": "官鬼克兄弟，官星越旺，克世越重；投麾效用章说「官爻克世及空破者﹐不禄」。不过你的世爻在月建、日辰之间一生一克，有扶在，岁科考章「世爻受克而有扶﹐亦业姑许」，这一层只算压力。\n乡试章另有一条：兄弟持世，「若临日月或旺相，再得官父两旺」，必添科名。官父两旺是有的，难在前半句：世爻一生一克只算平，不算旺相，又没有父母发动来生合它，例外不成立。生官的妻财伏而出不来，官星之旺另有来处。官星明现而旺，本主「为久为远」，可兄弟当身，这份好处先要过竞争这一关。"
+        },
+        {
+          "field": "ending",
+          "before": "官父两旺是实，官克世也因有扶而可许，可兄弟当身、官星不动这一条是否决，这一轮偏难。",
+          "after": "官父两旺是实，官克世也因有扶而可许，可兄弟当身、官星不动这一条足以定局，这一轮偏难。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0036.eq014.p9.json",
+      "original_content_hash": "a723b16d1c5bd55f8b21333a4dae5e290b00be8ab4d70e313fe906f7120e7877",
+      "content_hash": "7c98dd0e3e45a379ae64b1513d295a5ef37819a54f74676b5f6ea00abedb1498",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41921",
+      "script_id": "IPC-0036",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7c98dd0e3e45a379ae64b1513d295a5ef37819a54f74676b5f6ea00abedb1498",
+      "findings": [],
+      "notes": "引文 6 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0036.json"
+    },
+    {
+      "record_id": "RV-41922",
+      "script_id": "IPC-0036",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7c98dd0e3e45a379ae64b1513d295a5ef37819a54f74676b5f6ea00abedb1498",
+      "findings": [],
+      "notes": "依类别画像复算：全类 63 盘统计（月建六亲 父母(52%)、官鬼(48%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0036.json"
+    },
+    {
+      "record_id": "RV-41923",
+      "script_id": "IPC-0036",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7c98dd0e3e45a379ae64b1513d295a5ef37819a54f74676b5f6ea00abedb1498",
+      "findings": [],
+      "notes": "反方：官克世「不禄」，应另作否决。驳：岁科考章「世爻受克而有扶，亦业姑许」，本类世有日月一生之扶；D-025 依增删两章并用，有扶者姑许。反方二：官父两旺当许。驳：兄弟持世而官不动，增删署印谋差章、援例章俱判难成，例外须世旺相，本类世只作平。",
+      "report": "reports/review-classes/IPC-0036.json"
+    },
+    {
+      "record_id": "RV-41924",
+      "script_id": "IPC-0036",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "7c98dd0e3e45a379ae64b1513d295a5ef37819a54f74676b5f6ea00abedb1498",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0036.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41925",
+      "script_id": "IPC-0049",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "偏难",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "ending"
+      ],
+      "changes": [
+        {
+          "field": "ending",
+          "before": "官父两旺是能过之象，但官星生合应而不就世是否决，这一轮偏难。",
+          "after": "官父两旺本是有利之象，但官星生合应而不就世，这一条足以定局，这一轮偏难。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-0049.eq014.p6.json",
+      "original_content_hash": "d18fc629f8fc705d309d8f695415cf1e6ea37d818084956eaf52a1fb2dfa8981",
+      "content_hash": "f573b6eb78ce3081622e9819e0208613bb71925eda952690f530527518da7af5",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41926",
+      "script_id": "IPC-0049",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f573b6eb78ce3081622e9819e0208613bb71925eda952690f530527518da7af5",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-0049.json"
+    },
+    {
+      "record_id": "RV-41927",
+      "script_id": "IPC-0049",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f573b6eb78ce3081622e9819e0208613bb71925eda952690f530527518da7af5",
+      "findings": [],
+      "notes": "依类别画像复算：全类 55 盘统计（月建六亲 官鬼(67%)、父母(33%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-0049.json"
+    },
+    {
+      "record_id": "RV-41928",
+      "script_id": "IPC-0049",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f573b6eb78ce3081622e9819e0208613bb71925eda952690f530527518da7af5",
+      "findings": [],
+      "notes": "反方：官父两旺，必得。驳：野鹤升选候补章例「官生应爻，一定不得」，官须就世；本类官生应而不生合世，第三版否决。",
+      "report": "reports/review-classes/IPC-0049.json"
+    },
+    {
+      "record_id": "RV-41929",
+      "script_id": "IPC-0049",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "f573b6eb78ce3081622e9819e0208613bb71925eda952690f530527518da7af5",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-0049.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
+    },
+    {
+      "record_id": "RV-41930",
+      "script_id": "IPC-1531",
+      "question_id": "career.interview.interview-pass",
+      "stage": "polish",
+      "status": "POLISH_COMPLETED",
+      "reviewer": "Claude（单 AI 文学润色，V5.0）",
+      "reviewed_at": "2026-11-17",
+      "polish_grade": "B",
+      "original_verdict": "悬而未决",
+      "locked_fields_verified": [
+        "chart_input",
+        "class_key",
+        "sample_charts",
+        "question_id",
+        "scenario_tags",
+        "judgment",
+        "reading.timing.entries",
+        "reading.classical_sources",
+        "reading.calculation_explanation"
+      ],
+      "changed_fields": [
+        "opening",
+        "process"
+      ],
+      "changes": [
+        {
+          "field": "opening",
+          "before": "官星旺，是此卦有望的根。可它不在你世上，也不来生你合你，旺而无情，算不得能过之象；你的世爻是妻财，财克父母，表现一层受累，这是减分。",
+          "after": "官星旺，是此卦有望的根。可它不在你世上，也不来生你合你，旺而无情，算不得有利之象；你的世爻是妻财，财克父母，表现一层受累，这是不利之处。"
+        },
+        {
+          "field": "process",
+          "before": "卦逢六合。乡试章说六合「亦要官父世爻得地」，眼下官旺、父母有气，你的世爻或有气、或偏弱，大致得地，算作加分。你的世爻克应爻，谒贵之法说世克应是致怨之象，往来要俯仰小心；好在世应又相合，还有得谈。\n克官的子孙无力，生官的财安静，都不改官星本身的旺。应爻落旬空，父母也落旬空，这两处都是减分；应爻若再来克世、逢月破，减分更多。加减之间大体相当，两头都够不上。官星明现而旺，古人谓「为久为远」，有望之根就在这里。",
+          "after": "卦逢六合。乡试章说六合「亦要官父世爻得地」，眼下官旺、父母有气，你的世爻或有气、或偏弱，大致得地，这一点有利。你的世爻克应爻，谒贵之法说世克应是致怨之象，往来要俯仰小心；好在世应又相合，还有得谈。\n克官的子孙无力，生官的财安静，都不改官星本身的旺。应爻落旬空，父母也落旬空，这两处都不利；应爻若再来克世、逢月破，就更不利。好坏之间大体相当，两头都够不上。官星明现而旺，古人谓「为久为远」，有望之根就在这里。"
+        }
+      ],
+      "original_snapshot": "authoring/history/classes/interview-pass/IPC-1531.eq014.p7.json",
+      "original_content_hash": "5451aa83c351403c63c3c82a61128e301e4358df124d527b16454545d2cbe8d1",
+      "content_hash": "23a84b0a4cb2d46acd73ca7113c96c318087df604bc2a648b410adb40d14477d",
+      "note": "去计分口吻（加分、减分、否决、能过之象等改为读者用语），事实不变；逐字通读",
+      "professional_issues": [],
+      "final_check": {
+        "status": "PASS",
+        "by": "Claude（同一润色者自查，非独立终审）",
+        "at": "2026-11-17",
+        "passes": {
+          "逐句对照：专业事实、判断条件、吉凶、应期、古籍未变": true,
+          "普通读者通读：通顺、清楚、无重复": true,
+          "排版：构建检查全部通过（含 C26 版式快照）": true,
+          "结论标签未变": true
+        }
+      }
+    },
+    {
+      "record_id": "RV-41931",
+      "script_id": "IPC-1531",
+      "stage": "ai-source-check",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "23a84b0a4cb2d46acd73ca7113c96c318087df604bc2a648b410adb40d14477d",
+      "findings": [],
+      "notes": "引文 5 条取自已核验之规则登记原文，构建 C12 逐字核对；适用理由逐条写在 classical_sources。",
+      "report": "reports/review-classes/IPC-1531.json"
+    },
+    {
+      "record_id": "RV-41932",
+      "script_id": "IPC-1531",
+      "stage": "ai-independent",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "23a84b0a4cb2d46acd73ca7113c96c318087df604bc2a648b410adb40d14477d",
+      "findings": [],
+      "notes": "依类别画像复算：全类 10 盘统计（月建六亲 官鬼(60%)、父母(40%)），12 个分散样本盘逐盘核对仍属本类（构建 C30），主要依据逐盘成立（C33）；第三版结论与类键签名相合（C34），否决、能过各项逐条写进正文（C35）；应期规则 R-YINGQI-01 为全类每盘皆有候选。",
+      "report": "reports/review-classes/IPC-1531.json"
+    },
+    {
+      "record_id": "RV-41933",
+      "script_id": "IPC-1531",
+      "stage": "ai-adversarial",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "23a84b0a4cb2d46acd73ca7113c96c318087df604bc2a648b410adb40d14477d",
+      "findings": [],
+      "notes": "反方：官旺无否决，应判通过。驳：第三版官旺而无能过之项时以加减定；本类减分不少于加分。",
+      "report": "reports/review-classes/IPC-1531.json"
+    },
+    {
+      "record_id": "RV-41934",
+      "script_id": "IPC-1531",
+      "stage": "ai-final-qa",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "23a84b0a4cb2d46acd73ca7113c96c318087df604bc2a648b410adb40d14477d",
+      "findings": [],
+      "notes": "17 条逐条核对：技术检查无错；所用规则均已核验；正文只写类内共同事实；三处结论一致；排版完整；无套话、无现实断言；单 Claude 写作时同步润色并通读。",
+      "report": "reports/review-classes/IPC-1531.json",
+      "conditions": {
+        "排盘数据和计算测试全部通过": true,
+        "所用规则已经批准": true,
+        "用神选择有明确依据": true,
+        "正反证据均得到处理": true,
+        "没有未解决的重大专业冲突": true,
+        "关键古籍引用已经核查": true,
+        "传统应期具有适用依据或明确记录不适合取期": true,
+        "独立专业审核完成": true,
+        "反向质疑审核完成": true,
+        "最终语言编辑完成": true,
+        "没有明显机械重复、套话或病句": true,
+        "简断、详断和总断结论一致": true,
+        "原有正式排版完整保留": true,
+        "内容哈希、规则版本及审核记录一致": true,
+        "全部相关回归测试通过": true,
+        "无未经证实的现实事实断言": true,
+        "没有冒充真人专家认证或现实预测保证": true
+      },
+      "condition_notes": {
+        "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
+        "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
+      }
     }
   ]
 }

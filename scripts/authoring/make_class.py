@@ -142,6 +142,9 @@ def make(spec):
         for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion', 'timing_text']:
             if k in ov:
                 spec[k] = ov[k]
+        for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion']:  # 逐句替换（只换措辞）
+            for a, b in ov.get('replace', []):
+                spec[k] = spec[k].replace(a, b)
         if ov.get('process_append'):  # 补写全类皆判到之条目（audit-class-coverage）
             spec['process'] = spec['process'].rstrip() + ov['process_append']
         if ov.get('v3'):

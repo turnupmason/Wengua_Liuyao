@@ -18,10 +18,15 @@ const CASES = [
   ['888786', '酉', '丙寅', 'pass'], ['876779', '申', '癸卯', 'fail'], ['868778', '申', '丁巳', 'pass'],
 ];
 
+// 已知判错（照实记录，不为结果调规则）：例 1 依 B-016（动变生克冲合章「变出之爻……不能生克他爻」，父母化出之爻合世不再算父发）判偏难，实际通过
+const KNOWN_MISS = { 1: 'B-016' };
+
 test('第三版判定：外部卦例 1–9 不回退', () => {
   CASES.forEach(([lv, m, d, truth], i) => {
     const { v3 } = run(lv, m, d);
-    assert.equal(v3.verdict === 'fail' ? 'fail' : 'pass', truth, `例 ${i + 1}`);
+    const got = v3.verdict === 'fail' ? 'fail' : 'pass';
+    if (KNOWN_MISS[i + 1]) assert.notEqual(got, truth, `例 ${i + 1} 已记为判错（${KNOWN_MISS[i + 1]}），若又判对须复核`);
+    else assert.equal(got, truth, `例 ${i + 1}`);
   });
 });
 
@@ -32,10 +37,10 @@ test('第三版判定：每条否决、能过都带已登记的规则编号', ()
   }
 });
 
-test('例 1：子孙持世而父发，分两层（录取可过、成行难）', () => {
+test('例 1：父母化出之爻合世不算父发（B-016，变爻不生克他爻），子孙持世而无父发，判偏难', () => {
   const { v3 } = run('868888', '酉', '辛丑');
-  assert.notEqual(v3.verdict, 'fail');
-  assert.match(v3.layers.final, /成行一层难/);
+  assert.equal(v3.verdict, 'fail');
+  assert.ok(!v3.pass.some((x) => x.code === '父发'));
 });
 
 test('例 5：官持世而月扶日克，不作旺官持世', () => {

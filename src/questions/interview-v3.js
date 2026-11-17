@@ -163,8 +163,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const riyueZhi = (br) => Boolean(br) && [month, day].some((b) => chong(b, br) || ke(ELX[b], ELX[br]));
   // 月建入卦动而作元神者为福更大（月将章，R-YUEJIAN-02）
   if (g) for (const cm of L.filter((l) => l.relative === '妻财' && l.moving && l.branch === month && gen(l.element, g.el) && effMover(l))) plus.push({ text: `妻财${cm.branch}临月建发动生官（月建入卦动而作元神者为福更大）`, rules: ['R-YUEJIAN-02'] });
-  // 父发：父母发动而生合世，或化出之爻生合世（官衰父发，亦论抡收）
-  const fFa = F.shown.filter((x) => x.moving && (gen(x.el, W.el) || he(x.br, W.br) || (x.change && (gen(x.change.to.element, W.el) || he(x.change.to.branch, W.br)))));
+  // 父发：父母发动而生合世（官衰父发，亦论抡收）。化出之爻不计：动变生克冲合章「变出之爻能生克冲合本位之动爻，不能生克他爻」
+  // （2026-11-16 依评审核实改；此前化出之爻生合世亦算父发）
+  const fFa = F.shown.filter((x) => x.moving && (gen(x.el, W.el) || he(x.br, W.br)));
   const guanQing = wRel === '官鬼' || (g && (gen(g.el, W.el) || he(g.br, W.br))) || (riyueGuan && special.riyueYongToWorld?.length) || calGuanToWorld.length > 0;
   const riyueFuQing = riyueFu && [month, day].some((b) => ELB[b] === fuEl && (gen(fuEl, W.el) || he(b, W.br)));
   const fuQing = (f && (wRel === '父母' || gen(f.el, W.el) || he(f.br, W.br) || f.underWorld)) || riyueFuQing;
@@ -557,8 +558,16 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (wch0?.advance === '退神' && !wc.seasonalStrong) minus.push({ text: `世${world.branch}化退神（世化退神，若非临场之阻，必无勇往之心）`, rules: ['R-SHIHUA-01'] });
     if (wch0?.advance === '进神') plus.push({ text: `世${world.branch}化进神（世与官父有一而化进神者，名姓高悬）`, rules: ['R-ZS-QM-23'] });
   }
-  for (const x of F.shown) if (x.moving && x.change && !(x.change.advance === '进神' || x.change.huitou === '回头生') && huaJiOf(x.line, x.change) && !veto.some((v) => v.code === '父化凶')) plus.push({ text: `父${x.br}动而${huaJiOf(x.line, x.change)}（用神化吉：凡用神元神动化回头生、化长生、化帝旺、化扶助、化日月皆为化吉）`, rules: ['R-HUA-01'] });
-  for (const x of F.shown) if (x.moving && x.change && (x.change.advance === '进神' || x.change.huitou === '回头生')) plus.push({ text: `父${x.br}动而${x.change.advance === '进神' ? '化进神' : '化回头生'}（父衰变旺，愈出愈奇；文章得意胜于前）`, rules: ['R-QIUMING-05', 'R-ZS-QM-23'] });
+  // 父动化吉。童试章「父衰变旺，愈出愈奇……父衰动而化回头生、化进神，文章得意胜于前」前提是父衰（2026-11-16 依评审核实补此前提）；
+  // 旺父化回头生按用神化吉（R-HUA-01）；旺父化进神按乡试章「世与官父相旺内有一而化进神者，名姓高悬」，须世、官、父俱旺
+  for (const x of F.shown) {
+    if (!x.moving || !x.change || veto.some((v) => v.code === '父化凶')) continue;
+    const jin = x.change.advance === '进神'; const hs = x.change.huitou === '回头生';
+    if ((jin || hs) && x.lv < 2) plus.push({ text: `父${x.br}衰而动${jin ? '化进神' : '化回头生'}（父衰变旺，愈出愈奇；父衰动而化回头生、化进神，文章得意胜于前）`, rules: ['R-QIUMING-05'] });
+    else if (jin && x.lv === 2 && gLv === 2 && wLv === 2) plus.push({ text: `父${x.br}旺而化进神，世、官亦旺（世与官父相旺内有一而化进神者，名姓高悬）`, rules: ['R-ZS-QM-23'] });
+    else if (hs) plus.push({ text: `父${x.br}动而化回头生（用神化吉：凡用神元神动化回头生、化长生、化帝旺、化扶助、化日月皆为化吉）`, rules: ['R-HUA-01'] });
+    else if (!jin && huaJiOf(x.line, x.change)) plus.push({ text: `父${x.br}动而${huaJiOf(x.line, x.change)}（用神化吉：凡用神元神动化回头生、化长生、化帝旺、化扶助、化日月皆为化吉）`, rules: ['R-HUA-01'] });
+  }
   // 世爻发动化出官星（身兴变鬼，来试方成）；化鬼回头克（世动化官化克，蝶梦堪忧；试期病阻）
   if (world.moving) {
     const wch = fact(world).change;
@@ -952,7 +961,6 @@ function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceS
       harmonyWait: (evidenceHarmonies || []).filter((h) => h.status === 'deferred' && ['官鬼', '父母', '妻财'].includes(h.relative)).map((h) => `${h.branches}${h.relative}局待${(h.completion || []).map((c) => c.branch).filter(Boolean).join('、') || '时'}而成`),
       season: { 艮: '立春', 震: '春分', 巽: '立夏', 离: '夏至', 坤: '立秋', 兑: '秋分', 乾: '立冬', 坎: '冬至' }[p.palace] || null,
     },
-    changedCaiOnFu: f ? moving.filter((l) => l.relative !== '妻财' && fact(l).change?.to?.relative === '妻财' && ke(fact(l).change.to.element, f.el)).map((l) => ({ position: l.position, from: l.relative, branch: fact(l).change.to.branch })) : [],
     fanFu: { fanyin: Boolean(chart.primary && evidenceSpecial?.fanyin), fuyin: Boolean(evidenceSpecial?.fuyin) },
     moving: { count: moving.length, sole: moving.length === 1 ? { position: moving[0].position, relative: moving[0].relative, spirit: moving[0].spirit } : null, meaning: 'R-BQS-QM-01' },
     hexagram: {
