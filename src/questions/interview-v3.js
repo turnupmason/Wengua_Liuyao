@@ -5,7 +5,7 @@ import { assessRoleState, assessHiddenState } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 import { selectYongshen } from '../evidence.js';
 
-export const INTERVIEW_V3_VERSION = 'interview-v3-1.15.0';
+export const INTERVIEW_V3_VERSION = 'interview-v3-1.16.0';
 
 const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
 const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
@@ -871,7 +871,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     finalLayer = (finalLayer ? `${finalLayer}；` : '') + '六冲变六合：始则艰阻，终则荣显';
   }
   // 证据按所论之爻归组（2026-11-17 评审：「不能把同一官星的多个描述全部当成互相独立的吉证」）：条目开头点名所论之爻者归到那一爻，认不出者各成一组。
-  // 现只用于断语结论「同一爻只举一次」；判定仍按条数比较。改为按组计数会使 2 万卦改判上千（B-022），待用户裁定。
+  // 判定比较有利、不利时按组计：同一爻上的几条只算一组，能过之象按所在之爻并入有利（B-022，用户 2026-11-17 转来评审：「不要数吉凶条目的数量」「吉凶证据重复计数需要修复」）。
   const REL_OF = { 官: '官鬼', 官鬼: '官鬼', 父: '父母', 父母: '父母', 子孙: '子孙', 孙: '子孙', 财: '妻财', 妻财: '妻财', 兄: '兄弟', 兄弟: '兄弟' };
   const lineKey = (l) => (l ? `L${l.position}` : null);
   const factKey = (x) => {
@@ -895,18 +895,19 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   };
   const nOf = (xs) => new Set(xs.map(factKey)).size;
   // 能过之象本身即其所在之爻的有利证据，按爻并入有利一方（不另多算；与加分同爻者只算一次）
-  const PASS_LINES = { 旺官持世: ['g', 'w'], 官父两旺: ['g', 'f'], 旺官生合世: ['g'], 官动生合世: ['g'], 旺父就世: ['f'], 父发: ['f'] };
-  const passKeys = () => pass.flatMap((x) => (PASS_LINES[x.code] || []).map((k) => lineKey(k === 'w' ? world : k === 'g' ? (g?.kind === 'line' ? g.line : null) : (f?.kind === 'line' ? f.line : null))) .map((key, i, arr) => key || `P:${x.code}:${i}`).concat(PASS_LINES[x.code] ? [] : [`P:${x.code}`]));
+  // 官、父不在卦面（日月为用、伏、化出）时，同一官星或父母共用一个组名，不按条目各算
+  const PASS_LINES = { 旺官持世: ['g', 'w'], 官父两旺: ['g', 'f'], 旺官生合世: ['g'], 官动生合世: ['g'], 日月官生合世: ['g'], 旺父就世: ['f'], 父发: ['f'] };
+  const passKeys = () => pass.flatMap((x) => (PASS_LINES[x.code] || []).map((k) => (k === 'w' ? lineKey(world) : k === 'g' ? (g?.kind === 'line' ? lineKey(g.line) : 'G:官') : (f?.kind === 'line' ? lineKey(f.line) : 'F:父'))).concat(PASS_LINES[x.code] ? [] : [`P:${x.code}`]));
   const nPlus = () => new Set([...plus.map(factKey), ...passKeys()]).size;
   let verdict;
   let weighByEvidence = false;
   if (chongBianHe) verdict = 'pass';
   else if (effectiveVeto.length) verdict = 'fail';
-  else if (pass.length) verdict = minus.length > plus.length ? 'wait' : 'pass';
+  else if (pass.length) verdict = nOf(minus) > nPlus() ? 'wait' : 'pass';
   // 乡试章「出现无情，难遂青云之志。父与官星虽则出现，若不生合世爻，或不持世……亦属无益」（R-QIUMING-02；正宗注「虽在卦中，与我无益」，R-BZZ-QM-07）：
   // 官旺而官父皆不就世（不持世、不生合世、不伏世下）者不许（2026-11-16 逐句核实查出：此前官旺即可凭加减分判过）
   else if (gWang && !guanQing && !g?.underWorld && !fuQing) { verdict = 'fail'; N('官虽旺，而官父皆不持世、不生合世（出现无情，难遂青云之志；父与官星虽则出现，若不生合世爻，或不持世……亦属无益）', ['R-QIUMING-02', 'R-BZZ-QM-07']); }
-  else if (gWang) verdict = plus.length > minus.length ? 'pass' : 'wait';
+  else if (gWang) verdict = nPlus() > nOf(minus) ? 'pass' : 'wait';
   // 官不旺又无能过之象。2026-11-17 评审：没有乡试章所举「必中者」之格，只表示那条强吉规则未成立，不能反推偏难——
   // 童试章「官衰父发，亦论抡收」；乡试章临之师例「此卦官星持世，虽则不旺……果得成名」。
   // 官星无气者，乡试章「父旺官衰终须下第」：父旺尚且下第，父不旺者同论（推论，见 B-020）；
@@ -960,9 +961,9 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       else if (name !== '劫煞' && onGood && yongWang && !analysis.lines[it.position - 1].calendar.void && !(analysis.lines[it.position - 1].calendar.monthBreak && !it.moving)) plus.push({ text: `${name}临${it.isWorld ? '世' : it.relative}（${t.why}）`, rules: t.relevanceRules });
     }
   }
-  if (verdict === 'wait' && !effectiveVeto.length && plus.length > minus.length && pass.length) verdict = 'pass';
+  if (verdict === 'wait' && !effectiveVeto.length && nPlus() > nOf(minus) && pass.length) verdict = 'pass';
   // 无必中之格、官星不旺不衰者：神煞诸条计入后，按实有利弊定（2026-11-17 评审）
-  if (weighByEvidence) verdict = minus.length > plus.length ? 'fail' : 'wait';
+  if (weighByEvidence) verdict = nOf(minus) > nPlus() ? 'fail' : 'wait';
   // 六冲而父旺：除否决外，结论待定、请再占（乡试章）
   // 「须再占」是独立的结论类型，不与「利弊相当」之待定相混（2026-11-17 评审）
   if (reCast && !effectiveVeto.length && !chongBianHe) verdict = 'recast';
