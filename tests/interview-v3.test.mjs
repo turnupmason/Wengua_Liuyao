@@ -76,7 +76,8 @@ test('逐卦断语：十项齐全，判定依据都写进断语，无内部用�
     const basisText = text.basis.map((x) => x.text).join('');
     const key = (t) => t.replace(/（.*?）/g, '').slice(0, 6);
     for (const v of [...v3.veto, ...v3.layerVeto, ...v3.pass, ...v3.plus, ...v3.minus, ...v3.notes]) assert.ok(basisText.includes(key(v.text)), `${lv} 判定未进依据栏：${v.text}`);
-    for (const b of text.basis.filter((x) => ['决定', '重要'].includes(x.level))) assert.ok(body.includes(b.text.replace(/，.*$/, '').slice(0, 6)), `${lv} ${b.level}证据未写进正文：${b.text}`);
+    const nz = (u) => u.replace(/（[^（）]*）/g, '').replace(/：/g, '，').replace(/父母([子丑寅卯辰巳午未申酉戌亥])/g, '父$1').replace(/官鬼([子丑寅卯辰巳午未申酉戌亥])/g, '官$1');
+    for (const b of text.basis.filter((x) => ['决定', '重要'].includes(x.level) && !/^(旺官持世|官父两旺|旺官生合世|官动生合世|日月作官星|父母发动而生合世|六冲卦变六合)/.test(x.text) && !(/化出之爻旬空/.test(x.text) && body.includes('亦逢旬空')))) assert.ok(nz(body).includes(nz(b.text).replace(/[，；].*$/, '').slice(0, 6)), `${lv} ${b.level}证据未写进正文：${b.text}`);
     for (const b of text.basis) assert.ok(b.sources.length > 0 || !b.rules.length, `${lv} 依据缺出处：${b.text}`);
     for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!basisText.includes(b), `${lv} 依据栏含「${b}」`);
     for (const b of [...BANNED, ...ABSOLUTE]) assert.ok(!body.includes(b), `${lv} 含「${b}」`);

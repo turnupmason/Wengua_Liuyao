@@ -3,7 +3,7 @@
 import { interviewV3 } from './interview-v3.js';
 import { RULE_SOURCES } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.0.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.1.1';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -89,6 +89,15 @@ function render(text, tone) {
   for (const [a, b] of EDITOR) s = s.replace(a, b);
   return s.replace(/。，/g, '，');
 }
+// 能过之项在正文里的说法（条目本身只是名目，正文要说清它是什么意思）
+const PASS_SAY = {
+  旺官持世: '官星旺而坐在你的世爻上，录取之神就在你身上',
+  官父两旺: '官星与父母都旺，录取和表现两层都有底',
+  旺官生合世: '官星旺，又来生合你的世爻',
+  日月官生合世: '当月或当天本身就是官星，并来生合你的世爻',
+  父发: '父母发动来生合你的世爻，官星的不足有父母来补',
+  冲变合: '六冲卦变成六合，先难后成',
+};
 // 证据分级：决定（否决、能过、定结论的象注）、重要（关乎官父世三层的加减）、一般（应、兄弟、妻财、卦级、神煞）、参考（其余象注）
 const DECISIVE_NOTE = /下第|官父皆不旺|出现无情|不作旺官|始则艰阻|不作否决|不算致命/;
 const CORE = new Set(['能否录取', '临场表现', '自身状态']);
@@ -112,12 +121,28 @@ function sourcesOf(rules) {
   }
   return out;
 }
-// 正文用：只留第一处古籍原句，免得一句话里堆四五处「又说」
-function renderMain(text, tone) {
-  const m = text.match(/^([^（]*)（([^（）]*)）(.*)$/);
-  if (!m || m[2].length < 6) return render(text, tone);
-  const first = m[2].split('；').map((x) => x.trim()).find((x) => x.length >= 6 && !NOTE_PART.test(x));
-  return render(first ? `${m[1]}（${first}）${m[3]}` : `${m[1]}${m[3]}`, tone);
+// 正文用：条目名目（去括注引文），能过之项换成读者说法；条件（旬空、月破等）由成段时统一交代
+function sayOf(x, kind) {
+  if (kind === 'pass' && PASS_SAY[x.code]) return PASS_SAY[x.code];
+  // 旺父就世之括注是旺衰理由，不是引文，保留
+  const t = kind === 'pass' && x.code === '旺父就世' ? x.text : x.text.replace(/（[^（）]*）/g, '');
+  // 「父子」「官申」之类读者易误读，补全为「父母子」「官鬼申」
+  let u = t;
+  for (const [x, y] of EDITOR) u = u.replace(x, y);
+  return u.replace(/：只作态度之象/, '').replace(/^(.*?)：(.*)$/, '$1，$2').replace(/^父([子丑寅卯辰巳午未申酉戌亥])/, '父母$1').replace(/^官([子丑寅卯辰巳午未申酉戌亥])/, '官鬼$1').trim();
+}
+function composeSection(entries) {
+  const good = entries.filter((e) => e.tone === 'good').map((e) => e.say);
+  const bad = entries.filter((e) => e.tone === 'bad').map((e) => e.say);
+  const neu = entries.filter((e) => !e.tone).map((e) => e.say);
+  const conds = [...new Set(entries.flatMap((e) => e.cond))];
+  const parts = [];
+  if (good.length) parts.push(good.join('；'));
+  if (bad.length) parts.push((good.length ? '不过，' : '') + bad.join('；'));
+  if (neu.length) parts.push((parts.length ? '另外，' : '') + neu.join('；'));
+  let t = parts.join('。');
+  if (conds.length) t += `。${good.length && !bad.length ? '要留意的是：' : '还要看条件：'}${conds.join('；')}`;
+  return `${t}。`;
 }
 function weave(out, r) {
   const body = () => out.map((x) => x.text).join('');
@@ -125,16 +150,20 @@ function weave(out, r) {
   const covered = (t) => body().includes(head(t));
   const groups = new Map();
   const basis = [];
+  const condText = (x) => (x.cond || []).map((c) => c.text);
   const add = (x, kind, tone, force = false) => {
     const level = levelOf(kind, x.text);
     const sec = sectionOf(x.text);
-    basis.push({ level, section: sec, text: `${render(x.text, tone)}。`, sources: sourcesOf(x.rules), rules: x.rules || [] });
+    const cs = condText(x);
+    basis.push({ level, section: sec, text: `${render(x.text, tone)}${cs.length ? `；条件：${cs.join('；')}` : ''}。`, sources: sourcesOf([...(x.rules || []), ...(x.cond || []).flatMap((c) => c.rules)]), rules: x.rules || [] });
     if (!['决定', '重要'].includes(level)) return;
     if (!force && covered(x.text)) return;
-    if (!groups.has(sec)) groups.set(sec, { texts: [], rules: [] });
+    if (!groups.has(sec)) groups.set(sec, { entries: [], rules: [] });
     const g = groups.get(sec);
-    const t = renderMain(x.text, tone);
-    if (!g.texts.includes(t)) { g.texts.push(t); g.rules.push(...(x.rules || [])); }
+    const say = sayOf(x, kind);
+    // 象注若只是复述别条已带的条件（如「化出之爻旬空」），正文不再重说
+    if (kind === 'note' && /化出之爻旬空|出空可用/.test(x.text) && g.entries.some((e) => e.cond.some((c) => c.includes('化出之')))) return;
+    if (!g.entries.some((e) => e.say === say)) { g.entries.push({ say, tone, cond: cs }); g.rules.push(...(x.rules || [])); }
   };
   for (const x of [...r.veto, ...(r.layerVeto || [])]) add(x, 'veto', 'bad');
   for (const x of r.pass) add(x, 'pass', 'good', true);
@@ -142,7 +171,7 @@ function weave(out, r) {
   for (const x of r.minus) add(x, 'minus', 'bad');
   for (const x of r.notes) add(x, 'note', null);
   for (const [sec, g] of groups) {
-    const text = `${g.texts.join('。')}。`;
+    const text = composeSection(g.entries);
     let at = -1;
     out.forEach((x, i) => { if (x.item === sec) at = i; });
     const item = sentence(sec, text, [...new Set(g.rules)]);
@@ -173,7 +202,7 @@ export function interviewV3Text(chart, ctx = {}) {
   else if (!fu) out.push(sentence('临场表现', '父母（面试表现、材料、通知）卦中不见，也无伏神可取：表现一层卦中没有明显的象；从卦象看，岗位的名分、编制一时不明（卦无父母，终无所任之邦）。', ['R-QIUMING-14', 'R-DTJ-SH-06']));
   else {
     const where = fu.kind === 'hidden' ? `父母${fu.branch}伏在${POS[fu.position]}${fu.underWhat}之下` : fu.kind === 'changed' ? `父母不上卦，由${POS[fu.position]}${fu.from}动而化出父母${fu.branch}（飞爻变爻俱无用神者，始寻伏神）` : `父母${fu.branch}在${POS[fu.position]}${fu.spirit ? `，临${fu.spirit}` : ''}`;
-    let t = `${where}，${LV[fu.level]}`;
+    let t = `${where}，${LV[fu.level]}${fu.why ? `（${fu.why}）` : ''}`;
     t += fu.level === 2 ? '，临场发挥有底气' : fu.level === 1 ? '，发挥中规中矩' : '，临场容易吃亏（表达、材料或笔试）';
     if (fu.kind === 'hidden') t += `；伏于${fu.underWhat}之下，从卦象看${TOPIC[fu.underWhat] || '题目一时摸不准'}`;
     if (fu.toWorld === '生世' || fu.toWorld === '合世' || fu.toWorld === '伏于世下') t += '；父母与你相生相合，表现能落到你身上';
@@ -200,7 +229,7 @@ export function interviewV3Text(chart, ctx = {}) {
   if (!g) out.push(sentence('能否录取', '官鬼（职位）卦中不见，也无可用的伏神，录取一层缺了主角。', ['R-YLB-MY-02']));
   else {
     const where = g.kind === 'hidden' ? `官鬼${g.branch}伏在${POS[g.position]}之下` : g.kind === 'changed' ? `官鬼${g.branch}由${POS[g.position]}动而化出` : `官鬼${g.branch}在${POS[g.position]}${g.spirit ? `，临${g.spirit}` : ''}`;
-    let t = `${where}，${LV[r.layers.hiring.level]}`;
+    let t = `${where}，${LV[r.layers.hiring.level]}${g.why ? `（${g.why}）` : ''}`;
     t += { 同爻: '，官就持在你的世爻上', 生世: '，官来生你', 合世: '，官来合你', 克世: '，官来克你', 世生它: '，只是你去生官，官不就你', 世克它: '，你去克官', 冲世: '，官与你相冲', 比和: '，官与你比和' }[g.toWorld] || '';
     if (g.active === '暗动') t += '；被日辰冲起而暗动，对方那边已有动静';
     if (g.active === '发动') t += '；官鬼发动，对方那边在推进';
@@ -218,7 +247,7 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // 3. 自身状态（世爻）
   const w = d.world;
-  let wt = `你的世爻是${w.relativeHeld}${w.branch}，在${POS[w.position]}${w.spirit ? `，临${w.spirit}` : ''}，${LV[r.layers.self.level]}`;
+  let wt = `你的世爻是${w.relativeHeld}${w.branch}，在${POS[w.position]}${w.spirit ? `，临${w.spirit}` : ''}，${LV[r.layers.self.level]}${w.why && !(g?.kind === 'line' && g.position === w.position) ? `（${w.why}）` : ''}`;
   if (w.moving) wt += '，正在动，主动去争取';
   if (w.dayTomb) wt += '；世入日墓：从卦象看，对对方的底细看不清，容易被说法蒙住，墓冲开时才看明白';
   if (w.void && !veto.some((v) => v.code === '世空无气')) {
@@ -288,11 +317,12 @@ export function interviewV3Text(chart, ctx = {}) {
   const keyPos = new Set([w.position, a?.position, fu?.kind === 'line' ? fu.position : null, g?.kind === 'line' ? g.position : null, ...d.spirits.filter((s) => s.moving).map((s) => s.position)].filter(Boolean));
   const ROLE = (y) => (y.position === w.position ? '你的世爻' : y.position === a?.position ? '应爻' : y.relative === '官鬼' ? '官星' : y.relative === '父母' ? '文书父母' : `${y.relative}爻`);
   const order = (y) => (y.position === w.position ? 0 : y.relative === '官鬼' ? 1 : y.relative === '父母' ? 2 : y.position === a?.position ? 3 : 4);
-  const bits = d.spirits.filter((y) => keyPos.has(y.position)).sort((p, q) => order(p) - order(q)).map((y, i) => {
+  const corePos = new Set([w.position, a?.position, fu?.kind === 'line' ? fu.position : null, g?.kind === 'line' ? g.position : null].filter(Boolean));
+  const bits = d.spirits.filter((y) => corePos.has(y.position)).sort((p, q) => order(p) - order(q)).map((y, i) => {
     const ss = y.shensha.filter((n) => d.shensha.table[n]).map((n) => `${n}${SHENSHA_V[n] || ''}`);
     return `${ROLE(y)}临${y.spirit}，${SPIRIT_V[y.spirit][i % 2]}${ss.length ? `，${i % 2 ? '又见' : '还带着'}${ss.join('、')}` : ''}`;
   });
-  out.push(sentence('象意', `从卦象看，${bits.join('；')}。这些只说事情的情态，不定成败。`, ['R-LIUSHEN-01', 'R-BZZ-SS-01', ...new Set(Object.values(d.shensha.table).flatMap((t) => t.relevanceRules || []))]));
+  out.push(sentence('象意', `从卦象看，${bits.join('；')}。`, ['R-LIUSHEN-01', 'R-BZZ-SS-01', ...new Set(Object.values(d.shensha.table).flatMap((t) => t.relevanceRules || []))]));
   // 加分、减分不再列清单，由文末「织入」一步按所论之爻写进各段（用户 2026-11-16：「判断依据」不能过度模板，又要全部写出）
 
   // 各类动爻之意（卜筮全书·黄金策注「财动则伤父，子动则伤官，兄动则他人有所先，鬼动则事体有变，父动则文不纯正」）
