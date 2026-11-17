@@ -3,7 +3,7 @@
 import { interviewV3 } from './interview-v3.js';
 import { RULE_SOURCES, RULE_TEXTS } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.3.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-2.4.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -436,6 +436,13 @@ export function interviewV3Text(chart, ctx = {}) {
   // 古籍原句以「」嵌进句中，按吉凶说明于你有利或不利；不再以「判断依据」「加分：」「减分：」清单堆在文末。
   // 用户 2026-11-16：「引擎断了什么，用了什么规则，所有都要写出来」「既不能过度模板说话」。
   const basis = [...weave(out, r), ...refs];
+  // 同一段相邻的基本句与织入句合成一段（2026-11-16 评审：「连续两段临场表现」）
+  for (let i = out.length - 1; i > 0; i -= 1) {
+    if (out[i].item === out[i - 1].item && !['应期', '建议'].includes(out[i].item)) {
+      out[i - 1] = sentence(out[i].item, `${out[i - 1].text}${out[i].text}`, [...new Set([...out[i - 1].rules, ...out[i].rules])]);
+      out.splice(i, 1);
+    }
+  }
 
   // 断语句中凡嵌入判定条文之括注引文者，补引该条之规则（引擎逐字核对：断语句不得只引固定规则而漏引所嵌条文之出处）
   const allItems = [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes];

@@ -858,7 +858,15 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   else if (gWang && !guanQing && !g?.underWorld && !fuQing) { verdict = 'fail'; N('官虽旺，而官父皆不持世、不生合世（出现无情，难遂青云之志；父与官星虽则出现，若不生合世爻，或不持世……亦属无益）', ['R-QIUMING-02', 'R-BZZ-QM-07']); }
   else if (gWang) verdict = plus.length > minus.length ? 'pass' : 'wait';
   // 官不旺又无能过之象：真衰（无气）者引乡试章「父旺官衰终须下第」；官平（不旺不衰）者照实写，依乡试章「必中者……若非旺父生身，定是旺官持世」（2026-11-16 评审核实）
-  else { verdict = 'fail'; if (gLv === 0) N(fWang ? '父旺官衰（父旺官衰终须下第）' : '官父皆不旺', ['R-QIUMING-08']); else N(`官星${gLv === 1 ? '不旺不衰' : '不旺'}，父母${fWang ? '虽旺而不生身' : '亦不旺'}，卦中也没有别的取中之象（予见占功名必中者﹐卦象一成﹐若非旺父生身﹐定是旺官持世）`, ['R-QIUMING-10']); }
+  else { verdict = 'fail'; if (gLv === 0) N(fWang ? '父旺官衰（父旺官衰终须下第）' : '官父皆不旺', ['R-QIUMING-08']); else {
+    // 2026-11-16 评审：「官午生世这一项必须另外审查」——判不过时写明审查过的有利证据与其不足之处
+    const seen = [];
+    if (g && g.kind === 'line' && (gen(g.el, W.el) || he(g.br, W.br)) && wRel !== '官鬼') seen.push(`官${g.br}来${gen(g.el, W.el) ? '生' : '合'}世，但官星不旺，不合「官爻旺而生世持世」须旺之条`);
+    if (g && g.kind === 'line' && g.moving && f && gen(g.el, f.el)) seen.push(`官${g.br}发动来生父母${f.br}，然官生父不等于官就你`);
+    if (g && g.kind === 'line' && g.moving && g.change?.advance === '进神') seen.push(`官${g.br}化进神，${gLv === 2 ? '乘势而进' : '不旺而化，只是待时而进'}`);
+    if (g && g.kind === 'line' && (fact(g.line).calendar.void || g.change?.changedVoid)) seen.push(`官星${fact(g.line).calendar.void ? '本爻' : '化出之爻'}旬空，作用待出空、冲空之日`);
+    N(`官星${gLv === 1 ? '不旺不衰' : '不旺'}，父母${fWang ? '虽旺而不生身' : '亦不旺'}${seen.length ? `；已审：${seen.join('；')}` : ''}；卦中没有构成取中之格的条件（予见占功名必中者﹐卦象一成﹐若非旺父生身﹐定是旺官持世；官爻旺而生世持世﹐若是父爻不旺﹐谓之福齐文不齐﹐反许遂志）`, ['R-QIUMING-10', 'R-QIUMING-08']);
+  } }
 
   // 条件审查（2026-11-16 评审：「规则命中但关键条件不满足」）：涉及官、父、世之条目，逐条查本爻与化出之爻的旬空、月破，写明适用条件
   const CODE_TARGET = { 旺官持世: ['world'], 旺官生合世: ['g'], 官动生合世: ['g'], 官父两旺: ['g'], 旺父就世: ['f'], 父发: ['f'], 官无力: ['g'], 官临应: ['g'], 父无力: ['f'], 官化凶: ['g'], 官旺化凶: ['g'] };
@@ -867,7 +875,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const c = fact(l).calendar; const ch = l.moving ? fact(l).change : null; const out = [];
     const nm = `${l.relative === '官鬼' ? '官' : l.relative === '父母' ? '父' : l.relative}${l.branch}`;
     if (bound(l)) { const by = COMBINE_OF[l.branch] === day ? `${day}日` : `${month}月`; const cb = { 子: '午', 午: '子', 丑: '未', 未: '丑', 寅: '申', 申: '寅', 卯: '酉', 酉: '卯', 辰: '戌', 戌: '辰', 巳: '亥', 亥: '巳' }[l.branch];
-      out.push({ text: `${nm}发动而被${by}合住：动逢合而绊住，力量照算，发动之作用暂不发，待冲开之${cb}日（后逢冲开之日月，吉凶俱成）`, rules: ['R-HE-01', 'R-QJF-14'] }); }
+      out.push({ text: `${nm}发动而被${by}合住：动逢合而绊住，力量照算，发动之作用暂不发，待冲开之${cb}日（后逢冲开之日月，吉凶俱成）；冲开之日亦是冲动本爻，吉凶须合当日再看`, rules: ['R-HE-01', 'R-QJF-14'] }); }
     if (c.void) out.push(l.moving ? { text: `${nm}发动而逢旬空：动不为空，作用应在出空、冲空之日`, rules: ['R-KONG-02', 'R-QJF-15'] } : lvOf(l, st(l)) === 2 ? { text: `${nm}旬空而旺：旺不为空，出空之日用事`, rules: ['R-KONG-02'] } : { text: `${nm}静而旬空，又不旺：眼下落空，须待出空、冲空`, rules: ['R-KONG-02'] });
     if (c.monthBreak) out.push({ text: `${nm}逢月破：${l.moving ? '动则能伤，出月实破之时用事' : '破而无力，待出月实破之时'}`, rules: ['R-YUEPO-02'] });
     if (ch?.changedVoid) out.push({ text: `化出之${ch.to.branch}亦逢旬空：动而化空，亦不为空，吉凶应在冲空、实空之日`, rules: ['R-KONG-02', 'R-QJF-15'] });
