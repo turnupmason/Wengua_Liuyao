@@ -56,10 +56,17 @@ function moverBlocked(o, subject, chart, mode) {
   return null;
 }
 
+// 动爻被日月合住（合绊）：合须作合论（B-018，analysis month.he / day.he）
+const heldByCalendar = (o, chart) => {
+  const c = calendarFacts({ branch: o.branch, element: o.element, moving: true, kind: 'line', position: o.position }, chart);
+  return (COMBINE.get(o.branch) === chart.calendar.dayBranch && c.day.he) || (COMBINE.get(o.branch) === chart.calendar.monthBranch && c.month.he);
+};
+
 const isAnDong = (o, chart) => {
   const { monthBranch, dayBranch } = chart.calendar;
   if (o.moving || CLASH.get(o.branch) !== dayBranch || CLASH.get(o.branch) === monthBranch) return false;
-  return strongSeason(o.element, monthBranch) || COMBINE.get(o.branch) === monthBranch;
+  // B-018：月合而又克、别无他处生扶者不作合（analysis month.he）
+  return strongSeason(o.element, monthBranch) || (COMBINE.get(o.branch) === monthBranch && calendarFacts({ branch: o.branch, element: o.element, moving: false, kind: 'line', position: o.position }, chart).month.he);
 };
 
 /**
@@ -76,17 +83,20 @@ function placesOf(subject, chart) {
   // 四时旺相章「六月未为月建，未土旺，辰戌次之」，不列被冲之丑）：辰戌丑未互冲者作克，不作扶
   if (m.clash) places.push({ place: '月建', effect: '克', strong: true });
   else if (m.swmj === '论刑') places.push({ place: '月建（巳长生于寅而逢申，论刑不论生，R-SWMJ-03）', effect: '克', strong: true });
-  // 动爻逢月合：六合章谓之合绊（「反不能动之意」），原文未言其失月扶；旺衰暂仍按合扶计，待用户裁定（B-017，2026-11-16）
-  else if (m.same || m.supports || m.combine) places.push({ place: '月建', effect: '生', strong: true });
-  else if (m.controls) places.push({ place: '月建', effect: '克', strong: true });
+  // 动爻逢月合：六合章谓之合绊（「反不能动之意」），原文未言其失月扶；旺衰按合扶计（B-017，用户 2026-11-16 定）。
+  // B-018（用户 2026-11-17 定）：月合而又克（丑对子、卯对戌、巳对申），别无他处生扶者言克不言合，有生扶仍以合论（六合章全学网本，见 analysis heKeJudge）
+  else if (m.same || m.supports || m.he) places.push({ place: '月建', effect: '生', strong: true, ...(m.heKe ? { heKe: `月合而又克，另有${m.heKe.support.join('、')}，仍以合论` } : {}) });
+  else if (m.controls) places.push({ place: '月建', effect: '克', strong: true, ...(m.heKe ? { heKe: '月合而又克，别无他处生扶，言克不言合' } : {}) });
   const dz = c.dayClash?.zengshan;
   if (subject.kind === 'hidden' && d.clash) places.push({ place: '日辰', effect: '克', strong: true });
   else if (dz === '日破') places.push({ place: '日辰', effect: '克', strong: true }); // 日冲优先于同五行比扶（R-RIZHEN-02）
   else if (dz === '暗动') places.push({ place: '日辰', effect: '生', strong: true });
   // 生旺墓绝章觉子（R-SWMJ-03）：金休囚而巳午火多论克；巳长生于寅而逢申论刑；金墓于丑、土绝于巳不作生（analysis 已除 supports）
   else if (d.swmj === '论克' || d.swmj === '论刑') places.push({ place: `日辰（${d.swmj === '论刑' ? '论刑不论生' : '烈火煎金，论克不论生'}，R-SWMJ-03）`, effect: '克', strong: true });
-  else if (d.same || d.supports || (d.combine && !subject.moving) || d.lifeStage === '长生' || d.lifeStage === '帝旺') places.push({ place: '日辰', effect: '生', strong: true });
-  else if (d.controls) places.push({ place: '日辰', effect: '克', strong: true });
+  else if (d.same || d.supports || (d.he && !subject.moving) || d.lifeStage === '长生' || d.lifeStage === '帝旺') places.push({ place: '日辰', effect: '生', strong: true, ...(d.heKe && !d.same && !d.supports && d.lifeStage !== '长生' && d.lifeStage !== '帝旺' ? { heKe: `日合而又克，另有${d.heKe.support.join('、')}，仍以合论` } : {}) });
+  // B-018：动爻逢日合为合绊，不作扶；合克并见而有他处生扶者仍以合论，即不作克
+  else if (d.he && subject.moving) { /* 合绊，另记于条件 */ }
+  else if (d.controls) places.push({ place: '日辰', effect: '克', strong: true, ...(d.heKe ? { heKe: '日合而又克，别无他处生扶，言克不言合' } : {}) });
   // 动静生克章：「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——受方休囚时，静而旺相（不破）之爻亦计入
   const subjectWeak = !strongSeason(subject.element, chart.calendar.monthBranch) || CLASH.get(subject.branch) === chart.calendar.monthBranch;
   const staticStrong = (o) => !o.moving && strongSeason(o.element, chart.calendar.monthBranch) && CLASH.get(o.branch) !== chart.calendar.monthBranch;
@@ -96,7 +106,8 @@ function placesOf(subject, chart) {
     const st = !o.moving && !an && subjectWeak && staticStrong(o) && subject.kind !== 'hidden';
     if (!o.moving && !an && !st) continue;
     // 六合章：「爻动或与日月……合者谓之动逢合而绊住，反不能动之意」——被日辰、月建合住的动爻暂不生克他爻（待冲开）
-    if (o.moving && (COMBINE.get(o.branch) === chart.calendar.dayBranch || COMBINE.get(o.branch) === chart.calendar.monthBranch)) continue;
+    // B-018：合而又克、别无他处生扶者不言合，亦不作合绊
+    if (o.moving && ((COMBINE.get(o.branch) === chart.calendar.dayBranch || COMBINE.get(o.branch) === chart.calendar.monthBranch) && heldByCalendar(o, chart))) continue;
     // 同章「爻动或与日月动爻合者谓之动逢合而绊住」；正宗「如旁爻动来合之，须待冲那旁爻之日至」（R-QJF-14、R-BZZ-QJ-04）
     if (o.moving && chart.lines.some((x) => x.position !== o.position && x.moving && COMBINE.get(o.branch) === x.branch)) continue;
     const er = elementRelation(o.element, subject.element);

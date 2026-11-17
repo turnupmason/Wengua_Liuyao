@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { buildChart, buildEvidence, analyzeChart, interviewV3, interviewV3Text, shenshaTable, shenshaFacts, allHexagrams } from '../src/index.js';
 import { BANNED, ABSOLUTE } from '../src/questions/text-guards.js';
 
@@ -140,9 +141,54 @@ test('兄弟持世合乡试章「必添科名」之条件者，官克世不作�
 });
 
 test('依据栏出处表与规则登记一致（src/data/rule-sources.js 由 scripts/build-rule-sources.mjs 生成）', async () => {
-  const { readFileSync } = await import('node:fs');
+
   const { RULE_SOURCES } = await import('../src/data/rule-sources.js');
   const reg = JSON.parse(readFileSync(new URL('../rules/register.json', import.meta.url), 'utf8'));
   for (const r of reg.rules) assert.deepEqual(RULE_SOURCES[r.rule_id], [r.source_book, r.source_chapter], `${r.rule_id} 出处表过期，请重跑 build-rule-sources`);
   assert.equal(Object.keys(RULE_SOURCES).length, reg.rules.length);
+});
+
+test('B-018 合克并见：原书剥卦例（丑月庚辰日占子病）子水月合而无他处生扶，言克不言合；有生扶者仍以合论', async () => {
+  const { assessRoleState } = await import('../src/role-state.js');
+  // 六合章（全学网本）：「子水子孙，与月建作合，卦无生扶，言克不言合也。又加日辰克制……只恐难过辰时」
+  const c = buildChart({ lineValues: [8, 8, 8, 8, 8, 7], calendar: { monthBranch: '丑', dayGanzhi: '庚辰' } });
+  const a = analyzeChart(c);
+  const zi = c.lines.find((l) => l.branch === '子');
+  const cal = a.lines[zi.position - 1].calendar;
+  assert.equal(cal.month.combine, true); assert.equal(cal.month.controls, true); assert.equal(cal.month.he, false);
+  const s = assessRoleState(zi, a.lines[zi.position - 1], c);
+  assert.ok(s.places.some((p) => p.place === '月建' && p.effect === '克' && /言克不言合/.test(p.heKe)));
+  assert.equal(s.capability, 'weak');
+  // 卯月乙未日小过之晋：父戌与卯月合而受其克，另得未日比扶、动化回头生，仍以合论（只计一次扶，不另计克）
+  const c2 = buildChart({ lineValues: [8, 8, 9, 7, 8, 6], calendar: { monthBranch: '卯', dayGanzhi: '乙未' } });
+  const a2 = analyzeChart(c2);
+  const xu = c2.lines.find((l) => l.branch === '戌' && l.relative === '父母' && l.moving);
+  assert.equal(a2.lines[xu.position - 1].calendar.month.he, true);
+  const s2 = assessRoleState(xu, a2.lines[xu.position - 1], c2);
+  assert.ok(s2.places.some((p) => p.place === '月建' && p.effect === '生' && /仍以合论/.test(p.heKe)));
+  assert.ok(!s2.places.some((p) => p.place === '月建' && p.effect === '克'));
+});
+
+test('B-020：无必中之格不作偏难之据；六冲卦而父旺者须再占（乡试章）', () => {
+  // 乾为天未月乙亥日：父戌旺持世而不得生合，官午不旺不衰——乡试章「虽系六冲，世父皆逢旺地，不敢决之，请再占一卦」
+  const { v3, text } = run('777777', '未', '乙亥');
+  assert.equal(v3.verdict, 'wait');
+  assert.equal(v3.reCast, true);
+  assert.ok(text.items.find((x) => x.item === '建议').text.includes('再起一卦'));
+  // 结论只写实有的利弊，不写「另审」之类审核记录
+  const concl = text.items.find((x) => x.item === '结论').text;
+  assert.ok(!/另审|已审|取中之格|必中之格/.test(concl), concl);
+  // 依据栏仍有完整审核记录
+  assert.ok(text.basis.some((b) => /再占一卦/.test(b.text)));
+});
+
+test('B-019 童试章「冲中逢合」两本异文：现行按本地底本，另一本原文存于登记', () => {
+  // 本地底本「父母旺相﹐若化休囚空破墓冲﹐若得日月动爻相合者﹐谓之冲中逢合」：父戌化巳而巳空，又与卯月相合，算冲中逢合。
+  // 全学网本作「父母旺相，若化休囚、空破、墓绝，化回头克，及被冲克者，始取终弃。世与父爻，动而逢冲，若得日月动爻相合者，谓之冲中逢合」：
+  // 照此本，本卦父戌动而未逢冲，不成冲中逢合，化空反属「始取终弃」。择定底本前两本并存，此测试防现行口径无意中改动。
+  const { v3 } = run('889786', '卯', '乙未');
+  assert.ok(v3.plus.some((x) => x.text.includes('冲中逢合')));
+  const reg = JSON.parse(readFileSync(new URL('../rules/register.json', import.meta.url), 'utf8'));
+  const b19 = reg.rulings.find((x) => x.id === 'B-019').ruling;
+  assert.ok(b19.includes('若化休囚空破墓冲') && b19.includes('世与父爻，动而逢冲'));
 });

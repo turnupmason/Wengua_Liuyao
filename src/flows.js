@@ -29,7 +29,7 @@ export function assessHidden(line, lineFacts, role, chart) {
   const u = h.usable;
   const x = h.unusable;
   // 有气：四时旺相、得日月生扶（含比扶）、或得月合（与「伏神休囚无气」条同一口径）
-  const hasQi = u['伏神旺相'] || u['日月生伏'] || h.calendar.month.supports || h.calendar.day.supports || h.calendar.month.combine;
+  const hasQi = u['伏神旺相'] || u['日月生伏'] || h.calendar.month.supports || h.calendar.day.supports || h.calendar.month.he;
   const obstacles = Object.entries(x).filter(([, v]) => v).map(([k]) => k);
   const openers = ['日月动爻冲克飞神', '飞神空破休囚墓绝'].filter((k) => u[k]);
   const supports = ['日月生伏', '伏神旺相', '飞来生伏', '动爻生伏'].filter((k) => u[k]);

@@ -3,9 +3,9 @@
   "question_id": "career.interview.interview-pass",
   "match": "class",
   "equivalence_version": "interview-pass-eq-0.14.0",
-  "class_key": "用明现持世[INEFFECTIVE]静;世持世;原无力;忌无力;三版fail|否官无力",
+  "class_key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
   "class_rank": 33,
-  "class_share_of_casts": 0.000255,
+  "class_share_of_casts": 0.000256,
   "sample_charts": [
     {
       "line_values": [
@@ -16,104 +16,92 @@
         7,
         8
       ],
-      "month_branch": "巳",
-      "day_ganzhi": "己巳"
+      "month_branch": "卯",
+      "day_ganzhi": "庚辰"
     },
     {
       "line_values": [
-        8,
-        8,
-        8,
+        9,
         8,
         7,
-        8
+        7,
+        7,
+        7
       ],
-      "month_branch": "巳",
-      "day_ganzhi": "壬午"
+      "month_branch": "寅",
+      "day_ganzhi": "辛卯"
     },
     {
       "line_values": [
+        9,
         8,
         7,
         7,
         7,
-        8,
-        8
+        7
       ],
-      "month_branch": "亥",
-      "day_ganzhi": "辛亥"
+      "month_branch": "寅",
+      "day_ganzhi": "戊午"
     },
     {
       "line_values": [
-        8,
-        8,
+        9,
         8,
         7,
         7,
-        8
+        7,
+        7
       ],
-      "month_branch": "辰",
-      "day_ganzhi": "戊辰"
+      "month_branch": "子",
+      "day_ganzhi": "壬寅"
     },
     {
       "line_values": [
-        8,
-        8,
-        8,
+        9,
         8,
         7,
-        8
+        7,
+        7,
+        7
       ],
-      "month_branch": "午",
-      "day_ganzhi": "辛巳"
+      "month_branch": "子",
+      "day_ganzhi": "乙卯"
     },
     {
       "line_values": [
+        9,
         8,
         7,
         7,
         7,
-        8,
-        8
-      ],
-      "month_branch": "亥",
-      "day_ganzhi": "丁亥"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        8,
-        7,
-        7,
-        8
-      ],
-      "month_branch": "辰",
-      "day_ganzhi": "壬辰"
-    },
-    {
-      "line_values": [
-        8,
-        7,
-        7,
-        7,
-        8,
-        8
+        7
       ],
       "month_branch": "亥",
       "day_ganzhi": "己亥"
     },
     {
       "line_values": [
-        8,
-        8,
-        8,
+        7,
         8,
         7,
-        6
+        7,
+        7,
+        7
       ],
-      "month_branch": "巳",
-      "day_ganzhi": "辛巳"
+      "month_branch": "亥",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "丙戌"
     },
     {
       "line_values": [
@@ -124,19 +112,7 @@
         7,
         8
       ],
-      "month_branch": "午",
-      "day_ganzhi": "甲午"
-    },
-    {
-      "line_values": [
-        8,
-        8,
-        8,
-        7,
-        7,
-        8
-      ],
-      "month_branch": "丑",
+      "month_branch": "寅",
       "day_ganzhi": "辛未"
     },
     {
@@ -144,71 +120,119 @@
         8,
         8,
         8,
-        7,
+        8,
         7,
         8
       ],
-      "month_branch": "辰",
-      "day_ganzhi": "丙辰"
+      "month_branch": "寅",
+      "day_ganzhi": "壬辰"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "亥",
+      "day_ganzhi": "癸亥"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "卯",
+      "day_ganzhi": "丁亥"
     }
   ],
   "scenario_tags": [
-    "官鬼持世而休囚",
-    "月建父母泄官",
-    "父母不发动"
+    "旺官持世",
+    "官父两旺",
+    "原神被伤",
+    "忌神静"
   ],
   "judgment": {
-    "verdict": "unlikely",
-    "verdict_label": "偏难",
+    "verdict": "likely-pass",
+    "verdict_label": "倾向通过",
     "deciding_evidence": [
-      "官无力（R-QIUMING-08、R-YONG-GUAN-07）"
+      "官鬼持世而旺（R-QIUMING-10）",
+      "父母旺相（R-HJC-QM-01）"
     ],
     "supporting": [],
-    "adverse": [],
+    "adverse": [
+      "原神妻财被伤无力（R-QJF-12）",
+      "应爻克世（类内部分盘）"
+    ],
     "conflicts_resolved": [
-      "类内父母或旺或衰、或明或伏，不改结论；逐卦断语写出"
+      "原神被伤为全类减分，不改能过",
+      "子孙有气而静：不主动作用"
     ],
     "rule_ids": [
-      "R-QIUMING-03",
-      "R-QIUMING-08",
+      "R-HJC-QM-01",
+      "R-QIUMING-09",
       "R-QIUMING-10",
+      "R-QIUMING-14",
       "R-QIUMING-15",
+      "R-QJF-12",
       "R-YINGQI-01",
-      "R-YONG-GUAN-07"
+      "R-YONG-GUAN-03",
+      "R-ZS-QM-01"
     ],
     "decisive": [
       {
         "role": "v3",
-        "effect": "adverse",
-        "basis": "官无力"
+        "effect": "support",
+        "basis": "旺官持世"
+      },
+      {
+        "role": "v3",
+        "effect": "support",
+        "basis": "官父两旺"
       }
     ],
     "v3_basis": [
       {
-        "code": "官无力",
-        "text": "官星无气，父母也不发动来就你，录取一层立不起来",
+        "code": "官父两旺",
+        "text": "父母也旺，两层都有了",
         "rules": [
-          "R-QIUMING-08",
-          "R-YONG-GUAN-07"
+          "R-QIUMING-15",
+          "R-QIUMING-14",
+          "R-HJC-QM-01"
+        ]
+      },
+      {
+        "code": "旺官持世",
+        "text": "官鬼持世而旺",
+        "rules": [
+          "R-YONG-GUAN-03",
+          "R-QIUMING-10",
+          "R-ZS-QM-01"
         ]
       }
     ],
     "flow_acknowledgements": []
   },
   "reading": {
-    "title": "偏难：官星持世，却在文书当令的月份泄了气",
-    "brief": "官星持世，这个位置是对的；可当月父母当令，官生父而泄气，日辰也扶不起，官星休囚无力。文书得令，却没有发动来生合你，救不了官，所以这一轮偏难。",
-    "opening": "面试是官父两层。官鬼持世，录取之神落在你这一爻，这是好的起点。\n可它生在父母当令的月份：官生父，气往文书那边泄，官星自己休囚，日辰也没能把它扶旺。野鹤所说的必中之卦，一种是旺父生身，一种是旺官持世；这一卦官虽持世，却不旺，两种都不沾。",
-    "process": "月建本身就是父母，文书一层得令。童试章给过一条退路，「官衰父发﹐亦论抡收」，官弱时父母发动来生合世爻也能取中；可这一卦的父母只是得令，并未动身来就你，这条退路没有打开。\n生官的妻财与克官的子孙都无力，官星得不到有力的扶持，也没人伤它，就这样无气地坐在世上。官星无气，父母也不发动来就你，录取一层立不起来。",
-    "ending": "录取一层，官星坐在你世上却泄气无力；文书得令，却不发动来救。官衰而父不发，缺的正是被录取的那一下，所以这一轮偏难。",
+    "title": "倾向通过：官旺持世、父母也旺，克官的子孙安静",
+    "brief": "你的世爻上就是官鬼，一般当令或临月建而旺；父母与它一样旺相，录取、表现两头都有底，倾向通过。生官的妻财被伤无力，是短处；克官的子孙安静，不来添乱。",
+    "opening": "官鬼持世而旺，父母也旺，两层都有了。黄金策求名「父爻旺相。文成掷地金声；鬼位兴隆，家报泥金捷喜」，两句全占。乡试章另说官父两旺而世不旺者要靠推荐，此卦世就是官，世也是旺的，不必借外力。",
+    "process": "生官的妻财在卦中被伤无力，官星背后少了来源，成了之后能否长久要打折扣。克官的子孙有气而静，不主动作用。\n应爻若来克世，对方要求会严一些；若父母独自发动而不化凶，又添一分助力。这些细处各卦不同，排盘时另列。官旺而明现，本主「为久为远」；财被伤，长久上仍要留意。",
+    "ending": "官旺持世、父母也旺，克官之神不动，倾向通过；原神受伤只影响长久。",
     "timing": {
-      "text": "官星安静，按「静而逢值逢冲」：持世之官值日，或日辰冲动它的日子前后，事情会有个说法；从卦象看这一轮偏难，具体日子见排盘。",
+      "text": "官星安静，按「静而逢值逢冲」：官星值日、或冲动官星之日前后，结果较容易出来；具体日子见排盘。",
       "entries": [
         {
           "timing_rule_id": "R-YINGQI-01",
           "pool": "favorable",
-          "target_event": "结果落定",
-          "target_symbol": "持世之官鬼（安静）",
+          "target_event": "结果或通知到来",
+          "target_symbol": "持世之官鬼（旺而安静）",
           "condition": "用神安静：逢值逢冲",
           "time_scale": "day",
           "calculation_basis": "官星本支值日之日、冲动官星之日",
@@ -216,28 +240,28 @@
         }
       ]
     },
-    "conclusion": "偏难。官在你身上，可惜不当令；文书再旺，不动也帮不到官。准备照常做足，同时多留一个机会。",
+    "conclusion": "倾向通过。录取与表现都旺；对方要求可能偏严，谈待遇时稳着来。",
     "classical_sources": [
       {
-        "rule_id": "R-QIUMING-15",
-        "source_book": "增删卜易",
-        "source_chapter": "增删卜易卷之三·武试章第五十九亦可以与文试看",
-        "quote": "文试者﹐官父而重",
-        "applies_because": "面试一事，官与父母并看"
-      },
-      {
-        "rule_id": "R-QIUMING-03",
-        "source_book": "增删卜易",
-        "source_chapter": "增删卜易卷之三·童试章第四十九",
-        "quote": "官衰父发﹐亦论抡收",
-        "applies_because": "官衰须父发来救，本类父母不发动生合世"
+        "rule_id": "R-HJC-QM-01",
+        "source_book": "黄金策",
+        "source_chapter": "17、求名",
+        "quote": "父爻旺相。文成掷地金声；鬼位兴隆，家报泥金捷喜。",
+        "applies_because": "本类官父两旺"
       },
       {
         "rule_id": "R-QIUMING-10",
         "source_book": "增删卜易",
         "source_chapter": "增删卜易卷之三·乡试章第五十五",
         "quote": "予见占功名必中者﹐卦象一成﹐若非旺父生身﹐定是旺官持世",
-        "applies_because": "本类官星无气，不是旺官持世"
+        "applies_because": "本类旺官持世"
+      },
+      {
+        "rule_id": "R-QJF-12",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之二·增删《黄金策千金赋》第三十四",
+        "quote": "用神虽旺﹐元神若被伤克者﹐即如水无泉源﹐木无根蒂",
+        "applies_because": "本类原神妻财被伤无力"
       },
       {
         "rule_id": "R-YINGQI-01",
@@ -247,13 +271,13 @@
         "applies_because": "官星安静，取值日、冲日"
       }
     ],
-    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.14.0，写稿顺序第 33 类，占起卦概率 0.025%，全类 76 盘）：用神「明现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财当前无力（INEFFECTIVE）；忌神子孙当前无力（INEFFECTIVE）；第三版结论「偏难」；否决项「官无力」。全类一致：月建六亲：父母(100%)；用神月令：休囚(100%)；三版官层：官无气（line）(100%)；三版世层：世无气(100%)。类内各盘不同之处：用神生扶：无(84%)、妻财动来生(14%)、临日(1%)；应爻对世：生世(68%)、世克之(25%)、克世(7%)；发动六亲：无(80%)、妻财(14%)、父母(5%)；三版父层：父旺（line）(72%)、父有气（line）(21%)、无父(7%)；三版加减：加0减1(25%)、加1减1(20%)、加1减0(12%)、加0减0(11%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.14.0，写稿顺序第 33 类，占起卦概率 0.026%，全类 103 盘）：用神「明现持世[EFFECTIVE]静」；世爻「持世」；原神妻财当前无力（INEFFECTIVE）；忌神子孙安静而月令不旺，不主动作用；第三版结论「倾向通过」；能过项「官父两旺、旺官持世」。全类一致：三版官层：官旺（line）(100%)；三版世层：世旺(100%)。类内各盘不同之处：月建六亲：官鬼(75%)、父母(25%)；用神月令：旺(75%)、休囚(25%)；用神生扶：临月建(19%)、日合、月扶(12%)、月扶(11%)、临日、月扶(8%)；应爻对世：克世(50%)、生世(43%)、世克之(8%)；发动六亲：无(47%)、父母(31%)、妻财(14%)、兄弟(9%)；三版父层：父旺（line）(95%)、父旺（hidden）(5%)；三版加减：加2减2(17%)、加3减2(17%)、加5减1(11%)、加3减1(10%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
   },
   "authoring": {
     "author": "Claude（AI 起草）",
     "status": "draft-complete",
     "written_at": "2026-11-16",
-    "revision": 1,
-    "revision_note": "eq-0.14 拼装稿（docs/19 断语库）经单 Claude 润色：逐句对照判断字段与卦盘事实，去模板味"
+    "revision": 2,
+    "revision_note": "eq-0.14 复润：去模板味（简断开头、「这一卦」叠用、跨篇同句、篇内重复），去掉对读者的内部用语，判断与依据不变"
   }
 }

@@ -21,7 +21,7 @@ function qingOf(rel) {
 function qiPattern(l, cal) {
   const m = cal.month;
   const d = cal.day;
-  const seasonal = m.seasonal === '旺' || m.seasonal === '相' || m.combine;
+  const seasonal = m.seasonal === '旺' || m.seasonal === '相' || m.he;
   const dayHit = d.controls || cal.dayTomb || (cal.dayClash && cal.dayClash.zengshan === '日破');
   const dayHelp = d.same || d.supports || d.lifeStage === '长生' || d.lifeStage === '帝旺' || (cal.dayClash && cal.dayClash.zengshan === '暗动');
   if (seasonal) return dayHit ? '月旺日制' : '月旺';

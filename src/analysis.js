@@ -45,6 +45,46 @@ function calendarRelation(sourceBranch, branch, element) {
   };
 }
 
+/**
+ * B-018 合中带克（用户 2026-11-17 裁定）。增删卜易·六合章（全学网本；本地底本与维基文库本无此段，登记为异文）：
+ *「古法子与丑合，丑中有土，土克子水，谓之合中带克，克三合七。巳与申合，巳火克申金，谓之克七合三。右非通论，余得验者，
+ *  子丑作合，若于辰戌丑未月日占之，而子水并无他处生扶者，即言克不言合，若有生扶，仍以合论。所以子水逢丑月、戌土遇卯月、
+ *  申金逢巳月，再遇动爻克者，克而又克，何能言合耶？」
+ * 日或月对一爻合而又克（丑对子、卯对戌、巳对申）：查本爻有无他处生扶，这一合本身不算——无则言克不言合，有则仍以合论。
+ * 他处生扶取（与 role-state 四处生克同一取法，但不递归追查他爻之衰旺）：
+ *   另一日月生之、比之，或合之而不克，或日为本爻长生、帝旺；
+ *   发动之爻生之、比之，而该动爻不是「休囚又被日月克」（元神忌神衰旺章），也未被日月合住（六合章合绊）；
+ *   本爻动化回头生、化进神；本爻休囚时，静而旺相不破之爻生之比之（动静生克章）。
+ * 原文举「辰戌丑未月日」，兼言月日；举月之例而日辰亦合克者同此论。
+ * @returns {null | { asHe: boolean, support: string[] }}
+ */
+function heKeJudge(t, chart, which, month, day, seasonalStrong) {
+  const rel = which === 'month' ? month : day;
+  if (!rel.combine || !rel.controls) return null;
+  const { monthBranch, dayBranch } = chart.calendar;
+  const other = which === 'month' ? day : month;
+  const otherBr = which === 'month' ? dayBranch : monthBranch;
+  const support = [];
+  if (other.supports || (other.combine && !other.controls && !(which === 'month' && t.moving))) support.push(`${which === 'month' ? '日辰' : '月建'}${otherBr}${other.combine && !other.supports ? '合之' : '生扶'}`);
+  if (which === 'month' && ['长生', '帝旺'].includes(day.stage) && !day.controls) support.push(`${day.stage}于日辰${dayBranch}`);
+  const weakSeason = (el) => seasonalState(el, monthBranch) === '休囚';
+  const hitByCal = (l) => elementRelation(BRANCH_ELEMENT[monthBranch], l.element) === 'controls' || elementRelation(BRANCH_ELEMENT[dayBranch], l.element) === 'controls';
+  const boundRaw = (l) => COMBINE.get(l.branch) === dayBranch || (COMBINE.get(l.branch) === monthBranch && CLASH.get(l.branch) !== dayBranch);
+  for (const l of chart.lines) {
+    if (t.kind !== 'hidden' && l.position === t.position) continue;
+    const er = elementRelation(l.element, t.element);
+    if (er !== 'generates' && er !== 'same') continue;
+    if (l.moving && !(weakSeason(l.element) && hitByCal(l)) && !boundRaw(l)) support.push(`动爻${l.branch}`);
+    else if (!l.moving && !seasonalStrong && t.kind !== 'hidden' && !weakSeason(l.element) && CLASH.get(l.branch) !== monthBranch) support.push(`静旺之爻${l.branch}`);
+  }
+  if (t.kind === 'line' && t.moving) {
+    const c = chart.lines[t.position - 1]?.changed;
+    if (c && elementRelation(c.element, t.element) === 'generates') support.push(`动化回头生${c.branch}`);
+    else if (c && advanceOrRetreat(t.branch, c.branch) === '进神') support.push(`动化进神${c.branch}`);
+  }
+  return { asHe: support.length > 0, support };
+}
+
 function hasMovingSupport(target, chart, excludePos) {
   return chart.lines.some((l) => l.moving && l.position !== excludePos && ['generates', 'same'].includes(elementRelation(l.element, target.element)));
 }
@@ -139,12 +179,21 @@ export function calendarFacts(t, chart) {
   // 巳爻临寅月而日月动变逢申：论刑不论生
   const monthSwmj = t.branch === '巳' && monthBranch === '寅' ? swmjJudge(t, monthBranch, chart, 'day') : null;
   if (monthSwmj) { month.swmj = monthSwmj; month.supports = false; }
+  // B-018：合的事实（combine）照记；作合与否另记 he（合而不克，或合克并见而有他处生扶）
+  {
+    const ss = (seasonal === '旺' || seasonal === '相') && CLASH.get(t.branch) !== monthBranch;
+    const mk = heKeJudge(t, chart, 'month', month, { ...day, stage: dayStage }, ss);
+    const dk = heKeJudge(t, chart, 'day', month, day, ss);
+    month.heKe = mk; day.heKe = dk;
+    month.he = month.combine && (!month.controls || Boolean(mk?.asHe));
+    day.he = day.combine && (!day.controls || Boolean(dk?.asHe));
+  }
   // 旺相（狭义，四时旺相章）与得令合（月将章「衰而亦旺」）
   // 月破之爻不作旺相（月破章「用神临月破……即是枯根木，逢生生之不起」；四时旺相章「未土旺，辰戌次之」，被冲之丑不在旺列）
   const seasonalStrong = (seasonal === '旺' || seasonal === '相') && CLASH.get(t.branch) !== monthBranch;
   // 区分暗动与日破的「旺相」（R-RIZHEN-02）：四时旺相，或得月合（月将章「合之…衰而亦旺」）。
   // 静爻休囚而得他爻动生、再逢日冲者如何论，书中未见明例，列为未决分歧 D-012。
-  const strongForClash = seasonalStrong || month.combine;
+  const strongForClash = seasonalStrong || month.he; // B-018：合克并见而无他处生扶者不作合
   const inVoid = voidBranches.includes(t.branch);
   const monthBreak = month.clash;
 

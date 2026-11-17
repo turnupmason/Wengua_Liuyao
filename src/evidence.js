@@ -25,13 +25,15 @@ function ledger(line, facts, chart) {
   if (m.same) support.push('临月建');
   else if (m.element === 'same') support.push('月扶');
   else if (m.element === 'generates') support.push('月生');
-  if (m.combine) support.push('月合');
+  // B-018：合而又克者，有他处生扶仍以合论，无则言克不言合（六合章全学网本）
+  if (m.combine) (m.he ? support : notes).push(m.heKe ? (m.he ? '月合而又克，另有生扶，仍以合论' : '月合而又克，别无他处生扶，言克不言合') : '月合');
   if (m.clash) damage.push('月破');
   else if (m.element === 'controls') damage.push('月克');
   if (d.same) support.push('临日');
   else if (d.element === 'same' && facts.calendar.dayClash?.zengshan !== '日破') support.push('日扶');
   else if (d.element === 'generates') support.push('日生');
-  if (d.combine) (line.moving ? notes : support).push(line.moving ? '动而逢日合（合绊）' : '日合');
+  if (d.combine && !d.he) notes.push('日合而又克，别无他处生扶，言克不言合');
+  else if (d.combine) (line.moving ? notes : support).push(line.moving ? '动而逢日合（合绊）' : d.heKe ? '日合而又克，另有生扶，仍以合论' : '日合');
   if (d.lifeStage === '长生' || d.lifeStage === '帝旺') support.push(`日${d.lifeStage}`);
   if (d.element === 'controls') damage.push('日克');
   if (facts.calendar.dayTomb) damage.push('入日墓');
@@ -73,7 +75,7 @@ function ledger(line, facts, chart) {
 function strongBroad(facts) {
   const m = facts.calendar.month;
   const d = facts.calendar.day;
-  return facts.calendar.seasonalStrong || m.same || d.same || m.supports || d.supports || m.combine;
+  return facts.calendar.seasonalStrong || m.same || d.same || m.supports || d.supports || m.he;
 }
 
 function describeLine(line, facts, chart) {
@@ -127,7 +129,7 @@ function finerStrength(line, facts) {
     c.month.same ? 1 : 0,
     c.day.same ? 1 : 0,
     c.day.supports || c.day.lifeStage === '长生' || c.day.lifeStage === '帝旺' ? 1 : 0,
-    !line.moving && (c.month.combine || c.day.combine) ? 1 : 0,
+    !line.moving && (c.month.he || c.day.he) ? 1 : 0,
   ];
 }
 
@@ -258,8 +260,8 @@ function timingCandidates(yong, facts, chart, scale) {
   const inTomb = cal.dayTomb || chart.lines.some((o) => o.moving && o.position !== yong.position && o.branch === tombBranch) || (facts.change && facts.change.lifeStage === '墓');
   if (inTomb) add('R-YINGQI-05', '冲墓', [CLASH.get(tombBranch)], `入墓待冲开：逢${CLASH.get(tombBranch)}冲${tombBranch}墓`);
   const combinedBy = [];
-  if (cal.month.combine) combinedBy.push(chart.calendar.monthBranch);
-  if (cal.day.combine) combinedBy.push(chart.calendar.dayBranch);
+  if (cal.month.he) combinedBy.push(chart.calendar.monthBranch);
+  if (cal.day.he) combinedBy.push(chart.calendar.dayBranch);
   if (facts.change && facts.change.combine) combinedBy.push(facts.change.to.branch);
   if (combinedBy.length) add('R-YINGQI-06', '逢合待冲', [CLASH.get(b), ...combinedBy.map((x) => CLASH.get(x))], `合住待冲开：冲${b}或冲合神${combinedBy.join('、')}`);
   const tooStrong = cal.month.same && (cal.day.same || cal.day.supports);
