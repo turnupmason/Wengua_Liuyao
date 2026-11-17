@@ -9,6 +9,9 @@ ROOT = 'D:/Wengua_Liuyao'
 FIELDS = ['title', 'brief', 'opening', 'process', 'ending', 'conclusion']
 CONNECTORS = ['所以', '再看', '不过', '可是', '可惜', '但是', '然而', '因此', '另外', '同时', '其次', '首先', '总之', '这一卦', '从卦象看', '这一轮']
 HAN = re.compile(r'[\u4e00-\u9fff]')
+# \u5408\u6cd5\u53e0\u5b57\uff08\u5176\u4f59\u53e0\u5b57\u5217\u51fa\u5f85\u6838\uff09\uff1b\u5df2\u89c1\u9519\u5b57\uff08\u53d1\u73b0\u4e00\u4e2a\u8865\u4e00\u4e2a\uff09
+DOUBLE_OK = {'常常', '渐渐', '刚刚', '稳稳', '当当', '一一', '处处', '步步', '慢慢', '早早', '好好', '偏偏', '往往', '恰恰', '隐隐', '个个', '样样', '天天', '多多', '轻轻', '实实', '月月', '项项', '等等'}
+TYPO = ['后一般落空', '的的', '了了', '是是', '再再', '不不', '和和', '在在', '即使使', '以以']
 QUOTE = re.compile(r'「[^」]*」')
 
 # 阈值
@@ -141,6 +144,27 @@ def main():
                 j = jac(G[a['script_id']][k], G[b['script_id']][k])
                 if j > FIELD_JAC:
                     add('同栏目相似', [a['script_id'], b['script_id']], k, f'{j:.2f}')
+
+    # 6 错字与标点（用户 2026-11-16「坚决不能有任何错别字」）：机器只能查形式，逐字通读仍不可省
+    for d in focus:
+        for k in FIELDS + ['timing']:
+            t = d['reading']['timing']['text'] if k == 'timing' else d['reading'][k]
+            outside = QUOTE.sub('', t)
+            if t.count('「') != t.count('」'):
+                add('标点', [d['script_id']], f'{k}：引号「」不配对')
+            for ch in '﹐﹔':
+                if ch in outside:
+                    add('标点', [d['script_id']], f'{k}：引文外用了古籍标点「{ch}」')
+            for m in re.finditer(r'[,;:?!()]', outside):
+                add('标点', [d['script_id']], f'{k}：半角标点「{m.group()}」')
+            for m in re.finditer(r'([一-鿿])\1', outside):
+                if m.group() not in DOUBLE_OK:
+                    add('叠字待核', [d['script_id']], f'{k}：「{t[max(0, m.start() - 4):m.end() + 4]}」')
+            for w in TYPO:
+                if w in t:
+                    add('错字', [d['script_id']], f'{k}：「{w}」')
+            for m in re.finditer(r'[，、；：]{2,}|。{2,}|[，；]。', t):
+                add('标点', [d['script_id']], f'{k}：标点连用「{m.group()}」')
 
     kinds = Counter(x['kind'] for x in R['items'])
     print(f"模板味检查：{qdir} 共 {n} 篇；查看 {len(focus)} 篇；问题 {len(R['items'])} 处（{'、'.join(f'{k} {v}' for k, v in kinds.items()) or '无'}）")

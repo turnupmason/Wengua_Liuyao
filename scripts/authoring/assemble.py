@@ -30,7 +30,8 @@ def polish_of(key, qname='interview'):
         _polish = {}
         for f in sorted(glob.glob(f'{ROOT}/authoring/polish/{qname}/*.json')):
             d = json.load(open(f, encoding='utf-8'))
-            _polish[d['key']] = d
+            if d.get('base') != 'handwritten':  # 手写稿的复润稿由 make_class 套用，拼装不碰
+                _polish[d['key']] = d
     return _polish.get(key)
 
 

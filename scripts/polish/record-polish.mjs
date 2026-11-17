@@ -24,7 +24,8 @@ const LOCKED = {
   sample_charts: (x) => x.sample_charts,
   question_id: (x) => x.question_id,
   scenario_tags: (x) => x.scenario_tags,
-  judgment: (x) => x.judgment,
+  // 依据码原句（v3_basis[].text）只是正文中那句话的指针，随措辞润色而改，作可润色字段记录；判断的其余部分锁定
+  judgment: (x) => ({ ...x.judgment, v3_basis: (x.judgment.v3_basis || []).map(({ text, ...b }) => b) }),
   'reading.timing.entries': (x) => x.reading.timing?.entries,
   'reading.classical_sources': (x) => x.reading.classical_sources,
   'reading.calculation_explanation': (x) => x.reading.calculation_explanation,
@@ -39,6 +40,7 @@ const POLISHABLE = {
   title: (x) => x.reading.title, brief: (x) => x.reading.brief, opening: (x) => x.reading.opening,
   process: (x) => x.reading.process, ending: (x) => x.reading.ending, 'timing.text': (x) => x.reading.timing?.text,
   conclusion: (x) => x.reading.conclusion,
+  'judgment.v3_basis.text': (x) => JSON.stringify((x.judgment.v3_basis || []).map((b) => [b.code, b.text])),
 };
 const changes = Object.entries(POLISHABLE).filter(([, f]) => f(cur) !== f(old)).map(([k, f]) => ({ field: k, before: f(old), after: f(cur) }));
 if (grade === 'A' && changes.length) { console.error('A 类不应有改动'); process.exit(1); }

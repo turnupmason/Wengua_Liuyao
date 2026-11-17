@@ -1,0 +1,263 @@
+{
+  "script_id": "IPC-0002",
+  "question_id": "career.interview.interview-pass",
+  "match": "class",
+  "equivalence_version": "interview-pass-eq-0.14.0",
+  "class_key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail|否官无力",
+  "class_rank": 2,
+  "class_share_of_casts": 0.000725,
+  "sample_charts": [
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "丙戌"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "丁酉"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "癸卯"
+    },
+    {
+      "line_values": [
+        6,
+        8,
+        8,
+        8,
+        7,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "庚戌"
+    },
+    {
+      "line_values": [
+        8,
+        8,
+        8,
+        7,
+        7,
+        8
+      ],
+      "month_branch": "子",
+      "day_ganzhi": "甲申"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "壬戌"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "辛酉"
+    },
+    {
+      "line_values": [
+        7,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "未",
+      "day_ganzhi": "戊子"
+    },
+    {
+      "line_values": [
+        7,
+        7,
+        8,
+        8,
+        8,
+        8
+      ],
+      "month_branch": "申",
+      "day_ganzhi": "己丑"
+    },
+    {
+      "line_values": [
+        8,
+        7,
+        7,
+        7,
+        8,
+        7
+      ],
+      "month_branch": "戌",
+      "day_ganzhi": "己卯"
+    },
+    {
+      "line_values": [
+        9,
+        8,
+        7,
+        7,
+        7,
+        7
+      ],
+      "month_branch": "丑",
+      "day_ganzhi": "丁未"
+    }
+  ],
+  "scenario_tags": [
+    "官鬼持世而休囚",
+    "月建克官",
+    "父母不来生合世"
+  ],
+  "judgment": {
+    "verdict": "unlikely",
+    "verdict_label": "偏难",
+    "deciding_evidence": [
+      "官鬼持世而休囚：月建为子孙克官，日辰不能使之转旺（R-QIUMING-10「若非旺父生身，定是旺官持世」）",
+      "父母不发动生合世，「官衰父发」不成立（R-QIUMING-03）"
+    ],
+    "supporting": [],
+    "adverse": [
+      "当月子孙当令克官"
+    ],
+    "conflicts_resolved": [
+      "原神妻财静而旺相：静爻不主动生扶，不改官星休囚之势；正文只写其不动",
+      "类内父母或旺或衰、或明或伏，皆不改结论；逐卦断语写出"
+    ],
+    "rule_ids": [
+      "R-QIUMING-03",
+      "R-QIUMING-08",
+      "R-QIUMING-10",
+      "R-QIUMING-15",
+      "R-YINGQI-01",
+      "R-YONG-GUAN-07"
+    ],
+    "decisive": [
+      {
+        "role": "v3",
+        "effect": "adverse",
+        "basis": "官无力"
+      }
+    ],
+    "v3_basis": [
+      {
+        "code": "官无力",
+        "text": "官星休囚无力，父母又不发动来生合你的世爻",
+        "rules": [
+          "R-QIUMING-08",
+          "R-YONG-GUAN-07"
+        ]
+      }
+    ],
+    "flow_acknowledgements": []
+  },
+  "reading": {
+    "title": "偏难：官星坐在你的世上，却被当月克住，立不起来",
+    "brief": "这一卦偏难。官鬼就坐在你的世爻上，位置是对的，可它生在克它的月份，又得不到日辰真正的生助，休囚无气；文书父母也没有发动来生合你的世爻，录取与表现两层都提不起来。",
+    "opening": "面试按《增删卜易》考试诸章「官父并看」：官鬼管能否录取，父母管临场表现与文书。这一卦官鬼正好持世，录取之神落在你自己身上，这是好的一面。\n可惜它不当令。起卦这个月，月建本身就是克官的子孙，官星被月令压着；当天日辰或不来管它，或也来克它，偶有来扶的，也只与月建一扶一克相抵，扶不成旺。野鹤说占功名必中者「若非旺父生身﹐定是旺官持世」，要的是旺官，这一卦的官星持世而无气，算不上。",
+    "process": "生官的妻财在卦中安静旺相，却没有发动；克官的子孙除了月建当令，卦中也安静不动。动静之间没有一股力量把官星托起来。\n再看表现一层。父母若发动来生合世爻，按「官衰父发﹐亦论抡收」还有一条路；这一卦的父母或安静，或虽发动却不来生合你的世，这条路走不通。官星休囚无力，父母又不发动来生合你的世爻，两层都落空。",
+    "ending": "录取一层，官星持世却无气；表现一层，文书不来就你；两层都缺，所以这一轮偏难。父母、应爻与当天日辰对你的具体作用，各卦不同，排盘后逐条写出。",
+    "timing": {
+      "text": "官星安静，按「静而逢值逢冲」：官星值日或被日辰冲动之日前后，事情会有个说法；从卦象看这一轮偏难，具体日子见排盘。",
+      "entries": [
+        {
+          "timing_rule_id": "R-YINGQI-01",
+          "pool": "favorable",
+          "target_event": "结果落定",
+          "target_symbol": "持世之官鬼（休囚安静）",
+          "condition": "用神安静：逢值逢冲",
+          "time_scale": "day",
+          "calculation_basis": "官星本支值日之日、冲动官星之日",
+          "source_reference": "增删卜易·各门类应期总注章第又二十六「静而逢值逢冲」"
+        }
+      ]
+    },
+    "conclusion": "偏难。官星虽坐在世上，却被当月克住，又没有父母发动来补，这一轮的胜算不大。准备照常做足，另一手也不妨同时推进。",
+    "classical_sources": [
+      {
+        "rule_id": "R-QIUMING-10",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·乡试章第五十五",
+        "quote": "予见占功名必中者﹐卦象一成﹐若非旺父生身﹐定是旺官持世",
+        "applies_because": "本类官虽持世而无气，不是旺官持世"
+      },
+      {
+        "rule_id": "R-QIUMING-03",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·童试章第四十九",
+        "quote": "官衰父发﹐亦论抡收",
+        "applies_because": "官衰须父发来救，本类父母不来生合世"
+      },
+      {
+        "rule_id": "R-QIUMING-15",
+        "source_book": "增删卜易",
+        "source_chapter": "增删卜易卷之三·武试章第五十九亦可以与文试看",
+        "quote": "文试者﹐官父而重",
+        "applies_because": "面试一事，官与父母并看"
+      },
+      {
+        "rule_id": "R-YINGQI-01",
+        "source_book": "增删卜易",
+        "source_chapter": "各门类应期总注章第又二十六",
+        "quote": "静而逢值逢冲",
+        "applies_because": "官星安静，取值日、冲日"
+      }
+    ],
+    "calculation_explanation": "本类判别条件（等价条件 interview-pass-eq-0.14.0，写稿顺序第 2 类，占起卦概率 0.072%，全类 257 盘）：用神「明现持世[INEFFECTIVE]静」；世爻「持世」；原神妻财静而旺相，有力（只作用于休囚之爻）；忌神子孙静而旺相，有力（只作用于休囚之爻）；第三版结论「偏难」；否决项「官无力」。全类一致：月建六亲：子孙(100%)；用神月令：休囚(100%)；三版官层：官无气（line）(100%)；三版世层：世无气(100%)。类内各盘不同之处：用神生扶：无(67%)、日生(10%)、日帝旺、日扶(8%)、日生、日长生(8%)；应爻对世：克世(74%)、生世(20%)、世克之(5%)；发动六亲：无(60%)、父母(35%)、兄弟(5%)；三版父层：父旺（line）(36%)、父无气（line）(23%)、父有气（line）(14%)、父有气（hidden）(11%)；三版加减：加0减1(23%)、加1减2(18%)、加1减1(15%)、加0减2(9%)；均不改变本类结论，正文不写，由排盘逐盘列出。"
+  },
+  "authoring": {
+    "author": "Claude（AI 起草）",
+    "status": "draft-complete",
+    "written_at": "2026-11-16",
+    "revision": 1,
+    "revision_note": "eq-0.14 初稿：依类别画像（全类统计、第三版逐项分布与 12 个分散样本盘）与 docs/18 第〇〇节官父并看"
+  }
+}

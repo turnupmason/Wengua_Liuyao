@@ -120,7 +120,33 @@ def variations(p):
     return '；'.join(seg), '；'.join(fixed)
 
 
+_overlay = None
+
+
+def overlay_of(key):
+    # 手写稿的复润稿（authoring/polish/interview/*.json 中 base 为 handwritten 者）：只换正文措辞与依据码原句，判断、引文、应期不动
+    global _overlay
+    if _overlay is None:
+        import glob
+        _overlay = {}
+        for f in sorted(glob.glob(f'{ROOT}/authoring/polish/interview/*.json')):
+            d = json.load(open(f, encoding='utf-8'))
+            if d.get('base') == 'handwritten':
+                _overlay[d['key']] = d
+    return _overlay.get(key)
+
+
 def make(spec):
+    ov = overlay_of(spec.get('key'))
+    if ov:
+        for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion', 'timing_text']:
+            if k in ov:
+                spec[k] = ov[k]
+        if ov.get('v3'):
+            assert set(ov['v3']) <= {c for c, _, _ in spec['v3']}, f"{spec['key']} 复润稿 v3 码不在原稿"
+            spec['v3'] = [(c, ov['v3'].get(c, t), r) for c, t, r in spec['v3']]
+        spec['revision'] = ov['revision']
+        spec['revision_note'] = ov['revision_note']
     # 读者视角：正文不写类内统计（多数盘、全类、三层判定等），见 reader_voice.py
     from reader_voice import convert
     for k in ['title', 'brief', 'opening', 'process', 'ending', 'conclusion']:
