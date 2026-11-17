@@ -2,7 +2,7 @@
 // 文字只用排盘事实与古籍规则组织；象意一律带「从卦象看」限定（C21）；规则编号只放在 rules 字段，不进正文（C06）。
 import { interviewV3 } from './interview-v3.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.2.1';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-1.3.0';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -25,6 +25,84 @@ const SHENG_WANG = { 水: '申日长生、子日帝旺', 木: '亥日长生、�
 const KIND = { 正: '正职、主岗', 佐: '副职、辅助岗位', 杂: '事务性岗位' };
 
 function sentence(item, text, rules = []) { return { item, text, rules }; }
+
+// ———— 织入（判定条目 → 各段成句）————
+// 归段：先看神煞六神，再看世应、应、世、子孙、兄弟、妻财、父母、官鬼、卦级；归不进的放「卦象」。
+const SHEN_NAMES = ['青龙', '朱雀', '勾陈', '螣蛇', '白虎', '玄武', '驿马', '禄神', '天乙贵人', '天喜', '劫煞', '天马', '唐符国印', '太岁', '将星', '华盖', '咸池', '羊刃', '文昌'];
+function sectionOf(t) {
+  const h = t.replace(/（.*$/, '');
+  if (SHEN_NAMES.some((n) => h.startsWith(n))) return /父/.test(h.slice(0, 8)) ? '临场表现' : '象意';
+  if (/^(世应|应|对方)/.test(h)) return '对方态度';
+  if (/^(世|自己|你)/.test(h)) return '自身状态';
+  if (/^(日辰|月建|动爻)/.test(h) && /世/.test(h) && !/^(日辰|月建|动爻)\S{0,3}(官|父)/.test(h)) return '自身状态';
+  if (/^(子孙|子动|忌神)/.test(h)) return '能否录取';
+  if (/^(兄|间爻兄弟|仇神兄弟|竞争)/.test(h)) return '竞争';
+  if (/^(间爻父母|父|文书|旺父)/.test(h)) return '临场表现';
+  if (/^(财|妻财|间爻妻财|原神)/.test(h)) return /父|文书/.test(h) ? '临场表现' : '待遇';
+  if (/^(官|旺官|日月|间爻官鬼|用鬼|卦无鬼|无官)/.test(h)) return '能否录取';
+  if (/^(六冲|六合|卦|.宫之卦|反吟|伏吟|动爻|冲变合)/.test(h)) return '卦象';
+  return '卦象';
+}
+// 稳定选词：同一卦每次生成相同，不同条目措辞错开
+function hashOf(s) { let x = 0; for (const c of s) x = (x * 31 + c.codePointAt(0)) % 1000003; return x; }
+const pickBy = (arr, s) => arr[hashOf(s) % arr.length];
+const LEAD = ['古书说', '古人说', '书上讲', '按古法', '前人有言'];
+const GOOD = ['于你有利', '这一点帮你', '是有利的一面', '这是加分的地方'];
+const BAD = ['于你不利', '这一点拖你后腿', '是不利的一面', '这一处要减分'];
+// 「头（引文）尾」→「头，古书说「引文」，尾」；括注里不足六字的（如「日月」「动爻」）照旧放在括号里
+// 括注里有三种东西：古籍原句；「书名：原句」「谒贵：原句」这类带出处标签的原句；「只作象，不计加减」这类内部说明（不是古书原话）
+const BOOK = { 火珠林: '火珠林', 易隐: '易隐', 黄金策: '黄金策', 卜筮全书: '卜筮全书', 天玄赋: '天玄赋', 易林补遗: '易林补遗', 断易天机: '断易天机', 谒贵: '谒贵之法', 增删卜易: '增删卜易' };
+const NOTE_PART = /只作象|不计加减|不计成败|只作态度/;
+function render(text, tone) {
+  const m = text.match(/^([^（]*)（([^（）]*)）(.*)$/);
+  let s;
+  if (!m || m[2].length < 6) s = text;
+  else {
+    const [, head0, q, tail] = m;
+    const head = head0;
+    const parts = q.split('；').map((x) => x.trim()).filter(Boolean);
+    const said = [];
+    let aside = false;
+    for (const p of parts) {
+      const b = p.match(/^([^：]{2,6})：(.+)$/);
+      if (NOTE_PART.test(p) && !b) { aside = true; continue; }
+      if (b && BOOK[b[1]]) said.push(`${BOOK[b[1]]}说「${b[2]}」`);
+      else said.push(said.length ? `又说「${p}」` : `${pickBy(LEAD, head)}「${p}」`);
+    }
+    s = `${head}${said.length ? `，${said.join('，')}` : ''}${tail ? `${tail.startsWith('：') ? '。' + tail.slice(1) : tail}` : ''}`;
+    if (aside) s += '；这一条只作卦象参看，不左右成败';
+  }
+  if (tone === 'good') s += `，${pickBy(GOOD, text)}`;
+  if (tone === 'bad') s += `，${pickBy(BAD, text)}`;
+  return s.replace(/。，/g, '，');
+}
+function weave(out, r) {
+  const body = () => out.map((x) => x.text).join('');
+  const head = (t) => t.replace(/（.*?）/g, '').replace(/——.*$/, (m) => m.replace(/（.*?）/g, ''));
+  const covered = (t) => body().includes(head(t));
+  const groups = new Map();
+  const add = (x, tone, force = false) => {
+    if (!force && covered(x.text)) return;
+    const sec = sectionOf(x.text);
+    if (!groups.has(sec)) groups.set(sec, { texts: [], rules: [] });
+    const g = groups.get(sec);
+    const s = render(x.text, tone);
+    if (!g.texts.includes(s)) { g.texts.push(s); g.rules.push(...(x.rules || [])); }
+  };
+  for (const x of [...r.veto, ...(r.layerVeto || [])]) add(x, 'bad');
+  for (const x of r.pass) add(x, 'good', true);
+  for (const x of r.plus) add(x, 'good');
+  for (const x of r.minus) add(x, 'bad');
+  for (const x of r.notes) add(x, null);
+  for (const [sec, g] of groups) {
+    const text = `${g.texts.join('。')}。`;
+    let at = -1;
+    out.forEach((x, i) => { if (x.item === sec) at = i; });
+    const item = sentence(sec, text, [...new Set(g.rules)]);
+    if (at >= 0) out.splice(at + 1, 0, item);
+    else out.push(item);
+  }
+}
 
 export function interviewV3Text(chart, ctx = {}) {
   const r = ctx.v3 || interviewV3(chart, ctx);
@@ -87,7 +165,7 @@ export function interviewV3Text(chart, ctx = {}) {
     out.push(sentence('能否录取', `${t}。`, g.rank.rules.concat(g.trade.rules, g.soleMover ? ['R-HZL-05'] : [])));
   }
   for (const code of ['子动克官', '官克世', '官临应', '官无力', '无官', '子孙局']) if (has(code)) { const v = veto.find((x) => x.code === code); out.push(sentence('能否录取', `${v.text}。`, v.rules)); }
-  for (const p of r.pass) out.push(sentence('能否录取', `有利：${p.text}。`, p.rules));
+  // 能过之项不再以「有利：」列出，由织入一步写进所论之段（结论句已点到者也要在本段写明）
 
   // 3. 自身状态（世爻）
   const w = d.world;
@@ -168,8 +246,7 @@ export function interviewV3Text(chart, ctx = {}) {
     bits.push(b);
   }
   out.push(sentence('象意', `从卦象看：${bits.join('；')}。`, ['R-LIUSHEN-01', 'R-BZZ-SS-01', ...new Set(Object.values(d.shensha.table).flatMap((t) => t.relevanceRules || []))]));
-  for (const p of r.plus) out.push(sentence('象意', `加分：${p.text}。`, p.rules));
-  for (const m of r.minus) out.push(sentence('象意', `减分：${m.text}。`, m.rules));
+  // 加分、减分不再列清单，由文末「织入」一步按所论之爻写进各段（用户 2026-11-16：「判断依据」不能过度模板，又要全部写出）
 
   // 各类动爻之意（卜筮全书·黄金策注「财动则伤父，子动则伤官，兄动则他人有所先，鬼动则事体有变，父动则文不纯正」）
   const MOVE = { 妻财: '财动伤父：答题易出破绽，或材料上被挑', 子孙: '子动伤官：职位一层受阻', 兄弟: '兄动：有人抢在你前面', 官鬼: '鬼动：对方那边事情有变动', 父母: '父动：表达容易不够纯熟，或通知、手续有变' };
@@ -233,13 +310,10 @@ export function interviewV3Text(chart, ctx = {}) {
   const advice = minLv === 2 ? '官、父、世三层都旺，照常准备、按时应对即可，不必另作补救。' : `最弱的是${layerLv.filter((x) => x[1] === minLv).map((x) => ADV[x[0]]).join('同样弱的还有')}`;
   out.push(sentence('建议', advice + (a?.toWorld === '克世' ? '对方要求严，谈条件时留余地。' : '') + '若同时有几个机会，最好指定一个具体岗位再起一卦问（指其缺而问之，无不验也）。', ['R-ZS-QM-01']));
 
-  // 判断依据：凡判定用到而上文没写到的，逐条补写（判定依据必须全部写进断语）
-  const body = out.map((x) => x.text).join('');
-  // 带「——」转折的条目（如六冲变六合下被压下的否决「……——此只作『始则艰阻』之处」）整句比对：只比前 8 字会把转折吞掉（2026-11-16 覆盖核对查出）
-  const key = (t) => (t.includes('——') ? t.replace(/（.*?）/g, '') : t.replace(/（.*?）/g, '').slice(0, 8));
-  for (const x of [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes]) {
-    if (!body.includes(key(x.text))) out.push(sentence('判断依据', `${x.text}。`, x.rules));
-  }
+  // 织入：判定用到而上文没写到的每一条（否决、能过、加分、减分、象注），按所论之爻写进对应一段，
+  // 古籍原句以「」嵌进句中，按吉凶说明于你有利或不利；不再以「判断依据」「加分：」「减分：」清单堆在文末。
+  // 用户 2026-11-16：「引擎断了什么，用了什么规则，所有都要写出来」「既不能过度模板说话」。
+  weave(out, r);
 
   // 断语句中凡嵌入判定条文之括注引文者，补引该条之规则（引擎逐字核对：断语句不得只引固定规则而漏引所嵌条文之出处）
   const allItems = [...r.veto, ...(r.layerVeto || []), ...r.pass, ...r.plus, ...r.minus, ...r.notes];
