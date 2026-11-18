@@ -47,7 +47,7 @@ test('例 1：父母化出之爻合世不算父发（B-016，变爻不生克他�
 test('例 5：官持世而月扶日克，不作旺官持世', () => {
   const { v3, text } = run('787868', '戌', '丙寅');
   assert.equal(v3.verdict, 'fail');
-  assert.ok(text.items.some((x) => /算不上旺官持世/.test(x.text)));
+  assert.ok([...text.items, ...text.analysis].some((x) => /算不上旺官持世/.test(x.text)));
 });
 
 test('神煞：与外部卦例原图所列一致（例 5：丙寅日戌月）', () => {
@@ -70,12 +70,17 @@ test('逐卦断语：十项齐全，判定依据都写进断语，无内部用�
   // 竞争、去留两段只在卦中有其象时才写（不以「没有不利之象」充数）
   // 待遇、单位、岗位、地点诸象只进依据栏作参考（2026-11-16 评审）
   // 3.0.0 起按写作基准分段：自身与对方合为一段；象意、待遇、地点诸象只进依据栏
-  const need = ['结论', '临场表现', '能否录取', '自身与对方', '应期', '建议'];
+  // 4.0.0（用户 2026-11-17 定 P2）：正文为简断、详断、应期、建议；原分段为专业解析
+  const need = ['简断', '详断', '应期', '建议'];
+  const needA = ['临场表现', '能否录取', '自身与对方', '应期'];
   for (const [lv, m, d] of CASES) {
     const { v3, text } = run(lv, m, d);
     const items = new Set(text.items.map((x) => x.item));
     for (const n of need) assert.ok(items.has(n), `${lv} 缺「${n}」`);
-    const body = text.items.map((x) => x.text).join('');
+    const an = new Set(text.analysis.map((x) => x.item));
+    for (const n of needA) assert.ok(an.has(n), `${lv} 专业解析缺「${n}」`);
+    for (const x of text.analysis) items.add(x.item);
+    const body = [...text.items, ...text.analysis].map((x) => x.text).join('');
     // 分层（用户 2026-11-16「采用分层」）：每条判定都进依据栏；决定性与重要的还须写进正文
     const basisText = text.basis.map((x) => x.text).join('').replace(/：/g, '，');
     const key = (t) => t.replace(/（.*?）/g, '').replace(/：/g, '，').slice(0, 6);
@@ -96,8 +101,8 @@ test('代占：以所代六亲为本主；问事阶段写进结论；有年支�
   assert.equal(proxy.subject.relative, '子孙');
   assert.notEqual(proxy.subject.position, chart.lines.find((l) => l.isWorld).position);
   const text = interviewV3Text(chart, { subjectRelative: '子孙', stage: 'after' });
-  assert.match(text.items[0].text, /代占/);
-  assert.match(text.items[0].text, /已经考过/);
+  assert.match(text.items.find((x) => x.item === "详断").text, /代占/);
+  assert.match(text.items.find((x) => x.item === "详断").text, /已经考过/);
   const self = interviewV3(chart, {});
   // 太岁不入卦发动者只作象（增删千金赋注「太岁生世要入卦，不在爻中，不能生世」），故查注
   assert.ok([...self.plus, ...self.minus, ...self.notes].some((x) => /太岁/.test(x.text)), '有年支时应计太岁');
@@ -178,7 +183,7 @@ test('B-020：无必中之格不作偏难之据；六冲卦而父旺者须再占
   assert.equal(v3.reCast, true);
   assert.ok(text.items.find((x) => x.item === '建议').text.includes('再起一卦'));
   // 结论只写实有的利弊，不写「另审」之类审核记录
-  const concl = text.items.find((x) => x.item === '结论').text;
+  const concl = text.items.find((x) => x.item === '简断').text + text.items.find((x) => x.item === '详断').text;
   assert.ok(!/另审|已审|取中之格|必中之格/.test(concl), concl);
   // 依据栏仍有完整审核记录
   assert.ok(text.basis.some((b) => /再占一卦/.test(b.text)));

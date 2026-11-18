@@ -37,10 +37,13 @@ function relationErrors(text) {
   const errs = [];
   for (const m of text.matchAll(new RegExp(`([${BR}])([金木水火土])`, 'g'))) if (EL[m[1]] !== m[2]) errs.push(`${m[0]}五行配错`);
   for (const sent of text.split('。')) {
-    const sm = sent.match(new RegExp(`(?:代表[^的]{2,8}的|你的世爻是)(?:父母|官鬼|子孙|妻财|兄弟)([${BR}])[金木水火土]`));
-    if (!sm) { if (/所以|综合起来/.test(sent) && /[月日]|爻/.test(sent)) { RC.skipped += 1; if (RC.skippedEx.length < 3) RC.skippedEx.push(sent.slice(0, 60)); } continue; }
+    // 一句可先后讲几个主体（4.0.0 详断：官星；父母；世爻），按主体分段核
+    const subs = [...sent.matchAll(new RegExp(`(?:代表[^的]{2,8}的|你的世爻是|你自己的世爻)(?:父母|官鬼|子孙|妻财|兄弟)?([${BR}])[金木水火土]`, 'g'))];
+    if (!subs.length) { if (/所以|综合起来/.test(sent) && /[月日]|爻/.test(sent)) { RC.skipped += 1; if (RC.skippedEx.length < 3) RC.skippedEx.push(sent.slice(0, 60)); } continue; }
+    for (let si = 0; si < subs.length; si += 1) {
+    const sm = subs[si];
     RC.sent += 1;
-    const s = sm[1]; const body = sent.slice(sm.index + sm[0].length).split(/所以|综合起来/)[0];
+    const s = sm[1]; const body = sent.slice(sm.index + sm[0].length, si + 1 < subs.length ? subs[si + 1].index : undefined).split(/所以|综合起来/)[0];
     const units = (str) => [...str.matchAll(new RegExp(`([${BR}])(?:月|日|[金木水火土])`, 'g'))].map((x) => x[1]);
     const chk = (str, kind, src) => { for (const u of units(str)) { RC.rels += 1; if (!REL[kind](u, s)) errs.push(`${s}${EL[s]}：${src}`); } };
     for (const m of body.matchAll(new RegExp(`得((?:[${BR}][月日]、?)+)(相生|扶持)`, 'g'))) chk(m[1], m[2] === '相生' ? '生' : '扶', m[0]);
@@ -49,6 +52,7 @@ function relationErrors(text) {
     for (const m of body.matchAll(new RegExp(`正临((?:[${BR}][月日]、?)+)`, 'g'))) chk(m[1], '临', m[0]);
     for (const m of body.matchAll(new RegExp(`与((?:[${BR}][月日]、?)+)(?:都)?相合`, 'g'))) chk(m[1], '合', m[0]);
     for (const m of body.matchAll(new RegExp(`((?:.爻[${BR}][金木水火土]、?)+)(?:发动|暗动|旺而)来(冲克|生|扶|克|冲|合)`, 'g'))) chk(m[1], m[2], m[0]);
+    }
   }
   return errs;
 }
@@ -69,6 +73,12 @@ function worldRelErrors(full) {
   }
   return errs;
 }
+// 4.0.0 正文（简断、详断、应期、建议）另查：篇名与内部裁决不进正文；简断、详断篇幅（用户 2026-11-17 定 P2，评审：简断约 80–120 字，详断约 250–400 字）
+const FRONT = [
+  ['正文写篇名或内部裁决', /按(童试|乡试|岁科考|考道才|升选|武试|面圣|署印|援例|升迁)|[^「」]{0,2}(童试|乡试|岁科考|考道才|升选候补|武试|面圣|署印谋差|援例|升迁何方)章|不作定局|不作必败|按实际条数|被.{1,6}覆盖|土随水/],
+  ['正文说硬伤或补不回来', /硬伤|补不回来/],
+];
+const LEN = { 简断: [60, 135], 详断: [100, 430] };
 const hits = new Map();
 const dup = new Map();
 let total = 0; let chars = 0;
@@ -81,17 +91,21 @@ for (let n = 0; n < N; n += 1) {
   const t = interviewV3Text(chart, { analysis, evidence });
   const tag = `${lv.join('')} ${calendar.monthBranch}月${calendar.dayGanzhi}日`;
   for (const x of t.items) {
+    for (const [name, re] of FRONT) { const m = x.text.match(re); if (m) { const h = hits.get(name) || { n: 0, ex: [] }; h.n += 1; if (h.ex.length < 4) h.ex.push(`${tag}〔${x.item}〕…${x.text.slice(Math.max(0, m.index - 25), m.index + 35)}…`); hits.set(name, h); } }
+    const lr = LEN[x.item]; if (lr && (x.text.length < lr[0] || x.text.length > lr[1])) { const h = hits.get(`${x.item}篇幅出界`) || { n: 0, ex: [] }; h.n += 1; if (h.ex.length < 4) h.ex.push(`${tag} ${x.text.length} 字：${x.text.slice(0, 60)}…`); hits.set(`${x.item}篇幅出界`, h); }
+  }
+  for (const x of [...t.items, ...(t.analysis || [])]) {
     chars += x.text.length;
     for (const [name, re] of CHECKS) { const m = x.text.match(re); if (m) { const h = hits.get(name) || { n: 0, ex: [] }; h.n += 1; if (h.ex.length < 4) h.ex.push(`${tag}〔${x.item}〕…${x.text.slice(Math.max(0, m.index - 25), m.index + 35)}…`); hits.set(name, h); } }
   }
   // 篇内重复：同一分句（10 字以上）出现两次（结论与分段之间不算）
   const seen = new Map();
-  for (const x of t.items.filter((y) => y.item !== '结论')) for (const c of x.text.split(/[。；]/).map((s) => s.trim()).filter((s) => s.length >= 10)) {
+  for (const x of [...t.items, ...(t.analysis || [])].filter((y) => y.item !== '简断')) for (const c of x.text.split(/[。；]/).map((s) => s.trim()).filter((s) => s.length >= 10)) {
     if (seen.has(c) && seen.get(c) !== x.item + n) { const d0 = dup.get('篇内分句重复') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 6) d0.ex.push(`${tag}：${c}`); dup.set('篇内分句重复', d0); }
     seen.set(c, x.item);
   }
-  for (const e of worldRelErrors(t.items.map((x) => x.text).join('。'))) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔世应〕${e}`); dup.set('生克冲合与事实不符', d0); }
-  for (const x of t.items) for (const e of relationErrors(x.text)) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔${x.item}〕${e}`); dup.set('生克冲合与事实不符', d0); }
+  for (const e of worldRelErrors([...t.items, ...(t.analysis || [])].map((x) => x.text).join('。'))) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔世应〕${e}`); dup.set('生克冲合与事实不符', d0); }
+  for (const x of [...t.items, ...(t.analysis || [])]) for (const e of relationErrors(x.text)) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔${x.item}〕${e}`); dup.set('生克冲合与事实不符', d0); }
   const basis = t.basis.filter((b) => ['决定', '重要'].includes(b.level) && !b.said);
   if (basis.length) { const d0 = dup.get('决定重要条目未写进正文') || { n: 0, ex: [] }; d0.n += basis.length; if (d0.ex.length < 6) d0.ex.push(`${tag}：${basis[0].text.slice(0, 50)}`); dup.set('决定重要条目未写进正文', d0); }
   total += 1;

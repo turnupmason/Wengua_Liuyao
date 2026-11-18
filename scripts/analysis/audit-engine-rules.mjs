@@ -28,9 +28,9 @@ for (let t = 0; t < N; t += 1) {
   for (const k of ['veto', 'layerVeto', 'pass', 'plus', 'minus', 'notes']) for (const x of v[k] || []) {
     const s = skeleton(x.text); if (!items.has(s)) items.set(s, { text: x.text, rules: x.rules || [], where: `判定·${k}` });
   }
-  for (const x of interviewV3Text(chart, { analysis, evidence, kind }).items) {
+  { const tx = interviewV3Text(chart, { analysis, evidence, kind }); for (const x of [...tx.items, ...(tx.analysis || [])]) {
     const s = skeleton(x.text); if (!items.has(s)) items.set(s, { text: x.text, rules: x.rules || [], where: `断语·${x.item}` });
-  }
+  } }
 }
 
 const problems = [];
