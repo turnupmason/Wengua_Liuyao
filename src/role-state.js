@@ -163,8 +163,30 @@ function placesOf(subject, chart) {
   if (heZhongKe) places.push({ place: '自身动化合中带克，作合论', effect: '生', strong: false, dyn: true });
   if (ch && !heZhongKe) {
     const dyn = strongSeason(ch.to.element, chart.calendar.monthBranch);
+    // 动化之助须当下已兑现才计入旺衰（2026-11-18 评审：「有进神关系」「当前已得到进益」「以后具备进益条件」不是同一状态）：
+    // 进神退神章「动旺相而化旺，乘势而进……动休囚而化休囚，待时而进……动爻变爻有一而值衰，待旺相之日而进……有一而空破，待填实之日而进」（R-JINTUI-02，D-019）；
+    // 回头生之化爻同元神论：「元神休囚又逢自空、月破」不能生（R-YUANJI-02）。空取旬空章例外处理后的状态（真空、空而又破、静空无助，R-KONG-02）。
+    // 化墓：本爻化入墓库，休囚而别无他处生扶者为真墓（R-SUIMU-01），不用这一次动化本身的生扶来解（避免同一次动化自证有效）
+    const cc = ch.changedCalendar;
+    // 化出之爻：旬空章「动而化空……皆不为空。月破为空」——回头生、化长生帝旺只在化出之爻真空、空而又破（或月破）时作空；
+    // 进神按进神退神章本条「有一而空破，待填实之日而进」，化出之爻逢旬空（冲空则实者除外）即待填实
+    const realEmpty = Boolean(cc?.void && ['真空', '空而又破'].includes(cc.void.zengshan));
+    const jinEmpty = Boolean(cc?.void && cc.void.zengshan !== '冲空则实');
+    const toXiu = cc ? !cc.seasonalStrong : false;
+    const selfXiu = !strongSeason(subject.element, chart.calendar.monthBranch);
+    const otherSheng = places.some((p) => p.effect === '生' && !p.he);
+    const selfTomb = ch.lifeStage === '墓' && selfXiu && !otherSheng;
+    const helpKind = ch.huitou === '回头生' ? '回头生' : ch.advance === '进神' ? '进神' : ['长生', '帝旺'].includes(ch.lifeStage) ? ch.lifeStage : null;
+    const pending = !helpKind ? null
+      : selfTomb ? { why: '本爻化入墓库，休囚又无他处生扶，眼下受困，待冲开墓库', rule: 'R-SUIMU-01' }
+        : helpKind === '回头生' && toXiu && (ch.changedMonthBreak || realEmpty) ? { why: `化出之爻休囚又逢${ch.changedMonthBreak ? '月破' : cc.void.zengshan}，不能生`, rule: 'R-YUANJI-02' }
+          : helpKind === '进神' && (ch.changedMonthBreak || jinEmpty || c.monthBreak) ? { why: `${c.monthBreak ? '本爻逢月破' : ch.changedMonthBreak ? '化出之爻逢月破' : '化出之爻逢旬空'}，待填实之日而进`, rule: 'R-JINTUI-02' }
+            : ['长生', '帝旺'].includes(helpKind) && (ch.changedMonthBreak || realEmpty) ? { why: `化出之爻逢${ch.changedMonthBreak ? '月破' : cc.void.zengshan}，待填实之日`, rule: 'R-YUEPO-02' }
+            : helpKind === '进神' && (selfXiu || toXiu) ? { why: selfXiu && toXiu ? '动休囚而化休囚，待时而进' : '动爻变爻有一而值衰，待旺相之日而进', rule: 'R-JINTUI-02' } : null;
+    if (pending) blocked.push({ place: `自身动化${helpKind}`, effect: '生', why: pending.why, rule: pending.rule, pending: true });
     // 写清是哪一种化：进神是同类相扶，不是回头来生（2026-11-16 评审）
-    if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: `自身动化${ch.huitou === '回头生' ? '回头生' : ch.advance === '进神' ? '进神' : ch.lifeStage}`, effect: '生', strong: false, dyn });
+    if (pending) { /* 待时或不能生：不计入当下旺衰 */ }
+    else if (ch.huitou === '回头生' || ch.advance === '进神' || ch.lifeStage === '长生' || ch.lifeStage === '帝旺') places.push({ place: `自身动化${ch.huitou === '回头生' ? '回头生' : ch.advance === '进神' ? '进神' : ch.lifeStage}`, effect: '生', strong: false, dyn });
     // 六冲章「动爻化回头冲，如逢仇敌」——同章卦例自注「爻动化冲，如逢他敌，乃是化回头之克也。此卦世爻酉金化卯冲世而不克世」：化冲而不克者不作克（R-CHONG-02）
     else if (ch.huitou === '回头克' || ch.advance === '退神' || ch.lifeStage === '绝') places.push({ place: `自身动化${ch.huitou === '回头克' ? '回头克' : ch.advance === '退神' ? '退神' : '绝'}`, effect: '克', strong: false, dyn });
     else if (ch.swmj === '论刑') places.push({ place: '自身动化（巳化寅而逢申，论刑不论生，R-SWMJ-03）', effect: '克', strong: false, dyn });
@@ -214,7 +236,8 @@ function capabilityOf(subject, chart) {
     return { places, capability: 'weak', basis: `月令休囚而月建、日辰俱克：制中弱主，纵遇生扶亦不济（生：${g.map((p) => p.place).join('、') || '无'}）` };
   }
   // 元神忌神衰旺章：「元神动化回头生及化进神者二也」「忌神动化回头生扶……」——动而化回头生、化进神者本身即有力（月破者不论）
-  if (subject.kind === 'line' && subject.moving && subject.change && (subject.change.huitou === '回头生' || subject.change.advance === '进神') && !c.monthBreak) {
+  if (subject.kind === 'line' && subject.moving && subject.change && (subject.change.huitou === '回头生' || subject.change.advance === '进神') && !c.monthBreak
+    && places.some((p) => /^自身动化(回头生|进神)$/.test(p.place) && p.effect === '生')) {
     return { places, capability: 'strong', ...(k.length ? { attacked: true } : {}), basis: `动而${subject.change.huitou === '回头生' ? '化回头生' : '化进神'}，有力（元神忌神衰旺章，R-YUANJI-01、R-YUANJI-03）` };
   }
   // 月将章：临月建而受日克日冲或墓于日，无其他生克：无吉无凶（B-007）
@@ -272,7 +295,10 @@ function limitationsOf(subject, chart, places, capability = null) {
   if (tombs.length) {
     // 随鬼入墓章：休囚无气始见危，旺而有扶亦有求解
     // 解墓须五行生扶或日月：动爻合起只计扶，不作解墓（2026-11-17 评审：「能计扶与能解墓，要有各自条件」；随鬼入墓章「休囚无气始见危，若旺而有扶亦有求解」）
-    const trueTomb = !c.seasonalStrong && !places.some((p) => p.effect === '生' && !p.he);
+    // 化墓（这一次动化造成的墓）不用这一次动化之生来解（2026-11-18 评审：避免「先以进神抬旺、再以旺不作真墓、又以墓已解证明进神有效」的循环）；
+    // 日墓、动墓与这次动化无关，有效的回头生、进神仍是「旺而有扶」之扶（R-SUIMU-01）
+    const selfMade = tombs.includes('化墓');
+    const trueTomb = !c.seasonalStrong && !places.some((p) => p.effect === '生' && !p.he && !(selfMade && p.place.startsWith('自身动化')));
     const cb = CLASH.get(tombBranch);
     out.push({ kind: '入墓', detail: `${tombs.join('、')}${trueTomb ? '（月令休囚又无生扶）' : '（旺相或有扶，不作真墓）'}`, trueTomb, releases: trueTomb || subject.kind === 'hidden' ? [{ kind: '冲墓', branch: cb, ...dayOffset(chart, cb), rule: 'R-YINGQI-05' }] : [] });
   }

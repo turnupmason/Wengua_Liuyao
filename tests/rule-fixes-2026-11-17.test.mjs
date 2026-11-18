@@ -181,3 +181,42 @@ test('父母发动而不能补官，与父母没有发动分开写', () => {
   const m = [...r.minus, ...r.veto].find((x) => /^官酉/.test(x.text) && /无力/.test(x.text));
   assert.ok(m && /父母虽发动/.test(m.text), m?.text);
 });
+
+// —— 4.1.0 收稿评审（2026-11-18）：动化先核实际作用，再算旺衰与否决 ——
+test('旺父化真空不作「父化凶」，按童试章「父母旺相，若化……空破……始取终弃」记不利（B-021）', () => {
+  const { r } = ch('868687 巳 丙子'); // 戌土父旺，化酉金真空
+  assert.ok(!r.veto.some((v) => v.code === '父化凶'));
+  assert.ok(r.minus.some((m) => /^父戌旺而/.test(m.text)));
+});
+
+test('化出之爻被日辰冲起（冲空则实）不是真空，不触发父化凶', () => {
+  const { r } = ch('868796 子 己亥'); // 未土化巳火回头生，巳在旬空而亥日冲起
+  assert.ok(!r.veto.some((v) => v.code === '父化凶'));
+  assert.equal(r.layers.performance.level, 2);
+});
+
+test('化出之爻休囚又逢月破，回头生不计入当下旺衰（元神休囚又逢自空、月破，不能生）', () => {
+  const { chart, analysis } = ch('698779 午 癸未');
+  const hits = chart.lines.filter((x) => x.moving && analysis.lines[x.position - 1].change?.huitou === '回头生' && analysis.lines[x.position - 1].change.changedMonthBreak);
+  assert.ok(hits.length > 0);
+  for (const l of hits) {
+    const s = assessRoleState(l, analysis.lines[l.position - 1], chart);
+    assert.ok(!s.places.some((p) => p.place === '自身动化回头生'), `第${l.position}爻`);
+  }
+});
+
+test('进神只有乘势而进才计入当下旺衰；化墓不由同一次动化自证（丑化辰）', () => {
+  const { chart, analysis, r } = ch('776978 亥 乙酉');
+  const l = chart.lines.find((x) => x.relative === '父母' && x.moving);
+  const s = assessRoleState(l, analysis.lines[l.position - 1], chart);
+  assert.ok(!s.places.some((p) => p.place === '自身动化进神'));
+  assert.ok(s.places.blocked.some((b) => b.pending && b.place === '自身动化进神'));
+  assert.ok(r.notes.some((n) => /眼下不计入旺衰/.test(n.text)));
+});
+
+test('固定输入前 3000 盘：父母旺者不判「父化凶」（旺衰与否决不再相反）', () => {
+  for (const [lv, mo, dg] of fixed.slice(0, 3000)) {
+    const { r } = ch(`${lv} ${mo} ${dg}`);
+    assert.ok(!(r.layers.performance.level === 2 && r.veto.some((v) => v.code === '父化凶')), `${lv} ${mo} ${dg}`);
+  }
+});
