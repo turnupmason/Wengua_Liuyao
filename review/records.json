@@ -976997,6 +976997,57 @@
         "独立专业审核完成": "同一 Claude 重新读取样本盘事实独立复算，非独立代理",
         "反向质疑审核完成": "同一 Claude 逐条反驳本稿结论，非独立代理"
       }
+    },
+    {
+      "record_id": "RV-43896",
+      "script_id": "IPC-0022",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "3224f8d8d0ff30a1b5bc6ebba027f4fdbba2c90517f6ad83a42097163a5d73dd",
+      "original_content_hash": "44f3dbfb8938f04399433ac02f2dd8ff6ce5dc4f82934bfb1ee61b1771dc0351",
+      "from_version": "interview-pass-eq-0.14.0",
+      "to_version": "interview-pass-eq-0.14.0",
+      "changed_fields": [
+        "sample_charts（剔除 2 盘：887787 未月乙丑、887789 辰月庚戌）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除样本盘外一字未改，留下的样本都是原样本；类键不变。剔除原因：日月制克神收紧（克神临日、临月或得月日生扶者不作被制）、化出之爻临日不作月破后，这几盘多出否决，不再属本类"
+    },
+    {
+      "record_id": "RV-43897",
+      "script_id": "IPC-0028",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "25aefed4cacdd403c5996e35e886f8115d07aac5d95657e2cf5c0cbf2f6144d5",
+      "original_content_hash": "1d2f332f60912c9eae30df0d96c477f79b4138d0248aa65a5a42a27141522e69",
+      "from_version": "interview-pass-eq-0.14.0",
+      "to_version": "interview-pass-eq-0.14.0",
+      "changed_fields": [
+        "sample_charts（剔除 1 盘：687788 寅月壬申）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除样本盘外一字未改，留下的样本都是原样本；类键不变。剔除原因：日月制克神收紧（克神临日、临月或得月日生扶者不作被制）、化出之爻临日不作月破后，这几盘多出否决，不再属本类"
+    },
+    {
+      "record_id": "RV-43898",
+      "script_id": "IPC-0067",
+      "stage": "metadata-rekey",
+      "status": "PASS",
+      "reviewer": "Claude（单 AI，非独立；用户 2026-11-14「也由你一个做」）",
+      "isolated": false,
+      "reviewed_at": "2026-11-17",
+      "content_hash": "277730958955729cbd9cda5ea9ae20a328a4deabb8250704a9c39749923fe670",
+      "original_content_hash": "6d4afc00abcd6af74a9e054e56b79352ebb4a3e54f61e17e30b3e60300c4124d",
+      "from_version": "interview-pass-eq-0.14.0",
+      "to_version": "interview-pass-eq-0.14.0",
+      "changed_fields": [
+        "sample_charts（剔除 2 盘：988897 丑月辛未、988877 未月丁丑）"
+      ],
+      "notes": "程序对照 git HEAD 核实：除样本盘外一字未改，留下的样本都是原样本；类键不变。剔除原因：日月制克神收紧（克神临日、临月或得月日生扶者不作被制）、化出之爻临日不作月破后，这几盘多出否决，不再属本类"
     }
   ]
 }

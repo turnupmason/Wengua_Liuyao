@@ -1220,10 +1220,10 @@
 ## IPC-0022　偏难：子孙坐在你的世上，官星又伏在财下出不来
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子孙持世+官无力`（interview-pass-eq-0.14.0）；内容哈希 `44f3dbfb8938f043…`
+- 卦盘：等价类（样本 10 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子孙持世+官无力`（interview-pass-eq-0.14.0）；内容哈希 `3224f8d8d0ff30a1…`
 - 结论类别：偏难；情境：子孙持世、官鬼伏而难出、六合卦
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：火山旅，丑月丙辰日
@@ -1473,10 +1473,10 @@
 ## IPC-0028　倾向通过：官星两现、一爻持世得月生，财与子孙都伏着
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `1d2f332f60912c9e…`
+- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `25aefed4cacdd403…`
 - 结论类别：倾向通过；情境：官鬼两现持世、原神忌神伏而待时、兄弟常发动
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：天山遁，申月己卯日
@@ -2187,10 +2187,10 @@
 ## IPC-0067　偏难：官星伏而有气，却透不出来
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏待时;世世安;原静旺有力;忌无力;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `6d4afc00abcd6af7…`
+- 卦盘：等价类（样本 10 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用伏待时;世世安;原静旺有力;忌无力;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `277730958955729c…`
 - 结论类别：偏难；情境：官鬼伏而待时、财临世克父、月建妻财生官
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
 样本之一：风雷益之山地剥，丑月癸亥日

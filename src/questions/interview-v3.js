@@ -69,7 +69,16 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const c = fact(l).calendar; const s0 = st(l);
     const mrel = MREL(c.month, `${month}月`, l.moving);
     const all = [mrel ? `${mrel}${c.month.combine && c.month.residualQi ? `，${month}月${l.element}又有余气` : ''}` : (c.month.seasonal ? `${month}月${c.month.seasonal}${c.month.residualQi ? '而有余气' : ''}` : ''), MREL(c.day, `${day}日`, l.moving), c.day.lifeStage === '长生' || c.day.lifeStage === '帝旺' ? `${c.day.lifeStage}于${day}日` : ''].filter(Boolean);
-    const mv = (s0.places || []).filter((q) => !/^(月建|日辰)/.test(q.place)).map((q) => ({ t: q.place.startsWith('自身动化') ? `动而化${q.place.replace('自身动化', '')}${q.place.includes('进神') ? '（同类相扶）' : ''}` : `${q.place}${q.effect === '生' ? '来生扶' : '来克'}`, bad: q.effect !== '生' }));
+    // 冲、合照实写（2026-11-17 评审：「酉金发动来生辰土」「午火发动来克子水」实为辰酉合、子午冲）：
+    // 旺衰记账里动爻合静爻记在生扶一栏、冲记在克一栏，写理由时按实际关系写「来合」「来冲」，不写成生、克
+    const relWord = (q) => {
+      const b = q.place.slice(-1); const e = BEL0[b];
+      if (!e) return q.effect === '生' ? '来生扶' : '来克';
+      if (q.effect === '生') return gen(e, l.element) || e === l.element ? '来生扶' : ke(e, l.element) ? '来合而带克' : '来合';
+      const cl = CHONG_OF(b, l.branch);
+      return ke(e, l.element) ? (cl ? '来冲克' : '来克') : cl ? '来冲' : '来克';
+    };
+    const mv = (s0.places || []).filter((q) => !/^(月建|日辰)/.test(q.place)).map((q) => ({ t: q.place.startsWith('自身动化') ? `动而化${q.place.replace('自身动化', '')}${q.place.includes('进神') ? '（同类相扶）' : ''}` : `${q.place}${relWord(q)}`, bad: q.effect !== '生' }));
     // 月令休囚、受克、被冲是不利条件，放在「虽」后，不当作旺的理由
     const isBad = (x) => /^(受|被.{1,3}冲)|休囚/.test(x);
     const good = [...all.filter((x) => !isBad(x)), ...mv.filter((x) => !x.bad).map((x) => x.t)];
@@ -186,7 +195,12 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
 
   // 日月为制煞之将军（乡试章，R-ZS-QM-10）：官、父、世被动爻克制或化回头克，若得日月冲制克神，亦许得意
   const ELX = { 子: '水', 亥: '水', 寅: '木', 卯: '木', 巳: '火', 午: '火', 申: '金', 酉: '金', 辰: '土', 戌: '土', 丑: '土', 未: '土' };
-  const riyueZhi = (br) => Boolean(br) && [month, day].some((b) => chong(b, br) || ke(ELX[b], ELX[br]));
+  // 日月为制煞之将军（乡试章，R-ZS-QM-10）：克神须真被日月冲制。2026-11-17 评审查出此前月、日有一处冲克即算，
+  // 克神本身临日（日辰章「逢月破而不破，遇冲克而无伤」）或得月日生扶（月将章，月日一生一克为相敌）者也算被制，致回头克等否决被撤。
+  // 现改为：月或日冲克克神，而月、日都不临、不生、不扶它（月破者不以同五行作扶）
+  const zhiBy = (br) => [[month, '月'], [day, '日']].filter(([b]) => chong(b, br) || ke(ELX[b], ELX[br])).map(([b, u]) => `${b}${u}${chong(b, br) ? '冲' : '克'}`);
+  const riyueZhi = (br) => Boolean(br) && zhiBy(br).length > 0 && ![month, day].some((b) => !chong(b, br) && (b === br || gen(ELX[b], ELX[br]) || ELX[b] === ELX[br]));
+  const zhiWho = (br) => zhiBy(br).join('、');
   // 月建入卦动而作元神者为福更大（月将章，R-YUEJIAN-02）
   if (g) for (const cm of L.filter((l) => l.relative === '妻财' && l.moving && l.branch === month && gen(l.element, g.el) && effMover(l))) plus.push({ text: `妻财${cm.branch}临月建发动生官（月建入卦动而作元神者为福更大）`, rules: ['R-YUEJIAN-02'] });
   // 父发：父母发动而生合世（官衰父发，亦论抡收）。化出之爻不计：动变生克冲合章「变出之爻能生克冲合本位之动爻，不能生克他爻」
@@ -242,7 +256,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       minus.push({ text: `子孙${z.branch}与财${caiMovers.map((cm) => cm.branch).join('、')}同动，但财${fact(caiMovers[0]).calendar.monthBreak ? '月破' : '旬空'}，接续相生而力轻：凶减而不能全免（子水破而化空……虽有如无，作元神而无用；予因不依古法，而断神兆机于动，动必有因，所以断之降级而已）`, rules: ['R-YUEPO-03', 'R-YUANJI-04'] }); continue;
     }
     if (L.some((o) => o.relative === '父母' && o.moving && ke(o.element, z.element)) && !xiongMovers.length) { N(`子孙${z.branch}动而克官，有父母发动制之（子兴克鬼父动无妨）`, ['R-BZZ-SJ-01']); continue; }
-    if (riyueZhi(z.branch)) { N(`子孙${z.branch}动而克官，但被日月冲克（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']); continue; }
+    if (riyueZhi(z.branch)) { N(`子孙${z.branch}动而克官，但被${zhiWho(z.branch)}（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']); continue; }
     const zShengs = z.moving && c && c.lifeStage === '长生';
     const zJian = z.moving && z.branch === month;
     // 乡试章觉子「卦中官鬼子孙同动，官临旺相遇生扶，子孙弱而被克，再宜父动，最怕兄兴」（R-ZS-QM-35）：衰子孙得兄弟同动生起，不在弱列
@@ -257,7 +271,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (chain) { N(`财${c.branch}动克父，但财生官、官又生父或世，接续相生，不忌`, ['R-QIUMING-06', 'R-BZZ-QM-02']); continue; }
     if (wRel === '官鬼' && wLv >= 1 && gen(c.element, W.el)) { N(`财${c.branch}动来生持世之官，财不为忌`, ['R-BZZ-QM-02']); continue; }
     if (fLv === 2) { N(`财${c.branch}动而父旺，克不动`, ['R-DONGJING-01']); continue; }
-    if (riyueZhi(c.branch)) { N(`财${c.branch}动克父，但被日月冲克（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']); continue; }
+    if (riyueZhi(c.branch)) { N(`财${c.branch}动克父，但被${zhiWho(c.branch)}（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']); continue; }
     if (!effMover(c)) { N(`财${c.branch}动克父，但有兄弟同动克财（财兴克父，兄动无忧）`, ['R-BQS-SJ-01', 'R-BZZ-SJ-01']); continue; }
     V('财动克父', `财${c.branch}动克父（财动克文章）`, ['R-QIUMING-04', 'R-HJC-QM-02', 'R-BQS-QM-01']);
   }
@@ -296,7 +310,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const fShuai = f.lv < 2;
     const fMuJue = fc && ['墓', '绝'].includes(fc.lifeStage) && fc.huitou !== '回头生' && !fc.changedVoid && !(fc.lifeStage === '墓' && chong(day, fc.to?.branch));
     const fBadHua = !fc ? null : huiKe(f.line, fc) ? '回头克' : realVoid ? '真空' : (fShuai && fc.advance === '退神') ? '退神' : (fShuai && fc.changedMonthBreak) ? '月破' : (fShuai && fMuJue) ? fc.lifeStage : null;
-    if (f.moving && fBadHua === '回头克' && riyueZhi(fc.to?.branch)) N(`父${f.br}动而化回头克，但所化之${fc.to.branch}被日月冲克（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
+    if (f.moving && fBadHua === '回头克' && riyueZhi(fc.to?.branch)) N(`父${f.br}动而化回头克，但所化之${fc.to.branch}被${zhiWho(fc.to.branch)}（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
     else if (f.moving && fBadHua) V('父化凶', `父${f.br}${fShuai && fBadHua !== '回头克' ? '衰而' : ''}动而化${fBadHua}（衰化退神及化克化空破墓绝或回头克者，窗下午日长，场中一日短）`, ['R-QIUMING-05', ...(['空', '墓', '绝', '真空'].includes(fBadHua) ? ['R-YLB-WS-01'] : [])]);
     else if (f.moving && fc && fc.advance === '退神') minus.push({ text: `父${f.br}旺而化退神（化退神者，前篇稍遂，后劲不力）`, rules: ['R-QIUMING-05'] });
     else if (f.moving && fc && fc.changedVoid) N(`父${f.br}${fLv === 2 ? "旺" : fLv === 1 ? "有气" : "无力"}而化出之爻旬空，出空可用（动而化空，亦不为空）${fLv === 2 ? '；化空不作永久失效，出空之后回头之助能否得力，还看届时生克合绊；童试章所示先得后阻之险仍在，不因此删去' : ''}`, ['R-KONG-02', 'R-QJF-15', ...(fLv === 2 ? ['R-QIUMING-18'] : [])]);
@@ -416,7 +430,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     else if (gc.swmj === '论克') N(`官${g.br}休囚而化巳，卦中巳午火多（倘若金爻休囚无气，再遇巳午火多者，烈火煎金，论克不论生也）`, ['R-SWMJ-03']);
     else if (gc.swmj === '论刑') N(`官${g.br}化寅而日月动变逢申（巳爻虽长生于寅，倘日月动爻及变出之爻又逢申金者，谓之三刑，论刑不论生也）`, ['R-SWMJ-03']);
     if (bad && gWang && guanHeld) minus.push({ text: `官${g.br}旺而就你，但动而${bad}：能被录取，却难长久（鬼化福冲当代职；若鬼动化子，必有别官代职）`, rules: ['R-HJC-SH-02', 'R-BQS-SH-03'] });
-    else if (bad === '化回头克' && riyueZhi(gc.to?.branch)) N(`官${g.br}动而化回头克，但所化之${gc.to.branch}被日月冲克（日月为制煞之将军……化回头克，若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
+    else if (bad === '化回头克' && riyueZhi(gc.to?.branch)) N(`官${g.br}动而化回头克，但所化之${gc.to.branch}被${zhiWho(gc.to.branch)}（日月为制煞之将军……化回头克，若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
     else if (bad) V('官化凶', `官${g.br}动而${bad}（官临空破墓绝及动而变凶变克）`, ['R-QIUMING-08', 'R-ZS-QM-20', 'R-HUA-01']);
     else if (['墓', '绝'].includes(gc.lifeStage)) N(`官${g.br}动而化${gc.lifeStage}，但本爻旺相（化墓化绝，若动爻旺相，或临日月帮助，亦无大害）`, ['R-HUA-03']);
     else if (gc.advance === '退神') N(`官${g.br}化退神而当令得相（当相得令，占近事岂可曰退）`, ['R-JINTUI-03']);
@@ -591,7 +605,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (world.moving) {
     const wch0 = fact(world).change;
     const hk = wch0 && huiKe(world, wch0) && wch0.to?.relative !== '官鬼';
-    if (hk && riyueZhi(wch0.to?.branch)) N(`世${world.branch}动而化回头克，但所化之${wch0.to.branch}被日月冲克（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
+    if (hk && riyueZhi(wch0.to?.branch)) N(`世${world.branch}动而化回头克，但所化之${wch0.to.branch}被${zhiWho(wch0.to.branch)}（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
     else if (hk) V('世化凶', `世${world.branch}动而化${wch0.to.relative}${wch0.to.branch}回头克（世爻……动而变凶；我位既失，何以成名）`, ['R-QIUMING-07', 'R-QIUMING-11']);
     // 世动化空破不作变凶：谒贵求财章「世动化空破者，勿曰不吉，乃应到彼之月日也」；野鹤「动而化空，亦不为空」
     else if (wch0?.changedMonthBreak || wch0?.changedVoid) N(`世${world.branch}动而化${wch0.changedMonthBreak ? '月破' : '旬空'}（世动化空破者，勿曰不吉，乃应到彼之月日也）`, ['R-ZS-YG-01', 'R-QJF-15']);
@@ -612,7 +626,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   if (world.moving) {
     const wch = fact(world).change;
     if (wch?.to?.relative === '官鬼') {
-      if (wch.huitou === '回头克' && riyueZhi(wch.to.branch)) N(`世动化出官鬼${wch.to.branch}回头克世，但所化之官被日月冲克（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
+      if (wch.huitou === '回头克' && riyueZhi(wch.to.branch)) N(`世动化出官鬼${wch.to.branch}回头克世，但所化之官${wch.to.branch}被${zhiWho(wch.to.branch)}（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
       else if (wch.huitou === '回头克') V('世化鬼克', `世动化出官鬼${wch.to.branch}回头克世（世动化官化克蝶梦堪忧；试期病阻乃因官鬼克世）`, ['R-QIUMING-15', 'R-HJC-QM-14', 'R-QIUMING-11']);
       // 千金赋「化官鬼兮吉凶有二」：「世爻旺相，或临日月或日月生扶动而变出官星，又无破损，乃为得官之兆也。世若休囚，受克动而变出官星者乃为变鬼」（R-HUA-04）
       // 乡试章：「卦中父母旺相而世爻化出官星者，若不回头克世乃为变官，今科即中」「世爻旺相动而变出官星回头生合世爻者，不作变鬼，乃为变官」（R-ZS-QM-31）
@@ -869,6 +883,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   const chongBianHe = Boolean(chart.primary.sixClash && chart.changed?.sixCombine);
   if (chongBianHe) {
     for (const v of effectiveVeto) N(`${v.text}——卦得六冲变六合，不看用神，此只作「始则艰阻」之处`, [...v.rules, 'R-HE-03']);
+    // 本卦六冲而官父世不俱旺，正是「始则艰阻」本身，不另作不利（2026-11-17 评审：同篇既说不看用神、又说事有散意，自相矛盾）
+    for (let i = minus.length - 1; i >= 0; i -= 1) if (minus[i].text.startsWith('六冲卦而官父世不俱旺')) { N(`${minus[i].text}——卦得六冲变六合，不看用神，此只作「始则艰阻」之处`, [...minus[i].rules, 'R-HE-03']); minus.splice(i, 1); }
     if (effectiveVeto.length) effectiveVeto = [];
     P('冲变合', '六冲卦变六合（独此六冲卦变六合得不看用神，竟以吉断；占功名始则艰驻，终顷荣显）', ['R-HE-03']);
     finalLayer = (finalLayer ? `${finalLayer}；` : '') + '六冲变六合：始则艰阻，终则荣显';
@@ -938,6 +954,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     if (c.void) out.push(l.moving ? { text: `${nm}发动而逢旬空：动不为空，作用应在出空、冲空之日`, say: `${who}发动时正逢旬空，发动的爻不按落空论，作用落在出空或被冲之日`, rules: ['R-KONG-02', 'R-QJF-15'] } : lvOf(l, st(l)) === 2 ? { text: `${nm}旬空而旺：旺不为空，出空之日用事`, say: `${who}旬空，但本身旺，不算真落空，出空之日便能用事`, rules: ['R-KONG-02'] } : { text: `${nm}静而旬空，又不旺：眼下落空，须待出空、冲空`, say: `${who}安静而旬空，本身又不旺，眼下是落空的，要等出空或被冲之日`, rules: ['R-KONG-02'] });
     if (c.monthBreak) out.push({ text: `${nm}逢月破：${l.moving ? '动则能伤，出月实破之时用事' : '破而无力，待出月实破之时'}`, say: `${who}逢月破，${l.moving ? '因为在动，仍能起作用，出了这个月便落实' : '眼下无力，要等出了这个月才落实'}`, rules: ['R-YUEPO-02'] });
     if (ch?.changedVoid) out.push({ text: `化出之${ch.to.branch}亦逢旬空：动而化空，亦不为空，吉凶应在冲空、实空之日`, say: `它变出的${ch.to.branch}也逢旬空，同样不算真落空，事情应在冲空、出空之日`, rules: ['R-KONG-02', 'R-QJF-15'] });
+    // 化出之爻临日辰者 analysis 已不作月破（日辰章「逢月破而不破」）
     if (ch?.changedMonthBreak) out.push({ text: `化出之${ch.to.branch}逢月破`, say: `它变出的${ch.to.branch}逢月破`, rules: ['R-YUEPO-02'] });
     return out;
   };

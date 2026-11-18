@@ -285,7 +285,8 @@ export function changeFacts(line, chart) {
     lifeStageRaw: stageZs,
     muPo,
     changedVoid: Boolean(cal.void),
-    changedMonthBreak: cal.monthBreak,
+    // 化出之爻临日辰者不作月破：日辰章「逢月破而不破」（R-RIZHEN-05；2026-11-17 评审查出辰日之辰土仍按月破、被日月冲克论）
+    changedMonthBreak: cal.monthBreak && !cal.day?.same,
     changedCalendar: cal,
   };
 }

@@ -20,6 +20,35 @@ const CHECKS = [
   ['括号嵌套', /（[^）]*（/],
   ['句子过长', /[^。]{170,}/],
 ];
+// 生克冲合核对（2026-11-17 评审 P0：「任何断语都不能输出与底层事实相反的关系」）：
+// 旺衰句里以句首所说之爻为主体，逐条核「得某月日相生/扶持」「受某克」「被某冲」「正临」「与某相合」「某爻某支发动来生/扶/克/冲/合」；另核地支所配五行
+const EL = { 子: '水', 亥: '水', 寅: '木', 卯: '木', 巳: '火', 午: '火', 申: '金', 酉: '金', 辰: '土', 戌: '土', 丑: '土', 未: '土' };
+const GEN = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' };
+const KE = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' };
+const CH = { 子: '午', 午: '子', 丑: '未', 未: '丑', 寅: '申', 申: '寅', 卯: '酉', 酉: '卯', 辰: '戌', 戌: '辰', 巳: '亥', 亥: '巳' };
+const HE = { 子: '丑', 丑: '子', 寅: '亥', 亥: '寅', 卯: '戌', 戌: '卯', 辰: '酉', 酉: '辰', 巳: '申', 申: '巳', 午: '未', 未: '午' };
+const REL = {
+  生: (a, s) => GEN[EL[a]] === EL[s], 扶: (a, s) => EL[a] === EL[s], 克: (a, s) => KE[EL[a]] === EL[s], 冲: (a, s) => CH[a] === s,
+  冲克: (a, s) => CH[a] === s && KE[EL[a]] === EL[s], 合: (a, s) => HE[a] === s, 临: (a, s) => a === s,
+};
+function relationErrors(text) {
+  const errs = [];
+  for (const m of text.matchAll(new RegExp(`([${BR}])([金木水火土])`, 'g'))) if (EL[m[1]] !== m[2]) errs.push(`${m[0]}五行配错`);
+  for (const sent of text.split('。')) {
+    const sm = sent.match(new RegExp(`(?:代表[^的]{2,8}的|你的世爻是)(?:父母|官鬼|子孙|妻财|兄弟)([${BR}])[金木水火土]`));
+    if (!sm) continue;
+    const s = sm[1]; const body = sent.slice(sm.index + sm[0].length).split(/所以|综合起来/)[0];
+    const units = (str) => [...str.matchAll(new RegExp(`([${BR}])(?:月|日|[金木水火土])`, 'g'))].map((x) => x[1]);
+    const chk = (str, kind, src) => { for (const u of units(str)) if (!REL[kind](u, s)) errs.push(`${s}${EL[s]}：${src}`); };
+    for (const m of body.matchAll(new RegExp(`得((?:[${BR}][月日]、?)+)(相生|扶持)`, 'g'))) chk(m[1], m[2] === '相生' ? '生' : '扶', m[0]);
+    for (const m of body.matchAll(new RegExp(`受((?:[${BR}][月日]、?)+)克`, 'g'))) chk(m[1], '克', m[0]);
+    for (const m of body.matchAll(new RegExp(`被((?:[${BR}][月日]、?)+)冲`, 'g'))) chk(m[1], '冲', m[0]);
+    for (const m of body.matchAll(new RegExp(`正临((?:[${BR}][月日]、?)+)`, 'g'))) chk(m[1], '临', m[0]);
+    for (const m of body.matchAll(new RegExp(`与((?:[${BR}][月日]、?)+)(?:都)?相合`, 'g'))) chk(m[1], '合', m[0]);
+    for (const m of body.matchAll(new RegExp(`((?:.爻[${BR}][金木水火土]、?)+)(?:发动|暗动|旺而)来(冲克|生|扶|克|冲|合)`, 'g'))) chk(m[1], m[2], m[0]);
+  }
+  return errs;
+}
 const hits = new Map();
 const dup = new Map();
 let total = 0; let chars = 0;
@@ -41,6 +70,7 @@ for (let n = 0; n < N; n += 1) {
     if (seen.has(c) && seen.get(c) !== x.item + n) { const d0 = dup.get('篇内分句重复') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 6) d0.ex.push(`${tag}：${c}`); dup.set('篇内分句重复', d0); }
     seen.set(c, x.item);
   }
+  for (const x of t.items) for (const e of relationErrors(x.text)) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔${x.item}〕${e}`); dup.set('生克冲合与事实不符', d0); }
   const basis = t.basis.filter((b) => ['决定', '重要'].includes(b.level) && !b.said);
   if (basis.length) { const d0 = dup.get('决定重要条目未写进正文') || { n: 0, ex: [] }; d0.n += basis.length; if (d0.ex.length < 6) d0.ex.push(`${tag}：${basis[0].text.slice(0, 50)}`); dup.set('决定重要条目未写进正文', d0); }
   total += 1;
