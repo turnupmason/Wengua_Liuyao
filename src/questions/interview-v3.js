@@ -366,7 +366,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const caiL = L.filter((l) => l.relative === '妻财');
     const caiH = L.filter((l) => l.hidden?.relative === '妻财');
     const caiKong = caiL.length ? caiL.every((l) => fact(l).calendar.void || fact(l).calendar.monthBreak) : caiH.length > 0 && caiH.every((l) => fact(l).hidden.calendar.void || fact(l).hidden.calendar.monthBreak);
-    if (!proxy && !world.moving && (wc.void || wc.monthBreak) && caiKong) V('世陷财空', `世${world.branch}${wc.monthBreak ? '月破' : '旬空'}而妻财又空破（世陷财空，不如守己）`, ['R-YONG-GUAN-04', 'R-SHUYIN-01']);
+    if (!proxy && !world.moving && (wc.void || wc.monthBreak) && caiKong) V('世陷财空', `世${world.branch}${wc.monthBreak ? '月破' : '旬空'}而妻财又${caiL.length ? (caiL.every((l) => fact(l).calendar.void) ? '旬空' : caiL.every((l) => fact(l).calendar.monthBreak) ? '月破' : '空破') : '伏而空破'}（世陷财空，不如守己）`, ['R-YONG-GUAN-04', 'R-SHUYIN-01']);
   }
   // 世爻失位
   // 临日之爻「遇冲克而无伤」（日辰章，R-RIZHEN-05）：未被克到无力者不作受日月冲克
