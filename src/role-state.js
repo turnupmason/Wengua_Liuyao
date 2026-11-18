@@ -111,8 +111,8 @@ function placesOf(subject, chart) {
     // 六合章：「爻动或与日月……合者谓之动逢合而绊住，反不能动之意」——被日辰、月建合住的动爻暂不生克他爻（待冲开）
     // B-018：合而又克、别无他处生扶者不言合，亦不作合绊
     if (o.moving && ((COMBINE.get(o.branch) === chart.calendar.dayBranch || COMBINE.get(o.branch) === chart.calendar.monthBranch) && heldByCalendar(o, chart))) continue;
-    // 同章「爻动或与日月动爻合者谓之动逢合而绊住」；正宗「如旁爻动来合之，须待冲那旁爻之日至」（R-QJF-14、R-BZZ-QJ-04）
-    if (o.moving && chart.lines.some((x) => x.position !== o.position && x.moving && COMBINE.get(o.branch) === x.branch)) continue;
+    // D2（用户转评审 2026-11-17 定）：两爻同动相合，按同章「爻动与动爻相合，乃得他来合我，与我和好，相助之意」作合好，不因相合而失其生克之用。
+    // 同章前句「爻动或与日月动爻合者谓之动逢合而绊住」、正宗「如旁爻动来合之，须待冲那旁爻之日至」（R-QJF-14、R-BZZ-QJ-04）与之有张力，记作项目所采之解释；日月合住动爻仍作合绊（上条）
     const er = elementRelation(o.element, subject.element);
     const dyn = strongSeason(o.element, chart.calendar.monthBranch);
     const tag = an ? '暗动' : st ? '静旺' : '动爻';

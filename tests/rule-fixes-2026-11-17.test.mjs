@@ -119,3 +119,10 @@ test('B-013：固定输入中六冲变六合之盘，结论、分层、正文一
     assert.ok(!/成行一层难|录取一层还可过|这一处是硬伤|补不回来/.test(t.items.map((x) => x.text).join('')), tag);
   }
 });
+
+test('D2：两爻同动相合作合好，不失生克之用（六合章「爻动与动爻相合……与我和好，相助之意」）', () => {
+  const chart = buildChart({ lineValues: [7, 8, 9, 8, 8, 9], calendar: { monthBranch: '未', dayGanzhi: '戊午' } }); // 上爻寅动、三爻亥动，寅亥相合
+  const a = analyzeChart(chart);
+  const s = assessRoleState(chart.lines[0], a.lines[0], chart);
+  assert.ok(s.places.some((p) => p.place === '动爻上爻寅' && p.effect === '生'), '寅木虽与亥水同动相合，仍来扶初爻卯木');
+});

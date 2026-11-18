@@ -52,7 +52,7 @@ function ledger(line, facts, chart) {
     if (er === 'same') support.push(`${other.label}${other.relative}${other.branch}动来扶`);
     if (er === 'controls') damage.push(`${other.label}${other.relative}${other.branch}动来克`);
     if (CLASH.get(other.branch) === line.branch) damage.push(`${other.label}${other.relative}${other.branch}动来冲`);
-    if (COMBINE.get(other.branch) === line.branch) notes.push(`${other.label}${other.relative}${other.branch}动来合${line.moving ? '（合绊）' : '（合起）'}`);
+    if (COMBINE.get(other.branch) === line.branch) notes.push(`${other.label}${other.relative}${other.branch}动来合${line.moving ? '（两动相合，合好，D2）' : '（合起）'}`);
     if (isMovingTomb(line, other, chart)) damage.push(`入${other.label}${other.branch}动墓`);
   }
   const ch = facts.change;

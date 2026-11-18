@@ -1152,8 +1152,8 @@ function detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceS
         const md = chart.calendar.monthBranch; const dd = chart.calendar.dayBranch;
         if (he(x.br, dd) && fact(x.line).calendar.day.he) return [`${who}动而被日辰${dd}合住，冲本爻之${CHX[x.br]}日或冲合神之${CHX[dd]}日皆可冲开`];
         if (he(x.br, md) && fact(x.line).calendar.month.he) return [`${who}动而被月建${md}合住，冲本爻之${CHX[x.br]}日月或冲合神之${CHX[md]}日月皆可冲开`];
-        const o = L.find((y) => y !== x.line && y.moving && he(y.branch, x.br));
-        return o ? [`${who}动而被${o.relative}${o.branch}动来合住，待冲${o.branch}之${CHX[o.branch]}日`] : [];
+        // D2：两动相合作合好，不作合绊，不另取冲开之期
+        return [];
       }),
       guanQi: g && g.kind === 'line' ? yingqi(g) : [],
       fuQi: f && f.kind === 'line' ? yingqi(f) : [],
