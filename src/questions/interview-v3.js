@@ -344,7 +344,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const fPre = f.kind === 'line' && f.moving ? lvOf(f.line, assessRoleState(f.line, { ...fact(f.line), change: null }, chart)) : f.lv;
     const fShuai = fPre < 2;
     const fMuJue = fc && ['墓', '绝'].includes(fc.lifeStage) && fc.huitou !== '回头生' && !fc.changedVoid && !(fc.lifeStage === '墓' && chong(day, fc.to?.branch));
-    // 童试章分旺衰两句：父衰化空破墓绝者「窗下午日长」（R-QIUMING-05）；父旺化空破墓绝者「始取终弃」（R-QIUMING-18，B-021 化空、化墓、化绝照记不利而不作必败）——化真空也按此分，不再不论旺衰一律作父化凶（2026-11-18 评审）
+    // 童试章分旺衰两句：父衰化空破墓绝者「窗下午日长」（R-QIUMING-05）；父旺化空破墓绝者「始取终弃」（R-QIUMING-18，B-021 化空、化破、化墓、化绝照记不利而不作必败）——化真空也按此分，不再不论旺衰一律作父化凶（2026-11-18 评审）
     const fBadHua = !fc ? null : huiKe(f.line, fc) ? '回头克' : (fShuai && realVoid) ? '真空' : (fShuai && fc.advance === '退神') ? '退神' : (fShuai && fc.changedMonthBreak) ? '月破' : (fShuai && fMuJue) ? fc.lifeStage : null;
     if (f.moving && fBadHua === '回头克' && riyueZhi(fc.to?.branch)) N(`父${f.br}动而化回头克，但所化之${fc.to.branch}被${zhiWho(fc.to.branch)}（日月为制煞之将军……若得日月冲制克神，亦许得意）`, ['R-ZS-QM-10']);
     // 父母旺相化回头克：童试章「父母旺相，若化……回头克……始取终弃」（R-QIUMING-18），对最终能否录取作否决；冲中逢合只解冲，不解回头克。
@@ -740,7 +740,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     const hit = [...(chongZhongHe.has(f.line) ? [] : chongBy(f.line)), ...keBy];
     // B-021（用户 2026-11-17 定）：童试章定考试进退之象，旬空章定空亡是否失效及应期，千金赋注定墓绝旺衰与救应——三者合参。
     // 化空、化墓、化绝者，童试章之不利照记，但不作必败：化空另看出空，化墓另看冲墓，化绝另看逢生旺（本爻旺相或得日月扶者，千金赋注「亦无大害」）
-    const huaSoft = fch && (fch.changedVoid || ['墓', '绝'].includes(fch.lifeStage));
+    // B-021 范围列全（2026-11-18 评审）：旺父化空、化破、化墓、化绝照记不利而不作必败；化回头克另作「父旺遭伤」否决
+    const huaSoft = fch && (fch.changedVoid || fch.changedMonthBreak || ['墓', '绝'].includes(fch.lifeStage));
     if (hua.length || hit.length) minus.push({ text: `父${f.br}旺而${[...hua, ...hit.map((x) => `受${x}`)].join('、')}${chongZhongHe.has(f.line) ? '，冲已逢合，所馀之伤仍在' : ''}${huaSoft && hua.length ? '：有先得后阻之险，但不作必败' : ''}（父母旺相，若化休囚、空破、墓绝，化回头克，及被冲克者，始取终弃）`, rules: ['R-QIUMING-18'] });
   }
   // 应动或兄动克世：同袍抢夺（易林补遗·选缺参房章）

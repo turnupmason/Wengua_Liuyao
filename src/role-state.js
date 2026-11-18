@@ -177,12 +177,22 @@ function placesOf(subject, chart) {
     const otherSheng = places.some((p) => p.effect === '生' && !p.he);
     const selfTomb = ch.lifeStage === '墓' && selfXiu && !otherSheng;
     const helpKind = ch.huitou === '回头生' ? '回头生' : ch.advance === '进神' ? '进神' : ['长生', '帝旺'].includes(ch.lifeStage) ? ch.lifeStage : null;
+    // 未解之限逐项列出，各写解除之时（2026-11-18 评审：仍有月破等条件时，不能让一句「填实」代表所有限制都已解除）
+    const lims = [];
+    if (helpKind === '进神' && c.monthBreak) lims.push({ what: '本爻逢月破', until: '出月或值日填实' });
+    if (ch.changedMonthBreak) lims.push({ what: '化出之爻逢月破', until: '出月或值日填实' });
+    if (jinEmpty) lims.push({ what: '化出之爻逢旬空', until: '冲空、实空之日' });
+    const limWhy = (arr, tail = '') => `${arr.map((x) => x.what).join('，又')}，待${[...new Set(arr.map((x) => x.until))].join('，并')}${tail}`;
+    const shuai = helpKind === '进神' && (selfXiu || toXiu) ? (selfXiu && toXiu ? '动休囚而化休囚' : '动爻变爻有一而值衰') : null;
     const pending = !helpKind ? null
       : selfTomb ? { why: '本爻化入墓库，休囚又无他处生扶，眼下受困，待冲开墓库', rule: 'R-SUIMU-01' }
+        // 元神六条「元神休囚又逢旬空（底本作自空，C-013）、月破」不能生
         : helpKind === '回头生' && toXiu && (ch.changedMonthBreak || realEmpty) ? { why: `化出之爻休囚又逢${ch.changedMonthBreak ? '月破' : cc.void.zengshan}，不能生`, rule: 'R-YUANJI-02' }
-          : helpKind === '进神' && (ch.changedMonthBreak || jinEmpty || c.monthBreak) ? { why: `${c.monthBreak ? '本爻逢月破' : ch.changedMonthBreak ? '化出之爻逢月破' : '化出之爻逢旬空'}，待填实之日而进`, rule: 'R-JINTUI-02' }
-            : ['长生', '帝旺'].includes(helpKind) && (ch.changedMonthBreak || realEmpty) ? { why: `化出之爻逢${ch.changedMonthBreak ? '月破' : cc.void.zengshan}，待填实之日`, rule: 'R-YUEPO-02' }
-            : helpKind === '进神' && (selfXiu || toXiu) ? { why: selfXiu && toXiu ? '动休囚而化休囚，待时而进' : '动爻变爻有一而值衰，待旺相之日而进', rule: 'R-JINTUI-02' } : null;
+          // 进神退神章：值衰待旺相之日，空破待填实之日；几项并见者各项俱解才进
+          : helpKind === '进神' && lims.length ? { why: limWhy(shuai ? [...lims, { what: shuai === '动休囚而化休囚' ? '本爻与化出之爻都休囚' : '本爻与化出之爻有一处衰', until: '旺相之日' }] : lims, '而进'), rule: 'R-JINTUI-02' }
+            : shuai ? { why: shuai === '动休囚而化休囚' ? '动休囚而化休囚，待时而进' : '动爻变爻有一而值衰，待旺相之日而进', rule: 'R-JINTUI-02' }
+              // 回头生、化长生帝旺之化出之爻逢旬空、月破：元神章「元神旺动临空化空……动不为空，皆应冲空实空之日而有用也」——有作用资格，作用落在冲空、实空（破者出月填实）之时；冲空则实者当下有效
+              : lims.length ? { why: limWhy(lims), rule: jinEmpty ? 'R-YUANJI-01' : 'R-YUEPO-02' } : null;
     if (pending) blocked.push({ place: `自身动化${helpKind}`, effect: '生', why: pending.why, rule: pending.rule, pending: true });
     // 写清是哪一种化：进神是同类相扶，不是回头来生（2026-11-16 评审）
     if (pending) { /* 待时或不能生：不计入当下旺衰 */ }

@@ -214,9 +214,18 @@ test('进神只有乘势而进才计入当下旺衰；化墓不由同一次动�
   assert.ok(r.notes.some((n) => /眼下不计入旺衰/.test(n.text)));
 });
 
-test('固定输入前 3000 盘：父母旺者不判「父化凶」（旺衰与否决不再相反）', () => {
+test('固定输入前 3000 盘的回归预期：父母旺者不判「父化凶」（回放结果，不是计算规则；判定仍读化前旺衰、动化限制与例外）', () => {
   for (const [lv, mo, dg] of fixed.slice(0, 3000)) {
     const { r } = ch(`${lv} ${mo} ${dg}`);
     assert.ok(!(r.layers.performance.level === 2 && r.veto.some((v) => v.code === '父化凶')), `${lv} ${mo} ${dg}`);
   }
+});
+
+test('化出之爻逢一般旬空：回头生关系保留、不否决，但作用应在冲空实空之日，不计入当下旺衰（元神章「皆应冲空实空之日而有用也」）', () => {
+  const { chart, analysis, r } = ch('669778 丑 甲辰'); // 官午化卯回头生，卯在旬空（甲辰旬空寅卯）
+  const l = chart.lines.find((x) => x.relative === '官鬼' && x.moving);
+  const s = assessRoleState(l, analysis.lines[l.position - 1], chart);
+  assert.ok(!s.places.some((p) => p.place === '自身动化回头生'));
+  assert.ok(s.places.blocked.some((b) => b.pending && /冲空、实空之日/.test(b.why)));
+  assert.ok(r.notes.some((n) => /^官午动而化回头生卯：化出之爻逢旬空，待冲空、实空之日/.test(n.text)));
 });
