@@ -4,7 +4,8 @@ import { buildChart, buildEvidence, analyzeChart, interviewV3Text } from '../../
 
 const N = Number(process.argv[2] || 3000);
 let seed = Number(process.argv[3] || 7) * 7919 + 17;
-const rnd = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
+// mulberry32（2026-11-17：原 LCG 相邻取值相关，2 万盘只得约 6000 种不同的盘）
+const rnd = () => { seed = (seed + 0x6D2B79F5) >>> 0; let x = seed; x = Math.imul(x ^ (x >>> 15), x | 1); x ^= x + Math.imul(x ^ (x >>> 7), x | 61); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
 const BR = '子丑寅卯辰巳午未申酉戌亥';
 const GZ = Array.from({ length: 60 }, (_, i) => '甲乙丙丁戊己庚辛壬癸'[i % 10] + BR[i % 12]);
 const line = () => { const x = rnd(); return x < 0.125 ? 6 : x < 0.5 ? 7 : x < 0.875 ? 8 : 9; };
@@ -31,21 +32,40 @@ const REL = {
   生: (a, s) => GEN[EL[a]] === EL[s], 扶: (a, s) => EL[a] === EL[s], 克: (a, s) => KE[EL[a]] === EL[s], 冲: (a, s) => CH[a] === s,
   冲克: (a, s) => CH[a] === s && KE[EL[a]] === EL[s], 合: (a, s) => HE[a] === s, 临: (a, s) => a === s,
 };
+const RC = { sent: 0, skipped: 0, rels: 0, skippedEx: [] };
 function relationErrors(text) {
   const errs = [];
   for (const m of text.matchAll(new RegExp(`([${BR}])([金木水火土])`, 'g'))) if (EL[m[1]] !== m[2]) errs.push(`${m[0]}五行配错`);
   for (const sent of text.split('。')) {
     const sm = sent.match(new RegExp(`(?:代表[^的]{2,8}的|你的世爻是)(?:父母|官鬼|子孙|妻财|兄弟)([${BR}])[金木水火土]`));
-    if (!sm) continue;
+    if (!sm) { if (/所以|综合起来/.test(sent) && /[月日]|爻/.test(sent)) { RC.skipped += 1; if (RC.skippedEx.length < 3) RC.skippedEx.push(sent.slice(0, 60)); } continue; }
+    RC.sent += 1;
     const s = sm[1]; const body = sent.slice(sm.index + sm[0].length).split(/所以|综合起来/)[0];
     const units = (str) => [...str.matchAll(new RegExp(`([${BR}])(?:月|日|[金木水火土])`, 'g'))].map((x) => x[1]);
-    const chk = (str, kind, src) => { for (const u of units(str)) if (!REL[kind](u, s)) errs.push(`${s}${EL[s]}：${src}`); };
+    const chk = (str, kind, src) => { for (const u of units(str)) { RC.rels += 1; if (!REL[kind](u, s)) errs.push(`${s}${EL[s]}：${src}`); } };
     for (const m of body.matchAll(new RegExp(`得((?:[${BR}][月日]、?)+)(相生|扶持)`, 'g'))) chk(m[1], m[2] === '相生' ? '生' : '扶', m[0]);
     for (const m of body.matchAll(new RegExp(`受((?:[${BR}][月日]、?)+)克`, 'g'))) chk(m[1], '克', m[0]);
     for (const m of body.matchAll(new RegExp(`被((?:[${BR}][月日]、?)+)冲`, 'g'))) chk(m[1], '冲', m[0]);
     for (const m of body.matchAll(new RegExp(`正临((?:[${BR}][月日]、?)+)`, 'g'))) chk(m[1], '临', m[0]);
     for (const m of body.matchAll(new RegExp(`与((?:[${BR}][月日]、?)+)(?:都)?相合`, 'g'))) chk(m[1], '合', m[0]);
     for (const m of body.matchAll(new RegExp(`((?:.爻[${BR}][金木水火土]、?)+)(?:发动|暗动|旺而)来(冲克|生|扶|克|冲|合)`, 'g'))) chk(m[1], m[2], m[0]);
+  }
+  return errs;
+}
+// 与世爻的关系：应爻句、官星句里「来生／来克你的世爻」「你的世爻去生／克它」「与你的世爻相冲／比和／相合」，按世爻地支核对
+const TO_WORLD = [
+  [/来生你的世爻/, (x, w) => REL.生(x, w)], [/来克你的世爻/, (x, w) => REL.克(x, w)], [/来合你的世爻|与你的世爻相合/, (x, w) => REL.合(x, w)],
+  [/你的世爻去生它|只是你去生官/, (x, w) => REL.生(w, x)], [/你的世爻克它|你的世爻去克官/, (x, w) => REL.克(w, x)],
+  [/与你的世爻相冲/, (x, w) => REL.冲(x, w)], [/与你的世爻比和/, (x, w) => EL[x] === EL[w]],
+];
+function worldRelErrors(full) {
+  const wm = full.match(new RegExp(`你的世爻是(?:父母|官鬼|子孙|妻财|兄弟)([${BR}])`));
+  if (!wm) return [];
+  const w = wm[1]; const errs = [];
+  const cands = [...full.matchAll(new RegExp(`应爻([${BR}])[金木水火土]代表对方，([^；。]+)`, 'g')), ...full.matchAll(new RegExp(`代表职位的官鬼([${BR}])[金木水火土][^。]*?(所以|综合起来)[^，。；]*，([^；。]+)`, 'g'))];
+  for (const m of cands) {
+    const x = m[1]; const rest = m[m.length - 1];
+    for (const [re, ok] of TO_WORLD) if (re.test(rest)) { RC.rels += 1; if (!ok(x, w)) errs.push(`世${w}${EL[w]}与${x}${EL[x]}：${rest.slice(0, 20)}`); break; }
   }
   return errs;
 }
@@ -70,12 +90,14 @@ for (let n = 0; n < N; n += 1) {
     if (seen.has(c) && seen.get(c) !== x.item + n) { const d0 = dup.get('篇内分句重复') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 6) d0.ex.push(`${tag}：${c}`); dup.set('篇内分句重复', d0); }
     seen.set(c, x.item);
   }
+  for (const e of worldRelErrors(t.items.map((x) => x.text).join('。'))) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔世应〕${e}`); dup.set('生克冲合与事实不符', d0); }
   for (const x of t.items) for (const e of relationErrors(x.text)) { const d0 = dup.get('生克冲合与事实不符') || { n: 0, ex: [] }; d0.n += 1; if (d0.ex.length < 8) d0.ex.push(`${tag}〔${x.item}〕${e}`); dup.set('生克冲合与事实不符', d0); }
   const basis = t.basis.filter((b) => ['决定', '重要'].includes(b.level) && !b.said);
   if (basis.length) { const d0 = dup.get('决定重要条目未写进正文') || { n: 0, ex: [] }; d0.n += basis.length; if (d0.ex.length < 6) d0.ex.push(`${tag}：${basis[0].text.slice(0, 50)}`); dup.set('决定重要条目未写进正文', d0); }
   total += 1;
 }
 console.log(`卦数 ${total}，平均正文 ${Math.round(chars / total)} 字`);
+console.log(`生克冲合核对（关系表为本脚本自备，不取引擎常量）：识别旺衰句 ${RC.sent} 句，核对关系 ${RC.rels} 条；带「所以/综合起来」而未认出主体、跳过的句 ${RC.skipped} 句${RC.skippedEx.length ? `，例：${RC.skippedEx.join('｜')}` : ''}`);
 let bad = 0;
 for (const [name, h] of [...hits, ...dup]) { bad += h.n; console.log(`\n【${name}】${h.n}`); for (const e of h.ex) console.log('  ', e); }
 if (!bad) console.log('无');

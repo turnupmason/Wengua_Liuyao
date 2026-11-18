@@ -7,7 +7,8 @@ const seed0 = Number(process.argv[2] || 1);
 const N = Number(process.argv[3] || 30);
 const outFile = process.argv[4];
 let seed = seed0 * 7919 + 17;
-const rnd = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
+// mulberry32（2026-11-17：原 LCG 相邻取值相关，2 万盘只得约 6000 种不同的盘）
+const rnd = () => { seed = (seed + 0x6D2B79F5) >>> 0; let x = seed; x = Math.imul(x ^ (x >>> 15), x | 1); x ^= x + Math.imul(x ^ (x >>> 7), x | 61); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
 const BR = '子丑寅卯辰巳午未申酉戌亥';
 const GZ = Array.from({ length: 60 }, (_, i) => '甲乙丙丁戊己庚辛壬癸'[i % 10] + BR[i % 12]);
 const line = () => { const x = rnd(); return x < 0.125 ? 6 : x < 0.5 ? 7 : x < 0.875 ? 8 : 9; };

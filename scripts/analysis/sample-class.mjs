@@ -4,7 +4,8 @@ import { buildChart, buildEvidence, allHexagrams, BRANCHES, ganzhiFromIndex, int
 const [key, nArg, seedArg] = process.argv.slice(2);
 const n = Number(nArg) || 8;
 let seed = Number(seedArg) || 7;
-const rnd = () => { seed = (seed * 1103515245 + 12345) % 2147483648; return seed / 2147483648; };
+// mulberry32（2026-11-17：原 LCG 相邻取值相关，2 万盘只得约 6000 种不同的盘）
+const rnd = () => { seed = (seed + 0x6D2B79F5) >>> 0; let x = seed; x = Math.imul(x ^ (x >>> 15), x | 1); x ^= x + Math.imul(x ^ (x >>> 7), x | 61); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
 const hexes = allHexagrams();
 const vals = (code, mask) => code.split('').map((b, i) => (b === '1' ? (mask[i] === '1' ? 9 : 7) : (mask[i] === '1' ? 6 : 8)));
 const out = [];

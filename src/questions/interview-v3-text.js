@@ -406,7 +406,11 @@ function composeItems(entries, seed) {
   if (bad.length) parts.push((good.length ? (/但|虽/.test(bad[0]) ? '不过，' : pickBy(BAD_LEAD, `${seed}b`)) : '') + J(bad));
   if (neu.length) parts.push((parts.length ? pickBy(NEU_LEAD, `${seed}n`) : '') + J(neu));
   let t = parts.join('。');
-  if (conds.length) t += `${t ? '。' : ''}${pickBy(COND_LEAD, `${seed}c`)}${conds.join('；')}`;
+  if (conds.length) {
+    // 条件句多时按约百字断句，免得一句写成一长串（2026-11-17 换抽样后查出 173 字一句）
+    const groups = [[]]; for (const c of conds) { const g = groups[groups.length - 1]; if (g.length && [...g, c].join('；').length > 100) groups.push([c]); else g.push(c); }
+    t += `${t ? '。' : ''}${pickBy(COND_LEAD, `${seed}c`)}${groups.map((g) => g.join('；')).join('。另外，')}`;
+  }
   return t ? `${t}。` : '';
 }
 

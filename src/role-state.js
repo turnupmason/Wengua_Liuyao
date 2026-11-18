@@ -119,7 +119,9 @@ function placesOf(subject, chart) {
     // 千金赋「合非合因少支神」野鹤注：「若爻中二子不合二丑，名为合，不成者，亦有理也」——两爻同支对两爻同支者不成合（R-QJF-20）
     else if (er === 'generates' || er === 'same' || (!st && !subject.moving && COMBINE.get(o.branch) === subject.branch
       && !(chart.lines.filter((x) => x.branch === subject.branch).length >= 2 && chart.lines.filter((x) => x.branch === o.branch).length >= 2))) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '生', strong: false, dyn });
-    else if (er === 'controls' || (!st && CLASH.get(o.branch) === subject.branch)) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '克', strong: false, dyn });
+    // 冲只伤休囚之静爻：六冲章「用神旺虽冲不破，用神失陷凶而又凶」；动散章「爻动冲爻……旺相者冲之不散，有气者冲之不散，休囚者间有冲散，亦千百中之一二也」
+    // ——动爻被冲不作伤，旺相静爻被冲不作伤（2026-11-17 评审：「午火冲子水不能仅因记入克栏就成为克制目标爻的证据」）
+    else if (er === 'controls' || (!st && CLASH.get(o.branch) === subject.branch && subjectWeak && !subject.moving)) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '克', strong: false, dyn });
   }
   const ch = subject.change;
   // 合中带克论（卜筮正宗）：子化丑、戌化卯旺相得日月生扶帮比、或卦中动爻生之者作合；申化巳作合化长生，寅月寅日三刑会聚者不论（R-BZZ-HZK-01）；
