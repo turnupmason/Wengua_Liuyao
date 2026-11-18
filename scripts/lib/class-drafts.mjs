@@ -2,7 +2,7 @@
 // 类别稿一篇对应一个等价类，正文须对类内每一盘都成立：不得写具体地支、天干、卦名；具体卦盘由程序逐盘列出（chartFactSheet）。
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { buildChart, buildEvidence, allHexagrams } from '../../src/index.js';
+import { buildChart, buildEvidence, allHexagrams, analyzeChart } from '../../src/index.js';
 import { classKeyFor, EQUIVALENCE_VERSION } from '../../src/equivalence.js';
 import { interviewV3 } from '../../src/questions/interview-v3.js';
 
@@ -90,6 +90,22 @@ export function checkClassDraft(src, userTexts) {
       if (d.role === 'fu') {
         const lv = interviewV3(samples.find((x) => x.ci === ci).chart, { evidence }).layers.performance.level;
         if (d.effect === 'support' ? lv < 1 : lv > 0) errors.push(`C33 样本 ${tag} 的父母一层（${lv}）不满足主要${d.effect === 'adverse' ? '不利' : '有利'}依据`);
+        continue;
+      }
+      // 正文所称具体事实作适用条件（2026-11-17 评审：「不空不破」等写进正文的句子，须对类里每个样本都成立）
+      if (d.role === 'cond') {
+        const sc = samples.find((x) => x.ci === ci);
+        const r3 = interviewV3(sc.chart, { evidence });
+        const lineOf = (lay) => (lay?.line?.kind === 'line' ? sc.chart.lines[lay.line.position - 1] : null);
+        const calOf = (l) => (l ? analyzeChart(sc.chart).lines[l.position - 1].calendar : null);
+        const gl = lineOf(r3.layers.hiring); const fl = lineOf(r3.layers.performance);
+        const gc = calOf(gl); const fc = calOf(fl);
+        const COND = {
+          官不空不破: () => gc && !gc.void && !(gc.monthBreak && !gc.day.same),
+          父空破墓绝: () => Boolean(fc && (fc.void || (fc.monthBreak && !fc.day.same) || fc.dayTomb || fc.dayExtinct)),
+        };
+        if (!COND[d.basis]) errors.push(`C33 未知的适用条件「${d.basis}」`);
+        else if (!COND[d.basis]()) errors.push(`C33 样本 ${tag} 不满足正文所称「${d.basis}」`);
         continue;
       }
       // 卦级依据（如六合变六冲「始吉终凶」，R-CHONG-01）：类键须含所述卦象（样本已由 C30 核为本类）

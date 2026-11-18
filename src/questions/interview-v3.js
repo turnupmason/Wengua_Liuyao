@@ -1,7 +1,7 @@
 // 面试问第三版：官父并看（docs/18 第〇〇节；D-023、D-024、D-025；reports/qiuming-classics-catalog.md）
 // 只读排盘与分析事实，输出分层结论、逐条依据（带规则编号）与逐卦细节事实。
 import { analyzeChart, isMovingTomb, isMovingTombRaw, tombBroken } from '../analysis.js';
-import { assessRoleState, assessHiddenState } from '../role-state.js';
+import { assessRoleState, assessHiddenState, moverBlocked } from '../role-state.js';
 import { shenshaFacts } from '../shensha.js';
 import { selectYongshen } from '../evidence.js';
 
@@ -208,9 +208,11 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 父发：父母发动而生合世（官衰父发，亦论抡收）。化出之爻不计：动变生克冲合章「变出之爻能生克冲合本位之动爻，不能生克他爻」
   // （2026-11-16 依评审核实改；此前化出之爻生合世亦算父发）
   // 官衰父发（童试章，R-QIUMING-03）：父母发动生合世，且本身不衰、未被他动爻克制，才能补官之衰（2026-11-17 评审：「父母发动应是补救分支中的一个条件，还要检查它能否实际发挥作用」）
-  const fFa = F.shown.filter((x) => x.moving && (gen(x.el, W.el) || he(x.br, W.br)));
-  // 官衰父发（童试章，R-QIUMING-03）补官之衰：发动之父母须能起作用——未被他动爻克制（元神忌神衰旺章，R-YUANJI-02）、未被日月合绊（2026-11-17 评审：「父母发动应是补救分支中的一个条件，还要检查它能否实际发挥作用」）
-  const fFaEff = fFa.filter((x) => x.kind === 'line' && effMover(x.line) && !bound(x.line));
+  // 父发（官衰父发，童试章 R-QIUMING-03；兄持世之例外、分层同用）：发动之父母须能起作用——
+  // 不在元神忌神衰旺章「元神虽现又有不能生用神者」六条之内（休囚动而被伤克、休囚空破、休囚化退、衰而又绝、入三墓、休囚化绝克破散，R-YUANJI-02），
+  // 也未被日月合绊（六合章「动而逢合……谓之合绊」）。旺相或有扶之父母受动克，不算不能生（2026-11-17 评审）
+  const fFa = F.shown.filter((x) => x.moving && x.kind === 'line' && (gen(x.el, W.el) || he(x.br, W.br)) && !moverBlocked(x.line, world, chart, '生') && !bound(x.line));
+  const fFaEff = fFa;
   const guanQing = wRel === '官鬼' || (g && (gen(g.el, W.el) || he(g.br, W.br))) || (riyueGuan && special.riyueYongToWorld?.length) || calGuanToWorld.length > 0;
   const riyueFuQing = riyueFu && [month, day].some((b) => ELB[b] === fuEl && (gen(fuEl, W.el) || he(b, W.br)));
   const fuQing = (f && (wRel === '父母' || gen(f.el, W.el) || he(f.br, W.br) || f.underWorld)) || riyueFuQing;
@@ -315,8 +317,8 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       V('父化刑', `父${f.br}动而化出${fc.to.branch}，与本爻相刑（凡带父刑害败病等爻，及化出者，其文皆有败破，不能录取）`, ['R-BQS-QM-02', 'R-XING-01']);
     }
     // 童试章分旺衰两句，按化前之旺衰判（不计自身动化之克，免得回头克先把旺父压成平势、再绕过「父旺遭伤」），2026-11-17 评审
-    // 化前旺衰不低于化后：生克条数比较有非单调处（B-005 与 B-006 交界），去掉自身动化之克不应反而变衰
-    const fPre = f.kind === 'line' && f.moving ? Math.max(f.lv, lvOf(f.line, assessRoleState(f.line, { ...fact(f.line), change: null }, chart))) : f.lv;
+    // 化前旺衰：不计自身动化时的状态（role-state 已修 B-005、B-007 两处非单调，去掉自身动化之克不再变衰，见 tests/rule-fixes-2026-11-17）
+    const fPre = f.kind === 'line' && f.moving ? lvOf(f.line, assessRoleState(f.line, { ...fact(f.line), change: null }, chart)) : f.lv;
     const fShuai = fPre < 2;
     const fMuJue = fc && ['墓', '绝'].includes(fc.lifeStage) && fc.huitou !== '回头生' && !fc.changedVoid && !(fc.lifeStage === '墓' && chong(day, fc.to?.branch));
     const fBadHua = !fc ? null : huiKe(f.line, fc) ? '回头克' : realVoid ? '真空' : (fShuai && fc.advance === '退神') ? '退神' : (fShuai && fc.changedMonthBreak) ? '月破' : (fShuai && fMuJue) ? fc.lifeStage : null;
@@ -686,7 +688,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
     plus.push({ text: `${who}发动而逢${cb.join('、')}，又得${hb.join('、')}与之相合（世与父爻，动而逢冲，若得日月动爻相合者，谓之冲中逢合，定获续取）`, rules: ['R-QIUMING-19'] });
   }
   // 父旺按化前旺衰（同上「父化凶」一段，免得自身动化之伤先把旺父压低而绕过本条）
-  if (f && f.kind === 'line' && (f.moving ? Math.max(fLv, lvOf(f.line, assessRoleState(f.line, { ...fact(f.line), change: null }, chart))) : fLv) === 2) {
+  if (f && f.kind === 'line' && (f.moving ? lvOf(f.line, assessRoleState(f.line, { ...fact(f.line), change: null }, chart)) : fLv) === 2) {
     const fcal = fact(f.line).calendar;
     const fch = f.moving ? f.change : null;
     // 动爻克父：增删动静生克章「酉金发动虽则休囚，动而能克旺相之卯木」——休囚之动爻亦能克旺（未被他爻克制、不在「动而休囚被日月克」之列者）；
@@ -908,12 +910,13 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
   // 否决亦不看，只作「始则艰阻」之注：用户裁定 B-013（2026-11-16「Override vetoes too」）
   const chongBianHe = Boolean(chart.primary.sixClash && chart.changed?.sixCombine);
   if (chongBianHe) {
-    for (const v of effectiveVeto) N(`${v.text}——卦得六冲变六合，不看用神，此只作「始则艰阻」之处`, [...v.rules, 'R-HE-03']);
+    // B-013 管到最终标签与分层：全部否决（含已转作分层者）都只作说明，分层结论不再另写（2026-11-17 评审：「先算好的分层照写」不能绕过最终裁决）
+    for (const v of veto) N(`${v.text}——卦得六冲变六合，不看用神，此只作「始则艰阻」之处`, [...v.rules, 'R-HE-03']);
     // 本卦六冲而官父世不俱旺，正是「始则艰阻」本身，不另作不利（2026-11-17 评审：同篇既说不看用神、又说事有散意，自相矛盾）
     for (let i = minus.length - 1; i >= 0; i -= 1) if (minus[i].text.startsWith('六冲卦而官父世不俱旺')) { N(`${minus[i].text}——卦得六冲变六合，不看用神，此只作「始则艰阻」之处`, [...minus[i].rules, 'R-HE-03']); minus.splice(i, 1); }
     if (effectiveVeto.length) effectiveVeto = [];
     P('冲变合', '六冲卦变六合（独此六冲卦变六合得不看用神，竟以吉断；占功名始则艰驻，终顷荣显）', ['R-HE-03']);
-    finalLayer = (finalLayer ? `${finalLayer}；` : '') + '六冲变六合：始则艰阻，终则荣显';
+    finalLayer = '六冲变六合：始则艰阻，终则荣显';
   }
   // 证据按所论之爻归组（2026-11-17 评审：「不能把同一官星的多个描述全部当成互相独立的吉证」）：条目开头点名所论之爻者归到那一爻，认不出者各成一组。
   // 判定比较有利、不利时按组计：同一爻上的几条只算一组，能过之象按所在之爻并入有利（B-022，用户 2026-11-17 转来评审：「不要数吉凶条目的数量」「吉凶证据重复计数需要修复」）。
@@ -1027,7 +1030,7 @@ export function interviewV3(chart, { analysis = analyzeChart(chart), evidence = 
       self: { basis: '世爻', level: wLv },
       final: finalLayer,
     },
-    veto: effectiveVeto, layerVeto: effectiveVeto === veto ? [] : veto, pass, plus, minus, notes,
+    veto: effectiveVeto, layerVeto: chongBianHe || effectiveVeto === veto ? [] : veto, pass, plus, minus, notes,
     details: detailFacts({ chart, analysis, g, f, world, resp, G, F, shen, evidenceSpecial: special, evidenceHarmonies: harm, riyueFuFlag: riyueFu, fuElFlag: fuEl, lvWhy }),
   };
 }

@@ -76,3 +76,46 @@ test('冲的计法与爻的遍历顺序无关', () => {
     }
   }
 });
+
+// —— 第四轮收尾（2026-11-17）——
+import { readFileSync as rf } from 'node:fs';
+import { interviewV3Text } from '../src/index.js';
+const fixed = JSON.parse(rf(new URL('../data/regression/random-20000.json', import.meta.url), 'utf8')).rows;
+const RANK = { weak: 0, neutral: 1, balanced: 1, strong: 2 };
+
+test('单调：去掉自身动化之克（回头克、退神、化绝），旺衰不降（B-005、B-007 交界已修）', () => {
+  for (const [lv, mo, dg] of fixed.slice(0, 3000)) {
+    const chart = buildChart({ lineValues: [...lv].map(Number), calendar: { monthBranch: mo, dayGanzhi: dg } }); const a = analyzeChart(chart);
+    for (const l of chart.lines) {
+      const f = a.lines[l.position - 1]; const c = f.change;
+      if (!l.moving || !c || !(c.huitou === '回头克' || c.advance === '退神' || c.lifeStage === '绝')) continue;
+      const post = assessRoleState(l, f, chart);
+      if (post.places.some((p) => /^自身动化合中带克/.test(p.place))) continue; // 合中带克作合论者，自身动化是生
+      const pre = assessRoleState(l, { ...f, change: null }, chart);
+      assert.ok(RANK[pre.capability] >= RANK[post.capability], `${lv} ${mo} ${dg} 第${l.position}爻`);
+    }
+  }
+});
+
+test('临日之爻：午月子日静子水，午火动冲不记伤，月冲不作月破之限', () => {
+  const chart = buildChart({ lineValues: [7, 7, 7, 9, 7, 7], calendar: { monthBranch: '午', dayGanzhi: '丙子' } });
+  const a = analyzeChart(chart); const z = chart.lines[0];
+  const s = assessRoleState(z, a.lines[0], chart);
+  assert.equal(z.branch, '子');
+  assert.ok(!s.places.some((p) => /^动爻.*午克$/.test(`${p.place}${p.effect}`)));
+  assert.ok(!s.limitations.some((x) => x.kind === '月破'));
+});
+
+test('B-013：固定输入中六冲变六合之盘，结论、分层、正文一致', () => {
+  for (const [lv, mo, dg] of fixed) {
+    const chart = buildChart({ lineValues: [...lv].map(Number), calendar: { monthBranch: mo, dayGanzhi: dg } });
+    if (!(chart.primary.sixClash && chart.changed?.sixCombine)) continue;
+    const analysis = analyzeChart(chart); const evidence = buildEvidence('career.interview.interview-pass', chart, analysis);
+    const r = interviewV3(chart, { analysis, evidence }); const t = interviewV3Text(chart, { analysis, evidence });
+    const tag = `${lv} ${mo} ${dg}`;
+    assert.equal(r.verdict, 'pass', tag);
+    assert.equal(r.veto.length + (r.layerVeto || []).length, 0, tag);
+    assert.equal(r.layers.final, '六冲变六合：始则艰阻，终则荣显', tag);
+    assert.ok(!/成行一层难|录取一层还可过|这一处是硬伤|补不回来/.test(t.items.map((x) => x.text).join('')), tag);
+  }
+});

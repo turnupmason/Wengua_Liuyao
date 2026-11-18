@@ -30,7 +30,7 @@ const strongSeason = (element, monthBranch) => ['旺', '相'].includes(seasonalS
 //「忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。
 //  忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也」（R-YUANJI-04）
 // 「休囚」取月令事实（D-015）；「化散」取化冲；三墓按原文不分衰旺。
-function moverBlocked(o, subject, chart, mode) {
+export function moverBlocked(o, subject, chart, mode) {
   const c = calendarFacts({ branch: o.branch, element: o.element, moving: o.moving, kind: 'line', position: o.position }, chart);
   const ch = o.moving ? changeFacts(o, chart) : null;
   const xiu = seasonalState(o.element, chart.calendar.monthBranch) === '休囚';
@@ -99,7 +99,8 @@ function placesOf(subject, chart) {
   else if (d.controls) places.push({ place: '日辰', effect: '克', strong: true, ...(d.heKe ? { heKe: '日合而又克，别无他处生扶，言克不言合' } : {}) });
   // 动静生克章：「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——受方休囚时，静而旺相（不破）之爻亦计入
   // 月冲临日之爻不作月破（日辰章「逢月破而不破」，2026-11-17 评审：「或月破」须读处理例外后的状态）
-  const subjectWeak = !strongSeason(subject.element, chart.calendar.monthBranch) || (CLASH.get(subject.branch) === chart.calendar.monthBranch && !c.day?.same);
+  // 临日之爻「逢月破而不破，遇冲克而无伤」（日辰章）：月令休囚亦不作衰，动爻来冲不记伤（午月子日之子水被午火动冲，2026-11-17 评审定点核）
+  const subjectWeak = !c.day?.same && (!strongSeason(subject.element, chart.calendar.monthBranch) || CLASH.get(subject.branch) === chart.calendar.monthBranch);
   const staticStrong = (o) => !o.moving && strongSeason(o.element, chart.calendar.monthBranch) && CLASH.get(o.branch) !== chart.calendar.monthBranch;
   const heKe = [];
   for (const o of chart.lines) {
@@ -199,7 +200,13 @@ function capabilityOf(subject, chart) {
     return { places, capability: 'strong', ...(k.length ? { attacked: true } : {}), basis: `动而${subject.change.huitou === '回头生' ? '化回头生' : '化进神'}，有力（元神忌神衰旺章，R-YUANJI-01、R-YUANJI-03）` };
   }
   // 月将章：临月建而受日克日冲或墓于日，无其他生克：无吉无凶（B-007）
-  if (c.month.same && (c.day.controls || c.dayTomb || c.day.clash) && !places.some((p) => !['月建', '日辰'].includes(p.place))) {
+  // 同章「倘得他爻又动相扶者为吉兆」「恐他爻又来克制用神，虽临月建，亦难敌也」：另有生扶多于克者作有力，克多于生扶者作无力，相当者仍作相敌。
+  // 此前只在别无他处生克时作相敌，多一项克反落入条数比较而判有力（2026-11-17 评审查出非单调）
+  if (c.month.same && (c.day.controls || c.dayTomb || c.day.clash)) {
+    const og = places.filter((p) => !['月建', '日辰'].includes(p.place) && p.effect === '生').length;
+    const ok = places.filter((p) => !['月建', '日辰'].includes(p.place) && p.effect === '克').length;
+    if (og > ok) return { places, capability: 'strong', basis: `临月建而受日辰克冲或墓于日，又得他爻相扶（倘得他爻又动相扶者为吉兆，R-YUEJIAN-04）` };
+    if (ok > og) return { places, capability: 'weak', basis: `临月建而受日辰克冲或墓于日，又有他爻来克（恐他爻又来克制用神，虽临月建，亦难敌也，R-YUEJIAN-04）` };
     return { places, capability: c.dayTomb ? 'balanced-tomb' : 'neutral', basis: '临月建而受日辰克冲或墓于日：月日相敌，无吉无凶（R-YUEJIAN-04，B-007）' };
   }
   const list = (arr) => arr.map((p) => p.place).join('、');
@@ -220,7 +227,9 @@ function capabilityOf(subject, chart) {
     return { places, ...byMonth(dynamic ? '生克相当而动爻旺衰亦同' : '日月相反而无动爻动化') };
   }
   // 克多生少
-  if (gs) return { places, capability: 'strong', attacked: true, basis: `克多生少而生者为日月：克处逢生，有力而受克（八宫图第三「若得相生之爻旺相者也可断为克处逢凶中得解」，B-005）` };
+  // B-005 只在生方有日月、克方无日月时成立；克方也有日月者，月将章「月生日克逢他削而亦衰」（B-004），克多即衰（2026-11-17 评审查出非单调：多一项克反由相当之「以月建为准」转成有力）
+  if (gs && !ks) return { places, capability: 'strong', attacked: true, basis: `克多生少而生者为日月：克处逢生，有力而受克（八宫图第三「若得相生之爻旺相者也可断为克处逢凶中得解」，B-005）` };
+  if (gs && ks) return { places, capability: 'weak', basis: `月日一生一克，又克多于生（月生日克逢他削而亦衰，B-004；生：${list(g)}；克：${list(k)}）` };
   return { places, capability: 'weak', basis: '克多生少，生者无力：有生之名无生之实' };
 }
 
@@ -231,7 +240,8 @@ function limitationsOf(subject, chart, places) {
     const clashB = CLASH.get(subject.branch);
     out.push({ kind: '旬空', detail: c.void.zengshan, releases: [{ kind: '冲空', branch: clashB, ...dayOffset(chart, clashB), rule: 'R-KONG-06' }, { kind: '出空填实', branch: subject.branch, ...dayOffset(chart, subject.branch), rule: 'R-YINGQI-08' }] });
   }
-  if (c.monthBreak) {
+  // 临日之爻逢月破而不破（日辰章，R-RIZHEN-05）：不作月破之限
+  if (c.monthBreak && !c.day?.same) {
     const comb = COMBINE.get(subject.branch);
     out.push({ kind: '月破', detail: subject.moving ? '动而月破：动则能伤（R-YUEPO-02）' : '静而月破', releases: [{ kind: '填实', branch: subject.branch, ...dayOffset(chart, subject.branch), rule: 'R-YUEPO-02' }, { kind: '逢合', branch: comb, ...dayOffset(chart, comb), rule: 'R-YUEPO-02' }] });
   }

@@ -460,8 +460,8 @@
 ## IPC-0003　偏难：官星坐在你的世上，却被当月克住，立不起来
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `22cecda73047e025…`
+- 卦盘：等价类（样本 10 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `87e08d963e702573…`
 - 结论类别：偏难；情境：官鬼持世而休囚、月建克官、父母不来生合世
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -767,8 +767,8 @@
 ## IPC-0009　倾向通过：官星两现持世，文书旺相，克官的子孙出不来
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过官父两旺+旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `b8023a868fdfaa3e…`
+- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过官父两旺+旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `c863f1a356d70499…`
 - 结论类别：倾向通过；情境：官鬼两现持世、官父两旺、财伏待时、子孙伏而难出
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -921,8 +921,8 @@
 ## IPC-0013　偏难：文书旺，官星却无气，正是「父旺官衰」
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏待时;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `0b7a9c4d2ca0f95e…`
+- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏待时;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `47ad46f109f04a9c…`
 - 结论类别：偏难；情境：官鬼两现持世而无气、父旺官衰
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -972,8 +972,8 @@
 ## IPC-0014　倾向通过：官星虽不当令，却得日辰生起，坐在你的世上
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `3740a80d79881d0a…`
+- 卦盘：等价类（样本 10 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `55d60b14fdb745ad…`
 - 结论类别：倾向通过；情境：旺官持世、兄弟月份、子孙静而旺
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -1021,19 +1021,19 @@
 ## IPC-0016　倾向通过：官旺持世、父母也旺，克官的子孙安静
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `968b873c907f641c…`
+- 卦盘：等价类（样本 8 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `fad963ef75e66108…`
 - 结论类别：倾向通过；情境：旺官持世、官父两旺、原神被伤、忌神静
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
-样本之一：水地比，寅月戊辰日
-上爻 朱雀 妻财戊子水应
-五爻 青龙 兄弟戊戌土
-四爻 玄武 子孙戊申金
-三爻 白虎 官鬼乙卯木世
-二爻 螣蛇 父母乙巳火
-初爻 勾陈 兄弟乙未土
+样本之一：火风鼎，子月甲午日
+上爻 玄武 兄弟己巳火
+五爻 白虎 子孙己未土应
+四爻 螣蛇 妻财己酉金
+三爻 勾陈 妻财辛酉金
+二爻 朱雀 官鬼辛亥水世
+初爻 青龙 子孙辛丑土（伏父母卯木）
 ```
 
 **简断**　你的世爻上就是官鬼，一般当令或临月建而旺；父母与它一样旺相，录取、表现两头都有底，倾向通过。生官的妻财被伤无力，是短处；克官的子孙安静，不来添乱。
@@ -1120,8 +1120,8 @@
 ## IPC-0019　倾向通过：官星持世而旺，生它的、克它的都按兵不动
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `28dddc25b78b86bb…`
+- 卦盘：等价类（样本 8 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `1b6a833ddce4fe7a…`
 - 结论类别：倾向通过；情境：旺官持世、原神忌神俱静不作用、父母有气
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -1474,19 +1474,19 @@
 ## IPC-0028　倾向通过：官星两现、一爻持世得月生，财与子孙都伏着
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `25aefed4cacdd403…`
+- 卦盘：等价类（样本 8 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `7b26e27eb651d8d3…`
 - 结论类别：倾向通过；情境：官鬼两现持世、原神忌神伏而待时、兄弟常发动
-- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 pending）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
+- 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
 ```
-样本之一：天山遁，申月己卯日
-上爻 勾陈 父母壬戌土
-五爻 朱雀 兄弟壬申金应
-四爻 青龙 官鬼壬午火
-三爻 玄武 兄弟丙申金
-二爻 白虎 官鬼丙午火世（伏妻财寅木）
-初爻 螣蛇 父母丙辰土（伏子孙子水）
+样本之一：雷山小过之泽山咸，寅月丁卯日
+上爻 青龙 父母庚戌土
+五爻 玄武 兄弟庚申金× → 兄弟丁酉金
+四爻 白虎 官鬼庚午火世（伏子孙亥水）
+三爻 螣蛇 兄弟丙申金
+二爻 勾陈 官鬼丙午火（伏妻财卯木）
+初爻 朱雀 父母丙辰土应
 ```
 
 **简断**　官鬼出现两次，取持世之爻，它一般得当月妻财之生而旺；生官的财、克官的子孙都没有上卦，伏而待时。官旺持世，眼下录取一层站得住，倾向通过；只是伏着的子孙日后出伏，仍要留意。
@@ -1626,8 +1626,8 @@
 ## IPC-0031　偏难：官与文书都旺，官星却去生应，不来就你
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;三版fail|否官临应|过官父两旺`（interview-pass-eq-0.14.0）；内容哈希 `2e840e12395cac6f…`
+- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;三版fail|否官临应|过官父两旺`（interview-pass-eq-0.14.0）；内容哈希 `2c611b55887107c4…`
 - 结论类别：偏难；情境：官生合应而不就世、官父两旺、妻财持世无气
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -1728,8 +1728,8 @@
 ## IPC-0034　倾向通过：两现之官持世而旺，文书也旺，克官者暂伏
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `935f82bf13f4c89a…`
+- 卦盘：等价类（样本 10 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `9ceafcb37a46309a…`
 - 结论类别：倾向通过；情境：官鬼两现持世、官父两旺、子孙伏而待时、财伏难出
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -1832,8 +1832,8 @@
 ## IPC-0036　倾向通过：日月作官来生你，文书也在你手里
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版pass|过官父两旺+日月官生合世+旺父就世`（interview-pass-eq-0.14.0）；内容哈希 `3bf8a2740fdd8be4…`
+- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版pass|过官父两旺+日月官生合世+旺父就世`（interview-pass-eq-0.14.0）；内容哈希 `ad9e449cd319d9e7…`
 - 结论类别：倾向通过；情境：日月为用而生合世、旺父持世、应爻克世
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -1987,8 +1987,8 @@
 ## IPC-0039　偏难：官与文书都旺，可你世上是兄弟，官星又不动
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世`（interview-pass-eq-0.14.0）；内容哈希 `11902e7a3698e4b7…`
+- 卦盘：等价类（样本 8 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世`（interview-pass-eq-0.14.0）；内容哈希 `a65770d472dafd46…`
 - 结论类别：偏难；情境：兄弟持世、官不动、官父两旺、官克世而世有扶
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -2089,8 +2089,8 @@
 ## IPC-0048　倾向通过：两现之官得月令扶持，一爻持世
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `e1436c6134ded261…`
+- 卦盘：等价类（样本 11 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过旺官持世`（interview-pass-eq-0.14.0）；内容哈希 `7e6561a0ec69bf2f…`
 - 结论类别：倾向通过；情境：官鬼两现持世、月令扶官、原神伏而待时
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -2140,7 +2140,7 @@
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
 - 卦盘：等价类（样本 8 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力`（interview-pass-eq-0.14.0）；内容哈希 `2a6c58b70051412f…`
+- 匹配键：等价类 `用伏难出;世世受克;原无力;忌静旺有力;三版fail|否官无力`（interview-pass-eq-0.14.0）；内容哈希 `611715fd5d292d8a…`
 - 结论类别：偏难；情境：官鬼伏而难出、妻财持世受克、父母无气、兄弟当令
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -2293,8 +2293,8 @@
 ## IPC-0613　偏难：官星两现持世，却在不当令的月份无气
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `491cbc07e6d2d120…`
+- 卦盘：等价类（样本 8 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用同支两现持世[INEFFECTIVE]静;世持世;原无力;忌伏待时;三版fail`（interview-pass-eq-0.14.0）；内容哈希 `4019ec7262ef3274…`
 - 结论类别：偏难；情境：官鬼两现持世而无气、兄弟发动、父母伏
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 
@@ -2344,8 +2344,8 @@
 ## IPC-0680　悬而未决：日月作官来生你，应爻却来克你
 
 - 问事：这次面试能通过吗？（`career.interview.interview-pass`）
-- 卦盘：等价类（样本 12 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
-- 匹配键：等价类 `用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版wait|过官父两旺+日月官生合世+旺父就世`（interview-pass-eq-0.14.0）；内容哈希 `bf25b670d9b44190…`
+- 卦盘：等价类（样本 10 盘；同类各盘地支、卦名不同，具体卦盘由程序逐盘列出）
+- 匹配键：等价类 `用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版wait|过官父两旺+日月官生合世+旺父就世`（interview-pass-eq-0.14.0）；内容哈希 `436a70e5450c12b3…`
 - 结论类别：悬而未决；情境：日月为用而生合世、旺父持世、应爻克世
 - 状态：作者稿 draft-complete｜作者全文自查 pending｜技术核验 passed｜AI 审核（古籍 PASS、独立 PASS、反向 PASS、精修 POLISH_COMPLETED、终审 PASS）｜人工审核 pending｜发布 AI_APPROVED｜production_allowed true
 

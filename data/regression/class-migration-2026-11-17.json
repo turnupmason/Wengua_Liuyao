@@ -1,0 +1,1589 @@
+{
+ "note": "移出类稿样本之盘的去向（原样本 → 新类键 → 实际使用的类稿或逐卦断语）。expect 为现行规则下的预期，history 保留各次规则改动前的旧预期，不覆盖。",
+ "rows": [
+  {
+   "chart": "887787 未月乙丑",
+   "from": "IPC-0022",
+   "removed_in": "第二轮（eebd8174，日月制克神收紧、化出临日不破）",
+   "expect": {
+    "key": "用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子动克官+子孙持世+官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子动克官+子孙持世+官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子动克官+子孙持世+官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "887789 辰月庚戌",
+   "from": "IPC-0022",
+   "removed_in": "第二轮（eebd8174，日月制克神收紧、化出临日不破）",
+   "expect": {
+    "key": "用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子动克官+子孙持世+官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子动克官+子孙持世+官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安子孙;原静旺有力;忌静旺有力;六合;三版fail|否子动克官+子孙持世+官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "687788 寅月壬申",
+   "from": "IPC-0028",
+   "removed_in": "第二轮（eebd8174，日月制克神收紧、化出临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版wait|过旺官持世",
+    "verdict": "待定",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版fail|否父化凶|过旺官持世",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版wait|过旺官持世",
+     "verdict": "待定"
+    }
+   ]
+  },
+  {
+   "chart": "988897 丑月辛未",
+   "from": "IPC-0067",
+   "removed_in": "第二轮（eebd8174，日月制克神收紧、化出临日不破）",
+   "expect": {
+    "key": "用伏待时;世世安;原静旺有力;忌无力;三版fail|否父化凶",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏待时;世世安;原静旺有力;忌无力;三版fail|否父化凶",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏待时;世世安;原静旺有力;忌无力;三版fail|否父化凶",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "988877 未月丁丑",
+   "from": "IPC-0067",
+   "removed_in": "第二轮（eebd8174，日月制克神收紧、化出临日不破）",
+   "expect": {
+    "key": "用伏待时;世世安;原静旺有力;忌无力;三版fail|否父化凶+财动克父",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏待时;世世安;原静旺有力;忌无力;三版fail|否父化凶+财动克父",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏待时;世世安;原静旺有力;忌无力;三版fail|否父化凶+财动克父",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "987777 辰月戊寅",
+   "from": "IPC-0003",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌无力;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "987777 辰月癸卯",
+   "from": "IPC-0003",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静不作用;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[INEFFECTIVE]静;世持世;原静旺有力;忌静旺有力;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878777 辰月丁未",
+   "from": "IPC-0007",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878777 未月丁未",
+   "from": "IPC-0007",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878787 辰月丙午",
+   "from": "IPC-0007",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878777 未月戊申",
+   "from": "IPC-0007",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "889768 卯月己未",
+   "from": "IPC-0009",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0001"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "687777 辰月己酉",
+   "from": "IPC-0013",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏难出;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原伏难出;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "888878 辰月甲子",
+   "from": "IPC-0014",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[INEFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "888878 未月庚子",
+   "from": "IPC-0014",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[INEFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静旺有力;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "888878 寅月戊辰",
+   "from": "IPC-0016",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0004"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "778888 卯月壬戌",
+   "from": "IPC-0016",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0004"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "888876 寅月丙戌",
+   "from": "IPC-0016",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0004"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "787777 子月辛卯",
+   "from": "IPC-0016",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0004"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "888878 寅月壬辰",
+   "from": "IPC-0016",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0004"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "987777 子月癸卯",
+   "from": "IPC-0016",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌无力;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0004"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "888778 未月甲寅",
+   "from": "IPC-0019",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0011"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "987777 寅月乙酉",
+   "from": "IPC-0019",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "987777 寅月己酉",
+   "from": "IPC-0019",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原无力;忌静不作用;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "877788 亥月辛未",
+   "from": "IPC-0019",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0011"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "888778 戌月甲寅",
+   "from": "IPC-0019",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0011"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "987777 亥月己酉",
+   "from": "IPC-0019",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0011"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌静不作用;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[EFFECTIVE]静;世持世;原静不作用;忌无力;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "797879 巳月丁卯",
+   "from": "IPC-0027",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原无力;忌静旺有力;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "788877 巳月庚午",
+   "from": "IPC-0027",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "797877 巳月己卯",
+   "from": "IPC-0027",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原无力;忌静旺有力;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "777877 巳月庚寅",
+   "from": "IPC-0027",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "887777 申月己卯",
+   "from": "IPC-0028",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "887768 寅月己酉",
+   "from": "IPC-0028",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "889768 酉月丁卯",
+   "from": "IPC-0028",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "889768 寅月癸酉",
+   "from": "IPC-0028",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏待时;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "897788 亥月丙寅",
+   "from": "IPC-0030",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用明现持世[INEFFECTIVE]静;世持世;原无力;忌无力;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现持世[INEFFECTIVE]静;世持世;原无力;忌无力;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现持世[INEFFECTIVE]静;世持世;原无力;忌无力;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878886 酉月辛丑",
+   "from": "IPC-0031",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;三版fail|否官临应+父化凶",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;三版fail|否官临应|过官父两旺",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[EFFECTIVE]静;世世安;官无情;原无力;忌无力;三版fail|否官临应|过官父两旺",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "887777 午月癸酉",
+   "from": "IPC-0034",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0001"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "887779 未月庚申",
+   "from": "IPC-0034",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版pass|过官父两旺+旺官持世",
+    "verdict": "有望",
+    "uses": "IPC-0001"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏待时;三版pass|过官父两旺+旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "878787 戌月辛酉",
+   "from": "IPC-0035",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "898787 辰月丁酉",
+   "from": "IPC-0035",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878787 辰月辛酉",
+   "from": "IPC-0035",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "878787 戌月癸酉",
+   "from": "IPC-0035",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世安;原静旺有力;忌静旺有力;三版fail|否兄持世+官克世+官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "777877 酉月丙寅",
+   "from": "IPC-0036",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用日月为用;世世安;官生合世;原静不作用;忌无力;三版pass|过官父两旺+日月官生合世+旺父就世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版pass|过官父两旺+日月官生合世+旺父就世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版pass|过官父两旺+日月官生合世+旺父就世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "788888 未月甲申",
+   "from": "IPC-0037",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "898778 酉月乙亥",
+   "from": "IPC-0037",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "788888 未月壬申",
+   "from": "IPC-0037",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[INEFFECTIVE]静;世世受克;官无情;原无力;忌静旺有力;六合;三版fail|否官无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "877888 丑月癸酉",
+   "from": "IPC-0038",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "877888 丑月甲子",
+   "from": "IPC-0038",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "877888 辰月癸酉",
+   "from": "IPC-0038",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "877888 戌月壬申",
+   "from": "IPC-0038",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "877888 辰月甲子",
+   "from": "IPC-0038",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "877888 戌月甲辰",
+   "from": "IPC-0038",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现[EFFECTIVE]静;世世安;官无情;原静旺有力;忌伏难出;三版fail|否父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "787778 辰月甲申",
+   "from": "IPC-0039",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现[EFFECTIVE]静;世世受克;官克世(世无气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "787778 戌月壬子",
+   "from": "IPC-0039",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现[EFFECTIVE]静;世世受克;官克世(世无气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "787878 丑月丙申",
+   "from": "IPC-0039",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现[EFFECTIVE]静;世世受克;官克世(世无气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "787878 丑月辛酉",
+   "from": "IPC-0039",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用明现[EFFECTIVE]静;世世受克;官克世(世无气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用明现[EFFECTIVE]静;世世受克;官克世(世有气);原伏难出;忌无力;三版fail|否兄持世|过官父两旺+旺父就世",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "889786 卯月辛未",
+   "from": "IPC-0048",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏难出;忌伏难出;三版pass|过旺官持世",
+    "verdict": "有望",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过旺官持世",
+     "verdict": "有望"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[EFFECTIVE]静;世持世;原伏待时;忌伏难出;三版pass|过旺官持世",
+     "verdict": "有望"
+    }
+   ]
+  },
+  {
+   "chart": "787877 卯月戊辰",
+   "from": "IPC-0057",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世受克;原无力;忌静旺有力;三版fail|否官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "787877 卯月庚辰",
+   "from": "IPC-0057",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世受克;原无力;忌静旺有力;三版fail|否官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "787877 卯月庚午",
+   "from": "IPC-0057",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世受克;原无力;忌静旺有力;三版fail|否官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "788877 卯月丙辰",
+   "from": "IPC-0057",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "788877 卯月庚辰",
+   "from": "IPC-0057",
+   "removed_in": "第三轮（121babf4，A–D 定案）",
+   "expect": {
+    "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用伏难出;世世受克;原静不作用;忌静旺有力;三版fail|否官无力+父无力",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "779887 丑月辛酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "777887 丑月癸酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "779887 未月辛酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原空无力;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "777887 辰月辛酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原空无力;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "779887 巳月乙酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "777887 巳月癸酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "777887 巳月辛酉",
+   "from": "IPC-0613",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+    "verdict": "偏难",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail|否官无力",
+     "verdict": "偏难"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用同支两现持世[INEFFECTIVE]静;世持世;原静不作用;忌伏待时;三版fail",
+     "verdict": "偏难"
+    }
+   ]
+  },
+  {
+   "chart": "797877 酉月丙寅",
+   "from": "IPC-0680",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用日月为用;世世安;官生合世;原静不作用;忌无力;三版wait|过官父两旺+日月官生合世+旺父就世",
+    "verdict": "待定",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版wait|过官父两旺+日月官生合世+旺父就世",
+     "verdict": "待定"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版wait|过官父两旺+日月官生合世+旺父就世",
+     "verdict": "待定"
+    }
+   ]
+  },
+  {
+   "chart": "797877 酉月壬寅",
+   "from": "IPC-0680",
+   "removed_in": "第四轮（规则收尾：B-005/B-007 非单调、父发作用资格、临日不破）",
+   "expect": {
+    "key": "用日月为用;世世安;官生合世;原静不作用;忌无力;三版wait|过官父两旺+日月官生合世+旺父就世",
+    "verdict": "待定",
+    "uses": "逐卦断语"
+   },
+   "history": [
+    {
+     "rules": "31b36d42",
+     "key": "用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版wait|过官父两旺+日月官生合世+旺父就世",
+     "verdict": "待定"
+    },
+    {
+     "rules": "121babf4",
+     "key": "用日月为用;世世安;官生合世;原静不作用;忌静不作用;三版wait|过官父两旺+日月官生合世+旺父就世",
+     "verdict": "待定"
+    }
+   ]
+  }
+ ]
+}
