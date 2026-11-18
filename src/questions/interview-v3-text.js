@@ -133,7 +133,6 @@ const PASS_SAY = {
   旺官持世: '官星旺而持世，是求名的一项重要有利条件',
   官父两旺: '官星与父母都旺，录取和表现两层都有底',
   旺官生合世: '官星旺，又来生合你的世爻',
-  日月官生合世: '当月或当天本身就是官星，又来生合你的世爻',
   官动生合世: '官星发动来生合你的世爻',
   父发: '父母发动来生合你的世爻，官星的不足有父母来补',
   冲变合: '六冲卦变成六合，先难后成',
@@ -142,6 +141,7 @@ const PASS_SAY = {
 const Z = `[${BR}]`;
 const P = '[初二三四五上]爻';
 // 常见条目的专门说法（先于通用改写）；m 为匹配结果，E 为带五行的地支
+const fpSay = (s) => ({ 父母也不发动: '父母又没有发动来补', '父母虽发动来生，却受制不能起作用': '父母虽然发动来生，却受制，补不上', '父母虽发动，却不来生合世': '父母虽然发动，却不来生合你的世爻，补不上' }[s] || s);
 const OVERRIDE = [
   [new RegExp(`^官(${Z})出现旺相$`), (m) => `官鬼${bn(m[1])}旺而现于卦中，古人看作事情能长久之象`],
   [/^世受日月冲克而有扶，姑许$/, () => '世爻虽受日月冲克，但另有扶持，还撑得住'],
@@ -211,14 +211,14 @@ const OVERRIDE = [
   [new RegExp(`^父(${Z})动而化回头生$`), (m) => `父母${bn(m[1])}发动，变出的爻反过来生它（回头生），表现一层得助`],
   [new RegExp(`^世(${Z})静而月破无气$`), (m) => `你的世爻${bn(m[1])}逢月破又无气，自身这一层失陷`],
   [new RegExp(`^官(${Z})发动来生合世$`), (m) => `官鬼${bn(m[1])}发动来生合你的世爻`],
-  [new RegExp(`^世(${Z})入(日|动|化)墓，旺相或有扶，不作真墓：冲开墓库之日月可成$`), (m) => `你的世爻${bn(m[1])}入墓，但旺相或有扶，不算真墓，等冲开墓库之日事情可成`],
+  [new RegExp(`^世(${Z})入(日|动|化)墓，旺相或有扶，不作真墓：冲开墓库之日月可成$`), (m) => `你的世爻${bn(m[1])}入墓，但旺相或有扶，不算真墓；冲开墓库之日，这一项的阻滞才解开`],
   [new RegExp(`^父(${Z})动而化回头克$`), (m) => `父母${bn(m[1])}发动，变出的爻反来克它（回头克），平时准备得再多，临场也容易失分`],
   [new RegExp(`^官(${Z})动而化回头克$`), (m) => `官鬼${bn(m[1])}发动，变出的爻反来克它（回头克），录取一层自伤`],
   [new RegExp(`^父(${Z})旺相而动化回头克$`), (m) => `父母${bn(m[1])}本来旺，发动后变出的爻反来克它（回头克），古人看作先取后弃之象，前面可能顺利，最后一步容易落空`],
   [new RegExp(`^父(${Z})不旺不衰而动化回头克$`), (m) => `父母${bn(m[1])}发动，变出的爻反来克它（回头克），表现一层要打折扣`],
-  [new RegExp(`^官(${Z})休囚受克而无力，父母也不发动来补$`), (m) => `官鬼${bn(m[1])}休囚受克，力量不足，父母又没有发动来补，录取一层偏弱`],
-  [new RegExp(`^官(${Z})伏而无力，父母也不发动$`), (m) => `官鬼${bn(m[1])}伏藏无力，父母又不发动来补，录取一层撑不起来`],
-  [new RegExp(`^官(${Z})((?:旬空|月破|入墓|绝于日)(?:、(?:旬空|月破|入墓|绝于日))*)而无力，父母也不发动$`), (m) => `官鬼${bn(m[1])}${m[2].replace(/绝于日/, '绝于当天')}而无力，父母又不发动来补，录取一层撑不起来`],
+  [new RegExp(`^官(${Z})休囚受克而无力，(.+)$`), (m) => `官鬼${bn(m[1])}休囚受克，力量不足，${fpSay(m[2])}，录取一层偏弱`],
+  [new RegExp(`^官(${Z})伏而无力，(.+)$`), (m) => `官鬼${bn(m[1])}伏藏无力，${fpSay(m[2])}，录取一层撑不起来`],
+  [new RegExp(`^官(${Z})((?:旬空|月破|入墓|绝于日)(?:、(?:旬空|月破|入墓|绝于日))*)而无力，(.+)$`), (m) => `官鬼${bn(m[1])}${m[2].replace(/绝于日/, '绝于当天')}而无力，${fpSay(m[3])}，录取一层撑不起来`],
   [new RegExp(`^世(${Z})动而化(父母|官鬼|子孙|妻财|兄弟)(${Z})回头克$`), (m) => `你的世爻${bn(m[1])}发动，化出的${m[2]}${bn(m[3])}反来克它，自身这一层受伤`],
   [/^世静而临旬空、无气$/, () => '你的世爻落空又无气，自身这一层撑不住'],
   [/^日月冲克世而无扶$/, () => '日月冲克你的世爻，又没有扶持'],
@@ -306,9 +306,10 @@ function plainOf(t) {
 }
 function readerOf(x, kind) { return readerOf0(x, kind).replace(/；/g, '，'); }
 function readerOf0(x, kind) {
+  if (kind === 'pass' && x.code === '日月官生合世') return String(x.text).split('，').map((s) => s.replace(/^(.)(月|日)作官星而(生合|生|合)世$/, (q, b, u, how) => `${b}${u}本身就是官星，又来${how}你的世爻`)).join('；');
   if (kind === 'pass' && PASS_SAY[x.code]) return PASS_SAY[x.code];
   const cb = String(x.text).match(/^(.+?)——卦得六冲变六合，不看用神，此只作「始则艰阻」之处$/);
-  if (cb && /^六冲卦而官父世不俱旺/.test(cb[1])) return '本卦六冲，官、父、世又不全旺，这正是开头的阻碍，不再另作散象看';
+  if (cb && /^六冲卦而官父世不俱旺/.test(cb[1])) return '本卦六冲，官、父、世又不全旺；在六冲变六合的格局里，这一条不再另作散象看';
   if (cb) return `${readerOf0({ ...x, text: cb[1] }, kind)}，因卦得六冲变六合，这一条不作定局`;
   const t = String(x.text).replace(/（[^（）]*）/g, '').trim();
   for (const [re, f] of OVERRIDE) { const m = t.match(re); if (m) return f(m); }
@@ -437,13 +438,17 @@ export function interviewV3Text(chart, ctx = {}) {
   const NOTE = (section, text, rules = []) => refs.push({ level: '参考', section, text: `${text.replace(/。$/, '')}。`, sources: sourcesOf(rules), rules, said: false });
   const veto = r.veto.concat(r.layerVeto || []);
   const has = (code) => veto.some((v) => v.code === code);
+  // 日月为官：写明是哪个月建或日辰（2026-11-17 评审：「当月或当天」不宜作未选择的说法）
+  const guanElOf = { 木: '金', 火: '水', 土: '木', 金: '火', 水: '土' }[chart.primary?.palaceElement];
+  const ryGuanWho = [[M, '月'], [D, '日']].filter(([b]) => EL[b] === guanElOf).map(([b, u]) => `${b}${u}`);
   const fu = d.fu; const g = d.guan; const w = d.world; const a = d.response;
   const lineAt = (pos) => chart.lines?.[pos - 1];
 
   // ———— 条目：分级、归段、译读者话 ————
   const items = [];
   const pushItem = (x, kind, tone) => {
-    const level = levelOf(kind, x.text, !r.veto.length);
+    // 家中长辈之事等旁断只作参考，正文围绕本问（2026-11-17 评审）
+    const level = /财父互化|父财互化|妻财与父母互化|家中长辈|父母俱伤|财持世而父无力|妻财持世或发动而父母无力/.test(x.text) && kind !== 'veto' && kind !== 'pass' ? '一般' : levelOf(kind, x.text, !r.veto.length);
     items.push({ x, kind, tone, level, para: paraOf(x.text), say: addEl(readerOf(x, kind)), cond: (x.cond || []).map((c) => addEl(String(c.say || c.text).replace(/；?冲开只是作用条件变了，不等于那天一定有好事/, '').replace(/[。；]+$/, ''))), said: false });
   };
   for (const x of veto) pushItem(x, 'veto', 'bad');
@@ -461,7 +466,7 @@ export function interviewV3Text(chart, ctx = {}) {
   const say = (name, text, rules = []) => { const p = P0(name); if (text) p.base.push(text); p.rules.push(...rules); };
   const baseOf = (name) => (paras.get(name)?.base || []).join('');
 
-  if (body.some((e) => /——卦得六冲变六合/.test(e.x.text))) say('卦的大势', '卦由六冲变六合，按古法这种卦不看用神，上面这些不利只算开头的阻碍。', ['R-HE-03']);
+  if (body.some((e) => /——卦得六冲变六合/.test(e.x.text))) say('卦的大势', '卦由六冲变六合，古法对这种格局以吉论，不再按官星、父母的强弱定成败；下列不利条件不作为判定成败的依据，只说明过程中可能有波折。', ['R-HE-03']);
   // ———— 临场表现（父母）————
   const fuName = fu ? `父母${bn(fu.branch)}` : '';
   let fuState = null;
@@ -491,7 +496,7 @@ export function interviewV3Text(chart, ctx = {}) {
 
   // ———— 能否录取（官鬼）————
   const gName = g ? `官鬼${bn(g.branch)}` : '';
-  if (!g && r.pass.some((p) => p.code === '日月官生合世')) say('能否录取', '卦中不见官鬼爻，但当月或当天本身就是官星，以日月为官。', ['R-FUSHEN-01']);
+  if (!g && ryGuanWho.length) say('能否录取', `卦中不见官鬼爻，${ryGuanWho.join('、')}本身就是官星，以日月为官。`, ['R-FUSHEN-01']);
   else if (!g) say('能否录取', '代表职位的官鬼卦中不见，也无可用的伏神，录取一层缺了主角。', ['R-YLB-MY-02']);
   else {
     const isWorld = g.kind === 'line' && g.position === w.position;
@@ -555,7 +560,7 @@ export function interviewV3Text(chart, ctx = {}) {
       if (/：成行一层难，录取一层因父发可过/.test(f0)) fin.push('好在父母发动，录取一层还可过，只是成行难');
       if (fin.length) { P0('自身与对方').tail = `${fin.join('；')}。`; P0('自身与对方').rules.push('R-QIUMING-10', 'R-ZS-QM-01', 'R-ZS-QM-20'); }
     }
-    else if (w.relativeHeld === '子孙') { P0('自身与对方').tail = '子孙持世，就算被取，自己也未必去。'; P0('自身与对方').rules.push('R-QIUMING-10'); }
+    else if (w.relativeHeld === '子孙') REF('自身状态', '子孙持世，按象推就算被取，自己也未必去', ['R-QIUMING-10']);
   }
 
   // ———— 竞争（兄弟）————
@@ -569,7 +574,9 @@ export function interviewV3Text(chart, ctx = {}) {
     if (mvb.length) parts.push(`兄弟${bs.map(bn).join('、')}在${mvb.map((p) => POS[p]).join('、')}发动，竞争者有动作`);
     if (x.riyue) parts.push('月建、日辰都带兄弟，同场竞争的人多');
     let t = parts.join('；');
-    const rank = x.moving.length || x.riyue ? '纵然能成，名次也难居前' : x.holdsWorld ? '纵然能成，难拔头筹' : '';
+    // 名次之说只进依据栏：本问问能否通过，不问名次（2026-11-17 评审）
+    if (x.moving.length || x.riyue || x.holdsWorld) REF('竞争', x.moving.length || x.riyue ? '兄弟动或日月带兄，按象推纵然能成，名次也难居前' : '兄弟持世，按象推纵然能成，难拔头筹', x.rules);
+    const rank = '';
     let tail = '';
     if (rank && t) t = `${t}；${rank}`;
     else if (rank) tail = `${pickBy(['所以', '这样一来，'], seed + 'jz')}${rank}`;
@@ -657,52 +664,63 @@ export function interviewV3Text(chart, ctx = {}) {
   const subjText = r.subject ? (r.subject.found ? `这是代占：以所问之人（${r.subject.relative}${POS[r.subject.position]}）为本主，不看你自己的世爻。` : `这是代占，但卦中不见${r.subject.relative}，本主之爻暂以世爻代看。`) : '';
   // ———— 4.0.0 简断、详断（用户 2026-11-17 定 P2：简断首句给结论；详断只讲决定结果的两三条；同一事实只完整讲一次；内部裁决进依据栏）————
   const LVW = { 2: '旺', 1: '不旺不衰', 0: '偏弱' };
+  // 主因说法（2026-11-17 评审第二稿：简断直接讲主因，不讲内部规则名，不说「坐在你身上」「失陷」之类）
   const VETO_SHORT = {
-    无官: '职位这一方在卦里没有着落', 官无力: '代表职位的官星没有力量', 官破: '代表职位的官星逢月破', 官空: '代表职位的官星落空',
-    官化凶: '代表职位的官星发动后变坏', 官化刑: '代表职位的官星发动后自相刑伤', 官旺化凶: '官星虽旺，发动后变坏', 官临应: '官星向着对方，不向着你，主动权在对方手里',
-    官伏子孙: '官星被克它的子孙压住', 子动克官: '有克制职位的力量在发动', 子孙持世: '你自己这一爻正是克制职位的子孙', 官克世: '职位一方对你压力过重',
-    世化子孙: '你自己这一爻在变动中消磨录取', 父无力: '代表表现的父母落空', 父化凶: '代表表现的父母本身偏弱，发动后又变坏',
-    父旺遭伤: '表现虽好，最后一步容易落空', 父化刑: '表现一层有破绽', 财动克父: '妻财发动来克代表表现的父母', 父空破: '表现一层落空', 无父: '表现一层没有着落',
-    世日破: '你自己这一爻失陷', 世破: '你自己这一爻失陷', 世空无气: '你自己这一爻落空无力', 世破被克: '你自己这一爻失陷又受克', 日月冲克世: '你自身受到很大压力',
-    世入墓: '你自身被困住', 世绝: '你自身气势已尽', 世化凶: '你自己这一爻变动后受伤', 世化鬼: '你自己这一爻变动后反成负担', 世化鬼克: '你自己这一爻变动后反受压制',
-    随鬼入墓: '你自身被职位一方困住', 世陷财空: '你自身失陷，条件一层也落空', 兄持世: '竞争和分心的力量坐在你身上，官星又不动', 卦化克: '整卦的走向受克',
-    乱动: '卦中动爻太多，变数大', 本主化忌: '所问之人自身受伤', 世空: '你自己这一爻落空',
+    无官: '卦中找不到代表录取的官星', 官无力: '录取方面的条件不足', 官破: '录取条件眼下落空', 官空: '录取条件眼下落空',
+    官化凶: '录取方面先好后坏', 官化刑: '录取方面自带破绽', 官旺化凶: '官星虽旺，发动后变坏', 官临应: '录取的主动权在对方手里',
+    官伏子孙: '录取被克制它的力量压住', 子动克官: '有克制录取的力量在发动', 子孙持世: '你所处的位置正克制录取', 官克世: '录取一方对你压力过重',
+    世化子孙: '你自己的变动在消磨录取', 父无力: '临场表现支持不足', 父化凶: '临场表现本就偏弱，又往坏处变',
+    父旺遭伤: '表现虽好，最后一步容易落空', 父化刑: '临场表现自带破绽', 财动克父: '临场表现受到牵累', 父空破: '临场表现落空', 无父: '临场表现没有着落',
+    世日破: '你自身的状态撑不住', 世破: '你自身的状态撑不住', 世空无气: '你自身的状态撑不住', 世破被克: '你自身的状态撑不住', 日月冲克世: '你自身压力过重，又没有扶持',
+    世入墓: '你自身被困住', 世绝: '你自身气势已尽', 世化凶: '你自己的变动反伤自身', 世化鬼: '你自己的变动反成负担', 世化鬼克: '你自己的变动反受压制',
+    随鬼入墓: '你自身被录取一方困住', 世陷财空: '你自身和求职的条件一起落空', 兄持世: '竞争阻力较重，推动录取的条件不足', 卦化克: '整卦走向受克',
+    乱动: '变数太多，头绪太乱', 本主化忌: '所问之人自身受伤', 世空: '你自身的状态撑不住',
   };
   const PASS_SHORT = {
-    旺官持世: '代表职位的官星旺，而且落在你自己身上', 官父两旺: '职位和表现两层都有基础', 旺官生合世: '职位一方旺而向你靠拢', 官动生合世: '职位一方主动向你靠拢',
-    日月官生合世: '当月当天就是职位之象，又向着你', 旺父就世: '表现一层旺而向着你', 父发: '父母发动，补上了官星的不足', 官父局: '官、父成势',
-    兄局得意: '竞争之局反成助力', 应荐: '对方一层有推荐、接纳之意', 冲变合: '卦由六冲变成六合，先难后成', 父平可保平等: '表现一层能保平稳',
+    旺官持世: '代表录取的官星旺，又正落在你身上', 官父两旺: '录取和临场表现两方面都有基础', 旺官生合世: '代表录取的官星旺，又向着你', 官动生合世: '录取一方主动向你靠拢',
+    日月官生合世: `${ryGuanWho.join('、') || '日月'}本身就是官星，又向着你`, 旺父就世: '临场表现旺，又向着你', 父发: '父母发动来补官星之不足', 官父局: '官星、父母都成势',
+    兄局得意: '竞争之局反成助力', 应荐: '对方有推荐、接纳之意', 冲变合: '卦由六冲变成六合', 父平可保平等: '临场表现能保平稳',
   };
   const coded = (arr, map) => [...new Set(arr.map((v) => map[v.code]).filter(Boolean))];
   const lvG = r.layers.hiring.level; const lvF = r.layers.performance.level; const lvW = r.layers.self.level;
   const cb13 = r.layers.final === '六冲变六合：始则艰阻，终则荣显';
-  const weakLayer = () => { const ls = [['录取一层', lvG, Boolean(g)], ['表现一层', lvF, Boolean(fu)], ['你自身', lvW, true]].filter((y) => y[2]); const m = Math.min(...ls.map((y) => y[1])); return m === 2 ? null : ls.find((y) => y[1] === m)[0]; };
-  const strongLayer = () => [lvG === 2 && g ? '官星本身有力' : '', lvF === 2 && fu ? '表现一层有底' : '', lvW === 2 ? '你自身状态不差' : ''].filter(Boolean);
+  const weakLayer = () => { const ls = [['录取方面', lvG, Boolean(g)], ['临场表现', lvF, Boolean(fu)], ['你自身的状态', lvW, true]].filter((y) => y[2]); const m = Math.min(...ls.map((y) => y[1])); return m === 2 ? null : ls.find((y) => y[1] === m)[0]; };
+  const strongLayer = () => [lvG === 2 && g ? '官星本身有力' : '', lvF === 2 && fu ? '临场表现有底' : '', lvW === 2 ? '你自身状态不差' : ''].filter(Boolean);
+  // 官星就是世爻、两条否决说的是同一爻时，并作一句（第 5 篇：官星月破与世爻月破是同一项受损）
+  const sameGW = g?.kind === 'line' && g.position === w.position;
+  const vetoShort = () => {
+    const vs = r.veto.map((v) => v.code);
+    if (sameGW && vs.some((c) => /^官(破|空|无力)$/.test(c)) && vs.some((c) => /^世(破|日破|空无气|空|破被克)$/.test(c))) {
+      const rest = coded(r.veto.filter((v) => !/^官(破|空|无力)$|^世(破|日破|空无气|空|破被克)$/.test(v.code)), VETO_SHORT);
+      return ['官星就是你的世爻，这一爻受损，录取和你自身同时受影响', ...rest];
+    }
+    return coded(r.veto, VETO_SHORT).filter((s, i, arr) => !arr.slice(0, i).includes(s));
+  };
+  const AREA0 = { 能否录取: '录取方面有阻碍', 临场表现: '临场表现有变数', 自身与对方: '你自身受牵制', 竞争: '竞争者有动作', 卦的大势: '整卦走向不顺' };
   // 简断
   let brief;
   if (r.verdict === 'recast') brief = `单凭这一卦还定不下结果。卦是六冲卦，父母虽旺，${[lvG < 2 ? '官星' : '', lvW < 2 ? '你自身' : ''].filter(Boolean).join('和') || '官、父、世'}却不够旺，古法遇这种情形要就同一件事再起一卦合看。在此之前，不宜把结果当成已定。`;
-  else if (cb13) brief = `这次面试有望通过，但过程不会完全顺利。卦由六冲变成六合，有先难后成之象${veto.length ? '，卦中原有的不利多在前段起作用' : ''}，后面仍有转机。按古法这类卦以吉论，但不是十拿九稳，前段的不利之处仍要留意。`;
+  else if (cb13) brief = '这次面试有望通过。判断的依据是卦由六冲变成六合，古法对这种格局以吉论，不再按官星、父母的强弱定成败。卦中原有的不利条件说明过程可能有些波折，但不改变这个结论。';
   else if (r.verdict === 'pass') {
     const why = coded(r.pass, PASS_SHORT).slice(0, 2); const wk = weakLayer();
-    brief = `${pickBy(['这次面试有望通过。', '从这一卦看，这次面试成的可能大。'], seed)}主要是${why.join('，') || '有利条件多过不利'}。${wk ? `不过${wk}还不算强，面试前后要多留意这一面，过程未必一路顺利。` : '官星、父母和你自身都不弱，卦中没有明显的短板，按部就班准备即可。'}整体有利的一面较多。`;
+    const PIMPL = { 旺官持世: '也就是说，录取这一步的条件偏向你。', 旺官生合世: '也就是说，录取这一步的条件偏向你。', 官动生合世: '也就是说，录取一方有主动接纳之意。', 日月官生合世: '也就是说，录取这一步的条件偏向你。', 官父两旺: '也就是说，录取和临场表现两头都有底。', 旺父就世: '也就是说，临场表现对你有帮助。', 父发: '也就是说，临场表现能补上录取方面的不足。', 官父局: '也就是说，录取和临场表现都成了势。', 兄局得意: '也就是说，竞争反而成了助力。', 应荐: '也就是说，对方那边对你有接纳之意。', 父平可保平等: '也就是说，临场表现能保住基本面。' };
+    brief = `${pickBy(['这次面试有望通过。', '从这一卦看，这次面试成的可能大。'], seed)}主要是${why.join('，') || strongLayer().slice(0, 2).join('，') || '有利条件多过不利'}${why.length ? '' : '，不利条件不多'}。${PIMPL[r.pass[0]?.code] || ''}${wk ? `相对弱一些的是${wk}，过程未必一路顺利，但不改变有利的大局。` : '官星、父母和你自身都不弱，卦中没有明显的短板。'}`;
   } else if (r.verdict === 'fail') {
-    const why = coded(r.veto, VETO_SHORT).filter((s, i, arr) => !arr.slice(0, i).some((p) => p.slice(0, 6) === s.slice(0, 6)));
-    const AREA0 = { 能否录取: '录取一层有阻碍', 临场表现: '表现一层有变数', 自身与对方: '你自身这一层受牵制', 竞争: '竞争者有动作', 卦的大势: '整卦的走向不顺' };
-    const softBad = [...new Set([lvG === 0 && g ? '代表职位的官星力量不足' : '', lvF === 0 && fu ? '代表表现的父母偏弱' : '', ...badsE.map((e) => AREA0[e.para]).filter(Boolean)].filter(Boolean))].slice(0, 2);
-    const main = why[0] || softBad.join('，') || '不利的条件多过有利';
+    const why = vetoShort();
+    const softBad = [...new Set([lvG === 0 && g ? '录取方面的条件不足' : '', lvF === 0 && fu ? '临场表现支持不足' : '', ...badsE.map((e) => AREA0[e.para]).filter(Boolean)].filter(Boolean))].slice(0, 2);
     const sg = strongLayer();
-    const areaOf = (v0) => (/^(无官|官|子动|子孙|官伏)/.test(v0) ? '能否被录取' : /^(父|无父|财动)/.test(v0) ? '临场表现' : v0 === '兄持世' ? '竞争和你自身的分心' : /^(世|日月|随鬼|本主)/.test(v0) ? '你自身的状态' : '整件事的走向');
-    const areas = [...new Set(r.veto.slice(0, 2).map((v) => areaOf(v.code)))];
-    const area = areas.length > 1 ? `分别关系到${areas.join('和')}` : `关系到${areas[0] || '能否被录取'}`;
-    brief = `${pickBy(['这次面试偏难。', '这一卦对录取不太有利。'], seed)}主要难在${main}${why.length > 1 ? `，另外${why[1]}` : ''}。${why.length ? `${why.length > 1 ? '这两处' : '这一处'}${area}，眼下难以补救。` : '这几处单看都不致命，合起来不利的分量重过有利。'}${sg.length ? `卦中虽然${sg.slice(0, 2).join('，')}，但分量不够，扭转不了大局。` : '卦中也找不到足以扭转的有利之处，这一轮成的可能不大。'}`;
+    const lead = pickBy(['这次面试偏难。', '这一卦对录取不太有利。'], seed);
+    const v0 = r.veto[0]?.code || '';
+    const IMPL = { 录取: '也就是说，即使临场表现不错，录取这一步也难落下来。', 表现: '也就是说，临场发挥容易打折扣，直接影响结果。', 自身: '也就是说，就算机会摆在面前，你这边也难接住。', 竞争: '也就是说，同场竞争的压力会压过你的优势。', 整体: '也就是说，整件事的走向不顺，变数偏多。' };
+    const ak = v0 ? (/^(无官|官|子动|子孙|官伏)/.test(v0) ? '录取' : /^(父|无父|财动)/.test(v0) ? '表现' : v0 === '兄持世' ? '竞争' : /^(世|日月|随鬼|本主)/.test(v0) ? '自身' : '整体') : '';
+    const reason = why.length ? `主要阻力在于${why[0]}${why[1] ? `，同时${why[1]}` : ''}。${IMPL[ak] || ''}` : `主要是${softBad.join('，') || '不利的条件较多'}，${softBad.length > 1 ? '这几处单看都不致命，合起来不利的分量重过有利' : '单看不致命，但卦中有利的条件更少，不利的分量更重'}。`;
+    brief = `${lead}${reason}${sg.length ? `卦中虽然${sg.slice(0, 2).join('，')}，但这些没有转化为录取上的助力。` : '卦中也没有足以扭转的有利条件。'}`;
   } else {
     const gd = coded(r.pass, PASS_SHORT)[0] || strongLayer()[0]; const wk = weakLayer();
-    const AREA = { 能否录取: '录取一层还有阻碍', 临场表现: '表现一层有变数', 自身与对方: '你自身这一层有牵制', 竞争: '竞争者有动作', 卦的大势: '整卦的走向有阻碍' };
-    const bd = wk ? `${wk}偏弱` : (AREA[badsE[0]?.para] || '还缺一个能定下录取的强象');
-    brief = `这次面试有争取的机会，但结果眼下还定不下来。${gd ? `有利的是${gd}` : '卦中有可取之处'}，不足的是${bd}。两边分量相近，眼下不宜把结果当成已定，也不必放弃，要看后面的进展。`;
+    const bd = wk ? `${wk}偏弱` : (AREA0[badsE[0]?.para] || '还缺一个能定下录取的强象');
+    brief = `这次面试有争取的机会，但结果眼下还定不下来。${gd ? `有利的是${gd}` : '卦中有可取之处'}，不足的是${bd}。两边分量相近，不宜把结果当成已定，也不必放弃。`;
   }
-  // 详断：层次一句，有利两条，不利两条，收一句
-  // 每层后跟最主要的一两条旺衰原因（全部原因在专业解析）
+  // 详断：先讲三层的强弱与原因，再讲主因，最后说明其余条件为什么没有改变结论
   const why2 = (why, el, lv) => {
     if (!why) return '';
     const { pro, con } = whyParts(why);
@@ -714,47 +732,67 @@ export function interviewV3Text(chart, ctx = {}) {
   };
   const lay3 = [];
   let hasWhy = false;
-  if (g && g.kind) lay3.push(g.kind === 'line' && g.position === w.position ? `代表职位的官鬼${bn(g.branch)}正落在你的世爻上，${LVW[lvG]}${why2(g.why, g.trade.element, lvG)}` : `代表职位的官鬼${bn(g.branch)}${g.kind === 'hidden' ? '伏而不现，' : ''}${LVW[lvG]}${why2(g.why, g.trade.element, lvG)}`);
-  else if (r.pass.some((p) => p.code === '日月官生合世')) lay3.push('卦中不见官鬼，由当月或当天充当官星');
-  else lay3.push('代表职位的官鬼卦中不见');
+  const relOf = (b) => { const e = EL[b]; const we = EL[w.branch]; const GEN0 = { 木: '火', 火: '土', 土: '金', 金: '水', 水: '木' }; const KE0 = { 木: '土', 土: '水', 水: '火', 火: '金', 金: '木' }; return GEN0[e] === we ? '生世' : KE0[e] === we ? '克世' : GEN0[we] === e ? '世生它' : KE0[we] === e ? '世克它' : '比和'; };
+  if (g && g.kind) lay3.push(sameGW ? `代表录取的官鬼${bn(g.branch)}正落在你的世爻上，${LVW[lvG]}${why2(g.why, g.trade.element, lvG)}` : `代表录取的官鬼${bn(g.branch)}${g.kind === 'hidden' ? '伏而不现，' : ''}${LVW[lvG]}${why2(g.why, g.trade.element, lvG)}`);
+  else if (ryGuanWho.length) { hasWhy = true; lay3.push(`卦中不见官鬼，由${ryGuanWho.join('、')}充当官星，${ryGuanWho.map((x) => `${ryGuanWho.length > 1 ? x : '它'}${{ 生世: '来生你的世爻', 克世: '来克你的世爻', 世生它: '受你的世爻所生', 世克它: '受你的世爻所克', 比和: '与你的世爻比和' }[relOf(x[0])]}`).join('，')}`); }
+  else lay3.push('代表录取的官鬼卦中不见');
   if (fu && !(fu.kind === 'line' && fu.position === w.position)) lay3.push(`代表临场表现的父母${bn(fu.branch)}${fu.kind === 'hidden' ? '伏而不现，' : ''}${LVW[lvF]}${why2(fu.why, fu.element, lvF)}`);
   else if (fu) lay3.push(`代表临场表现的父母${bn(fu.branch)}就在你的世爻上，${LVW[lvF]}`);
-  else lay3.push(d.riyueFu ? '父母不上卦，由当月或当天充当' : '代表临场表现的父母不现');
-  if (!(g?.kind === 'line' && g.position === w.position) && !(fu?.kind === 'line' && fu.position === w.position)) lay3.push(`你自己的世爻${bn(w.branch)}${LVW[lvW]}${why2(w.why, EL[w.branch], lvW)}`);
-  const stripCb = (s) => String(s).replace(/，因卦得六冲变六合，这一条不作定局$/, '').replace(/，这正是开头的阻碍，不再另作散象看$/, '');
+  else lay3.push(d.riyueFu ? '父母不上卦，由日月充当' : '代表临场表现的父母不现');
+  if (!sameGW && !(fu?.kind === 'line' && fu.position === w.position)) lay3.push(`你自己的世爻${bn(w.branch)}${LVW[lvW]}${why2(w.why, EL[w.branch], lvW)}`);
+  const stripCb = (s) => String(s).replace(/，因卦得六冲变六合，这一条不作定局$/, '').replace(/；在六冲变六合的格局里，这一条不再另作散象看$/, '');
   const goodsAll = goodsE.filter((e) => !/^六冲变六合|^六冲卦变六合/.test(e.x.text));
-  const badsAll = cb13 ? items.filter((e) => e.kind === 'note' && /——卦得六冲变六合/.test(e.x.text)) : badsE;
+  const badsAll = (cb13 ? items.filter((e) => e.kind === 'note' && /——卦得六冲变六合/.test(e.x.text)) : badsE).filter((e) => !(lvG < 2 && /不作旺官持世/.test(e.x.text)));
+  const tidy = (arr) => {
+    const out0 = []; const seenK = new Set();
+    for (const s0 of arr) {
+      const k = `${s0.slice(0, 4)}|${s0.slice(-4)}`; if (seenK.has(k)) continue; seenK.add(k);
+      const prev = out0[out0.length - 1]; const p0 = prev?.split('，')[0]; const c0 = s0.split('，')[0];
+      const subj0 = (x) => (x || '').match(/^(?:官鬼|父母|子孙|妻财|兄弟)[子丑寅卯辰巳午未申酉戌亥][金木水火土]|^你的世爻[子丑寅卯辰巳午未申酉戌亥]?[金木水火土]?/)?.[0];
+      const subj = (x) => { const s1 = subj0(x); return s1 && sameGW ? s1.replace(/^(官鬼|你的世爻)/, 'G') : s1; };
+      if (prev && p0 === c0 && c0.length >= 6 && s0.length > c0.length + 1) out0.push(`而且${s0.slice(c0.length + 1)}`);
+      else if (prev && subj(s0) && subj(s0) === subj(prev) && subj0(s0).length >= 4) out0.push(`它${s0.slice(subj0(s0).length).replace(/^又/, '').replace(/^，/, '')}`);
+      else out0.push(s0);
+    }
+    return out0;
+  };
+  const ryRel = !g && ryGuanWho.length ? relOf(ryGuanWho[0][0]) : null;
+  const MEAN = [ryRel === '克世' ? '录取一方对你压力偏重' : ryRel === '世生它' ? '录取有条件，但要你去迁就' : g || ryGuanWho.length ? { 2: '录取方面条件有利', 1: '录取方面有条件，但不算稳', 0: '录取方面的条件不足' }[lvG] : '',
+    fu ? { 2: '临场发挥有底气', 1: '临场表现中规中矩', 0: '临场发挥容易打折扣' }[lvF] : '',
+    sameGW || fu?.position === w.position ? '' : { 2: '你自己的状态跟得上', 1: '你自己的状态一般', 0: '你自己的状态未必跟得上' }[lvW]].filter(Boolean);
+  const layText = `${subjText}${stageText}${pickBy(['这一卦里，', '从卦里看，'], seed + 'l3')}${lay3.join(hasWhy ? '；' : '，')}。${MEAN.length ? `${pickBy(['也就是说，', '落到面试上，就是'], seed + 'mn')}${MEAN.join('，')}。` : ''}`;
   const make = (ng, nb) => {
     const goodsD0 = goodsAll.slice(0, ng); const badsD0 = badsAll.slice(0, nb);
-    const tidy = (arr) => {
-      const out0 = []; const seenK = new Set();
-      for (const s0 of arr) {
-        const k = `${s0.slice(0, 4)}|${s0.slice(-4)}`; if (seenK.has(k)) continue; seenK.add(k);
-        const prev = out0[out0.length - 1]; const p0 = prev?.split('，')[0]; const c0 = s0.split('，')[0];
-        const subj = (x) => (x || '').match(/^(?:官鬼|父母|子孙|妻财|兄弟)[子丑寅卯辰巳午未申酉戌亥][金木水火土]|^你的世爻[子丑寅卯辰巳午未申酉戌亥]?[金木水火土]?/)?.[0];
-        if (prev && p0 === c0 && c0.length >= 6 && s0.length > c0.length + 1) out0.push(`而且${s0.slice(c0.length + 1)}`);
-        else if (prev && subj(s0) && subj(s0) === subj(prev) && subj(s0).length >= 4) out0.push(`它${s0.slice(subj(s0).length).replace(/^又/, '').replace(/^，/, '')}`);
-        else out0.push(s0);
-      }
-      return out0;
-    };
     const gT = tidy(goodsD0.map((e) => (e.kind === 'pass' ? passSay(e) : head(e))));
     const bT = tidy(badsD0.map((e) => stripCb(head(e))));
-    if (bT.length && !cb13 && badsD0[0]?.kind === 'veto') bT[0] += pickBy(['，这是这次最主要的障碍', '，这一条分量最重'], seed + 'vz');
-    const MEAN = [g || r.pass.some((p) => p.code === '日月官生合世') ? { 2: '岗位这一头机会是实的', 1: '岗位有机会，但不算稳', 0: '岗位这一头机会不足' }[lvG] : '',
-      fu ? { 2: '临场发挥有底气', 1: '临场表现中规中矩', 0: '临场发挥容易打折扣' }[lvF] : '',
-      g?.position === w.position || fu?.position === w.position ? '' : { 2: '你自己的状态跟得上', 1: '你自己的状态一般', 0: '你自己的状态未必跟得上' }[lvW]].filter(Boolean);
-    let s = `${subjText}${stageText}${pickBy(['这一卦里，', '从卦里看，'], seed + 'l3')}${lay3.join(hasWhy ? '；' : '，')}。${MEAN.length ? `${pickBy(['也就是说，', '落到面试上，就是'], seed + 'mn')}${MEAN.join('，')}。` : ''}`;
-    if (gT.length) s += `有利的是，${gT.join('；')}。`;
-    if (bT.length) s += `${gT.length ? '不利的是' : '问题在于'}，${bT.join('；')}。`;
+    let s = layText;
+    if (cb13) {
+      // B-013：判有望靠的是格局本身，不靠利弊相抵；原有不利只说条件，不当作仍成立的结论
+      const bS = [...new Set(bT.map((x) => x.split('，')[0]))].slice(0, 2);
+      s += `这一卦判有望，不是因为有利条件多过不利，而是因为卦由六冲变成六合，古法对这种格局以吉论，不再按官星、父母的强弱定成败。${bS.length ? `卦中原有${bS.join('、')}等不利条件，只说明过程中可能有波折，不改变这个结论。` : ''}`;
+      if (gT.length) s += `此外，${gT.join('；')}。`;
+    } else if (r.verdict === 'fail') {
+      if (bT.length) s += `${pickBy(['问题主要在于', '这一轮的难处在于'], seed + 'fb')}，${bT.join('；')}。`;
+      if (gT.length) s += `卦中有利的一面是${gT.join('；')}，${pickBy(['但不足以抵消上面的问题，所以这一轮偏难。', '但这些没有转化为录取上的助力，所以偏难。'], seed + 'fg')}`;
+      else s += '卦中没有足以扭转的有利条件，所以这一轮偏难。';
+    } else if (r.verdict === 'pass') {
+      if (gT.length) s += `${pickBy(['有利的主要是', '判有望，主要因为'], seed + 'pg')}${gT.join('；')}。`;
+      s += bT.length ? `需要留意的是，${bT.join('；')}。${pickBy(['这些会让过程多些波折，但不改变有利的大局。', '这些只是过程中的阻力，不改变结论。'], seed + 'pb')}` : '卦中没有明显的不利条件。';
+    } else if (r.verdict === 'wait') {
+      if (gT.length) s += `有利的是，${gT.join('；')}。`;
+      if (bT.length) s += `不利的是，${bT.join('；')}。`;
+      s += '两边分量相近，结果要看后面的进展。';
+    } else {
+      if (gT.length) s += `有利的是，${gT.join('；')}。`;
+      if (bT.length) s += `不利的是，${bT.join('；')}。`;
+      s += '按古法，六冲卦父母虽旺而官、世不全旺者，要再占一卦合看。';
+    }
     return { s, goodsD0, badsD0 };
   };
   let mk = make(2, 2);
   if (mk.s.length < 230) mk = make(3, 3);
   const goodsD = mk.goodsD0; const badsD = mk.badsD0;
-  let detail = mk.s;
-  if (cb13) detail += '好在卦由六冲变成六合，有先难后合之势；按古法这类卦以吉论，但这一点不能单独决定成败，上面的不利之处仍要留意。';
-  detail += { pass: '两相比较，有利的一面占上风。', fail: r.veto.length ? (r.veto.length > 1 && badsD.filter((e) => e.kind === 'veto').length > 1 ? pickBy(['这两处不解，别处的有利难以扭转，所以这一轮偏难。', '有这两条在，别处的有利扭转不了，所以偏难。'], seed + 'fw') : pickBy(['这一处不解，别处的有利难以扭转，所以这一轮偏难。', '有这一条在，别处的有利扭转不了，所以偏难。'], seed + 'fw')) : pickBy(['不利的分量重过有利，所以这一轮偏难。', '两相比较，不利一面更重，所以偏难。'], seed + 'fw'), wait: '利弊大致相当，结果要看后面的进展。', recast: '按古法，六冲卦父母虽旺而官、世不全旺者，要再占一卦合看。' }[r.verdict];
+  const detail = mk.s;
   const restN = goodsAll.length - goodsD.length + badsAll.length - badsD.length;
   for (const e of [...goodsD, ...badsD]) { e.said = true; e.saidIn = '详断'; e.usedInDetail = true; }
   const out = [sentence('简断', brief, [...new Set([...veto, ...r.pass].flatMap((y) => y.rules))]), sentence('详断', detail, [...new Set([...goodsD, ...badsD].flatMap((e) => e.x.rules || []))])];
@@ -833,16 +871,19 @@ export function interviewV3Text(chart, ctx = {}) {
   analysis.push(sentence('应期', `${clean.length > 1 ? pickBy(INTRO, seed + 'yq') : ''}${clean.map((s, i) => `${s.replace(/^(通知|结果)看(父母|官鬼)：/, '$1看$2，')}${i === clean.length - 1 || i % 2 === 1 ? '。' : '；'}`).join('')}${pickBy(TAIL, seed + 'yt')}`, [...new Set(trules)]));
   // 正文应期：只给主应期（结果看官鬼）；没有明确主应期时直说暂不能定准（2026-11-17 评审：不罗列许多日期，分开「条件变化之时」与「通知之时」）
   {
-    let main = '';
+    // 两种：能推结果消息的（官星无所限，值、冲或值、合之日）；只能推某项限制解除的（旬空、合住、伏藏），后者直说通知时间暂不能定准
+    let yq = '';
+    const failPre = r.verdict === 'fail' ? '从卦象看这一轮偏难。' : '';
     if (g) {
       const b = g.branch;
       const bz = (tm.banzhu || []).find((y) => y.startsWith(`官鬼${b}`));
       const bzm = bz && bz.match(/冲本爻之(.)(日月|日)或冲合神之(.)(日月|日)/);
-      main = g.kind === 'hidden' ? `官星伏而不现，结果多在${b}日前后见分晓` : g.void ? `官星逢旬空，多在出空或${b}日前后见分晓` : bzm ? `官星被合住，多在${bzm[1]}日或${bzm[3]}日冲开之后见分晓` : g.active === '发动' ? `结果多在${b}日或${HE6[b]}日前后见分晓` : `结果多在${b}日或${CHONG[b]}日前后见分晓`;
-    }
-    const yq = !main ? (r.pass.some((p) => p.code === '日月官生合世') ? '官星由当月或当天充当，卦中没有单独的官爻可以推日子，应期暂不能定准，以实际通知为准。' : '卦中官星不现，应期暂不能定准，以实际通知为准。')
-      : r.verdict === 'fail' ? `从卦象看这一轮偏难。${main.replace(/结果多在/, '若有消息，多在')}。这只是卦中条件变化之时，正式结果以通知为准。`
-        : `${main}。这只是卦中条件变化之时，不等于那天一定出结果，正式录取以通知为准。`;
+      if (g.kind === 'hidden') yq = `${failPre}官星伏藏，要到${b}日前后才可能透出；具体通知时间暂不能定准。`;
+      else if (g.void) yq = `${failPre}官星眼下逢旬空，要到出空或${b}日前后，录取这一项才可能落定；具体通知时间暂不能定准。`;
+      else if (bzm) yq = `${failPre}官星被合住，要到${bzm[1]}日或${bzm[3]}日冲开之后，录取这一项的阻滞才解开；具体通知时间暂不能定准。`;
+      else yq = `${failPre}${failPre ? '若有消息，' : '结果的消息，'}多在${b}日或${g.active === '发动' ? HE6[b] : CHONG[b]}日前后。`;
+      yq += '以上只是卦象推出的时间，正式结果以通知为准。';
+    } else yq = ryGuanWho.length ? `官星由${ryGuanWho.join('、')}充当，卦中没有单独的官爻可以推日子，应期暂不能定准，以实际通知为准。` : '卦中官星不现，应期暂不能定准，以实际通知为准。';
     out.push(sentence('应期', yq, [...new Set(trules)]));
   }
   // 其余应期条目进依据栏
@@ -855,17 +896,19 @@ export function interviewV3Text(chart, ctx = {}) {
   if (g && r.layers.hiring.level <= 1 && r.notes.some((n) => /扶起|逢生|回头生/.test(n.text))) NOTE('应期', '官星眼下不旺而得生扶：目下难以如意，到官星旺相之时得意（休囚得生扶，遇时仍然得意）', ['R-BZZ-WX-01']);
   if (r.notes.some((n) => /^子孙\S*(无力|入墓|化回头克|合住|化退|衰而又绝|化绝|化破)/.test(n.text))) NOTE('应期', '克官的子孙眼下被制，但除恶未尽：日后子孙逢生扶、冲开之年月，仍要防它复起（除恶未尽，须防死灰复燃）', ['R-QJF-13']);
 
-  // ———— 建议：合结论，针对最弱一层 ————
+  // ———— 建议：只对应本篇主因（2026-11-17 评审第二稿：不每篇追加引荐、谈条件）————
   const layerLv = [['表现', r.layers.performance.level], ['录取', r.layers.hiring.level], ['自身', r.layers.self.level]];
   const minLv = Math.min(...layerLv.map((y) => y[1]));
   const weakest = layerLv.filter((y) => y[1] === minLv).map((y) => y[0]);
-  const FIX = { 表现: '把材料、表达再打磨，答题宁稳勿杂', 录取: '别的机会同时推进，不把结果押在这一处', 自身: '先把状态和准备补足，必要时请人引荐' };
+  const areaKey = (c) => (/^(无官|官|子动|子孙|官伏)/.test(c) ? '录取' : /^(父|无父|财动)/.test(c) ? '表现' : c === '兄持世' ? '竞争' : /^(世|日月|随鬼|本主)/.test(c) ? '自身' : '整体');
+  const mainArea = r.veto[0] ? areaKey(r.veto[0].code) : weakest[0];
+  const FIX = { 表现: '把材料和表达再打磨，答题宁稳勿杂', 录取: '录取的条件不全在你手里，别的机会同时推进，不把结果押在这一处', 自身: '先把状态和准备补足', 竞争: '竞争较多，把自己的长处讲清楚，别的机会也同时推进', 整体: '变数较多，准备照常做足，别的机会同时推进' };
   let adv;
   if (r.verdict === 'recast') adv = '就同一件事再起一卦合看；在此之前，准备照常做足，别的机会不必停下。';
-  else if (r.verdict === 'pass') adv = minLv === 2 ? pickBy(['官、父、世三层都有底，照常准备、按时应对即可。', '本身有底，照常准备、按时应对即可。'], seed + 'adv') : `整体有利，照常准备；${{ 表现: '表现一层不算强，材料和表达可以再打磨', 录取: '录取一层不算强，别的机会也可同时留意', 自身: '你自身这一层不算强，状态和准备再补一补' }[weakest[0]]}。`;
-  else if (minLv === 2) adv = '本身有底，但卦中还有不利之处，准备照常做足，不要把结果当成已定。';
-  else adv = `${weakest.map((y) => FIX[y]).join('；')}${r.verdict === 'fail' && !weakest.includes('录取') ? '；别的机会也不必停下' : ''}。`;
-  if (a?.toWorld === '克世' && !r.pass.some((p) => p.code === '应荐') && a.heChong !== '合') adv += '对方要求偏严，谈条件时留些余地。';
+  else if (cb13) adv = '整体有利，照常准备；过程中遇到波折，不必急于放弃。';
+  else if (r.verdict === 'pass') adv = minLv === 2 ? '照常准备、按时应对即可。' : `照常准备；${{ 表现: '临场表现相对弱一些，材料和表达可以再打磨', 录取: '录取方面还不算稳，别的机会也可同时留意', 自身: '你自身的状态相对弱一些，准备再补一补' }[weakest[0]]}。`;
+  else if (r.verdict === 'wait') adv = `准备照常做足，不要把结果当成已定${minLv < 2 ? `；${FIX[weakest[0]]}` : ''}。`;
+  else adv = `${FIX[mainArea] || FIX.整体}。`;
   out.push(sentence('建议', adv, ['R-ZS-QM-01', ...(r.reCast ? ['R-QIUMING-14'] : [])]));
   NOTE('建议', '若同时有几个机会，最好指定一个具体岗位再起一卦问（指其缺而问之，无不验也）', ['R-ZS-QM-01']);
 
@@ -881,5 +924,10 @@ export function interviewV3Text(chart, ctx = {}) {
   const quoteSegs = (t) => [...String(t).matchAll(/（([^（）]+)）/g)].map((m) => m[1]).filter((q) => q.length >= 6);
   for (const s0 of out) for (const y of allItems) if (quoteSegs(y.text).some((q) => s0.text.includes(q))) s0.rules = [...new Set([...s0.rules, ...(y.rules || [])])];
   for (const s0 of analysis) for (const y of allItems) if (quoteSegs(y.text).some((q) => s0.text.includes(q))) s0.rules = [...new Set([...s0.rules, ...(y.rules || [])])];
+  // 读者话统一（2026-11-17 评审第二稿：「表现一层」「录取一层」重复太多；「失陷」读者难懂）
+  const polish = (s) => s.replace(/录取一层自伤/g, '录取受损').replace(/自身这一层失陷/g, '你自身撑不住').replace(/你自身这一层/g, '你自身').replace(/自身这一层/g, '你自身')
+    .replace(/表现一层/g, '临场表现').replace(/录取一层/g, '录取').replace(/你你/g, '你').replace(/，你自身失陷/g, '，你自身撑不住');
+  for (const s0 of [...out, ...analysis]) s0.text = polish(s0.text);
+  for (const b of basis) if (b.saidAs) b.saidAs = polish(b.saidAs);
   return { version: INTERVIEW_V3_TEXT_VERSION, verdict: r.verdict, items: out, analysis, basis: [...basis, ...refs] };
 }

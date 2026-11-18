@@ -126,3 +126,23 @@ test('D2：两爻同动相合作合好，不失生克之用（六合章「爻动
   const s = assessRoleState(chart.lines[0], a.lines[0], chart);
   assert.ok(s.places.some((p) => p.place === '动爻上爻寅' && p.effect === '生'), '寅木虽与亥水同动相合，仍来扶初爻卯木');
 });
+
+// —— P2 第二稿评审（2026-11-17）查出的判定与写法问题 ——
+test('日月作官须真与世爻相生或相合，才算「日月官生合世」', () => {
+  for (const s of ['988677 申 庚辰', '898787 戌 辛亥']) { // 申金生于辰土之世（世生官）；亥水克午火之世（官克世）
+    const { r } = ch(s);
+    assert.ok(!r.pass.some((p) => p.code === '日月官生合世'), s);
+  }
+});
+
+test('官临日辰而被克到无力者，不再说「令星伤它不到」（日辰章寡不敌众）', () => {
+  const { r } = ch('887887 申 丙寅');
+  assert.equal(r.layers.hiring.level, 0);
+  assert.ok(!r.notes.some((n) => /令星，伤它不到/.test(n.text)));
+});
+
+test('父母发动而不能补官，与父母没有发动分开写', () => {
+  const { r } = ch('697889 巳 辛卯');
+  const m = [...r.minus, ...r.veto].find((x) => /^官酉/.test(x.text) && /无力/.test(x.text));
+  assert.ok(m && /父母虽发动/.test(m.text), m?.text);
+});
