@@ -136,9 +136,44 @@ test('日月作官须真与世爻相生或相合，才算「日月官生合世�
 });
 
 test('官临日辰而被克到无力者，不再说「令星伤它不到」（日辰章寡不敌众）', () => {
-  const { r } = ch('887887 申 丙寅');
+  const { r } = ch('867876 申 丙午'); // 午官临午日，被申月、动爻克到无力（887887 申 丙寅 原用此例，2026-11-18 按三合贪生忘克改判，见下条）
   assert.equal(r.layers.hiring.level, 0);
   assert.ok(!r.notes.some((n) => /令星，伤它不到/.test(n.text)));
+});
+
+// —— P2 第三稿评审（2026-11-18）：同一个克、同一个月破，各段同一裁决 ——
+test('克神合入生官之局，贪生忘克：旺衰不记它的克，临日之爻便逢月破而不破，应期也不再写受克（三合章「申子辰合成水局，以生官，不独无害」、日辰章）', () => {
+  const { r } = ch('887887 申 丙寅'); // 艮为山：寅官持世临寅日，申月冲；申金暗动，与子、辰合成水局
+  assert.equal(r.layers.hiring.level, 2);
+  assert.ok(!r.veto.some((v) => ['官破', '世破', '子动克官'].includes(v.code)));
+  assert.ok(r.notes.some((n) => /贪生忘克/.test(n.text)));
+  const q = r.details.timing.guanQi;
+  assert.ok(!q.some((x) => x.code === '受克' || x.code === '月破'));
+  assert.ok(q.some((x) => x.code === '受克已解' && /贪生忘克/.test(x.whyS)));
+});
+
+test('已被化解的克，应期写眼下不作害与何时重新成害（接续相生；兄动克财）', () => {
+  for (const [s, re] of [['776867 子 庚寅', /接续相生/], ['697889 巳 辛卯', /兄弟同动/]]) {
+    const q = ch(s).r.details.timing.fuQi;
+    assert.ok(!q.some((x) => x.code === '受克'), s);
+    assert.ok(q.some((x) => x.code === '受克已解' && re.test(x.whyS) && x.revive), s);
+  }
+});
+
+test('动而月破之爻，眼下无力时写明受哪些伤、不随出月而解', () => {
+  const { r } = ch('697889 巳 辛卯');
+  const c = [...r.veto, ...r.plus, ...r.minus].flatMap((x) => x.cond || []).find((y) => /^父亥逢月破/.test(y.text));
+  assert.ok(c && /眼下起不了作用/.test(c.say) && !/仍能起作用/.test(c.say), c?.say);
+});
+
+test('父独发化官鬼而所化之官逢破，不作迁举之加分', () => {
+  const { r } = ch('888677 子 己未');
+  assert.ok(!r.plus.some((p) => /父独发化官鬼/.test(p.text)));
+});
+
+test('三合局中发动之爻逢空：写明哪一支、哪一项，不写成「缺」', () => {
+  const w = ch('788768 子 丙子').r.details.timing.harmonyWait;
+  assert.ok(w.some((h) => h.branches === '申子辰' && h.waits.some((x) => x.branch === '申' && x.kinds.includes('旬空') && x.moving)));
 });
 
 test('父母发动而不能补官，与父母没有发动分开写', () => {

@@ -6,11 +6,11 @@
 // B-008 空破墓两项以上：空加破无力，空加墓、破加墓待时至最后解除；B-009 伏神按同一三层判定；B-010 两现不同支并列取较不利者。
 
 import { BRANCH_ELEMENT, GENERATES, CLASH, COMBINE, LIFE_STAGES, elementRelation } from './constants.js';
-import { seasonalState, calendarFacts, changeFacts, isMovingTomb } from './analysis.js';
+import { seasonalState, calendarFacts, changeFacts, isMovingTomb, analyzeChart } from './analysis.js';
 
 import { dayOffset } from './flows.js';
 
-export const ROLE_STATE_VERSION = 'role-state-0.4.0';
+export const ROLE_STATE_VERSION = 'role-state-0.4.1';
 
 /** 通行五级称谓（当令旺、令生相、生令休、克令囚、令克死）。本项目古籍库未见定义原文，只作月令事实标签；判断用增删卜易三档 */
 export function seasonalFive(element, monthBranch) {
@@ -30,6 +30,23 @@ const strongSeason = (element, monthBranch) => ['旺', '相'].includes(seasonalS
 //「忌神虽动，不能克用神者有七：忌神休囚不动，而动休囚被日、月动爻克者一也。忌神静临空破二也。忌神入三墓三也。忌神衰动化退神四也。
 //  忌神衰而又绝五也。忌神动化绝化破、化克、化散六也。忌神与元神同动七也」（R-YUANJI-04）
 // 「休囚」取月令事实（D-015）；「化散」取化冲；三墓按原文不分衰旺。
+// 三合章：「寅木官星持世……虽被申日冲克，喜申子辰合成水局，以生官，不独无害」（R-SANHE-07）——克神合入生它（或与它同气）之局者，贪生忘克。
+// 取已成之局与待时之局（与面试判定 interview-v3 原口径一致，2026-11-18 评审：同一个克各段须同一裁决）。
+// 待时之局（局中一支空、破、墓，R-SANHE-03「待填满之日月成之」）眼下能否已令克神贪生，牵涉「动不为空」与局中空破之说如何并用，留待旬空、三合审计再定
+const harmCache = new WeakMap();
+const formedHarmonies = (chart) => {
+  if (!harmCache.has(chart)) {
+    // 三合只看地支与爻位，与爻的遍历顺序无关：按爻位排好再取事实
+    const ordered = chart.lines.every((l, i) => l.position === i + 1) ? chart : { ...chart, lines: [...chart.lines].sort((a, b) => a.position - b.position) };
+    harmCache.set(chart, analyzeChart(ordered).threeHarmonies.filter((h) => h.status === 'formed' || h.status === 'deferred'));
+  }
+  return harmCache.get(chart);
+};
+export function tanShengHarmony(o, subjectElement, chart) {
+  return formedHarmonies(chart).find((h) => ['generates', 'same'].includes(elementRelation(h.element, subjectElement))
+    && h.parts.some((p) => p.sources.some((x) => x.position === o.position && x.from !== 'changed'))) || null;
+}
+
 export function moverBlocked(o, subject, chart, mode) {
   const c = calendarFacts({ branch: o.branch, element: o.element, moving: o.moving, kind: 'line', position: o.position }, chart);
   const ch = o.moving ? changeFacts(o, chart) : null;
@@ -52,6 +69,7 @@ export function moverBlocked(o, subject, chart, mode) {
   if (xiu && ch && ch.advance === '退神') return '忌神衰动化退神';
   if (xiu && c.dayExtinct) return '忌神衰而又绝';
   if (badHua) return '忌神动化绝化破化克化散';
+  { const h = tanShengHarmony(o, subject.element, chart); if (h) return `合入${h.branches.join('')}${h.element}局${elementRelation(h.element, subject.element) === 'same' ? '而与它同气' : '去生它'}，贪生忘克`; }
   if (chart.lines.some((m) => m.moving && m.position !== o.position && m.position !== subject.position && elementRelation(o.element, m.element) === 'generates' && elementRelation(m.element, subject.element) === 'generates')) return '忌神与元神同动';
   return null;
 }
@@ -118,7 +136,7 @@ function placesOf(subject, chart) {
     const tag = an ? '暗动' : st ? '静旺' : '动爻';
     // 静旺之爻只论生克（动静生克章），冲合须动爻或日月
     const why = !st && (er === 'generates' || er === 'controls') ? moverBlocked(o, subject, chart, er === 'generates' ? '生' : '克') : null;
-    if (why) blocked.push({ place: `${tag}${o.label}${o.branch}`, effect: er === 'generates' ? '生' : '克', why, rule: er === 'generates' ? 'R-YUANJI-02' : 'R-YUANJI-04' });
+    if (why) blocked.push({ place: `${tag}${o.label}${o.branch}`, effect: er === 'generates' ? '生' : '克', why, rule: why.includes('贪生忘克') ? 'R-SANHE-07' : er === 'generates' ? 'R-YUANJI-02' : 'R-YUANJI-04' });
     // 千金赋「合非合因少支神」野鹤注：「若爻中二子不合二丑，名为合，不成者，亦有理也」——两爻同支对两爻同支者不成合（R-QJF-20）
     else if (er === 'generates' || er === 'same') places.push({ place: `${tag}${o.label}${o.branch}`, effect: '生', strong: false, dyn });
     // 六合章「爻静或与日月动爻合者得合而起，即使爻值休囚亦有旺相之意」：静爻受动爻合作合起，记 he（只计扶，不作解墓之生扶）。
@@ -233,15 +251,15 @@ function capabilityOf(subject, chart) {
   return { places, capability: 'weak', basis: '克多生少，生者无力：有生之名无生之实' };
 }
 
-function limitationsOf(subject, chart, places) {
+function limitationsOf(subject, chart, places, capability = null) {
   const c = subject.calendar;
   const out = [];
   if (c.void && c.void.zengshan !== '冲空则实') {
     const clashB = CLASH.get(subject.branch);
     out.push({ kind: '旬空', detail: c.void.zengshan, releases: [{ kind: '冲空', branch: clashB, ...dayOffset(chart, clashB), rule: 'R-KONG-06' }, { kind: '出空填实', branch: subject.branch, ...dayOffset(chart, subject.branch), rule: 'R-YINGQI-08' }] });
   }
-  // 临日之爻逢月破而不破（日辰章，R-RIZHEN-05）：不作月破之限
-  if (c.monthBreak && !c.day?.same) {
+  // 临日之爻逢月破而不破（日辰章，R-RIZHEN-05）：不作月破之限；同章「寡不敌众……破亦为破」：被克到无力者仍作月破（2026-11-18）
+  if (c.monthBreak && (!c.day?.same || capability === 'weak')) {
     const comb = COMBINE.get(subject.branch);
     out.push({ kind: '月破', detail: subject.moving ? '动而月破：动则能伤（R-YUEPO-02）' : '静而月破', releases: [{ kind: '填实', branch: subject.branch, ...dayOffset(chart, subject.branch), rule: 'R-YUEPO-02' }, { kind: '逢合', branch: comb, ...dayOffset(chart, comb), rule: 'R-YUEPO-02' }] });
   }
@@ -269,7 +287,7 @@ function stateOf(subject, chart) {
   const { places, capability } = cap;
   // 不能生、不能克之动爻写入依据（R-YUANJI-02、R-YUANJI-04）
   const basis = places.blocked?.length ? `${cap.basis}；不计：${places.blocked.map((b) => `${b.place}${b.effect === '生' ? '之生' : '之克'}（${b.why}）`).join('、')}` : cap.basis;
-  const limitations = limitationsOf(subject, chart, places);
+  const limitations = limitationsOf(subject, chart, places, capability);
   let effective = limitations.filter((l) => !(l.kind === '入墓' && !l.trueTomb));
   // 伏神：旺相或有扶而墓于日、墓于飞神，仍须待冲墓方出（B-009）
   if (subject.kind === 'hidden') effective = limitations.filter((l) => l.kind !== '入墓' || l.detail.includes('日墓') || l.detail.includes('墓于飞神') || l.trueTomb);

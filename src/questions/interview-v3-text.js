@@ -6,7 +6,7 @@
 import { interviewV3 } from './interview-v3.js';
 import { RULE_SOURCES, RULE_TEXTS } from '../data/rule-sources.js';
 
-export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-4.0.0';
+export const INTERVIEW_V3_TEXT_VERSION = 'interview-v3-text-4.0.1';
 
 const POS = ['', '初爻', '二爻', '三爻', '四爻', '五爻', '上爻'];
 const LV = ['无力', '不旺不衰', '旺'];
@@ -144,7 +144,7 @@ const P = '[初二三四五上]爻';
 const fpSay = (s) => ({ 父母也不发动: '父母又没有发动来补', '父母虽发动来生，却受制不能起作用': '父母虽然发动来生，却受制，补不上', '父母虽发动，却不来生合世': '父母虽然发动，却不来生合你的世爻，补不上' }[s] || s);
 const OVERRIDE = [
   [new RegExp(`^官(${Z})出现旺相$`), (m) => `官鬼${bn(m[1])}旺而现于卦中，古人看作事情能长久之象`],
-  [/^世受日月冲克而有扶，姑许$/, () => '世爻虽受日月冲克，但另有扶持，还撑得住'],
+  [/^世受(日月|月建|日辰)冲克而有扶，姑许$/, (m) => `世爻虽受${{ 日月: '日月', 月建: '月建', 日辰: '当天日辰' }[m[1]]}冲克，但另有扶持，还撑得住`],
   [new RegExp(`^应(${Z})克世$`), (m) => `应爻${bn(m[1])}来克你的世爻，对方一层要求可能偏严`],
   [new RegExp(`^应(${Z})生世$`), (m) => `应爻${bn(m[1])}来生你的世爻，对方一层有接纳之象`],
   [/^仇神兄弟发动$/, () => '兄弟发动，生官的妻财受它克制，录取的后劲要打折扣'],
@@ -202,6 +202,9 @@ const OVERRIDE = [
   [new RegExp(`^世(${Z})动而化出子孙(${Z})$`), (m) => `你的世爻${bn(m[1])}发动化出子孙${bn(m[2])}，子孙克官，自己这一爻在消磨录取`],
   [new RegExp(`^日辰(${Z})合世$`), (m) => `当天${bn(m[1])}来合你的世爻，自身这一层有扶持之象`],
   [new RegExp(`^子孙(${Z})合入生官之局，贪生忘克，不独无害$`), (m) => `子孙${bn(m[1])}虽动，却合入生官之局，贪生忘克，反而无害`],
+  [new RegExp(`^财(${Z})合入生父之局，贪生忘克$`), (m) => `妻财${bn(m[1])}虽动，却合入生父母之局，贪生忘克，克不到父母`],
+  [new RegExp(`^(官|世|父)(${Z})临日辰，月建虽冲，逢月破而不破$`), (m) => `${{ 官: '官鬼', 世: '你的世爻', 父: '父母' }[m[1]]}${bn(m[2])}正临当天日辰，月建虽然来冲，按古法逢月破而不破`],
+  [new RegExp(`^父(${Z})独发化官鬼(${Z})，但所化之官(逢月破|旬空)，不作迁举之象$`), (m) => `父母${bn(m[1])}独自发动，化出官鬼${bn(m[2])}，但化出的官星${m[3] === '旬空' ? '落空' : '逢月破'}，不算录取上的助力`],
   [/^朱雀临父(旺相|旺动)$/, () => '父母临朱雀而旺，古人看作文书、口才得力之象'],
   [/^朱雀临父而空$/, () => '父母临朱雀而落空，古人看作文书、口才一时不得力之象'],
   [/^官鬼不上卦而伏藏：成也难久$/, () => '官星不上卦而伏藏，即便成了也难长久'],
@@ -322,7 +325,7 @@ function whyParts(why) {
   const pro = []; const con = []; const sum = [];
   segs.forEach((s, i) => {
     if (s.startsWith('虽')) con.push(...s.slice(1).split('、'));
-    else if (i === 0 && !/相敌作平/.test(s)) pro.push(...s.split('、'));
+    else if (i === 0 && !/相敌作平|^临日之爻/.test(s)) pro.push(...s.split('、'));
     else sum.push(s);
   });
   return { pro, con, sum };
@@ -374,6 +377,7 @@ function stateOf(why, el, lv) {
   const sums = sum.map((s) => {
     const m = s.match(/月日一(克一扶|扶一克)，相敌作平(，又得动爻相扶而转旺)?/);
     if (m) return `月日${m[1] === '扶一克' ? '一扶一克' : '一克一扶'}，综合起来只算平势${m[2] ? '，又得动爻相扶，转为旺' : ''}`;
+    if (/^临日之爻逢月破而不破/.test(s)) return '临日之爻按古法逢月破而不破、遇冲克而无伤';
     return '';
   }).filter(Boolean);
   const CON = ['', '，又', '，还'];
@@ -479,7 +483,7 @@ export function interviewV3Text(chart, ctx = {}) {
     fuState = fu.why ? stateOf(fu.why, fu.element, fu.level) : { text: '', word: `${LV[fu.level]}` };
     const meaning = fu.level === 2 ? pickBy(['临场发挥有底气', '表现一层有底子'], seed + 'f') : fu.level === 1 ? '表现一层中规中矩' : '临场容易吃亏';
     let t = `${where}${fuState.text ? `，${fuState.text.replace(/^，/, '')}` : ''}${fuState.word === null ? '' : `，${fuState.word || LV[fu.level]}`}，${meaning}`;
-    if (!isWorld && ['生世', '合世', '伏于世下'].includes(fu.toWorld) && !hasItem(/^父\S?(旺而生世|母发动而生合世|母\S发动生合世)/)) t += '；父母与你的世爻相生相合，表现能落到你身上';
+    if (!isWorld && ['生世', '合世', '伏于世下'].includes(fu.toWorld) && !hasItem(/^父\S?(旺而生世|母发动而生合世|母\S发动生合世)/)) t += `；父母${{ 生世: '来生你的世爻', 合世: '与你的世爻相合', 伏于世下: '伏在你的世爻之下' }[fu.toWorld]}，表现能落到你身上`;
     if (fu.twoAndClash) t += '；卦中两爻父母相冲，题目对你来说可能偏生';
     const mo = d.calendarToWorld.monthOnFu;
     if (mo === '克' && !hasItem(new RegExp(`^父${fu.branch}旺而受${M}月克`))) t += `；${M}月克父母，表现与要求的路子未必对得上`;
@@ -854,8 +858,10 @@ export function interviewV3Text(chart, ctx = {}) {
     if (q.code === '合' && m0) return `${who}安静而逢合，是合起，并不受绊，冲本爻的${m0[1]}日${m0[2] ? `、冲合神${m0[3]}的${m0[4]}日` : ''}前后也可留意`;
     if (q.code === '月破') return `${who}逢月破，要等出月或值日填实`;
     if (q.code === '入墓') { const mm = q.text.match(/入墓（(.)），待冲开墓库之(.)日月/); return mm ? `${who}入墓于${mm[1]}，要等冲开墓库的${mm[2]}日` : ''; }
-    const kl = String(q.killer || '').replace(new RegExp(`([${BR}])$`), (m0, b0) => bn(b0));
+    const kl = String(q.killer || '').replace(new RegExp(`([${BR}])(?=、|$)`, 'g'), (m0, b0) => bn(b0));
     if (q.code === '受克') return r.verdict === 'fail' ? `${who}受${kl}克，要防克神得生的${q.sheng}日月` : `${who}受${kl}克，要等克神受制的${q.zhi}日月`;
+    // 判定层已化解的克：写它眼下为何不作害、什么条件变了才重新成害（2026-11-18 评审）
+    if (q.code === '受克已解') return `${kl}虽来克${who}，但${q.whyS}，眼下不作害${q.revive ? `；要到${q.revive.replace(/^到/, '')}，才需防它` : ''}`;
     if (q.code === '进神') return `${who}化进神，逢值逢合之日有推进`;
     return '';
   };
@@ -863,7 +869,13 @@ export function interviewV3Text(chart, ctx = {}) {
     const s = qiSay(who, q);
     if (s) { tl.push(s); trules.push(...(q.rules || [])); } else NOTE('应期', `${who}${q.text}`, q.rules || []);
   }
-  for (const s of tm.harmonyWait || []) { const m = s.match(/^(\S{3})(\S{2})局待(.+)而成$/); if (m) { tl.push(`${m[2]}${m[1]}三合缺${m[3]}，要等${m[3]}的日月补足才成局`); trules.push('R-SANHE-03', 'R-SANHE-04'); } }
+  // 局中某支空、破、入墓而待时（R-SANHE-03）：写明哪一支、哪一项；发动之爻逢空不算真空，与条件审查同一说法（2026-11-18 评审：「申金已经发动，却又说三合缺申」）
+  for (const h of tm.harmonyWait || []) for (const w0 of h.waits || []) {
+    const kinds = w0.kinds.join('又');
+    const when = w0.release === '冲墓' ? `冲开墓库的${w0.when.join('、')}日` : w0.when.length ? `${w0.when.map((b) => `${b}日或${b}月`).join('、')}填实` : '各项都解开之时';
+    tl.push(`${h.relative}${h.branches}三合之中，${bn(w0.branch)}${w0.moving && /旬空/.test(kinds) ? '虽在发动、不算真空，但逢旬空' : `逢${kinds}`}，要到${when}，这一局才算合成`);
+    trules.push('R-SANHE-03');
+  }
   if (g?.voidOrBroken?.length) { tl.push(`官鬼两现，其中${[...new Set(g.voidOrBroken.map((y) => `${bn(y.branch)}${y.kind}`))].join('、')}，应期多在它实空、实破之时`); trules.push('R-LIANGXIAN-04', 'R-ZS-LI-01'); }
   const clean = [...new Set(tl.filter(Boolean))];
   const INTRO = ['几处作用的条件各不相同。', '应期要分开看，各条的道理不同。', '看应期，几条要分开看。'];
