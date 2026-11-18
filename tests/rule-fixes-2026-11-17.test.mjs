@@ -38,3 +38,41 @@ test('冲只伤休囚之静爻：旺相之爻被动爻冲不记作受克，休�
   assert.ok(st(5).includes('动爻四爻午克'), '午火克申金照记');
   assert.ok(st(1).includes('动爻四爻午克'), '父子水戌月休囚，午火动冲作伤');
 });
+
+// —— 用户转评审定 A–D（2026-11-17 第三轮）——
+const ch = (s) => { const [lv, mo, dg] = s.split(' '); return run([...lv].map(Number), mo, dg); };
+
+test('A：官星只是休囚受克，不作否决，记作不利', () => {
+  const { r } = ch('778798 子 壬午');
+  assert.ok(!r.veto.some((v) => v.code === '官无力'));
+  assert.ok(r.minus.some((m) => /休囚受克而无力/.test(m.text)));
+});
+
+test('B：父母化前旺相而化回头克，作「父旺遭伤」否决；化前平势者作不利', () => {
+  assert.ok(ch('687777 丑 壬子').r.veto.some((v) => v.code === '父旺遭伤'));
+  const p = ch('898899 寅 庚戌').r;
+  assert.ok(p.minus.some((m) => /不旺不衰而动化回头克/.test(m.text)));
+  assert.ok(!p.veto.some((v) => ['父旺遭伤', '父化凶'].includes(v.code) && /回头克/.test(v.text)));
+});
+
+test('D：动爻合静爻而又克之，别无生扶者以克论；合起只计扶，不解墓', () => {
+  const st = (s, pos) => { const { chart, analysis } = ch(s); return assessRoleState(chart.lines[pos - 1], analysis.lines[pos - 1], chart); };
+  assert.ok(st('789878 寅 丁酉', 5).places.some((p) => p.effect === '克' && /合中带克，别无生扶，以克论/.test(p.place)));
+  const t = st('878776 戌 戊戌', 3);
+  assert.ok(t.places.some((p) => p.he) && t.limitations.some((x) => x.kind === '入墓' && x.trueTomb));
+});
+
+test('世入墓否决须另有受克（随鬼入墓章「惟世爻休囚被克，而又入墓者，是也」）', () => {
+  assert.ok(!ch('887988 戌 丙戌').r.veto.some((v) => v.code === '世入墓'));
+});
+
+test('冲的计法与爻的遍历顺序无关', () => {
+  for (const s of ['778798 子 壬午', '687777 丑 壬子', '898899 寅 庚戌', '789878 寅 丁酉', '878776 戌 戊戌', '887988 戌 丙戌']) {
+    const { chart, analysis } = ch(s);
+    const rev = { ...chart, lines: [...chart.lines].reverse() };
+    for (const l of chart.lines) {
+      const a = assessRoleState(l, analysis.lines[l.position - 1], chart); const b = assessRoleState(l, analysis.lines[l.position - 1], rev);
+      assert.equal(`${a.capability}${a.state}`, `${b.capability}${b.state}`, `${s} 第${l.position}爻`);
+    }
+  }
+});

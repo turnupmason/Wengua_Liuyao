@@ -98,8 +98,10 @@ function placesOf(subject, chart) {
   else if (d.he && subject.moving) { /* 合绊，另记于条件 */ }
   else if (d.controls) places.push({ place: '日辰', effect: '克', strong: true, ...(d.heKe ? { heKe: '日合而又克，别无他处生扶，言克不言合' } : {}) });
   // 动静生克章：「六爻安静旺相之爻，可以生得休囚之爻，亦可以克得休囚之爻」——受方休囚时，静而旺相（不破）之爻亦计入
-  const subjectWeak = !strongSeason(subject.element, chart.calendar.monthBranch) || CLASH.get(subject.branch) === chart.calendar.monthBranch;
+  // 月冲临日之爻不作月破（日辰章「逢月破而不破」，2026-11-17 评审：「或月破」须读处理例外后的状态）
+  const subjectWeak = !strongSeason(subject.element, chart.calendar.monthBranch) || (CLASH.get(subject.branch) === chart.calendar.monthBranch && !c.day?.same);
   const staticStrong = (o) => !o.moving && strongSeason(o.element, chart.calendar.monthBranch) && CLASH.get(o.branch) !== chart.calendar.monthBranch;
+  const heKe = [];
   for (const o of chart.lines) {
     if (o.position === subject.position) continue;
     const an = !o.moving && isAnDong(o, chart);
@@ -117,12 +119,21 @@ function placesOf(subject, chart) {
     const why = !st && (er === 'generates' || er === 'controls') ? moverBlocked(o, subject, chart, er === 'generates' ? '生' : '克') : null;
     if (why) blocked.push({ place: `${tag}${o.label}${o.branch}`, effect: er === 'generates' ? '生' : '克', why, rule: er === 'generates' ? 'R-YUANJI-02' : 'R-YUANJI-04' });
     // 千金赋「合非合因少支神」野鹤注：「若爻中二子不合二丑，名为合，不成者，亦有理也」——两爻同支对两爻同支者不成合（R-QJF-20）
-    else if (er === 'generates' || er === 'same' || (!st && !subject.moving && COMBINE.get(o.branch) === subject.branch
-      && !(chart.lines.filter((x) => x.branch === subject.branch).length >= 2 && chart.lines.filter((x) => x.branch === o.branch).length >= 2))) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '生', strong: false, dyn });
+    else if (er === 'generates' || er === 'same') places.push({ place: `${tag}${o.label}${o.branch}`, effect: '生', strong: false, dyn });
+    // 六合章「爻静或与日月动爻合者得合而起，即使爻值休囚亦有旺相之意」：静爻受动爻合作合起，记 he（只计扶，不作解墓之生扶）。
+    // 合而又克者（子丑、卯戌之类），B-018「合克并见，查他处生扶，无扶以克论，有扶仍以合论」，循环后再定（2026-11-17 评审）
+    else if (!st && !subject.moving && COMBINE.get(o.branch) === subject.branch
+      && !(chart.lines.filter((x) => x.branch === subject.branch).length >= 2 && chart.lines.filter((x) => x.branch === o.branch).length >= 2)) {
+      if (er === 'controls') heKe.push({ place: `${tag}${o.label}${o.branch}`, strong: false, dyn });
+      else places.push({ place: `${tag}${o.label}${o.branch}`, effect: '生', strong: false, dyn, he: true });
+    }
     // 冲只伤休囚之静爻：六冲章「用神旺虽冲不破，用神失陷凶而又凶」；动散章「爻动冲爻……旺相者冲之不散，有气者冲之不散，休囚者间有冲散，亦千百中之一二也」
     // ——动爻被冲不作伤，旺相静爻被冲不作伤（2026-11-17 评审：「午火冲子水不能仅因记入克栏就成为克制目标爻的证据」）
     else if (er === 'controls' || (!st && CLASH.get(o.branch) === subject.branch && subjectWeak && !subject.moving)) places.push({ place: `${tag}${o.label}${o.branch}`, effect: '克', strong: false, dyn });
   }
+  for (const h of heKe) places.push(places.some((p) => p.effect === '生')
+    ? { ...h, place: `${h.place}（合中带克，另有生扶，仍以合论）`, effect: '生', he: true }
+    : { ...h, place: `${h.place}（合中带克，别无生扶，以克论）`, effect: '克' });
   const ch = subject.change;
   // 合中带克论（卜筮正宗）：子化丑、戌化卯旺相得日月生扶帮比、或卦中动爻生之者作合；申化巳作合化长生，寅月寅日三刑会聚者不论（R-BZZ-HZK-01）；
   // 增删生旺墓绝章：金休囚而巳午火多者论克不论生（R-SWMJ-03，analysis swmj「论克」），申化巳亦不作合
@@ -232,7 +243,8 @@ function limitationsOf(subject, chart, places) {
   if (subject.kind === 'hidden' && subject.fly && subject.fly.branch === tombBranch) tombs.push('墓于飞神');
   if (tombs.length) {
     // 随鬼入墓章：休囚无气始见危，旺而有扶亦有求解
-    const trueTomb = !c.seasonalStrong && !places.some((p) => p.effect === '生');
+    // 解墓须五行生扶或日月：动爻合起只计扶，不作解墓（2026-11-17 评审：「能计扶与能解墓，要有各自条件」；随鬼入墓章「休囚无气始见危，若旺而有扶亦有求解」）
+    const trueTomb = !c.seasonalStrong && !places.some((p) => p.effect === '生' && !p.he);
     const cb = CLASH.get(tombBranch);
     out.push({ kind: '入墓', detail: `${tombs.join('、')}${trueTomb ? '（月令休囚又无生扶）' : '（旺相或有扶，不作真墓）'}`, trueTomb, releases: trueTomb || subject.kind === 'hidden' ? [{ kind: '冲墓', branch: cb, ...dayOffset(chart, cb), rule: 'R-YINGQI-05' }] : [] });
   }
